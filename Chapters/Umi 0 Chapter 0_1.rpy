@@ -31,13 +31,6 @@ label chapter1:
     scene sea_1c with dissolve
     pause (3)
     $ quick_menu = True
-
-
-
-    "das ist ein test"
-
-
-    
     """
     In der Luft liegt der typische Meeresgeruch von Salz und auch etwas nach Alge.
     Ein Duft der den Geruchssinn sofort in Ekstase versetzt, wenn nicht sogar die Seele selber begeistert.
