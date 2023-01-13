@@ -7,7 +7,7 @@ label start:
     scene black with dissolve
     pause (1)
     ## Disclaimer
-    queue sound "audio/sfx/umise_028.ogg" noloop
+    play sound "audio/sfx/umise_028.ogg" noloop
     show image "/images/backrounds/portrait3.png" with dissolve
     show text "Dieses Spiel ist reine Fiktion! Alle Ähnlichkeiten mit Dingen aus der Realität sind purer Zufall! Alle Rechte der verwendeten Assets gehen an 07th Expansion, Alchemist, Entergram und weitere rechtmäßige Rechteinhaber. Dieses Spiel ist unabhängig von der originalen Umineko Geschichte" at truecenter with dissolve
     with dissolve
