@@ -25,8 +25,8 @@ label chapter1:
         pos (960, 540)
         matrixcolor IdentityMatrix()
     $ persistent.alreadystarted = True
-    $ renpy.notify("Willkommen auf Rokkenjima\nBGM - HANE Feathers")
-    play music "audio/bgm/umib_003.ogg"
+    $ renpy.notify("Willkommen auf Rokkenjima")
+    $ play_music(hane)
     play audio "audio/sfx/umilse_004.ogg" loop
     scene sea_1c with dissolve
     pause (3)
@@ -36,7 +36,7 @@ label chapter1:
     Ein Duft der den Geruchssinn sofort in Ekstase versetzt, wenn nicht sogar die Seele selber begeistert.
 
     Weil sogar ein Taub-Stummer mit extremer Sehschwäche sofort weiß, dass das Meer sich in unmittelbarer Nähe befindet
-    und in Hochstimmung kommt wenn die Seemöwen wieder weinen.
+    und in Hochstimmung kommt, wenn die Seemöwen wieder weinen.
 
     Die Ushiromiya Familie ist von der Insel Niijima zur Insel Rokkenjima mit dem Boot unterwegs.
     Doch einer von ihnen scheint die Fahrt gar nicht zu gefallen, schreit herum, dass er vom Boot fällt und sowas.
@@ -260,69 +260,69 @@ label chapter1:
     Das war meine Cousine Ushiromiya Jessica, sie ist echt cool drauf
     und ist wohl aktuell in dieser Phase, wo man gegen seine Eltern rebelliert.
 
-    Sie ist aber auch in dieser Phase, wo die Mädchen so große Brüste bekommen...
-    hihihihih... ich würde sie mal gerne in die Hand nehmen...
+    Sie ist aber auch in dieser Phase, wo die Mädchen so große Brüste bekommen.
+    hihihihih... ich würde sie mal gerne in die Hand nehmen....
 
-    Aber dann würde sie mich windelweich schlagen, denn mit ihr ist nicht gut Kirschen essen, wenn man es sich mit ihr verscherzt.
+    Aber dann würde sie mich windelweich schlagen, denn mit ihr ist es nicht gut Kirschen zu essen, wenn man es sich mit ihr verscherzt.
     Jessica klingt sehr nach englischer Herkunft und wird bei uns Ushiromiya Jeshka ausgesprochen, sie muss richtig unzufrieden mit ihrem Namen sein.
 
-    Nichtmal eine Minute später, ist Jessica zurückgekommen, um mir zu sagen,
+    Nichtmal eine Minute später ist Jessica zurückgekommen, um mir zu sagen:
     dass der Kapitän die Geschwindigkeit verringert hat.
     """
     jes "Battler-kun du solltest definitiv unters Deck dich ausruhen, wir sind schon bald auf der Insel."
     but "Ja, das kann ich versuchen, jetzt wo das Boot etwas langsamer fährt."
     but "Ich kann aber nicht garantieren, dass ich den Rest meines Frühstücks bei mir behalte."
     """
-    Daraufhin gingen Battler und Jessica unters Deck zu den anderen, die anders als Battler, ruhig darauf warten endlich anzukommen.
+    Daraufhin gingen Battler und Jessica unters Deck zu den anderen, die anders als Battler ruhig darauf warten endlich anzukommen.
     """
     geo "Wie geht es dir Battler-kun?"
     geo "Wir alle wissen bereits, dass es dich schon erwischt hat."
     """
-    Mit einem leichten aber auch nicht ganz überzeugenden Nicken, stimmt Battler ihm zu.
+    Mit einem leichten aber auch nicht ganz überzeugenden Nicken stimmt Battler ihm zu.
     """
-    but "Den Umständen entsprechend, geht es mir gut."
+    but "Den Umständen entsprechend geht es mir gut."
     but "Der Kapitän hat doch absichtlich das Boot so wackeln lassen."
-    geo "Ja gut... das glaube ich eher weniger."
+    geo "Ja gut,... das glaube ich eher weniger."
     geo "Leg dich am besten hin, du hast es schon bald geschafft."
     geo "Das erinnert doch an die alten Zeiten, nicht wahr, Jessica-chan?"
-    jes "Ja, es ist so als wäre er nie weg gewesen."
+    jes "Ja, es ist so, als wäre er nie weg gewesen."
     jes "Nur mit dem Unterschied, dass er heute das erste mal sich übergeben hat."
     geo "Ahahahahaha, ja, einige Dingen ändern sich, während andere sich niemals ändern."
     """
     Das ist mein Cousin George, er wird von Tante Eva und Onkel Hideyoshi zu einem echten Gentlemen erzogen.
     Er arbeitet sehr hart und will auch schon sein eigenes Business starten, was ich sehr beeindruckend finde.
 
-    Er wird von den anderen Familienmitgliedern sehr geschätzt,
+    Er wird von den anderen Familienmitgliedern sehr geschätzt.
     da er für sein Alter schon sehr reif und kenntnisreich ist.
 
-    Ushiromiya Joji...
+    Ushiromiya Joji
 
     So wird er bei uns ausgesprochen und ich bin der festen Überzeugung,
-    dass es ihm bestimmt gegen den Strich geht und er heute ein Massenmord veranstaltet.
+    dass es ihm bestimmt gegen den Strich geht und er heute einen Massenmord veranstaltet.
 
     Ich würde auch am liebsten die ermorden, die für diese furchtbare Namenstradition verantwortlich sind.
     """
-    but "Ich finde es ist auch besonders heute, weil heute Mittag ein Sturm aufziehen soll, der einfach bis Montag anhält."
-    but "Es ist noch nie vorgekommen, dass wir länger als eine Tag auf der Insel bleiben."
-    geo "Ja, wir hatten allerdings auch immer Glück, dass sonst nie ein Sturm auf unserer Familienkonferenz getobt hat."
-    geo "Was sagt man da so schön?: Es gibt immer ein erstes mal."
-    geo "..ähm... Battler-kun wusstest du dass es sogenannte Sturmgötter gibt?"
-    but "ähhhh.... meinst du Zeus...?"
-    geo "Auch richtig, aber nein ich rede von dem Sturmgott in einem selber"
+    but "Ich finde es ist auch besonders heute, weil heute Mittag ein Sturm aufziehen soll, der erst Montag wieder abklingen soll."
+    but "Es kommt das erste mal vor, dass wir länger als einen Tag auf der Insel bleiben."
+    geo "Ja, wir hatten allerdings auch immer Glück, dass sonst nie ein solch starker Sturm auf unserer Familienkonferenz getobt hat."
+    geo "Was sagt man da so schön? Es gibt immer ein erstes mal."
+    geo "..ähm... Battler-kun wusstest du, dass es sogenannte Sturmgötter gibt?"
+    but "Ähhhhm.... meinst du Zeus...?"
+    geo "Auch richtig, aber nein, ich rede von dem Sturmgott in einem selber"
     but ".....was?"
     geo "Okay, es geht um folgendes:"
     geo """
     In der tantrischen Spiritualität gibt es intensivere Gefühlsregungen und auch bei den Griechen gab es die dionysische Spiritualität,
     die auch besonders heftige Gefühle beinhaltet. In diesem Sinne hat jeder Mensch auch Sturmgötter in sich,
 
-    die er auch in sich aktivieren kann. Die Sturmgötter können ihn auch zu schlimmen Handlungen veranleiten, zu Verbrechen und Gewalt,
-    sie können ihn aber auch dazu veranlassen, intensiv voran zu preschen und aus der Bequemlichkeit des Alltags hinauszugehen.
+    die er auch in sich aktivieren kann. Die Sturmgötter können ihn auch zu schlimmen Handlungen veranleiten, zu Verbrechen und Gewalt.
+    Sie können ihn aber auch dazu veranlassen, intensiv voran zu preschen und aus der Bequemlichkeit des Alltags hinauszugehen.
     """
     but "............."
     but "ähm...... ähm......"
-    but "tantrisch.....? Gefühlsregungen.....? dionysische Spiritualität.....?"
+    but "tantrisch.....? Gefühlsregungen.....? Dionysische Spiritualität.....?"
     but ".......................Du hast das aus dieser einen Yoga Zeitschrift entnommen....."
-    geo "Hahahaha, ich habe dich aber gut zum nachdenken gebracht."
+    geo "Hahahaha, ich habe dich aber gut zum Nachdenken gebracht."
     geo "Meine Mom hat sich so eine Zeitschrift geholt und hin und wieder werfe auch ich einen Blick hinein."
     but "hihihi, du hast nur pech gehabt, dass ich vor der Abreise auf dem Klo so eine Yoga Zeitschrift in der Hand hatte, weil ich mich vergriffen habe."
     geo "Ein echter Sturmgott ist allerdings Aigaion aus der griechischen Mythologie."

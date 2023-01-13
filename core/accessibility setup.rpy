@@ -79,7 +79,7 @@ init python:
     # alias : "Song Title",
     music_dictionary = {
          deaths_door : "At Death's Door",
-         hane : "HANE Feathers",
+         hane : "HANE",
     }
 
     # Define every sound with an alias
