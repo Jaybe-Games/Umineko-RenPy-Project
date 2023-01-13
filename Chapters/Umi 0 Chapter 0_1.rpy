@@ -439,6 +439,30 @@ label chapter1:
     Dass der Sturm einige Stunden zu früh kommt. Dabei wurde vom Wetterbericht garantiert, dass es erst Mittags losgeht.
     Die folgen könnten turbolente Flüge sein, die noch für Kurzflüge eine Starterlaubnis bekommen haben.
     """
+    kyr "War der Typhoon nicht für heute Mittag angekündigt?"
+    kyr "Es könnte sein, dass es gleich anfängt zu regnen."
+    rud "Wir sind in ungefähr 10 Minuten da, aber gemütlich wird es nicht mehr."
+    kyr "Stimmt, der Wind hat bereits zugenommen."
+    """
+    Der Wind der minütlich immer stärker über die See peitscht,
+    ist kein Wind wie sie die meisten Leute auf dem Festland kennen.
+
+    Der Wind kann ungehindert und mit voller Kraft über das Wasser fegen,
+    während auf dem Land es immer wieder Häuser, Berge und Terrain gibt,
+
+    dass den Wind abschwächen kann.
+    """
+    kyr "Dass die Wettervorhersage sich mal in der Zeit irrt? *kicher*"
+    rud "Ich habe mal wegen eines angeblichen Typhoons ein Geschäftsessen abgesagt..."
+    rud "Der Typhoon kam erst 2 Tage später, ich habe mich noch nie so dämlich gefühlt, wie in dieser Situation."
+    kyr "War doch bestimmt ein Erlebnis, dass am Ende erklären zu müssen..."
+    rud "Bitte erinnere mich nicht daran...."
+    """
+    Besorgt sind nicht nur Rudolf und Kyrie, sondern all die anderen sind ebenfalls überrascht,
+
+    Dass der Sturm einige Stunden zu früh kommt. Dabei wurde vom Wetterbericht garantiert, dass es erst Mittags losgeht.
+    Die folgen könnten turbolente Flüge sein, die noch für Kurzflüge eine Starterlaubnis bekommen haben.
+    """
     rud "*seufz*"
     """
     Rudolf stoßte einen tiefen Seufzer aus, während er sich eine Zigarette anzündet, da ihn etwas sehr beschäftigt und niemand außer Eva hat anscheinend diesen Seufzer mitbekommen.
