@@ -31,6 +31,13 @@ label chapter1:
     scene sea_1c with dissolve
     pause (3)
     $ quick_menu = True
+
+
+
+    "das ist ein test"
+
+
+    
     """
     In der Luft liegt der typische Meeresgeruch von Salz und auch etwas nach Alge.
     Ein Duft der den Geruchssinn sofort in Ekstase versetzt, wenn nicht sogar die Seele selber begeistert.
@@ -227,7 +234,7 @@ label chapter1:
     hide rud_a11_akuwarai2 with dissolve
     show but_b22_nayamu1 at zero_light,active with dissolve
     but ".....ähm....."
-    
+
     but "...Also wenn du es unbedingt wiederhaben willst, kannst du ja ins Meer springen und es wieder rausfischen... hihihihi..."
     but "Aber mal ernsthaft, das Wackeln wurde gerade richtig schlimm..."
     rud "Battler..."
