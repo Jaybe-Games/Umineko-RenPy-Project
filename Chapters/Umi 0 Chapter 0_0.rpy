@@ -8,13 +8,14 @@ label start:
     pause (1)
     ## Disclaimer
     play sound "audio/sfx/umise_028.ogg" noloop
-    show image "/images/backrounds/portrait3.png" with dissolve
+    show portrait3
     show text "Dieses Spiel ist reine Fiktion! Alle Ähnlichkeiten mit Dingen aus der Realität sind purer Zufall! Alle Rechte der verwendeten Assets gehen an 07th Expansion, Alchemist, Entergram und weitere rechtmäßige Rechteinhaber. Dieses Spiel ist unabhängig von der originalen Umineko Geschichte" at truecenter with dissolve
     with dissolve
     pause (10)
     hide text
     with dissolve
-    hide image "/images/backrounds/portrait3.png" with dissolve
+    hide portrait3
+    with dissolve
     pause (3)
     $ play_music(deaths_door)
     show text "Polizeiliche Kriminalakten zum Fall im Dorf Hinamizawa" with dissolve
@@ -124,8 +125,7 @@ label start:
     $ quick_menu = False
     pause (0.5)
     scene black with fade
-    pause (2)
-    show opening_video
-    pause (112)
-    hide opening_video with dissolve
+    play sound "audio/bgm/op1.ogg"
+    $ renpy.movie_cutscene("videos/opening.mov")
+    stop sound
     jump chapter1

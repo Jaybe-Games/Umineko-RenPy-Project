@@ -20,6 +20,20 @@ transform zero_right:
     yanchor 1.0
     ypos 1200
 
+transform zero_right2:
+    xanchor 0.5
+    xpos 1040
+
+    yanchor 1.0
+    ypos 1200
+
+transform zero_left2:
+    xanchor 0.5
+    xpos 880
+
+    yanchor 1.0
+    ypos 1200
+
 # Color transforms
 
 transform grayscale:

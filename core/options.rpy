@@ -23,7 +23,7 @@ define gui.show_name = False
 
 ## The version of the game.
 
-define config.version = "v10123"
+define config.version = "v15123"
 
 
 ## Text that is placed on the game's about screen. Place the text between the
@@ -186,8 +186,25 @@ init python:
 
     ## To archive files, classify them as 'archive'.
 
-    # build.classify('game/**.png', 'archive')
-    # build.classify('game/**.jpg', 'archive')
+    build.classify('game/**.png', 'archive')
+    build.classify('game/**.jpg', 'archive')
+    build.classify('game/**.ico', 'archive')
+    build.classify('game/**.icns', 'archive')
+    build.classify('audio/bgm/**.ogg', 'archive')
+    build.classify('audio/sfx/**.ogg', 'archive')
+    build.classify('core/**.rpy', 'archive')
+    build.classify('core/**.rpyc', 'archive')
+    build.classify('Chapters/**.rpy', 'archive')
+    build.classify('Chapters/**.rpyc', 'archive')
+    build.classify('effects/**.rpy', 'archive')
+    build.classify('effects/**.rpyc', 'archive')
+    build.classify('scripts/**.rpy', 'archive')
+    build.classify('scripts/**.rpyc', 'archive')
+    build.classify('videos/**.webm', 'archive')
+    build.classify('gui/**.png', 'archive')
+    build.classify('gui/**.jpg', 'archive')
+    build.classify('fonts/**.otf', 'archive')
+
 
     ## Files matching documentation patterns are duplicated in a mac app build,
     ## so they appear in both the app and the zip file.
@@ -206,4 +223,4 @@ init python:
 ## The username and project name associated with an itch.io project, separated
 ## by a slash.
 
-# define build.itch_project = "renpytom/test-project"
+define build.itch_project = "https://jaybe-games.itch.io/umineko-when-they-cry-zero"
