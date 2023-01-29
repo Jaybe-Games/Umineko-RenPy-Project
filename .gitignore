@@ -25,3 +25,6 @@ videos/single butterfly mask.webm
 videos/single butterfly.webm
 videos/startgame_shatter.webm
 *.mov
+*.save
+*.json
+saves/persistent
