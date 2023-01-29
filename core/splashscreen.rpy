@@ -20,9 +20,8 @@ hide splash3 with dissolve
 pause (1)
 
 if persistent.alreadystarted == True:
-    play sound "audio/bgm/op1.ogg"
+    #play sound "audio/bgm/op1.mp3"
     $ renpy.movie_cutscene("videos/opening.mov")
-    stop sound
     play sound "audio/sfx/umilse_002.ogg" noloop
     $ renpy.movie_cutscene("videos/mmani.webm")
     stop sound fadeout 3

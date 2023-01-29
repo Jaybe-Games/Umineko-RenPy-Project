@@ -75,11 +75,13 @@ init python:
 
     deaths_door = "audio/bgm/umib_014.ogg"
     hane = "audio/bgm/umib_003.ogg"
+    ride_on = "audio/bgm/umib_004.ogg"
 
     # alias : "Song Title",
     music_dictionary = {
          deaths_door : "At Death's Door",
          hane : "HANE",
+         ride_on : "Ride on",
     }
 
     # Define every sound with an alias

@@ -1,7 +1,7 @@
 label chapter1:
 
     ## Just a fake clock cuz I have no Idea how to recreate the Umi Project Clock
-    $ current_chapter = 1
+    $ renpy.notify("Kapitel 1 - Willkommen auf Rokkenjima")
     pause (2)
     show text "Der erste Tag\n04. Oktober 1986\n09:25 Uhr" with dissolve
     pause (2)
@@ -25,7 +25,6 @@ label chapter1:
         pos (960, 540)
         matrixcolor IdentityMatrix()
     $ persistent.alreadystarted = True
-    $ renpy.notify("Willkommen auf Rokkenjima")
     $ play_music(hane)
     play audio "audio/sfx/umilse_004.ogg" loop
     scene sea_1c with dissolve
@@ -50,17 +49,17 @@ label chapter1:
     show but_b23_kuyasigaru1 at zero_left,sprite_highlight('but') with move
     play sound "audio/sfx/umise_047.ogg"
     show mar_a11_warai1 at zero_right,jump_transform,sprite_highlight('mar') with dissolve
-    mar "*kicher*kicher* Battler fällt runter, Battler fällt runter! uu-uu-uu!!"
-    mar "uu-uu-uu! Battler fällt runter, Battler fällt runter! uu-uu-uu!"
+    mar "*kicher*kicher* Battler fällt runter, Battler fällt runter! uu-uu~!!"
+    mar "uu~! Battler fällt runter, Battler fällt runter! uu~!"
     hide but_b23_kuyasigaru1
     show but_b23_nayamu1 at zero_left,sprite_highlight('but')
     but "Bitte, Maria-chan, bitte etwas ruhiger, das macht alles mein Magen nicht mit."
     show mar_a11_uuu1 at zero_right,sprite_highlight('mar')
-    mar "uu...? du findest das nicht lustig?"
+    mar "uu~...? du findest das nicht lustig?"
     hide mar_a11_uuu1
     play sound "audio/sfx/umise_047.ogg"
     show mar_a11_warai1 at zero_right,jump_transform,sprite_highlight('mar')
-    mar "Ich finde das super lustig! *kicher*kicher* uu-uu!"
+    mar "Ich finde das super lustig! *kicher*kicher* uu~!"
     """
     Während die Ushiromiya Familie zur jährlichen Familienkonferenz fahren möchte,
     bekommt Battler, wie schon zu früheren Konferenzen es mit der Angst zu tun.
@@ -134,7 +133,7 @@ label chapter1:
     show rud_a11_akuwarai1 at zero_right,active,sprite_highlight('rud') with dissolve
     rud "Jetzt hat dieser Kasper tatsächlich die Fische gefüttert, ach herrje... ahahaha"
     show mar_a11_warai1 at zero_left,sprite_highlight('mar') with dissolve
-    mar "uu-uu! Battler hat sich übergeben, Battler hat sich übergeben! *kicher*kicher*"
+    mar "uu-uu~! Battler hat sich übergeben, Battler hat sich übergeben! *kicher*kicher*"
     hide rud_a11_akuwarai1 with dissolve
     hide mar_a11_warai1 with dissolve
     show mar_a11_niyari1 at zero_center with dissolve
@@ -151,7 +150,7 @@ label chapter1:
     ros "Maria! Es reicht jetzt, lass Battler-kun in Ruhe!"
     hide mar_a11_majime1
     show mar_a11_defo1 at zero_left,sprite_highlight('mar')
-    mar "........uu..."
+    mar "........uu~..."
     hide ros_a11_ikari1
     show ros_a11_ikari2 at zero_right,sprite_highlight('ros')
     ros "und hör auf mit diesem uu-uu, du bist kein kleines Kind mehr!"
@@ -443,7 +442,97 @@ label chapter1:
     Dass der Sturm einige Stunden zu früh kommt. Dabei wurde vom Wetterbericht garantiert, dass es erst Mittags losgeht.
     Die folgen könnten turbolente Flüge sein, die noch für Kurzflüge eine Starterlaubnis bekommen haben.
 
-    Rudolf zog sich für erste zurück um etwas alleine zu sein.
+    Maria hat sich inzwischen ganz vorne aufs Deck gestellt und ihre Blicke wenden sich nicht mehr von einer ganz bestimmten Klippe von der herannahenden Insel ab.
+    """
+    mar "......................uu~..........."
+    mar "..................................."
+    mar "......................Es ist weg................."
+    mar "......................uu~.............."
+    mar "......uu~........nicht mehr da......"
+    but "hmm?...... Was ist los Maria?"
+    jes "Irgendwas scheint sie sehr zu beunruhigen..."
+    mar "Dieses Schrein ähnliche dings da ist weg!.... uu!"
+    mar "Es ist weg!... uu...!"
+    mar "Es war immer da, doch jetzt ist es weg!... uu!.."
+    jes "Stimmt ja... Der Schrein fehlt, der war letztes Jahr noch da..."
+    jes "Es sieht mir auch so aus als wäre ein Teil vom Riff dabei mitgerissen worden..."
+    kum "ohohohoh, der Schrein wurde von einem gigantischen Blitz während eines Unwetters getroffen und zerstört."
+    """
+    Die ältere Frau heißt Kumasawa. Sie ist eine Teilzeitkraft, die zwar mehrmals gekündigt hat, aber insgesamt schon viele Jahre im Dienst der Familie steht.
+    Sie ist geschickt und mehr als fähig, wenn es darum geht, ihre Aufgaben zu erfüllen,
+
+    aber wegen ihrer Geschwätzigkeit und ihrer Vorliebe für Gerüchte ist sie als Bedienstete nicht sehr angesehen.
+    Ihr Name im Japanischen? Der lautet auch bei uns Kumasawa, ihre Eltern haben ihr einen vernünftigen Namen gegeben... *seufz*....
+    """
+    jes "Ein Blitzeinschlag?..."
+    jes "Ein Blitz kann so eine gewaltige Kraft haben?"
+    kum "Die Fischer munkeln dass dies ein Zeichen von Unglück sei..."
+    mar "Ein Zeichen von Unglück....uu..."
+    mar "..........................."
+    """
+    Kumasawas Worte haben die eins so lockere Atmosphäre auf dem Boot in ein beklemmendes Gefühl verwandelt.
+    Maria hat ihren Blick von dem Ort, wo eigentlich der Schrein stehen sollte immer noch nicht abgewendet...
+
+    Und es scheint, als würde der stark wehende Wind für einen Moment stillstehen.
+    """
+    mar "Unglück..."
+    mar "Unglück...Unglück..."
+    mar "UnglückUnglückUnglückUnglückUnglückUnglückUnglückUnglückUnglückUnglückUnglückUnglückUnglückUnglückUnglückUnglückUnglückUnglück"
+    geo "Kumasawa-san bitte gehen Sie mit ihren Witzen etwas vorsichtiger um!"
+    geo "Maria-chan nimmt sowas ziemlich ernst, verstehen Sie?"
+    mar "UnglückUnglückUnglück"
+    but "Hey Maria!"
+    but "Wenn du so oft >Unglück< sagst wird wirklich ein Unglück geschehen, also beruhig dich doch bitte wieder, ja?"
+    geo "Maria-chan, es wird nichts schlimmes passieren."
+    mar "............uu~.............."
+    mar "............................"
+    """
+    Die anderen versuchen Maria zu beruhigen um irgendwie das Thema abzuschließen.
+
+    Doch dann wendet Maria ihren Blick vom Riff ab, dreht sich rum und hebt ihren Rechten Arm und streckt ihn zum Himmel aus und öffnet langsam ihren Mund...
+    """
+    mar "Es geschieht definitiv....."
+    mar "Ein Unglück wird geschehen!......"
+    but "............................"
+    but "Hä?........................."
+    """
+    Jeder verspürt in genau diesem Moment ein unheimliches Gefühl
+    Es sei fast schon so, als würde Maria ahnen, dass diese Familienkonferenz eine ganz besondere wird.
+
+    Battler scheint aber zu realisieren, dass mit Marias gehobener Arm und >Unglück< sehr wahrscheinlich einfach das Wetter gemeint ist.
+    """
+    but "Du hast also bemerkt, dass das ein schlimmes Unwetter sein wird?"
+    mar "..........uu~....."
+    but "Der Wetterbericht, hat allerdings gesagt, dass der Sturm sich erst gegen Mittag aufbauen wird, doch er kommt bereits jetzt..."
+    but "Das nenne ich wohl tatsächlich ein Unglück... hihihihi"
+    but "Maria, ich bin mir sicher, dass dieser Typhoon schneller wieder vorbei ist, als du bis 10 Zählen kannst. Also alles wird gut."
+    """
+    Battler versucht Maria zu ermutigen, dass sie keine Angst vor dem Typhoon haben muss, doch Marias Gesichtsausdruck spricht eine komplett andere Sprache.
+    """
+    mar "uu~!!"
+    mar "uu~!!uu~!!uu~!!uu~!!uu~!!uu~!!"
+    mar "Ein Unglück wird geschehen! uu~!!"
+    jes "Maria, warum sagst du sowas?"
+    kum "Sie sieht eindeutig etwas, was im Alter schnell verloren geht."
+    kum "Sehr junge Menschen haben ein Gespür für das übernatürliche..."
+    kum "Aber je älter man wird, desso schwächer wird dieses Gespür."
+    kum "Etwas was Maria spüren kann, kann auch nur von ihr gespürt werden, da sie die jüngste hier ist."
+    """
+    Battler ist wie erstarrt von diesen Worten, ist sowas echt möglich? denkt er sich, so etwas kann es doch gar nicht geben...
+    """
+    kum "Es scheint so, dass in der Vergangenheit von Rokkenjima eine Hexe...."
+    jes "Es reicht Kumasawa! Darüber wird nicht gesprochen!"
+    kum "Ohohohoh, ich muss mich entschuldigen, ich wollte nicht unhöflich sein."
+    """
+    Kumasawas Erzählungen sind gerade ziemlich unvorteilhaft, da das Ziel ist Maria zu beruhigen und nicht ihr noch mehr Dinge in den Kopf zu setzen.
+    Jessica hat damit richtig gehandelt und Kumasawa unterbrochen.
+    """
+    but "Eine....... Hexe?........."
+    but "Hat Kumasawa Hexe gesagt?"
+    but "Weiß Jessica irgendwas?"
+    but "Hexe.........."
+    """
+    Weit weg vom Geschehen konnte man Rudolf sehen, der sehr nachdenklich aussieht.
     """
     rud "*seufz*"
     """
@@ -519,6 +608,7 @@ label chapter1:
     jes "Vielen Dank Gohda, ich denke die meisten kommen jedes Jahr nur hierher, um deine super leckeren Gerichte zu speisen."
     goh "Es macht sofort mehr Spaß für Euch zu kochen, wenn man solche Worte hören darf!"
     goh "Allerdings muss ich sagen, dass wir euch bereits 20 Minuten früher erwartet haben, dass ist nicht gut für unseren Zeitplan...."
+    goh "Dazu scheint sich dieser Typhoon früher als angekündigt aufzubauen, also sollten wir schnell zur Villa."
     """
     Gohda ist ein Bediensteter, der als Koch eingestellt wurde.
 
@@ -531,23 +621,16 @@ label chapter1:
     jes ".....Ich denke mal, da pass ich lieber...."
     kum "Aber Jessica-sama, Ihr könnt Euch doch nicht ständig von Junk-Food ernähren!"
     kum "Gebt der Makrele doch eine Chance!"
-    """
-    Die ältere Frau heißt Kumasawa. Sie ist eine Teilzeitkraft, die zwar mehrmals gekündigt hat, aber insgesamt schon viele Jahre im Dienst der Familie steht.
-    Sie ist geschickt und mehr als fähig, wenn es darum geht, ihre Aufgaben zu erfüllen,
-
-    aber wegen ihrer Geschwätzigkeit und ihrer Vorliebe für Gerüchte ist sie als Bedienstete nicht sehr angesehen.
-    Ihr Name im Japanischen? Der lautet auch bei uns Kumasawa, ihre Eltern haben ihr einen vernünftigen Namen gegeben... *seufz*....
-    """
     jes "Aber.... ich habe heute Morgen in der Küche gar keine Makrelen gesehen, Kumasawa..."
     jes "Daher, kann es heute leider keine Makrelen geben!"
     kum "Ohohohoh, Ihr habt mich voll erwischt, Jessica-sama."
     rud "Hey Battler! Wenn dir immer noch schwindelig ist und du gleich auf den Esstisch kotzt, darfst du Nachhause schwimmen."
     but "Lass es gut sein!.... Mir geht es bereits wieder besser."
     rud "Na,.... das hoffe ich doch,..... ich will mich nicht vor den anderen rechtfertigen müssen, warum du Holzkopf den Esstisch ruinierst."
-    but "Keine Sorge Dad, wenn es hart auf hart kommt, passt mir dein Schicker Anzug auch ganz gut hihihihi"
-    goh "Liebe Gäste, wir haben Zeitverzug! Wir müssen jetzt unverzüglich zum Gästehaus!"
+    but "Keine Sorge Dad, wenn es hart auf hart kommt, passt mir dein Schicker Anzug auch ganz gut... ihihihi"
+    goh "Liebe Gäste, wir haben Zeitverzug und der Sturm wird stärker! Wir müssen jetzt unverzüglich zum Gästehaus!"
     """
-    Battler und Rudolf wollten gerade wieder ihre Vater-Sahn Beziehung stärken, da grätscht Gohda rein, der etwas angefressen mit dem Zeigefinger auf seine Armbanduhr tickt.
+    Battler und Rudolf wollten gerade wieder ihre Vater-Sohn Beziehung stärken, da grätscht Gohda rein, der etwas angefressen mit dem Zeigefinger auf seine Armbanduhr tickt.
     """
     goh "Wir müssen uns jetzt beeilen, wir haben viel Zeit verloren und Madam wird sehr wütend sein, wenn wir nicht in der nächsten Zeit eintreffen."
     but "Beruhig dich Gohda-san, wir sind ja jetzt alle da und bereit um zum Gästehaus zu gehen."
@@ -566,49 +649,46 @@ label chapter1:
     but ".....Beatrice?....."
     mar "Wer Magie hat, kann sie sehen, also kannst du sie auch sehen! Uu-uu!"
     """
-    Marias Mutter Rosa konnte in unmittelbarer Nähe gesehen werden, die mit einem wütenden Blick Marias Freude jeden Moment unterbrechen wird.
+    Battler war erneut nicht vorsichtig gegenüber Maria und hat sie versehentlich glauben lassen, dass er Magische Kräfte besitzt, was natürlich unsinn ist.
     """
-    ros "Maria!"
-    "*slap*"
+    geo "Battler-kun, Jessica-chan... Ihr müsst vorsichtiger sein, welche Scherze ihr in Marias Umgebung bringt, wie ihr seht nimm sie alles viel zu ernst."
+    but "Entschuldige... Aniki..."
     """
-    Zu hören war nur ein Dumpfes Klatschen und zwar das Geräusch von einer Handfläche die unsanft mit hoher Geschwindigkeit an die Backen eines kleinen Mädchens landen.
+    >Aniki< bedeutet sowas wie >Großer Bruder< was aber trotzdem kein Sinn macht, da wir beide ja Cousins sind und keine Geschwister...
 
-    Aus Marias Freuden Uus wurde ein sofortiges schweigen
-    """
-    ros "Wie oft muss ich dir sagen, dass du diesen Magie und Beatrice Unsinn sein lassen sollst?"
-    ros "Die ganze Zeit Magie hier, Beatrice da, wann hörst du endlich damit auf?"
-    "*slap*"
-    """
-    Ein weiteres mal darf Marias Schmerzen verursacht von der Wut ihrer Mutter spüren.
+    Es hat sich allerdings so eingebürgert bei uns, also ist das in Ordnung, auch da George älter ist als ich.
 
-    Jeder der Marias Gesicht sehen könnte, möchte am liebsten selber in Tränen ausbrechen.
+    Zusätzlich gibt es noch >Aneki< das sowas wie >Große Schwester< heißt.
     """
-    ros "Weißt du eigentlich wozu du mich hier zwingst?"
-    ros "Benimm dich doch endlich mal deinem alter entsprechend und hör auf mir so viele Probleme zu machen!"
-    ros ".....Sonst wird Papa.... niemals von seiner Geschäftsreise zurückkehren..... *sob*"
+    mar "uu~!... Battler hat Magie! Battler hat Magie!"
+    geo "Du hast recht Maria-chan! Nur kann Battler-kun keine Hexen sehen."
+    geo "Das ist nämlich etwas, dass nur du sehen kannst, da du was ganz besonderes bist."
+    mar "Battler kann Beatrice nicht sehen?......."
+    mar "..........."
+    mar ".........uu~.........."
     """
-    Maria die zwar eine menge Tränen im Gesicht hat, sieht ihre Mutter an, die sogar noch viel mehr Tränen weint und einen Nervenzusammenbruch hat.
-
-    Während diesem Ausbruch der Gefühle sind die anderen bereits vorgelaufen, haben sich allerdings auch jetzt auf den Weg gemacht das Gästehaus zu erreichen.
+    George-aniki hat es geschafft Maria schnell zu beruhigen, solche Momente zeigen immer wieder, wie gut er mit Kindern umgehen kann, er wird mal ein großartiger Ehemann.
     """
-    but "Ich glaube das ist deren Angelegenheit, auch wenn Maria mir ziemlich leid tut."
-    jes "Da dürfen wir uns auch nicht einmischen, so ist das leider, da sind wir absolut machtlos."
+    but "Irgendwas ist anders dieses Jahr...."
+    but "ich habe das Gefühl, dass hier etwas fehlt..."
+    but "hmmm........."
+    but "Ach stimmt...... Die Seemöwen sind weg, wir wurden doch sonst immer von den Seemöwen begrüßt oder irre ich mich?"
+    jes "Jetzt wo du es sagst... Das Weinen der Seemöwen war immer zu hören..."
+    mar "..uu~..... Keine Seemöwen?"
+    mar "Wo sind die Seemöwen? uu~..."
+    geo "Die Seemöwen sind schon lange in ihre Nester zurückgekehrt, da der Typhoon sich bereits aufbaut."
+    geo "Auch für Seemöwen ist so ein Typhoon gefährlich, weswegen sie bereits Schutz gesucht haben."
+    but "Da hätte ich ja selber drauf kommen können."
     """
-    Ganz vorne laufen Gohda und Kumasawa voran, die beiden sind wohl endlich froh,
-    die Familie in Richtung Gästehaus bewegt zu haben, weil jede weitere Verzögerung Madam Natsuhi ziemlich wütend machen würde.
+    George, Battler, Jessica und Maria quatschen fröhlich miteinander doch der Sturm wird
+    von Minute zu Minute stärker und werden deswegen von Gohda unterbrochen
     """
-
-    goh "Verdammt, warum kam das Boot so spät?"
-    goh "Madam Natsuhi wird uns dafür köpfen und den anderen zum Abendessen servieren..."
-    goh "Das schlechte daran ist, dass ich meinen eigenen Kopf nicht zubereiten kann, was das Endprodukt schmälert."
-    kum "ohohohoh, ich denke, so wie Madam drauf ist, werden wir so oder so geköpft werden...."
-    kum "Aber immerhin sind Ihre verwandten jetzt da und damit haben wir unseren Auftrag erfüllt."
-    kum "Was Jessica-sama nicht weiß ist, dass ich tatsächlich Makrelen besorgt habe, du erinnerst dich?"
-    goh "Ja, auch wenn dieser Scherz ein wenig überspitzt ist, werde ich für Jessica-sama auch einen normalen Teller vorbereiten."
-    goh "Sobald sie die Makrelen bemerkt, werde ich nicht zögern den Teller wieder gegen einen leckeren auszuwechseln."
-    kum "ohohohoh, das ist in Ordnung, Gohda-san, wir wollen ja nicht, dass sie dein Gericht am Ende nicht isst... ohohoho...."
+    goh "Entschuldigt mich, aber wir sollten zur Villa, da der Typhoon stärker wird und wir möchten unter gar keinen Umständen, dass ihr nass ankommt."
     """
-    Bereit für den Tot durch Madam Natsuhi und einen gemeinen Scherz geplant, ist die Familie auf direktem Weg zum Gästehaus.
-
-    Damit kann die Ushiromiya Familienkonferenz auf Rokkenjima im Jahre 1986 nun beginnen!
+    Darauf hin sind alle den Weg durch den Waldweg zur Villa der Ushiromiya Familie
+    angetreten und damit wird die Familienkonferenz im Jahre 1986 beginnen!
     """
+    scene black with dissolve
+    $ renpy.notify("BGM: Ride on")
+    $ renpy.movie_cutscene("videos/intro.mov")
+    jump chapter2

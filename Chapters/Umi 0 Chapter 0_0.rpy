@@ -1,12 +1,12 @@
 label start:
     # Prologue
-    $ current_chapter = 0
     stop sound fadeout 3
     stop music fadeout 3
     $ quick_menu = False
     scene black with dissolve
     pause (1)
     ## Disclaimer
+    $ renpy.notify("Prolog")
     play sound "audio/sfx/umise_028.ogg" noloop
     show portrait3
     show text "Dieses Spiel ist reine Fiktion! Alle Ähnlichkeiten mit Dingen aus der Realität sind purer Zufall! Alle Rechte der verwendeten Assets gehen an 07th Expansion, Alchemist, Entergram und weitere rechtmäßige Rechteinhaber. Dieses Spiel ist unabhängig von der originalen Umineko Geschichte" at truecenter with dissolve
@@ -48,7 +48,7 @@ label start:
 
     1. Benennung der folgenden strafrechtlichen Ermittlung als Verschlusssache.
 
-    Station Okinomiya 1983 Fallnummer X
+    Station Okinomiya 1983 Fallnummer 862
     """
     scene ke5 with dissolve
     """
@@ -125,7 +125,7 @@ label start:
     $ quick_menu = False
     pause (0.5)
     scene black with fade
-    play sound "audio/bgm/op1.ogg"
+    #play sound "audio/bgm/op1.mp3"
     $ renpy.movie_cutscene("videos/opening.mov")
     stop sound
     jump chapter1
