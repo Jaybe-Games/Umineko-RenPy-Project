@@ -1,9 +1,7 @@
-label gamestart:
+label gamestartstory:
 
 $ quick_menu = False
-queue sound "audio/sfx/umise_1006.ogg"
-show startgame_shatter
-pause (1.8)
-hide startgame_shatter
-pause (2)
+play sound "audio/sfx/umise_037.ogg" noloop
+play audio "audio/sfx/umise_1006.ogg" noloop
+$ renpy.movie_cutscene("videos/startgame_shatter.mov")
 jump start

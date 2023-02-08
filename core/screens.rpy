@@ -26,13 +26,14 @@ style button_back:
     idle_background "gui/button/BtnBackBlank.png"
     hover_background "gui/button/BtnBackBlankOn.png"
     xpos 40
-    ypos 30
+    ypos 1000
 
 style button_back_text:
     size 45
-    xoffset 88
-    yoffset 10
-    outlines [(absolute(4), "#000", absolute(0), absolute(0))]
+    xoffset 90
+    yoffset -5
+    outlines [ (absolute(2), "#000", absolute(0), absolute(0)) ]
+
 
 style default:
     properties gui.text_properties()
@@ -178,7 +179,7 @@ style say_label:
     properties gui.text_properties("name", accent=True)
     xalign gui.name_xalign
     yalign 0.5
-    outlines [ (absolute(3), "#000000", absolute(0), absolute(0)) ]
+    outlines [ (absolute(2), "#000", absolute(0), absolute(0)) ]
 
 style say_dialogue:
     properties gui.text_properties("dialogue")
@@ -186,7 +187,7 @@ style say_dialogue:
     xpos gui.dialogue_xpos
     xsize gui.dialogue_width
     ypos gui.dialogue_ypos
-    outlines [ (absolute(3), "#000000", absolute(0), absolute(0)) ]
+    outlines [ (absolute(2), "#000", absolute(0), absolute(0)) ]
 
     adjust_spacing False
 
@@ -271,20 +272,18 @@ screen quick_menu():
 
     if quick_menu:
 
-        hbox:
+        vbox:
             style_prefix "quick"
 
-            xalign 0.5
-            yalign 1.0
+            xalign 0.0
+            yalign 0.0
 
-            textbutton _("Zurück") activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" action Rollback()
-            textbutton _("Log") activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" action ShowMenu('history')
-            textbutton _("Überspringen") activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" action Skip() alternate Skip(fast=True, confirm=True)
-            textbutton _("Automodus") activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" action Preference("auto-forward", "toggle")
-            textbutton _("Speichern") activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" action ShowMenu('save')
-            textbutton _("S.Speichern") activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" action QuickSave()
-            textbutton _("S. Laden") activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" action QuickLoad()
-            textbutton _("Optionen") activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" action ShowMenu('preferences')
+            imagebutton auto "gui/button/quickbuttonlog_%s.png" action ShowMenu("history") xpos 0 ypos 750 activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+            imagebutton auto "gui/button/quickbuttonload_%s.png" action ShowMenu("load") xpos 0 ypos 750 activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+            imagebutton auto "gui/button/quickbuttonsave_%s.png" action ShowMenu("save") xpos 0 ypos 750 activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+            imagebutton auto "gui/button/quickbuttonautomode_%s.png" action Preference("auto-forward", "toggle") xpos 0 ypos 750 activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+            imagebutton auto "gui/button/quickbuttonskip_%s.png" action Skip() alternate Skip(fast=True, confirm=True) xpos 0 ypos 750 activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+            imagebutton auto "gui/button/quickbuttonmenu_%s.png" action ShowMenu('preferences') xpos 0 ypos 750 activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
 
 
 ## This code ensures that the quick_menu screen is displayed in-game, whenever
@@ -349,6 +348,12 @@ screen navigation():
 
         elif not main_menu:
 
+            text "Episode 0 " + chapternumber ypos 900 xpos 10 xalign 0.0 size 60 font "fonts/Dreams Hunter.otf"
+
+            text chaptername ypos 960 xpos 10 xalign 0.0 size 60 font "fonts/Dreams Hunter.otf"
+
+            text "Aktueller Soundtrack: " + songname ypos 1040 xpos 10 xalign 0.0 size 40 font "fonts/ArnoPro.otf"
+
             #textbutton _("Haup{color=#f00}t{/color}menü") action MainMenu() ypos 881 xpos 350 activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
 
             imagebutton auto "gui/button/mainmenu_%s.png" action MainMenu() xpos 1292 ypos 787 activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
@@ -384,7 +389,6 @@ style navigation_button:
 
 style navigation_button_text:
     properties gui.button_text_properties("navigation_button")
-    outlines [ (absolute(4), "#000000", absolute(0), absolute(0)) ]
     xalign 1.0
 
 
@@ -515,7 +519,7 @@ screen game_menu(title, scroll=None, yinitial=0.0):
 
     use navigation
 
-    imagebutton auto "gui/button/back_%s.png" style "return_button" activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" action Return()
+    #imagebutton auto "gui/button/back_%s.png" style "return_button" activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" xpos 800 action Return()
 
 
     label title
@@ -592,7 +596,7 @@ screen about():
     ## This use statement includes the game_menu screen inside this one. The
     ## vbox child is then included inside the viewport inside the game_menu
     ## screen.
-    use game_menu(_("Über"), scroll="viewport"):
+    use game_menu(_("{color=#fff}Üb{color=#f00}e{color=#fff}r"), scroll="viewport"):
 
         style_prefix "about"
 
@@ -802,25 +806,25 @@ screen preferences():
                 vbox:
 
 
-                    label _("{color=#fff}Textgeschwindi{color=#f00}g{color=#fff}keit") ypos 15
+                    label _("{color=#fff}> Textgeschwindi{color=#f00}g{color=#fff}keit >>") ypos 15
 
                     bar value Preference("text speed")
 
-                    label _("{color=#fff}Auto{color=#f00}m{color=#fff}odusgeschwindigkeit") ypos 15
+                    label _("{color=#fff}>> Auto{color=#f00}m{color=#fff}odusgeschwindigkeit >") ypos 15
 
                     bar value Preference("auto-forward time")
 
                 vbox:
 
                     if config.has_music:
-                        label _("{color=#fff}Musiklautstär{color=#f00}k{color=#fff}e") ypos 15
+                        label _("{color=#fff}> Musiklautstär{color=#f00}k{color=#fff}e >>") ypos 15
 
                         hbox:
                             bar value Preference("music volume")
 
                     if config.has_sound:
 
-                        label _("{color=#fff}Soundlautstär{color=#f00}k{color=#fff}e") ypos 20
+                        label _("{color=#fff}> Soundlautstär{color=#f00}k{color=#fff}e >>") ypos 20
 
                         hbox:
                             bar value Preference("sound volume")
@@ -933,7 +937,7 @@ screen history():
     ## Avoid predicting this screen, as it can be very large.
     predict False
 
-    use game_menu(_("Vergangene Dialoge"), scroll=("vpgrid" if gui.history_height else "viewport"), yinitial=1.0):
+    use game_menu(_("{color=#fff}Vergangene Dia{color=#f00}l{color=#fff}oge"), scroll=("vpgrid" if gui.history_height else "viewport"), yinitial=1.0):
 
         style_prefix "history"
 
@@ -961,7 +965,7 @@ screen history():
                     substitute False
 
         if not _history_list:
-            label _("Noch keine Dialoge vorhanden.")
+            label _("{color=#fff}Es hat noch kein Charakter gesprochen.")
 
 
 ## This determines what tags are allowed to be displayed on the history screen.
@@ -1020,7 +1024,7 @@ screen help():
 
     default device = "keyboard"
 
-    use game_menu(_("Hilfe"), scroll="viewport"):
+    use game_menu(_("{color=#fff}Hi{color=#f00}l{color=#fff}fe"), scroll="viewport"):
 
         style_prefix "help"
 
@@ -1210,7 +1214,7 @@ screen confirm(message, yes_action, no_action):
                 spacing 150
 
                 textbutton _("Ja") action yes_action activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
-                textbutton _("Nein") action no_action activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+                textbutton _("Nein") action no_action activate_sound "audio/sfx/umise_1001.ogg" hover_sound "audio/sfx/click-21156.mp3"
 
     ## Right-click and escape answer "no".
     key "game_menu" action no_action
@@ -1308,7 +1312,7 @@ screen notify(message):
     style_prefix "notify"
 
     frame at notify_appear:
-        text "{size=25}{color=#20BBBC}[message!tq]{/color}{/size}"
+        text "{size=35}[message!tq]{/size}"
 
     timer 5.25 action Hide('notify')
 
@@ -1459,14 +1463,14 @@ screen story_select():
 
     add "images/menu/rose_1ep.png" at center
 
-    textbutton "Zum Hauptmenü" style "button_back" action ShowMenu("main_menu")
+    textbutton "Zum Hauptm{color=#f00}e{color=#fff}nü" style "button_back" action ShowMenu("main_menu")
 
     vbox:
         xalign 0.9
         yalign 0.5
         spacing -20
 
-        imagebutton idle "gui/button/mainidle.png" action Start("gamestart") hover "gui/button/mainhover.png" activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+        imagebutton idle "gui/button/mainidle.png" action ShowMenu("gamestart") hover "gui/button/mainhover.png" activate_sound "audio/sfx/umise_051.ogg" hover_sound "audio/sfx/click-21156.mp3"
 
         hbox:
             xpos 70
@@ -1476,6 +1480,22 @@ screen story_select():
 
 
             imagebutton idle "gui/button/hiddenidle.png" at grayscale action NullAction()
+
+screen gamestart():
+
+    tag menu
+
+    add "images/menu/start.png" at center
+
+    textbutton "Zu{color=#f00}r{color=#fff}ück" style "button_back" action ShowMenu("story_select")
+
+    vbox:
+            xalign 0.5
+            yalign 0.5
+            xpos 960
+            ypos 1000
+
+            imagebutton idle "gui/button/begin_idle.png" action Start("gamestartstory") hover "gui/button/begin_hover.png" activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
 
 ################################################################################
 ## Mobile Variants
@@ -1512,10 +1532,12 @@ style window:
     variant "small"
     background "gui/phone/textbox.png"
 
+
+
 style quick_button_text:
     properties gui.button_text_properties("quick_button")
     size 21
-    outlines [ (absolute(2), "#000000", absolute(0), absolute(0)) ]
+
 
 style radio_button:
     variant "small"

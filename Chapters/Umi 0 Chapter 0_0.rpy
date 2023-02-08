@@ -1,12 +1,13 @@
 label start:
-    # Prologue
+
+    $ chaptername = "'Ich schreibe an dich in einer Quadrillion Jahren'"
+    $ chapternumber = "Prolog"
+    $ songname = "-"
     stop sound fadeout 3
     stop music fadeout 3
     $ quick_menu = False
     scene black with dissolve
-    pause (1)
-    ## Disclaimer
-    $ renpy.notify("Prolog")
+    pause (3)
     play sound "audio/sfx/umise_028.ogg" noloop
     show portrait3
     show text "Dieses Spiel ist reine Fiktion! Alle Ähnlichkeiten mit Dingen aus der Realität sind purer Zufall! Alle Rechte der verwendeten Assets gehen an 07th Expansion, Alchemist, Entergram und weitere rechtmäßige Rechteinhaber. Dieses Spiel ist unabhängig von der originalen Umineko Geschichte" at truecenter with dissolve
@@ -16,16 +17,17 @@ label start:
     with dissolve
     hide portrait3
     with dissolve
-    pause (3)
+    pause (7)
+    $ songname = "At Death's Door"
     $ play_music(deaths_door)
     show text "Polizeiliche Kriminalakten zum Fall im Dorf Hinamizawa" with dissolve
     pause (5)
     hide text with fade
     pause (2)
-    ## chapter begin
     scene ke_s2 with dissolve
-    pause (1)
+    pause (2)
     $ quick_menu = True
+    $ renpy.notify("Ich schreibe an dich in einer Quadrillion Jahren")
     """
     01. Mai 1983
 
@@ -121,11 +123,12 @@ label start:
 
     Mehr konnten meine Kollegen und ich noch nicht herausfinden, damit tappen wir leider immernoch im dunkeln.
     """
+    $ songname = "-"
     stop music fadeout 3
     $ quick_menu = False
     pause (0.5)
     scene black with fade
-    #play sound "audio/bgm/op1.mp3"
+    $ songname = "Katayaku no Tori"
     $ renpy.movie_cutscene("videos/opening.mov")
     stop sound
     jump chapter1

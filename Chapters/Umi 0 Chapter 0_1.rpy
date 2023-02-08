@@ -1,30 +1,28 @@
 label chapter1:
 
-    ## Just a fake clock cuz I have no Idea how to recreate the Umi Project Clock
-    $ renpy.notify("Kapitel 1 - Willkommen auf Rokkenjima")
+    $ chaptername = "'Willkommen auf Rokkenjima'"
+    $ chapternumber = "Kapitel 1"
+    $ songname = "-"
+    $ renpy.notify("Willkommen auf Rokkenjima")
     pause (2)
-    show text "Der erste Tag\n04. Oktober 1986\n09:25 Uhr" with dissolve
+    show text "Der erste Tag\nSamstag, 04. Oktober 1986\n09:25 Uhr" with dissolve
     pause (2)
     play sound "audio/sfx/umilse_1050.ogg"
-    show text "Der erste Tag\n04. Oktober 1986\n09:26 Uhr"
+    show text "Der erste Tag\nSamstag, 04. Oktober 1986\n09:26 Uhr"
     pause (0.8)
-    show text "Der erste Tag\n04. Oktober 1986\n09:27 Uhr"
+    show text "Der erste Tag\nSamstag, 04. Oktober 1986\n09:27 Uhr"
     pause (0.8)
-    show text "Der erste Tag\n04. Oktober 1986\n09:28 Uhr"
+    show text "Der erste Tag\nSamstag, 04. Oktober 1986\n09:28 Uhr"
     pause (0.8)
-    show text "Der erste Tag\n04. Oktober 1986\n09:29 Uhr"
+    show text "Der erste Tag\nSamstag, 04. Oktober 1986\n09:29 Uhr"
     pause (0.8)
-    show text "Der erste Tag\n04. Oktober 1986\n09:30 Uhr"
+    show text "Der erste Tag\nSamstag, 04. Oktober 1986\n09:30 Uhr"
     stop sound
     pause (5)
     hide text with dissolve
     pause (2)
-    ## scene on boat to rokkenjima
-    camera:
-        anchor (0.5, 0.5)
-        pos (960, 540)
-        matrixcolor IdentityMatrix()
     $ persistent.alreadystarted = True
+    $ songname = "HANE"
     $ play_music(hane)
     play audio "audio/sfx/umilse_004.ogg" loop
     scene sea_1c with dissolve

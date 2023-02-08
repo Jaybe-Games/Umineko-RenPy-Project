@@ -1,0 +1,8 @@
+define doorfade = Fade(1.0, 1.0, 2.8, color="#fff")
+define longfade = Fade(1.0, 1.0, 1.5, color="#fff")
+define shortfade = Fade(0.5, 0.5, 0.5, color="#fff")
+define longdissolve = Dissolve(1.5)
+define flash = Fade(.25, 0, .25, color="#fff")
+define quickflash = Fade(.0, 0.5, 0.25, color="#fff")
+define openfade = Fade(1.5, 2.0, 2.0, color="#fff")
+define fastdissolve = Dissolve(0.5)

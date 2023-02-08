@@ -25,7 +25,7 @@ define gui.show_name = False
 
 ## The version of the game.
 
-define config.version = "v15123"
+define config.version = "v50223"
 
 
 ## Text that is placed on the game's about screen. Place the text between the
@@ -91,8 +91,21 @@ define config.after_load_transition = dissolve
 
 ## Used when entering the main menu after the game has ended.
 
-define config.end_game_transition = fade
+define config.end_game_transition = dissolve
 
+define config.nvl_adv_transition = dissolve
+
+define config.adv_nvl_transition = dissolve
+
+define config.game_main_transition = dissolve
+
+define config.exit_yesno_transition = dissolve
+
+define config.say_attribute_transition = dissolve
+
+define config.fade_music = 1.0
+
+define config.manage_gc = True
 
 ## A variable to set the transition used when the game starts does not exist.
 ## Instead, use a with statement after showing the initial scene.
