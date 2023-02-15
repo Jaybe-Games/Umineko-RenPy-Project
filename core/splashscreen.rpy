@@ -5,7 +5,6 @@ label splashscreen:
 
 scene black with dissolve
 pause (1)
-play audio "audio/sfx/umise_051.ogg" noloop
 show splash1 with dissolve
 pause (1.5)
 hide splash1 with dissolve
@@ -22,11 +21,11 @@ pause (1)
 if persistent.alreadystarted == True:
     $ renpy.movie_cutscene("videos/opening.mov")
     play sound "audio/sfx/umilse_002.ogg" noloop
-    $ renpy.movie_cutscene("videos/mmani.webm")
+    $ renpy.movie_cutscene("videos/mmani.mov")
     stop sound fadeout 3
     return
 else:
     play sound "audio/sfx/umilse_002.ogg" noloop
-    $ renpy.movie_cutscene("videos/mmani.webm")
+    $ renpy.movie_cutscene("videos/mmani.ogg")
     stop sound fadeout 3
     return

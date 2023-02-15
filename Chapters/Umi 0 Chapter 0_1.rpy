@@ -29,21 +29,21 @@ label chapter1:
     pause (3)
     $ quick_menu = True
     """
-    In der Luft liegt der typische Meeresgeruch von Salz und auch etwas nach Alge.
-    Ein Duft der den Geruchssinn sofort in Ekstase versetzt, wenn nicht sogar die Seele selber begeistert.
+    In der Luft liegt der typische Meeresgeruch von Salz und auch ein wenig von Algen.
+    Ein Duft, der den Geruchssinn sofort in Ekstase versetzt, wenn nicht sogar die Seele selbst begeistert.
 
-    Weil sogar ein Taub-Stummer mit extremer Sehschwäche sofort weiß, dass das Meer sich in unmittelbarer Nähe befindet
-    und in Hochstimmung kommt, wenn die Seemöwen wieder weinen.
+    Denn selbst ein taubstummer, extrem sehbehinderter Mensch weiß sofort, dass das Meer in der Nähe ist
+    und in Hochstimmung gerät, wenn die Möwen wieder schreien.
 
-    Die Ushiromiya Familie ist von der Insel Niijima zur Insel Rokkenjima mit dem Boot unterwegs.
-    Doch einer von ihnen scheint die Fahrt gar nicht zu gefallen, schreit herum, dass er vom Boot fällt und sowas.
+    Die Familie Ushiromiya ist mit dem Boot von der Insel Niijima zur Insel Rokkenjima unterwegs.
+    Aber einer von ihnen scheint die Fahrt gar nicht zu mögen, er schreit herum, dass er vom Boot fällt und so.
     """
     scene sea_1c at screenshake_big_transform
     play sound "audio/sfx/umise_003.ogg"
     show but_b23_kuyasigaru1 at zero_center,screenshake_long_transform with dissolve
-    but "whaoooo!!!! ich falle runter, ....ich falle runteeeeeer!!!"
-    but "Ich hasse Boote! ...Gleich muss ich kotzen, ich falleeeee!!!"
-    but "Das wars!... ich werde diese Insel nicht mehr erreichen, eher sterbe ich hier..."
+    but "whaoooo!!!! ....Ich falle runter, ....ich falle runteeeeeer!!!"
+    but "....Ich hasse Boote! ...Gleich muss ich kotzen, ich falleeeee!!!"
+    but "Das wars!... Ich werde diese Insel nicht mehr erreichen, eher sterbe ich hier..."
     show but_b23_kuyasigaru1 at zero_left,sprite_highlight('but') with move
     play sound "audio/sfx/umise_047.ogg"
     show mar_a11_warai1 at zero_right,jump_transform,sprite_highlight('mar') with dissolve
@@ -59,28 +59,28 @@ label chapter1:
     show mar_a11_warai1 at zero_right,jump_transform,sprite_highlight('mar')
     mar "Ich finde das super lustig! *kicher*kicher* uu~!"
     """
-    Während die Ushiromiya Familie zur jährlichen Familienkonferenz fahren möchte,
-    bekommt Battler, wie schon zu früheren Konferenzen es mit der Angst zu tun.
+    Als die Familie Ushiromiya zur jährlichen Familienkonferenz fahren will,
+    hat Battler, wie schon bei früheren Konferenzen, mit Angstzuständen zu kämpfen.
 
-    Battler hat sowas wie eine Reiseangst, wenn er mit dem Flugzeug unterwegs ist, dreht er durch,
-     wenn das Flugzeug zu stark wackelt, es könnte ja abstürzen und wenn er auf einem Boot ist dann, na ja, das sehen wir gerade.
+    Battler hat eine Art Reiseangst, wenn er im Flugzeug sitzt, dreht er durch,
+    wenn das Flugzeug zu sehr schaukelt, es könnte abstürzen, und wenn er auf einem Schiff ist, dann, na ja, das sehen wir ja gerade.
 
-    Maria, die nicht ansatzweise seekrank ist, fängt lautstark an zu kichern,
-    weil das Zusehen von einem zu Tode verängstigten Battler so viel Spaß macht.
+    Maria, die überhaupt nicht seekrank ist, beginnt laut zu kichern,
+    weil es so lustig ist, einem zu Tode erschrockenen Battler zuzusehen.
 
-    Die beiden scheinen allerdings von zwei Erwachsenen beobachtet zu werden und selbst die können sich das Lachen nicht verkneifen.
+    Aber die beiden scheinen von zwei Erwachsenen beobachtet zu werden, und auch die können sich das Lachen nicht verkneifen.
     """
     scene ship_s2bf with dissolve
     pause (0.5)
     show rud_a11_akuwarai1 at zero_center with dissolve
-    rud "...Hey Battler-kun! Wenn du kotzen musst, dann bitte in einen Eimer, bei dem, was du dir reinschaufelst, würdest du viele Fische auf dem Gewissen haben... hehe..."
-    rud "Unglaublich, dass du selbst im Flugzeug schon so durchgedreht bist, du konntest noch nicht einmal im Auto still sitzen."
+    rud "...Hey Battler-kun! Wenn du kotzen musst, dann bitte in einen Eimer, bei dem, was du dir in den Hals schaufelst, würdest du eine Menge Fische auf dem Gewissen haben... hehe..."
+    rud "Unglaublich, dass du schon im Flugzeug so durchgedreht bist, du konntest ja nicht mal im Auto still sitzen."
     show rud_a11_akuwarai1 at zero_right,sprite_highlight('rud') with move
     show but_b22_odoroki2 at zero_left,sprite_highlight('but')
     but "Lass mich in Ruhe, das ist echt kein guter Zeitpunkt!"
     hide rud_a11_akuwarai1
     show rud_a11_defo1 at zero_right,sprite_highlight('rud')
-    rud "Es ist bei dir doch nie ein guter Zeitpunkt, wenn du mit irgendwas fahren musst und wag es dich ins Meer zu kotzen!"
+    rud "Es ist nie ein guter Zeitpunkt, wenn du mit irgendetwas fahren musst. Wag es nicht, ins Meer zu kotzen!"
     hide but_b22_odoroki2
     show but_b22_nayamu2 at zero_left
     but "Ich gebe mir hier die größte Mühe..."
@@ -89,58 +89,57 @@ label chapter1:
     pause (0.3)
     show rud_a11_warai1 at zero_center with dissolve
     """
-    Das ist mein Vater Rudolf, der alte Bastard ist genauso groß wie ich und macht sich gerne bei Gelegenheit über mich lustig.
-    Sein Name wird im Japanischen Ushiromiya Rudorufu ausgesprochen, fast die ganze Familie hat so eine seltsame Namenstradition.
+    Das ist mein Vater Rudolf, der alte Bastard ist so groß wie ich und macht sich bei Gelegenheit gerne über mich lustig.
+    Sein Name wird auf Japanisch Ushiromiya Rudorufu ausgesprochen, fast die ganze Familie hat diese seltsame Namenstradition.
 
-    Seit dem Tot meiner Mutter Asumu ist unser Verhältnis stark auseinander gebrochen,
-    aber ich bin mir sicher, dass auch dies über die Zeit wieder funktionieren kann.
+    Seit meine Mutter Asumu gestorben ist, hat sich unser Verhältnis sehr verschlechtert,
+    aber ich bin sicher, dass es mit der Zeit wieder funktionieren kann.
     """
     hide rud_a11_warai1 with dissolve
     show kir_a11_defo1 at zero_left,sprite_highlight('kyr') with dissolve
     show rud_a11_warai1 at zero_right,sprite_highlight('rud') with dissolve
-    kyr "Ist es nicht schön, dass Battler-kun wieder hier ist?... Ich meine nach 6 Jahren der Abwesenheit immer noch ein Theater bei der Anreise?... *kicher*"
-    rud "Ja, aber das war als er noch jünger war, deutlich schlimmer, da hatte man die komplette Anreise über keinerlei Ruhe."
+    kyr "Ist es nicht schön, dass Battler-kun wieder da ist? Ich meine, nach 6 Jahren Abwesenheit immer noch ein Theater bei der Ankunft? *kicher*"
+    rud: "Ja, aber das war viel schlimmer, als er noch jünger war, da hatte man die ganze Anreise keine Ruhe".
     hide kir_a11_defo1
     show kir_a11_majime1 at zero_left,sprite_highlight('kyr')
-    kyr "Daran ist er aber auch selber Schuld, wenn er da herum turnt, wenn er doch weiß, dass er seekrank wird."
+    kyr "Aber er ist selbst schuld, wenn er da rumturnt, obwohl er weiß, dass er seekrank wird."
     hide rud_a11_warai1 with dissolve
     hide kir_a11_majime1 with dissolve
     show kir_a11_defo1 at zero_center,active with dissolve
     """
-    Das ist Kyrie-san, der alte Bastard hat sie kurz nach dem Tot meiner Mutter geheiratet,
-    aber das sind Dinge, die bereits hinter uns liegen.
+    Das ist Kyrie-san, der alte Bastard hat sie kurz nach dem Tod meiner Mutter geheiratet,
+    aber das liegt hinter uns.
 
-    Sie ist sehr intelligent und hat mir sehr viel über das Schachbrettdenken beigebracht,
-    wo man ein Spiel aus den Augen des Gegners betrachten muss. Ich betrachte sie zwar nicht als Mutter,
-    wir kommen aber trotzdem gut miteinander aus.
+    Sie ist sehr intelligent und hat mir viel über das Denken am Schachbrettdenken beigebracht,
+    wo man eine Partie mit den Augen des Gegners sehen muss.
+    Ich sehe sie nicht als Mutter, aber wir verstehen uns gut.
 
-    Ihr wollt wissen, wie sie im Japanischen ausgesprochen wird? Das ist ganz einfach: Ushiromiya Kirie
-    und nein das spricht man nicht seltsam aus, ihr Name ist absolut perfekt,
-    ich hasse Großvater den alten Kauz dafür, dass wir so seltsame Namen haben.
+    Wollt ihr wissen, wie man sie auf Japanisch ausspricht? Ganz einfach: Ushiromiya Kyrie
+    Und nein, man spricht es nicht komisch aus, ihr Name ist absolut perfekt,
+    Ich hasse Opa den alten Kauz dafür, dass wir so komische Namen haben.
     """
     hide kir_a11_defo1 with dissolve
     show but_b23_kuyasigaru1 at zero_center with dissolve
-    but "Ich finde das gar nicht lustig... Ich kämpfe hier schließlich um mein... Leben... *würg*"
+    but "Ich finde das gar nicht lustig... Ich kämpfe hier schließlich um mein... ....Leben... *würg*"
     play sound "audio/sfx/umise_003.ogg"
     scene ship_s2bf at screenshake_big_transform
     show but_b23_kuyasigaru1 at zero_center,run_transform
     hide but_b23_kuyasigaru1 with dissolve
     """
-    Battler wurde so schlecht, dass er es nicht mehr zurückhalten konnte und er hat den ganzen gekochten Reis von heute Morgen ins Wasser befördert.
+    Battler wurde so übel, dass er sich nicht zurückhalten konnte und den ganzen gekochten Reis vom Vormittag ins Wasser schleuderte.
     """
     show rud_a11_akuwarai1 at zero_right,active,sprite_highlight('rud') with dissolve
-    rud "Jetzt hat dieser Kasper tatsächlich die Fische gefüttert, ach herrje... ahahaha"
+    rud ".....Jetzt hat dieser Kasper tatsächlich die Fische gefüttert, ach herrje... ahahaha"
     show mar_a11_warai1 at zero_left,sprite_highlight('mar') with dissolve
     mar "uu-uu~! Battler hat sich übergeben, Battler hat sich übergeben! *kicher*kicher*"
     hide rud_a11_akuwarai1 with dissolve
     hide mar_a11_warai1 with dissolve
     show mar_a11_niyari1 at zero_center with dissolve
     """
-    Das kleine Mädchen, dass definitiv mehr Freude daran hat mir zuzuschauen,
-    als mit dem Boot zu fahren ist meine jüngste Cousine Maria.
+    Das kleine Mädchen, das definitiv mehr Spaß daran hat, mir zuzusehen, als mit dem Boot zu fahren, ist meine jüngste Cousine Maria,
 
-    Auch sie hat unsere Namenstradition erwischt, anstelle von einem normalen japanischen Namen heißt sie Ushiromiya Maria
-    und das spricht man auch so aus, nur eben in kurzen Silben gesprochen.
+    Auch sie hat unsere Namenstradition übernommen, statt eines normalen japanischen Namens heißt sie Ushiromiya Maria
+    und das wird auch so ausgesprochen, nur in kurzen Silben.
     """
     hide mar_a11_niyari1 with dissolve
     show ros_a11_ikari1 at zero_right,sprite_highlight('ros') with dissolve
@@ -151,55 +150,61 @@ label chapter1:
     mar "........uu~..."
     hide ros_a11_ikari1
     show ros_a11_ikari2 at zero_right,sprite_highlight('ros')
-    ros "und hör auf mit diesem uu-uu, du bist kein kleines Kind mehr!"
+    ros "und hör auf mit diesem uu-uu, .....du bist kein kleines Kind mehr!"
     """
-    Maria war nicht sehr begeistert davon, dass ihre Mama ihre Freude unterbricht.
-    Sie ist es sicher gewohnt die ganze Zeit schelte zu kriegen, das arme Kind.
+    Maria war nicht begeistert, dass ihre Mama ihre Freude unterbrach.
+    Sie ist es wohl gewöhnt, dass man mit ihr schimpft, das arme Kind.
     """
     hide mar_a11_defo1 with dissolve
     show but_b11_odoroki3 at zero_left,sprite_highlight('but') with dissolve
     show ros_a11_komaru4 at zero_right,sprite_highlight('ros')
     hide ros_a11_ikari2
-    ros "Entschuldige bitte, Battler-kun, ich bekomme es einfach nicht aus ihr raus."
+    ros "Tut mir leid, Battler-kun, ich kriege es einfach nicht aus ihr raus."
     hide but_b11_odoroki3
     show ros_a11_komaru4 at zero_right,sprite_highlight('ros')
     show but_b22_warai1 at zero_left,sprite_highlight('but')
-    but "Ist schon okay Tante Rosa, sie meint es ja nicht böse, also bin ich es auch nicht."
+    but "Schon gut, Tante Rosa, sie meint es nicht böse, also bin ich es auch nicht."
     hide ros_a11_komaru4
     show ros_a11_majime1 at zero_right,sprite_highlight('ros')
-    ros "...Aber, dass dein größter Gegner das Fahren mit Fahrzeugen ist, verstehe ich nicht..."
-    ros "Du wirkst eigentlich so erwachsen und gereift und jetzt das?"
+    ros ".....aber dass dein größter Feind das Fahrzeugfahren ist, verstehe ich nicht..."
+    ros ".....Du wirkst so erwachsen und reif und jetzt das?"
     hide ros_a11_majime1 with dissolve
     hide but_b22_warai1 with dissolve
     show ros_a11_warai1 at zero_center with dissolve
     """
     Das ist Tante Rosa, sie ist die Mutter von Maria und erzieht sie in meinen Augen etwas zu streng.
-    Da dies allerdings nicht wirklich mein Bier ist, werde ich mich da raushalten.
+    Aber da das nicht wirklich mein Bier ist, halte ich mich da raus.
 
-    Ihre Aussprache ist trotz ihres bescheuerten Namens aber immerhin nur Ushiromiya Rooza,
+    Trotz ihres blöden Namens ist ihre Aussprache nur Ushiromiya Rooza,
     was nur halb so schlimm ist wie der Name meines Vaters.
+
+    Trotzdem ist der Name in jeder Hinsicht lächerlich. Danke Opa nochmal dafür.
     """
     hide ros_a11_warai1 with dissolve
     show rud_a11_akuwarai1 at zero_right,sprite_highlight('rud') with dissolve
-    rud "Er schafft es einfach nicht ruhig sitzen zu bleiben, aus irgendeinem Grund."
-    rud "Das ist richtig unangenehm, erzähl das besser niemanden."
+    rud "Er kann einfach nicht still sitzen, aus irgendeinem Grund".
+    rud "Das ist wirklich peinlich, das darfst du niemandem erzählen."
     show but_b23_nayamu1 at zero_left,sprite_highlight('but') with dissolve
-    but ".......Ey, halt den Mund......."
+    but ".......Ey, .....halt den Mund!"
     hide rud_a11_akuwarai1 with dissolve
     hide but_b23_nayamu1 with dissolve
     show but_b11_warai2 at zero_center with dissolve
     """
-    Wie wir schon wissen, heiße ich, der sich gerade schön ins Wasser übergeben hat Ushiromiya Battler.
-    Ich bin das Kind von Rudolf und Asumu, wobei Asumu vor 6 Jahren verstorben ist
+    Wie wir bereits wissen, ist mein Name Ushiromiya Battler, der sich gerade schön ins Wasser übergeben hat.
+    Ich bin das Kind von Rudolf und Asumu, Asumu ist vor 6 Jahren gestorben.
 
-    und habe darauf die Familie wegen eines Konflikts mit Dad für 6 lange Jahre verlassen und lebte bei meinen Großeltern mütterlicherseits.
-    Diese sind aber auch kürzlich von uns gegangen.
+    und danach habe ich die Familie wegen eines Konflikts mit Dad für 6 lange Jahre verlassen und habe bei meinen Großeltern mütterlicherseits gelebt.
+    Aber auch die sind vor kurzem gestorben.
 
-    Mein Name wird übrigens im Japanischen so geschrieben: Ushiromiya Batora.
-    Ja, man spricht mich nicht Battler, sondern Batora aus, klingt echt komisch.
+    Mein Name wird im Japanischen übrigens so geschrieben: Ushiromiya Batora.
+    Ja, man spricht mich nicht Battler aus, sondern Batora, klingt echt komisch.
 
-    Bei mir hört der Spaß mit den seltsamen Namen aber definitiv nicht auf.
-    Hier sind einige, die ihren Namensgeber am liebsten in dunkle Räume sperren würden.
+    Aber der Spaß hört bei mir noch lange nicht auf.
+    Hier sind einige, die ihren Namensgeber am liebsten in dunkle Kammern sperren würden.
+
+    Meine Japanischen Schriftzeichen machen mich wütend. Ich werde mit den Zeichen von 'Person' und 'Kampf' geschrieben
+    Deswegen denkt ein typischer Japaner ich heiße Sento-kun. Niemand würde auch nur im Traum daran denken, dass es 'Battler'
+    ausgesprochen wird.
     """
     hide but_b11_warai2 with dissolve
     show rud_a11_akuwarai2 at zero_right,sprite_highlight('rud') with dissolve
@@ -209,31 +214,31 @@ label chapter1:
     hide but_b22_nayamu1
     show but_b22_nayamu2 at zero_left,sprite_highlight('but')
     but "...Also wenn du es unbedingt wiederhaben willst, kannst du ja ins Meer springen und es wieder rausfischen... hihihihi..."
-    but "Aber mal ernsthaft, das Wackeln wurde gerade richtig schlimm..."
+    but "....Aber mal ernsthaft, das Wackeln wurde gerade richtig schlimm..."
     hide rud_a11_akuwarai2
     show rud_a11_defo2 at zero_right,sprite_highlight('rud')
-    rud "Battler..."
+    rud "........Battler..."
     show rud_a11_defo2 at zero_left2,sprite_highlight('rud') with move
     hide rud_a11_defo2
     show rud_a11_defo1 at zero_left2
     play sound "audio/sfx/umise_047.ogg"
     hide but_b22_nayamu2
     show but_b11_kuyasigaru1 at zero_left
-    but "owowow du alter Bastard, scheiße owowowow"
+    but "....owowowowowow...... Du alter Bastard! Scheiße...... owowowow......"
     """
-    Einen Moment hat Battler nicht aufgepasst und schon hat Rudolf nach seinem Ohrläppchen gegriffen und behandelt es nicht gerade stiefmütterlich.
+    Einen Moment hat Battler nicht aufgepasst und schon hat Rudolf sein Ohrläppchen gepackt und behandelt es nicht gerade zimperlich.
     """
     but "owowowowowowowow.... lass los! owowowowowowow"
-    but "Das tut richtig weh, Hör auf damit, owowowow"
+    but ".......Das tut richtig weh, Hör auf damit, .....owowowow"
     rud "Du.... willst.... also...., dass ich es mir zu...rück....ho...le...jaaaa~?"
     """
-    Rudolf hat einen sehr kräftigen Griff, vor allem dann, wenn es um Battlers Ohrläppchen geht, da bekommt man das Gefühl, er reißt sie jeden Moment ab.
+    Rudolf hat einen sehr starken Griff, besonders wenn es um Battlers Ohrläppchen geht, man hat das Gefühl, er reißt es jeden Moment ab.
     """
     but "........."
     but ".....owowowow..... lass doch endlich los owowowowow... es tut weh...."
-    rud "....Das ist halt deine Bestrafung, wenn du frech wirst, Battler-kun"
-    kyr "Lasst es für heute gut sein ihr zwei."
-    kyr "Ihr könnt das später auf der Insel klären."
+    rud: ".... Das ist deine Strafe, wenn du frech wirst, Battler-kun."
+    kyr: "Lasst es für heute gut sein, ihr zwei".
+    kyr: "Das könnt ihr später auf der Insel austragen".
     """
     Nachdem Kyrie den kleinen Konflikt erfolgreich beendet hat, konnte man hören, dass jemand von unterm Deck nach draußen geht.
     """
