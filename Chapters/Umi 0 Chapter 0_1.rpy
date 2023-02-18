@@ -25,7 +25,7 @@ label chapter1:
     $ songname = "HANE"
     $ play_music(hane)
     play audio "audio/sfx/umilse_004.ogg" loop
-    scene sea_1c with dissolve
+    scene sea_1c
     pause (3)
     $ quick_menu = True
     """
@@ -38,7 +38,6 @@ label chapter1:
     Die Familie Ushiromiya ist mit dem Boot von der Insel Niijima zur Insel Rokkenjima unterwegs.
     Aber einer von ihnen scheint die Fahrt gar nicht zu mögen, er schreit herum, dass er vom Boot fällt und so.
     """
-    scene sea_1c at screenshake_big_transform
     play sound "audio/sfx/umise_003.ogg"
     show but_b23_kuyasigaru1 at zero_center,screenshake_long_transform with dissolve
     but "whaoooo!!!! ....Ich falle runter, ....ich falle runteeeeeer!!!"
@@ -99,7 +98,7 @@ label chapter1:
     show kir_a11_defo1 at zero_left,sprite_highlight('kyr') with dissolve
     show rud_a11_warai1 at zero_right,sprite_highlight('rud') with dissolve
     kyr "Ist es nicht schön, dass Battler-kun wieder da ist? Ich meine, nach 6 Jahren Abwesenheit immer noch ein Theater bei der Ankunft? *kicher*"
-    rud: "Ja, aber das war viel schlimmer, als er noch jünger war, da hatte man die ganze Anreise keine Ruhe".
+    rud "Ja, aber das war viel schlimmer, als er noch jünger war, da hatte man die ganze Anreise keine Ruhe."
     hide kir_a11_defo1
     show kir_a11_majime1 at zero_left,sprite_highlight('kyr')
     kyr "Aber er ist selbst schuld, wenn er da rumturnt, obwohl er weiß, dass er seekrank wird."
@@ -182,7 +181,7 @@ label chapter1:
     """
     hide ros_a11_warai1 with dissolve
     show rud_a11_akuwarai1 at zero_right,sprite_highlight('rud') with dissolve
-    rud "Er kann einfach nicht still sitzen, aus irgendeinem Grund".
+    rud "Er kann einfach nicht still sitzen, aus irgendeinem Grund."
     rud "Das ist wirklich peinlich, das darfst du niemandem erzählen."
     show but_b23_nayamu1 at zero_left,sprite_highlight('but') with dissolve
     but ".......Ey, .....halt den Mund!"
@@ -236,9 +235,9 @@ label chapter1:
     """
     but "........."
     but ".....owowowow..... lass doch endlich los owowowowow... es tut weh...."
-    rud: ".... Das ist deine Strafe, wenn du frech wirst, Battler-kun."
-    kyr: "Lasst es für heute gut sein, ihr zwei".
-    kyr: "Das könnt ihr später auf der Insel austragen".
+    rud ".... Das ist deine Strafe, wenn du frech wirst, Battler-kun."
+    kyr "Lasst es für heute gut sein, ihr zwei."
+    kyr "Das könnt ihr später auf der Insel austragen."
     """
     Nachdem Kyrie den kleinen Konflikt erfolgreich beendet hat, konnte man hören, dass jemand von unterm Deck nach draußen geht.
     """
