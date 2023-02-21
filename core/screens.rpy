@@ -102,8 +102,6 @@ style frame:
     padding gui.frame_borders.padding
     background Frame("gui/frame.png", gui.frame_borders, tile=gui.frame_tile)
 
-
-
 ################################################################################
 ## In-game screens
 ################################################################################
@@ -179,7 +177,7 @@ style say_label:
     properties gui.text_properties("name", accent=True)
     xalign gui.name_xalign
     yalign 0.5
-    outlines [ (absolute(2), "#000", absolute(0), absolute(0)) ]
+    outlines [ (absolute(1), "#000", absolute(2), absolute(1)) ]
 
 style say_dialogue:
     properties gui.text_properties("dialogue")
@@ -187,9 +185,9 @@ style say_dialogue:
     xpos gui.dialogue_xpos
     xsize gui.dialogue_width
     ypos gui.dialogue_ypos
-    outlines [ (absolute(2), "#000", absolute(0), absolute(0)) ]
-
-    adjust_spacing False
+    outlines [ (absolute(1), "#000", absolute(2), absolute(1)) ]
+    line_spacing 15
+    adjust_spacing True
 
 ## Input screen ################################################################
 ##
@@ -348,11 +346,11 @@ screen navigation():
 
         elif not main_menu:
 
-            text "Episode 0 " + chapternumber ypos 900 xpos 10 xalign 0.0 size 60 font "fonts/Dreams Hunter.otf"
+            text "{i}Episode 0 " + chapternumber ypos 875 xpos 10 xalign 0.0 size 70 font "fonts/ariston.ttf" outlines [ (absolute(3), "#000", absolute(0), absolute(0)) ]
 
-            text chaptername ypos 960 xpos 10 xalign 0.0 size 60 font "fonts/Dreams Hunter.otf"
+            text "{i}" + chaptername ypos 960 xpos 10 xalign 0.0 size 50 font "fonts/ariston.ttf" outlines [ (absolute(3), "#000", absolute(0), absolute(0)) ]
 
-            text "Aktueller Soundtrack: " + songname ypos 1040 xpos 10 xalign 0.0 size 40 font "fonts/ArnoPro.otf"
+            text "Aktueller Soundtrack: " + songname ypos 1030 xpos 10 xalign 0.0 size 30 font "fonts/AOTFShinGoProMedium.otf" outlines [ (absolute(3), "#000", absolute(0), absolute(0)) ]
 
             #textbutton _("Haup{color=#f00}t{/color}menü") action MainMenu() ypos 881 xpos 350 activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
 
@@ -1312,7 +1310,7 @@ screen notify(message):
     style_prefix "notify"
 
     frame at notify_appear:
-        text "{size=35}[message!tq]{/size}"
+        text "{font=fonts/AOTFShinGoProMedium.otf}{size=35}[message!tq]{/size}"
 
     timer 5.25 action Hide('notify')
 

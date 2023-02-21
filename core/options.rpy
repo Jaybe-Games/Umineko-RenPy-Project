@@ -25,7 +25,7 @@ define gui.show_name = False
 
 ## The version of the game.
 
-define config.version = "v50223"
+define config.version = "v23220"
 
 
 ## Text that is placed on the game's about screen. Place the text between the
@@ -92,6 +92,8 @@ define config.after_load_transition = dissolve
 ## Used when entering the main menu after the game has ended.
 
 define config.end_game_transition = dissolve
+
+define config.end_splash_transition = dissolve
 
 define config.nvl_adv_transition = dissolve
 
@@ -173,7 +175,7 @@ define config.window_icon = "gui/icon.png"
 ## This section controls how Ren'Py turns your project into distribution files.
 
 init python:
-
+    
     ## The following functions take file patterns. File patterns are case-
     ## insensitive, and matched against the path relative to the base directory,
     ## with and without a leading /. If multiple patterns match, the first is
@@ -226,6 +228,8 @@ init python:
 
     build.documentation('*.html')
     build.documentation('*.txt')
+
+
 
 
 ## A Google Play license key is required to download expansion files and perform

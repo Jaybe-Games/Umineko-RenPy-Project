@@ -32,7 +32,7 @@ init python:
     def play_music(music_alias,fade=0):
       renpy.music.play(music_alias,fadein=fade)
       if persistent.audio_cues:
-          renpy.notify("BGM: " + music_dictionary[renpy.music.get_playing('music')])
+          renpy.notify("♪ " + music_dictionary[renpy.music.get_playing('music')])
     ###
 
     ###Screenshake

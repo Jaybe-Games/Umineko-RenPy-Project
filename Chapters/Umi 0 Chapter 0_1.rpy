@@ -1,6 +1,6 @@
 label chapter1:
 
-    $ chaptername = "'Willkommen auf Rokkenjima'"
+    $ chaptername = "\"Willkommen auf Rokkenjima\""
     $ chapternumber = "Kapitel 1"
     $ songname = "-"
     $ renpy.notify("Willkommen auf Rokkenjima")
@@ -25,7 +25,7 @@ label chapter1:
     $ songname = "HANE"
     $ play_music(hane)
     play audio "audio/sfx/umilse_004.ogg" loop
-    scene sea_1c
+    scene sea_1c at Shake(None, 907200, dist=2)
     pause (3)
     $ quick_menu = True
     """
@@ -39,24 +39,24 @@ label chapter1:
     Aber einer von ihnen scheint die Fahrt gar nicht zu mögen, er schreit herum, dass er vom Boot fällt und so.
     """
     play sound "audio/sfx/umise_003.ogg"
-    show but_b23_kuyasigaru1 at zero_center,screenshake_long_transform with dissolve
-    but "whaoooo!!!! ....Ich falle runter, ....ich falle runteeeeeer!!!"
+    show but_b23_kuyasigaru1 at zero_center,Shake(None, 907200, dist=2) with dissolve
+    but "\"whaoooo!!!! ....Ich falle runter, ....ich falle runteeeeeer!!!"
     but "....Ich hasse Boote! ...Gleich muss ich kotzen, ich falleeeee!!!"
-    but "Das wars!... Ich werde diese Insel nicht mehr erreichen, eher sterbe ich hier..."
-    show but_b23_kuyasigaru1 at zero_left,sprite_highlight('but') with move
+    but "Das wars!... Ich werde diese Insel nicht mehr erreichen, eher sterbe ich hier...\""
+    show but_b23_kuyasigaru1 at zero_left,sprite_highlight('but'),Shake(None, 907200, dist=2) with fastdissolve
     play sound "audio/sfx/umise_047.ogg"
-    show mar_a11_warai1 at zero_right,jump_transform,sprite_highlight('mar') with dissolve
-    mar "*kicher*kicher* Battler fällt runter, Battler fällt runter! uu-uu~!!"
-    mar "uu~! Battler fällt runter, Battler fällt runter! uu~!"
+    show mar_a11_warai1 at zero_right,jump_transform,sprite_highlight('mar'),Shake(None, 907200, dist=2) with dissolve
+    mar "\"*kicher*kicher* Battler fällt runter, Battler fällt runter! uu-uu~!!"
+    mar "uu~! Battler fällt runter, Battler fällt runter! uu~!\""
     hide but_b23_kuyasigaru1
-    show but_b23_nayamu1 at zero_left,sprite_highlight('but')
-    but "Bitte, Maria-chan, bitte etwas ruhiger, das macht alles mein Magen nicht mit."
-    show mar_a11_uuu1 at zero_right,sprite_highlight('mar')
-    mar "uu~...? du findest das nicht lustig?"
+    show but_b23_nayamu1 at zero_left,sprite_highlight('but'),Shake(None, 907200, dist=2)
+    but "\"Bitte, Maria-chan, bitte etwas ruhiger, das macht alles mein Magen nicht mit.\""
+    show mar_a11_uuu1 at zero_right,sprite_highlight('mar'),Shake(None, 907200, dist=2)
+    mar "\"uu~...? du findest das nicht lustig?"
     hide mar_a11_uuu1
     play sound "audio/sfx/umise_047.ogg"
-    show mar_a11_warai1 at zero_right,jump_transform,sprite_highlight('mar')
-    mar "Ich finde das super lustig! *kicher*kicher* uu~!"
+    show mar_a11_warai1 at zero_right,jump_transform,sprite_highlight('mar'),Shake(None, 907200, dist=2)
+    mar "Ich finde das super lustig! *kicher*kicher* uu~!\""
     """
     Als die Familie Ushiromiya zur jährlichen Familienkonferenz fahren will,
     hat Battler, wie schon bei früheren Konferenzen, mit Angstzuständen zu kämpfen.
@@ -69,24 +69,24 @@ label chapter1:
 
     Aber die beiden scheinen von zwei Erwachsenen beobachtet zu werden, und auch die können sich das Lachen nicht verkneifen.
     """
-    scene ship_s2bf with dissolve
+    scene ship_s2bf at Shake(None, 907200, dist=2) with dissolve
     pause (0.5)
-    show rud_a11_akuwarai1 at zero_center with dissolve
-    rud "...Hey Battler-kun! Wenn du kotzen musst, dann bitte in einen Eimer, bei dem, was du dir in den Hals schaufelst, würdest du eine Menge Fische auf dem Gewissen haben... hehe..."
-    rud "Unglaublich, dass du schon im Flugzeug so durchgedreht bist, du konntest ja nicht mal im Auto still sitzen."
-    show rud_a11_akuwarai1 at zero_right,sprite_highlight('rud') with move
-    show but_b22_odoroki2 at zero_left,sprite_highlight('but')
-    but "Lass mich in Ruhe, das ist echt kein guter Zeitpunkt!"
+    show rud_a11_akuwarai1 at zero_center,Shake(None, 907200, dist=2) with dissolve
+    rud "\"...Hey Battler-kun! Wenn du kotzen musst, dann bitte in einen Eimer, bei dem, was du dir in den Hals schaufelst, würdest du eine Menge Fische auf dem Gewissen haben... hehe..."
+    rud "Unglaublich, dass du schon im Flugzeug so durchgedreht bist, du konntest ja nicht mal im Auto still sitzen.\""
+    show rud_a11_akuwarai1 at zero_right,sprite_highlight('rud'),Shake(None, 907200, dist=2) with fastdissolve
+    show but_b22_odoroki2 at zero_left,sprite_highlight('but'),Shake(None, 907200, dist=2)
+    but "\"Lass mich in Ruhe, das ist echt kein guter Zeitpunkt!\""
     hide rud_a11_akuwarai1
-    show rud_a11_defo1 at zero_right,sprite_highlight('rud')
-    rud "Es ist nie ein guter Zeitpunkt, wenn du mit irgendetwas fahren musst. Wag es nicht, ins Meer zu kotzen!"
+    show rud_a11_defo1 at zero_right,sprite_highlight('rud'),Shake(None, 907200, dist=2)
+    rud "\"Es ist nie ein guter Zeitpunkt, wenn du mit irgendetwas fahren musst. Wag es nicht, ins Meer zu kotzen!\""
     hide but_b22_odoroki2
-    show but_b22_nayamu2 at zero_left
-    but "Ich gebe mir hier die größte Mühe..."
-    hide rud_a11_defo1 with dissolve
-    hide but_b22_nayamu2 with dissolve
+    show but_b22_nayamu2 at zero_left,Shake(None, 907200, dist=2)
+    but "\"Ich gebe mir hier die größte Mühe...\""
+    hide rud_a11_defo1 with fastdissolve
+    hide but_b22_nayamu2 with fastdissolve
     pause (0.3)
-    show rud_a11_warai1 at zero_center with dissolve
+    show rud_a11_warai1 at zero_center with fastdissolve
     """
     Das ist mein Vater Rudolf, der alte Bastard ist so groß wie ich und macht sich bei Gelegenheit gerne über mich lustig.
     Sein Name wird auf Japanisch Ushiromiya Rudorufu ausgesprochen, fast die ganze Familie hat diese seltsame Namenstradition.
@@ -95,42 +95,43 @@ label chapter1:
     aber ich bin sicher, dass es mit der Zeit wieder funktionieren kann.
     """
     hide rud_a11_warai1 with dissolve
-    show kir_a11_defo1 at zero_left,sprite_highlight('kyr') with dissolve
-    show rud_a11_warai1 at zero_right,sprite_highlight('rud') with dissolve
-    kyr "Ist es nicht schön, dass Battler-kun wieder da ist? Ich meine, nach 6 Jahren Abwesenheit immer noch ein Theater bei der Ankunft? *kicher*"
-    rud "Ja, aber das war viel schlimmer, als er noch jünger war, da hatte man die ganze Anreise keine Ruhe."
+    show kir_a11_defo1 at zero_left,sprite_highlight('kyr'),Shake(None, 907200, dist=2) with dissolve
+    show rud_a11_warai1 at zero_right,sprite_highlight('rud'),Shake(None, 907200, dist=2) with dissolve
+    kyr "\"Ist es nicht schön, dass Battler-kun wieder da ist? Ich meine, nach 6 Jahren Abwesenheit immer noch ein Theater bei der Ankunft? *kicher*\""
+    rud "\"Ja, aber das war viel schlimmer, als er noch jünger war, da hatte man die ganze Anreise keine Ruhe.\""
     hide kir_a11_defo1
-    show kir_a11_majime1 at zero_left,sprite_highlight('kyr')
-    kyr "Aber er ist selbst schuld, wenn er da rumturnt, obwohl er weiß, dass er seekrank wird."
+    show kir_a11_majime1 at zero_left,sprite_highlight('kyr'),Shake(None, 907200, dist=2)
+    kyr "\"Aber er ist selbst schuld, wenn er da rumturnt, obwohl er weiß, dass er seekrank wird.\""
     hide rud_a11_warai1 with dissolve
     hide kir_a11_majime1 with dissolve
-    show kir_a11_defo1 at zero_center,active with dissolve
+    show kir_a11_defo1 at zero_center with dissolve
     """
     Das ist Kyrie-san, der alte Bastard hat sie kurz nach dem Tod meiner Mutter geheiratet,
     aber das liegt hinter uns.
 
-    Sie ist sehr intelligent und hat mir viel über das Denken am Schachbrettdenken beigebracht,
+    Sie ist sehr intelligent und hat mir viel über das Schachbrettdenken beigebracht,
     wo man eine Partie mit den Augen des Gegners sehen muss.
     Ich sehe sie nicht als Mutter, aber wir verstehen uns gut.
 
-    Wollt ihr wissen, wie man sie auf Japanisch ausspricht? Ganz einfach: Ushiromiya Kyrie
+    Wollt ihr wissen, wie man sie auf Japanisch ausspricht? Ganz einfach: Ushiromiya Kyrie.
     Und nein, man spricht es nicht komisch aus, ihr Name ist absolut perfekt,
     Ich hasse Opa den alten Kauz dafür, dass wir so komische Namen haben.
     """
     hide kir_a11_defo1 with dissolve
-    show but_b23_kuyasigaru1 at zero_center with dissolve
-    but "Ich finde das gar nicht lustig... Ich kämpfe hier schließlich um mein... ....Leben... *würg*"
+    scene ship_s2bf at Shake(None, 907200, dist=5)
+    show but_b23_kuyasigaru1 at zero_center,Shake(None, 907200, dist=5) with dissolve
+    but "\"Ich finde das gar nicht lustig... Ich kämpfe hier schließlich um mein... ....Leben... *würg*\""
     play sound "audio/sfx/umise_003.ogg"
-    scene ship_s2bf at screenshake_big_transform
     show but_b23_kuyasigaru1 at zero_center,run_transform
     hide but_b23_kuyasigaru1 with dissolve
     """
     Battler wurde so übel, dass er sich nicht zurückhalten konnte und den ganzen gekochten Reis vom Vormittag ins Wasser schleuderte.
     """
-    show rud_a11_akuwarai1 at zero_right,active,sprite_highlight('rud') with dissolve
-    rud ".....Jetzt hat dieser Kasper tatsächlich die Fische gefüttert, ach herrje... ahahaha"
-    show mar_a11_warai1 at zero_left,sprite_highlight('mar') with dissolve
-    mar "uu-uu~! Battler hat sich übergeben, Battler hat sich übergeben! *kicher*kicher*"
+    scene ship_s2bf at Shake(None, 907200, dist=2)
+    show rud_a11_akuwarai1 at zero_right,active,sprite_highlight('rud'),Shake(None, 907200, dist=2) with dissolve
+    rud "\".....Jetzt hat dieser Kasper tatsächlich die Fische gefüttert, ach herrje... ahahaha\""
+    show mar_a11_warai1 at zero_left,sprite_highlight('mar'),Shake(None, 907200, dist=2) with dissolve
+    mar "\"uu-uu~! Battler hat sich übergeben, Battler hat sich übergeben! *kicher*kicher*\""
     hide rud_a11_akuwarai1 with dissolve
     hide mar_a11_warai1 with dissolve
     show mar_a11_niyari1 at zero_center with dissolve
@@ -143,13 +144,13 @@ label chapter1:
     hide mar_a11_niyari1 with dissolve
     show ros_a11_ikari1 at zero_right,sprite_highlight('ros') with dissolve
     show mar_a11_majime1 at zero_left,sprite_highlight('mar') with dissolve
-    ros "Maria! Es reicht jetzt, lass Battler-kun in Ruhe!"
+    ros "\"Maria! Es reicht jetzt, lass Battler-kun in Ruhe!\""
     hide mar_a11_majime1
     show mar_a11_defo1 at zero_left,sprite_highlight('mar')
-    mar "........uu~..."
+    mar "\"........uu~...\""
     hide ros_a11_ikari1
     show ros_a11_ikari2 at zero_right,sprite_highlight('ros')
-    ros "und hör auf mit diesem uu-uu, .....du bist kein kleines Kind mehr!"
+    ros "\"und hör auf mit diesem uu-uu, .....du bist kein kleines Kind mehr!\""
     """
     Maria war nicht begeistert, dass ihre Mama ihre Freude unterbrach.
     Sie ist es wohl gewöhnt, dass man mit ihr schimpft, das arme Kind.
@@ -158,15 +159,15 @@ label chapter1:
     show but_b11_odoroki3 at zero_left,sprite_highlight('but') with dissolve
     show ros_a11_komaru4 at zero_right,sprite_highlight('ros')
     hide ros_a11_ikari2
-    ros "Tut mir leid, Battler-kun, ich kriege es einfach nicht aus ihr raus."
+    ros "\"Tut mir leid, Battler-kun, ich kriege es einfach nicht aus ihr raus.\""
     hide but_b11_odoroki3
     show ros_a11_komaru4 at zero_right,sprite_highlight('ros')
     show but_b22_warai1 at zero_left,sprite_highlight('but')
-    but "Schon gut, Tante Rosa, sie meint es nicht böse, also bin ich es auch nicht."
+    but "\"Schon gut, Tante Rosa, sie meint es nicht böse, also bin ich es auch nicht.\""
     hide ros_a11_komaru4
     show ros_a11_majime1 at zero_right,sprite_highlight('ros')
-    ros ".....aber dass dein größter Feind das Fahrzeugfahren ist, verstehe ich nicht..."
-    ros ".....Du wirkst so erwachsen und reif und jetzt das?"
+    ros "\".....aber dass dein größter Feind das Fahrzeugfahren ist, verstehe ich nicht..."
+    ros ".....Du wirkst so erwachsen und reif und jetzt das?\""
     hide ros_a11_majime1 with dissolve
     hide but_b22_warai1 with dissolve
     show ros_a11_warai1 at zero_center with dissolve
@@ -181,10 +182,10 @@ label chapter1:
     """
     hide ros_a11_warai1 with dissolve
     show rud_a11_akuwarai1 at zero_right,sprite_highlight('rud') with dissolve
-    rud "Er kann einfach nicht still sitzen, aus irgendeinem Grund."
-    rud "Das ist wirklich peinlich, das darfst du niemandem erzählen."
+    rud "\"Er kann einfach nicht still sitzen, aus irgendeinem Grund."
+    rud "Das ist wirklich peinlich, das darfst du niemandem erzählen.\""
     show but_b23_nayamu1 at zero_left,sprite_highlight('but') with dissolve
-    but ".......Ey, .....halt den Mund!"
+    but "\".......Ey, .....halt den Mund!\""
     hide rud_a11_akuwarai1 with dissolve
     hide but_b23_nayamu1 with dissolve
     show but_b11_warai2 at zero_center with dissolve
@@ -207,48 +208,47 @@ label chapter1:
     """
     hide but_b11_warai2 with dissolve
     show rud_a11_akuwarai2 at zero_right,sprite_highlight('rud') with dissolve
-    rud "Ja Battler-kun, das Frühstück, dass gerade im Meer gelandet ist, hat Geld gekostet und Lebensmittel werden nicht billiger..."
+    rud "\"Ja Battler-kun, das Frühstück, dass gerade im Meer gelandet ist, hat Geld gekostet und Lebensmittel werden nicht billiger...\""
     show but_b22_nayamu1 at zero_left,sprite_highlight('but') with dissolve
-    but ".....ähm....."
+    but "\".....ähm....."
     hide but_b22_nayamu1
     show but_b22_nayamu2 at zero_left,sprite_highlight('but')
     but "...Also wenn du es unbedingt wiederhaben willst, kannst du ja ins Meer springen und es wieder rausfischen... hihihihi..."
-    but "....Aber mal ernsthaft, das Wackeln wurde gerade richtig schlimm..."
+    but "....Aber mal ernsthaft, das Wackeln wurde gerade richtig schlimm...\""
     hide rud_a11_akuwarai2
     show rud_a11_defo2 at zero_right,sprite_highlight('rud')
-    rud "........Battler..."
+    rud "\"........Battler...\""
     show rud_a11_defo2 at zero_left2,sprite_highlight('rud') with move
     hide rud_a11_defo2
     show rud_a11_defo1 at zero_left2
     play sound "audio/sfx/umise_047.ogg"
     hide but_b22_nayamu2
     show but_b11_kuyasigaru1 at zero_left
-    but "....owowowowowow...... Du alter Bastard! Scheiße...... owowowow......"
+    but "\"....owowowowowow...... Du alter Bastard! Scheiße...... owowowow......\""
     """
     Einen Moment hat Battler nicht aufgepasst und schon hat Rudolf sein Ohrläppchen gepackt und behandelt es nicht gerade zimperlich.
     """
-    but "owowowowowowowow.... lass los! owowowowowowow"
-    but ".......Das tut richtig weh, Hör auf damit, .....owowowow"
-    rud "Du.... willst.... also...., dass ich es mir zu...rück....ho...le...jaaaa~?"
+    but "\"owowowowowowowow.... lass los! owowowowowowow"
+    but ".......Das tut richtig weh, Hör auf damit, .....owowowow\""
+    rud "\"Du.... willst.... also...., dass ich es mir zu...rück....ho...le...jaaaa~?\""
     """
     Rudolf hat einen sehr starken Griff, besonders wenn es um Battlers Ohrläppchen geht, man hat das Gefühl, er reißt es jeden Moment ab.
     """
     but "........."
-    but ".....owowowow..... lass doch endlich los owowowowow... es tut weh...."
-    rud ".... Das ist deine Strafe, wenn du frech wirst, Battler-kun."
-    kyr "Lasst es für heute gut sein, ihr zwei."
-    kyr "Das könnt ihr später auf der Insel austragen."
+    but "\".....owowowow..... lass doch endlich los owowowowow... es tut weh....\""
+    rud "\"....Das ist deine Strafe, wenn du frech wirst, Battler-kun.\""
+    kyr "\"Lasst es für heute gut sein, ihr beiden."
+    kyr "Das könnt ihr später auf der Insel austragen.\""
     """
-    Nachdem Kyrie den kleinen Konflikt erfolgreich beendet hat, konnte man hören, dass jemand von unterm Deck nach draußen geht.
+    Nachdem Kyrie den kleinen Konflikt erfolgreich beendet hatte, hörte man jemanden von unter Deck nach draußen gehen.
     """
-    jes "...B...Battler-kun hast du gerade vom Deck gekotzt?, ich schaue nach draußen und plötzlich segelt da so eine seltsame Suppe von oben runter, das war ekelhaft!"
-    jes "Das nächste Mal nimmst du dir einen Eimer mit!"
-    but "entschuldige, die Geschwindigkeit ist mir einfach zu hoch, ....das Boot wackelt und es wackelt und wackelt....."
-    but "ahhhhhh!!! Macht das es aufhört, sonst falle ich wieder!"
-    mar "Vielleicht sollte der Kapitän etwas langsamer fahren, sonst geht es Battler noch schlechter... uu!"
-    jes "Gute Idee Maria-chan, ich gehe sofort den Kapitän fragen, ob er etwas langsamer fahren könnte, aber bitte brech nicht mehr ins Meer..."
-    jes "Du solltest übrigens unters Deck gehen, da sollte es besser sein."
-    but "ähm ja, vielen Dank, Jessica-chan."
+    jes "\"...B...Battler-kun hast du gerade von Deck gekotzt?, ich schaue nach draußen und plötzlich kommt so eine komische Suppe von oben runter, das war eklig!"
+    jes "Nächstes Mal nimm einen Eimer mit!\""
+    but "\"......Entschuldigung, die Geschwindigkeit ist mir einfach zu hoch, ....das Schiff schaukelt und schaukelt und schaukelt....."
+    but "ahhhhhh!!! Mach, dass es aufhört, sonst falle ich wieder!\""
+    jes "\"Vielleicht sollte der Kapitän etwas langsamer fahren, sonst geht es Battler gleich noch schlechter..."
+    jes "Ich werde sofort den Kapitän bitten, etwas langsamer zu fahren, aber bitte nicht mehr ins Meer kotzen....\""
+    but "\"Ja, vielen Dank, Jessica-chan.\""
     """
     Das war meine Cousine Ushiromiya Jessica, sie ist echt cool drauf
     und ist wohl aktuell in dieser Phase, wo man gegen seine Eltern rebelliert.
@@ -262,220 +262,222 @@ label chapter1:
     Nichtmal eine Minute später ist Jessica zurückgekommen, um mir zu sagen:
     dass der Kapitän die Geschwindigkeit verringert hat.
     """
-    jes "Battler-kun du solltest definitiv unters Deck dich ausruhen, wir sind schon bald auf der Insel."
-    but "Ja, das kann ich versuchen, jetzt wo das Boot etwas langsamer fährt."
-    but "Ich kann aber nicht garantieren, dass ich den Rest meines Frühstücks bei mir behalte."
+    jes "\"Battler-kun, du solltest dich wirklich unter Deck ausruhen, wir sind bald auf der Insel.\""
+    but "\"Ja, das kann ich versuchen, jetzt, wo das Boot etwas langsamer fährt."
+    but "Aber ich kann nicht garantieren, dass ich den Rest meines Frühstücks bei mir behalte.\""
     """
-    Daraufhin gingen Battler und Jessica unters Deck zu den anderen, die anders als Battler ruhig darauf warten endlich anzukommen.
+    Dann gingen Battler und Jessica unter Deck zu den anderen, die im Gegensatz zu Battler ruhig warteten, bis sie endlich an der Reihe waren.
+
+    Moment mal, dieses \"ruhig\" sein ist falsch! Ich sehe es klar und deutlich! Die verkneifen sich doch alle gerade das Lachen....
     """
-    geo "Wie geht es dir Battler-kun?"
-    geo "Wir alle wissen bereits, dass es dich schon erwischt hat."
+    geo "\"Wie geht es dir Battler-kun?"
+    geo "Wir alle wissen bereits, dass es dich schon erwischt hat.\""
     """
-    Mit einem leichten aber auch nicht ganz überzeugenden Nicken stimmt Battler ihm zu.
+    Mit einem leichten, aber nicht ganz überzeugten Nicken stimmt Battler zu.
     """
-    but "Den Umständen entsprechend geht es mir gut."
-    but "Der Kapitän hat doch absichtlich das Boot so wackeln lassen."
-    geo "Ja gut,... das glaube ich eher weniger."
-    geo "Leg dich am besten hin, du hast es schon bald geschafft."
-    geo "Das erinnert doch an die alten Zeiten, nicht wahr, Jessica-chan?"
-    jes "Ja, es ist so, als wäre er nie weg gewesen."
-    jes "Nur mit dem Unterschied, dass er heute das erste mal sich übergeben hat."
-    geo "Ahahahahaha, ja, einige Dingen ändern sich, während andere sich niemals ändern."
+    but "Mir geht es gut, den Umständen entsprechend."
+    but "Der Kapitän hat das Schiff absichtlich so schaukeln lassen."
+    geo "Ja gut, ...eher nicht."
+    geo "Leg dich am besten hin, du hast es gleich geschafft."
+    geo "Erinnert an alte Zeiten, nicht wahr, Jessica-chan?"
+    jes "Ja, es ist, als wäre er nie weg gewesen."
+    jes "Mit dem Unterschied, dass er sich heute zum ersten Mal übergeben hat."
+    geo "Ahahahahaha, ja, manche Dinge ändern sich, andere nie."
     """
-    Das ist mein Cousin George, er wird von Tante Eva und Onkel Hideyoshi zu einem echten Gentlemen erzogen.
-    Er arbeitet sehr hart und will auch schon sein eigenes Business starten, was ich sehr beeindruckend finde.
+    Das ist mein Cousin George, er wird von Tante Eva und Onkel Hideyoshi zu einem echten Gentleman erzogen.
+    Er arbeitet sehr hart und will schon sein eigenes Unternehmen gründen, was ich sehr beeindruckend finde.
 
     Er wird von den anderen Familienmitgliedern sehr geschätzt.
-    da er für sein Alter schon sehr reif und kenntnisreich ist.
+    Er ist für sein Alter sehr reif und kennt sich gut aus.
 
     Ushiromiya Joji
 
-    So wird er bei uns ausgesprochen und ich bin der festen Überzeugung,
-    dass es ihm bestimmt gegen den Strich geht und er heute einen Massenmord veranstaltet.
+    So spricht man ihn bei uns aus, und ich bin fest davon überzeugt,
+    dass er heute einen Massenmord begehen wird.
 
-    Ich würde auch am liebsten die ermorden, die für diese furchtbare Namenstradition verantwortlich sind.
+    Am liebsten würde ich auch diejenigen umbringen, die für diese schreckliche Namenstradition verantwortlich sind.
     """
-    but "Ich finde es ist auch besonders heute, weil heute Mittag ein Sturm aufziehen soll, der erst Montag wieder abklingen soll."
-    but "Es kommt das erste mal vor, dass wir länger als einen Tag auf der Insel bleiben."
-    geo "Ja, wir hatten allerdings auch immer Glück, dass sonst nie ein solch starker Sturm auf unserer Familienkonferenz getobt hat."
-    geo "Was sagt man da so schön? Es gibt immer ein erstes mal."
-    geo "..ähm... Battler-kun wusstest du, dass es sogenannte Sturmgötter gibt?"
-    but "Ähhhhm.... meinst du Zeus...?"
-    geo "Auch richtig, aber nein, ich rede von dem Sturmgott in einem selber"
-    but ".....was?"
+    but "Ich finde, heute ist auch ein besonderer Tag. Denn um die Mittagszeit soll ein Sturm aufziehen, der sich erst am Montag wieder legen soll."
+    but "Es ist das erste Mal, dass wir länger als einen Tag auf der Insel bleiben."
+    geo "Ja, aber wir haben auch immer Glück gehabt, dass so ein Sturm nie über unsere Familienkonferenz hereingebrochen ist."
+    geo "Wie heißt es so schön? Es gibt immer ein erstes Mal."
+    geo "...ähm... Battler-kun, wusstest du, dass es so genannte Sturmgötter gibt?"
+    but "Ähhhhm.... Meinst du Zeus...?"
+    geo "Auch richtig, aber nein, ich spreche vom Sturmgott in einem selbst."
+    but ".....Was?"
     geo "Okay, es geht um folgendes:"
     geo """
-    In der tantrischen Spiritualität gibt es intensivere Gefühlsregungen und auch bei den Griechen gab es die dionysische Spiritualität,
+    In der tantrischen Spiritualität gibt es intensivere Gefühle und auch bei den Griechen gab es die dionysische Spiritualität,
     die auch besonders heftige Gefühle beinhaltet. In diesem Sinne hat jeder Mensch auch Sturmgötter in sich,
 
-    die er auch in sich aktivieren kann. Die Sturmgötter können ihn auch zu schlimmen Handlungen veranleiten, zu Verbrechen und Gewalt.
-    Sie können ihn aber auch dazu veranlassen, intensiv voran zu preschen und aus der Bequemlichkeit des Alltags hinauszugehen.
+    die er auch in sich aktivieren kann. Diese Sturmgötter können ihn auch zu schlimmen Taten, zu Verbrechen und Gewalt verleiten.
+    Sie können ihn aber auch dazu bringen, sich intensiv vorwärts zu bewegen und aus der Bequemlichkeit des Alltags auszubrechen.
     """
     but "............."
-    but "ähm...... ähm......"
+    but "Ähm...... ähm......"
     but "Tantrisch?..... Gefühlsregungen?..... Dionysische Spiritualität?....."
-    but ".......................Du hast das aus dieser einen Yoga Zeitschrift entnommen....."
-    geo "ähm......."
-    geo "oh...."
-    geo "Hahahaha, ich habe dich aber gut zum Nachdenken gebracht."
-    geo "Meine Mom hat sich so eine Zeitschrift geholt und hin und wieder werfe auch ich einen Blick hinein."
-    but "Hihihi, du hast nur pech gehabt, dass ich vor der Abreise auf dem Klo so eine Yoga-Zeitschrift in der Hand hatte, weil ich mich vergriffen habe."
-    geo "Ein echter Sturmgott ist allerdings Aigaion aus der griechischen Mythologie."
-    but "Das einzige Griechische, dass ich schätze ist einen leckeren Teller voll Gyros-Geschnetzeltes."
+    but ".......................Das hast du aus dieser einen Yoga-Zeitschrift....."
+    geo "Ähm......."
+    geo "Oh...."
+    geo "Hahahaha, aber ich habe dich zum Nachdenken gebracht."
+    geo "Meine Mutter hat so eine Zeitschrift, und ab und zu schaue ich auch mal rein."
+    but "Hihihi, du hast nur Pech gehabt, dass ich vor der Abreise auf der Toilette so ein Yoga-Magazin in der Hand hatte, weil ich mich vergriffen habe."
+    geo "Ein echter Sturmgott ist jedoch Aigaion aus der griechischen Mythologie."
+    but "Ein leckerer Teller Gyros-Geschnetzeltes ist das einzige Griechische, das ich schätze."
     but "Namnamnamnam"
     geo ".........."
-    geo "Wie dem auch sei, dieser Gott kann Meeresstürme auslösen, so wie einer der uns heute treffen wird."
+    geo "Jedenfalls kann dieser Gott Meeresstürme auslösen, wie wir ihn heute erleben."
     but "Du willst mir also sagen, dass irgendeine Gottheit, auf die wir keinen Einfluss haben, diesen Sturm ausgelöst hat?"
-    geo "......hmm......"
+    geo "......Hmm......"
     geo "So könnte man es ausdrücken ja!"
-    but "....Na ja, fest steht, dass wir die Zeit, die uns Aigaion nun gibt, nutzen können um wieder mehr Zeit miteinander zu verbringen."
-    jes "Ja, das hast du definitiv bitter nötig Battler-kun!"
-    jes "Du musstest die Familie ja auch unbedingt für 6 Jahre verlassen...."
-    but ".....Da ist was dran."
-    jes "Die Familienkonferenz ist etwas, auf dass ich mich mit am meisten freue..."
-    jes "Es ist die kurze Zeit, wo sich mein langweiliger Alltag mal auflockert."
-    but "Ja, ich freue mich auch wieder hier bei euch zu sein, das hat mir in 6 Jahren mit am meisten gefehlt."
-    jes "Es ist furchtbar nur mit meinen Eltern und Großvater auf der Insel zu wohnen."
-    jes "Jeden Tag muss ich ziemlich früh aufstehen, da meine Schule nicht wirklich in der Nähe liegt, sondern auf Niijima."
-    jes "Nach der Schule muss ich sofort zurück nach Hause, ich kann deshalb keine Zeit mit meinen Freunden verbringen."
+    but "....Auf jeden Fall können wir die Zeit, die uns Aigaion jetzt schenkt, nutzen, um wieder mehr Zeit miteinander zu verbringen."
+    jes "Ja, das hast du wirklich nötig, Battler-kun!"
+    jes "........Es war ja auch notwendig, dass du deine Familie für sechs Jahre verlassen hast....."
+    but ".....Ach man...."
+    jes "Auf die Familienkonferenz freue ich mich am meisten...."
+    jes "Es ist die kurze Zeit, die meinen langweiligen Alltag auflockert."
+    but "Ja, ich bin auch froh, wieder bei euch zu sein, das hat mir in den 6 Jahren am meisten gefehlt."
+    jes "Es ist schrecklich, nur mit meinen Eltern und meinem Großvater auf der Insel zu leben."
+    jes "Ich muss jeden Tag ziemlich früh aufstehen, weil meine Schule nicht wirklich in der Nähe ist, sondern auf Niijima."
+    jes "Nach der Schule muss ich sofort nach Hause, so dass ich keine Zeit mit meinen Freunden verbringen kann."
     """
-    Jessica redet sich immer mehr in Rage und die Wut steht ihr wie ins Gesicht geschrieben.
+    Jessica wird immer wütender und die Wut steht ihr ins Gesicht geschrieben.
     """
-    jes "Danach habe ich nur Zeit für Hausaufgaben und in meinem Zimmer zu verweilen,.... es gibt absolut nichts zutun."
-    jes "...Am liebsten würde ich diese dämliche Insel für immer verlassen und auf dem Festland ein neues Leben beginnen."
-    jes "....argh...."
-    jes "Und ich muss mir jeden Tag des Gemecker von meiner Mutter anhören, das geht Morgens los und hört Abends auf, ich ertrage das einfach nicht mehr länger!"
-    jes "Dadurch, dass ich keinen direkten Kontakt zu meinen Schulfreunden habe, ....fühle ich mich ziemlich einsam hier."
-    jes "Und jeden neuen Tag an dem ich das durchmache, frage ich mich, was ich hier eigentlich noch mache..."
+    jes "Danach habe ich nur noch Zeit, meine Hausaufgaben zu machen und in meinem Zimmer zu bleiben,.... Es gibt nichts zu tun."
+    jes "...Am liebsten würde ich diese blöde Insel für immer verlassen und auf dem Festland ein neues Leben beginnen."
+    jes "........"
+    jes "Und ich muss mir jeden Tag den Bullshit meiner Mutter anhören, das fängt morgens an und hört abends auf, ich halte das einfach nicht mehr aus!"
+    jes "Da ich keinen direkten Kontakt zu meinen Schulfreunden habe, ....fühle ich mich hier ziemlich einsam."
+    jes "Und an jedem neuen Tag, an dem ich das erlebe, frage ich mich: Was mache ich hier eigentlich noch? Verfluchte Scheiße!..."
     """
-    Man merkt es sofort, dass Jessica es sehr nahe geht, dass sie nach der Schule isoliert von der Außenwelt leben muss.
+    Man merkt sofort, dass es Jessica sehr nahe geht, nach der Schule von der Außenwelt abgeschnitten zu sein.
 
-    George und Battler sind beide ebenfalls bedrückt aber verständnisvoll, als sie Jessicas Worte über ihren Inselalltag hörten.
+    Auch George und Battler sind bedrückt, aber verständnisvoll, als sie Jessicas Worte über ihren Alltag auf der Insel hören.
 
-    Onkel Hideyoshi scheint das Gespräch mitbekommen zu haben und erhebt sich aus seinem gemütlichen Sitz.
+    Onkel Hideyoshi scheint das Gespräch mitgehört zu haben und erhebt sich von seinem bequemen Platz.
     """
     hid "Na, na Jessica-chan, du musst es positiv sehen!"
-    hid "Eines Tages wirst du wirklich in der Lage sein, die Insel zu verlassen und dein eigenes Leben zu führen."
-    jes "Aber wie lange soll das noch dauern? ..... und was ist, wenn meine Schulfreunde mit mir nichts mehr zu tun haben wollen?"
-    hid "Auch deine Schulfreunde werden Verständnis für deine Situation haben, eines Tages wirst du zu ihnen gehen können und eine ganze Menge Zeit mit ihnen verbringen"
+    hid "Eines Tages wirst du die Insel wirklich verlassen und dein eigenes Leben führen können."
+    jes "Aber wie lange noch? ..... Und wenn meine Schulfreunde nichts mehr mit mir zu tun haben wollen?"
+    hid "Auch deine Schulfreunde werden deine Situation verstehen, eines Tages wirst du sie besuchen und viel Zeit mit ihnen verbringen können."
     hid "Bis dahin solltest du immer dein Bestes geben, denn das wird sich am Ende des Tages definitiv auszahlen!"
-    jes "....... eines Tages?"
-    jes "Aber ich warte schon seit so vielen Jahren....."
-    hid "...Du hast immerhin noch dein ganzes Leben vor dir, glaub mir, deine Zeit als Teenager auf der Insel wird später nur noch eine Erinnerung sein..."
+    jes ".......Eines Tages?"
+    jes "Aber ich warte schon so viele Jahre....."
+    hid "...Du hast dein ganzes Leben noch vor dir, glaub mir, deine Zeit als Teenager auf der Insel wird später nur noch eine Erinnerung sein...."
     hid "Jetzt habe ich mich aber verquatscht, wahahahahaha"
-    hid "Lass aber wirklich den Kopf nicht hängen und häng dich weiter rein, ja?"
+    hid "Aber lass den Kopf nicht hängen und häng dich weiter rein, ja?"
     jes "Danke Hideyoshi, ich denke der Plan ist gut, ich werde ihn mir zu Herzen nehmen."
     jes "Ich fühle mich schon besser."
-    hid "So ist es richtig, du schaffst das schon, wahahahaha"
+    hid "So ist's gut, du schaffst es!, wahahahaha"
     """
-    Das ist Georges Vater und mein Onkel Hideyoshi, er ist ein herzensguter und sympathischer Mann und ich denke, ich mag ihn von allen Erwachsenen am meisten.
-    Er ist der Mann von Tante Eva und er hat sein Unternehmen von Grund auf neu aufgebaut
+    Das ist Georges Vater und mein Onkel Hideyoshi, er ist ein netter und sympathischer Mann und ich glaube, ich mag ihn von allen Erwachsenen am meisten.
+    Er ist der Ehemann von Tante Eva und hat seine Firma von Grund auf neu aufgebaut.
 
     und arbeitet jetzt als Präsident einer mittelgroßen Restaurantkette. Die Kette scheint zu wachsen und sehr gut zu laufen.
     Sein Name wird Ushiromiya Hideyoshi ausgesprochen, wie Kyrie ist sein Name absolut perfekt!
 
-    Das liegt daran, dass er als Japaner in die Familie eingeheiratet hat..... ich beneide jeden mit normalen Namen.
+    Das liegt daran, dass er als Japaner in die Familie eingeheiratet hat. ..... Ich beneide jeden, der einen normalen Namen hat.
     """
 
-    geo "Jessica-chan, alleine ein Ziel zu haben, auf das man hinarbeiten kann, ist etwas, was dich jeden Tag motivieren sollte nicht aufzugeben."
-    geo "Auch ich oder Battler-kun haben so unsere Sorgen und Probleme die wir überall mit hinnehmen, also halte noch ein wenig durch, okay?"
+    geo "Jessica-chan, allein ein Ziel zu haben, auf das man hinarbeiten kann, ist etwas, das einen jeden Tag motivieren sollte, nicht aufzugeben."
+    geo "Auch ich oder Battler-kun haben unsere Sorgen und Probleme, die wir überall mit hinnehmen. Also halte noch ein bisschen durch, okay?"
     jes "Ja vielen Dank, das hilft mir wirklich sehr, danke!"
     """
-    Die Worte von Hideyoshi und George waren sehr effizient, wenn es darum ging Jessica aufzuheitern.
+    Die Worte von Hideyoshi und George haben Jessica sehr gut aufgemuntert.
 
-    Denn man sieht deutlich wie ein Lächeln in Jessicas Gesicht zurückkehrt.
+    Man sieht deutlich, wie Jessica wieder lächelt.
     """
-    eva "Hey, wie es aussieht, sind wir gleich da, Battler-kun..."
-    eva "Wusstest du, dass Seekrankheit auch nach der Reise noch etwas anhalten kann?"
+    eva "Hey, sieht so aus, als wären wir gleich da, Battler-kun..."
+    eva "Wusstest du, dass die Seekrankheit auch noch nach der Reise anhalten kann?"
     but "............."
-    but "Mach mir doch bitte keine Angst Tante Eva!"
-    eva "Oh... entschuldige, ich wollte dir nur sagen, dass, wenn dein Körper sich an die Bewegungen des Bootes gewöhnt hat, sich dein Körper an Land wieder umgewöhnen muss."
-    eva "Aber mach dir keinen Kopf. Battler-kun, das passiert nicht unbedingt. *kicher*"
+    but "Bitte mach mir keine Angst, Tante Eva!"
+    eva "Oh... Entschuldige, ich wollte dir nur sagen, dass, wenn sich dein Körper an die Bewegungen des Bootes gewöhnt hat, er sich an Land wieder umgewöhnen muss."
+    eva "Aber mach dir darüber keinen Kopf. Battler-kun, das passiert nicht unbedingt. *kicher*"
     """
-    Das ist meine Tante Eva und die Mutter von George. Sie bildet mit dem alten Bastard Dad sowas wie ein Scherzkeksduo,
-    wenn die beiden richtig loslegen, dann bleibt kein Stein mehr auf den anderen.
+    Das ist meine Tante Eva, die Mutter von George. Sie und der alte Bastard Papa sind so etwas wie ein Spaßvogel-Duo,
+    Wenn die beiden richtig loslegen, bleibt kein Stein auf dem anderen.
 
-    Sie beherrscht auch einige Chinese Martial Arts Techniken, einer ihrer Roundhousekicks
-    soll bei einem Trainingsmatch mal getroffen haben und ihr Gegner wurde kaltgestellt wie ein Softdrink.
+    Sie beherrscht auch einige chinesische Kampfsporttechniken. Einer ihrer Roundhousekicks
+    soll einmal bei einem Trainingskampf getroffen haben, und ihr Gegner wurde kaltgestellt wie ein Softdrink.
 
-    Ich möchte definitiv keinen Tritt von ihr unter die Dachlatte bekommen.
-    Ach ja! Ich habe ja fast ihren Namen vergessen. Sie heißt hier Ushiromiya Eba...... mit b.....
+    Auf keinen Fall möchte ich von ihr unter die Dachlatte getreten werden.
+    Ach ja! Fast hätte ich ihren Namen vergessen. Sie heißt hier Ushiromiya Eba...... mit b.....
     """
-    but ".....Nein, du verarscht mich doch Tante Eva...."
-    eva "Oh nein, .....sowas würde ich niemals machen *kicher*"
+    but ".....Nein, du verarschst mich Tante Eva...."
+    eva "Oh nein, .....das würde ich nie tun... *kicher*"
     eva "....Ich wollte dir nur etwas über die Seekrankheit erzählen... mehr nicht... *kicher*"
     """
-    Tante Eva wollte mir mit hoher Wahrscheinlichkeit keine Angst machen,
-    sondern meinen Kopf auf die Probe stellen, denn wenn ich gleich an Land an ihre Worte denke,
+    Tante Eva wollte mich wahrscheinlich nicht erschrecken,
+    sondern meinen Kopf auf die Probe stellen, denn wenn ich an ihre Worte denke, sobald ich an Land bin,
 
-    dann wird mir definitiv wieder übel werden, ......ganz schön rafiniert.
+    dann wird mir bestimmt wieder schlecht, ......ganz schön raffiniert.
     """
     kyr "Wir sind jetzt gleich da! .....Die Insel ist ganz nah!"
     """
-    Abrupt wird unser plausch unterbrochen mit der erfreulichen Meldung, dass wir sehr bald an Land gehen werden!
+    Unser Gespräch wird jäh unterbrochen durch die erfreuliche Nachricht, dass wir bald an Land gehen werden!
     """
-    but "Wird sich wohl gleich zeigen, ob du recht hast Tante Eva"
+    but "....Wir werden sehen, ob du Recht hast Tante Eva..."
     eva "*kicher*"
     eva "Forder es besser nicht heraus.... Battler-kun...."
-    hid "wahahahahaha, ihr zwei seid mir ja welche,..... lasst uns lieber ans Deck gehen, da wir gleich an Land gehen!"
+    hid "Wahahahahaha, ihr zwei seid mir ja welche,..... lasst uns lieber an Deck gehen, wir gehen gleich an Land!"
     jes "Ja, das ist eine gute Idee!"
     """
-    So erhoben sich alle von ihren Sitzen und haben bemerkt, dass draußen die Wolken sich unerwartet, viel zu früh verdunkelt haben.
+    So erhoben sich alle von ihren Plätzen und bemerkten, dass sich draußen die Wolken unerwartet und viel zu früh verdunkelt hatten.
     """
-    kyr "War der Typhoon nicht für heute Mittag angekündigt?"
-    kyr "Es könnte sein, dass es gleich anfängt zu regnen."
-    rud "Wir sind in ungefähr 10 Minuten da, aber gemütlich wird es nicht mehr."
+    kyr "War der Taifun nicht für heute Mittag angekündigt?"
+    kyr "Vielleicht fängt es gleich an zu regnen."
+    rud "In etwa 10 Minuten sind wir da, aber gemütlich wird es nicht."
     kyr "Stimmt,... der Wind hat bereits zugenommen."
     """
-    Der Wind der minutenweise immer stärker über das Meer peitscht,
-    ist kein Wind, wie sie die meisten Leute auf dem Festland kennen.
+    Der Wind, der von Minute zu Minute stärker über das Meer peitscht,
+    ist kein Wind, wie ihn die meisten Menschen vom Festland kennen.
 
     Der Wind kann ungehindert und mit voller Kraft über das Wasser fegen,
-    während auf dem Land es immer wieder Häuser, Berge und Terrain gibt, dass den Wind abschwächen kann.
+    während es auf dem Land immer Häuser, Berge und Gelände gibt, die den Wind abschwächen können.
     """
-    kyr "Dass die Wettervorhersage sich mal in der Zeit irrt? *kicher*"
-    rud "Ich habe mal wegen eines angeblichen Typhoons ein Geschäftsessen abgesagt..."
-    rud "Der Typhoon kam erst 2 Tage später, ich habe mich noch nie so dämlich gefühlt, wie in dieser Situation."
-    kyr "War doch bestimmt ein Erlebnis, sowas am Ende erklären zu müssen..."
+    kyr "Dass die Wettervorhersage sich mal irrt?"
+    rud "Ich habe einmal ein Geschäftsessen wegen eines angeblichen Taifuns abgesagt...."
+    rud "Der Taifun kam erst 2 Tage später, ich habe mich noch nie so dumm gefühlt wie in dieser Situation."
+    kyr "Das war sicher eine Erfahrung, so etwas am Ende erklären zu müssen...."
     rud "Bitte erinnere mich nicht daran...."
     """
-    Besorgt sind nicht nur Rudolf und Kyrie, sondern all die anderen sind ebenfalls überrascht,
+    Nicht nur Rudolf und Kyrie sind beunruhigt, auch alle anderen sind überrascht,
 
-    Dass der Sturm einige Stunden zu früh kommt. Dabei wurde vom Wetterbericht garantiert, dass es erst Mittags losgeht.
-    Die folgen könnten turbolente Flüge sein, die noch für Kurzflüge eine Starterlaubnis bekommen haben.
+    dass der Sturm einige Stunden zu früh kommt. Dabei hatte der Wetterbericht garantiert, dass es erst um die Mittagszeit losgehen würde.
+    Die Folge könnten turbulente Flüge sein, die noch eine Starterlaubnis für Kurzflüge haben.
 
-    Maria hat sich inzwischen ganz vorne aufs Deck gestellt und ihre Blicke wenden sich nicht mehr von einer ganz bestimmten Klippe von der herannahenden Insel ab.
+    Inzwischen hat sich Maria ganz vorne auf der Brücke niedergelassen, und ihr Blick schweift nicht mehr von einer ganz bestimmten Klippe ab.
     """
-    mar "......................uu~..........."
+    mar "......................Uu~..........."
     mar "..................................."
     mar "......................Es ist weg................."
-    mar "......................uu~.............."
-    mar "......uu~........nicht mehr da......"
+    mar "......................Uu~.............."
+    mar "......Uu~........nicht mehr da......"
     but "hmm?...... Was ist los Maria?"
-    jes "Irgendwas scheint sie sehr zu beunruhigen..."
-    mar "Dieses Schrein ähnliche dings da ist weg!.... uu!"
+    jes "Etwas scheint sie sehr zu beunruhigen..."
+    mar "Dieses schreinähnliche Ding ist weg!.... Uu!"
     mar "Es ist weg!... uu...!"
-    mar "Es war immer da, doch jetzt ist es weg!... uu!.."
-    jes "Stimmt ja... Der Schrein fehlt, der war letztes Jahr noch da..."
-    jes "Es sieht mir auch so aus als wäre ein Teil vom Riff dabei mitgerissen worden..."
-    kum "ohohohoh, der Schrein wurde von einem gigantischen Blitz während eines Unwetters getroffen und zerstört."
+    mar "Es war immer da, aber jetzt ist es weg!... Uu!.."
+    jes "Stimmt ja... Der Schrein fehlt, er war letztes Jahr noch da...."
+    jes "Es sieht auch so aus, als wäre ein Teil des Riffs mitgerissen worden...."
+    kum "Ohohohoh, der Schrein wurde während eines Gewitters von einem gewaltigen Blitz getroffen und zerstört."
     """
-    Die ältere Frau heißt Kumasawa. Sie ist eine Teilzeitkraft, die zwar mehrmals gekündigt hat, aber insgesamt schon viele Jahre im Dienst der Familie steht.
-    Sie ist geschickt und mehr als fähig, wenn es darum geht, ihre Aufgaben zu erfüllen,
+    Die ältere Frau heißt Kumasawa. Sie ist eine Teilzeitarbeiterin, die zwar mehrmals gekündigt hat, aber insgesamt schon viele Jahre im Dienst der Familie steht.
+    Sie ist geschickt und mehr als fähig, ihre Aufgaben zu erfüllen,
 
-    aber wegen ihrer Geschwätzigkeit und ihrer Vorliebe für Gerüchte ist sie als Bedienstete nicht sehr angesehen.
-    Ihr Name im Japanischen? Der lautet auch bei uns Kumasawa, ihre Eltern haben ihr einen vernünftigen Namen gegeben... *seufz*....
+    aber wegen ihrer Geschwätzigkeit und ihrer Vorliebe für Gerüchte ist sie als Angestellte nicht sehr beliebt.
+    Ihr Name auf Japanisch? Auch bei uns Kumasawa, ihre Eltern haben ihr einen vernünftigen Namen gegeben... *seufz*....
     """
     jes "Ein Blitzeinschlag?..."
-    jes "Ein Blitz kann so eine gewaltige Kraft haben?"
-    kum "Die Fischer munkeln dass dies ein Zeichen von Unglück sei..."
-    mar "Ein Zeichen von Unglück....uu..."
+    jes "Ein Blitz kann so gewaltig sein?"
+    kum "Die Fischer sagen, es sei ein Zeichen von Unglück...."
+    mar "Ein Zeichen von Unglück....Uu~..."
     mar "..........................."
     """
-    Kumasawas Worte haben die eins so lockere Atmosphäre auf dem Boot in ein beklemmendes Gefühl verwandelt.
-    Maria hat ihren Blick von dem Ort, wo eigentlich der Schrein stehen sollte immer noch nicht abgewendet...
+    Kumasawas Worte haben die sonst so entspannte Atmosphäre auf dem Schiff in ein beklemmendes Gefühl verwandelt.
+    Maria hat ihren Blick noch immer nicht von der Stelle abgewandt, an der der Schrein stehen soll...
 
-    Und es scheint, als würde der stark wehende Wind für einen Moment stillstehen.
+    Und es scheint, als würde der heftige Wind für einen Moment nachlassen.
     """
     mar "Unglück..."
     mar "Unglück...Unglück..."
@@ -484,61 +486,66 @@ label chapter1:
     geo "Maria-chan nimmt sowas ziemlich ernst, verstehen Sie?"
     mar "UnglückUnglückUnglück"
     but "Hey Maria!"
-    but "Wenn du so oft >Unglück< sagst wird wirklich ein Unglück geschehen, also beruhig dich doch bitte wieder, ja?"
+    but "Wenn du so oft \"Unglück\" sagst, wird es wirklich ein Unglück geben, also beruhige dich, ja?"
     geo "Maria-chan, es wird nichts schlimmes passieren."
-    mar "............uu~.............."
+    mar "............Úu~.............."
     mar "............................"
     """
-    Die anderen versuchen Maria zu beruhigen um irgendwie das Thema abzuschließen.
+    Die anderen versuchen Maria zu beruhigen, um das Thema irgendwie abzuschließen.
 
-    Doch dann wendet Maria ihren Blick vom Riff ab, dreht sich rum und hebt ihren Rechten Arm und streckt ihn zum Himmel aus und öffnet langsam ihren Mund...
+    Aber Maria wendet den Blick vom Riff ab, dreht sich um, hebt den rechten Arm zum Himmel und öffnet langsam den Mund...
     """
     mar "Es geschieht definitiv....."
     mar "Ein Unglück wird geschehen!......"
+    """
+    Mit diesen Worten, als hätte Maria gerade den Befehl dazu gegeben, hörte man es donnern und sofort begann es zu regnen.
+
+    Nicht nur Battler lief ein kalter Schauer über den Rücken.
+    """
     but "............................"
     but "Hä?........................."
     """
-    Jeder verspürt in genau diesem Moment ein unheimliches Gefühl
-    Es sei fast schon so, als würde Maria ahnen, dass diese Familienkonferenz eine ganz besondere wird.
+    Alle haben in diesem Moment ein mulmiges Gefühl.
+    Es ist fast so, als ob Maria ahnt, dass dieses Familientreffen etwas ganz Besonderes sein wird.
 
-    Battler scheint aber zu realisieren, dass mit Marias gehobener Arm und >Unglück< sehr wahrscheinlich einfach das Wetter gemeint ist.
+    Doch Battler scheint zu erkennen, dass Marias erhobener Arm und das \"Unglück\" wohl nur das Wetter meinen.
     """
-    but "Du hast also bemerkt, dass das ein schlimmes Unwetter sein wird?"
-    mar "..........uu~....."
-    but "Der Wetterbericht, hat allerdings gesagt, dass der Sturm sich erst gegen Mittag aufbauen wird, doch er kommt bereits jetzt..."
-    but "Das nenne ich wohl tatsächlich ein Unglück... hihihihi"
-    but "Maria, ich bin mir sicher, dass dieser Typhoon schneller wieder vorbei ist, als du bis 10 Zählen kannst. Also alles wird gut."
+    but "Du hast also gemerkt, dass es ein schlimmes Unwetter wird?"
+    mar "..........Uu~....."
+    but "Die Wettervorhersage sagt, dass der Sturm erst gegen Mittag kommen wird. Aber er ist schon da...."
+    but "Das nenne ich wirklich ein Unglück... hihihihi"
+    but "Maria, ich bin sicher, dass dieser Taifun schneller vorbei ist, als du bis zehn zählen kannst. Alles wird gut."
     """
-    Battler versucht Maria zu ermutigen, dass sie keine Angst vor dem Typhoon haben muss, doch Marias Gesichtsausdruck spricht eine komplett andere Sprache.
+    Battler versucht Maria zu beruhigen, dass sie keine Angst vor dem Taifun haben muss, aber Marias Gesichtsausdruck spricht eine ganz andere Sprache.
     """
-    mar "uu~!!"
-    mar "uu~!!uu~!!uu~!!uu~!!uu~!!uu~!!"
-    mar "Ein Unglück wird geschehen! uu~!!"
+    mar "Uu~!!"
+    mar "Uu~!!Uu~!!Uu~!!Uu~!!Uu~!!Uu~!!"
+    mar "Ein Unglück wird geschehen! Uu~!!"
     jes "Maria, warum sagst du sowas?"
-    kum "Sie sieht eindeutig etwas, was im Alter schnell verloren geht."
-    kum "Sehr junge Menschen haben ein Gespür für das übernatürliche..."
-    kum "Aber je älter man wird, desso schwächer wird dieses Gespür."
-    kum "Etwas was Maria spüren kann, kann auch nur von ihr gespürt werden, da sie die jüngste hier ist."
+    kum "Es ist klar, dass sie etwas im Blick hat, das im Alter schnell verloren geht."
+    kum "Sehr junge Menschen haben einen Sinn für das Übernatürliche..."
+    kum "Aber dieses Gefühl wird schwächer, je älter man wird."
+    kum "Was Maria fühlen kann, kann nur sie fühlen, weil sie die Jüngste hier ist."
     """
-    Battler ist wie erstarrt von diesen Worten, ist sowas echt möglich? denkt er sich, so etwas kann es doch gar nicht geben...
+    Battler erstarrt bei diesen Worten, ist das wirklich möglich? denkt er, das kann es doch gar nicht geben...
     """
     kum "Es scheint so, dass in der Vergangenheit von Rokkenjima eine Hexe...."
-    jes "Es reicht Kumasawa! Darüber wird nicht gesprochen!"
+    jes "Es reicht, Kumasawa! Darüber reden wir nicht!"
     kum "Ohohohoh, ich muss mich entschuldigen, ich wollte nicht unhöflich sein."
     """
-    Kumasawas Erzählungen sind gerade ziemlich unvorteilhaft, da das Ziel ist Maria zu beruhigen und nicht ihr noch mehr Dinge in den Kopf zu setzen.
-    Jessica hat damit richtig gehandelt und Kumasawa unterbrochen.
+    Kumasawas Geschichten sind im Moment eher ungünstig, denn es geht darum, Maria zu beruhigen und nicht darum, ihr noch mehr Dinge in den Kopf zu setzen.
+    Jessica hat richtig gehandelt, als sie Kumasawa unterbrochen hat.
     """
     but "Eine....... Hexe?........."
     but "Hat Kumasawa Hexe gesagt?"
     but "Weiß Jessica irgendwas?"
     but "Hexe.........."
     """
-    Weit weg vom Geschehen konnte man Rudolf sehen, der sehr nachdenklich aussieht.
+    Weit weg vom Geschehen konnte man Rudolf sehen, der sehr nachdenklich wirkte.
     """
     rud "*seufz*"
     """
-    Nach ungefähr 5 Minuten stoßte er einen tiefen Seufzer aus, während er sich eine Zigarette anzündet, da ihn etwas sehr beschäftigt und niemand außer Eva hat anscheinend diesen Seufzer mitbekommen.
+    Nach etwa fünf Minuten stieß er einen tiefen Seufzer aus, während er sich eine Zigarette anzündete, weil ihn etwas sehr beschäftigte, und niemand außer Eva schien diesen Seufzer gehört zu haben.
     """
     eva "Was ist los Rudolf?.... irgendwelche Bedenken wegen heute Abend?"
     eva "Wir müssen uns nur exakt an das halten, was wir besprochen haben um gegen Krauss gewinnen zu können"

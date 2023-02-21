@@ -1,6 +1,6 @@
 label start:
 
-    $ chaptername = "'Ich schreibe an dich in einer Quadrillion Jahren'"
+    $ chaptername = "\"Ich schreibe an dich in einer Quadrillion Jahren\""
     $ chapternumber = "Prolog"
     $ songname = "-"
     stop sound fadeout 3
