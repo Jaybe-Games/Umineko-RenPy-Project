@@ -11,8 +11,6 @@ init offset = -2
 init python:
     gui.init(1920, 1080)
 
-
-
 ################################################################################
 ## GUI Configuration Variables
 ################################################################################
@@ -86,7 +84,10 @@ define gui.title_text_size = 40
 
 ## The images used for the main and game menus.
 define gui.main_menu_background = "gui/main_menu.png"
+define gui.main_menu2_background = "gui/main_menu2.png"
+define gui.main_menu3_background = "gui/main_menu3.png"
 define gui.game_menu_background = "gui/game_menu.png"
+define gui.game_menu1_background = "gui/game_menu1.png"
 
 
 ## Dialogue ####################################################################

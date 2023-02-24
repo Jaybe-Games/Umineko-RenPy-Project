@@ -1,33 +1,33 @@
 # Position definitions
-transform zero_center:
+transform mitte:
     xanchor 0.5
     xpos 960
 
     yanchor 1.0
     ypos 1200
 
-transform zero_left:
+transform links:
     xanchor 0.5
     xpos 480
 
     yanchor 1.0
     ypos 1200
 
-transform zero_right:
+transform rechts:
     xanchor 0.5
     xpos 1440
 
     yanchor 1.0
     ypos 1200
 
-transform zero_right2:
+transform rechts2:
     xanchor 0.5
     xpos 1040
 
     yanchor 1.0
     ypos 1200
 
-transform zero_left2:
+transform links2:
     xanchor 0.5
     xpos 880
 
@@ -47,17 +47,6 @@ transform inverse_shader:
 
 transform reset_shader:
     matrixcolor IdentityMatrix()
-
-transform inactive:
-    matrixcolor Matrix([
-        0.5, 0, 0, 0,
-        0, 0.5, 0, 0,
-        0, 0, 0.5, 0,
-        0, 0, 0, 1
-    ])
-
-transform active:
-    matrixcolor IdentityMatrix(0.0)
 
 
 image rain_layer1 = Movie(channel="rain", play="videos/rain1_mask.webm", mask="videos/rain1.webmhd.webm", framedrop=False, loop=-1)

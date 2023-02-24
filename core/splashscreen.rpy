@@ -20,12 +20,6 @@ pause (1)
 
 if persistent.alreadystarted == True:
     $ renpy.movie_cutscene("videos/opening.mov")
-    play sound "audio/sfx/umilse_002.ogg" noloop
-    $ renpy.movie_cutscene("videos/mmani.mov")
-    stop sound fadeout 3
     return
 else:
-    play sound "audio/sfx/umilse_002.ogg" noloop
-    $ renpy.movie_cutscene("videos/mmani.ogg")
-    stop sound fadeout 3
     return

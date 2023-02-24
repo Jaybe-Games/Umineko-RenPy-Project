@@ -39,7 +39,7 @@ define gui.about = _p("""Developed by Jaybe Games
 ## distribution. This must be ASCII-only, and must not contain spaces, colons,
 ## or semicolons.
 
-define build.name = "WHENTHEYCRY0"
+define build.name = "whentheycry0"
 
 
 ## Sounds and music ############################################################
@@ -64,7 +64,7 @@ define config.has_voice = False
 ## the player is at the main menu. This file will continue playing into the
 ## game, until it is stopped or another file is played.
 
-define config.main_menu_music = "audio/bgm/umib_055.ogg"
+define config.main_menu_music = "audio/bgm/mmtheme.mp3"
 
 
 ## Transitions #################################################################
@@ -88,7 +88,6 @@ define config.intra_transition = dissolve
 
 define config.after_load_transition = dissolve
 
-
 ## Used when entering the main menu after the game has ended.
 
 define config.end_game_transition = dissolve
@@ -105,9 +104,8 @@ define config.exit_yesno_transition = dissolve
 
 define config.say_attribute_transition = dissolve
 
-define config.fade_music = 1.0
-
 define config.manage_gc = True
+
 
 ## A variable to set the transition used when the game starts does not exist.
 ## Instead, use a with statement after showing the initial scene.
@@ -175,7 +173,7 @@ define config.window_icon = "gui/icon.png"
 ## This section controls how Ren'Py turns your project into distribution files.
 
 init python:
-    
+
     ## The following functions take file patterns. File patterns are case-
     ## insensitive, and matched against the path relative to the base directory,
     ## with and without a leading /. If multiple patterns match, the first is
@@ -218,6 +216,7 @@ init python:
     build.classify('scripts/**.rpy', 'archive')
     build.classify('scripts/**.rpyc', 'archive')
     build.classify('videos/**.webm', 'archive')
+    build.classify('videos/**.mov', 'archive')
     build.classify('gui/**.png', 'archive')
     build.classify('gui/**.jpg', 'archive')
     build.classify('fonts/**.otf', 'archive')

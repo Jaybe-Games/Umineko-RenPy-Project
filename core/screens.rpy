@@ -9,6 +9,16 @@ init offset = -1
 ## Styles
 ################################################################################
 
+style bigtext:
+    bold False
+    font "fonts/Georgia.ttf"
+    size 35
+
+style menutext:
+    bold False
+    font "fonts/ariston.ttf"
+    size 32
+
 style button_story:
     activate_sound "audio/sfx/umise_1005.ogg"
     background Frame("gui/button/FrmBlood.png", left=280, top=20, right=240, bottom=None, tile=False)
@@ -31,7 +41,7 @@ style button_back:
 style button_back_text:
     size 45
     xoffset 90
-    yoffset -5
+    yoffset 8
     outlines [ (absolute(2), "#000", absolute(0), absolute(0)) ]
 
 
@@ -328,17 +338,17 @@ screen navigation():
 
         if main_menu:
 
-            imagebutton auto "gui/button/start_%s.png" action ShowMenu("story_select") xpos 1292 ypos 200 activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+            imagebutton auto "gui/button/start_%s.png" action Play("sound", "/audio/sfx/umise_051.ogg"), ShowMenu("story_select") xpos 1350 ypos 200 hover_sound "audio/sfx/click-21156.mp3"
 
         else:
 
-            imagebutton auto "gui/button/history_%s.png" action ShowMenu("history") xpos 1292 ypos 80 activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+            imagebutton auto "gui/button/history_%s.png" action ShowMenu("history") xpos 1350 ypos 80 activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
 
-            imagebutton auto "gui/button/save_%s.png" action ShowMenu("save") xpos 1292 ypos 200 activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+            imagebutton auto "gui/button/save_%s.png" action ShowMenu("save") xpos 1350 ypos 200 activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
 
-        imagebutton auto "gui/button/load_%s.png" action ShowMenu("load") xpos 1291 ypos 315 activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+        imagebutton auto "gui/button/load_%s.png" action ShowMenu("load") xpos 1350 ypos 315 activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
 
-        imagebutton auto "gui/button/settings_%s.png" action ShowMenu("preferences") xpos 1292 ypos 435 activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+        imagebutton auto "gui/button/settings_%s.png" action ShowMenu("preferences") xpos 1350 ypos 435 activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
 
         if _in_replay:
 
@@ -348,27 +358,25 @@ screen navigation():
 
             text "{i}Episode 0 " + chapternumber ypos 875 xpos 10 xalign 0.0 size 70 font "fonts/ariston.ttf" outlines [ (absolute(3), "#000", absolute(0), absolute(0)) ]
 
-            text "{i}" + chaptername ypos 960 xpos 10 xalign 0.0 size 50 font "fonts/ariston.ttf" outlines [ (absolute(3), "#000", absolute(0), absolute(0)) ]
+            text "{i}" + chaptername ypos 955 xpos 10 xalign 0.0 size 50 font "fonts/ariston.ttf" outlines [ (absolute(3), "#000", absolute(0), absolute(0)) ]
 
-            text "Aktueller Soundtrack: " + songname ypos 1030 xpos 10 xalign 0.0 size 30 font "fonts/AOTFShinGoProMedium.otf" outlines [ (absolute(3), "#000", absolute(0), absolute(0)) ]
+            text "Aktueller Soundtrack: " + songname ypos 1030 xpos 1900 xalign 1.0 size 30 font "fonts/AOTFShinGoProMedium.otf" outlines [ (absolute(3), "#000", absolute(0), absolute(0)) ]
 
-            #textbutton _("Haup{color=#f00}t{/color}menü") action MainMenu() ypos 881 xpos 350 activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+            imagebutton auto "gui/button/mainmenu_%s.png" action MainMenu() xpos 1350 ypos 787 activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
 
-            imagebutton auto "gui/button/mainmenu_%s.png" action MainMenu() xpos 1292 ypos 787 activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
-
-        imagebutton auto "gui/button/credits_%s.png" action ShowMenu("about") xpos 1292 ypos 553 activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+        imagebutton auto "gui/button/credits_%s.png" action ShowMenu("about") xpos 1350 ypos 553 activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
 
         if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
 
             ## Help isn't necessary or relevant to mobile devices.
             #textbutton _("Hilfe") action ShowMenu("help")
-            imagebutton auto "gui/button/help_%s.png" action ShowMenu("help") xpos 1292 ypos 670 activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+            imagebutton auto "gui/button/help_%s.png" action ShowMenu("help") xpos 1350 ypos 670 activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
 
-        if renpy.variant("pc") and not main_menu:
+        if main_menu and renpy.variant("pc"):
 
             ## The quit button is banned on iOS and unnecessary on Android and
             ## Web.
-            imagebutton auto "gui/button/quit_%s.png" action Quit(confirm=not main_menu) xpos 1292 ypos 900 activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+            imagebutton auto "gui/button/quit_%s.png" action Quit(confirm=not main_menu) xpos 1350 ypos 787 activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
 
         #if renpy.variant("mobile") and not main_menu:
 
@@ -401,7 +409,17 @@ screen main_menu():
     ## This ensures that any other menu screen is replaced.
     tag menu
 
-    add gui.main_menu_background
+    if persistent.gamecleared == True:
+
+        add gui.main_menu3_background
+
+    elif persistent.teapartycleared == True:
+
+        add gui.main_menu2_background
+
+    else:
+
+        add gui.main_menu_background
 
     ## This empty frame darkens the main menu.
     frame:
@@ -409,7 +427,7 @@ screen main_menu():
 
     ## The use statement includes another screen inside this one. The actual
     ## contents of the main menu are in the navigation screen.
-    use navigationnew
+    use navigation
 
     #if gui.show_name:
 
@@ -466,7 +484,7 @@ screen game_menu(title, scroll=None, yinitial=0.0):
     style_prefix "game_menu"
 
     if main_menu:
-        add gui.main_menu_background
+        add gui.game_menu1_background
     else:
         add gui.game_menu_background
 
@@ -1459,41 +1477,94 @@ screen story_select():
 
     tag menu
 
-    add "images/menu/rose_1ep.png" at center
+    add "images/menu/scenario.png" at center
 
     textbutton "Zum Hauptm{color=#f00}e{color=#fff}nü" style "button_back" action ShowMenu("main_menu")
 
     vbox:
-        xalign 0.9
+        xpos 985
         yalign 0.5
         spacing -20
 
-        imagebutton idle "gui/button/mainidle.png" action ShowMenu("gamestart") hover "gui/button/mainhover.png" activate_sound "audio/sfx/umise_051.ogg" hover_sound "audio/sfx/click-21156.mp3"
+        imagebutton idle "gui/button/mainidle.png" action Start("startde") hover "gui/button/mainhover.png" hovered Show('mainstory') unhovered Hide('mainstory') activate_sound "audio/sfx/umise_017.ogg" hover_sound "audio/sfx/click-21156.mp3"
 
         hbox:
-            xpos 70
-            spacing 200
+            if persistent.gamecleared == True:
 
-            imagebutton idle "gui/button/teapartyidle.png" at grayscale action NullAction()
+                xpos 5
+                spacing 10
+
+            else:
+
+                xpos 30
+                spacing 250
 
 
-            imagebutton idle "gui/button/hiddenidle.png" at grayscale action NullAction()
+            if persistent.mainstorycleared == False:
 
-screen gamestart():
+                imagebutton idle "gui/button/teapartyidle.png" at grayscale hovered Show('teaparty') unhovered Hide('teaparty') action NullAction() hover_sound "audio/sfx/click-21156.mp3"
 
-    tag menu
+            else:
 
-    add "images/menu/start.png" at center
+                imagebutton idle "gui/button/teapartyidle.png" hover "gui/button/teapartyhover.png" hovered Show('teaparty') unhovered Hide('teaparty') action Start("teapartyde") hover_sound "audio/sfx/click-21156.mp3" activate_sound "audio/sfx/umise_017.ogg"
 
-    textbutton "Zu{color=#f00}r{color=#fff}ück" style "button_back" action ShowMenu("story_select")
+            if persistent.gamecleared == True:
 
-    vbox:
-            xalign 0.5
-            yalign 0.5
-            xpos 960
-            ypos 1000
+                imagebutton idle "gui/button/bonusidle.png" hover "gui/button/bonushover.png" action Start("urateapartyde") hovered Show('bonushover') unhovered Hide('bonushover') hover_sound "audio/sfx/click-21156.mp3" activate_sound "audio/sfx/umise_017.ogg"
 
-            imagebutton idle "gui/button/begin_idle.png" action Start("gamestartstory") hover "gui/button/begin_hover.png" activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+            else:
+
+                pass
+
+            if persistent.teapartycleared == False:
+
+                imagebutton idle "gui/button/hiddenidle.png" at grayscale action NullAction() hovered Show('urateaparty') unhovered Hide('urateaparty') hover_sound "audio/sfx/click-21156.mp3"
+
+            else:
+
+                imagebutton idle "gui/button/hiddenidle.png" hover "gui/button/hiddenhover.png" action Start("urateapartyde") hovered Show('urateaparty') unhovered Hide('urateaparty') hover_sound "audio/sfx/click-21156.mp3" activate_sound "audio/sfx/umise_017.ogg"
+
+screen mainstory():
+    tag hover
+    imagemap:
+        ground "gui/hovermenu.png"
+    text "Episode 0\nResurrection of the golden witch" style 'bigtext' at Position(xpos = 75, ypos = 330)
+    text "Willkommen auf Rokkenjima.\nDie Goldene Hexe heißt dich zu einem neuen Spiel willkommen.\nWie amüsant, dich erwartet die Ehre gegen eine Hexe zu spielen.\n\nDie Hexe von Rokkenjima erwartet nicht, dass du bereits\nmit den Spielregeln vertraut bist, also lasse es ruhig angehen\nund geniesse das Narrativ solange du es noch kannst.\n\nDer Schwierigkeitsgrad ist viel zu einfach.\nDas klingt doch fair oder nicht?" style 'menutext' at Position (xpos = 60, ypos = 420)
+
+screen teaparty():
+    tag hover
+    imagemap:
+        ground "gui/hovermenu.png"
+    text "Tee Party" style 'bigtext' at Position(xpos = 75, ypos = 330)
+
+    if persistent.mainstorycleared == False:
+
+        text "Dieser Teil wurde noch nicht geschrieben.\nDieses Kapitel wird erst nach der Hauptstory spielbar sein." style 'menutext' at Position (xpos = 60, ypos = 420)
+
+    else:
+
+        text "Bitte nimm Platz und entspanne dich.\nWar dein Aufenthalt auf Rokkenjima angenehm?\n\nDie Goldene Hexe hat dir eine Einladung\nzu ihrer Teeparty geschenkt.\nIch hoffe, dass du daran teilnehmen wirst." style 'menutext' at Position (xpos = 60, ypos = 420)
+
+screen urateaparty():
+    tag hover
+    imagemap:
+        ground "gui/hovermenu.png"
+    text "????" style 'bigtext' at Position(xpos = 75, ypos = 330)
+
+    if persistent.teapartycleared == False:
+
+        text "Dieser Teil wurde noch nicht geschrieben.\nDieses Kapitel wird erst nach der Tee Party spielbar sein." style 'menutext' at Position (xpos = 60, ypos = 420)
+
+    else:
+
+        text "Willkommen zur Tee Party der Nichtmenschen." style 'menutext' at Position (xpos = 60, ypos = 420)
+
+screen bonushover():
+    tag hover
+    imagemap:
+        ground "gui/hovermenu.png"
+    text "Bonuskapitel" style 'bigtext' at Position(xpos = 75, ypos = 330)
+    text "Noch nicht genug?\n\nNun gut, die Goldene Hexe hat noch ein wenig\nvom Kuchen übrig gelassen.\nNimm dir gerne so viel du willst." style 'menutext' at Position (xpos = 60, ypos = 420)
 
 ################################################################################
 ## Mobile Variants
