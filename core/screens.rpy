@@ -285,12 +285,8 @@ screen quick_menu():
             xalign 0.0
             yalign 0.0
 
-            #imagebutton auto "gui/button/quickbuttonlog_%s.png" action ShowMenu("history") xpos 0 ypos 750 activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
-            #imagebutton auto "gui/button/quickbuttonload_%s.png" action ShowMenu("load") xpos 0 ypos 750 activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
-            #imagebutton auto "gui/button/quickbuttonsave_%s.png" action ShowMenu("save") xpos 0 ypos 750 activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
-            #imagebutton auto "gui/button/quickbuttonautomode_%s.png" action Preference("auto-forward", "toggle") xpos 0 ypos 750 activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
-            #imagebutton auto "gui/button/quickbuttonskip_%s.png" action Skip() alternate Skip(fast=True, confirm=True) xpos 0 ypos 750 activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
-            #imagebutton auto "gui/button/quickbuttonmenu_%s.png" action ShowMenu('preferences') xpos 0 ypos 750 activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+            imagebutton auto "gui/button/quickbuttonautomode_%s.png" action Preference("auto-forward", "toggle") xpos 1850 ypos 25 activate_sound "audio/sfx/umise_1005.ogg"
+            imagebutton auto "gui/button/quickbuttonskip_%s.png" action Skip() alternate Skip(fast=True, confirm=True) xpos 1825 ypos 25 activate_sound "audio/sfx/umise_1005.ogg"
 
 
 ## This code ensures that the quick_menu screen is displayed in-game, whenever

@@ -237,7 +237,7 @@ label chapter1de:
     """
     hide but_b11_kuyasigaru1
     show but_a11_aseru5 at links,autosprite('but')
-    but "\"....Ich hoffe, dass du vom Boot springst und dabei ersäuft ....du alter Bastard.... Owowowow lass los!"
+    but "\"....Ich hoffe, du springst vom Boot und ertrinkst ....du alter Bastard.... Owowowow, lass los!"
     but ".........Ich....gebe.....nicht.....auuuuuuffffff!!!"
     but ".....owowowow..... lass doch endlich los owowowowow... es tut weh....\""
     hide rud_a11_defo1
