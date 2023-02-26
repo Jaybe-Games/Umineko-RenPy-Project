@@ -14,7 +14,7 @@
 ##
 ## The _() surrounding the string marks it as eligible for translation.
 
-define config.name = _("Umineko When They Cry ZERO ~Waltz of Reflections and Delusions~")
+define config.name = _("Umineko When They Cry Zero ~Waltz of Reflections and Delusions~")
 
 
 ## Determines if the title given above is shown on the main menu screen. Set
@@ -25,7 +25,7 @@ define gui.show_name = False
 
 ## The version of the game.
 
-define config.version = "Developer 0.0.15a"
+define config.version = "Developer0015a"
 
 
 ## Text that is placed on the game's about screen. Place the text between the
@@ -166,7 +166,6 @@ define config.save_directory = "WHENTHEYCRY0-1673137931"
 ## The icon displayed on the taskbar or dock.
 
 define config.window_icon = "gui/icon.png"
-
 
 ## Build configuration #########################################################
 ##

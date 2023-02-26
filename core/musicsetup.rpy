@@ -76,18 +76,20 @@ init python:
     deaths_door = "audio/bgm/umib_014.ogg"
     hane = "audio/bgm/umib_003.ogg"
     ride_on = "audio/bgm/umib_004.ogg"
+    summer = "audio/bgm/umib_002.ogg"
+
 
     # alias : "Song Title",
     music_dictionary = {
-         deaths_door : "At Death's Door",
-         hane : "HANE",
-         ride_on : "Ride on",
+        deaths_door : "At Death's Door",
+        hane : "HANE",
+        ride_on : "Ride on",
+        summer : "Door of Summer"
     }
 
     # Define every sound with an alias
     # door_close = "door closing sfx.wav"
 
     # alias : "Sound description."
-    sfx_dictionary = {
-         # door_close : "Door closes shut.",
+    sfx_dictionary = { # door_close : "Door closes shut.",
     }

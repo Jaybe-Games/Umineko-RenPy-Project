@@ -24,7 +24,7 @@ label chapter1de:
     pause (2)
     $ songname = "HANE"
     $ play_music(hane)
-    play audio "audio/sfx/umilse_004.ogg" loop
+    play ship "audio/sfx/umilse_004.ogg"
     camera at Shake(None, float('inf'), dist=3)
     scene ship_s2a
     pause (3)
@@ -40,7 +40,7 @@ label chapter1de:
     Aber einer von ihnen scheint die Fahrt gar nicht zu mögen, er schreit herum, dass er vom Boot fällt und so.
     """
     play sound "audio/sfx/umise_003.ogg"
-    show but_b23_kuyasigaru1 at mitte with dissolve
+    show but_b23_kuyasigaru1 at mitte with quickgradientwiperight
     but "\"whaoooo!!!! ....Ich falle runter, ....ich falle runteeeeeer!!!"
     but "....Ich hasse Boote! ...Gleich muss ich kotzen, ich falleeeee!!!"
     but "Das wars!... Ich werde diese Insel nicht mehr erreichen, eher sterbe ich hier...\""
@@ -86,7 +86,7 @@ label chapter1de:
     hide rud_a11_defo1 with fastdissolve
     hide but_b22_nayamu2 with fastdissolve
     pause (0.3)
-    show rud_a11_warai1 at mitte with fastdissolve
+    show rud_a11_warai1 at mitte with quickgradientwiperight
     """
     Das ist mein Vater Rudolf, der alte Bastard ist so groß wie ich und macht sich bei Gelegenheit gerne über mich lustig.
     Sein Name wird auf Japanisch Ushiromiya Rudorufu ausgesprochen, fast die ganze Familie hat diese seltsame Namenstradition.
@@ -104,7 +104,7 @@ label chapter1de:
     kyr "\"Aber er ist selbst schuld, wenn er da rumturnt, obwohl er weiß, dass er seekrank wird.\""
     hide rud_a11_warai1 with dissolve
     hide kir_a11_majime1 with dissolve
-    show kir_a11_defo1 at mitte with dissolve
+    show kir_a11_defo1 at mitte with quickgradientwiperight
     """
     Das ist Kyrie-san, der alte Bastard hat sie kurz nach dem Tod meiner Mutter geheiratet,
     aber das liegt hinter uns.
@@ -134,7 +134,7 @@ label chapter1de:
     mar "\"uu-uu~! Battler hat sich übergeben, Battler hat sich übergeben! *kicher*kicher*\""
     hide rud_a11_akuwarai1 with dissolve
     hide mar_a11_warai1 with dissolve
-    show mar_a11_niyari1 at mitte with dissolve
+    show mar_a11_niyari1 at mitte with quickgradientwiperight
     """
     Das kleine Mädchen, das definitiv mehr Spaß daran hat, mir zuzusehen, als mit dem Boot zu fahren, ist meine jüngste Cousine Maria,
 
@@ -170,7 +170,7 @@ label chapter1de:
     ros ".....Du wirkst so erwachsen und reif und jetzt das?\""
     hide ros_a11_majime1 with dissolve
     hide but_b22_warai1 with dissolve
-    show ros_a11_warai1 at mitte with dissolve
+    show ros_a11_warai1 at mitte with quickgradientwiperight
     """
     Das ist Tante Rosa, sie ist die Mutter von Maria und erzieht sie in meinen Augen etwas zu streng.
     Aber da das nicht wirklich mein Bier ist, halte ich mich da raus.
@@ -188,7 +188,7 @@ label chapter1de:
     but "\".......Ey, .....halt den Mund!\""
     hide rud_a11_akuwarai1 with dissolve
     hide but_b23_nayamu1 with dissolve
-    show but_b11_warai2 at mitte with dissolve
+    show but_b11_warai2 at mitte with quickgradientwiperight
     """
     Wie wir bereits wissen, ist mein Name Ushiromiya Battler, der gerade schön ins Wasser gekotzt hat.
     Ich bin das Kind von Rudolf und Asumu, Asumu ist vor ungefähr 6 Jahren gestorben.
@@ -214,7 +214,7 @@ label chapter1de:
     hide but_b22_nayamu1
     show but_b22_nayamu2 at links,autosprite('but')
     but "...Also wenn du es unbedingt wiederhaben willst, kannst du ja ins Meer springen und es wieder rausfischen... hihihihi..."
-    but "....Aber mal ernsthaft, das Wackeln wurde gerade richtig schlimm...\""
+    but "....Aber mal ernsthaft, das Schaukeln wurde gerade richtig schlimm...\""
     hide rud_a11_akuwarai2
     show rud_a11_defo2 at rechts,autosprite('rud')
     rud "\"........Battler...\""
@@ -229,21 +229,21 @@ label chapter1de:
     Einen Moment hat Battler nicht aufgepasst und schon hat Rudolf sein Ohrläppchen gepackt und behandelt es nicht gerade zimperlich.
     """
     but "\"owowowowowowowow.... lass los! owowowowowowow"
-    but ".......Das tut richtig weh, Hör auf damit, .....owowowow\""
+    but ".......Das tut richtig weh, hör auf damit, .....owowowow\""
 
     rud "\"Du.... willst.... also...., dass ich es mir zu...rück....ho...le...jaaaa~?\""
     """
     Rudolf hat einen sehr starken Griff, besonders wenn es um Battlers Ohrläppchen geht, man hat das Gefühl, er reißt es jeden Moment ab.
     """
-    hide but_b11_kuyasigaru1 with fastdissolve
-    show but_a11_aseru5 at links,autosprite('but') with fastdissolve
+    hide but_b11_kuyasigaru1
+    show but_a11_aseru5 at links,autosprite('but')
     but "\"....Ich hoffe, dass du vom Boot springst und dabei ersäuft ....du alter Bastard.... Owowowow lass los!"
     but ".........Ich....gebe.....nicht.....auuuuuuffffff!!!"
     but ".....owowowow..... lass doch endlich los owowowowow... es tut weh....\""
     hide rud_a11_defo1
-    show rud_a11_akuwarai1 at links2,autosprite('rud') with fastdissolve
+    show rud_a11_akuwarai1 at links2,autosprite('rud')
     rud "\"....Das ist deine Strafe, wenn du frech wirst, Battler-kun.\""
-    hide but_b11_kuyasigaru1 with fastdissolve
+    hide but_a11_aseru5 with fastdissolve
     hide rud_a11_akuwarai1 with fastdissolve
     show kir_a11_majime1 at mitte with fastdissolve
     kyr "\"Lasst es für heute gut sein, ihr beiden."
@@ -256,24 +256,27 @@ label chapter1de:
     show jes_a11_atya2 at mitte with fastdissolve
     jes "\"...B...Battler-kun hast du gerade eben vom Deck gekotzt?, ich schaue nach draußen und plötzlich kommt so eine widerliche Suppe von oben runter, das war eklig!"
     jes "Nächstes Mal nimm einen Eimer mit!\""
-    jes "Ach ja, und was war das für ein \"Ich falle, ich falle\" -Geschrei? Bist du ein bisschen meschugge? wahahahaha!"
-    jes "Das war die eine Sache, und dann war da noch die Kotze, die so von Deck segelte. pahahahaha."
-    hide jes_a11_atya2 with fastdissolve
+    show jes_a11_aisowarai1 at mitte with fastdissolve
+    hide jes_a11_atya2
+    jes "Ach ja, und was war das für ein \"Ich falle, ich falle\" -Geschrei? ...Bist du ein bisschen meschugge? ...wahahahaha!"
+    jes ".....Das war die eine Sache, .....und dann war da noch die Kotze, die so von Deck segelte. ....pahahahaha."
+    hide jes_a11_aisowarai1 with fastdissolve
     show jes_a11_defo2 at links,autosprite('jes') with fastdissolve
     show but_a11_defo1 at rechts,autosprite('but') with fastdissolve
     but "\"......Entschuldigung.... Das verfluchte Boot schaukelt so viel..... ....Das Schiff schaukelt und schaukelt und schaukelt....."
+    show but_a21_kuyasigaru1 at rechts,autosprite('but')
     hide but_a11_defo1
-    show but_a21_kuyasigaru1 at rechts,autosprite('but') with fastdissolve
-    but "ahhhhhh!!! Mach, dass es aufhört, sonst falle ich wieder!\""
+    but "....ahhhhhh!!! Mach, dass es aufhört, sonst falle ich wieder!\""
     show jes_a11_atya3 at links,autosprite('jes') with fastdissolve
-    jes "\"Vielleicht sollte der Kapitän etwas langsamer fahren, sonst geht es dir gleich noch schlechter..."
+    hide jes_a11_defo2
+    jes "\"....Vielleicht sollte der Kapitän etwas langsamer fahren, sonst geht es dir gleich noch schlechter..."
     jes "Ich werde sofort den Kapitän bitten, etwas langsamer zu fahren, aber bitte nicht mehr ins Meer kotzen....\""
-    hide but_a21_kuyasigaru1 with fastdissolve
-    show but_b11_odoroki3 at rechts,autosprite('but') with fastdissolve
-    but "\"Ja, vielen Dank, Jessica-chan.\""
+    show but_b11_odoroki3 at rechts,autosprite('but')
+    hide but_a21_kuyasigaru1
+    but "\"Ja, ....vielen Dank, ...Jessica-chan.\""
     hide but_b11_odoroki3 with fastdissolve
     hide jes_a11_atya3 with fastdissolve
-    show jes_a11_warai1 at mitte with dissolve
+    show jes_a11_warai1 at mitte with quickgradientwiperight
     """
     Das war meine Cousine Ushiromiya Jessica, sie ist echt cool drauf
     und ist wohl aktuell in dieser Phase, wo man gegen seine Eltern rebelliert.
@@ -287,20 +290,39 @@ label chapter1de:
     Sie hat außerdem so eine \"Verrückte Art zu reden\". Sie flucht viel und ihre Wortwahl ist gewöhnungsbedürftig.
     """
     camera at Shake(None, float('inf'), dist=0)
-    jes "\"Verdammte Scheiße Battler-kun, jetzt werden wir uns wegen dir verspäten.\""
-    but "\"Halt doch mal dein Maul, immerhin kann ich jetzt ein wenig chillen.\""
-    jes "\"Wir sollten besser runter gehen zum \"chillen\", wir sind gleich auf der Insel.\""
-    but "\"Ja, das kann ich versuchen, jetzt, wo das Boot etwas langsamer fährt."
-    but "Aber ich kann trotzdem nicht garantieren, dass ich den Rest meines Frühstücks bei mir behalte.\""
+    "Der Kapitän hat zugestimmt langsamer zu fahren und jetzt schaukelt das Boot nicht mehr so stark."
+    jes "\"....Verdammte Scheiße Battler-kun, jetzt werden wir uns wegen dir verspäten....\""
+    hide jes_a11_warai1 with fastdissolve
+    show but_b22_warai1 at rechts2,autosprite('but') with quickergradientwiperight
+    but "\".....H-Halt doch mal dein Maul, immerhin kann ich jetzt ein wenig chillen....\""
+    show jes_a11_defo2 at links,autosprite('jes') with quickergradientwipeupright
+    jes "\".....Wir sollten besser runter gehen zum \"chillen\", wir sind gleich auf der Insel.\""
+    but "\"....Ja, das kann ich versuchen, jetzt, wo das Boot etwas langsamer fährt."
+    show but_b22_nayamu2 at rechts2,autosprite ('but')
+    but "....Aber ich kann trotzdem nicht garantieren, dass ich den Rest meines Frühstücks bei mir behalte.... Ihihihi....\""
+    stop ship fadeout 2.0
+    $ songname = "Door of Summer"
+    $ play_music(summer)
+    scene ship_s3a with gradientwiperight
     """
-    Dann gingen Battler und Jessica unter Deck zu den anderen, die im Gegensatz zu Battler ruhig warteten, bis sie endlich an der Reihe waren.
-
+    Dann gingen Battler und Jessica unter Deck zu den anderen, die im Gegensatz zu Battler ruhig warten, bis sie endlich die Insel erreichen.
+    """
+    show eva_b22_akire2 at rechts with quickergradientwiperight
+    show hid_a21_warai1 at mitte with quickergradientwiperight
+    show kum_a12_defo2 at links with quickergradientwiperight
+    """
     Moment mal, dieses \"ruhig\" sein ist falsch! Ich sehe es klar und deutlich! Die anderen Erwachsenen verkneifen sich doch alle gerade das Lachen....
     """
+    scene ship_s3a with quickergradientwiperight
+    show geo_a11_defo1 at mitte with fastdissolve
     geo "\"Wie geht es dir Battler-kun?"
     geo "Wir alle wissen bereits, dass es dich schon erwischt hat.\""
+    hide geo_a11_defo1 with fastdissolve
+    show but_b22_nayamu1 at links with fastdissolve
+    show geo_a11_majime2 at rechts with fastdissolve
+    show but_b22_nayamu1 at links,nod_transform
     """
-    Mit einem leichten, aber nicht ganz überzeugten Nicken stimmt Battler zu.
+    Mit einem leichten, aber nicht ganz ernstgemeinten Nicken stimmt Battler zu.
     """
     but "\"Mir geht es gut, den Umständen entsprechend."
     but "Der Kapitän hat das Schiff absichtlich so schaukeln lassen.\""
@@ -744,7 +766,7 @@ label chapter1de:
     Oder an Marias gruseliger Show von vorhin? Ich hoffe, ich werde es nie erfahren...
     """
     stop sound
-    stop audio
+    stop audio 
     scene black with dissolve
     $ songname = "Ride on"
     $ play_music(ride_on)
