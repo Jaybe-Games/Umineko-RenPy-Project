@@ -235,21 +235,45 @@ label chapter1de:
     """
     Rudolf hat einen sehr starken Griff, besonders wenn es um Battlers Ohrläppchen geht, man hat das Gefühl, er reißt es jeden Moment ab.
     """
-    but "........."
-    but "\".....owowowow..... lass doch endlich los owowowowow... es tut weh....\""
+    hide but_b11_kuyasigaru1 with fastdissolve
+    show but_a11_aseru5 at links,autosprite('but') with fastdissolve
+    but "\"....Ich hoffe, dass du vom Boot springst und dabei ersäuft ....du alter Bastard.... Owowowow lass los!"
+    but ".........Ich....gebe.....nicht.....auuuuuuffffff!!!"
+    but ".....owowowow..... lass doch endlich los owowowowow... es tut weh....\""
+    hide rud_a11_defo1
+    show rud_a11_akuwarai1 at links2,autosprite('rud') with fastdissolve
     rud "\"....Das ist deine Strafe, wenn du frech wirst, Battler-kun.\""
+    hide but_b11_kuyasigaru1 with fastdissolve
+    hide rud_a11_akuwarai1 with fastdissolve
+    show kir_a11_majime1 at mitte with fastdissolve
     kyr "\"Lasst es für heute gut sein, ihr beiden."
+
     kyr "Das könnt ihr später auf der Insel austragen.\""
     """
     Nachdem Kyrie den kleinen Konflikt erfolgreich beendet hatte, hörte man jemanden von unter Deck nach draußen gehen.
     """
-    jes "\"...B...Battler-kun hast du gerade von Deck gekotzt?, ich schaue nach draußen und plötzlich kommt so eine komische Suppe von oben runter, das war eklig!"
+    hide kir_a11_majime1 with fastdissolve
+    show jes_a11_atya2 at mitte with fastdissolve
+    jes "\"...B...Battler-kun hast du gerade eben vom Deck gekotzt?, ich schaue nach draußen und plötzlich kommt so eine widerliche Suppe von oben runter, das war eklig!"
     jes "Nächstes Mal nimm einen Eimer mit!\""
-    but "\"......Entschuldigung, die Geschwindigkeit ist mir einfach zu hoch, ....das Schiff schaukelt und schaukelt und schaukelt....."
+    jes "Ach ja, und was war das für ein \"Ich falle, ich falle\" -Geschrei? Bist du ein bisschen meschugge? wahahahaha!"
+    jes "Das war die eine Sache, und dann war da noch die Kotze, die so von Deck segelte. pahahahaha."
+    hide jes_a11_atya2 with fastdissolve
+    show jes_a11_defo2 at links,autosprite('jes') with fastdissolve
+    show but_a11_defo1 at rechts,autosprite('but') with fastdissolve
+    but "\"......Entschuldigung.... Das verfluchte Boot schaukelt so viel..... ....Das Schiff schaukelt und schaukelt und schaukelt....."
+    hide but_a11_defo1
+    show but_a21_kuyasigaru1 at rechts,autosprite('but') with fastdissolve
     but "ahhhhhh!!! Mach, dass es aufhört, sonst falle ich wieder!\""
-    jes "\"Vielleicht sollte der Kapitän etwas langsamer fahren, sonst geht es Battler gleich noch schlechter..."
+    show jes_a11_atya3 at links,autosprite('jes') with fastdissolve
+    jes "\"Vielleicht sollte der Kapitän etwas langsamer fahren, sonst geht es dir gleich noch schlechter..."
     jes "Ich werde sofort den Kapitän bitten, etwas langsamer zu fahren, aber bitte nicht mehr ins Meer kotzen....\""
+    hide but_a21_kuyasigaru1 with fastdissolve
+    show but_b11_odoroki3 at rechts,autosprite('but') with fastdissolve
     but "\"Ja, vielen Dank, Jessica-chan.\""
+    hide but_b11_odoroki3 with fastdissolve
+    hide jes_a11_atya3 with fastdissolve
+    show jes_a11_warai1 at mitte with dissolve
     """
     Das war meine Cousine Ushiromiya Jessica, sie ist echt cool drauf
     und ist wohl aktuell in dieser Phase, wo man gegen seine Eltern rebelliert.
@@ -260,17 +284,18 @@ label chapter1de:
     Aber dann würde sie mich windelweich schlagen, denn mit ihr ist es nicht gut Kirschen zu essen, wenn man es sich mit ihr verscherzt.
     Jessica klingt sehr nach englischer Herkunft und wird bei uns Ushiromiya Jeshka ausgesprochen, sie muss richtig unzufrieden mit ihrem Namen sein.
 
-    Nichtmal eine Minute später ist Jessica zurückgekommen, um mir zu sagen:
-    dass der Kapitän die Geschwindigkeit verringert hat.
+    Sie hat außerdem so eine \"Verrückte Art zu reden\". Sie flucht viel und ihre Wortwahl ist gewöhnungsbedürftig.
     """
     camera at Shake(None, float('inf'), dist=0)
-    jes "\"Battler-kun, du solltest dich wirklich unter Deck ausruhen, wir sind bald auf der Insel.\""
+    jes "\"Verdammte Scheiße Battler-kun, jetzt werden wir uns wegen dir verspäten.\""
+    but "\"Halt doch mal dein Maul, immerhin kann ich jetzt ein wenig chillen.\""
+    jes "\"Wir sollten besser runter gehen zum \"chillen\", wir sind gleich auf der Insel.\""
     but "\"Ja, das kann ich versuchen, jetzt, wo das Boot etwas langsamer fährt."
-    but "Aber ich kann nicht garantieren, dass ich den Rest meines Frühstücks bei mir behalte.\""
+    but "Aber ich kann trotzdem nicht garantieren, dass ich den Rest meines Frühstücks bei mir behalte.\""
     """
     Dann gingen Battler und Jessica unter Deck zu den anderen, die im Gegensatz zu Battler ruhig warteten, bis sie endlich an der Reihe waren.
 
-    Moment mal, dieses \"ruhig\" sein ist falsch! Ich sehe es klar und deutlich! Die verkneifen sich doch alle gerade das Lachen....
+    Moment mal, dieses \"ruhig\" sein ist falsch! Ich sehe es klar und deutlich! Die anderen Erwachsenen verkneifen sich doch alle gerade das Lachen....
     """
     geo "\"Wie geht es dir Battler-kun?"
     geo "Wir alle wissen bereits, dass es dich schon erwischt hat.\""
