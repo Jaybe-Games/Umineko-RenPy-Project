@@ -4,8 +4,6 @@ init:
 
         import math
 
-        import random
-
         class Shaker(object):
 
             anchors = {

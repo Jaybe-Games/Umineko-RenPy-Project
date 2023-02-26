@@ -1,8 +1,6 @@
 
 label splashscreen:
 
-#jump test
-
 scene black with dissolve
 pause (1)
 show splash1 with dissolve
@@ -20,6 +18,6 @@ pause (1)
 
 if persistent.alreadystarted == True:
     $ renpy.movie_cutscene("videos/opening.mov")
-    return
+    pause (1)
 else:
-    return
+    pause (1)

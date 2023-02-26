@@ -4,7 +4,6 @@
 
 init offset = -1
 
-
 ################################################################################
 ## Styles
 ################################################################################
@@ -286,12 +285,12 @@ screen quick_menu():
             xalign 0.0
             yalign 0.0
 
-            imagebutton auto "gui/button/quickbuttonlog_%s.png" action ShowMenu("history") xpos 0 ypos 750 activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
-            imagebutton auto "gui/button/quickbuttonload_%s.png" action ShowMenu("load") xpos 0 ypos 750 activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
-            imagebutton auto "gui/button/quickbuttonsave_%s.png" action ShowMenu("save") xpos 0 ypos 750 activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
-            imagebutton auto "gui/button/quickbuttonautomode_%s.png" action Preference("auto-forward", "toggle") xpos 0 ypos 750 activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
-            imagebutton auto "gui/button/quickbuttonskip_%s.png" action Skip() alternate Skip(fast=True, confirm=True) xpos 0 ypos 750 activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
-            imagebutton auto "gui/button/quickbuttonmenu_%s.png" action ShowMenu('preferences') xpos 0 ypos 750 activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+            #imagebutton auto "gui/button/quickbuttonlog_%s.png" action ShowMenu("history") xpos 0 ypos 750 activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+            #imagebutton auto "gui/button/quickbuttonload_%s.png" action ShowMenu("load") xpos 0 ypos 750 activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+            #imagebutton auto "gui/button/quickbuttonsave_%s.png" action ShowMenu("save") xpos 0 ypos 750 activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+            #imagebutton auto "gui/button/quickbuttonautomode_%s.png" action Preference("auto-forward", "toggle") xpos 0 ypos 750 activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+            #imagebutton auto "gui/button/quickbuttonskip_%s.png" action Skip() alternate Skip(fast=True, confirm=True) xpos 0 ypos 750 activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+            #imagebutton auto "gui/button/quickbuttonmenu_%s.png" action ShowMenu('preferences') xpos 0 ypos 750 activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
 
 
 ## This code ensures that the quick_menu screen is displayed in-game, whenever
@@ -338,17 +337,22 @@ screen navigation():
 
         if main_menu:
 
-            imagebutton auto "gui/button/start_%s.png" action Play("sound", "/audio/sfx/umise_051.ogg"), ShowMenu("story_select") xpos 1350 ypos 200 hover_sound "audio/sfx/click-21156.mp3"
+
+                imagebutton auto "gui/button/start_%s.png" action [Play("sound", "/audio/sfx/umise_051.ogg"), ShowMenu("story_select"), Hide('starthover')] xpos 1350 ypos 200 hover_sound "audio/sfx/click-21156.mp3" hovered Show('starthover') unhovered Hide('starthover')
+
+                imagebutton auto "gui/button/load_%s.png" action [ShowMenu("load"), Hide('loadhover')] xpos 1350 ypos 315 activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" hovered Show('loadhover') unhovered Hide('loadhover')
+
+                imagebutton auto "gui/button/settings_%s.png" action [ShowMenu("preferences"), Hide('settingshover')] xpos 1350 ypos 435 activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" hovered Show('settingshover') unhovered Hide('settingshover')
+
+                imagebutton auto "gui/button/credits_%s.png" action [ShowMenu("about"), Hide('creditshover')] xpos 1350 ypos 553 activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" hovered Show('creditshover') unhovered Hide('creditshover')
+
+                imagebutton auto "gui/button/help_%s.png" action [ShowMenu("help"), Hide('helphover')] xpos 1350 ypos 670 activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" hovered Show('helphover') unhovered Hide('helphover')
+
+                imagebutton auto "gui/button/quit_%s.png" action [Quit(), Hide('quithover')] xpos 1350 ypos 787 activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" hovered Show('quithover') unhovered Hide('quithover')
 
         else:
 
-            imagebutton auto "gui/button/history_%s.png" action ShowMenu("history") xpos 1350 ypos 80 activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
-
-            imagebutton auto "gui/button/save_%s.png" action ShowMenu("save") xpos 1350 ypos 200 activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
-
-        imagebutton auto "gui/button/load_%s.png" action ShowMenu("load") xpos 1350 ypos 315 activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
-
-        imagebutton auto "gui/button/settings_%s.png" action ShowMenu("preferences") xpos 1350 ypos 435 activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+            pass
 
         if _in_replay:
 
@@ -362,21 +366,25 @@ screen navigation():
 
             text "Aktueller Soundtrack: " + songname ypos 1030 xpos 1900 xalign 1.0 size 30 font "fonts/AOTFShinGoProMedium.otf" outlines [ (absolute(3), "#000", absolute(0), absolute(0)) ]
 
-            imagebutton auto "gui/button/mainmenu_%s.png" action MainMenu() xpos 1350 ypos 787 activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
 
-        imagebutton auto "gui/button/credits_%s.png" action ShowMenu("about") xpos 1350 ypos 553 activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
 
-        if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
+        #if renpy.variant("pc") or (renpy.variant("web") or main_menu and not renpy.variant("mobile")):
 
             ## Help isn't necessary or relevant to mobile devices.
             #textbutton _("Hilfe") action ShowMenu("help")
-            imagebutton auto "gui/button/help_%s.png" action ShowMenu("help") xpos 1350 ypos 670 activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+            #imagebutton auto "gui/button/help_%s.png" action ShowMenu("help") xpos 1350 ypos 670 activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" hovered Show('helphover') unhovered Hide('helphover')
 
-        if main_menu and renpy.variant("pc"):
+        #if renpy.variant("pc") or (renpy.variant("web") and not main_menu and not renpy.variant("mobile")):
+
+        ## Help isn't necessary or relevant to mobile devices.
+        #textbutton _("Hilfe") action ShowMenu("help")
+            #imagebutton auto "gui/button/help_%s.png" action ShowMenu("help") xpos 1350 ypos 670 activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+
+        #if main_menu and renpy.variant("pc"):
 
             ## The quit button is banned on iOS and unnecessary on Android and
             ## Web.
-            imagebutton auto "gui/button/quit_%s.png" action Quit(confirm=not main_menu) xpos 1350 ypos 787 activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+            #imagebutton auto "gui/button/quit_%s.png" action Quit(confirm=not main_menu) xpos 1350 ypos 787 activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" hovered Show('quithover') unhovered Hide('quithover')
 
         #if renpy.variant("mobile") and not main_menu:
 
@@ -535,7 +543,40 @@ screen game_menu(title, scroll=None, yinitial=0.0):
 
     use navigation
 
-    #imagebutton auto "gui/button/back_%s.png" style "return_button" activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" xpos 800 action Return()
+    if not main_menu:
+
+        imagebutton auto "gui/button/history_%s.png" action ShowMenu("history") xpos 1350 ypos 80 activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+
+        imagebutton auto "gui/button/save_%s.png" action ShowMenu("save") xpos 1350 ypos 200 activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+
+        imagebutton auto "gui/button/mainmenu_%s.png" action MainMenu() xpos 1350 ypos 787 activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+
+        imagebutton auto "gui/button/load_%s.png" action ShowMenu("load") xpos 1350 ypos 315 activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+
+        imagebutton auto "gui/button/settings_%s.png" action ShowMenu("preferences") xpos 1350 ypos 435 activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+
+        imagebutton auto "gui/button/credits_%s.png" action ShowMenu("about") xpos 1350 ypos 553 activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+
+        imagebutton auto "gui/button/help_%s.png" action ShowMenu("help") xpos 1350 ypos 670 activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+
+        imagebutton auto "gui/button/back_%s.png" style "return_button" activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" xpos 1310 action Return()
+
+    else:
+
+        imagebutton auto "gui/button/back_%s.png" style "return_button" activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" xpos 1310 action Return()
+
+        imagebutton auto "gui/button/start_%s.png" action Play("sound", "/audio/sfx/umise_051.ogg"), ShowMenu("story_select") xpos 1350 ypos 200 hover_sound "audio/sfx/click-21156.mp3"
+
+        imagebutton auto "gui/button/load_%s.png" action ShowMenu("load") xpos 1350 ypos 315 activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+
+        imagebutton auto "gui/button/settings_%s.png" action ShowMenu("preferences") xpos 1350 ypos 435 activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+
+        imagebutton auto "gui/button/credits_%s.png" action ShowMenu("about") xpos 1350 ypos 553 activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+
+        imagebutton auto "gui/button/help_%s.png" action ShowMenu("help") xpos 1350 ypos 670 activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+
+        imagebutton auto "gui/button/quit_%s.png" action Quit(confirm=not main_menu) xpos 1350 ypos 787 activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+
 
 
     label title
@@ -807,11 +848,6 @@ screen preferences():
                     style_prefix "check"
                     label _("{color=#fff}Übers{/color}{color=#f00}p{/color}{color=#fff}ringen{/color}")
                     textbutton _("Unge{color=#f00}l{/color}esen") action Preference("skip", "toggle") activate_sound "audio/sfx/umise_1005.ogg"
-                    #textbutton _("Nach Auswahl") action Preference("after choices", "toggle")
-                    #textbutton _("Über{color=#f00}g{/color}änge") action InvertSelected(Preference("transitions", "toggle")) activate_sound "audio/sfx/umise_1005.ogg"
-
-                ## Additional vboxes of type "radio_pref" or "check_pref" can be
-                ## added here, to add additional creator-defined preferences.
 
             null height (4 * gui.pref_spacing)
 
@@ -1067,7 +1103,7 @@ screen keyboard_help():
 
     hbox:
         label _("Enter")
-        text _("Fährt den Text fort und bestätigt\nMenü Buttons")
+        text _("Fährt den Text fort und bestätigt Menüs")
 
     hbox:
         label _("Leertaste")
@@ -1082,6 +1118,10 @@ screen keyboard_help():
         text _("Öffnet das Menü.")
 
     hbox:
+        label "A"
+        text _("Schaltet auf Automodus um.")
+
+    hbox:
         label _("Ctrl")
         text _("Überspringt Text beim gedrückthalten.")
 
@@ -1090,28 +1130,12 @@ screen keyboard_help():
         text _("Schaltet auf Textüberspringen um.")
 
     hbox:
-        label _("Bild Hoch")
-        text _("Springt zurück zu früherem Dialog.")
-
-    hbox:
-        label _("Bild Runter")
-        text _("Springt zu späterem Dialog.")
-
-    hbox:
         label "H"
         text _("Versteckt das Interface.")
 
     hbox:
         label "S"
         text _("Macht einen Screenshot.")
-
-    hbox:
-        label "V"
-        text _("Schaltet auf Sprachausgabe um aber willst du das echt? {a=https://www.renpy.org/l/voicing}self-voicing{/a}.")
-
-    hbox:
-        label "Shift+A"
-        text _("Öffnet Menü für erleichterten Zugang.")
 
 
 screen mouse_help():
@@ -1140,15 +1164,15 @@ screen mouse_help():
 screen gamepad_help():
 
     hbox:
-        label _("Rechter Trigger RT / A")
+        label _("RT, R2 & A")
         text _("Fährt den Text fort und betätigt\nMenü Buttons.")
 
     hbox:
-        label _("Linker Trigger LT / Linker Bumper LB")
+        label _("LT, R2")
         text _("Springt zurück zu früherem Dialog.")
 
     hbox:
-        label _("Rechter Bumper")
+        label _("LB, L1")
         text _("Springt zu späterem Dialog.")
 
 
@@ -1159,6 +1183,10 @@ screen gamepad_help():
     hbox:
         label _("Start")
         text _("Öffnet das Menü.")
+
+    hbox:
+        label _("RB")
+        text _("Schaltet auf Automodus um.")
 
     hbox:
         label _("Y")
@@ -1528,43 +1556,99 @@ screen mainstory():
     tag hover
     imagemap:
         ground "gui/hovermenu.png"
-    text "Episode 0\nResurrection of the golden witch" style 'bigtext' at Position(xpos = 75, ypos = 330)
-    text "Willkommen auf Rokkenjima.\nDie Goldene Hexe heißt dich zu einem neuen Spiel willkommen.\nWie amüsant, dich erwartet die Ehre gegen eine Hexe zu spielen.\n\nDie Hexe von Rokkenjima erwartet nicht, dass du bereits\nmit den Spielregeln vertraut bist, also lasse es ruhig angehen\nund geniesse das Narrativ solange du es noch kannst.\n\nDer Schwierigkeitsgrad ist viel zu einfach.\nDas klingt doch fair oder nicht?" style 'menutext' at Position (xpos = 60, ypos = 420)
+    text "Episode 0\nResurrection of the Golden Witch" style 'bigtext' at Position(xpos = 75, ypos = 390)
+    text "Willkommen auf Rokkenjima.\nDie Goldene Hexe heißt dich zu einem neuen Spiel willkommen.\nWie amüsant, dich erwartet die Ehre gegen eine Hexe zu spielen.\n\nDie Hexe von Rokkenjima erwartet nicht, dass du bereits\nmit den Spielregeln vertraut bist, also lasse es ruhig angehen\nund geniesse das Narrativ solange du es noch kannst.\n\nDer Schwierigkeitsgrad ist viel zu einfach.\nDas klingt doch fair oder nicht?" style 'menutext' at Position (xpos = 60, ypos = 490)
 
 screen teaparty():
     tag hover
     imagemap:
         ground "gui/hovermenu.png"
-    text "Tee Party" style 'bigtext' at Position(xpos = 75, ypos = 330)
+    text "Tee Party" style 'bigtext' at Position(xpos = 75, ypos = 390)
 
     if persistent.mainstorycleared == False:
 
-        text "Dieser Teil wurde noch nicht geschrieben.\nDieses Kapitel wird erst nach der Hauptstory spielbar sein." style 'menutext' at Position (xpos = 60, ypos = 420)
+        text "Dieser Teil wurde noch nicht geschrieben.\nDieses Kapitel wird erst nach der Hauptstory spielbar sein." style 'menutext' at Position (xpos = 60, ypos = 490)
 
     else:
 
-        text "Bitte nimm Platz und entspanne dich.\nWar dein Aufenthalt auf Rokkenjima angenehm?\n\nDie Goldene Hexe hat dir eine Einladung\nzu ihrer Teeparty geschenkt.\nIch hoffe, dass du daran teilnehmen wirst." style 'menutext' at Position (xpos = 60, ypos = 420)
+        text "Bitte nimm Platz und entspanne dich.\nWar dein Aufenthalt auf Rokkenjima angenehm?\n\nDie Goldene Hexe hat dir eine Einladung\nzu ihrer Teeparty geschenkt.\nIch hoffe, dass du daran teilnehmen wirst." style 'menutext' at Position (xpos = 60, ypos = 490)
 
 screen urateaparty():
     tag hover
     imagemap:
         ground "gui/hovermenu.png"
-    text "????" style 'bigtext' at Position(xpos = 75, ypos = 330)
+    text "????" style 'bigtext' at Position(xpos = 75, ypos = 390)
 
     if persistent.teapartycleared == False:
 
-        text "Dieser Teil wurde noch nicht geschrieben.\nDieses Kapitel wird erst nach der Tee Party spielbar sein." style 'menutext' at Position (xpos = 60, ypos = 420)
+        text "Dieser Teil wurde noch nicht geschrieben.\nDieses Kapitel wird erst nach der Tee Party spielbar sein." style 'menutext' at Position (xpos = 60, ypos = 490)
 
     else:
 
-        text "Willkommen zur Tee Party der Nichtmenschen." style 'menutext' at Position (xpos = 60, ypos = 420)
+        text "Willkommen zur Tee Party der Nichtmenschen." style 'menutext' at Position (xpos = 60, ypos = 490)
 
 screen bonushover():
     tag hover
     imagemap:
         ground "gui/hovermenu.png"
-    text "Bonuskapitel" style 'bigtext' at Position(xpos = 75, ypos = 330)
-    text "Noch nicht genug?\n\nNun gut, die Goldene Hexe hat noch ein wenig\nvom Kuchen übrig gelassen.\nNimm dir gerne so viel du willst." style 'menutext' at Position (xpos = 60, ypos = 420)
+    text "Bonuskapitel" style 'bigtext' at Position(xpos = 75, ypos = 390)
+    text "Noch nicht genug?\n\nNun gut, die Goldene Hexe hat noch ein wenig\nvom Kuchen übrig gelassen.\nNimm dir gerne so viel du willst." style 'menutext' at Position (xpos = 60, ypos = 490)
+
+screen starthover():
+    tag hover
+    imagemap:
+        ground "gui/hovermenu.png"
+    text "Start" style 'bigtext' at Position(xpos = 75, ypos = 390)
+    text "Willkommen auf Rokkenjima.\n\nBeginne das Spiel.\n\nWirst du die Goldene Hexe zufriedenstellen?" style 'menutext' at Position (xpos = 60, ypos = 490)
+
+screen loadhover():
+    tag hover
+    imagemap:
+        ground "gui/hovermenu.png"
+    text "Spiel Laden" style 'bigtext' at Position(xpos = 75, ypos = 390)
+    text "Nimm dein Spiel mit der Goldenen Hexe hier wieder auf." style 'menutext' at Position (xpos = 60, ypos = 490)
+
+screen creditshover():
+    tag hover
+    imagemap:
+        ground "gui/hovermenu.png"
+    text "Mitwirkende" style 'bigtext' at Position(xpos = 75, ypos = 390)
+    text "Mitwirkende und Danksagungen." style 'menutext' at Position (xpos = 60, ypos = 490)
+
+screen settingshover():
+    tag hover
+    imagemap:
+        ground "gui/hovermenu.png"
+    text "Einstellungen" style 'bigtext' at Position(xpos = 75, ypos = 390)
+    text "Gestalte dir das Spiel so wie du möchtest." style 'menutext' at Position (xpos = 60, ypos = 490)
+
+screen helphover():
+    tag hover
+    imagemap:
+        ground "gui/hovermenu.png"
+    text "Hilfe" style 'bigtext' at Position(xpos = 75, ypos = 390)
+    text "Wer Hilfe benötigt, braucht nur zu Fragen." style 'menutext' at Position (xpos = 60, ypos = 490)
+
+screen quithover():
+    tag hover
+    imagemap:
+        ground "gui/hovermenu.png"
+    text "Beenden" style 'bigtext' at Position(xpos = 75, ypos = 390)
+    text "Schließt das Spiel.\n\nDie Goldene Hexe erwartet deine Rückkehr." style 'menutext' at Position (xpos = 60, ypos = 490)
+
+screen Characterhover():
+    tag hover
+    imagemap:
+        ground "gui/hovermenu.png"
+    text "Charaktere" style 'bigtext' at Position(xpos = 75, ypos = 390)
+    text "Die Charaktere des Spiels\n\nVielleicht eröffnen sich dir neue Erkenntisse?" style 'menutext' at Position (xpos = 60, ypos = 490)
+
+screen jukeboxhover():
+    tag hover
+    imagemap:
+        ground "gui/hovermenu.png"
+    text "Jukebox" style 'bigtext' at Position(xpos = 75, ypos = 390)
+    text "Der Soundtrack des Spiels\n\nGenieße großartige Musikstücke." style 'menutext' at Position (xpos = 60, ypos = 490)
 
 ################################################################################
 ## Mobile Variants

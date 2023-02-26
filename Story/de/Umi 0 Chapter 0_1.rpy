@@ -25,7 +25,8 @@ label chapter1de:
     $ songname = "HANE"
     $ play_music(hane)
     play audio "audio/sfx/umilse_004.ogg" loop
-    scene ship_s2a at Shake(None, 907200, dist=3)
+    camera at Shake(None, float('inf'), dist=3)
+    scene ship_s2a
     pause (3)
     $ quick_menu = True
     """
@@ -39,23 +40,23 @@ label chapter1de:
     Aber einer von ihnen scheint die Fahrt gar nicht zu mögen, er schreit herum, dass er vom Boot fällt und so.
     """
     play sound "audio/sfx/umise_003.ogg"
-    show but_b23_kuyasigaru1 at mitte,Shake(None, 907200, dist=3) with dissolve
+    show but_b23_kuyasigaru1 at mitte with dissolve
     but "\"whaoooo!!!! ....Ich falle runter, ....ich falle runteeeeeer!!!"
     but "....Ich hasse Boote! ...Gleich muss ich kotzen, ich falleeeee!!!"
     but "Das wars!... Ich werde diese Insel nicht mehr erreichen, eher sterbe ich hier...\""
-    show but_b23_kuyasigaru1 at links,Shake(None, 907200, dist=3),autosprite('but') with fastdissolve
+    show but_b23_kuyasigaru1 at links,autosprite('but') with fastdissolve
     play sound "audio/sfx/umise_047.ogg"
-    show mar_a11_warai1 at rechts,jump_transform,Shake(None, 907200, dist=3),autosprite('mar') with dissolve
+    show mar_a11_warai1 at rechts,jump_transform,autosprite('mar') with dissolve
     mar "\"*kicher*kicher* Battler fällt runter, Battler fällt runter! uu-uu~!!"
     mar "uu~! Battler fällt runter, Battler fällt runter! uu~!\""
     hide but_b23_kuyasigaru1
-    show but_b23_nayamu1 at links,Shake(None, 907200, dist=3),autosprite('but')
+    show but_b23_nayamu1 at links,autosprite('but')
     but "\"Bitte, Maria-chan, bitte etwas ruhiger, das macht alles mein Magen nicht mit.\""
-    show mar_a11_uuu1 at rechts,Shake(None, 907200, dist=3),autosprite('mar')
+    show mar_a11_uuu1 at rechts,autosprite('mar')
     mar "\"uu~...? du findest das nicht lustig?"
     hide mar_a11_uuu1
     play sound "audio/sfx/umise_047.ogg"
-    show mar_a11_warai1 at rechts,jump_transform,Shake(None, 907200, dist=3),autosprite('mar')
+    show mar_a11_warai1 at rechts,jump_transform,autosprite('mar')
     mar "Ich finde das super lustig! *kicher*kicher* uu~!\""
     """
     Als die Familie Ushiromiya zur jährlichen Familienkonferenz fahren will,
@@ -69,19 +70,18 @@ label chapter1de:
 
     Aber die beiden scheinen von zwei Erwachsenen beobachtet zu werden, und auch die können sich das Lachen nicht verkneifen.
     """
-    scene ship_s2bf at Shake(None, 907200, dist=3) with dissolve
-    pause (0.5)
-    show rud_a11_akuwarai1 at mitte,Shake(None, 907200, dist=3),autosprite('rud') with dissolve
+    scene ship_s2bf with dissolve
+    show rud_a11_akuwarai1 at mitte,autosprite('rud') with dissolve
     rud "\"...Hey Battler-kun! Wenn du kotzen musst, dann bitte in einen Eimer, bei dem, was du dir in den Hals schaufelst, würdest du eine Menge Fische auf dem Gewissen haben... hehe..."
     rud "Unglaublich, dass du schon im Flugzeug so durchgedreht bist, du konntest ja nicht mal im Auto still sitzen.\""
-    show rud_a11_akuwarai1 at rechts,autosprite('rud'),Shake(None, 907200, dist=3) with fastdissolve
-    show but_b22_odoroki2 at links,autosprite('but'),Shake(None, 907200, dist=3)
+    show rud_a11_akuwarai1 at rechts,autosprite('rud') with fastdissolve
+    show but_b22_odoroki2 at links,autosprite('but')
     but "\"Lass mich in Ruhe, das ist echt kein guter Zeitpunkt!\""
     hide rud_a11_akuwarai1
-    show rud_a11_defo1 at rechts,autosprite('rud'),Shake(None, 907200, dist=3)
+    show rud_a11_defo1 at rechts,autosprite('rud')
     rud "\"Es ist nie ein guter Zeitpunkt, wenn du mit irgendetwas fahren musst. Wag es nicht, ins Meer zu kotzen!\""
     hide but_b22_odoroki2
-    show but_b22_nayamu2 at links,Shake(None, 907200, dist=3)
+    show but_b22_nayamu2 at links
     but "\"Ich gebe mir hier die größte Mühe...\""
     hide rud_a11_defo1 with fastdissolve
     hide but_b22_nayamu2 with fastdissolve
@@ -95,12 +95,12 @@ label chapter1de:
     aber ich bin sicher, dass es mit der Zeit wieder funktionieren kann.
     """
     hide rud_a11_warai1 with dissolve
-    show kir_a11_defo1 at links,autosprite('kyr'),Shake(None, 907200, dist=3) with dissolve
-    show rud_a11_warai1 at rechts,autosprite('rud'),Shake(None, 907200, dist=3) with dissolve
+    show kir_a11_defo1 at links,autosprite('kyr') with dissolve
+    show rud_a11_warai1 at rechts,autosprite('rud') with dissolve
     kyr "\"Ist es nicht schön, dass Battler-kun wieder da ist? Ich meine, nach 6 Jahren Abwesenheit immer noch ein Theater bei der Ankunft? *kicher*\""
     rud "\"Ja, aber das war viel schlimmer, als er noch jünger war, da hatte man die ganze Anreise keine Ruhe.\""
     hide kir_a11_defo1
-    show kir_a11_majime1 at links,autosprite('kyr'),Shake(None, 907200, dist=3)
+    show kir_a11_majime1 at links,autosprite('kyr')
     kyr "\"Aber er ist selbst schuld, wenn er da rumturnt, obwohl er weiß, dass er seekrank wird.\""
     hide rud_a11_warai1 with dissolve
     hide kir_a11_majime1 with dissolve
@@ -117,9 +117,9 @@ label chapter1de:
     Und nein, man spricht es nicht komisch aus, ihr Name ist absolut perfekt,
     Ich hasse Opa den alten Kauz dafür, dass wir so komische Namen haben.
     """
+    camera at Shake(None, float('inf'), dist=10)
     hide kir_a11_defo1 with dissolve
-    scene ship_s2bf at Shake(None, 907200, dist=10)
-    show but_b23_kuyasigaru1 at mitte,Shake(None, 907200, dist=10) with dissolve
+    show but_b23_kuyasigaru1 at mitte with dissolve
     but "\"Ich finde das gar nicht lustig... Ich kämpfe hier schließlich um mein... ....Leben... *würg*\""
     play sound "audio/sfx/umise_003.ogg"
     show but_b23_kuyasigaru1 at mitte,run_transform
@@ -127,10 +127,10 @@ label chapter1de:
     """
     Battler wurde so übel, dass er sich nicht zurückhalten konnte und den ganzen gekochten Reis vom Vormittag ins Wasser schleuderte.
     """
-    scene ship_s2bf at Shake(None, 907200, dist=3)
-    show rud_a11_akuwarai1 at rechts,autosprite('rud'),Shake(None, 907200, dist=3) with dissolve
+    show rud_a11_akuwarai1 at rechts,autosprite('rud') with dissolve
     rud "\".....Jetzt hat dieser Kasper tatsächlich die Fische gefüttert, ach herrje... ahahaha\""
-    show mar_a11_warai1 at links,autosprite('mar'),Shake(None, 907200, dist=3) with dissolve
+    camera at Shake(None, float('inf'), dist=3)
+    show mar_a11_warai1 at links,autosprite('mar') with dissolve
     mar "\"uu-uu~! Battler hat sich übergeben, Battler hat sich übergeben! *kicher*kicher*\""
     hide rud_a11_akuwarai1 with dissolve
     hide mar_a11_warai1 with dissolve
@@ -263,6 +263,7 @@ label chapter1de:
     Nichtmal eine Minute später ist Jessica zurückgekommen, um mir zu sagen:
     dass der Kapitän die Geschwindigkeit verringert hat.
     """
+    camera at Shake(None, float('inf'), dist=0)
     jes "\"Battler-kun, du solltest dich wirklich unter Deck ausruhen, wir sind bald auf der Insel.\""
     but "\"Ja, das kann ich versuchen, jetzt, wo das Boot etwas langsamer fährt."
     but "Aber ich kann nicht garantieren, dass ich den Rest meines Frühstücks bei mir behalte.\""
