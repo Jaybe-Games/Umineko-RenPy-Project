@@ -5,8 +5,6 @@
 ## may want to uncomment them when appropriate.
 
 
-
-
 ## Basics ######################################################################
 
 ## A human-readable name of the game. This is used to set the default window
@@ -31,8 +29,7 @@ define config.version = "Developer0015a"
 ## Text that is placed on the game's about screen. Place the text between the
 ## triple-quotes, and leave a blank line between paragraphs.
 
-define gui.about = _p("""Developed by Jaybe Games
-""")
+define gui.about = _p("""Developed by Jaybe Games""")
 
 
 ## A short name for the game used for executables and directories in the built
@@ -200,25 +197,24 @@ init python:
 
     ## To archive files, classify them as 'archive'.
 
-    build.classify('game/**.png', 'archive')
-    build.classify('game/**.jpg', 'archive')
-    build.classify('game/**.ico', 'archive')
-    build.classify('game/**.icns', 'archive')
-    build.classify('audio/bgm/**.ogg', 'archive')
-    build.classify('audio/sfx/**.ogg', 'archive')
-    build.classify('core/**.rpy', 'archive')
-    build.classify('core/**.rpyc', 'archive')
-    build.classify('Chapters/**.rpy', 'archive')
-    build.classify('Chapters/**.rpyc', 'archive')
-    build.classify('effects/**.rpy', 'archive')
-    build.classify('effects/**.rpyc', 'archive')
-    build.classify('scripts/**.rpy', 'archive')
-    build.classify('scripts/**.rpyc', 'archive')
-    build.classify('videos/**.webm', 'archive')
-    build.classify('videos/**.mov', 'archive')
-    build.classify('gui/**.png', 'archive')
-    build.classify('gui/**.jpg', 'archive')
-    build.classify('fonts/**.otf', 'archive')
+    build.classify('**/**.png', 'archive')
+    build.classify('**/**.rpyb', 'archive')
+    build.classify('**/**.bmp', 'archive')
+    build.classify('**/**.jpg', 'archive')
+    build.classify('**/**.ico', 'archive')
+    build.classify('**/**.icns', 'archive')
+    build.classify('**/**.ogg', 'archive')
+    build.classify('**/**.mp3', 'archive')
+    build.classify('**/**.rpy', 'archive')
+    build.classify('**/**.rpyc', 'archive')
+    build.classify('**/**.webm', 'archive')
+    build.classify('**/**.mov', 'archive')
+    build.classify('**/**.png', 'archive')
+    build.classify('**/**.jpg', 'archive')
+    build.classify('**/**.otf', 'archive')
+    build.classify('**/**.ttf', 'archive')
+    build.classify('**/**.txt', 'archive')
+    build.classify('**/**.md', 'archive')
 
 
     ## Files matching documentation patterns are duplicated in a mac app build,

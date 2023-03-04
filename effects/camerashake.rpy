@@ -48,10 +48,10 @@ init:
             move = Shaker(start, child, dist=dist)
 
             return renpy.display.layout.Motion(move,
-                          time,
-                          child,
-                          add_sizes=True,
-                          **properties)
+                        time,
+                        child,
+                        add_sizes=True,
+                        **properties)
 
         Shake = renpy.curry(_Shake)
     #

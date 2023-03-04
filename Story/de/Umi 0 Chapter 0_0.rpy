@@ -4,8 +4,6 @@ label startde:
     $ chaptername = "\"Ich schreibe an dich in einer Quadrillion Jahren\""
     $ chapternumber = "Prolog"
     $ songname = "-"
-    scene mainselected
-    pause(1.3)
     scene black with doorfade
     pause(3)
     stop sound fadeout 3

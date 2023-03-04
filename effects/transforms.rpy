@@ -1,33 +1,33 @@
 # Position definitions
-transform mitte:
+transform m:
     xanchor 0.5
     xpos 960
 
     yanchor 1.0
     ypos 1200
 
-transform links:
+transform l:
     xanchor 0.5
     xpos 480
 
     yanchor 1.0
     ypos 1200
 
-transform rechts:
+transform r:
     xanchor 0.5
     xpos 1440
 
     yanchor 1.0
     ypos 1200
 
-transform rechts2:
+transform r2:
     xanchor 0.5
     xpos 1040
 
     yanchor 1.0
     ypos 1200
 
-transform links2:
+transform l2:
     xanchor 0.5
     xpos 880
 

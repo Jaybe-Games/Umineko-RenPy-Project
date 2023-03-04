@@ -28,7 +28,6 @@ label chapter1de:
     camera at Shake(None, float('inf'), dist=3)
     scene ship_s2a
     pause (3)
-    $ quick_menu = True
     """
     In der Luft liegt der typische Meeresgeruch von Salz und auch ein wenig von Algen.
     Ein Duft, der den Geruchssinn sofort in Ekstase versetzt, wenn nicht sogar die Seele selbst begeistert.
@@ -40,23 +39,23 @@ label chapter1de:
     Aber einer von ihnen scheint die Fahrt gar nicht zu mögen, er schreit herum, dass er vom Boot fällt und so.
     """
     play sound "audio/sfx/umise_003.ogg"
-    show but_b23_kuyasigaru1 at mitte with quickgradientwiperight
+    show but_b23_kuyasigaru1 at m with fastdissolve
     but "\"whaoooo!!!! ....Ich falle runter, ....ich falle runteeeeeer!!!"
     but "....Ich hasse Boote! ...Gleich muss ich kotzen, ich falleeeee!!!"
     but "Das wars!... Ich werde diese Insel nicht mehr erreichen, eher sterbe ich hier...\""
-    show but_b23_kuyasigaru1 at links,autosprite('but') with fastdissolve
+    show but_b23_kuyasigaru1 at l,ah('but') with fastdissolve
     play sound "audio/sfx/umise_047.ogg"
-    show mar_a11_warai1 at rechts,jump_transform,autosprite('mar') with dissolve
+    show mar_a11_warai1 at r,jump_transform,ah('mar') with dissolve
     mar "\"*kicher*kicher* Battler fällt runter, Battler fällt runter! uu-uu~!!"
     mar "uu~! Battler fällt runter, Battler fällt runter! uu~!\""
     hide but_b23_kuyasigaru1
-    show but_b23_nayamu1 at links,autosprite('but')
+    show but_b23_nayamu1 at l,ah('but')
     but "\"Bitte, Maria-chan, bitte etwas ruhiger, das macht alles mein Magen nicht mit.\""
-    show mar_a11_uuu1 at rechts,autosprite('mar')
+    show mar_a11_uuu1 at r,ah('mar')
     mar "\"uu~...? du findest das nicht lustig?"
     hide mar_a11_uuu1
     play sound "audio/sfx/umise_047.ogg"
-    show mar_a11_warai1 at rechts,jump_transform,autosprite('mar')
+    show mar_a11_warai1 at r,jump_transform,ah('mar')
     mar "Ich finde das super lustig! *kicher*kicher* uu~!\""
     """
     Als die Familie Ushiromiya zur jährlichen Familienkonferenz fahren will,
@@ -71,22 +70,25 @@ label chapter1de:
     Aber die beiden scheinen von zwei Erwachsenen beobachtet zu werden, und auch die können sich das Lachen nicht verkneifen.
     """
     scene ship_s2bf with dissolve
-    show rud_a11_akuwarai1 at mitte,autosprite('rud') with dissolve
+    show rud_a11_akuwarai1 at m,ah('rud') with dissolve
     rud "\"...Hey Battler-kun! Wenn du kotzen musst, dann bitte in einen Eimer, bei dem, was du dir in den Hals schaufelst, würdest du eine Menge Fische auf dem Gewissen haben... hehe..."
     rud "Unglaublich, dass du schon im Flugzeug so durchgedreht bist, du konntest ja nicht mal im Auto still sitzen.\""
-    show rud_a11_akuwarai1 at rechts,autosprite('rud') with fastdissolve
-    show but_b22_odoroki2 at links,autosprite('but')
+    show rud_a11_akuwarai1 at r,ah('rud') with fastdissolve
+    show but_b22_odoroki2 at l,ah('but')
     but "\"Lass mich in Ruhe, das ist echt kein guter Zeitpunkt!\""
     hide rud_a11_akuwarai1
-    show rud_a11_defo1 at rechts,autosprite('rud')
+    show rud_a11_defo1 at r,ah('rud')
     rud "\"Es ist nie ein guter Zeitpunkt, wenn du mit irgendetwas fahren musst. Wag es nicht, ins Meer zu kotzen!\""
     hide but_b22_odoroki2
-    show but_b22_nayamu2 at links
+    show but_b22_nayamu2 at l
     but "\"Ich gebe mir hier die größte Mühe...\""
     hide rud_a11_defo1 with fastdissolve
     hide but_b22_nayamu2 with fastdissolve
     pause (0.3)
-    show rud_a11_warai1 at mitte with quickgradientwiperight
+    show rud_a11_warai1 at m with quickgradientwiperight
+    $ persistent.rudolf = True
+    play sound "audio/sfx/umise_1060.ogg"
+    $ renpy.notify("Das Charaktermenü wurde unter \"Extras\" freigeschaltet.")
     """
     Das ist mein Vater Rudolf, der alte Bastard ist so groß wie ich und macht sich bei Gelegenheit gerne über mich lustig.
     Sein Name wird auf Japanisch Ushiromiya Rudorufu ausgesprochen, fast die ganze Familie hat diese seltsame Namenstradition.
@@ -95,16 +97,19 @@ label chapter1de:
     aber ich bin sicher, dass es mit der Zeit wieder funktionieren kann.
     """
     hide rud_a11_warai1 with dissolve
-    show kir_a11_defo1 at links,autosprite('kyr') with dissolve
-    show rud_a11_warai1 at rechts,autosprite('rud') with dissolve
+    show kir_a11_defo1 at l,ah('kyr') with dissolve
+    show rud_a11_warai1 at r,ah('rud') with dissolve
     kyr "\"Ist es nicht schön, dass Battler-kun wieder da ist? Ich meine, nach 6 Jahren Abwesenheit immer noch ein Theater bei der Ankunft? *kicher*\""
     rud "\"Ja, aber das war viel schlimmer, als er noch jünger war, da hatte man die ganze Anreise keine Ruhe.\""
     hide kir_a11_defo1
-    show kir_a11_majime1 at links,autosprite('kyr')
+    show kir_a11_majime1 at l,ah('kyr')
     kyr "\"Aber er ist selbst schuld, wenn er da rumturnt, obwohl er weiß, dass er seekrank wird.\""
     hide rud_a11_warai1 with dissolve
     hide kir_a11_majime1 with dissolve
-    show kir_a11_defo1 at mitte with quickgradientwiperight
+    show kir_a11_defo1 at m with quickgradientwiperight
+    $ persistent.kyrie = True
+    play sound "audio/sfx/umise_1060.ogg"
+    $ renpy.notify("Ein neuer Charakter wurde im Charaktermenü freigeschaltet.")
     """
     Das ist Kyrie-san, der alte Bastard hat sie kurz nach dem Tod meiner Mutter geheiratet,
     aber das liegt hinter uns.
@@ -127,14 +132,17 @@ label chapter1de:
     """
     Battler wurde so übel, dass er sich nicht zurückhalten konnte und den ganzen gekochten Reis vom Vormittag ins Wasser schleuderte.
     """
-    show rud_a11_akuwarai1 at rechts,autosprite('rud') with dissolve
+    show rud_a11_akuwarai1 at r,ah('rud') with dissolve
     rud "\".....Jetzt hat dieser Kasper tatsächlich die Fische gefüttert, ach herrje... ahahaha\""
     camera at Shake(None, float('inf'), dist=3)
-    show mar_a11_warai1 at links,autosprite('mar') with dissolve
+    show mar_a11_warai1 at l,ah('mar') with dissolve
     mar "\"uu-uu~! Battler hat sich übergeben, Battler hat sich übergeben! *kicher*kicher*\""
     hide rud_a11_akuwarai1 with dissolve
     hide mar_a11_warai1 with dissolve
-    show mar_a11_niyari1 at mitte with quickgradientwiperight
+    show mar_a11_niyari1 at m with quickgradientwiperight
+    $ persistent.maria = True
+    play sound "audio/sfx/umise_1060.ogg"
+    $ renpy.notify("Ein neuer Charakter wurde im Charaktermenü freigeschaltet.")
     """
     Das kleine Mädchen, das definitiv mehr Spaß daran hat, mir zuzusehen, als mit dem Boot zu fahren, ist meine jüngste Cousine Maria,
 
@@ -142,35 +150,38 @@ label chapter1de:
     und das wird auch so ausgesprochen, nur in kurzen Silben.
     """
     hide mar_a11_niyari1 with dissolve
-    show ros_a11_ikari1 at rechts,autosprite('ros') with dissolve
-    show mar_a11_majime1 at links,autosprite('mar') with dissolve
+    show ros_a11_ikari1 at r,ah('ros') with dissolve
+    show mar_a11_majime1 at l,ah('mar') with dissolve
     ros "\"Maria! Es reicht jetzt, lass Battler-kun in Ruhe!\""
     hide mar_a11_majime1
-    show mar_a11_defo1 at links,autosprite('mar')
+    show mar_a11_defo1 at l,ah('mar')
     mar "\"........uu~...\""
     hide ros_a11_ikari1
-    show ros_a11_ikari2 at rechts,autosprite('ros')
+    show ros_a11_ikari2 at r,ah('ros')
     ros "\"und hör auf mit diesem \"uu-uu\", .....du bist kein kleines Kind mehr!\""
     """
     Maria war nicht begeistert, dass ihre Mama ihre Freude unterbrach.
     Sie ist es wohl gewöhnt, dass man mit ihr schimpft, das arme Kind.
     """
     hide mar_a11_defo1 with dissolve
-    show but_b11_odoroki3 at links,autosprite('but') with dissolve
-    show ros_a11_komaru4 at rechts,autosprite('ros')
+    show but_b11_odoroki3 at l,ah('but') with dissolve
+    show ros_a11_komaru4 at r,ah('ros')
     hide ros_a11_ikari2
     ros "\"Tut mir leid, Battler-kun, ich kriege es einfach nicht aus ihr raus.\""
     hide but_b11_odoroki3
-    show ros_a11_komaru4 at rechts,autosprite('ros')
-    show but_b22_warai1 at links,autosprite('but')
+    show ros_a11_komaru4 at r,ah('ros')
+    show but_b22_warai1 at l,ah('but')
     but "\"Schon gut, Tante Rosa, sie meint es nicht böse, also bin ich es auch nicht.\""
     hide ros_a11_komaru4
-    show ros_a11_majime1 at rechts,autosprite('ros')
+    show ros_a11_majime1 at r,ah('ros')
     ros "\".....aber dass dein größter Feind das Fahrzeugfahren ist, verstehe ich nicht..."
     ros ".....Du wirkst so erwachsen und reif und jetzt das?\""
     hide ros_a11_majime1 with dissolve
     hide but_b22_warai1 with dissolve
-    show ros_a11_warai1 at mitte with quickgradientwiperight
+    show ros_a11_warai1 at m with quickgradientwiperight
+    $ persistent.rosa = True
+    play sound "audio/sfx/umise_1060.ogg"
+    $ renpy.notify("Ein neuer Charakter wurde im Charaktermenü freigeschaltet.")
     """
     Das ist Tante Rosa, sie ist die Mutter von Maria und erzieht sie in meinen Augen etwas zu streng.
     Aber da das nicht wirklich mein Bier ist, halte ich mich da raus.
@@ -181,14 +192,17 @@ label chapter1de:
     Trotzdem ist der Name in jeder Hinsicht lächerlich. Danke Opa nochmal dafür.
     """
     hide ros_a11_warai1 with dissolve
-    show rud_a11_akuwarai1 at rechts,autosprite('rud') with dissolve
+    show rud_a11_akuwarai1 at r,ah('rud') with dissolve
     rud "\"Er kann einfach nicht still sitzen, aus irgendeinem Grund."
     rud "Das ist wirklich peinlich, das darfst du niemandem erzählen.\""
-    show but_b23_nayamu1 at links,autosprite('but') with dissolve
+    show but_b23_nayamu1 at l,ah('but') with dissolve
     but "\".......Ey, .....halt den Mund!\""
     hide rud_a11_akuwarai1 with dissolve
     hide but_b23_nayamu1 with dissolve
-    show but_b11_warai2 at mitte with quickgradientwiperight
+    show but_b11_warai2 at m with quickgradientwiperight
+    $ persistent.battler = True
+    play sound "audio/sfx/umise_1060.ogg"
+    $ renpy.notify("Ein neuer Charakter wurde im Charaktermenü freigeschaltet.")
     """
     Wie wir bereits wissen, ist mein Name Ushiromiya Battler, der gerade schön ins Wasser gekotzt hat.
     Ich bin das Kind von Rudolf und Asumu, Asumu ist vor ungefähr 6 Jahren gestorben.
@@ -199,31 +213,31 @@ label chapter1de:
     Mein Name wird im Japanischen übrigens so geschrieben: Ushiromiya Batora.
     Ja, man spricht mich nicht Battler aus, sondern \"Batora\", klingt echt komisch.
 
-    Aber der Spaß hört bei mir noch lange nicht auf.
-    Hier sind einige, die ihren Namensgeber am liebsten in dunkle Kammern sperren würden.
-
     Meine Japanischen Schriftzeichen machen mich wütend. Ich werde mit den Zeichen von \"Person\" und \"Kampf\" geschrieben
     Deswegen denkt ein typischer Japaner ich heiße Sento-kun. Niemand würde auch nur im Traum daran denken, dass es \"Battler\"
     ausgesprochen wird.
+
+    Aber der Spaß hört bei mir noch lange nicht auf.
+    Hier sind einige, die ihren Namensgeber am liebsten in dunkle Kammern sperren würden.
     """
     hide but_b11_warai2 with dissolve
-    show rud_a11_akuwarai2 at rechts,autosprite('rud') with dissolve
+    show rud_a11_akuwarai2 at r,ah('rud') with dissolve
     rud "\"Ja Battler-kun, das Frühstück, dass gerade im Meer gelandet ist, hat Geld gekostet und Lebensmittel werden nicht billiger...\""
-    show but_b22_nayamu1 at links,autosprite('but') with dissolve
+    show but_b22_nayamu1 at l,ah('but') with dissolve
     but "\".....ähm....."
     hide but_b22_nayamu1
-    show but_b22_nayamu2 at links,autosprite('but')
+    show but_b22_nayamu2 at l,ah('but')
     but "...Also wenn du es unbedingt wiederhaben willst, kannst du ja ins Meer springen und es wieder rausfischen... hihihihi..."
     but "....Aber mal ernsthaft, das Schaukeln wurde gerade richtig schlimm...\""
     hide rud_a11_akuwarai2
-    show rud_a11_defo2 at rechts,autosprite('rud')
+    show rud_a11_defo2 at r,ah('rud')
     rud "\"........Battler...\""
-    show rud_a11_defo2 at links2,autosprite('rud')
+    show rud_a11_defo2 at l2,ah('rud')
     hide rud_a11_defo2
-    show rud_a11_defo1 at links2,autosprite('rud')
+    show rud_a11_defo1 at l2,ah('rud')
     play sound "audio/sfx/umise_047.ogg"
     hide but_b22_nayamu2
-    show but_b11_kuyasigaru1 at links,autosprite('but')
+    show but_b11_kuyasigaru1 at l,ah('but')
     but "\"....owowowowowow...... Du alter Bastard! Scheiße...... owowowow......\""
     """
     Einen Moment hat Battler nicht aufgepasst und schon hat Rudolf sein Ohrläppchen gepackt und behandelt es nicht gerade zimperlich.
@@ -236,16 +250,16 @@ label chapter1de:
     Rudolf hat einen sehr starken Griff, besonders wenn es um Battlers Ohrläppchen geht, man hat das Gefühl, er reißt es jeden Moment ab.
     """
     hide but_b11_kuyasigaru1
-    show but_a11_aseru5 at links,autosprite('but')
+    show but_a11_aseru5 at l,ah('but')
     but "\"....Ich hoffe, du springst vom Boot und ertrinkst ....du alter Bastard.... Owowowow, lass los!"
     but ".........Ich....gebe.....nicht.....auuuuuuffffff!!!"
     but ".....owowowow..... lass doch endlich los owowowowow... es tut weh....\""
     hide rud_a11_defo1
-    show rud_a11_akuwarai1 at links2,autosprite('rud')
+    show rud_a11_akuwarai1 at l2,ah('rud')
     rud "\"....Das ist deine Strafe, wenn du frech wirst, Battler-kun.\""
     hide but_a11_aseru5 with fastdissolve
     hide rud_a11_akuwarai1 with fastdissolve
-    show kir_a11_majime1 at mitte with fastdissolve
+    show kir_a11_majime1 at m with fastdissolve
     kyr "\"Lasst es für heute gut sein, ihr beiden."
 
     kyr "Das könnt ihr später auf der Insel austragen.\""
@@ -253,30 +267,33 @@ label chapter1de:
     Nachdem Kyrie den kleinen Konflikt erfolgreich beendet hatte, hörte man jemanden von unter Deck nach draußen gehen.
     """
     hide kir_a11_majime1 with fastdissolve
-    show jes_a11_atya2 at mitte with fastdissolve
+    show jes_a11_atya2 at m with fastdissolve
     jes "\"...B...Battler-kun hast du gerade eben vom Deck gekotzt?, ich schaue nach draußen und plötzlich kommt so eine widerliche Suppe von oben runter, das war eklig!"
     jes "Nächstes Mal nimm einen Eimer mit!\""
-    show jes_a11_aisowarai1 at mitte with fastdissolve
+    show jes_a11_aisowarai1 at m with fastdissolve
     hide jes_a11_atya2
     jes "Ach ja, und was war das für ein \"Ich falle, ich falle\" -Geschrei? ...Bist du ein bisschen meschugge? ...wahahahaha!"
     jes ".....Das war die eine Sache, .....und dann war da noch die Kotze, die so von Deck segelte. ....pahahahaha."
     hide jes_a11_aisowarai1 with fastdissolve
-    show jes_a11_defo2 at links,autosprite('jes') with fastdissolve
-    show but_a11_defo1 at rechts,autosprite('but') with fastdissolve
+    show jes_a11_defo2 at l,ah('jes') with fastdissolve
+    show but_a11_defo1 at r,ah('but') with fastdissolve
     but "\"......Entschuldigung.... Das verfluchte Boot schaukelt so viel..... ....Das Schiff schaukelt und schaukelt und schaukelt....."
-    show but_a21_kuyasigaru1 at rechts,autosprite('but')
+    show but_a21_kuyasigaru1 at r,ah('but')
     hide but_a11_defo1
     but "....ahhhhhh!!! Mach, dass es aufhört, sonst falle ich wieder!\""
-    show jes_a11_atya3 at links,autosprite('jes') with fastdissolve
+    show jes_a11_atya3 at l,ah('jes') with fastdissolve
     hide jes_a11_defo2
     jes "\"....Vielleicht sollte der Kapitän etwas langsamer fahren, sonst geht es dir gleich noch schlechter..."
     jes "Ich werde sofort den Kapitän bitten, etwas langsamer zu fahren, aber bitte nicht mehr ins Meer kotzen....\""
-    show but_b11_odoroki3 at rechts,autosprite('but')
+    show but_b11_odoroki3 at r,ah('but')
     hide but_a21_kuyasigaru1
     but "\"Ja, ....vielen Dank, ...Jessica-chan.\""
     hide but_b11_odoroki3 with fastdissolve
     hide jes_a11_atya3 with fastdissolve
-    show jes_a11_warai1 at mitte with quickgradientwiperight
+    show jes_a11_warai1 at m with quickgradientwiperight
+    $ persistent.jessica = True
+    play sound "audio/sfx/umise_1060.ogg"
+    $ renpy.notify("Ein neuer Charakter wurde im Charaktermenü freigeschaltet.")
     """
     Das war meine Cousine Ushiromiya Jessica, sie ist echt cool drauf
     und ist wohl aktuell in dieser Phase, wo man gegen seine Eltern rebelliert.
@@ -293,12 +310,12 @@ label chapter1de:
     "Der Kapitän hat zugestimmt langsamer zu fahren und jetzt schaukelt das Boot nicht mehr so stark."
     jes "\"....Verdammte Scheiße Battler-kun, jetzt werden wir uns wegen dir verspäten....\""
     hide jes_a11_warai1 with fastdissolve
-    show but_b22_warai1 at rechts2,autosprite('but') with quickergradientwiperight
+    show but_b22_warai1 at r2,ah('but') with quickergradientwiperight
     but "\".....H-Halt doch mal dein Maul, immerhin kann ich jetzt ein wenig chillen....\""
-    show jes_a11_defo2 at links,autosprite('jes') with quickergradientwipeupright
+    show jes_a11_defo2 at l,ah('jes') with quickergradientwipeupright
     jes "\".....Wir sollten besser runter gehen zum \"chillen\", wir sind gleich auf der Insel.\""
     but "\"....Ja, das kann ich versuchen, jetzt, wo das Boot etwas langsamer fährt."
-    show but_b22_nayamu2 at rechts2,autosprite ('but')
+    show but_b22_nayamu2 at r2,ah ('but')
     but "....Aber ich kann trotzdem nicht garantieren, dass ich den Rest meines Frühstücks bei mir behalte.... Ihihihi....\""
     stop ship fadeout 2.0
     $ songname = "Door of Summer"
@@ -307,20 +324,20 @@ label chapter1de:
     """
     Dann gingen Battler und Jessica unter Deck zu den anderen, die im Gegensatz zu Battler ruhig warten, bis sie endlich die Insel erreichen.
     """
-    show eva_b22_akire2 at rechts with quickergradientwiperight
-    show hid_a21_warai1 at mitte with quickergradientwiperight
-    show kum_a12_defo2 at links with quickergradientwiperight
+    show eva_b22_akire2 at r with quickergradientwiperight
+    show hid_a21_warai1 at m with quickergradientwiperight
+    show kum_a12_defo2 at l with quickergradientwiperight
     """
     Moment mal, dieses \"ruhig\" sein ist falsch! Ich sehe es klar und deutlich! Die anderen Erwachsenen verkneifen sich doch alle gerade das Lachen....
     """
     scene ship_s3a with quickergradientwiperight
-    show geo_a11_defo1 at mitte with fastdissolve
+    show geo_a11_defo1 at m with fastdissolve
     geo "\"Wie geht es dir Battler-kun?"
     geo "Wir alle wissen bereits, dass es dich schon erwischt hat.\""
     hide geo_a11_defo1 with fastdissolve
-    show but_b22_nayamu1 at links with fastdissolve
-    show geo_a11_majime2 at rechts with fastdissolve
-    show but_b22_nayamu1 at links,nod_transform
+    show but_b22_nayamu1 at l with fastdissolve
+    show geo_a11_majime2 at r with fastdissolve
+    show but_b22_nayamu1 at l,nod_transform
     """
     Mit einem leichten, aber nicht ganz ernstgemeinten Nicken stimmt Battler zu.
     """
@@ -332,6 +349,9 @@ label chapter1de:
     jes "\"Ja, es ist, als wäre er nie weg gewesen."
     jes "Mit dem Unterschied, dass er sich heute zum ersten Mal übergeben hat.\""
     geo "\"Ahahahahaha, ja, manche Dinge ändern sich, andere nie.\""
+    $ persistent.george = True
+    play sound "audio/sfx/umise_1060.ogg"
+    $ renpy.notify("Ein neuer Charakter wurde im Charaktermenü freigeschaltet.")
     """
     Das ist mein Cousin George, er wird von Tante Eva und Onkel Hideyoshi zu einem echten Gentleman erzogen.
     Er arbeitet sehr hart und will schon sein eigenes Unternehmen gründen, was ich sehr beeindruckend finde.
@@ -418,6 +438,9 @@ label chapter1de:
     jes "\"Danke Hideyoshi, ich denke der Plan ist gut, ich werde ihn mir zu Herzen nehmen."
     jes "Ich fühle mich schon besser.\""
     hid "\"So ist's gut, du schaffst es!, wahahahaha\""
+    $ persistent.hideyoshi = True
+    play sound "audio/sfx/umise_1060.ogg"
+    $ renpy.notify("Ein neuer Charakter wurde im Charaktermenü freigeschaltet.")
     """
     Das ist Georges Vater und mein Onkel Hideyoshi, er ist ein netter und sympathischer Mann und ich glaube, ich mag ihn von allen Erwachsenen am meisten.
     Er ist der Ehemann von Tante Eva und hat seine Firma von Grund auf neu aufgebaut.
@@ -442,6 +465,9 @@ label chapter1de:
     but "\"Bitte mach mir keine Angst, Tante Eva!\""
     eva "\"Oh... Entschuldige, ich wollte dir nur sagen, dass, wenn sich dein Körper an die Bewegungen des Bootes gewöhnt hat, er sich an Land wieder umgewöhnen muss."
     eva "Aber mach dir darüber keinen Kopf. Battler-kun, das passiert nicht unbedingt. *kicher*\""
+    $ persistent.eva = True
+    play sound "audio/sfx/umise_1060.ogg"
+    $ renpy.notify("Ein neuer Charakter wurde im Charaktermenü freigeschaltet.")
     """
     Das ist meine Tante Eva, die Mutter von George. Sie und der alte Bastard Papa sind so etwas wie ein Spaßvogel-Duo,
     Wenn die beiden richtig loslegen, bleibt kein Stein auf dem anderen.
@@ -510,6 +536,9 @@ label chapter1de:
     jes "\"Stimmt ja... Der Schrein fehlt, er war letztes Jahr noch da...."
     jes "Es sieht auch so aus, als wäre ein Teil des Riffs mitgerissen worden....\""
     kum "\"Ohohohoh, der Schrein wurde während eines Gewitters von einem gewaltigen Blitz getroffen und zerstört.\""
+    $ persistent.kumasawa = True
+    play sound "audio/sfx/umise_1060.ogg"
+    $ renpy.notify("Ein neuer Charakter wurde im Charaktermenü freigeschaltet.")
     """
     Die ältere Frau heißt Kumasawa. Sie ist eine Teilzeitarbeiterin, die zwar mehrmals gekündigt hat, aber insgesamt schon viele Jahre im Dienst der Familie steht.
     Sie ist geschickt und mehr als fähig, ihre Aufgaben zu erfüllen,
@@ -632,15 +661,14 @@ label chapter1de:
     geo "Und wenn ich schon dabei bin, du bist auf keinen Fall so etwas wie Mobilar, du bist ein Mensch."
     geo "Ich will so etwas nicht mehr hören, ist das klar?\""
     sha "\"G-George-sama......\""
+    $ persistent.shannon = True
+    play sound "audio/sfx/umise_1060.ogg"
+    $ renpy.notify("Ein neuer Charakter wurde im Charaktermenü freigeschaltet.")
     """
     Die Bedienstete heißt, wie wir bereits wissen, Shannon, und sie ist eine junge, aber sehr erfahrene Bedienstete.
-
     Normalerweise ist sie ruhig und erledigt ihre Arbeit effizient, aber wenn sie nervös wird, macht sie Fehler.
 
-    Außerdem ist Shannon nur ein Pseudonym, das sie im Dienst benutzt, nicht ihr richtiger Name,
-
-    und da sie kein Familienmitglied ist, ist ihr Name völlig in Ordnung und nicht seltsam.
-
+    Da sie kein Familienmitglied ist, ist ihr Name völlig in Ordnung und nicht seltsam.
     Ich habe sie seit 6 Jahren nicht mehr gesehen und sie ist noch schöner als in meiner Erinnerung.
     """
     but "\"Sag mal Jessica-chan... kann es sein, dass die beiden sich ein bisschen nahe stehen?\""
@@ -671,11 +699,13 @@ label chapter1de:
     goh "\"Mit solchen Worten macht das Kochen gleich viel mehr Spaß!"
     goh "Ich muss allerdings sagen, dass wir euch schon 20 Minuten früher erwartet haben, das ist nicht gut für unseren Zeitplan....."
     goh "Außerdem scheint sich dieser Taifun schon früher als angekündigt zu formieren, so dass wir uns schnell auf den Weg zur Villa machen sollten.\""
+    $ persistent.gohda = True
+    play sound "audio/sfx/umise_1060.ogg"
+    $ renpy.notify("Ein neuer Charakter wurde im Charaktermenü freigeschaltet.")
     """
     Gohda ist ein Bediensteter, der bei der Familie als Koch angestellt ist.
 
     Er ist noch nicht lange bei der Familie, aber durch seine früheren Tätigkeiten und Erfahrungen hat er ein Talent dafür entwickelt, Gäste zu bewirten.
-
     Aus diesem Grund wird er als Bediensteter sehr geschätzt. Da er nicht zur Familie gehört, hat er auch nicht wie Shannon einen unserer seltsamen Namen.
     """
     kum "\"Aber vergiss nicht, dass es heute zum Mittagessen meine speziellen Spaghetti mit würziger Makrelenrahmsauce nach meinem Geheimrezept gibt, Gohda! Ohohohohoh!"
