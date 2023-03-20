@@ -21,7 +21,7 @@ init python:
 ## The colors of text in the interface.
 
 ## An accent color used throughout the interface to label and highlight text.
-define gui.accent_color = '#FF8300'
+define gui.accent_color = '#ffffff'
 
 ## The color used for a text button when it is neither selected nor hovered.
 define gui.idle_color = '#FFFFFF'
@@ -38,7 +38,7 @@ define gui.hover_color = '#FF8300'
 define gui.selected_color = '#FF8300'
 
 ## The color used for a text button when it cannot be selected.
-define gui.insensitive_color = '#8888887f'
+define gui.insensitive_color = '#888888ff'
 
 ## Colors used for the portions of bars that are not filled in. These are not
 ## used directly, but are used when re-generating bar image files.
@@ -130,7 +130,7 @@ define gui.namebox_tile = False
 ## number of pixels relative to the left or top side of the textbox, or 0.5 to
 ## center.
 define gui.dialogue_xpos = 210
-define gui.dialogue_ypos = -490
+define gui.dialogue_ypos = -500
 
 ## The maximum width of dialogue text, in pixels.
 define gui.dialogue_width = 1500

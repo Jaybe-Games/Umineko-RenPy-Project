@@ -1,8 +1,10 @@
 
 label splashscreen:
 
+
 #jump test
 
+$ Achievement.purge
 scene black with dissolve
 pause (1)
 show splash1 with dissolve

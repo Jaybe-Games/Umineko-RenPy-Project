@@ -23,7 +23,7 @@ define gui.show_name = False
 
 ## The version of the game.
 
-define config.version = "Developer0015a"
+define config.version = "notdefined"
 
 
 ## Text that is placed on the game's about screen. Place the text between the
@@ -189,30 +189,38 @@ init python:
 
     ## Classify files as None to exclude them from the built distributions.
 
+    build.archive("scripts", "all")
+    build.archive("audio", "all")
+    build.archive("fonts", "all")
+    build.archive("images", "all")
+    build.archive("video", "all")
+
     build.classify('**~', None)
     build.classify('**.bak', None)
+    build.classify('**.psd', None)
     build.classify('**/.**', None)
     build.classify('**/#**', None)
     build.classify('**/thumbs.db', None)
 
     ## To archive files, classify them as 'archive'.
 
-    build.classify('**/**.png', 'archive')
-    build.classify('**/**.rpyb', 'archive')
-    build.classify('**/**.bmp', 'archive')
-    build.classify('**/**.jpg', 'archive')
-    build.classify('**/**.ico', 'archive')
-    build.classify('**/**.icns', 'archive')
-    build.classify('**/**.ogg', 'archive')
-    build.classify('**/**.mp3', 'archive')
-    build.classify('**/**.rpy', 'archive')
-    build.classify('**/**.rpyc', 'archive')
-    build.classify('**/**.webm', 'archive')
-    build.classify('**/**.mov', 'archive')
-    build.classify('**/**.png', 'archive')
-    build.classify('**/**.jpg', 'archive')
-    build.classify('**/**.otf', 'archive')
-    build.classify('**/**.ttf', 'archive')
+    build.classify('**/**.png', 'images')
+    build.classify('**.png', 'images')
+    build.classify('**/**.rpyb', 'scripts')
+    build.classify('**/**.rpym', 'scripts')
+    build.classify('**/**.rpymc', 'scripts')
+    build.classify('**/**.bmp', 'images')
+    build.classify('**/**.jpg', 'images')
+    build.classify('**/**.ico', 'images')
+    build.classify('**/**.icns', 'images')
+    build.classify('**/**.ogg', 'audio')
+    build.classify('**/**.mp3', 'audio')
+    build.classify('**/**.rpy', 'scripts')
+    build.classify('**/**.rpyc', 'scripts')
+    build.classify('**/**.webm', 'video')
+    build.classify('**/**.mov', 'video')
+    build.classify('**/**.otf', 'fonts')
+    build.classify('**/**.ttf', 'fonts')
     build.classify('**/**.txt', 'archive')
     build.classify('**/**.md', 'archive')
 

@@ -1,3 +1,5 @@
+default persistent.firststart = True
+
 default persistent.alreadystarted = False
 default persistent.mainstorycleared = False
 default persistent.teapartycleared = False
@@ -22,3 +24,6 @@ default persistent.kinzo = False
 default persistent.nanjo = False
 default persistent.genji = False
 default persistent.kanon = False
+default persistent.goldenwitch = False
+
+default persistent.tip1 = False

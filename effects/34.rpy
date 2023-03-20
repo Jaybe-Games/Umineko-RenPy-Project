@@ -56,6 +56,7 @@ init python hide:
 
 
 label konami_code:
+    $ Achievement.add(achievement_silver1)
     window hide
     play sound "audio/sfx/umise_1021.ogg"
     play sound "audio/sfx/nipah.mp3"

@@ -18,21 +18,11 @@ init python:
         return ToggleField(persistent,persistentfield,true_value=True,false_value=False)
 
     ### Audio Cues
-    # These are used in place of "play music" and "play sound". In your script:
-    # $ play_sfx(door_close)
-    # will play the door close sound effect.
-    # $ play_music(lamentoso,10)
-    # will play "lamentoso" with a 10 second fadein.
-
-    #def play_sfx(sound_alias,fade=0):
-      #renpy.sound.play(sound_alias,fadein=fade)
-      #if persistent.audio_cues:
-          #renpy.notify("SFX: {i}" + sfx_dictionary[renpy.sound.get_playing('sound')] + "{/i}")
 
     def play_music(music_alias,fade=0):
-      renpy.music.play(music_alias,fadein=fade)
-      if persistent.audio_cues:
-          renpy.notify("♪ " + music_dictionary[renpy.music.get_playing('music')])
+        renpy.music.play(music_alias,fadein=fade)
+        if persistent.audio_cues:
+            renpy.notify("♪ " + music_dictionary[renpy.music.get_playing('music')])
     ###
 
     ###Screenshake
