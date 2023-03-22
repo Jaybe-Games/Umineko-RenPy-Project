@@ -62,26 +62,22 @@ init python:
         ##       changes to be reflected.
 
         ## Example
-        "tipshunter": [_("Bronze: Tippsjäger"), _("Erhalte deinen ersten Tipp"), 'gui/bronze.png', 'hidden'],
-        "charhunter": [_("Bronze: Charakterjäger"), _("Schalte den ersten Charakter frei."), 'gui/bronze.png', 'hidden'],
-        "chapter1": [_("Bronze: Runter vom Boot"), _("Du hast Rokkenjima erreicht."), 'gui/bronze.png', 'hidden'],
-        "malocher": [_("Bronze: Ein guter Tüftler"), _("Öffne die Einstellungen."), 'gui/bronze.png', None],
-        "tip": [_("Bronze: Ratschlag gefällig?"), _("Öffne die Tipps."), 'gui/bronze.png', None],
-        "char": [_("Bronze: Wer war das nochmal?"), _("Öffne das Charaktermenü."), 'gui/bronze.png', None],
-        "help": [_("Bronze: Gibt's Probleme?"), _("Öffne das Hilfemenü."), 'gui/bronze.png', None],
-        "konami": [_("Silber: Konami Code"), _("War das etwa ein Nipah?"), 'gui/silver.png', 'hidden'],
-        "musicbox": [_("Silber: Musikbox"), _("Du hast die Musikbox geöffnet."), 'gui/silver.png', 'hidden'],
-        "mainclear": [_("Silber: Eine andere Beatrice?"), _("Der Täter hat sich gezeigt."), 'gui/silver.png', 'hidden'],
-        "teaclear": [_("Silber: Ayato und Yuria"), _("Du hast das Geheimnis des Urfragments erfahren."), 'gui/silver.png', 'hidden'],
-        "gameclear": [_("Gold: Resurrection of the Golden Witch"), _("Du hast Umineko Zero abgeschlossen."), 'gui/gold.png', None],
-        "secret": [_("Silber: Streng geheim"), _("Du hast das Geheimnis im Hauptmenü gefunden."), 'gui/silver.png', 'hidden'],
+        "tipshunter": [_("Tippsjäger"), _("Erhalte deinen ersten Tipp."), 'gui/trophys/bronze1.png', None],
+        "charhunter": [_("Charakterjäger"), _("Schalte den ersten Charakter frei."), 'gui/trophys/bronze2.png', None],
+        "musichunter": [_("Musikboxjäger"), _("Schalte die Musikbox frei."), 'gui/trophys/bronze3.png', None],
+        "chapter1": [_("Runter vom Boot"), _("Du hast Rokkenjima erreicht."), 'gui/trophys/bronze4.png', 'hidden'],
+        "konami": [_("Konami Code"), _("War das etwa ein Nipah?"), 'gui/trophys/silver1.png', 'hidden'],
+        "secret": [_("Autorentreffen"), _("Du hast den Autor gefunden."), 'gui/trophys/silver2.png', 'hidden'],
+        "mainclear": [_("Eine andere Beatrice?"), _("Schließe die Hauptstory ab."), 'gui/trophys/silver3.png', 'hidden'],
+        "teaclear": [_("Ayato und Yuria"), _("Schließe die Tee Party ab."), 'gui/trophys/silver4.png', 'hidden'],
+        "gameclear": [_("Resurrection of the Golden Witch"), _("Schließe ???? ab."), 'gui/trophys/gold1.png', 'hidden'],
         ## The None, means that the achievement will be displayed greyed-out before it is granted (or achieved).
         ## I use these words to describe the type of achievement it is;
         ##            None = default (greyed out and can see the name and description of the achievement.)
         ##        'hidden' = Achievements with this label will be displayed as hidden.
         ##      'platinum' = The final achievement to be granted once all other achievements have been granted.
 
-        "gamemaster": [_("Platin: Gamemaster LV0"), _("Erhalte alle Trophäen!"), 'gui/platinum.png', 'platinum']
+        "gamemaster": [_("Platin: Gamemaster LV0"), _("Erhalte alle Trophäen!"), 'gui/trophys/platinum.png', 'platinum']
 
         ## More of this is explained in 'achievement_screen.rpy'.
 
@@ -98,15 +94,11 @@ init python:
 ## list we made earlier.
 default achievement_bronze1 = Achievement(name=achievement_name['tipshunter'][0], message=achievement_name['tipshunter'][1], image=achievement_name['tipshunter'][2])
 default achievement_bronze2 = Achievement(name=achievement_name['charhunter'][0], message=achievement_name['charhunter'][1], image=achievement_name['charhunter'][2])
-default achievement_bronze3 = Achievement(name=achievement_name['char'][0], message=achievement_name['char'][1], image=achievement_name['char'][2])
-default achievement_bronze4 = Achievement(name=achievement_name['tip'][0], message=achievement_name['tip'][1], image=achievement_name['tip'][2])
-default achievement_bronze5 = Achievement(name=achievement_name['malocher'][0], message=achievement_name['malocher'][1], image=achievement_name['malocher'][2])
-default achievement_bronze6 = Achievement(name=achievement_name['help'][0], message=achievement_name['help'][1], image=achievement_name['help'][2])
-default achievement_bronze10 = Achievement(name=achievement_name['chapter1'][0], message=achievement_name['chapter1'][1], image=achievement_name['chapter1'][2])
+default achievement_bronze3 = Achievement(name=achievement_name['musichunter'][0], message=achievement_name['musichunter'][1], image=achievement_name['musichunter'][2])
+default achievement_bronze4 = Achievement(name=achievement_name['chapter1'][0], message=achievement_name['chapter1'][1], image=achievement_name['chapter1'][2])
 default achievement_silver1 = Achievement(name=achievement_name['konami'][0], message=achievement_name['konami'][1], image=achievement_name['konami'][2])
-default achievement_silver2 = Achievement(name=achievement_name['mainclear'][0], message=achievement_name['mainclear'][1], image=achievement_name['mainclear'][2])
-default achievement_silver3 = Achievement(name=achievement_name['teaclear'][0], message=achievement_name['teaclear'][1], image=achievement_name['teaclear'][2])
-default achievement_silver4 = Achievement(name=achievement_name['musicbox'][0], message=achievement_name['musicbox'][1], image=achievement_name['musicbox'][2])
-default achievement_silver5 = Achievement(name=achievement_name['secret'][0], message=achievement_name['secret'][1], image=achievement_name['secret'][2])
+default achievement_silver2 = Achievement(name=achievement_name['secret'][0], message=achievement_name['secret'][1], image=achievement_name['secret'][2])
+default achievement_silver3 = Achievement(name=achievement_name['mainclear'][0], message=achievement_name['mainclear'][1], image=achievement_name['mainclear'][2])
+default achievement_silver4 = Achievement(name=achievement_name['teaclear'][0], message=achievement_name['teaclear'][1], image=achievement_name['teaclear'][2])
 default achievement_gold1 = Achievement(name=achievement_name['gameclear'][0], message=achievement_name['gameclear'][1], image=achievement_name['gameclear'][2])
 default achievement_platinum = Achievement(name=achievement_name['gamemaster'][0], message=achievement_name['gamemaster'][1], image=achievement_name['gamemaster'][2])

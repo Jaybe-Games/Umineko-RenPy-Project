@@ -313,6 +313,8 @@ style quick_button_text:
 
 screen navigation():
 
+    $ minutes, seconds = divmod(int(renpy.get_game_runtime()), 60)
+
     fixed:
         #style_prefix "navigation"
 
@@ -328,6 +330,14 @@ screen navigation():
 
         if main_menu:
 
+            imagebutton auto "gui/button/secret_%s.png" action Start("supersecret") xpos 42 ypos 957
+
+        else:
+
+            pass
+
+        if main_menu:
+
             vbox:
 
                 xpos 1350
@@ -338,11 +348,11 @@ screen navigation():
 
                 imagebutton auto "gui/button/load_%s.png" action [ShowMenu("load"), Hide('loadhover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" hovered Show('loadhover') unhovered Hide('loadhover')
 
-                imagebutton auto "gui/button/settings_%s.png" action [ShowMenu("preferences"), Function(Achievement.add, achievement_bronze5)] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+                imagebutton auto "gui/button/settings_%s.png" action [ShowMenu("preferences")] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
 
                 imagebutton auto "gui/button/credits_%s.png" action [ShowMenu("about"), Hide('creditshover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" hovered Show('creditshover') unhovered Hide('creditshover')
 
-                imagebutton auto "gui/button/help_%s.png" action [ShowMenu("help"), Function(Achievement.add, achievement_bronze6)] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+                imagebutton auto "gui/button/help_%s.png" action [ShowMenu("help")] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
 
                 imagebutton auto "gui/button/extra_%s.png" action [ShowMenu("extra"), Hide('extrahover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" hovered Show('extrahover') unhovered Hide('extrahover')
 
@@ -363,7 +373,9 @@ screen navigation():
 
             text "{i}" + chaptername ypos 955 xpos 10 xalign 0.0 size 50 font "fonts/ariston.ttf" outlines [ (absolute(3), "#000", absolute(0), absolute(0)) ]
 
-            text "Aktueller Soundtrack: " + songname ypos 1030 xpos 1900 xalign 1.0 size 30 font "fonts/AOTFShinGoProMedium.otf" outlines [ (absolute(3), "#000", absolute(0), absolute(0)) ]
+            text "Aktueller Soundtrack: " + songname ypos 1005 xpos 1900 xalign 1.0 size 30 font "fonts/AOTFShinGoProMedium.otf" outlines [ (absolute(3), "#000", absolute(0), absolute(0)) ]
+
+            text "Aktuelle Spielzeit: [minutes]:[seconds:02d]" ypos 1040 xpos 1900 xalign 1.0 size 30 font "fonts/AOTFShinGoProMedium.otf" outlines [ (absolute(3), "#000", absolute(0), absolute(0)) ]
 
 
 
@@ -556,11 +568,11 @@ screen game_menu(title, scroll=None, yinitial=0.0):
 
             imagebutton auto "gui/button/load_%s.png" action ShowMenu("load") activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
 
-            imagebutton auto "gui/button/settings_%s.png" action [ShowMenu("preferences"), Function(Achievement.add, achievement_bronze5)] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+            imagebutton auto "gui/button/settings_%s.png" action [ShowMenu("preferences")] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
 
             imagebutton auto "gui/button/credits_%s.png" action ShowMenu("about") activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
 
-            imagebutton auto "gui/button/help_%s.png" action [ShowMenu("help"), Function(Achievement.add, achievement_bronze6)] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+            imagebutton auto "gui/button/help_%s.png" action [ShowMenu("help")] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
 
             imagebutton auto "gui/button/extra_%s.png" action [ShowMenu("extra"), Hide('extrahover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
 
@@ -580,11 +592,11 @@ screen game_menu(title, scroll=None, yinitial=0.0):
 
             imagebutton auto "gui/button/load_%s.png" action ShowMenu("load") activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
 
-            imagebutton auto "gui/button/settings_%s.png" action [ShowMenu("preferences"), Function(Achievement.add, achievement_bronze5)] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+            imagebutton auto "gui/button/settings_%s.png" action [ShowMenu("preferences")] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
 
             imagebutton auto "gui/button/credits_%s.png" action ShowMenu("about") activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
 
-            imagebutton auto "gui/button/help_%s.png" action [ShowMenu("help"), Function(Achievement.add, achievement_bronze6)] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+            imagebutton auto "gui/button/help_%s.png" action [ShowMenu("help")] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
 
             imagebutton auto "gui/button/extra_%s.png" action ShowMenu("extra") activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
 
@@ -720,7 +732,7 @@ screen load():
 
 screen file_slots(title):
 
-    default page_name_value = FilePageNameInputValue(pattern=_("Page {}"), auto=_("Automatische Spielstände"), quick=_("Schnell Speicherungen"))
+    default page_name_value = FilePageNameInputValue(pattern=_("Seite {}"), auto=_("Automatische Spielstände"), quick=_("Schnell Speicherungen"))
 
     use game_menu(title):
 
@@ -1637,20 +1649,20 @@ screen extra():
         ypos 300
         spacing 10
 
-        imagebutton auto "gui/button/achieve_%s.png" action [ShowMenu("achievement_menu"), Hide('characterhover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" hovered Show('characterhover') unhovered Hide('characterhover')
+        imagebutton auto "gui/button/achieve_%s.png" action [ShowMenu("achievement_menu"), Hide('trophyhover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" hovered Show('trophyhover') unhovered Hide('trophyhover')
 
         if persistent.rudolf == True:
-            imagebutton auto "gui/button/chars_%s.png" action [ShowMenu("characters"), Hide('characterhover'), Function(Achievement.add, achievement_bronze3)] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" hovered Show('characterhover') unhovered Hide('characterhover')
+            imagebutton auto "gui/button/chars_%s.png" action [ShowMenu("characters"), Hide('characterhover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" hovered Show('characterhover') unhovered Hide('characterhover')
         else:
             imagebutton auto "gui/button/locked_%s.png" action [NullAction(), Hide('locked')] hover_sound "audio/sfx/click-21156.mp3" hovered Show('locked') unhovered Hide('locked')
 
         if persistent.tip1 == True:
-            imagebutton auto "gui/button/tip_%s.png" action [ShowMenu("tips"), Hide('tiphover'), Function(Achievement.add, achievement_bronze4)] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" hovered Show('tiphover') unhovered Hide('tiphover')
+            imagebutton auto "gui/button/tip_%s.png" action [ShowMenu("tips"), Hide('tiphover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" hovered Show('tiphover') unhovered Hide('tiphover')
         else:
             imagebutton auto "gui/button/locked_%s.png" action [NullAction(), Hide('locked')] hover_sound "audio/sfx/click-21156.mp3" hovered Show('locked') unhovered Hide('locked')
 
-        if persistent.gamecleared == False:
-            imagebutton auto "gui/button/jukebox_%s.png" action [ShowMenu("music_room"), Hide('jukeboxhover'), Function(ost.get_music_channel_info), Stop('music', fadeout=1.0), Function(ost.refresh_list), Function(Achievement.add, achievement_silver4)] hovered Show('jukeboxhover') unhovered Hide('jukeboxhover') activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+        if persistent.musicbox == True:
+            imagebutton auto "gui/button/jukebox_%s.png" action [ShowMenu("music_room"), Hide('jukeboxhover'), Function(ost.get_music_channel_info), Stop('music', fadeout=1.0), Stop('sound', fadeout=1.0), Stop('ship', fadeout=1.0), Stop('wind', fadeout=1.0), Function(ost.refresh_list)] hovered Show('jukeboxhover') unhovered Hide('jukeboxhover') activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
         else:
             imagebutton auto "gui/button/locked_%s.png" action [NullAction(), Hide('locked')] hover_sound "audio/sfx/click-21156.mp3" hovered Show('locked') unhovered Hide('locked')
 
@@ -1700,6 +1712,13 @@ screen quithover():
         ground "gui/hovermenu.png"
     text "Beenden" style 'bigtext' at Position(xpos = 75, ypos = 420)
     text "Schließt das Spiel.\n\nDie Goldene Hexe erwartet deine Rückkehr." style 'menutext' at Position (xpos = 60, ypos = 490)
+
+screen trophyhover():
+    tag hover
+    imagemap:
+        ground "gui/hovermenu.png"
+    text "Trophäen" style 'bigtext' at Position(xpos = 75, ypos = 420)
+    text "Die Trophäen des Spiels.\n\nSieh dir deine Errungenschaften an." style 'menutext' at Position (xpos = 60, ypos = 490)
 
 screen characterhover():
     tag hover

@@ -271,7 +271,7 @@ define gui.pref_button_spacing = 0
 define gui.pref_button_xalign = 300
 
 ## The spacing between file page buttons.
-define gui.page_spacing = 0
+define gui.page_spacing = -50
 
 ## The spacing between file slots.
 define gui.slot_spacing = 15

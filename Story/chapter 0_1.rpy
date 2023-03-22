@@ -7,28 +7,17 @@ label chapter1:
     $ songname = "-"
     $ renpy.notify("Willkommen auf Rokkenjima")
     $ persistent.alreadystarted = True
-    pause (2)
-    show text "Der erste Tag\nSamstag, 04. Oktober 1986\n09:25 Uhr" with dissolve
-    pause (2)
-    play sound "audio/sfx/umilse_1050.ogg"
-    show text "Der erste Tag\nSamstag, 04. Oktober 1986\n09:26 Uhr"
-    pause (0.8)
-    show text "Der erste Tag\nSamstag, 04. Oktober 1986\n09:27 Uhr"
-    pause (0.8)
-    show text "Der erste Tag\nSamstag, 04. Oktober 1986\n09:28 Uhr"
-    pause (0.8)
-    show text "Der erste Tag\nSamstag, 04. Oktober 1986\n09:29 Uhr"
-    pause (0.8)
-    show text "Der erste Tag\nSamstag, 04. Oktober 1986\n09:30 Uhr"
-    stop sound
     pause (5)
-    hide text with dissolve
-    pause (2)
+    play sound "audio/sfx/umise_028.ogg"
+    show oct_4_1986 with dissolve
+    pause (7)
+    scene black with dissolve
+    pause(3)
     $ songname = "HANE"
     $ play_music(hane)
     play ship "audio/sfx/umilse_004.ogg"
     camera at Shake(None, float('inf'), dist=3)
-    scene ship_s2a
+    scene ship_s2a with dissolve
     pause (3)
     window show
     """
@@ -803,8 +792,11 @@ label chapter1:
     Verliere ich langsam aber sicher die Nerven? Liegt es an meiner 6-jährigen Abwesenheit?
     Oder an Marias gruseliger Show von vorhin? Ich hoffe, ich werde es nie erfahren...
     """
-    $ Achievement.add(achievement_bronze3)
     play sound "audio/sfx/umise_1060.ogg"
+    $ persistent.musicbox = True
+    $ renpy.notify("Die Musikbox wurde unter \"Extras\" freigeschaltet.")
+    $ Achievement.add(achievement_bronze3)
+    $ Achievement.add(achievement_bronze4)
     window hide
     stop audio fadeout 2.0
     stop music fadeout 2.0
@@ -814,24 +806,24 @@ label chapter1:
     $ play_music(ride_on)
     pause (1)
     show op1 with dissolve
-    pause (10)
+    pause (11)
     show op2 with dissolve
-    pause (10)
+    pause (11)
     show op3 with dissolve
-    pause (10)
+    pause (11)
     show op4 with dissolve
-    pause (10)
+    pause (11)
     show op5 with dissolve
-    pause (10)
+    pause (11)
     show op6 with dissolve
-    pause (10)
+    pause (11)
     show op7 with dissolve
-    pause (10)
+    pause (11)
     show op8 with dissolve
-    pause (5)
+    pause (6)
     show op9 with doorfade
-    pause (10)
+    pause (11)
     scene black with dissolve
     stop music fadeout 3.0
-    pause (3)
+    pause (5)
     jump chapter2

@@ -18,23 +18,21 @@ screen achievement_menu():
             ysize 1080
 
             vpgrid:
-                cols 1
-                draggable True
-                mousewheel True 
+                cols 2
                 spacing 10
 
                 ## Granted achievements
                 for t in persistent.my_achievements:
                     if achievement.has(t.name):
                         frame:
-                            background Solid('#1b045c')
+                            background Solid('#00000067')
 
                             hbox:
                                 yalign 0.5
-                                xysize (500, 100)
+                                xysize (100, 100)
                                 add t.image size (100, 100) yalign 0.5
 
-                                null width 0
+                                null width 20
 
                                 vbox:
                                     spacing 0
@@ -52,15 +50,15 @@ screen achievement_menu():
                         ## The platinum achievement will not appear
                         ## in the list.
                         ## Index '3' is the type of achievement.
-                        if v[3] != 'platinum':
+                        #if v[3] != 'platinum':
                             frame:
                                 hbox:
                                     yalign 0.5
-                                    xysize (500, 100)
+                                    xysize (100, 100)
                                     ## This will display a locked icon.
-                                    add 'gui/locked_achievement.png' size (100, 100) yalign 0.5
+                                    add 'gui/trophys/locked.png' size (100, 100) yalign 0.5
 
-                                    null width 0
+                                    null width 20
 
                                     vbox:
                                         spacing 0
@@ -74,6 +72,7 @@ screen achievement_menu():
                                             text str(v[1]) color '#FFF3'
                                         else:
                                             text _('Versteckte Trophäe') style 'achievements_label' color '#FFF3'
+
 
 init python:
 
@@ -132,7 +131,7 @@ screen achievement_notification():
     if achievement_notification_list:
 
         frame at achievement_appear:
-            background Solid('#1b045c')
+            background Solid('#00000098')
             align (0.5, 0.0)
             padding (20, 20, 20, 20)
 
@@ -201,6 +200,6 @@ style achievements_locked_text:
 
 style achievements_frame:
     background Solid('#444444')
-    minimum (1000, 140)
+    minimum (500, 140)
     align (0.5, 0.5)
     padding (15, 15, 15, 15)

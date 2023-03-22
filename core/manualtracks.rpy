@@ -8,14 +8,55 @@ init python:
 
     ## Base Template
     ######################################
-    
-    # easy_like_summer = ost.soundtrack(
-    #     name = "Easy", 
-    #     path = "bgm/09 Easy.mp3",
-    #     priority = 1,
-    #     author = "Lionel Richie",
-    #     description = "Easy like sunday morning.",
-    #     cover_art = False,
-    #     unlocked = renpy.seen_audio("bgm/09 Easy.mp3")
-    # )     
-    # ost.manualDefineList.append(easy_like_summer)
+
+    zeroopfull = ost.soundtrack(
+    name = "Katayoku no Tori", 
+    path = "audio/bgm/zeroopfull.ogg",
+    priority = 0,
+    author = "BatterVoice",
+    cover_art = False,
+    #unlocked = renpy.seen_audio("bgm/09 Easy.mp3")
+    )     
+    ost.manualDefineList.append(zeroopfull)
+
+
+    mmtheme = ost.soundtrack(
+    name = "Black Lilliana Orchestra", 
+    path = "audio/bgm/umib_000.ogg",
+    priority = 1,
+    author = "Pennoink",
+    cover_art = False,
+    #unlocked = renpy.seen_audio("bgm/09 Easy.mp3")
+    )     
+    ost.manualDefineList.append(mmtheme)
+
+
+    death_door = ost.soundtrack(
+    name = "At Death's Door", 
+    path = "audio/bgm/umib_014.ogg",
+    priority = 2,
+    author = "Pureco",
+    cover_art = False,
+    #unlocked = renpy.seen_audio("bgm/09 Easy.mp3")
+    )     
+    ost.manualDefineList.append(death_door)
+
+    hane = ost.soundtrack(
+    name = "HANE (Feathers)", 
+    path = "audio/bgm/umib_003.ogg",
+    priority = 3,
+    author = "Dai",
+    cover_art = False,
+    #unlocked = renpy.seen_audio("bgm/09 Easy.mp3")
+    )     
+    ost.manualDefineList.append(hane)
+
+    doorway = ost.soundtrack(
+    name = "Doorway of Summer", 
+    path = "audio/bgm/umib_002.ogg",
+    priority = 4,
+    author = "Dai",
+    cover_art = False,
+    #unlocked = renpy.seen_audio("bgm/09 Easy.mp3")
+    )     
+    ost.manualDefineList.append(doorway)

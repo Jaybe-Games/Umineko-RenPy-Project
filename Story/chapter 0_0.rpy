@@ -45,7 +45,6 @@ label start:
 
     """
     $ Achievement.add(achievement_bronze1)
-    #show screen achievement_unlock("Tippsjäger")
     play sound "audio/sfx/umise_1060.ogg"
     $ renpy.notify("Das Tippsmenü wurde unter \"Extras\" freigeschaltet.")
     $ persistent.tip1 = True
