@@ -225,7 +225,7 @@ screen music_room():
     if not config.developer:
         add "rpa_map_warning" xpos 0.23 ypos 0.85 xsize 950
 
-    textbutton _("Return"):
+    textbutton _("Zurück"):
         style "return_button"
         action [Return(), Function(ost.check_paused_state), 
                 If(not ost.prevTrack, None, 

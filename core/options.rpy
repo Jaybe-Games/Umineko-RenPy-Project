@@ -132,13 +132,13 @@ define config.window_hide_transition = Dissolve(.2)
 ## Controls the default text speed. The default, 0, is infinite, while any other
 ## number is the number of characters per second to type out.
 
-default preferences.text_cps = 0
+default preferences.text_cps = 80
 
 
 ## The default auto-forward delay. Larger numbers lead to longer waits, with 0
 ## to 30 being the valid range.
 
-default preferences.afm_time = 15
+default preferences.afm_time = 10
 
 
 ## Save directory ##############################################################
@@ -190,6 +190,7 @@ init python:
     ## Classify files as None to exclude them from the built distributions.
 
     build.archive("scripts", "all")
+    build.archive("librarys", "all")
     build.archive("audio", "all")
     build.archive("fonts", "all")
     build.archive("images", "all")
@@ -209,6 +210,8 @@ init python:
     build.classify('**/**.rpyb', 'scripts')
     build.classify('**/**.rpym', 'scripts')
     build.classify('**/**.rpymc', 'scripts')
+    build.classify('**/**.rp', 'librarys')
+    build.classify('**/**.rpc', 'librarys')
     build.classify('**/**.bmp', 'images')
     build.classify('**/**.jpg', 'images')
     build.classify('**/**.ico', 'images')

@@ -18,12 +18,15 @@ play rain "audio/sfx/umilse_012.ogg" fadein 3.0
 pause (4)
 play sound "audio/sfx/umise_052.ogg"
 show moon_1p with w20
-show rain_layer1 with dissolve
+call rain_layer1
+
 pause(2)
 "\"Hey! "
 extend "Du da! "
 extend "Erklär mir bitte, wie du hierher gekommen bist."
+window hide
 call butterfly1
+window show
 "Du kannst mir jetzt nicht erzählen, dass du einfach nur irgendwo drauf geklickt hast und dann bist du einfach nur durch Zufall hier gelandet."
 "Ich könnte Wetten abschließen, dass es dir irgendjemand erzählt hat."
 "Willst du alle Trophäen haben und hast deshalb im Internet nach diesem Ort gesucht? Hat diese Visual Novel überhaupt eine Community?"

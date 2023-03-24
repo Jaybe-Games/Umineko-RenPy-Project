@@ -1,11 +1,11 @@
 label chapter1:
 
-    $ discord.update(state = "Welcome to Rokkenjima")
+    $ discord.update(state = "Boat trip to Rokkenjima")
     $ discord.update(details = "Reading Chapter 1")
-    $ chaptername = "\"Willkommen auf Rokkenjima\"\nSamstag, 04. Oktober 1986 09:30 Uhr"
+    $ chaptername = "\"Bootsfahrt nach Rokkenjima\"\nSam. 04. Oktober 1986 09:30 Uhr"
     $ chapternumber = "Kapitel 1"
     $ songname = "-"
-    $ renpy.notify("Willkommen auf Rokkenjima")
+    $ renpy.notify("Bootsfahrt nach Rokkenjima")
     $ persistent.alreadystarted = True
     pause (5)
     play sound "audio/sfx/umise_028.ogg"
@@ -245,7 +245,10 @@ label chapter1:
     hide but_b11_kuyasigaru1
     show but_a11_aseru5 at l,ah('but')
     but "\"....Ich hoffe, du springst vom Boot und ertrinkst du alter Bastard.... Owowowow, lass los! "
-    but "...Ich....gebe.....nicht.....auuuuuuffffff!!! "
+    but "...Ich.... "
+    extend "gebe..... "
+    extend "nicht..... "
+    extend "auuuuuuffffff!!! "
     extend ".....owowowow..... lass doch endlich los owowowowow... es tut weh....\""
     hide rud_a11_defo1
     show rud_a11_akuwarai1 at l2,ah('rud')
@@ -264,16 +267,26 @@ label chapter1:
     extend "Nächstes Mal nimm einen Eimer mit!\""
     show jes_a11_aisowarai1 at m with fastdissolve
     hide jes_a11_atya2
-    jes "Ach ja, und was war das für ein \"Ich falle, ich falle\" -Geschrei? ...Bist du ein bisschen meschugge? ...wahahahaha!"
-    jes ".....Das war die eine Sache, .....und dann war da noch die Kotze, die so von Deck segelte. ....pahahahaha.\""
+    jes "Ach ja, und was war das für ein \"Ich falle, ich falle\" -Geschrei? "
+    $ persistent.wiki_unlocked.add("wiki_crazy")
+    $ persistent.tip2 = True
+    $ persistent.tip1 = False
+    extend "...Bist du ein bisschen {note_green}meschugge{/note_green}? "
+    extend "...wahahahaha!"
+    jes ".....Das war die eine Sache, "
+    extend ".....und dann war da noch die Kotze, die so von Deck segelte. "
+    extend "....pahahahaha.\""
     hide jes_a11_aisowarai1 with fastdissolve
     show jes_a11_defo2 at l,ah('jes') with fastdissolve
     show but_a11_defo1 at r,ah('but') with fastdissolve
-    but "\"......Entschuldigung.... Das verfluchte Boot schaukelt so viel..... ....Das Schiff schaukelt und schaukelt und schaukelt....."
+    but "\"......Entschuldigung.... "
+    extend "Das verfluchte Boot schaukelt so viel..... "
+    extend "....Das Schiff schaukelt und schaukelt und schaukelt....."
     show but_a21_kuyasigaru1 at r,ah('but')
     hide but_a11_defo1
-    but "....ahhhhhh!!! Mach, dass es aufhört, sonst falle ich wieder!\""
-    show jes_a11_atya3 at l,ah('jes') with fastdissolve
+    but "....ahhhhhh!!! "
+    extend "Mach, dass es aufhört, sonst falle ich wieder!\""
+    show jes_a11_atya3 at l,ah('jes')
     hide jes_a11_defo2
     jes "\"....Vielleicht sollte der Kapitän etwas langsamer fahren, sonst geht es dir gleich noch schlechter... "
     extend "Ich werde sofort den Kapitän bitten, etwas langsamer zu fahren, aber bitte nicht mehr ins Meer kotzen....\""
@@ -306,10 +319,13 @@ label chapter1:
     but "\".....H-Halt doch mal dein Maul, immerhin kann ich jetzt ein wenig chillen....\""
     show jes_a11_defo2 at l,ah('jes') with quickergradientwipeupright
     jes "\".....Wir sollten besser runter gehen zum \"chillen\", wir sind gleich auf der Insel.\""
-    but "\"....Ja, das kann ich versuchen, jetzt, wo das Boot etwas langsamer fährt."
-    show but_b22_nayamu2 at r2,ah ('but')
+    but "\"....Ja, das kann ich versuchen, jetzt, wo das Boot etwas langsamer fährt. "
+    show but_b22_nayamu2 at r2,ah('but')
     extend "....Aber ich kann trotzdem nicht garantieren, dass ich den Rest meines Frühstücks bei mir behalte.... Ihihihi....\" "
+    window hide
     stop ship fadeout 2.0
+    stop music fadeout 2.0
+    pause(2)
     $ songname = "Door of Summer"
     $ play_music(summer)
     scene ship_s3a with gradientwiperight
@@ -317,6 +333,7 @@ label chapter1:
     show hid_a21_warai1 at m behind ship_s3a
     show kum_a12_defo2 at l behind ship_s3a
     show ship_s3ab behind eva_b22_akire2
+    window show
     """
     Dann gingen Battler und Jessica unter Deck zu den anderen, die im Gegensatz zu Battler ruhig warten, bis sie endlich die Insel erreichen.
     """
@@ -329,20 +346,32 @@ label chapter1:
     geo "\"Wie geht es dir Battler-kun? "
     extend "Wir alle wissen bereits, dass es dich schon erwischt hat.\""
     hide geo_a11_defo1 with fastdissolve
-    show but_b22_nayamu1 at l with fastdissolve
-    show geo_a11_majime2 at r with fastdissolve
-    show but_b22_nayamu1 at l,nod
+    show geo_a11_majime2 at r,ah('geo') with fastdissolve
+    show but_b22_nayamu1 at l,nod,ah('but') with fastdissolve
     """
     Mit einem leichten, aber nicht ganz ernstgemeinten Nicken stimmt Battler zu.
     """
-    but "\"Mir geht es gut, den Umständen entsprechend. "
-    extend "Der Kapitän hat das Schiff absichtlich so schaukeln lassen.\""
-    geo "\"Ja gut, ...eher nicht. "
+    but "\"Mir geht es gut, den Umständen entsprechend.... "
+    hide but_b22_nayamu1
+    show but_b23_kuyasigaru1 at l,ah('but')
+    extend "Der Kapitän hat das Schiff doch absichtlich so schaukeln lassen.\""
+    geo "\"Ja gut.... " 
+    extend "...eigentlich nicht... "
     extend "Leg dich am besten hin, du hast es gleich geschafft."
+    show geo_a11_warai1 at r,ah('geo')
+    hide geo_a11_majime2
     geo "Erinnert an alte Zeiten, nicht wahr, Jessica-chan?\""
-    jes "\"Ja, es ist, als wäre er nie weg gewesen. "
+    hide but_b23_kuyasigaru1 with fastdissolve
+    show jes_b22_warai1 at l,ah('jes') with fastdissolve
+    jes "\"Ja, "
+    extend ".....es ist, als wäre er nie weg gewesen...... "
     extend "Mit dem Unterschied, dass er sich heute zum ersten Mal übergeben hat.\""
-    geo "\"Ahahahahaha, ja, manche Dinge ändern sich, andere nie.\""
+    show geo_a11_komaru3 at r,ah('geo')
+    hide geo_a11_warai1
+    geo "\"Ahahahahaha, ja, "
+    extend "....manche Dinge ändern sich, andere nie.\""
+    scene ship_s3a with quickergradientwiperight
+    show geo_a11_defo1 at m with quickergradientwiperight
     $ persistent.george = True
     play sound "audio/sfx/umise_1060.ogg"
     $ renpy.notify("Ein neuer Charakter wurde im Charaktermenü freigeschaltet.")
@@ -360,39 +389,118 @@ label chapter1:
 
     Am liebsten würde ich auch diejenigen umbringen, die für diese schreckliche Namenstradition verantwortlich sind.
     """
-    but "\"Ich finde, heute ist auch ein besonderer Tag. Denn um die Mittagszeit soll ein Sturm aufziehen, der sich erst am Montag wieder legen soll. "
+    scene ship_s3a with quickergradientwiperight
+    show but_b22_warai1 at r,ah('but') with quickergradientwiperight
+    but "\"Ich finde, heute ist auch ein besonderer Tag.... "
+    extend "Denn um die Mittagszeit soll ein Sturm aufziehen, der sich erst am Montag wieder legen soll. "
+    hide but_b22_warai1
+    show but_b11_warai3 at r,ah('but')
     extend "Es ist das erste Mal, dass wir länger als einen Tag auf der Insel bleiben.\""
+    show geo_a11_hohoemi1 at l,ah('geo') with quickergradientwiperight
     geo "\"...Ja, aber wir haben auch immer ein wenig Glück gehabt, dass so ein starker Sturm nie über unsere Familienkonferenz hereingebrochen ist. "
-    extend "Wie heißt es so schön? Es gibt immer ein erstes Mal."
+    extend "Wie heißt es so schön? Es gibt immer ein erstes Mal.\""
     """
     Für Battler war die entspannte Atmosphäre eine sehr gute Ablenkung, um nicht mehr an das schaukelnde Boot denken zu müssen.
     """
-    geo "...ähm... Battler-kun, wusstest du, dass es so genannte Sturmgötter gibt?\""
-    but "\"....Ähhhhm.... Meinst du Zeus...?\""
-    geo "\"Auch richtig, aber nein, ich spreche vom Sturmgott in einem selbst.\""
-    but "\".....Was?\""
+    show geo_a11_majime2 at l,ah('geo') with fastdissolve
+    hide geo_a11_hohoemi1
+    geo "\"...ähm... " 
+    extend ".....Battler-kun, wusstest du, dass es so genannte Sturmgötter gibt?\""
+    show but_b11_aseru1 at r,ah('but')
+    hide but_b11_warai3
+    but "\"....Ähhhhm.... " 
+    extend "...Meinst du Zeus...?\""
+    show geo_a11_warai1 at l,ah('geo')
+    hide geo_a11_majime2
+    geo "\"Auch richtig, aber nein, " 
+    extend "....ich spreche vom Sturmgott in einem selbst.\""
+    show but_b11_oya1 at r,ah('but')
+    hide but_b11_aseru1
+    but "\".........." 
+    extend "Was?\""
     geo "\"Okay, es geht um folgendes:"
-    geo """
-    In der tantrischen Spiritualität gibt es intensivere Gefühle und auch bei den Griechen gab es die dionysische Spiritualität,
-    die auch besonders heftige Gefühle beinhaltet. In diesem Sinne hat jeder Mensch auch Sturmgötter in sich,
-
-    die er auch in sich aktivieren kann. Diese Sturmgötter können ihn auch zu schlimmen Taten, zu Verbrechen und Gewalt verleiten.
-    Sie können ihn aber auch dazu bringen, sich intensiv vorwärts zu bewegen und aus der Bequemlichkeit des Alltags auszubrechen.\"
-    """
+    geo "In der tantrischen Spiritualität gibt es intensivere Gefühle und auch bei den Griechen gab es die dionysische Spiritualität, "
+    extend "die auch besonders heftige Gefühle beinhaltet. In diesem Sinne hat jeder Mensch auch Sturmgötter in sich."
+    geo ".....diese können auch in einem selbst aktiviert werden. "
+    show geo_a11_majime2 at l,ah('geo')
+    extend "....Diese Sturmgötter können aber auch zu schlimmen Taten, zu Verbrechen und Gewalt verleiten."
+    geo "Man kann ihn aber auch dazu bringen, sich intensiv vorwärts zu bewegen und aus der Bequemlichkeit des Alltags auszubrechen.\""
+    scene ship_s3a with quickergradientwiperight
+    show jes_a11_tereru1 at m,ah('jes') with quickergradientwiperight
+    jes "....Wahahahahahaha "
+    extend "Was höre ich da, was laberst du da für einen Scheiß?"
+    jes "Ich habe kein Wort verstanden.... "
+    show jes_a11_atya3 at m,ah('jes')
+    hide jes_a11_tereru1 
+    extend "Ich kenne nicht einmal die Bedeutung von {note_green}tantrisch oder dionysisch{/note_green}.... "
+    extend "Es klingt einfach unironisch, als hätte jemand einfach Wörter erfunden."
+    scene ship_s3a with quickergradientwiperight
+    show but_b23_nayamu1 at r,ah('but') with quickergradientwiperight
     but "............."
-    extend "\"Ähm...... ähm...... "
-    extend "Tantrisch?..... Gefühlsregungen?..... Dionysische Spiritualität?..... "
+    """
+    Battler war ein auch wenig überwältigt von diesem Input, im Leben nicht hätte er jetzt einen Vortrag über Gefühle und Spiritualität erwartet.
+    """
+    but "\"Ähm...... "
+    extend ".....ähm...... "
+    extend ".......Tantrisch?..... Gefühlsregungen?..... Dionysische Spiritualität?..... "
+    show but_b23_nayamu2 at r,ah('but')
+    hide but_b23_nayamu1
     extend ".......................Das hast du aus dieser einen Yoga-Zeitschrift.....\" "
-    geo "\"Ähm......."
-    geo "Oh...."
-    geo "Hahahaha, aber ich habe dich zum Nachdenken gebracht."
+    show geo_a11_komaru1 at l,ah('geo') with quickergradientwiperight
+    geo "\"Ähm....... "
+    show geo_a11_komaru3 at l,ah('geo')
+    hide geo_a11_komaru1
+    extend "....Oh.... "
+    extend "....Hahahaha, aber ich habe dich zum Nachdenken gebracht."
+    show geo_a11_hohoemi1 at l,ah('geo')
+    hide geo_a11_komaru3
     geo "Meine Mutter hat so eine Zeitschrift, und ab und zu schaue ich auch mal rein.\""
-    but "\"....Hihihi, du hast nur Pech gehabt, dass ich vor der Abreise auf der Toilette so ein Yoga-Magazin in der Hand hatte, weil ich mich vergriffen habe.\""
-    geo "\"Ein echter Sturmgott ist jedoch Aigaion aus der griechischen Mythologie.\""
-    but "\"....Ein leckerer Teller Gyros-Geschnetzeltes ist das einzige Griechische, das ich schätze....."
-    but "Namnamnamnam\""
-    geo ".........."
-    geo "\"Jedenfalls kann dieser Gott Meeresstürme auslösen, wie wir ihn heute erleben.\""
+    show but_b11_warai2 at r,ah('but')
+    hide but_b23_nayamu2
+    but "\"....Hihihi.... " 
+    extend "....Du hast nur Pech gehabt, dass ich vor der Abreise auf der Toilette so ein Yoga-Magazin in der Hand hatte, weil ich mich vergriffen habe.\""
+    geo "\"Was es manchmal für Zufälle gibt.\""
+    show geo_a11_defo1 at l,ah('geo')
+    hide geo_a11_hohoemi1
+    geo "Eine kurze Erklärung für dionysisch wäre, dass es eine Spiritualität der Ekstaze, Musik und des Tanzes ist.....\""
+    but "\"Mehr nicht? "
+    extend "Klingt ja nicht sehr originell.\""
+    geo "\"Da kommt noch was und zwar..... "
+    extend "uhmmmm na ja.... "
+    extend "hehe, wie soll ich sagen?"
+    geo "Es ist auch eine Spiritualität der.... "
+    extend "uhmm.... "
+    extend "....Sexualität\""
+    but "\"Sehr stark, das muss ich mal ausprobieren! "
+    extend "...Ihihihi.....\""
+    jes "\"...Trottel! "
+    extend "....Du Holzkopf! "
+    extend "......War ja zu erwarten, dass das deine einzige Motivation ist, Trottel-Battler."
+    jes "Perverser Battler! "
+    extend "...Du bist sofort Feuer und Flamme, sobald es auch nur im Entferntesten in diese Richtung geht....\""
+    but "\".....Ihihihihi.... "
+    extend "Tut mir leid....\""
+    geo "\"Tantrisch ist das Tantra. "
+    extend "....Es ist ein Begriff ursprünglich aus Indien, und wird mit \"Zusammenhang\" oder auch \"Gefüge\" übersetzt. "
+    extend "....Berührungen des Körpers sollen also auch die Seele berühren, sie nähren."
+    geo "Es ist ein sehr breites Thema... "
+    extend ".........Ja....."
+    jes "Das klingt für mich so, als hätte jemand einen Vorwand gesucht mit einem anderen Menschen engen Kontakt zu haben...."
+    but "Ja, " 
+    extend ".....letztlich läuft alles darauf hinaus, dass man in gewisser Weise seine Lust wiederbelebt.... "
+    extend "Wenn wir so darüber reden, klingt es absolut lächerlich..."
+    geo "Ahahahaha...."
+    extend "Ich denke da hast du Recht... "
+    extend "Ach ja.... Wusstest du?.... "
+    extend "....Ein echter Sturmgott aus der griechischen Mythologie. ist jedoch Aigaion.\""
+    show but_b24_futeki3 at r,ah('but')
+    hide but_b11_warai2
+    but "\"....Ein leckerer Teller Gyros-Geschnetzeltes ist das einzige Griechische, das ich schätze..... "
+    show but_b24_warai1 at r,ah('but')
+    hide but_b24_futeki3
+    extend "Yumyumyumyum....\""
+    geo "\".......... "
+    extend "Jedenfalls kann dieser Gott Meeresstürme auslösen, ähnlich wie wir ihn heute erleben.\""
     but "\"Du willst mir also sagen, dass irgendeine Gottheit, auf die wir keinen Einfluss haben, diesen Sturm ausgelöst hat?\""
     geo "\"......Hmm......"
     geo "So könnte man es ausdrücken ja!\""
@@ -454,7 +562,7 @@ label chapter1:
     """
     Die Worte von Hideyoshi und George haben Jessica sehr gut aufgemuntert.
 
-    Man sieht deutlich, wie Jessica wieder lächelt.
+    Man sieht deutlich, wie Jessica wieder ein wenig lächelt.
     """
     eva "\"Hey, sieht so aus, als wären wir gleich da, Battler-kun..."
     eva "Wusstest du, dass die Seekrankheit auch noch nach der Reise anhalten kann?\""

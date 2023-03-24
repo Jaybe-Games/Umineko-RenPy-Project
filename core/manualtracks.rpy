@@ -15,7 +15,6 @@ init python:
     priority = 0,
     author = "BatterVoice",
     cover_art = False,
-    #unlocked = renpy.seen_audio("bgm/09 Easy.mp3")
     )     
     ost.manualDefineList.append(zeroopfull)
 
@@ -26,7 +25,6 @@ init python:
     priority = 1,
     author = "Pennoink",
     cover_art = False,
-    #unlocked = renpy.seen_audio("bgm/09 Easy.mp3")
     )     
     ost.manualDefineList.append(mmtheme)
 
@@ -37,7 +35,6 @@ init python:
     priority = 2,
     author = "Pureco",
     cover_art = False,
-    #unlocked = renpy.seen_audio("bgm/09 Easy.mp3")
     )     
     ost.manualDefineList.append(death_door)
 
@@ -47,7 +44,6 @@ init python:
     priority = 3,
     author = "Dai",
     cover_art = False,
-    #unlocked = renpy.seen_audio("bgm/09 Easy.mp3")
     )     
     ost.manualDefineList.append(hane)
 

@@ -35,4 +35,9 @@ default persistent.kanon = False
 default persistent.goldenwitch = False
 
 default persistent.tip1 = False
+default persistent.tip2 = False
+default persistent.tip3 = False
 default persistent.musicbox = False
+
+default persistent.textbox = 0
+default persistent.textboxswitch = 0

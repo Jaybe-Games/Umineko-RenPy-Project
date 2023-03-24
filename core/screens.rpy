@@ -124,20 +124,26 @@ style frame:
 ##
 ## https://www.renpy.org/doc/html/screen_special.html#say
 
-screen say(who, what):
+screen say(who, what, slow_effect = slow_typewriter, slow_effect_delay = 0, always_effect = None):
     style_prefix "say"
 
     window:
         id "window"
 
         if who is not None:
+                if persistent.textbox == 2:
+                    window:
+                        id "namebox"
+                        style "namebox1"
+                        text who id "who"
+                elif persistent.textbox == 0 or 1:
+                    window:
+                        id "namebox"
+                        style "namebox"
+                        text who id "who"
 
-            window:
-                id "namebox"
-                style "namebox"
-                text who id "who"
 
-        text what id "what"
+        fancytext what id "what" slow_effect slow_effect slow_effect_delay slow_effect_delay always_effect always_effect
 
 
     ## If there's a side image, display it above the text. Do not display on the
@@ -151,20 +157,42 @@ init python:
     config.character_id_prefixes.append('namebox')
 
 style window is default
+style window1 is default
+style window2 is default
+style window3 is default
 style say_label is default
 style say_dialogue is default
 style say_thought is say_dialogue
-
 style namebox is default
+style namebox1 is default
+style namebox2 is default
 style namebox_label is say_label
 
+style window1:
 
-style window:
     xalign 0.5
     xfill True
     yalign gui.textbox_yalign
     ysize gui.textbox_height
+    background Image("gui/textboxB.png", xalign=0.5, yalign=1.0)
 
+
+style window2:
+
+    xalign 0.5
+    xfill True
+    yalign gui.textbox_yalign
+    ysize gui.textbox_height
+    background Image("gui/textboxC.png", xalign=0.5, yalign=1.0)
+
+   
+
+style window:
+
+    xalign 0.5
+    xfill True
+    yalign gui.textbox_yalign
+    ysize gui.textbox_height
     background Image("gui/textbox.png", xalign=0.5, yalign=1.0)
 
 style namebox:
@@ -176,6 +204,18 @@ style namebox:
 
     background Frame("gui/namebox.png", gui.namebox_borders, tile=gui.namebox_tile, xalign=gui.name_xalign)
     padding gui.namebox_borders.padding
+
+style namebox1:
+    xpos gui.name_xpos
+    xanchor gui.name_xalign
+    xsize gui.namebox_width
+    ypos gui.name_ypos
+    ysize gui.namebox_height
+
+    background Frame("gui/nameboxC.png", gui.namebox_borders, tile=gui.namebox_tile, xalign=gui.name_xalign)
+    padding gui.namebox_borders.padding
+
+
 
 style say_label:
     properties gui.text_properties("name", accent=True)
@@ -280,8 +320,8 @@ screen quick_menu():
             xalign 0.0
             yalign 0.0
 
-            imagebutton auto "gui/button/quickbuttonautomode_%s.png" action Preference("auto-forward", "toggle") xpos 1850 ypos 25 activate_sound "audio/sfx/umise_1005.ogg"
-            imagebutton auto "gui/button/quickbuttonskip_%s.png" action Skip() alternate Skip(fast=True, confirm=True) xpos 1825 ypos 25 activate_sound "audio/sfx/umise_1005.ogg"
+            imagebutton auto "gui/button/quickbuttonautomode_%s.png" action Preference("auto-forward", "toggle") xpos 1850 ypos 25
+            imagebutton auto "gui/button/quickbuttonskip_%s.png" action Skip() alternate Skip(fast=True, confirm=True) xpos 1825 ypos 25
 
 
 ## This code ensures that the quick_menu screen is displayed in-game, whenever
@@ -348,7 +388,7 @@ screen navigation():
 
                 imagebutton auto "gui/button/load_%s.png" action [ShowMenu("load"), Hide('loadhover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" hovered Show('loadhover') unhovered Hide('loadhover')
 
-                imagebutton auto "gui/button/settings_%s.png" action [ShowMenu("preferences")] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+                imagebutton auto "gui/button/settings_%s.png" action [ShowMenu("preferences"), Hide('settingshover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" hovered Show('settingshover') unhovered Hide('settingshover')
 
                 imagebutton auto "gui/button/credits_%s.png" action [ShowMenu("about"), Hide('creditshover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" hovered Show('creditshover') unhovered Hide('creditshover')
 
@@ -376,32 +416,6 @@ screen navigation():
             text "Aktueller Soundtrack: " + songname ypos 1005 xpos 1900 xalign 1.0 size 30 font "fonts/AOTFShinGoProMedium.otf" outlines [ (absolute(3), "#000", absolute(0), absolute(0)) ]
 
             text "Aktuelle Spielzeit: [minutes]:[seconds:02d]" ypos 1040 xpos 1900 xalign 1.0 size 30 font "fonts/AOTFShinGoProMedium.otf" outlines [ (absolute(3), "#000", absolute(0), absolute(0)) ]
-
-
-
-        #if renpy.variant("pc") or (renpy.variant("web") or main_menu and not renpy.variant("mobile")):
-
-            ## Help isn't necessary or relevant to mobile devices.
-            #textbutton _("Hilfe") action ShowMenu("help")
-            #imagebutton auto "gui/button/help_%s.png" action ShowMenu("help") xpos 1350 ypos 670 activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" hovered Show('helphover') unhovered Hide('helphover')
-
-        #if renpy.variant("pc") or (renpy.variant("web") and not main_menu and not renpy.variant("mobile")):
-
-        ## Help isn't necessary or relevant to mobile devices.
-        #textbutton _("Hilfe") action ShowMenu("help")
-            #imagebutton auto "gui/button/help_%s.png" action ShowMenu("help") xpos 1350 ypos 670 activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
-
-        #if main_menu and renpy.variant("pc"):
-
-            ## The quit button is banned on iOS and unnecessary on Android and
-            ## Web.
-            #imagebutton auto "gui/button/quit_%s.png" action Quit(confirm=not main_menu) xpos 1350 ypos 787 activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" hovered Show('quithover') unhovered Hide('quithover')
-
-        #if renpy.variant("mobile") and not main_menu:
-
-            #imagebutton auto "gui/button/mainmenu_%s.png" action MainMenu() xpos 1292 ypos 787 activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
-
-            #imagebutton auto "gui/button/history_%s.png" action ShowMenu("history") xpos 1292 ypos 670 activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
 
 
 
@@ -863,6 +877,7 @@ screen preferences():
 
             hbox:
                 box_wrap True
+                spacing -50
 
                 if renpy.variant("pc") or renpy.variant("web"):
 
@@ -873,8 +888,6 @@ screen preferences():
                         label _("{color=#fff}Anzei{/color}{color=#f00}g{/color}{color=#fff}e{/color}") xpos 130
                         imagebutton auto "gui/button/window_%s.png" action Preference("display", "window") activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" xpos 100
                         imagebutton auto "gui/button/full_%s.png" action Preference("display", "fullscreen") activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" xpos 100
-                        #textbutton _("Fen{color=#f00}s{/color}ter") action Preference("display", "window") activate_sound "audio/sfx/umise_1005.ogg"
-                        #textbutton _("Voll{color=#f00}b{/color}ild") action Preference("display", "fullscreen") activate_sound "audio/sfx/umise_1005.ogg"
 
                 vbox:
 
@@ -883,7 +896,6 @@ screen preferences():
                     xalign 0.0
                     label _("{color=#fff}Übers{/color}{color=#f00}p{/color}{color=#fff}ringen{/color}") xpos 80
                     imagebutton auto "gui/button/unread_%s.png" action Preference("skip", "toggle") activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" xpos 100
-                    #textbutton _("Unge{color=#f00}l{/color}esen") action Preference("skip", "toggle") activate_sound "audio/sfx/umise_1005.ogg"
 
                 
                 vbox:
@@ -895,7 +907,19 @@ screen preferences():
                     imagebutton auto "gui/button/de_%s.png" action Language(None) activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" xpos 100
                     imagebutton auto "gui/button/en_%s.png" action Language("English") activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" xpos 100
 
-            null height (4 * gui.pref_spacing)
+                vbox:
+
+                    style_prefix "check"
+                    spacing -30
+                    xalign 0.0
+                    label _("{color=#fff}Textb{/color}{color=#f00}o{/color}{color=#fff}x{/color}") xpos 130
+
+                    imagebutton auto "gui/button/tba_%s.png" action [SetVariable("persistent.textbox", 0),renpy.force_autosave] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" xpos 100
+                    imagebutton auto "gui/button/tbb_%s.png" action [SetVariable("persistent.textbox", 1),renpy.force_autosave] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" xpos 100
+                    imagebutton auto "gui/button/tbc_%s.png" action [SetVariable("persistent.textbox", 2),renpy.force_autosave] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" xpos 100
+                    text "Erfordert Neustart." xpos 100 size 20 ypos 10
+
+            null height (0 * gui.pref_spacing)
 
             hbox:
                 style_prefix "slider"
@@ -1656,8 +1680,8 @@ screen extra():
         else:
             imagebutton auto "gui/button/locked_%s.png" action [NullAction(), Hide('locked')] hover_sound "audio/sfx/click-21156.mp3" hovered Show('locked') unhovered Hide('locked')
 
-        if persistent.tip1 == True:
-            imagebutton auto "gui/button/tip_%s.png" action [ShowMenu("tips"), Hide('tiphover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" hovered Show('tiphover') unhovered Hide('tiphover')
+        if persistent.tipunlocked == True:
+            imagebutton auto "gui/button/tip_%s.png" action [ShowMenu("wiki_index"), Hide('tiphover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" hovered Show('tiphover') unhovered Hide('tiphover')
         else:
             imagebutton auto "gui/button/locked_%s.png" action [NullAction(), Hide('locked')] hover_sound "audio/sfx/click-21156.mp3" hovered Show('locked') unhovered Hide('locked')
 
@@ -2002,33 +2026,82 @@ screen char21:
     text "Beatrice die Goldene" style 'bigtext' at Position(xpos = 75, ypos = 420)
     text "Hier sollten Infos über Beatrice stehen." style 'menutext2' at Position (xpos = 60, ypos = 490)
 
-screen tips:
+define config.hyperlink_protocol = "showmenu"
+
+screen wiki_index():
+
     tag menu
-    imagemap:
-        ground "images/menu/tips.png" at center
-    image hovermenutips at right
 
-    textbutton "Zur{color=#f00}ü{color=#fff}ck" style "button_back" action Return()
 
-    vbox:
-        xalign 0.5
-        yalign 0.0
-        ypos 250
-        xpos 1520
+    use game_menu(_("Tipps & Grimoire")):
+
+        vbox:
+            if persistent.tip1 == True:
+                text _p("""
+
+                • {a=wiki_hina}Hinamizawa{/a}{p}
+                """)
+
+            elif persistent.tip2 == True:
+                text _p("""
+
+                • {a=wiki_hina}Hinamizawa{/a}{p}
+                • {a=wiki_crazy}Meschugge{/a}{p}
+                """)
+
+            elif persistent.tip3 == True:
+                text _p("""
+
+                • {a=wiki_hina}Hinamizawa{/a}{p}
+                • {a=wiki_crazy}Meschugge{/a}{p}
+                • {a=wiki_spirit}Tantrisch & Dionysisch{/a}{p}
+                """)
+
+screen wiki_hina():
+
+    tag menu
+
+    use game_menu(_("Hinamizawa")):
+
+        text _p("""
+
+            Das Dorf Hinamizawa gehörte zum Verwaltungsbezirk Shishibone. Es hatte knapp 2000 Einwohner.
+            Aufgrund seiner Größe und weil ein Teil der Kinder die Schule im nahe gelegenen Okinomiya besuchte, 
+            gab es in Hinamizawa nur eine Schule mit einem Klassenraum.
+            Jeder Einwohner kannte das Gesicht des anderen, da man sich täglich begegnete.
+            Auch wenn jemand erst vor kurzem zugezogen war.
+            Mit anderen Worten: Wenn man jemanden traf, den man nicht kannte, 
+            dachte man automatisch: Das muss .... sein, der gerade hierher gezogen ist.
+            Früher glaubte man, dass jeder, der aus dem Dorf wegzog, oder ein Fremder, der ins Dorf kam, 
+            der das Dorf betritt, von Oyashiro-sama verflucht wird.
+
+            Das Dorf ist seit 1983 verlassen, nachdem die Bewohner von Zwei Trägodien heimgesucht wurden.
+
+
+            {a=wiki_index}Zurück zum Index{/a}
+            """) size 30 font "fonts/ArnoPro.otf"
+
+screen wiki_crazy():
+
+    tag menu
+
+    use game_menu(_("Meschugge")):
+
+        text _p("""
         
+                Im deutschen Sprachgebrauch wird das Wort auch als abgeschwächte Form von „verrückt“ oder „überspannt“ verwendet. 
+                In Leo Rostens Werk Jiddisch heißt es – so Christoph Gutknecht in der Jüdischen Allgemeinen – 
+                „Der starke Zischlaut in der Mitte und das wuchtige ›ugg‹ bilden eine überzeugende Lautkombination, 
+                die das Wort seit dem 19. Jahrhundert vor allem in Berlin und anderen Großstädten durchgesetzt haben“. 
+                Das Neue Berliner Schimpfwörterbuch aus dem Jahre 2005 zitierte das Beispiel: 
+                „Der macht mir janz meschugge mit sein Jequatsche“, 
+                das beweise, „dass es sich hier meist um einen vorübergehenden Zustand handelt.“
 
-        text "Tipps" xpos 45 size 60
-        textbutton _("Hinamizawa") action NullAction() hovered Show('tip1') unhovered Hide('tip1') hover_sound "audio/sfx/click-21156.mp3"
-
-screen tip1:
-    tag hover
-    imagemap:
-        ground "gui/hovermenu3.png" at left
-    text "Dorf Hinamizawa" style 'bigtext' at Position(xpos = 75, ypos = 230)
-    text "Das fiktive Dorf Hinamizawa gehörte zum Verwaltungsbezirk Shishibone.\nEs hatte knapp 2000 Einwohner. Aufgrund der Größe und\nweil ein Teil der Kinder die Schule im nahen Okinomiya besuchten,\ngab es in Hinamizawa nur eine Schule mit nur einem Klassenzimmer.\nJeder Einwohner kannte das Gesicht des anderen, da sie sich täglich begegneten.\nAuch wenn jemand erst vor kurzer Zeit hergezogen ist. In anderen Worten:\nWenn man auf eine Person traf, die man nicht kennt,\ndachte man automatisch: Das muss .... sein, der/die\nvor kurzem hierher gezogen ist.\n\nCharakteristisch für das Dorf war, dass man früher glaubte,\ndass jeder, der das Dorf verlässt, oder ein Außenstehender, der das Dorf betritt,\nvon Oyashiro-sama verflucht werden würde.\nDas Dorf ist jedoch seit 1983 verlassen, nachdem es von\nzwei schrecklichen Tragödien heimgesucht wurde." style 'menutext2' at Position (xpos = 60, ypos = 300)
+                Quelle: {a=https://de.wikipedia.org/wiki/Meschugge}Wikipedia (Deutscher Link){/a}
 
 
-define hovermenutips = "gui/hovermenutips.png"
+            {a=wiki_index}Zurück zum Index{/a}
+            """) size 30 font "fonts/ArnoPro.otf"
 ################################################################################
 ## Mobile Variants
 ################################################################################

@@ -451,7 +451,7 @@ init python:
         gui.choice_button_text_size = 45
 
         gui.navigation_spacing = 30
-        gui.pref_button_spacing = 15
+        gui.pref_button_spacing = 5
 
         gui.history_height = 200
         gui.history_text_width = 490

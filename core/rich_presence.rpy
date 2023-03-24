@@ -15,7 +15,7 @@ define config.start_callbacks += [discord.reset]
 
 # Triggers when entering a new label. This is responsible for setting start_state.
 define config.label_callback = discord.set_start  # Delete this line in Ren'Py 8.1 or newer.
-# define config.label_callbacks += [discord.set_start] # Uncomment this line in Ren'Py 8.1 or newer.
+#define config.label_callbacks += [discord.set_start] # Uncomment this line in Ren'Py 8.1 or newer.
 
 init -950 python in discord:
 

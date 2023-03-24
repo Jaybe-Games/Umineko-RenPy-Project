@@ -45,9 +45,11 @@ label start:
 
     """
     $ Achievement.add(achievement_bronze1)
+    $ persistent.wiki_unlocked.add("wiki_hina")
     play sound "audio/sfx/umise_1060.ogg"
     $ renpy.notify("Das Tippsmenü wurde unter \"Extras\" freigeschaltet.")
     $ persistent.tip1 = True
+    $ persistent.tipunlocked = True
     """
 
     Über den Fall im Dorf {note_green}Hinamizawa{/note_green} wurde in einigen Massenmedien berichtet.
