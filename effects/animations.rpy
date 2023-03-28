@@ -2,7 +2,7 @@ label butterfly1:
 
 play sound "audio/sfx/umise_022.ogg"
 show butterfly1
-pause(2.463)
+pause(2.495)
 show no83_0051
 return
 
@@ -11,7 +11,7 @@ label hidebf1:
 
 play sound "audio/sfx/umise_022.ogg"
 show butterfly1_0
-pause(0.05)
+pause(0.20)
 hide no83_0051
 return
 

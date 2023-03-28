@@ -76,3 +76,4 @@ init python:
         return new_list
 
     config.custom_text_tags["glitch"] = glitch_tag
+

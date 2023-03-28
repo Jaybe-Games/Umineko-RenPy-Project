@@ -19,11 +19,10 @@ pause (4)
 play sound "audio/sfx/umise_052.ogg"
 show moon_1p with w20
 call rain_layer1
-
 pause(2)
-"\"Hey! "
-extend "Du da! "
-extend "Erklär mir bitte, wie du hierher gekommen bist."
+"\"Hey!"
+extend " Du da!"
+extend " Erklär mir bitte, wie du hierher gekommen bist."
 window hide
 call butterfly1
 window show
@@ -41,9 +40,9 @@ $ Achievement.add(achievement_silver2)
 "Es gibt nichts Befriedigenderes, als eine ganze Community zu verschaukeln, weil es Umineko ist, aber vergesst nicht, dass Umineko eine Katzenbox voller Geheimnisse ist."
 "Und diese Katzenbox ist eine ganz besondere, denn hier werden Dinge gemacht, die untypisch für die Katzenbox von Beatrice sind. Also lasst euch nicht reinlegen und fangt an nachzudenken."
 "Damit sollte ich eure grauen Gehirnzellen zum Arbeiten gebracht haben, obwohl dieser Ort dafür gar nicht nötig gewesen wäre, da diese Katzenbox schon genug Verwirrung stiftet."
-"Mensch, " 
-extend "hast du gar nichts zu sagen? "
-extend "Dann benutze ich jetzt meine Macht als Autor, um dich zurück zum Hauptmenü zu bringen."
+"Mensch," 
+extend " hast du gar nichts zu sagen?"
+extend " Dann benutze ich jetzt meine Macht als Autor, um dich zurück zum Hauptmenü zu bringen."
 "Aber denk daran, wenn du zurückkommst, werde ich mich nicht mehr an dich erinnern, denn ich bin nur der Autor, ich weiß nicht, wer mich an diesem stillen Ort belästigt."
 "Ich bin sicher, dass ich dir genau dasselbe noch einmal erzählen werde."
 "Also dann, lebe wohl.\""

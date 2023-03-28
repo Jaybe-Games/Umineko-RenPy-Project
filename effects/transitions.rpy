@@ -19,4 +19,4 @@ define quickgradientcirclefade = ImageDissolve("/images/masks/circle.png", 0.5, 
 define flash = Fade(.25, 0, .25, color="#fff")
 define quickflash = Fade(.0, 0.5, 0.25, color="#fff")
 define openfade = Fade(1.5, 2.0, 2.0, color="#fff")
-define fastdissolve = Dissolve(0.5)
+define fastdissolve = Dissolve(0.2)

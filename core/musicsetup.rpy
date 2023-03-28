@@ -51,7 +51,7 @@ init python:
     # alias : "Song Title",
     music_dictionary = {
         deaths_door : "At Death's Door",
-        hane : "HANE",
+        hane : "HANE (Feathers)",
         ride_on : "Ride on",
         summer : "Door of Summer"
     }

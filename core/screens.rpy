@@ -392,7 +392,7 @@ screen navigation():
 
                 imagebutton auto "gui/button/credits_%s.png" action [ShowMenu("about"), Hide('creditshover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" hovered Show('creditshover') unhovered Hide('creditshover')
 
-                imagebutton auto "gui/button/help_%s.png" action [ShowMenu("help")] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+                imagebutton auto "gui/button/help_%s.png" action [ShowMenu("help"), Hide('helphover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" hovered Show('helphover') unhovered Hide('helphover')
 
                 imagebutton auto "gui/button/extra_%s.png" action [ShowMenu("extra"), Hide('extrahover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" hovered Show('extrahover') unhovered Hide('extrahover')
 
@@ -914,9 +914,9 @@ screen preferences():
                     xalign 0.0
                     label _("{color=#fff}Textb{/color}{color=#f00}o{/color}{color=#fff}x{/color}") xpos 130
 
-                    imagebutton auto "gui/button/tba_%s.png" action [SetVariable("persistent.textbox", 0),renpy.force_autosave] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" xpos 100
-                    imagebutton auto "gui/button/tbb_%s.png" action [SetVariable("persistent.textbox", 1),renpy.force_autosave] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" xpos 100
-                    imagebutton auto "gui/button/tbc_%s.png" action [SetVariable("persistent.textbox", 2),renpy.force_autosave] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" xpos 100
+                    imagebutton auto "gui/button/tba_%s.png" action [SetVariable("persistent.textbox", 0),renpy.force_autosave, Show("confirmrestart")] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" xpos 100
+                    imagebutton auto "gui/button/tbb_%s.png" action [SetVariable("persistent.textbox", 1),renpy.force_autosave, Show("confirmrestart")] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" xpos 100
+                    imagebutton auto "gui/button/tbc_%s.png" action [SetVariable("persistent.textbox", 2),renpy.force_autosave, Show("confirmrestart")] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" xpos 100
                     text "Erfordert Neustart." xpos 100 size 20 ypos 10
 
             null height (0 * gui.pref_spacing)
@@ -2102,6 +2102,34 @@ screen wiki_crazy():
 
             {a=wiki_index}Zurück zum Index{/a}
             """) size 30 font "fonts/ArnoPro.otf"
+
+screen confirmrestart():
+
+    modal True
+
+    window:
+        style "gm_root"
+
+    frame:
+        style_prefix "confirm"
+
+        xfill True
+        xmargin 50
+        ypadding 25
+        yalign .25
+
+        vbox:
+            xfill True
+            spacing 25
+
+            text(""" 
+Das ändern der Textbox erfordert einen Neustart, dein Fortschritt wurde gespeichert.
+            """) text_align 0.5 xalign 0.5
+
+            hbox:
+                spacing 100
+                xalign .5
+                textbutton _("Bestätigen") action Quit(confirm=False)
 ################################################################################
 ## Mobile Variants
 ################################################################################

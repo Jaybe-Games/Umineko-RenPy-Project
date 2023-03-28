@@ -300,7 +300,6 @@ define gui.notify_frame_borders = Borders(24, 8, 60, 8)
 ## Should frame backgrounds be tiled?
 define gui.frame_tile = False
 
-
 ## Bars, Scrollbars, and Sliders ###############################################
 ##
 ## These control the look and size of bars, scrollbars, and sliders.

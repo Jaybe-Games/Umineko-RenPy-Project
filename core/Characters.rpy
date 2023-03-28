@@ -33,8 +33,6 @@ init python:
     # Curried form of the same.
     speaker = renpy.curry(speaker_callback)
 
-
-
 define bea = Character('     BEATRICE{image=gui/wing.png}{alt}wing{/alt}    ', color="#fff", callback=name_callback, cb_name='bea', ctc="ctc_blink", ctc_position="nestled-close", show_slow_effect = slow_fade, show_slow_effect_delay = 0.1)
 define kin = Character('     Kinzo{image=gui/wing.png}{alt}wing{/alt}    ', color="#fff", callback=name_callback, cb_name='kin', ctc="ctc_blink", ctc_position="nestled-close", show_slow_effect = slow_fade, show_slow_effect_delay = 0.1)
 define cla = Character('     Krauss{image=gui/wing.png}{alt}wing{/alt}    ', color="#fff", callback=name_callback, cb_name='cla', ctc="ctc_blink", ctc_position="nestled-close", show_slow_effect = slow_fade, show_slow_effect_delay = 0.1)
