@@ -10,10 +10,10 @@ init python:
     ######################################
 
     zeroopfull = ost.soundtrack(
-    name = "Katayoku no Tori", 
-    path = "audio/bgm/zeroopfull.ogg",
+    name = "Gold Dream Symphony", 
+    path = "audio/bgm/op.ogg",
     priority = 0,
-    author = "BatterVoice",
+    author = "aFlowerSmiles",
     cover_art = False,
     )     
     ost.manualDefineList.append(zeroopfull)

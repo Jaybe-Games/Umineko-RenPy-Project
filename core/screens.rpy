@@ -907,19 +907,21 @@ screen preferences():
                     imagebutton auto "gui/button/de_%s.png" action Language(None) activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" xpos 100
                     imagebutton auto "gui/button/en_%s.png" action Language("English") activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" xpos 100
 
-                vbox:
+                if main_menu:
 
-                    style_prefix "check"
-                    spacing -30
-                    xalign 0.0
-                    label _("{color=#fff}Textb{/color}{color=#f00}o{/color}{color=#fff}x{/color}") xpos 130
+                    vbox:
 
-                    imagebutton auto "gui/button/tba_%s.png" action [SetVariable("persistent.textbox", 0),renpy.force_autosave, Show("confirmrestart")] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" xpos 100
-                    imagebutton auto "gui/button/tbb_%s.png" action [SetVariable("persistent.textbox", 1),renpy.force_autosave, Show("confirmrestart")] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" xpos 100
-                    imagebutton auto "gui/button/tbc_%s.png" action [SetVariable("persistent.textbox", 2),renpy.force_autosave, Show("confirmrestart")] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" xpos 100
-                    text "Erfordert Neustart." xpos 100 size 20 ypos 10
+                        style_prefix "check"
+                        spacing -30
+                        xalign 0.0
+                        label _("{color=#fff}Textb{/color}{color=#f00}o{/color}{color=#fff}x{/color}") xpos 130
 
-            null height (0 * gui.pref_spacing)
+                        imagebutton auto "gui/button/tba_%s.png" action [SetVariable("persistent.textbox", 0),renpy.force_autosave, Show("confirmrestart")] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" xpos 100
+                        imagebutton auto "gui/button/tbb_%s.png" action [SetVariable("persistent.textbox", 1),renpy.force_autosave, Show("confirmrestart")] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" xpos 100
+                        imagebutton auto "gui/button/tbc_%s.png" action [SetVariable("persistent.textbox", 2),renpy.force_autosave, Show("confirmrestart")] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" xpos 100
+                        text "Erfordert Neustart." xpos 100 size 20 ypos 10
+
+            null height (2 * gui.pref_spacing)
 
             hbox:
                 style_prefix "slider"
@@ -2036,20 +2038,20 @@ screen wiki_index():
     use game_menu(_("Tipps & Grimoire")):
 
         vbox:
-            if persistent.tip1 == True:
+            if persistent.tip == 1:
                 text _p("""
 
                 • {a=wiki_hina}Hinamizawa{/a}{p}
                 """)
 
-            elif persistent.tip2 == True:
+            elif persistent.tip == 2:
                 text _p("""
 
                 • {a=wiki_hina}Hinamizawa{/a}{p}
                 • {a=wiki_crazy}Meschugge{/a}{p}
                 """)
 
-            elif persistent.tip3 == True:
+            elif persistent.tip == 3:
                 text _p("""
 
                 • {a=wiki_hina}Hinamizawa{/a}{p}
@@ -2079,7 +2081,7 @@ screen wiki_hina():
 
 
             {a=wiki_index}Zurück zum Index{/a}
-            """) size 30 font "fonts/ArnoPro.otf"
+            """) size 40 font "fonts/ArnoPro.otf"
 
 screen wiki_crazy():
 
@@ -2101,7 +2103,7 @@ screen wiki_crazy():
 
 
             {a=wiki_index}Zurück zum Index{/a}
-            """) size 30 font "fonts/ArnoPro.otf"
+            """) size 40 font "fonts/ArnoPro.otf"
 
 screen confirmrestart():
 
