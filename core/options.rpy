@@ -23,7 +23,7 @@ define gui.show_name = False
 
 ## The version of the game.
 
-define config.version = "notdefined"
+define config.version = "0.0.1"
 
 
 ## Text that is placed on the game's about screen. Place the text between the
@@ -72,13 +72,15 @@ define config.main_menu_music = "audio/bgm/umib_000.ogg"
 
 ## Entering or exiting the game menu.
 
-define config.enter_transition = dissolve
-define config.exit_transition = dissolve
+define config.enter_transition = ImageDissolve("images/masks/circle.png", 2.0, reverse=True, ramplen = 100)
+define config.enter_sound = "audio/sfx/umise_1001.ogg"
+define config.exit_transition = ImageDissolve("images/masks/circle.png", 0.5, reverse=True, ramplen = 100)
+define config.exit_sound = "audio/sfx/umise_1006.ogg"
 
 
 ## Between screens of the game menu.
 
-define config.intra_transition = dissolve
+define config.intra_transition = ImageDissolve("images/masks/circle.png", 1.0, reverse=True, ramplen = 100)
 
 
 ## A transition that is used after a game has been loaded.
@@ -97,12 +99,25 @@ define config.adv_nvl_transition = dissolve
 
 define config.game_main_transition = dissolve
 
-define config.exit_yesno_transition = dissolve
+define config.exit_yesno_transition = ImageDissolve("images/masks/circle.png", 1.0, reverse=True, ramplen = 100)
+
+define config.enter_yesno_transition = ImageDissolve("images/backgrounds/different_spiral_1a.png",0.6,reverse=False, ramplen = 30)
 
 define config.say_attribute_transition = dissolve
 
 define config.manage_gc = True
 
+define config.after_load_transition = MultipleTransition([
+    True, Dissolve(0.0),
+    "images/system/ware2.png", Pause(2.0),
+    "images/system/ware2.png", dissolve,
+    True])
+
+define config.main_game_transition = MultipleTransition([
+    True, Dissolve(0.0),
+    "images/system/ware2.png", Pause(2.0),
+    "images/system/ware2.png", dissolve,
+    True])
 
 ## A variable to set the transition used when the game starts does not exist.
 ## Instead, use a with statement after showing the initial scene.
@@ -155,7 +170,7 @@ default preferences.afm_time = 10
 ## This generally should not be changed, and if it is, should always be a
 ## literal string, not an expression.
 
-define config.save_directory = "WHENTHEYCRY0-1673137931"
+define config.save_directory = "whentheycry0"
 
 
 ## Icon ########################################################################

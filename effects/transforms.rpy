@@ -27,6 +27,13 @@ transform r2:
     yanchor 1.0
     ypos 1200
 
+transform r3:
+    xanchor 0.5
+    xpos 980
+
+    yanchor 1.0
+    ypos 1200
+
 transform l2:
     xanchor 0.5
     xpos 880

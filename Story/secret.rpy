@@ -1,3 +1,5 @@
+image blackpic = "images/system/black.png"
+
 label supersecret:
 
 $ discord.update(state = "Talking with the Author")
@@ -9,16 +11,18 @@ play sound "audio/sfx/umise_1006.ogg"
 show main_menu
 show ware
 stop music fadeout 2.0
-pause(4)
+pause(7)
 scene black with dissolve
+show moon_1p
+call rain_layer1
+show blackpic
 pause(5)
 play wind "audio/sfx/umilse_005.ogg" fadein 3.0
 pause(5)
 play rain "audio/sfx/umilse_012.ogg" fadein 3.0
 pause (4)
 play sound "audio/sfx/umise_052.ogg"
-show moon_1p with w20
-call rain_layer1
+hide blackpic with gradientcirclefade
 pause(2)
 "\"Hey!"
 extend " Du da!"
@@ -50,7 +54,7 @@ window hide
 call hidebf1
 pause(5)
 play sound "audio/sfx/umise_056.ogg"
-scene black with w20
+scene black with gradientcirclefade
 stop wind fadeout 2.0
 stop rain fadeout 2.0
 pause(3)

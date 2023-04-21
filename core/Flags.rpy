@@ -25,5 +25,6 @@ default persistent.kanon = False
 default persistent.goldenwitch = False
 
 default persistent.tip = 0
+default persistent.tipunlocked = False
 default persistent.musicbox = False
 default persistent.textbox = 0

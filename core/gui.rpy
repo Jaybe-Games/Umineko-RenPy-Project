@@ -89,7 +89,7 @@ define gui.main_menu3_background = "gui/main_menu3.png"
 define gui.game_menu_background = "gui/game_menu.png"
 define gui.game_menu1_background = "gui/game_menu1.png"
 
-
+#default partObj = CustomParticles("images/system/particle.png", 5)
 ## Dialogue ####################################################################
 ##
 ## These variables control how dialogue is displayed on the screen one line at a

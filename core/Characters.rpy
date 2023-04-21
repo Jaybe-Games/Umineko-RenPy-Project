@@ -33,7 +33,7 @@ init python:
     # Curried form of the same.
     speaker = renpy.curry(speaker_callback)
 
-define bea = Character('     BEATRICE{image=gui/wing.png}{alt}wing{/alt}    ', color="#fff", callback=name_callback, cb_name='bea', ctc="ctc_blink", ctc_position="nestled-close", show_slow_effect = slow_fade, show_slow_effect_delay = 0.1)
+define bea = Character('     Beatrice{image=gui/wing.png}{alt}wing{/alt}    ', color="#fff", callback=name_callback, cb_name='bea', ctc="ctc_blink", ctc_position="nestled-close", show_slow_effect = slow_fade, show_slow_effect_delay = 0.1)
 define kin = Character('     Kinzo{image=gui/wing.png}{alt}wing{/alt}    ', color="#fff", callback=name_callback, cb_name='kin', ctc="ctc_blink", ctc_position="nestled-close", show_slow_effect = slow_fade, show_slow_effect_delay = 0.1)
 define cla = Character('     Krauss{image=gui/wing.png}{alt}wing{/alt}    ', color="#fff", callback=name_callback, cb_name='cla', ctc="ctc_blink", ctc_position="nestled-close", show_slow_effect = slow_fade, show_slow_effect_delay = 0.1)
 define nat = Character('     Natsuhi{image=gui/wing.png}{alt}wing{/alt}    ', color="#fff", callback=name_callback, cb_name='nat', ctc="ctc_blink", ctc_position="nestled-close", show_slow_effect = slow_fade, show_slow_effect_delay = 0.1)
@@ -52,8 +52,8 @@ define sha = Character('     Shannon{image=gui/wing.png}{alt}wing{/alt}    ', co
 define kan = Character('     Kanon{image=gui/wing.png}{alt}wing{/alt}    ', color="#fff", callback=name_callback, cb_name='kan', ctc="ctc_blink", ctc_position="nestled-close", show_slow_effect = slow_fade, show_slow_effect_delay = 0.1)
 define goh = Character('     Gohda{image=gui/wing.png}{alt}wing{/alt}    ', color="#fff", callback=name_callback, cb_name='goh', ctc="ctc_blink", ctc_position="nestled-close", show_slow_effect = slow_fade, show_slow_effect_delay = 0.1)
 define kum = Character('     Kumasawa{image=gui/wing.png}{alt}wing{/alt}    ', color="#fff", callback=name_callback, cb_name='kum', ctc="ctc_blink", ctc_position="nestled-close", show_slow_effect = slow_fade, show_slow_effect_delay = 0.1)
-define lam = Character('     LAMBDADELTA{image=gui/wing.png}{alt}wing{/alt}    ', color="#fff", callback=name_callback, cb_name='lam', ctc="ctc_blink", ctc_position="nestled-close", show_slow_effect = slow_fade, show_slow_effect_delay = 0.1)
-define ber = Character('     BERNKASTEL{image=gui/wing.png}{alt}wing{/alt}    ', color="#fff", callback=name_callback, cb_name='ber', ctc="ctc_blink", ctc_position="nestled-close", show_slow_effect = slow_fade, show_slow_effect_delay = 0.1)
+define lam = Character('     Lambdadelta{image=gui/wing.png}{alt}wing{/alt}    ', color="#fff", callback=name_callback, cb_name='lam', ctc="ctc_blink", ctc_position="nestled-close", show_slow_effect = slow_fade, show_slow_effect_delay = 0.1)
+define ber = Character('     Bernkastel{image=gui/wing.png}{alt}wing{/alt}    ', color="#fff", callback=name_callback, cb_name='ber', ctc="ctc_blink", ctc_position="nestled-close", show_slow_effect = slow_fade, show_slow_effect_delay = 0.1)
 define ron = Character('     Ronove{image=gui/wing.png}{alt}wing{/alt}    ', color="#fff", callback=name_callback, cb_name='ron', ctc="ctc_blink", ctc_position="nestled-close", show_slow_effect = slow_fade, show_slow_effect_delay = 0.1)
 define wal = Character('     Virgilia{image=gui/wing.png}{alt}wing{/alt}    ', color="#fff", callback=name_callback, cb_name='wal', ctc="ctc_blink", ctc_position="nestled-close", show_slow_effect = slow_fade, show_slow_effect_delay = 0.1)
 define gap = Character('     Gaap{image=gui/wing.png}{alt}wing{/alt}    ', color="#fff", callback=name_callback, cb_name='gap', ctc="ctc_blink", ctc_position="nestled-close", show_slow_effect = slow_fade, show_slow_effect_delay = 0.1)
@@ -64,7 +64,7 @@ define bel = Character('     Belphegor{image=gui/wing.png}{alt}wing{/alt}    ', 
 define mam = Character('     Mammon{image=gui/wing.png}{alt}wing{/alt}    ', color="#fff", callback=name_callback, cb_name='mam', ctc="ctc_blink", ctc_position="nestled-close", show_slow_effect = slow_fade, show_slow_effect_delay = 0.1)
 define bee = Character('     Beelzebub{image=gui/wing.png}{alt}wing{/alt}    ', color="#fff", callback=name_callback, cb_name='bee', ctc="ctc_blink", ctc_position="nestled-close", show_slow_effect = slow_fade, show_slow_effect_delay = 0.1)
 define asm = Character('     Asmodeus{image=gui/wing.png}{alt}wing{/alt}    ', color="#fff", callback=name_callback, cb_name='asm', ctc="ctc_blink", ctc_position="nestled-close", show_slow_effect = slow_fade, show_slow_effect_delay = 0.1)
-define fea = Character('     FEATHERINE{image=gui/wing.png}{alt}wing{/alt}    ', color="#fff", callback=name_callback, cb_name='fea', ctc="ctc_blink", ctc_position="nestled-close", show_slow_effect = slow_fade, show_slow_effect_delay = 0.1)
+define fea = Character('     Featherine{image=gui/wing.png}{alt}wing{/alt}    ', color="#fff", callback=name_callback, cb_name='fea', ctc="ctc_blink", ctc_position="nestled-close", show_slow_effect = slow_fade, show_slow_effect_delay = 0.1)
 define ev1 = Character('     EVA-Beatrice{image=gui/wing.png}{alt}wing{/alt}    ', color="#fff", callback=name_callback, cb_name='ev1', ctc="ctc_blink", ctc_position="nestled-close", show_slow_effect = slow_fade, show_slow_effect_delay = 0.1)
 define vir = Character('     Virgilius{image=gui/wing.png}{alt}wing{/alt}    ', color="#fff", callback=name_callback, cb_name='vir', ctc="ctc_blink", ctc_position="nestled-close", show_slow_effect = slow_fade, show_slow_effect_delay = 0.1)
 define fla = Character('     Flaurus{image=gui/wing.png}{alt}wing{/alt}    ', color="#fff", callback=name_callback, cb_name='fla', ctc="ctc_blink", ctc_position="nestled-close", show_slow_effect = slow_fade, show_slow_effect_delay = 0.1)
@@ -90,7 +90,7 @@ define kum_char = "images/sprites/kum/kum_a11_defo1.png"
 define geo_char = "images/sprites/geo/geo_a11_defo1.png"
 define goh_char = "images/sprites/goh/goh_a11_defo1.png"
 define sha_char = "images/sprites/sha/sha_a11_defo1.png"
-define eva_char = "images/sprites/eva/eva_b21_akire1go.png"
+define eva_char = "images/sprites/eva/eva_b25_defo1.png"
 define hid_char = "images/sprites/hid/hid_a11_defo1.png"
 define bea_char = "images/sprites/bea/bea_a11_defo2.png"
 

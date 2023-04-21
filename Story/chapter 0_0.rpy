@@ -5,18 +5,15 @@ label start:
     $ chaptername = "\"Ich schreibe an dich in einer Quadrillion Jahren\""
     $ chapternumber = "Prolog"
     $ songname = "-"
-    scene black with doorfade
-    pause(3)
-    stop sound fadeout 3
-    stop music fadeout 3
-    pause (2)
+    pause(7)
     play sound "audio/sfx/umise_028.ogg"
     show disclaimer1 with dissolve
     pause (10)
     hide disclaimer1 with dissolve
     pause (2)
-    play sound "audio/sfx/umise_032.ogg"
     show disclaimer2 with dissolve
+    pause (1)
+    play sound "audio/sfx/umise_032.ogg"
     pause (10)
     hide disclaimer2 with dissolve
     pause (2)
@@ -28,7 +25,6 @@ label start:
     pause (2)
     scene ke_s2 with dissolve
     pause (2)
-    $ renpy.notify("Ich schreibe an dich in einer Quadrillion Jahren")
     "01. Mai 1983."
     "An die Abteilungen 1 bis 12,"
     "XX Hauptquartier der Präfekturpolizei."
@@ -48,7 +44,7 @@ label start:
     "Um das Leben und das Wohlergehen der Anwohner zu schützen, wurde die folgende Bekanntmachung veröffentlicht."
     "1. die folgenden strafrechtlichen Ermittlungen als Verschlusssache zu behandeln"
     "Station Okinomiya 1983 Fallnummer 862"
-    scene ke5 with quickergradientwiperight
+    scene ke5 with gradientwipeupright
     "Tötung einer alleinerziehenden Mutter mit zwei Kindern im Dorf Hinamizawa (Datum: April 1983)."
     "Dieser Fall steht in keinem Zusammenhang mit den jährlichen Morden vom Juni 1979 bis 1982."
     "Die Leiche einer alleinerziehenden Mutter wurde an einem Morgen im April 1983 in ihrem Haus, genauer gesagt in ihrer Küche, tot aufgefunden."
@@ -105,7 +101,8 @@ label start:
     stop music fadeout 3
     pause (0.5)
     scene black with fade
-    $ songname = "Katayaku no Tori"
+    $ songname = "Gold Dream Symphony"
     $ renpy.movie_cutscene("videos/opening.mov")
     stop sound
+    pause 1.5
     jump chapter1

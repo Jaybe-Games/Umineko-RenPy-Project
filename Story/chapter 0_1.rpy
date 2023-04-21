@@ -5,19 +5,17 @@ label chapter1:
     $ chaptername = "\"Bootsfahrt nach Rokkenjima\"\nSam. 04. Oktober 1986 09:30 Uhr"
     $ chapternumber = "Kapitel 1"
     $ songname = "-"
-    $ renpy.notify("Bootsfahrt nach Rokkenjima")
     $ persistent.alreadystarted = True
-    pause (5)
+    call showch1
     play sound "audio/sfx/umise_028.ogg"
     show oct_4_1986 with dissolve
     pause (7)
-    scene black with dissolve
-    pause(3)
+    play ship "audio/sfx/umilse_004.ogg"
     $ songname = "HANE (Feathers)"
     $ play_music(hane)
-    play ship "audio/sfx/umilse_004.ogg"
+    show white with m1trans
     camera at Shake(None, float('inf'), dist=3)
-    scene ship_s2a with quickergradientwiperight
+    scene ship_s2a with m1trans1
     pause (3)
     window show
     "In der Luft liegt der typische Meeresgeruch von Salz und auch ein wenig von Algen."
@@ -55,7 +53,7 @@ label chapter1:
     show rud_a11_akuwarai1 at m,ah('rud') with quickergradientwiperight
     rud "\"...Hey Battler-kun! Wenn du kotzen musst, dann bitte in einen Eimer!...."
     extend " .....Bei dem, was du dir in den Hals schaufelst, würdest du eine Menge Fische auf dem Gewissen haben... hehe..."
-    extend " ....Unglaublich, dass du schon im Flugzeug so durchgedreht bist, du konntest ja nicht mal im Auto still sitzen.\""
+    rud "....Unglaublich, dass du schon im Flugzeug so durchgedreht bist, du konntest ja nicht mal im Auto still sitzen.\""
     hide rud_a11_akuwarai1 with fastdissolve
     show rud_a11_defo1 at r,ah('rud') with fastdissolve
     show but_b22_odoroki2 at l,ah('but') with fastdissolve
@@ -238,10 +236,20 @@ label chapter1:
     """
     Einen Moment hat Battler nicht aufgepasst und schon hat Rudolf sein Ohrläppchen gepackt und behandelt es nicht gerade zimperlich.
     """
-    but "\"owowowowowowowow.... lass los! owowowowowowow "
-    extend ".......Das tut richtig weh, hör auf damit, .....owowowow\""
+    but "\"owowowowowowowow...." 
+    extend " lass los! owowowowowowow"
+    extend " .......Das tut richtig weh," 
+    extend " hör auf damit," 
+    extend " .....owowowow\""
 
-    rud "\"Du.... willst.... also...., dass ich es mir zu...rück....ho...le...jaaaa~?\""
+    rud "\"Du...." 
+    extend " willst...." 
+    extend " also....," 
+    extend " dass ich es mir zu..."
+    extend " rück...."
+    extend " ho..."
+    extend " le..."
+    extend " jaaaa~?\""
     """
     Rudolf hat einen sehr starken Griff, besonders wenn es um Battlers Ohrläppchen geht, man hat das Gefühl, er reißt es jeden Moment ab.
     """
@@ -272,8 +280,7 @@ label chapter1:
     hide jes_a11_atya2
     jes "Ach ja, und was war das für ein \"Ich falle, ich falle\" -Geschrei? "
     $ persistent.wiki_unlocked.add("wiki_crazy")
-    $ persistent.tip2 = True
-    $ persistent.tip1 = False
+    $ persistent.tip = 2
     extend "...Bist du ein bisschen {note_green}meschugge{/note_green}? "
     extend "...wahahahaha!"
     jes ".....Das war die eine Sache, "

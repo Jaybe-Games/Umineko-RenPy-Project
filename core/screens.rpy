@@ -13,15 +13,20 @@ style bigtext:
     font "fonts/Georgia.ttf"
     size 35
 
+style charnametext:
+    bold False
+    font "fonts/Georgia.ttf"
+    size 32
+
 style menutext:
     bold False
     font "fonts/ariston.ttf"
     size 32
 
-style menutext2:
+style chartext:
     bold False
     font "fonts/ArnoPro.otf"
-    size 32
+    size 25
 
 
 style button_back:
@@ -310,7 +315,7 @@ style choice_button_text is default:
 screen quick_menu():
 
     ## Ensure this appears on top of other screens.
-    zorder 100
+    #zorder 100
 
     if quick_menu:
 
@@ -320,8 +325,8 @@ screen quick_menu():
             xalign 0.0
             yalign 0.0
 
-            imagebutton auto "gui/button/quickbuttonautomode_%s.png" action Preference("auto-forward", "toggle") xpos 1850 ypos 25
-            imagebutton auto "gui/button/quickbuttonskip_%s.png" action Skip() alternate Skip(fast=True, confirm=True) xpos 1825 ypos 25
+            #imagebutton auto "gui/button/quickbuttonautomode_%s.png" action Preference("auto-forward", "toggle") xpos 1850 ypos 25
+            #imagebutton auto "gui/button/quickbuttonskip_%s.png" action Skip() alternate Skip(fast=True, confirm=True) xpos 1825 ypos 25
 
 
 ## This code ensures that the quick_menu screen is displayed in-game, whenever
@@ -355,6 +360,8 @@ screen navigation():
 
     $ minutes, seconds = divmod(int(renpy.get_game_runtime()), 60)
 
+    add partObj
+
     fixed:
         #style_prefix "navigation"
 
@@ -378,10 +385,11 @@ screen navigation():
 
         if main_menu:
 
-            vbox:
+            vpgrid:
 
-                xpos 1350
-                ypos 150
+                cols 2
+                xpos 1280
+                yalign 0.5
                 spacing 10 
 
                 imagebutton auto "gui/button/start_%s.png" action [Play("sound", "/audio/sfx/umise_051.ogg"), ShowMenu("story_select"), Hide('starthover')] hover_sound "audio/sfx/click-21156.mp3" hovered Show('starthover') unhovered Hide('starthover')
@@ -392,11 +400,26 @@ screen navigation():
 
                 imagebutton auto "gui/button/credits_%s.png" action [ShowMenu("about"), Hide('creditshover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" hovered Show('creditshover') unhovered Hide('creditshover')
 
+                imagebutton auto "gui/button/achieve_%s.png" action [ShowMenu("achievement_menu"), Hide('trophyhover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" hovered Show('trophyhover') unhovered Hide('trophyhover')
+
+                if persistent.rudolf == True:
+                    imagebutton auto "gui/button/chars_%s.png" action [ShowMenu("characters"), Hide('characterhover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" hovered Show('characterhover') unhovered Hide('characterhover')
+                else:
+                    imagebutton auto "gui/button/locked_%s.png" action [NullAction(), Hide('locked')] hover_sound "audio/sfx/click-21156.mp3" hovered Show('locked') unhovered Hide('locked')
+
+                if persistent.tipunlocked == True:
+                    imagebutton auto "gui/button/tip_%s.png" action [ShowMenu("wiki_index"), Hide('tiphover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" hovered Show('tiphover') unhovered Hide('tiphover')
+                else:
+                    imagebutton auto "gui/button/locked_%s.png" action [NullAction(), Hide('locked')] hover_sound "audio/sfx/click-21156.mp3" hovered Show('locked') unhovered Hide('locked')
+
+                if persistent.musicbox == True:
+                    imagebutton auto "gui/button/jukebox_%s.png" action [ShowMenu("music_room"), Hide('jukeboxhover'), Function(ost.get_music_channel_info), Stop('music', fadeout=1.0), Stop('sound', fadeout=1.0), Stop('ship', fadeout=1.0), Stop('wind', fadeout=1.0), Function(ost.refresh_list)] hovered Show('jukeboxhover') unhovered Hide('jukeboxhover') activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+                else:
+                    imagebutton auto "gui/button/locked_%s.png" action [NullAction(), Hide('locked')] hover_sound "audio/sfx/click-21156.mp3" hovered Show('locked') unhovered Hide('locked')
+
                 imagebutton auto "gui/button/help_%s.png" action [ShowMenu("help"), Hide('helphover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" hovered Show('helphover') unhovered Hide('helphover')
 
-                imagebutton auto "gui/button/extra_%s.png" action [ShowMenu("extra"), Hide('extrahover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" hovered Show('extrahover') unhovered Hide('extrahover')
-
-                imagebutton auto "gui/button/quit_%s.png" action [Quit(), Hide('quithover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" hovered Show('quithover') unhovered Hide('quithover')
+                imagebutton auto "gui/button/quit_%s.png" action [QuitWithScene(), Hide('quithover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" hovered Show('quithover') unhovered Hide('quithover')
 
 
         else:
@@ -413,9 +436,9 @@ screen navigation():
 
             text "{i}" + chaptername ypos 955 xpos 10 xalign 0.0 size 50 font "fonts/ariston.ttf" outlines [ (absolute(3), "#000", absolute(0), absolute(0)) ]
 
-            text "Aktueller Soundtrack: " + songname ypos 1005 xpos 1900 xalign 1.0 size 30 font "fonts/AOTFShinGoProMedium.otf" outlines [ (absolute(3), "#000", absolute(0), absolute(0)) ]
+            text "Soundtrack: " + songname ypos 1005 xpos 1900 xalign 1.0 size 30 font "fonts/AOTFShinGoProMedium.otf" outlines [ (absolute(3), "#000", absolute(0), absolute(0)) ]
 
-            text "Aktuelle Spielzeit: [minutes]:[seconds:02d]" ypos 1040 xpos 1900 xalign 1.0 size 30 font "fonts/AOTFShinGoProMedium.otf" outlines [ (absolute(3), "#000", absolute(0), absolute(0)) ]
+            text "Spielzeit: [minutes]:[seconds:02d]" ypos 1040 xpos 1900 xalign 1.0 size 30 font "fonts/AOTFShinGoProMedium.otf" outlines [ (absolute(3), "#000", absolute(0), absolute(0)) ]
 
 
 
@@ -570,17 +593,18 @@ screen game_menu(title, scroll=None, yinitial=0.0):
 
     if not main_menu:
 
-        vbox:
+        vpgrid:
 
-            xpos 1350
-            ypos 30
-            spacing 10     
-
-            imagebutton auto "gui/button/history_%s.png" action ShowMenu("history") activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+            cols 2
+            xpos 1280
+            yalign 0.5
+            spacing 10
 
             imagebutton auto "gui/button/save_%s.png" action ShowMenu("save") activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
 
             imagebutton auto "gui/button/load_%s.png" action ShowMenu("load") activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+
+            imagebutton auto "gui/button/history_%s.png" action ShowMenu("history") activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
 
             imagebutton auto "gui/button/settings_%s.png" action [ShowMenu("preferences")] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
 
@@ -588,7 +612,22 @@ screen game_menu(title, scroll=None, yinitial=0.0):
 
             imagebutton auto "gui/button/help_%s.png" action [ShowMenu("help")] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
 
-            imagebutton auto "gui/button/extra_%s.png" action [ShowMenu("extra"), Hide('extrahover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+            imagebutton auto "gui/button/achieve_%s.png" action [ShowMenu("achievement_menu"), Hide('trophyhover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+
+            if persistent.rudolf == True:
+                imagebutton auto "gui/button/chars_%s.png" action [ShowMenu("characters"), Hide('characterhover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+            else:
+                imagebutton auto "gui/button/locked_%s.png" action [NullAction(), Hide('locked')] hover_sound "audio/sfx/click-21156.mp3"
+
+            if persistent.tipunlocked == True:
+                imagebutton auto "gui/button/tip_%s.png" action [ShowMenu("wiki_index"), Hide('tiphover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+            else:
+                imagebutton auto "gui/button/locked_%s.png" action [NullAction(), Hide('locked')] hover_sound "audio/sfx/click-21156.mp3"
+
+            if persistent.musicbox == True:
+                imagebutton auto "gui/button/jukebox_%s.png" action [ShowMenu("music_room"), Hide('jukeboxhover'), Function(ost.get_music_channel_info), Stop('music', fadeout=1.0), Stop('sound', fadeout=1.0), Stop('ship', fadeout=1.0), Stop('wind', fadeout=1.0), Function(ost.refresh_list)] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+            else:
+                imagebutton auto "gui/button/locked_%s.png" action [NullAction(), Hide('locked')] hover_sound "audio/sfx/click-21156.mp3"
 
             imagebutton auto "gui/button/mainmenu_%s.png" action MainMenu() activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
 
@@ -596,27 +635,41 @@ screen game_menu(title, scroll=None, yinitial=0.0):
 
     else:
 
-        vbox:
+        vpgrid:
 
-            xpos 1350
-            ypos 150
-            spacing 10
+                cols 2
+                xpos 1280
+                yalign 0.5
+                spacing 10 
 
-            imagebutton auto "gui/button/start_%s.png" action Play("sound", "/audio/sfx/umise_051.ogg"), ShowMenu("story_select") hover_sound "audio/sfx/click-21156.mp3"
+                imagebutton auto "gui/button/start_%s.png" action [Play("sound", "/audio/sfx/umise_051.ogg"), ShowMenu("story_select"), Hide('starthover')] hover_sound "audio/sfx/click-21156.mp3"
 
-            imagebutton auto "gui/button/load_%s.png" action ShowMenu("load") activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+                imagebutton auto "gui/button/load_%s.png" action [ShowMenu("load"), Hide('loadhover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
 
-            imagebutton auto "gui/button/settings_%s.png" action [ShowMenu("preferences")] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+                imagebutton auto "gui/button/settings_%s.png" action [ShowMenu("preferences"), Hide('settingshover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
 
-            imagebutton auto "gui/button/credits_%s.png" action ShowMenu("about") activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+                imagebutton auto "gui/button/credits_%s.png" action [ShowMenu("about"), Hide('creditshover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
 
-            imagebutton auto "gui/button/help_%s.png" action [ShowMenu("help")] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+                imagebutton auto "gui/button/achieve_%s.png" action [ShowMenu("achievement_menu"), Hide('trophyhover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
 
-            imagebutton auto "gui/button/extra_%s.png" action ShowMenu("extra") activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+                if persistent.rudolf == True:
+                    imagebutton auto "gui/button/chars_%s.png" action [ShowMenu("characters"), Hide('characterhover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+                else:
+                    imagebutton auto "gui/button/locked_%s.png" action [NullAction(), Hide('locked')] hover_sound "audio/sfx/click-21156.mp3"
 
-            imagebutton auto "gui/button/quit_%s.png" action Quit() activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+                if persistent.tipunlocked == True:
+                    imagebutton auto "gui/button/tip_%s.png" action [ShowMenu("wiki_index"), Hide('tiphover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+                else:
+                    imagebutton auto "gui/button/locked_%s.png" action [NullAction(), Hide('locked')] hover_sound "audio/sfx/click-21156.mp3"
 
-            imagebutton auto "gui/button/back_%s.png" activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" action Return()
+                if persistent.musicbox == True:
+                    imagebutton auto "gui/button/jukebox_%s.png" action [ShowMenu("music_room"), Hide('jukeboxhover'), Function(ost.get_music_channel_info), Stop('music', fadeout=1.0), Stop('sound', fadeout=1.0), Stop('ship', fadeout=1.0), Stop('wind', fadeout=1.0), Function(ost.refresh_list)] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+                else:
+                    imagebutton auto "gui/button/locked_%s.png" action [NullAction(), Hide('locked')] hover_sound "audio/sfx/click-21156.mp3"
+
+                imagebutton auto "gui/button/help_%s.png" action [ShowMenu("help"), Hide('helphover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+
+                imagebutton auto "gui/button/quit_%s.png" action [QuitWithScene(), Hide('quithover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
 
 
 
@@ -653,7 +706,7 @@ style game_menu_navigation_frame:
 
 style game_menu_content_frame:
     left_margin -400
-    right_margin 570
+    right_margin 700
     top_margin -70
     bottom_margin 150
 
@@ -734,14 +787,14 @@ screen save():
 
     tag menu
 
-    use file_slots(_("{color=#fff}Speic{color=#f00}h{color=#fff}ern"))
+    use file_slots(_("Speic{color=#f00}h{color=#fff}ern"))
 
 
 screen load():
 
     tag menu
 
-    use file_slots(_("{color=#fff}Spiel La{color=#f00}d{color=#fff}en"))
+    use file_slots(_("Spiel La{color=#f00}d{color=#fff}en"))
 
 
 screen file_slots(title):
@@ -753,7 +806,7 @@ screen file_slots(title):
         fixed:
 
             ## This ensures the input will get the enter event before any of the
-            ## buttons do.
+            ## button do.
             order_reverse True
 
             ## The page name, which can be edited by clicking on a button.
@@ -776,7 +829,7 @@ screen file_slots(title):
 
                 xalign 1.0
                 yalign 0.5
-                xpos 1300
+                xpos 1255
                 ypos 450
 
                 spacing gui.slot_spacing
@@ -806,7 +859,7 @@ screen file_slots(title):
 
                 xalign 0.5
                 yalign 1.0
-                ypos 80
+                ypos 100
                 xpos 350
 
                 spacing gui.page_spacing
@@ -949,7 +1002,7 @@ screen preferences():
 
                 vbox:
 
-                    xpos 600
+                    xpos 650
                     ypos -273
 
                     if config.has_music:
@@ -1324,25 +1377,81 @@ screen confirm(message, yes_action, no_action):
 
     style_prefix "confirm"
 
-    add "gui/overlay/confirm.png"
-
-    frame:
-
-        vbox:
-            xalign .5
-            yalign .5
-            spacing 45
-
-            label _(message):
-                style "confirm_prompt"
-                xalign 0.5
-
-            hbox:
-                xalign 0.5
-                spacing 150
-
-                textbutton _("Ja") action yes_action activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
-                textbutton _("Nein") action no_action activate_sound "audio/sfx/umise_1001.ogg" hover_sound "audio/sfx/click-21156.mp3"
+    if message == layout.ARE_YOU_SURE:
+        add "gui/confirmblack.png" at center
+        imagebutton auto "gui/button/accept_%s.png" action yes_action:
+            xpos 400
+            ypos 650
+            activate_sound "audio/sfx/umise_1005.ogg" 
+            hover_sound "audio/sfx/click-21156.mp3"
+        imagebutton auto "gui/button/refuse_%s.png" action no_action:
+            xpos 900
+            ypos 650
+            activate_sound "audio/sfx/umise_1005.ogg" 
+            hover_sound "audio/sfx/click-21156.mp3"
+        add "gui/button/sure.png":
+            xalign 0.5
+            yalign 0.5
+    elif message == layout.OVERWRITE_SAVE:
+        add "gui/confirmblack.png" at center
+        imagebutton auto "gui/button/accept_%s.png" action [Play("sound", "audio/sfx/umise_058.ogg"), yes_action]:
+            xpos 400
+            ypos 650
+            activate_sound "audio/sfx/umise_1005.ogg" 
+            hover_sound "audio/sfx/click-21156.mp3"
+        imagebutton auto "gui/button/refuse_%s.png" action no_action:
+            xpos 900
+            ypos 650
+            activate_sound "audio/sfx/umise_1005.ogg" 
+            hover_sound "audio/sfx/click-21156.mp3"
+        add "gui/button/load.png":
+            xalign 0.5
+            yalign 0.5
+    elif message == layout.LOADING:
+        add "gui/confirmblack.png" at center
+        imagebutton auto "gui/button/accept_%s.png" action [Play("sound", "audio/sfx/umise_058.ogg"), yes_action]:
+            xpos 400
+            ypos 650
+            activate_sound "audio/sfx/umise_1005.ogg" 
+            hover_sound "audio/sfx/click-21156.mp3"
+        imagebutton auto "gui/button/refuse_%s.png" action no_action:
+            xpos 900
+            ypos 650
+            activate_sound "audio/sfx/umise_1005.ogg" 
+            hover_sound "audio/sfx/click-21156.mp3"
+        add "gui/button/load.png":
+            xalign 0.5
+            yalign 0.5
+    elif message == layout.QUIT:
+        add "gui/confirmblack.png" at center
+        imagebutton auto "gui/button/accept_%s.png" action [QuitWithScene(), yes_action]:
+            xpos 400
+            ypos 650
+            activate_sound "audio/sfx/umise_1005.ogg" 
+            hover_sound "audio/sfx/click-21156.mp3"
+        imagebutton auto "gui/button/refuse_%s.png" action no_action:
+            xpos 900
+            ypos 650
+            activate_sound "audio/sfx/umise_1005.ogg" 
+            hover_sound "audio/sfx/click-21156.mp3"
+        add "gui/button/quit.png":
+            xalign 0.5
+            yalign 0.5
+    elif message == layout.MAIN_MENU:
+        add "gui/confirmblack.png" at center
+        imagebutton auto "gui/button/accept_%s.png" action [titurnd(), yes_action]: 
+            xpos 400
+            ypos 650
+            activate_sound "audio/sfx/umise_1005.ogg" 
+            hover_sound "audio/sfx/click-21156.mp3"
+        imagebutton auto "gui/button/refuse_%s.png" action no_action:
+            xpos 900
+            ypos 650
+            activate_sound "audio/sfx/umise_1005.ogg" 
+            hover_sound "audio/sfx/click-21156.mp3"
+        add "gui/button/quit.png":
+            xalign 0.5
+            yalign 0.5
 
     ## Right-click and escape answer "no".
     key "game_menu" action no_action
@@ -1596,13 +1705,13 @@ screen story_select():
     vbox:
         
         xpos 985
-        ypos 600
+        ypos 650
         yalign 0.5
         spacing -100
 
         text "Szenario Wählen:" ypos 0 xalign 0.5 yalign 0.5 size 90 font "fonts/ArnoPro.otf" outlines [ (absolute(3), "#000", absolute(0), absolute(0)) ]
 
-        imagebutton auto "gui/button/main_%s.png" action Start("start") hovered Show('mainstory') unhovered Hide('mainstory') activate_sound "audio/sfx/umise_017.ogg" hover_sound "audio/sfx/click-21156.mp3"
+        imagebutton auto "gui/button/main_%s.png" action Start("startgame") hovered Show('mainstory') unhovered Hide('mainstory') activate_sound "audio/sfx/umise_017.ogg" hover_sound "audio/sfx/click-21156.mp3"
 
         if persistent.mainstorycleared == True:
 
@@ -1633,7 +1742,7 @@ screen mainstory():
     tag hover
     imagemap:
         ground "gui/hovermenu.png"
-    text "Episode 0\nResurrection of the Golden Witch" style 'bigtext' at Position(xpos = 75, ypos = 420)
+    text "Episode 0\nAuferstehung der Goldenen Hexe" style 'bigtext' at Position(xpos = 75, ypos = 420)
     text "Willkommen auf Rokkenjima.\nDie Goldene Hexe heißt dich zu einem neuen Spiel willkommen.\nWie amüsant, dich erwartet die Ehre gegen eine Hexe zu spielen.\n\nDie Hexe von Rokkenjima erwartet nicht, dass du bereits\nmit den Spielregeln vertraut bist, also lasse es ruhig angehen\nund geniesse das Narrativ solange du es noch kannst.\n\nDer Schwierigkeitsgrad ist viel zu einfach.\nDas klingt doch fair oder nicht?" style 'menutext' at Position (xpos = 60, ypos = 510)
 
 screen teaparty():
@@ -1658,42 +1767,6 @@ screen bonushover():
         ground "gui/hovermenu.png"
     text "Bonuskapitel" style 'bigtext' at Position(xpos = 75, ypos = 420)
     text "Noch nicht genug?\n\nNun gut,\nein paar Stücke vom Kuchen wurden wohl übrig gelassen.\nNimm dir gerne so viel du willst." style 'menutext' at Position (xpos = 60, ypos = 490)
-
-## Extra Main menu ##
-
-screen extra():
-    tag menu
-    if main_menu:
-        add "gui/main_menu.png" at center
-    else:
-        add "gui/overlay/game_menu.png" at center
-
-    
-    vbox:
-
-        xpos 1350
-        ypos 300
-        spacing 10
-
-        imagebutton auto "gui/button/achieve_%s.png" action [ShowMenu("achievement_menu"), Hide('trophyhover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" hovered Show('trophyhover') unhovered Hide('trophyhover')
-
-        if persistent.rudolf == True:
-            imagebutton auto "gui/button/chars_%s.png" action [ShowMenu("characters"), Hide('characterhover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" hovered Show('characterhover') unhovered Hide('characterhover')
-        else:
-            imagebutton auto "gui/button/locked_%s.png" action [NullAction(), Hide('locked')] hover_sound "audio/sfx/click-21156.mp3" hovered Show('locked') unhovered Hide('locked')
-
-        if persistent.tipunlocked == True:
-            imagebutton auto "gui/button/tip_%s.png" action [ShowMenu("wiki_index"), Hide('tiphover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" hovered Show('tiphover') unhovered Hide('tiphover')
-        else:
-            imagebutton auto "gui/button/locked_%s.png" action [NullAction(), Hide('locked')] hover_sound "audio/sfx/click-21156.mp3" hovered Show('locked') unhovered Hide('locked')
-
-        if persistent.musicbox == True:
-            imagebutton auto "gui/button/jukebox_%s.png" action [ShowMenu("music_room"), Hide('jukeboxhover'), Function(ost.get_music_channel_info), Stop('music', fadeout=1.0), Stop('sound', fadeout=1.0), Stop('ship', fadeout=1.0), Stop('wind', fadeout=1.0), Function(ost.refresh_list)] hovered Show('jukeboxhover') unhovered Hide('jukeboxhover') activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
-        else:
-            imagebutton auto "gui/button/locked_%s.png" action [NullAction(), Hide('locked')] hover_sound "audio/sfx/click-21156.mp3" hovered Show('locked') unhovered Hide('locked')
-
-
-        imagebutton auto "gui/button/back_%s.png" action Return() activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
 
 
 ## hover textboxen ##
@@ -1783,250 +1856,260 @@ screen locked():
 
 screen characters():
     tag menu
+    use game_menu(_("{color=#fff}Chara{/color}{color=#f00}k{/color}{color=#fff}tere{/color}")):
 
-    add "images/menu/char1.png" at center
+        hbox:
 
-    textbutton "Zur{color=#f00}ü{color=#fff}ck" style "button_back" action Return()
+            xpos 330
+            ypos 970
 
-    hbox:
+        if persistent.goldenwitch == True:
 
-        xpos 330
-        ypos 970
-
-    if persistent.goldenwitch == True:
-
-        imagebutton idle "gui/button/witch_idle.png" action ShowMenu("Witchchar") hover "gui/button/witch_hover.png" hovered Show('witches') unhovered Hide('witches') activate_sound "audio/sfx/umise_017.ogg" hover_sound "audio/sfx/click-21156.mp3"
-    else:
-        pass
-    hbox:
-
-        xpos 10
-        ypos 10
-        spacing 0
-        if persistent.beatrice == True:
-            imagebutton idle "gui/chars/char21.png" action NullAction() hovered Show('char21') unhovered Hide('char21') hover_sound "audio/sfx/click-21156.mp3"
+            imagebutton auto "gui/button/witch_idle.png" action ShowMenu("Witchchar") hover "gui/button/witch_hover.png" hovered Show('witches') unhovered Hide('witches') activate_sound "audio/sfx/umise_017.ogg" hover_sound "audio/sfx/click-21156.mp3"
         else:
             pass
+        hbox:
 
-        if persistent.kinzo == True:
-            imagebutton idle "gui/chars/char01.png" action NullAction() hovered Show('char01') unhovered Hide('char01') hover_sound "audio/sfx/click-21156.mp3"
-        else:
-            pass
+            xpos 5
+            ypos 10
+            spacing -10
+            if persistent.beatrice == True:
+                imagebutton auto "gui/chars/char21_%s.png" action ShowMenu("char21") activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+            else:
+                imagebutton idle "gui/chars/char00.png" action NullAction()
 
-        if persistent.krauss == True:
-            imagebutton idle "gui/chars/char02.png" action NullAction() hovered Show('char02') unhovered Hide('char02') hover_sound "audio/sfx/click-21156.mp3"
-        else:
-            pass
+            if persistent.kinzo == True:
+                imagebutton auto "gui/chars/char01_%s.png" action ShowMenu("char01") activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+            else:
+                imagebutton idle "gui/chars/char00.png" action NullAction()
 
-        if persistent.natsuhi == True:
-            imagebutton idle "gui/chars/char03.png" action NullAction() hovered Show('char03') unhovered Hide('char03') hover_sound "audio/sfx/click-21156.mp3"
-        else:
-            pass
+            if persistent.krauss == True:
+                imagebutton auto "gui/chars/char02_%s.png" action ShowMenu("char02") activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+            else:
+                imagebutton idle "gui/chars/char00.png" action NullAction()
 
-        if persistent.jessica == True:
-            imagebutton idle "gui/chars/char05.png" action NullAction() hovered Show('char05') unhovered Hide('char05') hover_sound "audio/sfx/click-21156.mp3"
-        else:
-            pass
+            if persistent.natsuhi == True:
+                imagebutton auto "gui/chars/char03_%s.png" action ShowMenu("char03") activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+            else:
+                imagebutton idle "gui/chars/char00.png" action NullAction()
+
+            if persistent.jessica == True:
+                imagebutton auto "gui/chars/char05_%s.png" action ShowMenu("char05") activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+            else:
+                imagebutton idle "gui/chars/char00.png" action NullAction()
      
-        if persistent.eva == True:
-            imagebutton idle "gui/chars/char06.png" action NullAction() hovered Show('char06') unhovered Hide('char06') hover_sound "audio/sfx/click-21156.mp3"
-        else:
-            pass
+            if persistent.eva == True:
+                imagebutton auto "gui/chars/char06_%s.png" action ShowMenu("char06") activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+            else:
+                imagebutton idle "gui/chars/char00.png" action NullAction()
 
-        if persistent.hideyoshi == True:    
-            imagebutton idle "gui/chars/char07.png" action NullAction() hovered Show('char07') unhovered Hide('char07') hover_sound "audio/sfx/click-21156.mp3"
-        else:
-            pass
+            if persistent.hideyoshi == True:    
+                imagebutton auto "gui/chars/char07_%s.png" action ShowMenu("char07") activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+            else:
+                imagebutton idle "gui/chars/char00.png" action NullAction()
 
-        if persistent.george == True:
-            imagebutton idle "gui/chars/char08.png" action NullAction() hovered Show('char08') unhovered Hide('char08') hover_sound "audio/sfx/click-21156.mp3"
-        else:
-            pass
-    hbox:
+            if persistent.george == True:
+                imagebutton auto "gui/chars/char08_%s.png" action ShowMenu("char08") activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+            else:
+                imagebutton idle "gui/chars/char00.png" action NullAction()
+        hbox:
 
-        xpos 10
-        ypos 130
-        spacing 0
+            xpos 5
+            ypos 110
+            spacing -10
 
-        if persistent.rudolf == True:
-            imagebutton idle "gui/chars/char09.png" action NullAction() hovered Show('char09') unhovered Hide('char09') hover_sound "audio/sfx/click-21156.mp3"
-        else:
-            pass
+            if persistent.rudolf == True:
+                imagebutton auto "gui/chars/char09_%s.png" action ShowMenu("char09") activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+            else:
+                imagebutton idle "gui/chars/char00.png" action NullAction()
 
-        if persistent.kyrie == True:
-            imagebutton idle "gui/chars/char10.png" action NullAction() hovered Show('char10') unhovered Hide('char10') hover_sound "audio/sfx/click-21156.mp3"
-        else:
-            pass
+            if persistent.kyrie == True:
+                imagebutton auto "gui/chars/char10_%s.png" action ShowMenu("char10") activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+            else:
+                imagebutton idle "gui/chars/char00.png" action NullAction()
 
-        if persistent.battler == True:
-            imagebutton idle "gui/chars/char11.png" action NullAction() hovered Show('char11') unhovered Hide('char11') hover_sound "audio/sfx/click-21156.mp3"
-        else:
-            pass
+            if persistent.battler == True:
+                imagebutton auto "gui/chars/char11_%s.png" action ShowMenu("char11") activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+            else:
+                imagebutton idle "gui/chars/char00.png" action NullAction()
 
-        if persistent.rosa == True:
-            imagebutton idle "gui/chars/char13.png" action NullAction() hovered Show('char13') unhovered Hide('char13') hover_sound "audio/sfx/click-21156.mp3"
-        else:
-            pass
+            if persistent.rosa == True:
+                imagebutton auto "gui/chars/char13_%s.png" action ShowMenu("char13") activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+            else:
+                imagebutton idle "gui/chars/char00.png" action NullAction()
 
-        if persistent.maria == True:
-            imagebutton idle "gui/chars/char14.png" action NullAction() hovered Show('char14') unhovered Hide('char14') hover_sound "audio/sfx/click-21156.mp3"
-        else:
-            pass
+            if persistent.maria == True:
+                imagebutton auto "gui/chars/char14_%s.png" action ShowMenu("char14") activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+            else:
+                imagebutton idle "gui/chars/char00.png" action NullAction()
 
-    hbox:
+        hbox:
 
-        xpos 10
-        ypos 250
-        spacing 0
+            xpos 5
+            ypos 210
+            spacing -10
 
-        if persistent.nanjo == True:
-            imagebutton idle "gui/chars/char15.png" action NullAction() hovered Show('char15') unhovered Hide('char15') hover_sound "audio/sfx/click-21156.mp3"
-        else:
-            pass
+            if persistent.nanjo == True:
+                imagebutton auto "gui/chars/char15_%s.png" action ShowMenu("char15") activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+            else:
+                imagebutton idle "gui/chars/char00.png" action NullAction()
 
-        if persistent.genji == True:
-            imagebutton idle "gui/chars/char16.png" action NullAction() hovered Show('char15') unhovered Hide('char15') hover_sound "audio/sfx/click-21156.mp3"
-        else:
-            pass
+            if persistent.genji == True:
+                imagebutton auto "gui/chars/char16_%s.png" action ShowMenu("char16") activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+            else:
+                imagebutton idle "gui/chars/char00.png" action NullAction()
 
-        if persistent.kumasawa == True:
-            imagebutton idle "gui/chars/char17.png" action NullAction() hovered Show('char17') unhovered Hide('char17') hover_sound "audio/sfx/click-21156.mp3"
-        else:
-            pass
+            if persistent.kumasawa == True:
+                imagebutton auto "gui/chars/char17_%s.png" action ShowMenu("char17") activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+            else:
+                imagebutton idle "gui/chars/char00.png" action NullAction()
 
-        if persistent.gohda == True:
-            imagebutton idle "gui/chars/char18.png" action NullAction() hovered Show('char18') unhovered Hide('char18') hover_sound "audio/sfx/click-21156.mp3"
-        else:
-            pass
+            if persistent.gohda == True:
+                imagebutton auto "gui/chars/char18_%s.png" action ShowMenu("char18") activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+            else:
+                imagebutton idle "gui/chars/char00.png" action NullAction()
 
-        if persistent.shannon == True:
-            imagebutton idle "gui/chars/char19.png" action NullAction() hovered Show('char19') unhovered Hide('char19') hover_sound "audio/sfx/click-21156.mp3"
-        else:
-            pass
+            if persistent.shannon == True:
+                imagebutton auto "gui/chars/char19_%s.png" action ShowMenu("char19") activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+            else:
+                imagebutton idle "gui/chars/char00.png" action NullAction()
 
-        if persistent.kanon == True:
-            imagebutton idle "gui/chars/char20.png" action NullAction() hovered Show('char20') unhovered Hide('char20') hover_sound "audio/sfx/click-21156.mp3"
-        else:
-            pass
+            if persistent.kanon == True:
+                imagebutton auto "gui/chars/char20_%s.png" action ShowMenu("char20") activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+            else:
+                imagebutton idle "gui/chars/char00.png" action NullAction()
 
 screen witches:
     tag hover
     imagemap:
         ground "gui/hovermenu2.png"
-    text "Hexen und Dämonen" style 'bigtext' at Position(xpos = 75, ypos = 420)
-    text "Zeigt die nicht menschlichen Charaktere." style 'menutext' at Position (xpos = 60, ypos = 490)
+    text "Hexen und Dämonen" style 'bigtext' at Position(xpos = 75, ypos = 500)
+    text "Zeigt die nicht menschlichen Charaktere." style 'menutext' at Position (xpos = 60, ypos = 550)
 
 
 screen hina:
     tag hover
     imagemap:
         ground "gui/hovermenu2.png"
-    text "Hinamizawa" style 'bigtext' at Position(xpos = 75, ypos = 420)
-    text "Zeigt die Einwohner Hinamizawas." style 'menutext' at Position (xpos = 60, ypos = 490)
+    text "Hinamizawa" style 'bigtext' at Position(xpos = 75, ypos = 500)
+    text "Zeigt die Einwohner Hinamizawas." style 'menutext' at Position (xpos = 60, ypos = 550)
 
 screen char05:
-    tag hover
+    tag menu
+    use characters
     imagemap:
         ground "gui/hovermenu2.png"
-    image jes_char at r
-    text "Ushiromiya Jessica" style 'bigtext' at Position(xpos = 75, ypos = 420)
-    text "Hier sollten Infos über Jessica stehen." style 'menutext2' at Position (xpos = 60, ypos = 490)
+    image jes_char at r3
+    text "Ushiromiya Jessica" style 'charnametext' at Position(xpos = 75, ypos = 500)
+    text "Hier sollten Infos über Jessica stehen." style 'chartext' at Position (xpos = 60, ypos = 550)
 
 screen char06:
-    tag hover
+    tag menu
+    use characters
     imagemap:
         ground "gui/hovermenu2.png"
-    image eva_char at r
-    text "Ushiromiya Eva" style 'bigtext' at Position(xpos = 75, ypos = 420)
-    text "Hier sollten Infos über Eva stehen." style 'menutext2' at Position (xpos = 60, ypos = 490)
+    image eva_char at r3
+    text "Ushiromiya Eva" style 'charnametext' at Position(xpos = 75, ypos = 500)
+    text "Hier sollten Infos über Eva stehen." style 'chartext' at Position (xpos = 60, ypos = 550)
 
 screen char07:
-    tag hover
+    tag menu
+    use characters
     imagemap:
         ground "gui/hovermenu2.png"
-    image hid_char at r
-    text "Ushiromiya Hideyoshi" style 'bigtext' at Position(xpos = 75, ypos = 420)
-    text "Hier sollten Infos über Hideyoshi stehen." style 'menutext2' at Position (xpos = 60, ypos = 490)
+    image hid_char at r3
+    text "Ushiromiya Hideyoshi" style 'charnametext' at Position(xpos = 75, ypos = 500)
+    text "Hier sollten Infos über Hideyoshi stehen." style 'chartext' at Position (xpos = 60, ypos = 550)
 
 screen char08:
-    tag hover
+    tag menu
+    use characters
     imagemap:
         ground "gui/hovermenu2.png"
-    image geo_char at r
-    text "Ushiromiya George" style 'bigtext' at Position(xpos = 75, ypos = 420)
-    text "Hier sollten Infos über George stehen." style 'menutext2' at Position (xpos = 60, ypos = 490)
+    image geo_char at r3
+    text "Ushiromiya George" style 'charnametext' at Position(xpos = 75, ypos = 500)
+    text "Hier sollten Infos über George stehen." style 'chartext' at Position (xpos = 60, ypos = 550)
 
 screen char09:
-    tag hover
+    tag menu
+    use characters
     imagemap:
         ground "gui/hovermenu2.png"
-    image rud_char at r
-    text "Ushiromiya Rudolf" style 'bigtext' at Position(xpos = 75, ypos = 420)
-    text "Hier sollten Infos über Rudolf stehen." style 'menutext2' at Position (xpos = 60, ypos = 490)
+    image rud_char at r3
+    text "Ushiromiya Rudolf" style 'charnametext' at Position(xpos = 75, ypos = 500)
+    text "Hier sollten Infos über Rudolf stehen." style 'chartext' at Position (xpos = 60, ypos = 550)
 
 screen char10:
-    tag hover
+    tag menu
+    use characters
     imagemap:
         ground "gui/hovermenu2.png"
-    image kyr_char at r
-    text "Ushiromiya Kyrie" style 'bigtext' at Position(xpos = 75, ypos = 420)
-    text "Hier sollten Infos über Kyrie stehen." style 'menutext2' at Position (xpos = 60, ypos = 490)
+    image kyr_char at r3
+    text "Ushiromiya Kyrie" style 'charnametext' at Position(xpos = 75, ypos = 500)
+    text "Hier sollten Infos über Kyrie stehen." style 'chartext' at Position (xpos = 60, ypos = 550)
 
 screen char11:
-    tag hover
+    tag menu
+    use characters
     imagemap:
         ground "gui/hovermenu2.png"
-    image but_char at r
-    text "Ushiromiya Battler" style 'bigtext' at Position(xpos = 75, ypos = 420)
-    text "Hier sollten Infos über Battler stehen." style 'menutext2' at Position (xpos = 60, ypos = 490)
+    image but_char at r3
+    text "Ushiromiya Battler" style 'charnametext' at Position(xpos = 75, ypos = 500)
+    text "Hier sollten Infos über Battler stehen." style 'chartext' at Position (xpos = 60, ypos = 550)
 
 screen char13:
-    tag hover
+    tag menu
+    use characters
     imagemap:
         ground "gui/hovermenu2.png"
-    image ros_char at r
-    text "Ushiromiya Rosa" style 'bigtext' at Position(xpos = 75, ypos = 420)
-    text "Hier sollten Infos über Rosa stehen." style 'menutext2' at Position (xpos = 60, ypos = 490)
+    image ros_char at r3
+    text "Ushiromiya Rosa" style 'charnametext' at Position(xpos = 75, ypos = 500)
+    text "Hier sollten Infos über Rosa stehen." style 'chartext' at Position (xpos = 60, ypos = 550)
 
 screen char14:
-    tag hover
+    tag menu
+    use characters
     imagemap:
         ground "gui/hovermenu2.png"
-    image mar_char at r
-    text "Ushiromiya Maria" style 'bigtext' at Position(xpos = 75, ypos = 420)
-    text "Hier sollten Infos über Maria stehen." style 'menutext2' at Position (xpos = 60, ypos = 490)
+    image mar_char at r3
+    text "Ushiromiya Maria" style 'charnametext' at Position(xpos = 75, ypos = 500)
+    text "Hier sollten Infos über Maria stehen." style 'chartext' at Position (xpos = 60, ypos = 550)
 
 screen char17:
-    tag hover
+    tag menu
+    use characters
     imagemap:
         ground "gui/hovermenu2.png"
-    image kum_char at r
-    text "Kumasawa Chiyo" style 'bigtext' at Position(xpos = 75, ypos = 420)
-    text "Hier sollten Infos über Kumasawa stehen." style 'menutext2' at Position (xpos = 60, ypos = 490)
+    image kum_char at r3
+    text "Kumasawa Chiyo" style 'charnametext' at Position(xpos = 75, ypos = 500)
+    text "Hier sollten Infos über Kumasawa stehen." style 'chartext' at Position (xpos = 60, ypos = 550)
 
 screen char18:
-    tag hover
+    tag menu
+    use characters
     imagemap:
         ground "gui/hovermenu2.png"
-    image goh_char at r
-    text "Gohda Toshiro" style 'bigtext' at Position(xpos = 75, ypos = 420)
-    text "Hier sollten Infos über Gohda stehen." style 'menutext2' at Position (xpos = 60, ypos = 490)
+    image goh_char at r3
+    text "Gohda Toshiro" style 'charnametext' at Position(xpos = 75, ypos = 500)
+    text "Hier sollten Infos über Gohda stehen." style 'chartext' at Position (xpos = 60, ypos = 550)
 
 screen char19:
-    tag hover
+    tag menu
+    use characters
     imagemap:
         ground "gui/hovermenu2.png"
-    image sha_char at r
-    text "Shannon" style 'bigtext' at Position(xpos = 75, ypos = 420)
-    text "Hier sollten Infos über Shannon stehen." style 'menutext2' at Position (xpos = 60, ypos = 490)
+    image sha_char at r3
+    text "Shannon" style 'charnametext' at Position(xpos = 75, ypos = 500)
+    text "Hier sollten Infos über Shannon stehen." style 'chartext' at Position (xpos = 60, ypos = 550)
 
 screen char21:
-    tag hover
+    tag menu
+    use characters
     imagemap:
         ground "gui/hovermenu2.png"
-    image bea_char at r
-    text "Beatrice die Goldene" style 'bigtext' at Position(xpos = 75, ypos = 420)
-    text "Hier sollten Infos über Beatrice stehen." style 'menutext2' at Position (xpos = 60, ypos = 490)
+    image bea_char at r3
+    text "Beatrice die Goldene" style 'charnametext' at Position(xpos = 75, ypos = 500)
+    text "Hier sollten Infos über Beatrice stehen." style 'chartext' at Position (xpos = 60, ypos = 550)
 
 define config.hyperlink_protocol = "showmenu"
 
@@ -2125,13 +2208,13 @@ screen confirmrestart():
             spacing 25
 
             text(""" 
-Das ändern der Textbox erfordert einen Neustart, dein Fortschritt wurde gespeichert.
+Das ändern der Textbox erfordert einen sofortigen Neustart.
             """) text_align 0.5 xalign 0.5
 
             hbox:
                 spacing 100
                 xalign .5
-                textbutton _("Bestätigen") action Quit(confirm=False)
+                textbutton _("Bestätigen") action QuitWithScene()
 ################################################################################
 ## Mobile Variants
 ################################################################################
@@ -2141,7 +2224,7 @@ style pref_vbox:
     xsize 675
 
 ## Since a mouse may not be present, we replace the quick menu with a version
-## that uses fewer and bigger buttons that are easier to touch.
+## that uses fewer and bigger button that are easier to touch.
 screen quick_menu():
     variant "touch"
 
@@ -2201,7 +2284,7 @@ style game_menu_content_frame:
 
 style pref_vbox:
     variant "small"
-    xsize 600
+    xsize 650
 
 style bar:
     variant "small"

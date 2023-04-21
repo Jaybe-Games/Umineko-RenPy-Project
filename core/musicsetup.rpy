@@ -46,6 +46,7 @@ init python:
     hane = "audio/bgm/umib_003.ogg"
     ride_on = "audio/bgm/umib_004.ogg"
     summer = "audio/bgm/umib_002.ogg"
+    pitiful = "audio/bgm/umib_1000.ogg"
 
 
     # alias : "Song Title",
@@ -53,6 +54,7 @@ init python:
         deaths_door : "At Death's Door",
         hane : "HANE (Feathers)",
         ride_on : "Ride on",
-        summer : "Door of Summer"
+        summer : "Door of Summer",
+        pitiful : "Pitiful Sneerer"
     }
 
