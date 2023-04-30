@@ -1,5 +1,6 @@
 
 label splashscreen:
+
 #jump test
 scene black with dissolve
 pause (1)
@@ -19,13 +20,41 @@ pause (1)
 if persistent.alreadystarted == True:
     $ renpy.movie_cutscene("videos/opening.mov")
     pause (1)
+    show load1 at right
+    pause 0.1
+
+    hide load1
+    show load2 at right
+    pause 0.1
+
+    hide load2
+    show load3 at right
+    pause 0.1
+
+    hide load3
+    show load4 at right
+    pause 0.1
+
+    hide load4
+    show load1 at right
+    pause 0.1
+
+    hide load1
+    show load2 at right
+    pause 0.1
+
+    hide load2
+    show load3 at right
+    pause 0.1
+
+    hide load3
+    show load4 at right
+    pause 0.1
+
+    hide load4
     return
 else:
     pause (1)
-    return
-
-label before_main_menu:
-
     show load1 at right
     pause 0.1
 
@@ -62,6 +91,7 @@ label before_main_menu:
 
 label quit:
     if menuquit == True:
+        hide window
         $ menuquit = False
         return
     hide window

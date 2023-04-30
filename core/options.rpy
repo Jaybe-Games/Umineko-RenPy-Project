@@ -82,11 +82,6 @@ define config.exit_sound = "audio/sfx/umise_1006.ogg"
 
 define config.intra_transition = ImageDissolve("images/masks/circle.png", 1.0, reverse=True, ramplen = 100)
 
-
-## A transition that is used after a game has been loaded.
-
-define config.after_load_transition = dissolve
-
 ## Used when entering the main menu after the game has ended.
 
 define config.end_game_transition = dissolve
@@ -138,8 +133,8 @@ define config.window = "auto"
 
 ## Transitions used to show and hide the dialogue window
 
-define config.window_show_transition = Dissolve(.2)
-define config.window_hide_transition = Dissolve(.2)
+define config.window_show_transition = Dissolve(.5)
+define config.window_hide_transition = Dissolve(.5)
 
 
 ## Preference defaults #########################################################

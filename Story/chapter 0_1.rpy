@@ -16,7 +16,6 @@ label chapter1:
     show white with m1trans
     camera at Shake(None, float('inf'), dist=3)
     scene ship_s2a with m1trans1
-    pause (3)
     window show
     "In der Luft liegt der typische Meeresgeruch von Salz und auch ein wenig von Algen."
     extend " Ein Duft, der den Geruchssinn sofort in Ekstase versetzt, wenn nicht sogar die Seele selbst begeistert."

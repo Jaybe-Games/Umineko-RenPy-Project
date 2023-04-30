@@ -5,7 +5,9 @@ label start:
     $ chaptername = "\"Ich schreibe an dich in einer Quadrillion Jahren\""
     $ chapternumber = "Prolog"
     $ songname = "-"
-    pause(7)
+    pause 2
+    call showch0
+    pause 2
     play sound "audio/sfx/umise_028.ogg"
     show disclaimer1 with dissolve
     pause (10)
@@ -24,7 +26,6 @@ label start:
     hide text with fade
     pause (2)
     scene ke_s2 with dissolve
-    pause (2)
     "01. Mai 1983."
     "An die Abteilungen 1 bis 12,"
     "XX Hauptquartier der Präfekturpolizei."

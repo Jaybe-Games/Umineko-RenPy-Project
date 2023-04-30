@@ -14,7 +14,7 @@ stop music fadeout 2.0
 pause(7)
 scene black with dissolve
 show moon_1p
-call rain_layer1
+show rain
 show blackpic
 pause(5)
 play wind "audio/sfx/umilse_005.ogg" fadein 3.0

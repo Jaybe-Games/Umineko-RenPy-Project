@@ -358,26 +358,15 @@ style quick_button_text:
 
 screen navigation():
 
-    $ minutes, seconds = divmod(int(renpy.get_game_runtime()), 60)
-
     add partObj
+    add "gui/titlelogo.png" at topright
 
     fixed:
-        #style_prefix "navigation"
-
-        #if main_menu:
-            #xalign 1.0
-            #yalign 0.5
-            #xoffset -30
-        #else:
-            #xoffset 60
-            #yalign 0.5
-
-        #spacing gui.navigation_spacing
 
         if main_menu:
 
-            imagebutton auto "gui/button/secret_%s.png" action Start("supersecret") xpos 42 ypos 957
+            imagebutton auto "gui/button/secret_%s.png" action Start("supersecret") xpos 210 ypos 1032
+            imagebutton auto "gui/button/secret_%s.png" action Start("supersecret") xpos 338 ypos 1032
 
         else:
 
@@ -389,6 +378,7 @@ screen navigation():
 
                 cols 2
                 xpos 1280
+                ypos 680
                 yalign 0.5
                 spacing 10 
 
@@ -430,15 +420,6 @@ screen navigation():
 
             textbutton _("End Replay") action EndReplay(confirm=True)
 
-        elif not main_menu:
-
-            text "{i}Episode 0 " + chapternumber ypos 875 xpos 10 xalign 0.0 size 70 font "fonts/ariston.ttf" outlines [ (absolute(3), "#000", absolute(0), absolute(0)) ]
-
-            text "{i}" + chaptername ypos 955 xpos 10 xalign 0.0 size 50 font "fonts/ariston.ttf" outlines [ (absolute(3), "#000", absolute(0), absolute(0)) ]
-
-            text "Soundtrack: " + songname ypos 1005 xpos 1900 xalign 1.0 size 30 font "fonts/AOTFShinGoProMedium.otf" outlines [ (absolute(3), "#000", absolute(0), absolute(0)) ]
-
-            text "Spielzeit: [minutes]:[seconds:02d]" ypos 1040 xpos 1900 xalign 1.0 size 30 font "fonts/AOTFShinGoProMedium.otf" outlines [ (absolute(3), "#000", absolute(0), absolute(0)) ]
 
 
 
@@ -537,6 +518,8 @@ style main_menu_version:
 
 screen game_menu(title, scroll=None, yinitial=0.0):
 
+    $ minutes, seconds = divmod(int(renpy.get_game_runtime()), 60)
+
     style_prefix "game_menu"
 
     if main_menu:
@@ -589,8 +572,6 @@ screen game_menu(title, scroll=None, yinitial=0.0):
 
                     transclude
 
-    use navigation
-
     if not main_menu:
 
         vpgrid:
@@ -633,12 +614,20 @@ screen game_menu(title, scroll=None, yinitial=0.0):
 
             imagebutton auto "gui/button/back_%s.png" activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" action Return()
 
+        text "{i}Episode 0 " + chapternumber ypos 875 xpos 10 xalign 0.0 size 70 font "fonts/ariston.ttf" outlines [ (absolute(3), "#000", absolute(0), absolute(0)) ]
+
+        text "{i}" + chaptername ypos 955 xpos 10 xalign 0.0 size 50 font "fonts/ariston.ttf" outlines [ (absolute(3), "#000", absolute(0), absolute(0)) ]
+
+        text "Soundtrack: " + songname ypos 1005 xpos 1900 xalign 1.0 size 30 font "fonts/AOTFShinGoProMedium.otf" outlines [ (absolute(3), "#000", absolute(0), absolute(0)) ]
+
+        text "Spielzeit: [minutes]:[seconds:02d]" ypos 1040 xpos 1900 xalign 1.0 size 30 font "fonts/AOTFShinGoProMedium.otf" outlines [ (absolute(3), "#000", absolute(0), absolute(0)) ]
     else:
 
         vpgrid:
 
                 cols 2
                 xpos 1280
+                ypos 680
                 yalign 0.5
                 spacing 10 
 
@@ -748,7 +737,7 @@ screen about():
     ## This use statement includes the game_menu screen inside this one. The
     ## vbox child is then included inside the viewport inside the game_menu
     ## screen.
-    use game_menu(_("{color=#fff}Üb{color=#f00}e{color=#fff}r"), scroll="viewport"):
+    use game_menu(_("{color=#fff}Cre{color=#f00}d{color=#fff}its"), scroll="viewport"):
 
         style_prefix "about"
 
@@ -858,11 +847,7 @@ screen file_slots(title):
                 style_prefix "Seite"
 
                 xalign 0.5
-                yalign 1.0
-                ypos 100
-                xpos 350
-
-                spacing gui.page_spacing
+                yalign 0.0
 
                 textbutton _("<") action FilePagePrevious()
 
@@ -873,7 +858,7 @@ screen file_slots(title):
                     textbutton _("{#quick_page}Q") hover_sound "audio/sfx/click-21156.mp3" activate_sound "audio/sfx/umise_1005.ogg" action FilePage("quick")
 
                 ## range(1, 10) gives the numbers from 1 to 9.
-                for page in range(1, 10):
+                for page in range(1, 6):
                     textbutton "[page]" hover_sound "audio/sfx/click-21156.mp3" activate_sound "audio/sfx/umise_1005.ogg" action FilePage(page)
 
                 textbutton _(">") hover_sound "audio/sfx/click-21156.mp3" activate_sound "audio/sfx/umise_1005.ogg" action FilePageNext()
@@ -926,16 +911,12 @@ screen preferences():
 
     use game_menu(_("{color=#fff}Einstell{/color}{color=#f00}u{/color}{color=#fff}ngen{/color}")):
 
-        vbox:
-
             hbox:
-                box_wrap True
-                spacing -50
 
+                spacing -30
                 if renpy.variant("pc") or renpy.variant("web"):
 
                     vbox:   
-                        spacing -30
                         style_prefix "radio"
                         xalign 0.0
                         label _("{color=#fff}Anzei{/color}{color=#f00}g{/color}{color=#fff}e{/color}") xpos 130
@@ -945,7 +926,6 @@ screen preferences():
                 vbox:
 
                     style_prefix "check"
-                    spacing -30
                     xalign 0.0
                     label _("{color=#fff}Übers{/color}{color=#f00}p{/color}{color=#fff}ringen{/color}") xpos 80
                     imagebutton auto "gui/button/unread_%s.png" action Preference("skip", "toggle") activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" xpos 100
@@ -954,7 +934,6 @@ screen preferences():
                 vbox:
 
                     style_prefix "check"
-                    spacing -30
                     xalign 0.0
                     label _("{color=#fff}Spr{/color}{color=#f00}a{/color}{color=#fff}che{/color}") xpos 130
                     imagebutton auto "gui/button/de_%s.png" action Language(None) activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" xpos 100
@@ -965,7 +944,6 @@ screen preferences():
                     vbox:
 
                         style_prefix "check"
-                        spacing -30
                         xalign 0.0
                         label _("{color=#fff}Textb{/color}{color=#f00}o{/color}{color=#fff}x{/color}") xpos 130
 
@@ -974,9 +952,8 @@ screen preferences():
                         imagebutton auto "gui/button/tbc_%s.png" action [SetVariable("persistent.textbox", 2),renpy.force_autosave, Show("confirmrestart")] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" xpos 100
                         text "Erfordert Neustart." xpos 100 size 20 ypos 10
 
-            null height (2 * gui.pref_spacing)
-
             hbox:
+                ypos 300
                 style_prefix "slider"
                 box_wrap True
 
@@ -1213,7 +1190,7 @@ screen help():
 
     default device = "keyboard"
 
-    use game_menu(_("{color=#fff}Hi{color=#f00}l{color=#fff}fe"), scroll="viewport"):
+    use game_menu(_("{color=#fff}Steue{color=#f00}r{color=#fff}ung"), scroll="viewport"):
 
         style_prefix "help"
 
@@ -1394,7 +1371,7 @@ screen confirm(message, yes_action, no_action):
             yalign 0.5
     elif message == layout.OVERWRITE_SAVE:
         add "gui/confirmblack.png" at center
-        imagebutton auto "gui/button/accept_%s.png" action [Play("sound", "audio/sfx/umise_058.ogg"), yes_action]:
+        imagebutton auto "gui/button/accept_%s.png" action [Play("sound", "audio/sfx/umise_056.ogg"), yes_action]:
             xpos 400
             ypos 650
             activate_sound "audio/sfx/umise_1005.ogg" 
@@ -1707,7 +1684,6 @@ screen story_select():
         xpos 985
         ypos 650
         yalign 0.5
-        spacing -100
 
         text "Szenario Wählen:" ypos 0 xalign 0.5 yalign 0.5 size 90 font "fonts/ArnoPro.otf" outlines [ (absolute(3), "#000", absolute(0), absolute(0)) ]
 
@@ -1872,114 +1848,111 @@ screen characters():
 
             xpos 5
             ypos 10
-            spacing -10
             if persistent.beatrice == True:
                 imagebutton auto "gui/chars/char21_%s.png" action ShowMenu("char21") activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
             else:
-                imagebutton idle "gui/chars/char00.png" action NullAction()
+                imagebutton auto "gui/chars/char00_%s.png" action NullAction()
 
             if persistent.kinzo == True:
                 imagebutton auto "gui/chars/char01_%s.png" action ShowMenu("char01") activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
             else:
-                imagebutton idle "gui/chars/char00.png" action NullAction()
+                imagebutton auto "gui/chars/char00_%s.png" action NullAction()
 
             if persistent.krauss == True:
                 imagebutton auto "gui/chars/char02_%s.png" action ShowMenu("char02") activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
             else:
-                imagebutton idle "gui/chars/char00.png" action NullAction()
+                imagebutton auto "gui/chars/char00_%s.png" action NullAction()
 
             if persistent.natsuhi == True:
                 imagebutton auto "gui/chars/char03_%s.png" action ShowMenu("char03") activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
             else:
-                imagebutton idle "gui/chars/char00.png" action NullAction()
+                imagebutton auto "gui/chars/char00_%s.png" action NullAction()
 
             if persistent.jessica == True:
                 imagebutton auto "gui/chars/char05_%s.png" action ShowMenu("char05") activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
             else:
-                imagebutton idle "gui/chars/char00.png" action NullAction()
+                imagebutton auto "gui/chars/char00_%s.png" action NullAction()
      
             if persistent.eva == True:
                 imagebutton auto "gui/chars/char06_%s.png" action ShowMenu("char06") activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
             else:
-                imagebutton idle "gui/chars/char00.png" action NullAction()
+                imagebutton auto "gui/chars/char00_%s.png" action NullAction()
 
             if persistent.hideyoshi == True:    
                 imagebutton auto "gui/chars/char07_%s.png" action ShowMenu("char07") activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
             else:
-                imagebutton idle "gui/chars/char00.png" action NullAction()
+                imagebutton auto "gui/chars/char00_%s.png" action NullAction()
 
             if persistent.george == True:
                 imagebutton auto "gui/chars/char08_%s.png" action ShowMenu("char08") activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
             else:
-                imagebutton idle "gui/chars/char00.png" action NullAction()
+                imagebutton auto "gui/chars/char00_%s.png" action NullAction()
         hbox:
 
             xpos 5
             ypos 110
-            spacing -10
 
             if persistent.rudolf == True:
                 imagebutton auto "gui/chars/char09_%s.png" action ShowMenu("char09") activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
             else:
-                imagebutton idle "gui/chars/char00.png" action NullAction()
+                imagebutton auto "gui/chars/char00_%s.png" action NullAction()
 
             if persistent.kyrie == True:
                 imagebutton auto "gui/chars/char10_%s.png" action ShowMenu("char10") activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
             else:
-                imagebutton idle "gui/chars/char00.png" action NullAction()
+                imagebutton auto "gui/chars/char00_%s.png" action NullAction()
 
             if persistent.battler == True:
                 imagebutton auto "gui/chars/char11_%s.png" action ShowMenu("char11") activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
             else:
-                imagebutton idle "gui/chars/char00.png" action NullAction()
+                imagebutton auto "gui/chars/char00_%s.png" action NullAction()
 
             if persistent.rosa == True:
                 imagebutton auto "gui/chars/char13_%s.png" action ShowMenu("char13") activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
             else:
-                imagebutton idle "gui/chars/char00.png" action NullAction()
+                imagebutton auto "gui/chars/char00_%s.png" action NullAction()
 
             if persistent.maria == True:
                 imagebutton auto "gui/chars/char14_%s.png" action ShowMenu("char14") activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
             else:
-                imagebutton idle "gui/chars/char00.png" action NullAction()
+                imagebutton auto "gui/chars/char00_%s.png" action NullAction()
 
         hbox:
 
             xpos 5
             ypos 210
-            spacing -10
 
             if persistent.nanjo == True:
                 imagebutton auto "gui/chars/char15_%s.png" action ShowMenu("char15") activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
             else:
-                imagebutton idle "gui/chars/char00.png" action NullAction()
+                imagebutton auto "gui/chars/char00_%s.png" action NullAction()
 
             if persistent.genji == True:
                 imagebutton auto "gui/chars/char16_%s.png" action ShowMenu("char16") activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
             else:
-                imagebutton idle "gui/chars/char00.png" action NullAction()
+                imagebutton auto "gui/chars/char00_%s.png" action NullAction()
 
             if persistent.kumasawa == True:
                 imagebutton auto "gui/chars/char17_%s.png" action ShowMenu("char17") activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
             else:
-                imagebutton idle "gui/chars/char00.png" action NullAction()
+                imagebutton auto "gui/chars/char00_%s.png" action NullAction()
 
             if persistent.gohda == True:
                 imagebutton auto "gui/chars/char18_%s.png" action ShowMenu("char18") activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
             else:
-                imagebutton idle "gui/chars/char00.png" action NullAction()
+                imagebutton auto "gui/chars/char00_%s.png" action NullAction()
 
             if persistent.shannon == True:
                 imagebutton auto "gui/chars/char19_%s.png" action ShowMenu("char19") activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
             else:
-                imagebutton idle "gui/chars/char00.png" action NullAction()
+                imagebutton auto "gui/chars/char00_%s.png" action NullAction()
 
             if persistent.kanon == True:
                 imagebutton auto "gui/chars/char20_%s.png" action ShowMenu("char20") activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
             else:
-                imagebutton idle "gui/chars/char00.png" action NullAction()
+                imagebutton auto "gui/chars/char00_%s.png" action NullAction()
 
-screen witches:
+screen witches():
     tag hover
     imagemap:
         ground "gui/hovermenu2.png"
@@ -1987,14 +1960,14 @@ screen witches:
     text "Zeigt die nicht menschlichen Charaktere." style 'menutext' at Position (xpos = 60, ypos = 550)
 
 
-screen hina:
+screen hina():
     tag hover
     imagemap:
         ground "gui/hovermenu2.png"
     text "Hinamizawa" style 'bigtext' at Position(xpos = 75, ypos = 500)
     text "Zeigt die Einwohner Hinamizawas." style 'menutext' at Position (xpos = 60, ypos = 550)
 
-screen char05:
+screen char05():
     tag menu
     use characters
     imagemap:
@@ -2003,7 +1976,7 @@ screen char05:
     text "Ushiromiya Jessica" style 'charnametext' at Position(xpos = 75, ypos = 500)
     text "Hier sollten Infos über Jessica stehen." style 'chartext' at Position (xpos = 60, ypos = 550)
 
-screen char06:
+screen char06():
     tag menu
     use characters
     imagemap:
@@ -2012,7 +1985,7 @@ screen char06:
     text "Ushiromiya Eva" style 'charnametext' at Position(xpos = 75, ypos = 500)
     text "Hier sollten Infos über Eva stehen." style 'chartext' at Position (xpos = 60, ypos = 550)
 
-screen char07:
+screen char07():
     tag menu
     use characters
     imagemap:
@@ -2021,7 +1994,7 @@ screen char07:
     text "Ushiromiya Hideyoshi" style 'charnametext' at Position(xpos = 75, ypos = 500)
     text "Hier sollten Infos über Hideyoshi stehen." style 'chartext' at Position (xpos = 60, ypos = 550)
 
-screen char08:
+screen char08():
     tag menu
     use characters
     imagemap:
@@ -2030,7 +2003,7 @@ screen char08:
     text "Ushiromiya George" style 'charnametext' at Position(xpos = 75, ypos = 500)
     text "Hier sollten Infos über George stehen." style 'chartext' at Position (xpos = 60, ypos = 550)
 
-screen char09:
+screen char09():
     tag menu
     use characters
     imagemap:
@@ -2039,7 +2012,7 @@ screen char09:
     text "Ushiromiya Rudolf" style 'charnametext' at Position(xpos = 75, ypos = 500)
     text "Hier sollten Infos über Rudolf stehen." style 'chartext' at Position (xpos = 60, ypos = 550)
 
-screen char10:
+screen char10():
     tag menu
     use characters
     imagemap:
@@ -2048,16 +2021,16 @@ screen char10:
     text "Ushiromiya Kyrie" style 'charnametext' at Position(xpos = 75, ypos = 500)
     text "Hier sollten Infos über Kyrie stehen." style 'chartext' at Position (xpos = 60, ypos = 550)
 
-screen char11:
+screen char11():
     tag menu
     use characters
     imagemap:
         ground "gui/hovermenu2.png"
     image but_char at r3
     text "Ushiromiya Battler" style 'charnametext' at Position(xpos = 75, ypos = 500)
-    text "Hier sollten Infos über Battler stehen." style 'chartext' at Position (xpos = 60, ypos = 550)
+    text "Der Sohn von Rudolf und Asumu.\nEr ist zurück im Familienregister, nachdem er es vor 6 Jahren\nnach dem Tod seiner Mutter verlassen hat.\nEr nimmt somit wieder an der Familienkonferenz teil. \nNach dem Tod seiner Mutter war Battler wütend\nüber die schnelle Wiederheirat seines Vaters und das hat Battler\ndazu gebracht, die Familie für 6 lange Jahre zu verlassen.\nBattler ist eine aufrichtige und fröhliche Person, der, genau wie\nsein Vater Rudolf, sehr gerne mit jungen Mädchen flirtet.\nEr ist ein großer Fan von Mystery Novels und sehr intelligent." style 'chartext' at Position (xpos = 60, ypos = 550)
 
-screen char13:
+screen char13():
     tag menu
     use characters
     imagemap:
@@ -2066,7 +2039,7 @@ screen char13:
     text "Ushiromiya Rosa" style 'charnametext' at Position(xpos = 75, ypos = 500)
     text "Hier sollten Infos über Rosa stehen." style 'chartext' at Position (xpos = 60, ypos = 550)
 
-screen char14:
+screen char14():
     tag menu
     use characters
     imagemap:
@@ -2075,7 +2048,7 @@ screen char14:
     text "Ushiromiya Maria" style 'charnametext' at Position(xpos = 75, ypos = 500)
     text "Hier sollten Infos über Maria stehen." style 'chartext' at Position (xpos = 60, ypos = 550)
 
-screen char17:
+screen char17():
     tag menu
     use characters
     imagemap:
@@ -2084,7 +2057,7 @@ screen char17:
     text "Kumasawa Chiyo" style 'charnametext' at Position(xpos = 75, ypos = 500)
     text "Hier sollten Infos über Kumasawa stehen." style 'chartext' at Position (xpos = 60, ypos = 550)
 
-screen char18:
+screen char18():
     tag menu
     use characters
     imagemap:
@@ -2093,7 +2066,7 @@ screen char18:
     text "Gohda Toshiro" style 'charnametext' at Position(xpos = 75, ypos = 500)
     text "Hier sollten Infos über Gohda stehen." style 'chartext' at Position (xpos = 60, ypos = 550)
 
-screen char19:
+screen char19():
     tag menu
     use characters
     imagemap:
@@ -2102,7 +2075,7 @@ screen char19:
     text "Shannon" style 'charnametext' at Position(xpos = 75, ypos = 500)
     text "Hier sollten Infos über Shannon stehen." style 'chartext' at Position (xpos = 60, ypos = 550)
 
-screen char21:
+screen char21():
     tag menu
     use characters
     imagemap:

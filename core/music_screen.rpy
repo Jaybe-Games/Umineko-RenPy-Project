@@ -98,8 +98,6 @@ screen music_room():
             mousewheel True
             has vbox
 
-            spacing gui.navigation_spacing
-
             for st in ost.soundtracks:
                 textbutton "[st.name]":
                     text_style "music_room_list_button"
