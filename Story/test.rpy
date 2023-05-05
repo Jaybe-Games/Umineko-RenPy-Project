@@ -28,6 +28,7 @@ label test:
     ber "...You just bought the one that goes for 200 yen a pack."
     extend " ...But that's fine..." 
     extend " It's my favorite kind of tea."
+    $ play_music(kuina)
     bea "I am very comforted by this Great Lady Bernkastel"
     play sound "audio/sfx/umise_052.ogg"
     hide bea_a11_defo2 with witchfadeout
@@ -38,6 +39,7 @@ label test:
     play sound "audio/sfx/umise_052.ogg"
     hide ber_a21_warai1 with witchfadeout
     pause 1
-    call chapterendb
-    call clockch2
-    jump test
+    play sound "audio/sfx/umise_057.ogg"
+    stop rain
+    scene black with flash
+    jump gameresult

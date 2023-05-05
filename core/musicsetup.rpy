@@ -29,6 +29,7 @@ init python:
     face = "audio/bgm/umib_110.ogg"
     credits = "audio/bgm/umib_0000.ogg"
     endroll = "audio/bgm/bgm_final.ogg"
+    kuina = "audio/bgm/umib_121.ogg"
 
 
     # alias : "Song Title",
@@ -40,6 +41,7 @@ init python:
         pitiful : "Pitiful Sneerer",
         face : "About Face",
         credits : "Golden Sneers - Lovely Banquet",
-        endroll : "Bring the Fate"
+        endroll : "Bring the Fate",
+        kuina : "Kuina"
     }
 

@@ -2,7 +2,13 @@ transform end_scroll:
     subpixel True
     yoffset 0
     xalign 0.5
-    linear 217 yoffset -17280
+    linear 222 yoffset -17280
+
+transform gameresult_scroll:
+    subpixel True
+    yoffset 0
+    xalign 0.5
+    linear 100 yoffset -21420
 
 transform credits_scroll:
     subpixel True
@@ -32,6 +38,18 @@ label endroll:
     show endroll at end_scroll
     $ renpy.pause(224, hard=True)   
     stop music
+    $ renpy.pause(5, hard=True)   
+    scene black with kanon_rev
+    $ renpy.pause(5, hard=True)   
+    $ _skipping = True 
+    return
+
+label gameresult:
+
+    $ _skipping = False
+    show gameresult at gameresult_scroll
+    $ renpy.pause(105, hard=True)   
+    stop music fadeout 5.0
     $ renpy.pause(5, hard=True)   
     scene black with kanon_rev
     $ renpy.pause(5, hard=True)   
