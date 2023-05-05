@@ -1,25 +1,4 @@
-
-default persistent.visual_text_help = _preferences.self_voicing
-
 default persistent.audio_cues = True
-
-default persistent.screenshake = True
-
-default persistent.say_window_alpha = 0.75
-
-default persistent.pref_text_scale = "regular"
-
-default persistent.say_dialogue_kerning = 0
-
-default persistent.pref_text_font = "DejaVuSans.ttf"
-
-default persistent.pref_text_size = 32
-
-default persistent.pref_text_color = "#333333"
-
-default persistent.pref_text_spacing = 0
-
-
 
 init python:
 
@@ -47,6 +26,9 @@ init python:
     ride_on = "audio/bgm/umib_004.ogg"
     summer = "audio/bgm/umib_002.ogg"
     pitiful = "audio/bgm/umib_1000.ogg"
+    face = "audio/bgm/umib_110.ogg"
+    credits = "audio/bgm/umib_0000.ogg"
+    endroll = "audio/bgm/bgm_final.ogg"
 
 
     # alias : "Song Title",
@@ -55,6 +37,9 @@ init python:
         hane : "HANE (Feathers)",
         ride_on : "Ride on",
         summer : "Door of Summer",
-        pitiful : "Pitiful Sneerer"
+        pitiful : "Pitiful Sneerer",
+        face : "About Face",
+        credits : "Golden Sneers - Lovely Banquet",
+        endroll : "Bring the Fate"
     }
 

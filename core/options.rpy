@@ -212,14 +212,17 @@ init python:
     build.classify('**/.**', None)
     build.classify('**/#**', None)
     build.classify('**/thumbs.db', None)
+    build.classify('**/**.rpy', None)
+    build.classify('**/**.rpyb', None)
+    build.classify('**/**.rpym', None)
+    build.classify('**/**.rpymc', None)
+    build.classify('**/**.txt', None)
+    build.classify('**/**.md', None)
 
     ## To archive files, classify them as 'archive'.
 
     build.classify('**/**.png', 'images')
     build.classify('**.png', 'images')
-    build.classify('**/**.rpyb', 'scripts')
-    build.classify('**/**.rpym', 'scripts')
-    build.classify('**/**.rpymc', 'scripts')
     build.classify('**/**.rp', 'librarys')
     build.classify('**/**.rpc', 'librarys')
     build.classify('**/**.bmp', 'images')
@@ -228,14 +231,11 @@ init python:
     build.classify('**/**.icns', 'images')
     build.classify('**/**.ogg', 'audio')
     build.classify('**/**.mp3', 'audio')
-    build.classify('**/**.rpy', 'scripts')
     build.classify('**/**.rpyc', 'scripts')
     build.classify('**/**.webm', 'video')
     build.classify('**/**.mov', 'video')
     build.classify('**/**.otf', 'fonts')
     build.classify('**/**.ttf', 'fonts')
-    build.classify('**/**.txt', 'archive')
-    build.classify('**/**.md', 'archive')
 
 
     ## Files matching documentation patterns are duplicated in a mac app build,
@@ -257,4 +257,4 @@ init python:
 ## The username and project name associated with an itch.io project, separated
 ## by a slash.
 
-define build.itch_project = "https://jaybe-games.itch.io/umineko-when-they-cry-zero"
+define build.itch_project = "jaybe-games/umineko-when-they-cry-zero"

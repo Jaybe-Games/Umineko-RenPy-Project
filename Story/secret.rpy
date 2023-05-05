@@ -14,7 +14,7 @@ stop music fadeout 2.0
 pause(7)
 scene black with dissolve
 show moon_1p
-show rain
+call rainlayer
 show blackpic
 pause(5)
 play wind "audio/sfx/umilse_005.ogg" fadein 3.0
@@ -52,9 +52,8 @@ extend " Dann benutze ich jetzt meine Macht als Autor, um dich zurück zum Haupt
 "Also dann, lebe wohl.\""
 window hide
 call hidebf1
-pause(5)
-play sound "audio/sfx/umise_056.ogg"
-scene black with gradientcirclefade
+pause(2)
+call chapterendsecret
 stop wind fadeout 2.0
 stop rain fadeout 2.0
 pause(3)

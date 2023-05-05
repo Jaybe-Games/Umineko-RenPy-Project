@@ -8,7 +8,7 @@ label test:
     pause (2)
     scene different_space_1a with gradientcirclefade
     play rain "audio/sfx/umilse_012.ogg" fadein 1.0
-    show rain
+    call rainlayer
     pause (1)
     play sound "audio/sfx/umise_052.ogg"
     $ songname = "Pitiful Sneerer"
@@ -18,6 +18,7 @@ label test:
     ber "Yes..."
     extend " Black tea is indeed the best tea for a witch..."
     extend " especially with dried plums..."
+    call butterfly1
     play sound "audio/sfx/umise_052.ogg"
     show bea_a11_defo2 behind rain at r, ah('bea') with witchfadein
     pause 1
@@ -31,6 +32,7 @@ label test:
     play sound "audio/sfx/umise_052.ogg"
     hide bea_a11_defo2 with witchfadeout
     pause 1
+    call hidebf1
     ber "...*giggle*giggle*"
     extend "....Whatever you say..."
     play sound "audio/sfx/umise_052.ogg"

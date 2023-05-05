@@ -1,7 +1,7 @@
 
 label splashscreen:
 
-#jump test
+jump endroll
 scene black with dissolve
 pause (1)
 show splash1 with dissolve
@@ -96,6 +96,9 @@ label quit:
         return
     hide window
     stop music fadeout 1.0
+    stop rain fadeout 1.0
+    stop ship fadeout 1.0
+    stop wind fadeout 1.0
     play sound "audio/sfx/umise_018.ogg"
     scene black zorder 99
     with kanon_rev
