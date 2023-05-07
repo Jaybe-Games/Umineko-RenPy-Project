@@ -17,7 +17,7 @@ transform credits_scroll:
     linear 280 yoffset -17280
 
 label credits:
-
+    $ renpy.pause(3, hard=True)
     $ songname = "Golden Sneers - Lovely Banquet"
     $ _skipping = False
     $ play_music(credits)
@@ -31,7 +31,7 @@ label credits:
     return
 
 label endroll:
-
+    $ renpy.pause(3, hard=True)
     $ songname = "Bring the Fate"
     $ _skipping = False
     $ play_music(endroll)
@@ -49,9 +49,9 @@ label gameresult:
     $ _skipping = False
     show gameresult at gameresult_scroll
     $ renpy.pause(105, hard=True)   
-    stop music fadeout 5.0
     $ renpy.pause(5, hard=True)   
     scene black with kanon_rev
+    stop music fadeout 5.0
     $ renpy.pause(5, hard=True)   
     $ _skipping = True 
     return

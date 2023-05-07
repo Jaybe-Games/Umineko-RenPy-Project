@@ -4,15 +4,19 @@ init python:
     
     random.seed()
     
-    def Rain(image, min_particles=15000, max_particles=50000, speed=3500, wind=100, xborder=(0,0), yborder=(50,100), **kwargs):
+    def Rain(image, min_particles=1000, max_particles=1500, speed=5000, wind=0, xborder=(0,100), yborder=(2000,3000), **kwargs):
 
         return Particles(SnowFactory(image, min_particles, max_particles, speed, wind, xborder, yborder, **kwargs))
 
-    def Rain1(image, min_particles=15000, max_particles=50000, speed=3000, wind=200, xborder=(0,0), yborder=(50,100), **kwargs):
+    def Rain2(image, min_particles=1000, max_particles=1500, speed=4000, wind=0, xborder=(0,100), yborder=(2000,3000), **kwargs):
 
         return Particles(SnowFactory(image, min_particles, max_particles, speed, wind, xborder, yborder, **kwargs))
 
-    def Rain2(image, min_particles=15000, max_particles=50000, speed=2000, wind=300, xborder=(0,0), yborder=(50,100), **kwargs):
+    def Rain3(image, min_particles=1000, max_particles=1500, speed=3000, wind=0, xborder=(0,100), yborder=(2000,3000), **kwargs):
+
+        return Particles(SnowFactory(image, min_particles, max_particles, speed, wind, xborder, yborder, **kwargs))
+
+    def Rain4(image, min_particles=1000, max_particles=1500, speed=2500, wind=0, xborder=(0,100), yborder=(200,3000), **kwargs):
 
         return Particles(SnowFactory(image, min_particles, max_particles, speed, wind, xborder, yborder, **kwargs))
     
@@ -117,6 +121,6 @@ init python:
 
 init:
     image rain = Rain("/images/system/drop.png")
-    image rain2 = Rain("/images/system/drop2.png")
-    image rain3 = Rain1("/images/system/drop3.png")
-    image rain4 = Rain2("/images/system/drop3.png")
+    image rain2 = Rain2("/images/system/drop2.png")
+    image rain3 = Rain3("/images/system/drop3.png")
+    image rain4 = Rain4("/images/system/drop4.png")

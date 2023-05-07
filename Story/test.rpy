@@ -13,14 +13,14 @@ label test:
     play sound "audio/sfx/umise_052.ogg"
     $ songname = "Pitiful Sneerer"
     $ play_music(pitiful)
-    show ber_a21_warai1 behind rain at l,ah('ber') with witchfadein
+    show ber_a21_warai1 behind rain4 at l,ah('ber') with witchfadein
     pause 1
     ber "Yes..."
     extend " Black tea is indeed the best tea for a witch..."
     extend " especially with dried plums..."
     call butterfly1
     play sound "audio/sfx/umise_052.ogg"
-    show bea_a11_defo2 behind rain at r, ah('bea') with witchfadein
+    show bea_a11_defo2 behind rain4 at r, ah('bea') with witchfadein
     pause 1
     bea "...Indeed"
     extend " ...This black tea is simply a delicacy to enjoy."
@@ -28,7 +28,6 @@ label test:
     ber "...You just bought the one that goes for 200 yen a pack."
     extend " ...But that's fine..." 
     extend " It's my favorite kind of tea."
-    $ play_music(kuina)
     bea "I am very comforted by this Great Lady Bernkastel"
     play sound "audio/sfx/umise_052.ogg"
     hide bea_a11_defo2 with witchfadeout
@@ -41,5 +40,6 @@ label test:
     pause 1
     play sound "audio/sfx/umise_057.ogg"
     stop rain
+    stop music
     scene black with flash
-    jump gameresult
+    jump endroll
