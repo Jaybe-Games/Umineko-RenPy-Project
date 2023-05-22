@@ -226,7 +226,7 @@ style say_label:
     properties gui.text_properties("name", accent=True)
     xalign gui.name_xalign
     yalign 0.5
-    outlines [ (absolute(1), "#000", absolute(2), absolute(1)) ]
+    outlines [ (absolute(2), "#000", absolute(0), absolute(0)) ]
 
 style say_dialogue:
     properties gui.text_properties("dialogue")
@@ -234,7 +234,7 @@ style say_dialogue:
     xpos gui.dialogue_xpos
     xsize gui.dialogue_width
     ypos gui.dialogue_ypos
-    outlines [ (absolute(1), "#000", absolute(2), absolute(1)) ]
+    outlines [ (absolute(2), "#000", absolute(0), absolute(0)) ]
     line_spacing 15
     adjust_spacing True
 
@@ -938,19 +938,6 @@ screen preferences():
                     label _("{color=#fff}Spr{/color}{color=#f00}a{/color}{color=#fff}che{/color}") xpos 130
                     imagebutton auto "gui/button/de_%s.png" action Language(None) activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" xpos 100
                     imagebutton auto "gui/button/en_%s.png" action Language("English") activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" xpos 100
-
-                if main_menu:
-
-                    vbox:
-
-                        style_prefix "check"
-                        xalign 0.0
-                        label _("{color=#fff}Textb{/color}{color=#f00}o{/color}{color=#fff}x{/color}") xpos 130
-
-                        imagebutton auto "gui/button/tba_%s.png" action [SetVariable("persistent.textbox", 0),renpy.force_autosave, Show("confirmrestart")] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" xpos 100
-                        imagebutton auto "gui/button/tbb_%s.png" action [SetVariable("persistent.textbox", 1),renpy.force_autosave, Show("confirmrestart")] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" xpos 100
-                        imagebutton auto "gui/button/tbc_%s.png" action [SetVariable("persistent.textbox", 2),renpy.force_autosave, Show("confirmrestart")] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" xpos 100
-                        text "Erfordert Neustart." xpos 100 size 20 ypos 10
 
             hbox:
                 ypos 300
