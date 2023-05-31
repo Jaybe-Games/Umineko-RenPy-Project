@@ -232,6 +232,8 @@ init python:
     build.classify('**/**.ogg', 'audio')
     build.classify('**/**.mp3', 'audio')
     build.classify('**/**.rpyc', 'scripts')
+    build.classify('**/**.json', 'scripts')
+    build.classify('**.json', 'scripts')
     build.classify('**/**.webm', 'video')
     build.classify('**/**.mov', 'video')
     build.classify('**/**.otf', 'fonts')

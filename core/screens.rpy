@@ -136,18 +136,12 @@ screen say(who, what, slow_effect = slow_typewriter, slow_effect_delay = 0, alwa
         id "window"
 
         if who is not None:
-                if persistent.textbox == 2:
-                    window:
-                        id "namebox"
-                        style "namebox1"
-                        text who id "who"
-                elif persistent.textbox == 0 or 1:
                     window:
                         id "namebox"
                         style "namebox"
                         text who id "who"
 
-
+        
         fancytext what id "what" slow_effect slow_effect slow_effect_delay slow_effect_delay always_effect always_effect
 
 
@@ -162,35 +156,11 @@ init python:
     config.character_id_prefixes.append('namebox')
 
 style window is default
-style window1 is default
-style window2 is default
-style window3 is default
 style say_label is default
 style say_dialogue is default
 style say_thought is say_dialogue
 style namebox is default
-style namebox1 is default
-style namebox2 is default
 style namebox_label is say_label
-
-style window1:
-
-    xalign 0.5
-    xfill True
-    yalign gui.textbox_yalign
-    ysize gui.textbox_height
-    background Image("gui/textboxB.png", xalign=0.5, yalign=1.0)
-
-
-style window2:
-
-    xalign 0.5
-    xfill True
-    yalign gui.textbox_yalign
-    ysize gui.textbox_height
-    background Image("gui/textboxC.png", xalign=0.5, yalign=1.0)
-
-   
 
 style window:
 
@@ -210,23 +180,13 @@ style namebox:
     background Frame("gui/namebox.png", gui.namebox_borders, tile=gui.namebox_tile, xalign=gui.name_xalign)
     padding gui.namebox_borders.padding
 
-style namebox1:
-    xpos gui.name_xpos
-    xanchor gui.name_xalign
-    xsize gui.namebox_width
-    ypos gui.name_ypos
-    ysize gui.namebox_height
-
-    background Frame("gui/nameboxC.png", gui.namebox_borders, tile=gui.namebox_tile, xalign=gui.name_xalign)
-    padding gui.namebox_borders.padding
-
-
-
 style say_label:
     properties gui.text_properties("name", accent=True)
     xalign gui.name_xalign
     yalign 0.5
-    outlines [ (absolute(2), "#000", absolute(0), absolute(0)) ]
+    outlines [ (absolute(3), "#00000094", absolute(0), absolute(0)) ]
+    kerning 1.5
+    antialias True
 
 style say_dialogue:
     properties gui.text_properties("dialogue")
@@ -234,9 +194,14 @@ style say_dialogue:
     xpos gui.dialogue_xpos
     xsize gui.dialogue_width
     ypos gui.dialogue_ypos
-    outlines [ (absolute(2), "#000", absolute(0), absolute(0)) ]
-    line_spacing 15
-    adjust_spacing True
+    outlines [ (absolute(3), "#00000094", absolute(0), absolute(0)) ]
+    line_spacing 5
+    kerning 1.3
+    antialias True
+    layout "greedy"
+    line_overlap_split -8
+    newline_indent True
+
 
 ## Input screen ################################################################
 ##
@@ -742,9 +707,9 @@ screen about():
         style_prefix "about"
 
         vbox:
-            xalign 0.0
+            xalign 0.5
 
-            label "[config.name!t]"
+            label "\n      Umineko When They {red_truth}C{/red_truth}ry Zero\n~Waltz of Reflections and Delusions~"
             text _("Version [config.version!t]\n")
 
             ## gui.about is usually set in options.rpy.

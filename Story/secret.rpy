@@ -8,13 +8,12 @@ $ chaptername = "\"Autorentreffen\""
 $ chapternumber = "Kapitel 0"
 $ songname = "-"
 play sound "audio/sfx/umise_1006.ogg"
-show main_menu
-show ware
+show ware2
 stop music fadeout 2.0
 pause(7)
 scene black with dissolve
 show moon_1p
-call rainlayer
+call rainlayer from _call_rainlayer
 show blackpic
 pause(5)
 play wind "audio/sfx/umilse_005.ogg" fadein 3.0
@@ -28,7 +27,7 @@ pause(2)
 extend " Du da!"
 extend " Erklär mir bitte, wie du hierher gekommen bist."
 window hide
-call butterfly1
+call butterfly1 from _call_butterfly1
 window show
 "Du kannst mir jetzt nicht erzählen, dass du einfach nur irgendwo drauf geklickt hast und dann bist du einfach nur durch Zufall hier gelandet."
 "Ich könnte Wetten abschließen, dass es dir irgendjemand erzählt hat."
@@ -51,9 +50,9 @@ extend " Dann benutze ich jetzt meine Macht als Autor, um dich zurück zum Haupt
 "Ich bin sicher, dass ich dir genau dasselbe noch einmal erzählen werde."
 "Also dann, lebe wohl.\""
 window hide
-call hidebf1
+call hidebf1 from _call_hidebf1
 pause(2)
-call chapterendsecret
+call chapterendsecret from _call_chapterendsecret
 stop wind fadeout 2.0
 stop rain fadeout 2.0
 pause(3)

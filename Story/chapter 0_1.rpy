@@ -6,7 +6,7 @@ label chapter1:
     $ chapternumber = "Kapitel 1"
     $ songname = "-"
     $ persistent.alreadystarted = True
-    call showch1
+    call showch1 from _call_showch1
     play sound "audio/sfx/umise_028.ogg"
     show oct_4_1986 with dissolve
     pause (7)
@@ -56,10 +56,10 @@ label chapter1:
     hide rud_a11_akuwarai1 with fastdissolve
     show rud_a11_defo1 at r,ah('rud') with fastdissolve
     show but_b22_odoroki2 at l,ah('but') with fastdissolve
-    but "\"Lass mich in Ruhe!..."
+    but "\"Lass mich in Ruhe!"
     extend " ....Das ist echt kein guter Zeitpunkt!\""
     show rud_a11_defo1 at r,ah('rud')
-    rud "\"Es ist nie ein guter Zeitpunkt, wenn du mit irgendetwas fahren musst....." 
+    rud "\"Es ist nie ein guter Zeitpunkt, wenn du mit irgendetwas fahren musst." 
     extend " .....Wag es nicht, ins Meer zu kotzen!\""
     hide but_b22_odoroki2
     show but_b22_nayamu2 at l

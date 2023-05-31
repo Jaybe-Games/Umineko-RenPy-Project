@@ -6,7 +6,7 @@ label start:
     $ chapternumber = "Prolog"
     $ songname = "-"
     pause 2
-    call showch0
+    call showch0 from _call_showch0
     pause 2
     play sound "audio/sfx/umise_028.ogg"
     show disclaimer1 with dissolve
@@ -86,7 +86,7 @@ label start:
     extend " ohne auch nur die geringste Spur zu hinterlassen?"
     "Eine Analyse der Schlüssel ergab," 
     extend " dass nur Mutter und Kinder selbst ihre Schlüssel angefasst haben."
-    "Eine Hausdurchsuchung ergab," 
+    "Die weitere Hausdurchsuchung ergab," 
     extend " dass die einzigen möglichen Wege aus dem Haus nur durch die Fenster und die Eingangstür führten."
     "Es gab keine Geheimwege oder Schlupflöcher." 
     extend " Es wurden auch keine potentiellen Täter im und um das Haus herum gefunden,"

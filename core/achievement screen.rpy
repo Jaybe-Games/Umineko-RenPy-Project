@@ -190,13 +190,13 @@ style achievements_label:
     yalign 0.5
 
 style achievements_text:
-    size 16
+    size 25
     yalign 0.5
 
 style achievements_locked_text:
     antialias True
     color "#ffffff"
-    size 16
+    size 25
 
 style achievements_frame:
     background Solid('#444444')

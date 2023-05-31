@@ -1,17 +1,23 @@
 init python:
     def red_tag(tag, argument, contents):
-        return [(renpy.TEXT_TAG, "color=#f00")] + contents + [(renpy.TEXT_TAG, "/color")]
+        return [(renpy.TEXT_TAG, "gradient=#f05145-#f44336")] + contents + [(renpy.TEXT_TAG, "/gradient")]
     def blue_tag(tag, argument, contents):
-        return [(renpy.TEXT_TAG, "color=#4169e1")] + contents + [(renpy.TEXT_TAG, "/color")]
+        return [(renpy.TEXT_TAG, "gradient=#88bff2-#51a9f8")] + contents + [(renpy.TEXT_TAG, "/gradient")]
     def green_tag(tag, argument, contents):
-        return [(renpy.TEXT_TAG, "color=#00e00e")] + contents + [(renpy.TEXT_TAG, "/color")]
+        return [(renpy.TEXT_TAG, "gradient=#c2fdbb-#95ef8b")] + contents + [(renpy.TEXT_TAG, "/gradient")]
     def gold_tag(tag, argument, contents):
-        return [(renpy.TEXT_TAG, "color=#F4D03F")] + contents + [(renpy.TEXT_TAG, "/color")]
+        return [(renpy.TEXT_TAG, "gradient=#ffd966-#fcca34")] + contents + [(renpy.TEXT_TAG, "/gradient")]
+    def orange_tag(tag, argument, contents):
+        return [(renpy.TEXT_TAG, "gradient=#f5b674-#fa952b")] + contents + [(renpy.TEXT_TAG, "/gradient")]
+    def dialogue(tag, argument, contents):
+        return [(renpy.TEXT_TAG, "gradient=#eeeeee-#bfbfbf")] + contents + [(renpy.TEXT_TAG, "/gradient")]
 
     config.custom_text_tags["red_truth"] = red_tag
     config.custom_text_tags["blue_truth"] = blue_tag
-    config.custom_text_tags["gold_truth"] = green_tag
+    config.custom_text_tags["gold_truth"] = gold_tag
     config.custom_text_tags["note_green"] = green_tag
+    config.custom_text_tags["orange_truth"] = orange_tag
+    config.custom_text_tags["dialogue"] = dialogue
 
 init python:
     class GlitchText(renpy.Displayable):
