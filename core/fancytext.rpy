@@ -1,4 +1,3 @@
-
 python early:
 
     def slow_typewriter(st, gt, delay):
@@ -173,6 +172,17 @@ python early:
             self.slow_effect = slow_effect
             self.slow_effect_delay = slow_effect_delay
             self.always_effect = always_effect
+
+        def call_slow_done(self, st):
+            """
+            Called when slow is finished.
+            """
+
+            self.slow = False
+
+            if self.slow_done:
+                self.slow_done()
+                self.slow_done = None
       
         def render(self, width, height, st, at):
     

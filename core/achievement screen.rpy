@@ -158,7 +158,7 @@ screen achievement_notification():
 
 style victory_message_text:
     color "#ffffff"
-    size 20
+    size 40
 
 transform achievement_appear:
     subpixel True
@@ -185,12 +185,12 @@ style achievements_vbox:
     yfill False
 
 style achievements_label:
-    size 30
+    size 50
     outlines [(1, '#ffffff22', 0, 1)]
     yalign 0.5
 
 style achievements_text:
-    size 25
+    size 40
     yalign 0.5
 
 style achievements_locked_text:

@@ -1,5 +1,4 @@
 ﻿init python:    
-    from renpy.display.transform import polar_to_cartesian
     
     class Vector(renpy.object.Object):
 
