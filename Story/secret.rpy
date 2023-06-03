@@ -10,16 +10,16 @@ $ songname = "-"
 play sound "audio/sfx/umise_1006.ogg"
 show ware2
 stop music fadeout 2.0
-pause(7)
+pause(3)
 scene black with dissolve
 show moon_1p
-call rainlayer from _call_rainlayer
+call rainlayer
 show blackpic
-pause(5)
+pause(2)
 play wind "audio/sfx/umilse_005.ogg" fadein 3.0
-pause(5)
+pause(2)
 play rain "audio/sfx/umilse_012.ogg" fadein 3.0
-pause (4)
+pause (2)
 play sound "audio/sfx/umise_052.ogg"
 hide blackpic with gradientcirclefade
 pause(2)
@@ -27,7 +27,7 @@ pause(2)
 extend " Du da!"
 extend " Erklär mir bitte, wie du hierher gekommen bist."
 window hide
-call butterfly1 from _call_butterfly1
+call butterfly1
 window show
 "Du kannst mir jetzt nicht erzählen, dass du einfach nur irgendwo drauf geklickt hast und dann bist du einfach nur durch Zufall hier gelandet."
 "Ich könnte Wetten abschließen, dass es dir irgendjemand erzählt hat."
@@ -50,9 +50,9 @@ extend " Dann benutze ich jetzt meine Macht als Autor, um dich zurück zum Haupt
 "Ich bin sicher, dass ich dir genau dasselbe noch einmal erzählen werde."
 "Also dann, lebe wohl.\""
 window hide
-call hidebf1 from _call_hidebf1
+call hidebf1
 pause(2)
-call chapterendsecret from _call_chapterendsecret
+call chapterendsecret
 stop wind fadeout 2.0
 stop rain fadeout 2.0
 pause(3)

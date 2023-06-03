@@ -64,10 +64,10 @@ define gui.interface_text_font = "fonts/ArnoPro-Regular.otf"
 define gui.glyph_font = "fonts/ArnoPro-Regular.otf"
 
 ## The size of normal dialogue text.
-define gui.text_size = 55
+define gui.text_size = 50
 
 ## The size of character names.
-define gui.name_text_size = 55
+define gui.name_text_size = 50
 
 ## The size of text in the game's user interface.
 define gui.interface_text_size = 40
@@ -121,7 +121,7 @@ define gui.namebox_height = None
 
 ## The borders of the box containing the character's name, in left, top, right,
 ## bottom order.
-define gui.namebox_borders = Borders(60, 18, 60, 0)
+define gui.namebox_borders = Borders(60, 25, 60, 0)
 
 ## If True, the background of the namebox will be tiled, if False, the
 ## background of the namebox will be scaled.
@@ -135,7 +135,7 @@ define gui.dialogue_xpos = 163
 define gui.dialogue_ypos = 0.07
 
 ## The maximum width of dialogue text, in pixels.
-define gui.dialogue_width = 1550
+define gui.dialogue_width = 1600
 
 ## The horizontal alignment of the dialogue text. This can be 0.0 for left-
 ## aligned, 0.5 for centered, and 1.0 for right-aligned.
@@ -322,7 +322,7 @@ define gui.slider_tile = True
 
 ## Horizontal borders.
 define gui.bar_borders = Borders(6, 6, 6, 6)
-define gui.scrollbar_borders = Borders(6, 6, 6, 6)
+define gui.scrollbar_borders = Borders(6, 6, 0, 6)
 define gui.slider_borders = Borders(60, 60, 60, 80)
 
 ## Vertical borders.

@@ -6,7 +6,7 @@ label chapter1:
     $ chapternumber = "Kapitel 1"
     $ songname = "-"
     $ persistent.alreadystarted = True
-    call showch1 from _call_showch1
+    call showch1
     play sound "audio/sfx/umise_028.ogg"
     show oct_4_1986 with dissolve
     pause (7)
@@ -16,15 +16,16 @@ label chapter1:
     show white with m1trans
     camera at Shake(None, float('inf'), dist=3)
     scene ship_s2a with m1trans1
-    window show
+    window auto
     "In der Luft liegt der typische Meeresgeruch von Salz und auch ein wenig von Algen."
     extend " Ein Duft, der den Geruchssinn sofort in Ekstase versetzt, wenn nicht sogar die Seele selbst begeistert."
     "Denn auch ein taubstummer und sehbehinderter Mensch weiß sofort, dass das Meer in der Nähe ist, und kommt so in die richtige Stimmung."
-    "Die Familie Ushiromiya ist mit dem Boot von der Insel Niijima zur Insel Rokkenjima unterwegs zur Familienkonferenz."
-    extend " Aber einer von ihnen scheint die Fahrt gar nicht zu mögen, er schreit herum, dass er vom Boot fällt und so." 
+    "Die Familie Ushiromiya ist mit dem Boot von der Insel Niijima unterwegs zur Familienkonferenz auf der Insel Rokkenjima."
+    extend " Aber ein Familienmitglied scheint die Fahrt gar nicht gut zu tun, er schreit herum, dass er vom Boot fällt und so." 
     play sound "audio/sfx/umise_003.ogg"
     show but_b23_kuyasigaru1 at m with fastdissolve
-    but "\"whaoooo!!!! ....Ich falle runter, ....ich falle runteeeeeer!!!...."
+    but "\"whaoooo!!!!" 
+    extend " ....Ich falle runter, ....ich falle runteeeeeer!!!...."
     extend " ....Ich hasse Boote! ...Gleich muss ich kotzen, ich falleeeee!!!"
     but "Das wars!... Ich werde diese Insel nicht mehr erreichen, eher sterbe ich hier...\""
     show but_b23_kuyasigaru1 at l,ah('but') with fastdissolve
@@ -41,22 +42,41 @@ label chapter1:
     play sound "audio/sfx/umise_047.ogg"
     show mar_a11_warai1 at r,jump_shake,ah('mar')
     extend " .....Ich finde das super lustig! *kicher*kicher* uu~!\""
+    scene ship_s2a with quickergradientwiperight
+    show but_b11_warai2 at m with quickgradientwiperight
+    if persistent.battler == False:
+        $ persistent.battler = True
+        $ Achievement.add(achievement_bronze2)
+        play sound "audio/sfx/umise_1060.ogg"
+        $ renpy.notify("Ein neuer Charakter wurde im Charaktermenü freigeschaltet.")
+    "Mein Name ist Ushiromiya Battler."
+    extend " Ich bin der Sohn von Rudolf und Asumu, Asumu ist vor ungefähr 6 Jahren gestorben."
+    "Danach habe ich die Familie wegen eines Konflikts mit Dad für 6 lange Jahre verlassen und habe bei meinen Großeltern mütterlicherseits gelebt."
+    "Mein Name wird im Japanischen übrigens so geschrieben: Ushiromiya Batora."
+    extend " Ja, man spricht mich nicht Battler aus, sondern \"Batora\", klingt echt komisch."
+    "Meine Japanischen Schriftzeichen machen mich wütend. Ich werde mit den Zeichen von \"Person\" und \"Kampf\" geschrieben"
+    extend " Deswegen denkt ein typischer Japaner ich heiße Sento-kun. Niemand würde auch nur im Traum daran denken, dass es \"Battler\" ausgesprochen wird."
+    "Aber der Spaß hört bei mir noch lange nicht auf..."
+    extend " Hier sind einige, die ihren Namensgeber am liebsten in dunkle Kammern sperren würden."
+    scene sea_1af with gradientwipeup
     "Als die Familie Ushiromiya zur jährlichen Familienkonferenz fahren will,"
     extend " hat Battler, wie schon bei früheren Konferenzen, mit Angstzuständen zu kämpfen."
     "Battler hat eine Art Reiseangst. Wenn das Flugzeug zu sehr schaukelt, könnte es abstürzen,"
     extend " und wenn er auf einem Schiff ist, dann...... Na ja, das sehen wir ja gerade."
     "Maria, die überhaupt nicht seekrank ist, beginnt laut zu kichern,"
     extend " weil es so lustig ist, einem zu Tode erschrockenen Battler zuzusehen."
-    "Aber die beiden scheinen von zwei Erwachsenen beobachtet zu werden, und auch die können sich das Lachen nicht verkneifen."  
+    "Aber die beiden scheinen von jemandem beobachtet zu werden, und auch der kann sich das Lachen nicht verkneifen."
     scene ship_s2a with quickergradientwiperight
-    show rud_a11_akuwarai1 at m,ah('rud') with quickergradientwiperight
-    rud "\"...Hey Battler-kun! Wenn du kotzen musst, dann bitte in einen Eimer!...."
+    show rud_a11_akuwarai1 at m,ah('rud') with quickergradientwiperight  
+    rud "\"...Hey Battler-kun!" 
+    extend " Wenn du kotzen musst, dann bitte in einen Eimer!"
     extend " .....Bei dem, was du dir in den Hals schaufelst, würdest du eine Menge Fische auf dem Gewissen haben... hehe..."
     rud "....Unglaublich, dass du schon im Flugzeug so durchgedreht bist, du konntest ja nicht mal im Auto still sitzen.\""
     hide rud_a11_akuwarai1 with fastdissolve
     show rud_a11_defo1 at r,ah('rud') with fastdissolve
     show but_b22_odoroki2 at l,ah('but') with fastdissolve
-    but "\"Lass mich in Ruhe!"
+    but "\"......"
+    extend " ...Lass mich in Ruhe!"
     extend " ....Das ist echt kein guter Zeitpunkt!\""
     show rud_a11_defo1 at r,ah('rud')
     rud "\"Es ist nie ein guter Zeitpunkt, wenn du mit irgendetwas fahren musst." 
@@ -64,24 +84,31 @@ label chapter1:
     hide but_b22_odoroki2
     show but_b22_nayamu2 at l
     but "\"Ich gebe mir hier die größte Mühe...\""
-    hide rud_a11_defo1 with fastdissolve
-    hide but_b22_nayamu2 with fastdissolve
+    scene ship_s2a with quickergradientwiperight
+    show rud_a11_warai1 at m with quickergradientwiperight  
     pause (0.3)
-    show rud_a11_warai1 at m with quickgradientwiperight
     if persistent.rudolf == False:
         $ persistent.rudolf = True
-        $ Achievement.add(achievement_bronze2)
         play sound "audio/sfx/umise_1060.ogg"
         $ renpy.notify("Das Charaktermenü wurde unter \"Extras\" freigeschaltet.")
-    "Das ist mein Vater Rudolf, der alte Bastard ist so groß wie ich und macht sich bei Gelegenheit gerne über mich lustig."
-    extend " Sein Name wird auf Japanisch Ushiromiya Rudorufu ausgesprochen, fast die ganze Familie hat diese seltsame Namenstradition."
+    "Das ist mein Vater Rudolf. Der alte Bastard ist so groß wie ich und macht sich bei Gelegenheit gerne über mich lustig."
+    extend " Sein Name wird auf Japanisch Ushiromiya Rudorfu ausgesprochen, fast die ganze Familie hat diese seltsame Namenstradition."
     "Seit meine Mutter Asumu gestorben ist, hat sich unser Verhältnis sehr verschlechtert,"
     extend " aber ich bin sicher, dass es mit der Zeit wieder funktionieren kann."
-    hide rud_a11_warai1 with dissolve
+    scene black with quickgradientwipedown
+    camera at Shake(None, float('inf'), dist=0)
+    "Vor sechs Jahren, kurz nach dem Tod meiner Mutter, hat mein Vater seine Arbeitskollegin geheiratet."
+    extend " Das hat mich gebrochen, weil es einfach viel zu schnell ging, kaum war meine Mutter gestorben, hat er wieder geheiratet."
+    "Das nächste Problem war, dass Dad schon eine Affäre mit ihr gehabt haben soll," 
+    extend " und da ich mit solchen Leuten nicht in einem Haushalt leben wollte, bin ich zu meinen Großeltern mütterlicherseits gezogen und habe die Ushiromiya-Familie verlassen."
+    "Leider sind meine Großeltern vor kurzem gestorben, und ich hatte die Gelegenheit, mit meinem Vater und meiner Stiefmutter zu sprechen, und wir konnten irgendwie einen gemeinsamen Nenner finden."
+    "Ich bin also wieder Teil der Familie und nehme nach sechs Jahren zum ersten Mal wieder an der Konferenz teil."
+    camera at Shake(None, float('inf'), dist=3)
+    scene ship_s2a with quickergradientwiperight
     show kir_a11_defo1 at l,ah('kyr') with dissolve
-    show rud_a11_warai1 at r,ah('rud') with dissolve
     kyr "\"Ist es nicht schön, dass Battler-kun wieder da ist?...."
     extend " Ich meine, nach 6 Jahren Abwesenheit immer noch ein Theater bei der Ankunft? *kicher*\""
+    show rud_a11_warai1 at r,ah('rud') with dissolve
     rud "\"Ja...."
     extend " Aber das war viel schlimmer, als er noch jünger war...." 
     extend " Da hatte man die ganze Anreise keine Ruhe.\""
@@ -94,16 +121,18 @@ label chapter1:
         $ persistent.kyrie = True
         play sound "audio/sfx/umise_1060.ogg"
         $ renpy.notify("Ein neuer Charakter wurde im Charaktermenü freigeschaltet.")
-    "Das ist Kyrie-san, der alte Bastard hat sie kurz nach dem Tod meiner Mutter geheiratet, aber das liegt hinter uns."
+    "Das ist meine Stiefmutter Kyrie-san, der alte Bastard hat diese Frau kurz nach dem Tod meiner Mutter geheiratet."
     "Sie ist sehr intelligent und hat mir viel über das Schachbrettdenken beigebracht."
     extend " Also wie man eine Partie mit den Augen des Gegners sehen kann."
     "Ich sehe sie nicht als Mutter, aber wir verstehen uns gut."
+    extend " Sie ist für mich eher so etwas wie eine freundliche Nachbarin, denn wir sind uns einig, dass wir nicht so tun sollten, als hätten wir eine enge Beziehung, die uns sehr schnell unangenehm werden könnte."
+    extend " Also halten wir einfach einen gesunden Abstand, damit wir uns nicht unwohl fühlen."
     "Wollt ihr wissen, wie man sie auf Japanisch ausspricht?" 
     extend " Ganz einfach:" 
     extend " Ushiromiya Kyrie."
-    "Und nein,...."
+    "Und nein, ...."
     extend " man spricht es nicht komisch aus, ihr Name ist absolut perfekt!"
-    "Ich hasse Opa den alten Kauz dafür, dass wir so komische Namen haben."
+    "Ich hasse Großvater den alten Kauz dafür, dass wir so komische Namen haben."
     camera at Shake(None, float('inf'), dist=10)
     hide kir_a11_defo1 with dissolve
     show but_b23_kuyasigaru1 at m with dissolve
@@ -124,8 +153,7 @@ label chapter1:
     mar "\"uu-uu~! Battler hat sich übergeben," 
     extend " Battler hat sich übergeben!" 
     extend " *kicher*kicher*\""
-    hide rud_a11_akuwarai1 with dissolve
-    hide mar_a11_warai1 with dissolve
+    scene ship_s2a with quickergradientwiperight
     show mar_a11_niyari1 at m with quickgradientwiperight
     if persistent.maria == False:
         $ persistent.maria = True
@@ -136,15 +164,18 @@ label chapter1:
     "Auch sie hat unsere Namenstradition übernommen," 
     extend " statt eines normalen japanischen Namens heißt sie Ushiromiya Maria."
     extend " Das wird auch so ausgesprochen, nur in kurzen Silben."
-    hide mar_a11_niyari1 with dissolve
+    "Das letzte mal als ich sie gesehen habe, war sie wie alt?"
+    extend " drei Jahre?"
+    extend " Das bedeutet sie müsste heute neun Jahre alt sein und geht zur Grundschule."
+    "Am Flughafen war sie überwältigt, als sie erfuhr, dass ich ein Cousin von ihr bin. In jungen Jahren behält man nur wenige Erinnerungen."
+    "Aber wir haben uns super schnell angefreundet und haben eine tolle Zeit."
+    scene ship_s2a with quickergradientwiperight
     show ros_a11_ikari1 at r,ah('ros') with dissolve
-    show mar_a11_majime1 at l,ah('mar') with dissolve
     ros "\"Maria!"
     extend " ....Es reicht jetzt," 
     extend " .....lass Battler-kun in Ruhe!\""
-    hide mar_a11_majime1
-    show mar_a11_defo1 at l,ah('mar')
-    mar "\"........uu~...\""
+    show mar_a11_defo1 at l,ah('mar') with dissolve
+    mar "\"...uu~.....\""
     hide ros_a11_ikari1
     show ros_a11_ikari2 at r,ah('ros')
     ros "\"und hör auf mit diesem \"uu-uu\"!"
@@ -153,8 +184,8 @@ label chapter1:
     extend " Rosa ist eine sehr strenge Mutter."
     extend " Sie nimmt Marias eher kindliches Verhalten sehr ernst,"
     extend " was schon zu unangenehm anzusehenden Szenen mit den beiden geführt hat."
-    hide mar_a11_defo1 with dissolve
-    show but_b11_odoroki3 at l,ah('but') with dissolve
+    hide mar_a11_defo1 with fastdissolve
+    show but_b11_odoroki3 at l,ah('but') with fastdissolve
     show ros_a11_komaru4 at r,ah('ros')
     hide ros_a11_ikari2
     ros "\"....Tut mir leid," 
@@ -169,8 +200,7 @@ label chapter1:
     show ros_a11_majime1 at r,ah('ros')
     ros "\".....aber dass dein größter Feind das Fahrzeugfahren ist, verstehe ich nicht..."
     extend " .....Du wirkst so erwachsen und reif und jetzt das?\""
-    hide ros_a11_majime1 with dissolve
-    hide but_b22_warai1 with dissolve
+    scene ship_s2a with quickergradientwiperight
     show ros_a11_warai1 at m with quickgradientwiperight
     if persistent.rosa == False:
         $ persistent.rosa = True
@@ -184,39 +214,17 @@ label chapter1:
     extend " was nur halb so schlimm ist wie der Name meines Vaters."
     "Trotzdem ist der Name in jeder Hinsicht lächerlich...." 
     extend " Danke Großvater nochmal dafür."
-    hide ros_a11_warai1 with dissolve
+    scene ship_s2a with quickergradientwiperight
     show rud_a11_akuwarai1 at r,ah('rud') with dissolve
     rud "\"Er kann einfach nicht still sitzen, aus irgendeinem Grund. "
     extend "Das ist wirklich peinlich, das darfst du niemandem erzählen.\""
-    show but_b23_nayamu1 at l,ah('but') with dissolve
+    show but_b23_nayamu1 at l,ah('but') with fastdissolve
     but "\".......Ey, .....halt den Mund!\""
-    hide rud_a11_akuwarai1 with dissolve
-    hide but_b23_nayamu1 with dissolve
-    show but_b11_warai2 at m with quickgradientwiperight
-    $ persistent.battler = True
-    play sound "audio/sfx/umise_1060.ogg"
-    $ renpy.notify("Ein neuer Charakter wurde im Charaktermenü freigeschaltet.")
-    """
-    Wie wir bereits wissen, ist mein Name Ushiromiya Battler.
-    Ich bin der Sohn von Rudolf und Asumu, Asumu ist vor ungefähr 6 Jahren gestorben.
-
-    Danach habe ich die Familie wegen eines Konflikts mit Dad für 6 lange Jahre verlassen und habe bei meinen Großeltern mütterlicherseits gelebt.
-    Aber auch die sind vor kurzem gestorben.
-
-    Mein Name wird im Japanischen übrigens so geschrieben: Ushiromiya Batora.
-    Ja, man spricht mich nicht Battler aus, sondern \"Batora\", klingt echt komisch.
-
-    Meine Japanischen Schriftzeichen machen mich wütend. Ich werde mit den Zeichen von \"Person\" und \"Kampf\" geschrieben
-    Deswegen denkt ein typischer Japaner ich heiße Sento-kun. Niemand würde auch nur im Traum daran denken, dass es \"Battler\"
-    ausgesprochen wird.
-
-    Aber der Spaß hört bei mir noch lange nicht auf.
-    Hier sind einige, die ihren Namensgeber am liebsten in dunkle Kammern sperren würden.
-    """
-    hide but_b11_warai2 with dissolve
-    show rud_a11_akuwarai2 at r,ah('rud') with dissolve
+    hide rud_a11_akuwarai1
+    show rud_a11_akuwarai2 at r,ah('rud')
     rud "\"Ja Battler-kun, das Frühstück, dass gerade im Meer gelandet ist, hat Geld gekostet und Lebensmittel werden nicht billiger...\""
-    show but_b22_nayamu1 at l,ah('but') with dissolve
+    hide but_b23_nayamu1
+    show but_b22_nayamu1 at l,ah('but')
     but "\".....ähm..... "
     hide but_b22_nayamu1
     show but_b22_nayamu2 at l,ah('but')
@@ -231,16 +239,16 @@ label chapter1:
     play sound "audio/sfx/umise_047.ogg"
     hide but_b22_nayamu2
     show but_b11_kuyasigaru1 at l,ah('but')
-    but "\"....owowowowowow...... Du alter Bastard! Scheiße...... owowowow......\""
-    """
-    Einen Moment hat Battler nicht aufgepasst und schon hat Rudolf sein Ohrläppchen gepackt und behandelt es nicht gerade zimperlich.
-    """
+    but "\"....owowowowowow......"
+    extend " Du alter Bastard!" 
+    extend " Scheiße......" 
+    extend " owowowow......\""
+    "Einen Moment hat Battler nicht aufgepasst und schon hat Rudolf sein Ohrläppchen gepackt und behandelt es nicht gerade zimperlich."
     but "\"owowowowowowowow...." 
     extend " lass los! owowowowowowow"
     extend " .......Das tut richtig weh," 
     extend " hör auf damit," 
     extend " .....owowowow\""
-
     rud "\"Du...." 
     extend " willst...." 
     extend " also....," 
@@ -249,12 +257,10 @@ label chapter1:
     extend " ho..."
     extend " le..."
     extend " jaaaa~?\""
-    """
-    Rudolf hat einen sehr starken Griff, besonders wenn es um Battlers Ohrläppchen geht, man hat das Gefühl, er reißt es jeden Moment ab.
-    """
+    "Rudolf hat einen sehr starken Griff, besonders wenn es um Battlers Ohrläppchen geht, man hat das Gefühl, er reißt es jeden Moment ab."
     hide but_b11_kuyasigaru1
     show but_a11_aseru5 at l,ah('but')
-    but "\"....Ich hoffe, du springst vom Boot und ertrinkst du alter Bastard.... Owowowow, lass los! "
+    but "\"....Ich hoffe, du springst vom Boot und ertrinkst du alter Bastard.... Owowowow, lass los!"
     but "...Ich.... "
     extend "gebe..... "
     extend "nicht..... "
@@ -266,75 +272,68 @@ label chapter1:
     hide but_a11_aseru5 with fastdissolve
     hide rud_a11_akuwarai1 with fastdissolve
     show kir_a11_majime1 at m with fastdissolve
-    kyr "\"Lasst es für heute gut sein, ihr beiden. "
+    kyr "\"Lasst es für heute gut sein, ihr beiden."
     extend "Das könnt ihr später auf der Insel austragen.\""
-    """
-    Nachdem Kyrie den kleinen Konflikt erfolgreich beendet hatte, hörte man jemanden von unter Deck nach draußen gehen.
-    """
+    "Nachdem Kyrie den kleinen Konflikt erfolgreich beendet hatte, hörte man jemanden von unter Deck nach draußen gehen."
     hide kir_a11_majime1 with fastdissolve
     show jes_a11_atya2 at m with fastdissolve
-    jes "\"...B...Battler-kun hast du gerade eben vom Deck gekotzt?, ich schaue nach draußen und plötzlich kommt so eine widerliche Suppe von oben runter, das war eklig! "
-    extend "Nächstes Mal nimm einen Eimer mit!\""
+    jes "\"...B-Battler-kun?" 
+    extend " hast du gerade eben vom Deck gekotzt? Ich schaue nach draußen und plötzlich kommt so eine widerliche Suppe von oben runter, das war eklig!"
+    extend " Nächstes Mal nimm einen Eimer mit!\""
     show jes_a11_aisowarai1 at m with fastdissolve
     hide jes_a11_atya2
-    jes "Ach ja, und was war das für ein \"Ich falle, ich falle\" -Geschrei? "
+    jes "Ach ja, und was war das für ein \"Ich falle, ich falle\" -Geschrei?"
     $ persistent.wiki_unlocked.add("wiki_crazy")
     $ persistent.tip = 2
-    extend "...Bist du ein bisschen {note_green}meschugge{/note_green}? "
+    extend "...Bist du ein bisschen {note_green}meschugge{/note_green}?"
     extend "...wahahahaha!"
-    jes ".....Das war die eine Sache, "
-    extend ".....und dann war da noch die Kotze, die so von Deck segelte. "
+    jes ".....Das war die eine Sache,"
+    extend ".....und dann war da noch die Kotze, die vom Deck segelte."
     extend "....pahahahaha.\""
-    hide jes_a11_aisowarai1 with fastdissolve
-    show jes_a11_defo2 at l,ah('jes') with fastdissolve
+    scene ship_s2a with quickergradientwiperight
     show but_a11_defo1 at r,ah('but') with fastdissolve
-    but "\"......Entschuldigung.... "
-    extend "Das verfluchte Boot schaukelt so viel..... "
+    but "\"......Entschuldigung...."
+    extend "Das verfluchte Boot schaukelt so viel....."
     extend "....Das Schiff schaukelt und schaukelt und schaukelt....."
     show but_a21_kuyasigaru1 at r,ah('but')
     hide but_a11_defo1
     but "....ahhhhhh!!! "
     extend "Mach, dass es aufhört, sonst falle ich wieder!\""
-    show jes_a11_atya3 at l,ah('jes')
+    show jes_a11_atya3 at l,ah('jes') with fastdissolve
     hide jes_a11_defo2
     jes "\"....Vielleicht sollte der Kapitän etwas langsamer fahren, sonst geht es dir gleich noch schlechter... "
     extend "Ich werde sofort den Kapitän bitten, etwas langsamer zu fahren, aber bitte nicht mehr ins Meer kotzen....\""
     show but_b11_odoroki3 at r,ah('but')
     hide but_a21_kuyasigaru1
-    but "\"Ja, ....vielen Dank, ...Jessica-chan.\""
+    but "\"Ja..." 
+    extend "....Vielen Dank, Jessica-chan.\""
     hide but_b11_odoroki3 with fastdissolve
     hide jes_a11_atya3 with fastdissolve
     show jes_a11_warai1 at m with quickgradientwiperight
-    $ persistent.jessica = True
-    play sound "audio/sfx/umise_1060.ogg"
-    $ renpy.notify("Ein neuer Charakter wurde im Charaktermenü freigeschaltet.")
-    """
-    Das war meine Cousine Ushiromiya Jessica, sie ist echt cool drauf
-    und ist wohl aktuell in dieser Phase, wo man gegen seine Eltern rebelliert.
-
-    Sie ist aber auch in dieser Phase, wo die Mädchen so große Brüste bekommen.
-    hihihihih... ich würde sie mal gerne in die Hand nehmen....
-
-    Aber dann würde sie mich windelweich schlagen, denn mit ihr ist es nicht gut Kirschen zu essen, wenn man es sich mit ihr verscherzt.
-    Jessica klingt sehr nach englischer Herkunft und wird bei uns Ushiromiya Jeshka ausgesprochen, sie muss richtig unzufrieden mit ihrem Namen sein.
-
-    Sie hat außerdem so eine \"Verrückte Art zu reden\". Sie flucht viel und ihre Wortwahl ist gewöhnungsbedürftig.
-    """
+    if persistent.jessica == False:
+        $ persistent.jessica = True
+        play sound "audio/sfx/umise_1060.ogg"
+        $ renpy.notify("Ein neuer Charakter wurde im Charaktermenü freigeschaltet.")
+    "Das war meine Cousine Ushiromiya Jessica, sie ist echt cool drauf und ist wohl aktuell in dieser Phase, wo man gegen seine Eltern rebelliert."
+    "Sie ist aber auch in dieser Phase, wo die Mädchen so große Brüste bekommen."
+    extend " hihihihih... ich würde sie mal gerne in die Hand nehmen...."
+    "Aber dann würde sie mich windelweich schlagen, denn mit ihr ist es nicht gut Kirschen zu essen, wenn man es sich mit ihr verscherzt."
+    "Jessica klingt sehr nach englischer Herkunft und wird bei uns Ushiromiya Jeshka ausgesprochen, sie muss richtig unzufrieden mit ihrem Namen sein."
+    "Sie hat außerdem so eine \"Verrückte Art zu reden\". Sie flucht viel und ihre Wortwahl ist gewöhnungsbedürftig."
+    "Früher waren wir das Chaotenduo, haben viel Unsinn gemacht und waren uns auch nicht zu fein, gegenüber der Hauptfamilie einen sehr rauen Ton anzuwenden"
+    "Die Vorträge der Erwachsenen über gutes Benehmen nervten uns zwar jedes Mal, aber es war auch einfach zu lustig zu sehen, wie sich die vorbildlichen Erwachsenen aufregten."
     camera at Shake(None, float('inf'), dist=0)
     "Der Kapitän hat zugestimmt langsamer zu fahren und jetzt schaukelt das Boot nicht mehr so stark."
     jes "\"....Verdammte Scheiße Battler-kun, jetzt werden wir uns wegen dir verspäten....\""
     hide jes_a11_warai1 with fastdissolve
     show but_b22_warai1 at r2,ah('but') with quickergradientwiperight
-    but "\".....H-Halt doch mal dein Maul, immerhin kann ich jetzt ein wenig chillen....\""
+    but "\".....Halt doch mal dein Maul, immerhin kann ich jetzt ein wenig chillen....\""
     show jes_a11_defo2 at l,ah('jes') with quickergradientwipeupright
     jes "\".....Wir sollten besser runter gehen zum \"chillen\", wir sind gleich auf der Insel.\""
     but "\"....Ja, das kann ich versuchen, jetzt, wo das Boot etwas langsamer fährt. "
     show but_b22_nayamu2 at r2,ah('but')
     extend "....Aber ich kann trotzdem nicht garantieren, dass ich den Rest meines Frühstücks bei mir behalte.... Ihihihi....\" "
-    window hide
-    stop ship fadeout 2.0
-    stop music fadeout 2.0
-    pause(2)
+    stop ship
     $ songname = "Door of Summer"
     $ play_music(summer)
     scene ship_s3a with gradientwiperight
@@ -342,20 +341,14 @@ label chapter1:
     show hid_a21_warai1 at m behind ship_s3a
     show kum_a12_defo2 at l behind ship_s3a
     show ship_s3ab behind eva_b22_akire2
-    window show
-    """
-    Dann gingen Battler und Jessica unter Deck zu den anderen, die im Gegensatz zu Battler ruhig warten, bis sie endlich die Insel erreichen.
-    """
+    "Dann gingen Battler und Jessica unter Deck zu den anderen, die im Gegensatz zu Battler ruhig warten, bis sie endlich die Insel erreichen."
     hide ship_s3a with quickergradientwiperight
-    """
-    Moment mal, dieses \"ruhig\" sein ist falsch! Ich sehe es klar und deutlich! Die anderen Erwachsenen verkneifen sich doch alle gerade das Lachen....
-    """
+    extend " ....Moment mal, dieses \"ruhig\" sein ist falsch! Ich sehe es klar und deutlich! Die anderen Erwachsenen verkneifen sich doch alle gerade das Lachen...."
     scene ship_s3a with quickergradientwiperight
     show geo_a11_defo1 at m with fastdissolve
     geo "\"Wie geht es dir Battler-kun? "
     extend "Wir alle wissen bereits, dass es dich schon erwischt hat.\""
-    hide geo_a11_defo1 with fastdissolve
-    show geo_a11_majime2 at r,ah('geo') with fastdissolve
+    scene ship_s3a with quickergradientwiperight
     show but_b22_nayamu1 at l,nod,ah('but') with fastdissolve
     """
     Mit einem leichten, aber nicht ganz ernstgemeinten Nicken stimmt Battler zu.
@@ -364,6 +357,7 @@ label chapter1:
     hide but_b22_nayamu1
     show but_b23_kuyasigaru1 at l,ah('but')
     extend "Der Kapitän hat das Schiff doch absichtlich so schaukeln lassen.\""
+    show geo_a11_majime2 at r,ah('geo') with fastdissolve
     geo "\"Ja gut.... " 
     extend "...eigentlich nicht... "
     extend "Leg dich am besten hin, du hast es gleich geschafft."
@@ -914,7 +908,6 @@ label chapter1:
     $ renpy.notify("Die Musikbox wurde unter \"Extras\" freigeschaltet.")
     $ Achievement.add(achievement_bronze3)
     $ Achievement.add(achievement_bronze4)
-    window hide
     stop audio fadeout 2.0
     stop music fadeout 2.0
     scene black with dissolve

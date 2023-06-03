@@ -21,27 +21,31 @@ init python:
 
     ###Initial Audio Cues Setup
 
-    deaths_door = "audio/bgm/umib_014.ogg"
+    mainmenu = "audio/bgm/umib_000.ogg"
+    deaths_door = "audio/bgm/umib_014_Intro.ogg"
     hane = "audio/bgm/umib_003.ogg"
     ride_on = "audio/bgm/umib_004.ogg"
     summer = "audio/bgm/umib_002.ogg"
     pitiful = "audio/bgm/umib_1000.ogg"
     face = "audio/bgm/umib_110.ogg"
-    credits = "audio/bgm/umib_0000.ogg"
+    ending = "audio/bgm/umib_0000.ogg"
     endroll = "audio/bgm/bgm_final.ogg"
     kuina = "audio/bgm/umib_121.ogg"
+    goldenkiller = "audio/bgm/umib_24_intro.ogg"
 
 
     # alias : "Song Title",
     music_dictionary = {
+        mainmenu : "Black Lilliana Orchestra",
         deaths_door : "At Death's Door",
         hane : "HANE (Feathers)",
         ride_on : "Ride on",
         summer : "Door of Summer",
         pitiful : "Pitiful Sneerer",
         face : "About Face",
-        credits : "Golden Sneers - Lovely Banquet",
+        ending : "Golden Sneers - Lovely Banquet",
         endroll : "Bring the Fate",
-        kuina : "Kuina"
+        kuina : "Kuina",
+        goldenkiller : "goldenslaughterer"
     }
 

@@ -5,12 +5,13 @@ label start:
     $ chaptername = "\"Ich schreibe an dich in einer Quadrillion Jahren\""
     $ chapternumber = "Prolog"
     $ songname = "-"
+    window auto
     pause 2
-    call showch0 from _call_showch0
+    call showch0
     pause 2
     play sound "audio/sfx/umise_028.ogg"
     show disclaimer1 with dissolve
-    pause (10)
+    pause (5)
     hide disclaimer1 with dissolve
     pause (2)
     show disclaimer2 with dissolve
@@ -21,6 +22,7 @@ label start:
     pause (2)
     $ songname = "At Death's Door"
     $ play_music(deaths_door)
+    queue music "audio/bgm/umib_014_loop.ogg" loop 
     show text "Polizeiliche Kriminalakten zum Fall im Dorf Hinamizawa" with dissolve
     pause (5)
     hide text with fade
@@ -97,11 +99,11 @@ label start:
     "Für die Dorfbewohner ist das so, als ob hier Teufel oder Hexen am Werk gewesen sind,"
     extend " was die Suche nach Zeugen ebenfalls sehr schwierig macht."
     "Mehr konnten meine Kollegen und ich bisher nicht herausfinden, so dass wir leider immer noch im Dunkeln tappen."
-    window hide
     $ songname = "-"
     stop music fadeout 3
-    pause (0.5)
+    pause (2)
     scene black with fade
+    pause (2)
     $ songname = "Gold Dream Symphony"
     $ renpy.movie_cutscene("videos/opening.mov")
     stop sound

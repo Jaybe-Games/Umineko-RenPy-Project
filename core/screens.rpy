@@ -184,7 +184,7 @@ style say_label:
     properties gui.text_properties("name", accent=True)
     xalign gui.name_xalign
     yalign 0.5
-    outlines [ (absolute(3), "#00000094", absolute(0), absolute(0)) ]
+    outlines [ (absolute(2), "#00000094", absolute(0), absolute(0)) ]
     kerning 1.5
     antialias True
 
@@ -194,7 +194,7 @@ style say_dialogue:
     xpos gui.dialogue_xpos
     xsize gui.dialogue_width
     ypos gui.dialogue_ypos
-    outlines [ (absolute(3), "#00000094", absolute(0), absolute(0)) ]
+    outlines [ (absolute(2), "#00000094", absolute(0), absolute(0)) ]
     line_spacing 5
     kerning 1.3
     antialias True

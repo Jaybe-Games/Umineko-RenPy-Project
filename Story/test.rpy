@@ -9,8 +9,9 @@ label test:
     scene different_space_1a with gradientcirclefade
     pause (1)
     play sound "audio/sfx/umise_052.ogg"
-    $ songname = "Pitiful Sneerer"
-    $ play_music(pitiful)
+    $ songname = "goldenslaughterer"
+    $ play_music(goldenkiller)
+    queue music "audio/bgm/umib_24_loop.ogg" loop 
     show ber_a21_warai1 behind rain4 at l,ah('ber') with witchfadein
     pause 1
     ber "\"Yes..."

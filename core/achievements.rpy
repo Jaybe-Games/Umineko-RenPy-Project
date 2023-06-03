@@ -70,7 +70,7 @@ init python:
         "secret": [_("Autorentreffen"), _("Du hast den Autor gefunden."), 'gui/trophys/silver2.png', 'hidden'],
         "mainclear": [_("Eine andere Beatrice?"), _("Schließe die Hauptstory ab."), 'gui/trophys/silver3.png', 'hidden'],
         "teaclear": [_("Ayato und Yuria"), _("Schließe die Tee Party ab."), 'gui/trophys/silver4.png', 'hidden'],
-        "gameclear": [_("Resurrection of the Golden Witch"), _("Schließe ???? ab."), 'gui/trophys/gold1.png', 'hidden'],
+        "gameclear": [_("Auferstehung der Goldenen Hexe"), _("Schließe ???? ab."), 'gui/trophys/gold1.png', 'hidden'],
         ## The None, means that the achievement will be displayed greyed-out before it is granted (or achieved).
         ## I use these words to describe the type of achievement it is;
         ##            None = default (greyed out and can see the name and description of the achievement.)

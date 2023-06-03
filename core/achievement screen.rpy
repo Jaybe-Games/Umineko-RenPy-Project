@@ -15,7 +15,9 @@ screen achievement_menu():
             background None
             padding (20, 20, 20, 20)
             align (0.0, 0.0)
-            ysize 1080
+            ysize 900
+            
+            
 
             vpgrid:
                 cols 2
@@ -29,7 +31,7 @@ screen achievement_menu():
 
                             hbox:
                                 yalign 0.5
-                                xysize (100, 100)
+                                xysize (50, 100)
                                 add t.image size (100, 100) yalign 0.5
 
                                 null width 20
@@ -179,19 +181,21 @@ style achievements_text is text
 style achievements_frame is frame
 
 style achievements_vbox:
-    minimum (330, 100)
-    maximum (360, 100)
+    minimum (300, 100)
+    maximum (330, 100)
     spacing 2
     yfill False
 
 style achievements_label:
-    size 50
+    size 40
     outlines [(1, '#ffffff22', 0, 1)]
     yalign 0.5
+    antialias True
 
 style achievements_text:
-    size 40
+    size 30
     yalign 0.5
+    antialias True
 
 style achievements_locked_text:
     antialias True

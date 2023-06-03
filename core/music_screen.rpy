@@ -247,10 +247,10 @@ style music_room_frame:
     background "gui/overlay/main_menu.png"
 
 style music_room_list_button is default:
-    size 20
+    size 30
     hover_color '#be6c13'
-    selected_color '#ffffff'
-    insensitive_color '#FF8300'
+    selected_idle_color '#ffffff'
+    insensitive_color '#ff8800'
     line_spacing 2
 
 style music_room_viewport:
