@@ -6,7 +6,7 @@ label chapter1:
     $ chapternumber = "Kapitel 1"
     $ songname = "-"
     $ persistent.alreadystarted = True
-    call showch1 from _call_showch1
+    call showch1
     play sound "audio/sfx/umise_028.ogg"
     show oct_4_1986 with dissolve
     pause (7)

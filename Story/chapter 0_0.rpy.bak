@@ -7,7 +7,7 @@ label start:
     $ songname = "-"
     window auto
     pause 2
-    call showch0 from _call_showch0
+    call showch0
     pause 2
     play sound "audio/sfx/umise_028.ogg"
     show disclaimer1 with dissolve

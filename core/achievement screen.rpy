@@ -7,6 +7,7 @@ screen achievement_menu():
     ## If you'd like to display a number and total of achievements you can use this.
     use game_menu(_("Trophäen | {:01d}/{}".format(len(persistent.my_achievements), len(achievement_name) if len(persistent.my_achievements) == len(achievement_name) else len(achievement_name) - 1)), scroll="viewport"):
     ## Else, use this.
+    ## Else, use this.
     #use game_menu(_("Achievements"), scroll="viewport"):
 
         style_prefix "achievements"
@@ -15,13 +16,14 @@ screen achievement_menu():
             background None
             padding (20, 20, 20, 20)
             align (0.0, 0.0)
-            ysize 900
+            ysize 1080
             
             
 
             vpgrid:
                 cols 2
                 spacing 10
+                xoffset 300
 
                 ## Granted achievements
                 for t in persistent.my_achievements:

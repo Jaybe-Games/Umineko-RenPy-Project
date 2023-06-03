@@ -325,6 +325,7 @@ screen navigation():
 
     add partObj
     add "gui/titlelogo.png" at topright
+    text "v1.0.0A" at topleft size 30 antialias True outlines [ (absolute(3), "#000", absolute(0), absolute(0)) ]
 
     fixed:
 
@@ -375,7 +376,6 @@ screen navigation():
                 imagebutton auto "gui/button/help_%s.png" action [ShowMenu("help"), Hide('helphover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" hovered Show('helphover') unhovered Hide('helphover')
 
                 imagebutton auto "gui/button/quit_%s.png" action [QuitWithScene(), Hide('quithover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" hovered Show('quithover') unhovered Hide('quithover')
-
 
         else:
 
@@ -512,6 +512,7 @@ screen game_menu(title, scroll=None, yinitial=0.0):
                         mousewheel True
                         draggable True
                         pagekeys True
+                        xoffset -250
 
                         side_yfill True
 
@@ -687,7 +688,6 @@ style return_button:
     yalign 1.0
     yoffset -45
 
-
 ## About screen ################################################################
 ##
 ## This screen gives credit and copyright information about the game and Ren'Py.
@@ -708,6 +708,7 @@ screen about():
 
         vbox:
             xalign 0.5
+            xoffset 270
 
             label "\n      Umineko When They {red_truth}C{/red_truth}ry Zero\n~Waltz of Reflections and Delusions~"
             text _("Version [config.version!t]\n")
@@ -960,9 +961,9 @@ screen preferences():
                             #if config.sample_voice:
                                 #textbutton _("Test") action Play("voice", config.sample_voice)
 
-                    if config.has_music or config.has_sound or config.has_voice:
-                        null height gui.pref_spacing
-                        imagebutton auto "gui/button/mute_%s.png" action Preference("all mute", "toggle") activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+                    #if config.has_music or config.has_sound or config.has_voice:
+                        #null height gui.pref_spacing
+                        #imagebutton auto "gui/button/mute_%s.png" action Preference("all mute", "toggle") activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
                         #textbutton _("Alles Stummschal{color=#f00}t{/color}en"):
                             #action Preference("all mute", "toggle")
                             #style "mute_all_button"
@@ -1148,6 +1149,7 @@ screen help():
 
         vbox:
             spacing 23
+            xoffset 270
 
             hbox:
 
