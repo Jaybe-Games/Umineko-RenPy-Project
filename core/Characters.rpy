@@ -78,6 +78,7 @@ define ren = Character('Ryuugu Rena {image=gui/wing.png}{alt}wing{/alt}', callba
 define mio = Character('Sonozaki Mion {image=gui/wing.png}{alt}wing{/alt}', callback=name_callback, cb_name='mio', ctc="ctc_blink", ctc_position="nestled-close", show_slow_effect = slow_fade, show_slow_effect_delay = 0.1)
 define ois = Character('Kuraudo Oishi {image=gui/wing.png}{alt}wing{/alt}', callback=name_callback, cb_name='ois', ctc="ctc_blink", ctc_position="nestled-close", show_slow_effect = slow_fade, show_slow_effect_delay = 0.1)
 define narrator = Character(callback = name_callback, cb_name = None, ctc="ctc_blink", ctc_position="nestled-close", show_slow_effect = slow_fade, show_slow_effect_delay = 0.1, window_background="gui/narratorbox.png")
+define nvltext = Character(callback = name_callback, kind=nvl, cb_name = None, ctc="ctc_blink", ctc_position="nestled-close")
 
 ## Sprites for Characterscreen ##
 define rud_char = "gui/chars/rud.png"

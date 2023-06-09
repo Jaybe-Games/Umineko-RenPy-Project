@@ -5,7 +5,7 @@ label chapter1:
     $ chaptername = "\"Bootsfahrt nach Rokkenjima\"\nSam. 04. Oktober 1986 09:30 Uhr"
     $ chapternumber = "Kapitel 1"
     $ songname = "-"
-    $ persistent.alreadystarted = True
+    $ persistent.openingplayed = True
     call showch1 from _call_showch1
     play sound "audio/sfx/umise_028.ogg"
     show oct_4_1986 with dissolve
@@ -27,6 +27,7 @@ label chapter1:
     but "\"whaoooo!!!!" 
     extend " ....Ich falle runter, ....ich falle runteeeeeer!!!...."
     extend " ....Ich hasse Boote! ...Gleich muss ich kotzen, ich falleeeee!!!"
+    extend "...Warum muss das verfluchte Ding auch so stark schaukeln?...."
     but "Das wars!... Ich werde diese Insel nicht mehr erreichen, eher sterbe ich hier...\""
     show but_b23_kuyasigaru1 at l,ah('but') with fastdissolve
     play sound "audio/sfx/umise_047.ogg"
@@ -216,8 +217,8 @@ label chapter1:
     extend " Danke Großvater nochmal dafür."
     scene ship_s2a with quickergradientwiperight
     show rud_a11_akuwarai1 at r,ah('rud') with dissolve
-    rud "\"Er kann einfach nicht still sitzen, aus irgendeinem Grund. "
-    extend "Das ist wirklich peinlich, das darfst du niemandem erzählen.\""
+    rud "\"Er kann einfach nicht still sitzen, aus irgendeinem Grund."
+    extend " ...Das ist wirklich peinlich, das darfst du niemandem erzählen.\""
     show but_b23_nayamu1 at l,ah('but') with fastdissolve
     but "\".......Ey, .....halt den Mund!\""
     hide rud_a11_akuwarai1
@@ -228,8 +229,8 @@ label chapter1:
     but "\".....ähm..... "
     hide but_b22_nayamu1
     show but_b22_nayamu2 at l,ah('but')
-    extend "...Also wenn du es unbedingt wiederhaben willst, kannst du ja ins Meer springen und es wieder rausfischen... hihihihi... "
-    extend "....Aber mal ernsthaft, das Schaukeln wurde gerade richtig schlimm...\""
+    extend "...Also wenn du es unbedingt wiederhaben willst, kannst du ja ins Meer springen und es wieder rausfischen... hihihihi..."
+    extend " ....Aber mal ernsthaft, das Schaukeln wurde gerade richtig schlimm...\""
     hide rud_a11_akuwarai2
     show rud_a11_defo2 at r,ah('rud')
     rud "\"........Battler...\""
@@ -261,11 +262,11 @@ label chapter1:
     hide but_b11_kuyasigaru1
     show but_a11_aseru5 at l,ah('but')
     but "\"....Ich hoffe, du springst vom Boot und ertrinkst du alter Bastard.... Owowowow, lass los!"
-    but "...Ich.... "
-    extend "gebe..... "
-    extend "nicht..... "
-    extend "auuuuuuffffff!!! "
-    extend ".....owowowow..... lass doch endlich los owowowowow... es tut weh....\""
+    but "...Ich...."
+    extend " gebe....."
+    extend "n icht....."
+    extend " auuuuuuffffff!!!"
+    extend " .....owowowow..... lass doch endlich los owowowowow... es tut weh....\""
     hide rud_a11_defo1
     show rud_a11_akuwarai1 at l2,ah('rud')
     rud "\"....Das ist deine Strafe, wenn du frech wirst, Battler-kun.\""
@@ -297,12 +298,12 @@ label chapter1:
     extend "....Das Schiff schaukelt und schaukelt und schaukelt....."
     show but_a21_kuyasigaru1 at r,ah('but')
     hide but_a11_defo1
-    but "....ahhhhhh!!! "
-    extend "Mach, dass es aufhört, sonst falle ich wieder!\""
+    but "....ahhhhhh!!!"
+    extend " Mach, dass es aufhört, sonst falle ich wieder!\""
     show jes_a11_atya3 at l,ah('jes') with fastdissolve
     hide jes_a11_defo2
-    jes "\"....Vielleicht sollte der Kapitän etwas langsamer fahren, sonst geht es dir gleich noch schlechter... "
-    extend "Ich werde sofort den Kapitän bitten, etwas langsamer zu fahren, aber bitte nicht mehr ins Meer kotzen....\""
+    jes "\"....Vielleicht sollte der Kapitän etwas langsamer fahren, sonst geht es dir gleich noch schlechter..."
+    extend " Ich werde sofort den Kapitän bitten, etwas langsamer zu fahren, aber bitte nicht mehr ins Meer kotzen....\""
     show but_b11_odoroki3 at r,ah('but')
     hide but_a21_kuyasigaru1
     but "\"Ja..." 
@@ -314,14 +315,17 @@ label chapter1:
         $ persistent.jessica = True
         play sound "audio/sfx/umise_1060.ogg"
         $ renpy.notify("Ein neuer Charakter wurde im Charaktermenü freigeschaltet.")
-    "Das war meine Cousine Ushiromiya Jessica, sie ist echt cool drauf und ist wohl aktuell in dieser Phase, wo man gegen seine Eltern rebelliert."
+    "Das war meine Cousine Ushiromiya Jessica." 
+    extend " Sie ist echt cool drauf und ist wohl aktuell in dieser Phase, wo man gegen seine Eltern rebelliert."
     "Sie ist aber auch in dieser Phase, wo die Mädchen so große Brüste bekommen."
     extend " hihihihih... ich würde sie mal gerne in die Hand nehmen...."
     "Aber dann würde sie mich windelweich schlagen, denn mit ihr ist es nicht gut Kirschen zu essen, wenn man es sich mit ihr verscherzt."
-    "Jessica klingt sehr nach englischer Herkunft und wird bei uns Ushiromiya Jeshka ausgesprochen, sie muss richtig unzufrieden mit ihrem Namen sein."
-    "Sie hat außerdem so eine \"Verrückte Art zu reden\". Sie flucht viel und ihre Wortwahl ist gewöhnungsbedürftig."
+    "Jessica klingt sehr nach englischer Herkunft und wird bei uns Ushiromiya Jeshka ausgesprochen," 
+    extend " sie muss richtig unzufrieden mit ihrem Namen sein."
+    "Sie hat außerdem so eine \"Verrückte Art zu reden\"." 
+    extend " Sie flucht viel und ihre Wortwahl ist gewöhnungsbedürftig."
     "Früher waren wir das Chaotenduo, haben viel Unsinn gemacht und waren uns auch nicht zu fein, gegenüber der Hauptfamilie einen sehr rauen Ton anzuwenden"
-    "Die Vorträge der Erwachsenen über gutes Benehmen nervten uns zwar jedes Mal, aber es war auch einfach zu lustig zu sehen, wie sich die vorbildlichen Erwachsenen aufregten."
+    extend " Die Vorträge der Erwachsenen über gutes Benehmen nervten uns zwar jedes Mal, aber es war auch einfach zu lustig zu sehen, wie sich die vorbildlichen Erwachsenen aufregten."
     camera at Shake(None, float('inf'), dist=0)
     "Der Kapitän hat zugestimmt langsamer zu fahren und jetzt schaukelt das Boot nicht mehr so stark."
     jes "\"....Verdammte Scheiße Battler-kun, jetzt werden wir uns wegen dir verspäten....\""
@@ -330,9 +334,9 @@ label chapter1:
     but "\".....Halt doch mal dein Maul, immerhin kann ich jetzt ein wenig chillen....\""
     show jes_a11_defo2 at l,ah('jes') with quickergradientwipeupright
     jes "\".....Wir sollten besser runter gehen zum \"chillen\", wir sind gleich auf der Insel.\""
-    but "\"....Ja, das kann ich versuchen, jetzt, wo das Boot etwas langsamer fährt. "
+    but "\"....Ja, das kann ich versuchen, jetzt, wo das Boot etwas langsamer fährt."
     show but_b22_nayamu2 at r2,ah('but')
-    extend "....Aber ich kann trotzdem nicht garantieren, dass ich den Rest meines Frühstücks bei mir behalte.... Ihihihi....\" "
+    extend " ....Aber ich kann trotzdem nicht garantieren, dass ich den Rest meines Frühstücks bei mir behalte.... Ihihihi....\" "
     stop ship
     $ songname = "Door of Summer"
     $ play_music(summer)
@@ -346,73 +350,66 @@ label chapter1:
     extend " ....Moment mal, dieses \"ruhig\" sein ist falsch! Ich sehe es klar und deutlich! Die anderen Erwachsenen verkneifen sich doch alle gerade das Lachen...."
     scene ship_s3a with quickergradientwiperight
     show geo_a11_defo1 at m with fastdissolve
-    geo "\"Wie geht es dir Battler-kun? "
-    extend "Wir alle wissen bereits, dass es dich schon erwischt hat.\""
+    geo "\"Wie geht es dir Battler-kun?"
+    extend " Wir alle wissen bereits, dass es dich schon erwischt hat.\""
     scene ship_s3a with quickergradientwiperight
     show but_b22_nayamu1 at l,nod,ah('but') with fastdissolve
-    """
-    Mit einem leichten, aber nicht ganz ernstgemeinten Nicken stimmt Battler zu.
-    """
-    but "\"Mir geht es gut, den Umständen entsprechend.... "
+    "Mit einem leichten, aber nicht ganz ernstgemeinten Nicken stimmt Battler zu."
+    but "\"Mir geht es gut, den Umständen entsprechend...."
     hide but_b22_nayamu1
     show but_b23_kuyasigaru1 at l,ah('but')
-    extend "Der Kapitän hat das Schiff doch absichtlich so schaukeln lassen.\""
+    extend " Der Kapitän hat das Schiff doch absichtlich so schaukeln lassen.\""
     show geo_a11_majime2 at r,ah('geo') with fastdissolve
-    geo "\"Ja gut.... " 
-    extend "...eigentlich nicht... "
-    extend "Leg dich am besten hin, du hast es gleich geschafft."
+    geo "\"Ja gut...." 
+    extend " ...eigentlich nicht..."
+    extend " Leg dich am besten hin, du hast es gleich geschafft."
     show geo_a11_warai1 at r,ah('geo')
     hide geo_a11_majime2
     geo "Erinnert an alte Zeiten, nicht wahr, Jessica-chan?\""
     hide but_b23_kuyasigaru1 with fastdissolve
     show jes_b22_warai1 at l,ah('jes') with fastdissolve
-    jes "\"Ja, "
-    extend ".....es ist, als wäre er nie weg gewesen...... "
-    extend "Mit dem Unterschied, dass er sich heute zum ersten Mal übergeben hat.\""
+    jes "\"Ja,"
+    extend " .....es ist, als wäre er nie weg gewesen......"
+    extend " Mit dem Unterschied, dass er sich heute zum ersten Mal übergeben hat.\""
     show geo_a11_komaru3 at r,ah('geo')
     hide geo_a11_warai1
-    geo "\"Ahahahahaha, ja, "
-    extend "....manche Dinge ändern sich, andere nie.\""
+    geo "\"Ahahahahaha, ....ja,"
+    extend " ....manche Dinge ändern sich, andere nie.\""
     scene ship_s3a with quickergradientwiperight
     show geo_a11_defo1 at m with quickergradientwiperight
-    $ persistent.george = True
-    play sound "audio/sfx/umise_1060.ogg"
-    $ renpy.notify("Ein neuer Charakter wurde im Charaktermenü freigeschaltet.")
-    """
-    Das ist mein Cousin George, er wird von Tante Eva und Onkel Hideyoshi zu einem echten Gentleman erzogen.
-    Er arbeitet sehr hart und will schon sein eigenes Unternehmen gründen, was ich sehr beeindruckend finde.
-
-    Er wird von den anderen Familienmitgliedern sehr geschätzt.
-    Er ist für sein Alter sehr reif und kennt sich gut aus.
-
-    Ushiromiya Joji
-
-    So spricht man ihn bei uns aus, und ich bin fest davon überzeugt,
-    dass er heute einen Massenmord begehen wird.
-
-    Am liebsten würde ich auch diejenigen umbringen, die für diese schreckliche Namenstradition verantwortlich sind.
-    """
+    if persistent.george == False:
+        $ persistent.george = True
+        play sound "audio/sfx/umise_1060.ogg"
+        $ renpy.notify("Ein neuer Charakter wurde im Charaktermenü freigeschaltet.")
+    "Das ist mein Cousin George." 
+    extend " er wird von Tante Eva und Onkel Hideyoshi zu einem echten Gentleman erzogen."
+    "Er arbeitet sehr hart und will schon sein eigenes Unternehmen gründen, was ich sehr beeindruckend finde."
+    "Er wird von den anderen Familienmitgliedern sehr geschätzt."
+    extend " Außerdem ist für sein Alter sehr reif und kennt sich gut aus."
+    "Ushiromiya Joji..."
+    "So spricht man ihn bei uns aus, und ich bin fest davon überzeugt,"
+    extend " dass er heute einen Massenmord begehen wird."
+    "Am liebsten würde ich auch diejenigen umbringen, die für diese schreckliche Namenstradition verantwortlich sind."
     scene ship_s3a with quickergradientwiperight
     show but_b22_warai1 at r,ah('but') with quickergradientwiperight
-    but "\"Ich finde, heute ist auch ein besonderer Tag.... "
-    extend "Denn um die Mittagszeit soll ein Sturm aufziehen, der sich erst am Montag wieder legen soll. "
+    but "\"Ich finde, heute ist auch ein besonderer Tag...."
+    extend " Denn um die Mittagszeit soll ein Sturm aufziehen, der sich erst am Montag wieder legen soll."
     hide but_b22_warai1
     show but_b11_warai3 at r,ah('but')
     extend "Es ist das erste Mal, dass wir länger als einen Tag auf der Insel bleiben.\""
     show geo_a11_hohoemi1 at l,ah('geo') with quickergradientwiperight
-    geo "\"...Ja, aber wir haben auch immer ein wenig Glück gehabt, dass so ein starker Sturm nie über unsere Familienkonferenz hereingebrochen ist. "
+    geo "\"...Ja, aber wir haben auch immer ein wenig Glück gehabt, dass so ein starker Sturm nie über unsere Familienkonferenz hereingebrochen ist."
     extend "Wie heißt es so schön? Es gibt immer ein erstes Mal.\""
-    """
-    Für Battler war die entspannte Atmosphäre eine sehr gute Ablenkung, um nicht mehr an das schaukelnde Boot denken zu müssen.
-    """
+    "Für Battler war die entspannte Atmosphäre eine sehr gute Ablenkung, um nicht mehr an das schaukelnde Boot denken zu müssen."
     show geo_a11_majime2 at l,ah('geo') with fastdissolve
     hide geo_a11_hohoemi1
-    geo "\"...ähm... " 
-    extend ".....Battler-kun, wusstest du, dass es so genannte Sturmgötter gibt?\""
+    geo "\"...ähm" 
+    extend " .....Battler-kun?" 
+    extend " Wusstest du, dass es so genannte Sturmgötter gibt?\""
     show but_b11_aseru1 at r,ah('but')
     hide but_b11_warai3
-    but "\"....Ähhhhm.... " 
-    extend "...Meinst du Zeus...?\""
+    but "\"....Ähhhhm...." 
+    extend " ...Meinst du Zeus...?\""
     show geo_a11_warai1 at l,ah('geo')
     hide geo_a11_majime2
     geo "\"Auch richtig, aber nein, " 
@@ -424,361 +421,336 @@ label chapter1:
     geo "\"Okay, es geht um folgendes:"
     geo "In der tantrischen Spiritualität gibt es intensivere Gefühle und auch bei den Griechen gab es die dionysische Spiritualität, "
     extend "die auch besonders heftige Gefühle beinhaltet. In diesem Sinne hat jeder Mensch auch Sturmgötter in sich."
-    geo ".....diese können auch in einem selbst aktiviert werden. "
+    geo ".....diese können auch in einem selbst aktiviert werden."
     show geo_a11_majime2 at l,ah('geo')
-    extend "....Diese Sturmgötter können aber auch zu schlimmen Taten, zu Verbrechen und Gewalt verleiten."
+    extend " ....Diese Sturmgötter können aber auch zu schlimmen Taten, zu Verbrechen und Gewalt verleiten."
     geo "Man kann ihn aber auch dazu bringen, sich intensiv vorwärts zu bewegen und aus der Bequemlichkeit des Alltags auszubrechen.\""
     scene ship_s3a with quickergradientwiperight
     show jes_a11_tereru1 at m,ah('jes') with quickergradientwiperight
     jes "....Wahahahahahaha "
     extend "Was höre ich da, was laberst du da für einen Scheiß?"
-    jes "Ich habe kein Wort verstanden.... "
+    jes "Ich habe kein Wort verstanden...."
     show jes_a11_atya3 at m,ah('jes')
     hide jes_a11_tereru1 
-    extend "Ich kenne nicht einmal die Bedeutung von {note_green}tantrisch oder dionysisch{/note_green}.... "
-    extend "Es klingt einfach unironisch, als hätte jemand einfach Wörter erfunden."
+    extend " ...Ich kenne nicht einmal die Bedeutung von {note_green}tantrisch oder dionysisch{/note_green}...."
+    extend " Es klingt einfach unironisch, als hätte jemand einfach Wörter erfunden."
     scene ship_s3a with quickergradientwiperight
     show but_b23_nayamu1 at r,ah('but') with quickergradientwiperight
     but "............."
-    """
-    Battler war ein auch wenig überwältigt von diesem Input, im Leben nicht hätte er jetzt einen Vortrag über Gefühle und Spiritualität erwartet.
-    """
-    but "\"Ähm...... "
-    extend ".....ähm...... "
-    extend ".......Tantrisch?..... Gefühlsregungen?..... Dionysische Spiritualität?..... "
+    "Battler war ein auch wenig überwältigt von diesem Input, im Leben nicht hätte er jetzt einen Vortrag über Gefühle und Spiritualität erwartet."
+    but "\"Ähm......"
+    extend " .....ähm"
+    extend " .......Tantrisch?..... Gefühlsregungen?..... Dionysische Spiritualität?"
     show but_b23_nayamu2 at r,ah('but')
     hide but_b23_nayamu1
-    extend ".......................Das hast du aus dieser einen Yoga-Zeitschrift.....\" "
+    extend " ....Das hast du aus dieser einen Yoga-Zeitschrift.....\" "
     show geo_a11_komaru1 at l,ah('geo') with quickergradientwiperight
-    geo "\"Ähm....... "
+    geo "\"Ähm......."
     show geo_a11_komaru3 at l,ah('geo')
     hide geo_a11_komaru1
-    extend "....Oh.... "
-    extend "....Hahahaha, aber ich habe dich zum Nachdenken gebracht."
+    extend " ....Oh...."
+    extend " ....Hahahaha, aber ich habe dich zum Nachdenken gebracht."
     show geo_a11_hohoemi1 at l,ah('geo')
     hide geo_a11_komaru3
     geo "Meine Mutter hat so eine Zeitschrift, und ab und zu schaue ich auch mal rein.\""
     show but_b11_warai2 at r,ah('but')
     hide but_b23_nayamu2
-    but "\"....Hihihi.... " 
+    but "\" ....Hihihi...." 
     extend "....Du hast nur Pech gehabt, dass ich vor der Abreise auf der Toilette so ein Yoga-Magazin in der Hand hatte, weil ich mich vergriffen habe.\""
     geo "\"Was es manchmal für Zufälle gibt.\""
     show geo_a11_defo1 at l,ah('geo')
     hide geo_a11_hohoemi1
     geo "Eine kurze Erklärung für dionysisch wäre, dass es eine Spiritualität der Ekstaze, Musik und des Tanzes ist.....\""
-    but "\"Mehr nicht? "
-    extend "Klingt ja nicht sehr originell.\""
-    geo "\"Da kommt noch was und zwar..... "
-    extend "uhmmmm na ja.... "
-    extend "hehe, wie soll ich sagen?"
-    geo "Es ist auch eine Spiritualität der.... "
-    extend "uhmm.... "
+    but "\"Mehr nicht?"
+    extend " Klingt ja nicht sehr originell.\""
+    geo "\"Da kommt noch was und zwar....."
+    extend " uhmmmm na ja...."
+    extend " hehe, wie soll ich sagen?"
+    geo "Es ist auch eine Spiritualität der...."
+    extend " uhmm...."
     extend "....Sexualität\""
-    but "\"Sehr stark, das muss ich mal ausprobieren! "
-    extend "...Ihihihi.....\""
-    jes "\"...Trottel! "
-    extend "....Du Holzkopf! "
-    extend "......War ja zu erwarten, dass das deine einzige Motivation ist, Trottel-Battler."
-    jes "Perverser Battler! "
-    extend "...Du bist sofort Feuer und Flamme, sobald es auch nur im Entferntesten in diese Richtung geht....\""
-    but "\".....Ihihihihi.... "
-    extend "Tut mir leid....\""
-    geo "\"Tantrisch ist das Tantra. "
-    extend "....Es ist ein Begriff ursprünglich aus Indien, und wird mit \"Zusammenhang\" oder auch \"Gefüge\" übersetzt. "
-    extend "....Berührungen des Körpers sollen also auch die Seele berühren, sie nähren."
-    geo "Es ist ein sehr breites Thema... "
-    extend ".........Ja....."
+    but "\"Sehr stark, das muss ich mal ausprobieren!"
+    extend " ...Ihihihi.....\""
+    jes "\"...Trottel!"
+    extend " ....Du Holzkopf!"
+    extend " ......War ja zu erwarten, dass das deine einzige Motivation ist, Trottel-Battler."
+    jes "Perverser Battler!"
+    extend " ...Du bist sofort Feuer und Flamme, sobald es auch nur im Entferntesten in diese Richtung geht....\""
+    but "\".....Ihihihihi...."
+    extend " Tut mir leid....\""
+    geo "\"Tantrisch ist das Tantra."
+    extend " ....Es ist ein Begriff ursprünglich aus Indien, und wird mit \"Zusammenhang\" oder auch \"Gefüge\" übersetzt."
+    extend " ....Berührungen des Körpers sollen also auch die Seele berühren, sie nähren."
+    geo "Es ist ein sehr breites Thema..."
+    extend " .........Ja....."
     jes "Das klingt für mich so, als hätte jemand einen Vorwand gesucht mit einem anderen Menschen engen Kontakt zu haben...."
     but "Ja, " 
-    extend ".....letztlich läuft alles darauf hinaus, dass man in gewisser Weise seine Lust wiederbelebt.... "
-    extend "Wenn wir so darüber reden, klingt es absolut lächerlich..."
+    extend " .....letztlich läuft alles darauf hinaus, dass man in gewisser Weise seine Lust wiederbelebt...."
+    extend " Wenn wir so darüber reden, klingt es absolut lächerlich..."
     geo "Ahahahaha...."
-    extend "Ich denke da hast du Recht... "
-    extend "Ach ja.... Wusstest du?.... "
-    extend "....Ein echter Sturmgott aus der griechischen Mythologie. ist jedoch Aigaion.\""
+    extend " Ich denke da hast du Recht..."
+    extend " Ach ja.... Wusstest du?...."
+    extend " ....Ein echter Sturmgott aus der griechischen Mythologie. ist jedoch Aigaion.\""
     show but_b24_futeki3 at r,ah('but')
     hide but_b11_warai2
-    but "\"....Ein leckerer Teller Gyros-Geschnetzeltes ist das einzige Griechische, das ich schätze..... "
+    but "\"....Ein leckerer Teller Gyros-Geschnetzeltes ist das einzige Griechische, das ich schätze....."
     show but_b24_warai1 at r,ah('but')
     hide but_b24_futeki3
-    extend "Yumyumyumyum....\""
-    geo "\".......... "
-    extend "Jedenfalls kann dieser Gott Meeresstürme auslösen, ähnlich wie wir ihn heute erleben.\""
+    extend " Yumyumyumyum....\""
+    geo "\".........."
+    extend " ...Jedenfalls kann dieser Gott Meeresstürme auslösen, ähnlich wie wir ihn heute erleben.\""
     but "\"Du willst mir also sagen, dass irgendeine Gottheit, auf die wir keinen Einfluss haben, diesen Sturm ausgelöst hat?\""
-    geo "\"......Hmm......"
-    geo "So könnte man es ausdrücken ja!\""
+    geo "\"......Hmm"
+    extend " ....So könnte man es ausdrücken ja!\""
     but "\"....Auf jeden Fall können wir die Zeit, die uns Aigaion jetzt schenkt, nutzen, um wieder mehr Zeit miteinander zu verbringen.\""
     jes "\"Ja, das hast du wirklich nötig, Battler-kun!\""
-    jes "\"........Es war ja auch notwendig, dass du deine Familie für sechs Jahre verlassen hast.....\""
-    but "\".....Ach man....\""
+    extend " ...Es war ja auch notwendig, dass du deine Familie für sechs Jahre verlässt.....\""
+    but "\".....Ach man\""
     jes "\"Auf die Familienkonferenz freue ich mich am meisten...."
-    jes "Es ist die kurze Zeit, die meinen langweiligen Alltag auflockert.\""
+    extend "Es ist die kurze Zeit, die meinen langweiligen Alltag auflockert.\""
     but "\"Ja, ich bin auch froh, wieder bei euch zu sein, das hat mir in den 6 Jahren am meisten gefehlt.\""
     jes "\"Es ist schrecklich, nur mit meinen Eltern und meinem Großvater auf der Insel zu leben."
-    jes "Ich muss jeden Tag ziemlich früh aufstehen, weil meine Schule nicht wirklich in der Nähe ist, sondern auf Niijima."
+    extend " Ich muss jeden Tag ziemlich früh aufstehen, weil meine Schule nicht wirklich in der Nähe ist, sondern auf Niijima."
     jes "Nach der Schule muss ich sofort nach Hause, so dass ich keine Zeit mit meinen Freunden verbringen kann.\""
-    """
-    Jessica wird immer wütender und die Wut steht ihr ins Gesicht geschrieben.
-    """
-    jes "\"Danach habe ich nur noch Zeit, meine Hausaufgaben zu machen und in meinem Zimmer zu bleiben,.... Es gibt nichts zu tun."
-    jes "...Am liebsten würde ich diese blöde Insel für immer verlassen und auf dem Festland ein neues Leben beginnen."
+    "Jessica wird immer wütender und die Wut steht ihr ins Gesicht geschrieben."
+    jes "\"Danach habe ich nur noch Zeit, meine Hausaufgaben zu machen und in meinem Zimmer zu bleiben.... Es gibt nichts zu tun."
+    extend "...Am liebsten würde ich diese blöde Insel für immer verlassen und auf dem Festland ein neues Leben beginnen."
     jes "........"
-    jes "Und ich muss mir jeden Tag den Bullshit meiner Mutter anhören, das fängt morgens an und hört abends auf, ich halte das einfach nicht mehr aus!"
-    jes "Da ich keinen direkten Kontakt zu meinen Schulfreunden habe, ....fühle ich mich hier ziemlich einsam."
-    jes "Und an jedem neuen Tag, an dem ich das erlebe, frage ich mich: Was mache ich hier eigentlich noch? Verfluchte Scheiße!...\""
-    """
-    Man merkt sofort, dass es Jessica sehr nahe geht, nach der Schule von der Außenwelt abgeschnitten zu sein.
-
-    Auch George und Battler sind bedrückt, aber verständnisvoll, als sie Jessicas Worte über ihren Alltag auf der Insel hören.
-
-    Onkel Hideyoshi scheint das Gespräch mitgehört zu haben und erhebt sich von seinem bequemen Platz.
-    """
+    extend ".....Da ich keinen direkten Kontakt zu meinen Schulfreunden habe," 
+    extend "....fühle ich mich hier ziemlich einsam."
+    "Man merkt sofort, dass es Jessica sehr nahe geht, nach der Schule von der Außenwelt abgeschnitten zu sein."
+    extend " Auch George und Battler sind bedrückt, aber verständnisvoll, als sie Jessicas Worte über ihren Alltag auf der Insel hören."
+    "Onkel Hideyoshi scheint das Gespräch mitgehört zu haben und erhebt sich von seinem bequemen Platz."
     hid "\"Na, na Jessica-chan, du musst es positiv sehen!"
-    hid "Eines Tages wirst du die Insel wirklich verlassen und dein eigenes Leben führen können.\""
-    jes "\"Aber wie lange noch? ..... Und wenn meine Schulfreunde nichts mehr mit mir zu tun haben wollen?\""
-    hid "\"Auch deine Schulfreunde werden deine Situation verstehen, eines Tages wirst du sie besuchen und viel Zeit mit ihnen verbringen können."
-    hid "Bis dahin solltest du immer dein Bestes geben, denn das wird sich am Ende des Tages definitiv auszahlen!\""
+    extend "Eines Tages wirst du die Insel wirklich verlassen und dein eigenes Leben führen können.\""
+    jes "\"Aber wie lange noch?" 
+    extend ".....Was wäre wenn meine Schulfreunde nichts mehr mit mir zu tun haben wollen?\""
+    hid "\"Auch deine Schulfreunde werden deine Situation verstehen, eines Tages wirst du zu ihnen gehen können und ab da viel Zeit mit ihnen verbringen."
+    extend "Bis dahin solltest du immer dein Bestes geben, denn das wird sich am Ende des Tages definitiv auszahlen!\""
     jes "\".......Eines Tages?"
-    jes "Aber ich warte schon so viele Jahre.....\""
+    extend "Aber ich warte schon so viele Jahre.....\""
     hid "\"...Du hast dein ganzes Leben noch vor dir, glaub mir, deine Zeit als Teenager auf der Insel wird später nur noch eine Erinnerung sein...."
-    hid "Jetzt habe ich mich aber verquatscht, wahahahahaha"
+    extend "Jetzt habe ich mich aber verquatscht," 
+    extend "wahahahahaha!"
     hid "Aber lass den Kopf nicht hängen und häng dich weiter rein, ja?\""
     jes "\"Danke Hideyoshi, ich denke der Plan ist gut, ich werde ihn mir zu Herzen nehmen."
-    jes "Ich fühle mich schon besser.\""
+    extend " Ich fühle mich schon besser.\""
     hid "\"So ist's gut, du schaffst es!, wahahahaha\""
-    $ persistent.hideyoshi = True
-    play sound "audio/sfx/umise_1060.ogg"
-    $ renpy.notify("Ein neuer Charakter wurde im Charaktermenü freigeschaltet.")
-    """
-    Das ist Georges Vater und mein Onkel Hideyoshi, er ist ein netter und sympathischer Mann und ich glaube, ich mag ihn von allen Erwachsenen am meisten.
-    Er ist der Ehemann von Tante Eva und hat seine Firma von Grund auf neu aufgebaut.
-
-    und arbeitet jetzt als Präsident einer mittelgroßen Restaurantkette. Die Kette scheint zu wachsen und sehr gut zu laufen.
-    Sein Name wird Ushiromiya Hideyoshi ausgesprochen, wie Kyrie ist sein Name absolut perfekt!
-
-    Das liegt daran, dass er als Japaner in die Familie eingeheiratet hat. ..... Ich beneide jeden, der einen normalen Namen hat.
-    """
-
+    if persistent.hideyoshi == False:
+        $ persistent.hideyoshi = True
+        play sound "audio/sfx/umise_1060.ogg"
+        $ renpy.notify("Ein neuer Charakter wurde im Charaktermenü freigeschaltet.")
+    "Das ist Georges Vater und mein Onkel Hideyoshi." 
+    extend " Er ist ein netter und sympathischer Mann und ich glaube, ich mag ihn von allen Erwachsenen am meisten."
+    "Er ist der Ehemann von Tante Eva und hat seine Firma von Grund auf neu aufgebaut."
+    extend " Desweiteren ist er als Präsident einer mittelgroßen Restaurantkette tätig. Die Kette scheint zu wachsen und sehr gut zu laufen."
+    "Sein Name wird Ushiromiya Hideyoshi ausgesprochen, wie Kyrie ist sein Name absolut perfekt!"
+    extend " Das liegt daran, dass er als Japaner in die Familie eingeheiratet hat. ..... Ich beneide jeden, der einen normalen Namen hat."
     geo "\"Jessica-chan, allein ein Ziel zu haben, auf das man hinarbeiten kann, ist etwas, das einen jeden Tag motivieren sollte, nicht aufzugeben."
     geo "Auch ich oder Battler-kun haben unsere Sorgen und Probleme, die wir überall mit hinnehmen. Also halte noch ein bisschen durch, okay?\""
     jes "\"Ja vielen Dank, das hilft mir wirklich sehr, danke!\""
-    """
-    Die Worte von Hideyoshi und George haben Jessica sehr gut aufgemuntert.
-
-    Man sieht deutlich, wie Jessica wieder ein wenig lächelt.
-    """
+    "Die Worte von Hideyoshi und George haben Jessica sehr gut aufgemuntert."
+    extend " Man sieht deutlich, wie Jessica wieder ein wenig lächelt."
     eva "\"Hey, sieht so aus, als wären wir gleich da, Battler-kun..."
     eva "Wusstest du, dass die Seekrankheit auch noch nach der Reise anhalten kann?\""
     but "............."
     but "\"Bitte mach mir keine Angst, Tante Eva!\""
     eva "\"Oh... Entschuldige, ich wollte dir nur sagen, dass, wenn sich dein Körper an die Bewegungen des Bootes gewöhnt hat, er sich an Land wieder umgewöhnen muss."
     eva "Aber mach dir darüber keinen Kopf. Battler-kun, das passiert nicht unbedingt. *kicher*\""
-    $ persistent.eva = True
-    play sound "audio/sfx/umise_1060.ogg"
-    $ renpy.notify("Ein neuer Charakter wurde im Charaktermenü freigeschaltet.")
-    """
-    Das ist meine Tante Eva, die Mutter von George. Sie und der alte Bastard Papa sind so etwas wie ein Spaßvogel-Duo,
-    Wenn die beiden richtig loslegen, bleibt kein Stein auf dem anderen.
-
-    Sie beherrscht auch einige chinesische Kampfsporttechniken. Einer ihrer Roundhousekicks
-    soll einmal bei einem Trainingskampf getroffen haben, und ihr Gegner wurde kaltgestellt wie ein Softdrink.
-
-    Auf keinen Fall möchte ich von ihr unter die Dachlatte getreten werden.
-    Ach ja! Fast hätte ich ihren Namen vergessen. Sie heißt hier Ushiromiya Eba...... mit b.....
-    """
+    if persistent.eva == False:
+        $ persistent.eva = True
+        play sound "audio/sfx/umise_1060.ogg"
+        $ renpy.notify("Ein neuer Charakter wurde im Charaktermenü freigeschaltet.")
+    "Das ist meine Tante Eva, die Mutter von George." 
+    extend " Sie und der alte Bastard Papa sind so etwas wie ein Spaßvogel-Duo."
+    extend " ...Wenn die beiden richtig loslegen, bleibt kein Stein auf dem anderen."
+    "Sie beherrscht auch einige chinesische Kampfsporttechniken." 
+    extend " Einer ihrer Roundhousekicks soll einmal bei einem Trainingskampf getroffen haben, und ihr Gegner wurde kaltgestellt wie ein Softdrink."
+    "Auf keinen Fall möchte ich von ihr unter die Dachlatte getreten werden."
+    extend " Ach ja! Fast hätte ich ihren Namen vergessen.... Sie heißt hier Ushiromiya Eba......" 
+    extend " mit b....."
     but "\".....Nein, du verarschst mich Tante Eva....\""
-    eva "\"Oh nein, .....das würde ich nie tun... *kicher*"
+    eva "\"Oh nein..." 
+    extend " .....Das würde ich nie tun... *kicher*"
     eva "....Ich wollte dir nur etwas über die Seekrankheit erzählen... mehr nicht... *kicher*\""
-    """
-    Tante Eva wollte mich wahrscheinlich nicht erschrecken,
-    sondern meinen Kopf auf die Probe stellen, denn wenn ich an ihre Worte denke, sobald ich an Land bin,
-
-    dann wird mir bestimmt wieder schlecht, ......ganz schön raffiniert.
-    """
-    kyr "\"Wir sind jetzt gleich da! .....Die Insel ist ganz nah!\""
-    """
-    Unser Gespräch wird jäh unterbrochen durch die erfreuliche Nachricht, dass wir bald an Land gehen werden!
-    """
+    "Tante Eva wollte mich wahrscheinlich nicht erschrecken,"
+    extend " sondern meinen Kopf auf die Probe stellen, denn wenn ich an ihre Worte denke, sobald ich an Land bin,"
+    extend " dann wird mir bestimmt wieder schlecht," 
+    extend " ......ganz schön raffiniert."
+    kyr "\"Wir sind jetzt gleich da!" 
+    extend " .....Die Insel ist ganz nah!\""
+    "Unser Gespräch wird jäh unterbrochen durch die erfreuliche Nachricht, dass wir bald an Land gehen werden!"
     but "\"....Wir werden sehen, ob du Recht hast Tante Eva...\""
     eva "\"*kicher*"
-    eva "Forder es besser nicht heraus.... Battler-kun....\""
-    hid "\"Wahahahahaha, ihr zwei seid mir ja welche,..... lasst uns lieber an Deck gehen, wir gehen gleich an Land!\""
+    extend "Forder es besser nicht heraus.... Battler-kun....\""
+    hid "\"Wahahahahaha!" 
+    extend " ....Ihr zwei seid mir ja welche." 
+    extend " ...Lasst uns lieber an Deck gehen, wir gehen gleich an Land!\""
     jes "\"Ja, das ist eine gute Idee!\""
-    """
-    So erhoben sich alle von ihren Plätzen und bemerkten, dass sich draußen die Wolken unerwartet und viel zu früh verdunkelt hatten.
-    """
+    "So erhoben sich alle von ihren Plätzen und bemerkten, dass sich draußen die Wolken unerwartet und viel zu früh verdunkelt hatten."
     kyr "\"War der Taifun nicht für heute Mittag angekündigt?"
-    kyr "Vielleicht fängt es gleich an zu regnen.\""
-    rud "\"In etwa 10 Minuten sind wir da, aber gemütlich wird es nicht.\""
-    kyr "\"Stimmt,... der Wind hat bereits zugenommen.\""
-    """
-    Der Wind, der von Minute zu Minute stärker über das Meer peitscht,
-    ist kein Wind, wie ihn die meisten Menschen vom Festland kennen.
-
-    Der Wind kann ungehindert und mit voller Kraft über das Wasser fegen,
-    während es auf dem Land immer Häuser, Berge und Gelände gibt, die den Wind abschwächen können.
-    """
+    extend "Vielleicht fängt es gleich an zu regnen.\""
+    "Kyrie hat sofort bemerkt, dass etwas nicht stimmt."
+    extend " Der Himmel hat sich in der Zwischenzeit bereits verdunkelt,"
+    extend " was zu diesem Zeitpunkt noch gar nicht hätte passieren dürfen."
+    rud "\"In etwa 10 Minuten sind wir da, aber gemütlich wird es nicht mehr.\""
+    kyr "\"Stimmt..." 
+    extend "Der Wind hat auch schon stark zugenommen.\""
+    "Der Wind, der von Minute zu Minute stärker über das Meer peitscht,"
+    extend " ist kein Wind, wie ihn die meisten Menschen vom Festland kennen."
+    "Der Wind kann ungehindert und mit voller Kraft über das Wasser fegen,"
+    extend " während es auf dem Land immer Häuser, Berge und Gelände gibt, die den Wind abschwächen können."
     kyr "\"Dass die Wettervorhersage sich mal irrt?\""
     rud "\"Ich habe einmal ein Geschäftsessen wegen eines angeblichen Taifuns abgesagt...."
-    rud "Der Taifun kam erst 2 Tage später, ich habe mich noch nie so dumm gefühlt wie in dieser Situation.\""
+    extend "Der Taifun kam erst 2 Tage später, ich habe mich noch nie so dumm gefühlt wie in dieser Situation.\""
     kyr "\"Das war sicher eine Erfahrung, so etwas am Ende erklären zu müssen....\""
     rud "\"Bitte erinnere mich nicht daran....\""
-    """
-    Nicht nur Rudolf und Kyrie sind beunruhigt, auch alle anderen sind überrascht,
-
-    dass der Sturm einige Stunden zu früh kommt. Dabei hatte der Wetterbericht garantiert, dass es erst um die Mittagszeit losgehen würde.
-    Die Folge könnten turbulente Flüge sein, die noch eine Starterlaubnis für Kurzflüge haben.
-
-    Inzwischen hat sich Maria ganz vorne auf der Brücke niedergelassen, und ihr Blick schweift nicht mehr von einer ganz bestimmten Klippe ab.
-    """
+    "Nicht nur Rudolf und Kyrie sind beunruhigt," 
+    extend " auch alle anderen sind überrascht,"
+    "dass der Sturm einige Stunden zu früh kommt. Dabei hatte der Wetterbericht garantiert, dass es erst um die Mittagszeit losgehen würde."
+    extend "...Die Folge könnten turbulente Flüge sein, die noch eine Starterlaubnis für Kurzflüge haben."
+    "Inzwischen hat sich Maria ganz vorne auf der Brücke niedergelassen, und ihr Blick schweift nicht mehr von einer ganz bestimmten Klippe ab."
     mar "\"......................Uu~..........."
     mar "..................................."
     mar "......................Es ist weg................."
-    mar "......................Uu~.............."
-    mar "......Uu~........nicht mehr da......\""
-    but "\"hmm?...... Was ist los Maria?\""
+    extend " ......................Uu~.............."
+    extend " ......Uu~........nicht mehr da......\""
+    but "\"hmm?" 
+    extend " .....Was ist los Maria?\""
     jes "\"Etwas scheint sie sehr zu beunruhigen...\""
-    mar "\"Dieses schreinähnliche Ding ist weg!.... Uu!"
-    mar "Es ist weg!... Uu~...!"
-    mar "Es war immer da, aber jetzt ist es weg!... Uu!..\""
-    jes "\"Stimmt ja... Der Schrein fehlt, er war letztes Jahr noch da...."
+    mar "\"Der Schrein ist weg! Es ist weg!.... Uu!"
+    extend " Es ist weg!... Uu~...!"
+    mar "Es war immer da, aber jetzt ist es weg!..." 
+    extend "Uu!..\""
+    jes "\"Stimmt ja..." 
+    extend "Der Schrein fehlt, er war letztes Jahr noch da...."
     jes "Es sieht auch so aus, als wäre ein Teil des Riffs mitgerissen worden....\""
     kum "\"Ohohohoh, der Schrein wurde während eines Gewitters von einem gewaltigen Blitz getroffen und zerstört.\""
-    $ persistent.kumasawa = True
-    play sound "audio/sfx/umise_1060.ogg"
-    $ renpy.notify("Ein neuer Charakter wurde im Charaktermenü freigeschaltet.")
-    """
-    Die ältere Frau heißt Kumasawa. Sie ist eine Teilzeitarbeiterin, die zwar mehrmals gekündigt hat, aber insgesamt schon viele Jahre im Dienst der Familie steht.
-    Sie ist geschickt und mehr als fähig, ihre Aufgaben zu erfüllen,
-
-    aber wegen ihrer Geschwätzigkeit und ihrer Vorliebe für Gerüchte ist sie als Angestellte nicht sehr beliebt.
-    Ihr Name auf Japanisch? Auch bei uns Kumasawa, ihre Eltern haben ihr einen vernünftigen Namen gegeben... *seufz*....
-    """
+    if persistent.kumasawa == False:
+        $ persistent.kumasawa = True
+        play sound "audio/sfx/umise_1060.ogg"
+        $ renpy.notify("Ein neuer Charakter wurde im Charaktermenü freigeschaltet.")
+    "Die ältere Frau heißt Kumasawa Chiyo." 
+    extend " Sie ist eine Teilzeitarbeiterin, die zwar mehrmals gekündigt hat, aber insgesamt schon viele Jahre im Dienst der Familie steht."
+    "Sie ist geschickt und mehr als fähig, ihre Aufgaben zu erfüllen,"
+    extend "aber wegen ihrer Geschwätzigkeit und ihrer Vorliebe für Gerüchte ist sie als Angestellte nicht sehr beliebt."
+    "Ihr Name auf Japanisch?" 
+    extend " ...Auch bei uns Kumasawa, ihre Eltern haben ihr einen vernünftigen Namen gegeben" 
+    extend " ....*seufz*...."
     jes "\"Ein Blitzeinschlag?..."
-    jes "Ein Blitz kann so gewaltig sein?\""
+    extend " Ein Blitz kann so gewaltig sein?\""
     kum "\"Die Fischer sagen, es sei ein Zeichen von Unglück....\""
     mar "\"Ein Zeichen von Unglück....Uu~..."
-    mar "...........................\""
-    """
-    Kumasawas Worte haben die sonst so entspannte Atmosphäre auf dem Schiff in ein beklemmendes Gefühl verwandelt.
-    Maria hat ihren Blick noch immer nicht von der Stelle abgewandt, an der der Schrein stehen soll...
-
-    Und es scheint, als würde der heftige Wind für einen Moment nachlassen.
-    """
+    extend " ...........................\""
+    "Kumasawas Worte haben die sonst so entspannte Atmosphäre auf dem Schiff in ein beklemmendes Gefühl verwandelt."
+    extend " Maria hat ihren Blick noch immer nicht von der Stelle abgewandt, an der der Schrein stehen sollte..."
+    extend " Und es scheint, als würde in genau diesem Moment der heftige Wind für einen Moment nachlassen."
     mar "\"Unglück..."
     mar "Unglück...Unglück..."
+    but ".....Was hast du gesagt, Maria?"
     mar "UnglückUnglückUnglückUnglückUnglückUnglückUnglückUnglückUnglückUnglückUnglückUnglückUnglückUnglückUnglückUnglückUnglückUnglück\""
+    "Maria fängt plötzlich an lautstark das Wort \"Unglück\" sehr oft zu wiederholen,"
+    extend " was das unheimliche Gefühl bei den Anwesenden nur noch verstärkt."
+    "Es dürfte ein Ding der Unmöglichkeit sein, Maria jetzt noch zu beruhigen."
     geo "\"Kumasawa-san bitte gehen Sie mit ihren Witzen etwas vorsichtiger um!"
-    geo "Maria-chan nimmt sowas ziemlich ernst, verstehen Sie?\""
+    extend "Maria-chan nimmt sowas ziemlich ernst, verstehen Sie?\""
     mar "\"UnglückUnglückUnglück\""
     but "\"Hey Maria!"
-    but "Wenn du so oft \"Unglück\" sagst, wird es wirklich ein Unglück geben, also beruhige dich, ja?\""
+    extend " Wenn du so oft \"Unglück\" sagst, wird es wirklich ein Unglück geben, also beruhige dich, ja?\""
     geo "\"Maria-chan, es wird nichts schlimmes passieren.\""
     mar "\"............Uu~.............."
-    mar "............................\""
-    """
-    Die anderen versuchen Maria zu beruhigen, um das Thema irgendwie abzuschließen.
-
-    Aber Maria wendet den Blick vom Riff ab, dreht sich um, hebt den rechten Arm zum Himmel und öffnet langsam den Mund...
-    """
+    extend " ............................\""
+    "Die anderen versuchen Maria zu beruhigen, um das Thema irgendwie abzuschließen."
+    extend "Aber Maria wendet den Blick vom Riff ab, dreht sich um, hebt den rechten Arm zum Himmel und öffnet langsam den Mund..."
     mar "\"Es geschieht definitiv....."
-    mar "Ein Unglück wird geschehen!......\""
-    """
-    Mit diesen Worten, als hätte Maria gerade den Befehl dazu gegeben, hörte man es donnern und sofort begann es zu regnen.
-
-    Nicht nur Battler lief ein kalter Schauer über den Rücken.
-    """
-    but "............................"
-    but "\"Hä?.........................\""
-    """
-    Alle haben in diesem Moment ein mulmiges Gefühl.
-    Es ist fast so, als ob Maria ahnt, dass dieses Familientreffen etwas ganz Besonderes sein wird.
-
-    Doch Battler scheint zu erkennen, dass Marias erhobener Arm und das \"Unglück\" wohl nur das Wetter meinen.
-    """
+    extend " .....Ein Unglück wird geschehen!......\""
+    "Mit diesen Worten, als hätte Maria gerade den Befehl dazu gegeben, hörte man es donnern und sofort begann es zu regnen."
+    extend " ....Nicht nur Battler lief deswegen ein kalter Schauer über den Rücken."
+    but "\"............................"
+    extend ".......Hä?.........................\""
+    "Alle haben in diesem Moment ein mulmiges Gefühl."
+    extend " Es ist fast so, als ob Maria ahnt, dass dieses Familientreffen etwas ganz Besonderes sein würde."
+    extend " Doch Battler scheint als einziger zu erkennen, dass mit Marias erhobener Arm und das \"Unglück\" wohl nur das Wetter gemeint sein muss."
     but "\"Du hast also gemerkt, dass es ein schlimmes Unwetter wird?\""
     mar "\"..........Uu~.....\""
     but "\"Die Wettervorhersage sagt, dass der Sturm erst gegen Mittag kommen wird. Aber er ist schon da...."
-    but "Das nenne ich wirklich ein Unglück... hihihihi"
+    extend " ....Das nenne ich wirklich ein Unglück...."
+    extend " ...hihihihi"
     but "Maria, ich bin sicher, dass dieser Taifun schneller vorbei ist, als du bis zehn zählen kannst. Alles wird gut.\""
-    """
-    Battler versucht Maria zu beruhigen, dass sie keine Angst vor dem Taifun haben muss, aber Marias Gesichtsausdruck spricht eine ganz andere Sprache.
-    """
+    "Battler versucht Maria zu beruhigen, dass sie keine Angst vor dem Taifun haben muss, aber Marias Gesichtsausdruck spricht eine ganz andere Sprache."
     mar "\"Uu~!!"
-    mar "Uu~!!Uu~!!Uu~!!Uu~!!Uu~!!Uu~!!"
-    mar "Ein Unglück wird geschehen! Uu~!!\""
+    extend " Uu~!!Uu~!!Uu~!!Uu~!!Uu~!!Uu~!!"
+    extend " Ein Unglück wird geschehen! Uu~!!\""
     jes "\"Maria, warum sagst du sowas?\""
     kum "\"Es ist klar, dass sie etwas im Blick hat, das im Alter schnell verloren geht."
-    kum "Sehr junge Menschen haben einen Sinn für das Übernatürliche..."
-    kum "Aber dieses Gefühl wird schwächer, je älter man wird."
+    extend " Sehr junge Menschen haben einen Sinn für das Übernatürliche..."
+    extend " Aber dieses Gefühl wird schwächer, je älter man wird."
     kum "Was Maria fühlen kann, kann nur sie fühlen, weil sie die Jüngste hier ist.\""
-    """
-    Battler erstarrt bei diesen Worten, ist das wirklich möglich? denkt er, das kann es doch gar nicht geben...
-    """
+    "Battler erstarrt bei diesen Worten, ist das wirklich möglich? denkt er, das kann es doch gar nicht geben..."
+    extend " Viel mehr ist es so, dass das seltsame Verhalten von Maria und die angespannte Atmospähre ihm diese Erklärung für einen kurzen Moment logisch vorkommen lässt."
     kum "\"Es scheint so, dass in der Vergangenheit von Rokkenjima eine Hexe....\""
     jes "\"Es reicht, Kumasawa! Darüber reden wir nicht!\""
     kum "\"Ohohohoh, ich muss mich entschuldigen, ich wollte nicht unhöflich sein.\""
-    """
-    Kumasawas Geschichten sind im Moment eher ungünstig, denn es geht darum, Maria zu beruhigen und nicht darum, ihr noch mehr Dinge in den Kopf zu setzen.
-    Jessica hat richtig gehandelt, als sie Kumasawa unterbrochen hat.
-    """
-    but "\"Eine....... Hexe?........."
-    but "Hat Kumasawa Hexe gesagt?"
-    but "Weiß Jessica irgendwas?"
-    but "Hexe..........\""
-    """
-    Weit weg vom Geschehen konnte man Rudolf sehen, der sehr nachdenklich wirkte.
-    """
+    "Kumasawas Geschichten sind im Moment eher ungünstig, denn es geht darum, Maria zu beruhigen und nicht darum, ihr noch mehr Dinge in den Kopf zu setzen."
+    extend " Jessica hat richtig gehandelt, in dem sie Kumasawa unterbrochen hat."
+    but "\"Eine......." 
+    extend " .......Hexe?"
+    but "....Hat Kumasawa Hexe gesagt?"
+    extend " ....Weiß Jessica irgendwas?"
+    but "Hexe.........."
+    but "...........\""
+    "Weit weg vom Geschehen konnte man Rudolf sehen, der sehr nachdenklich wirkte."
     rud "\"*seufz*\""
-    """
-    Nach etwa fünf Minuten stieß er einen tiefen Seufzer aus, während er sich eine Zigarette anzündete, weil ihn etwas sehr beschäftigte, und niemand außer Eva schien diesen Seufzer gehört zu haben.
-    """
+    "Nach etwa fünf Minuten stieß er einen tiefen Seufzer aus, während er sich eine Zigarette anzündete, weil ihn etwas sehr beschäftigte, und niemand außer Eva schien diesen Seufzer gehört zu haben."
     eva "\"Was ist los Rudolf?.... irgendwelche Sorgen wegen heute Abend?"
-    eva "Wir müssen uns nur genau an das halten, was wir besprochen haben, dann können wir gegen Krauss gewinnen.\""
+    extend " Wir müssen uns nur genau an das halten, was wir besprochen haben, dann können wir gegen Krauss gewinnen.\""
     rud "\"....Ja, es liegt nicht am Plan..... Aber wenn unsere Vermutung falsch ist?...."
-    rud "Wir würden wegen Hochverrats an der Familie Ushiromiya den Haien zum Fraß vorgeworfen."
-    rud "Das wäre das absolute Ende meines Lebens und auch deines, Eva-san."
-    rud "Damit würden wir unser Ziel um rund eine Quadrillion Kilometer verfehlen.\""
-    """
-    Rudolf sieht sehr angespannt aus, während Eva versucht, sich ein leichtes Lächeln zu bewahren...
-
-    Aber auch ihr ist anzumerken, dass sie so kurz vor der Familienkonferenz, bei der es um das Erbe des Familienoberhauptes geht, ein wenig weiche Knie bekommt.
-    """
-    eva "\"Keine Sorge... Rudolf... Es ist ein sehr hoher Einsatz, aber ein Treffer wird mit Vaters Erbe belohnt."
+    extend " Wir würden wegen Hochverrats an der Familie Ushiromiya den Haien zum Fraß vorgeworfen."
+    rud "Das wäre das absolute Ende meines Lebens und auch deines, Aneki."
+    extend " Damit würden wir unser Ziel um rund eine Quadrillion Kilometer verfehlen.\""
+    "Rudolf sieht sehr angespannt aus, während Eva versucht, sich ein leichtes Lächeln zu bewahren..."
+    extend " Aber auch ihr ist anzumerken, dass sie so kurz vor der Familienkonferenz, bei der es um das Erbe des Familienoberhauptes geht, ein wenig weiche Knie bekommt."
+    eva "\"Keine Sorge..." 
+    extend " Rudolf..." 
+    extend " Es ist ein sehr hoher Einsatz, aber ein Treffer wird mit Vaters Erbe belohnt."
     eva "Außerdem denke ich, dass das Erbe, das man hier erhalten kann, das Risiko definitiv wert ist."
-    eva "Ich lasse nicht zu, dass mein hinterhältiger Bruder das ganze Erbe für sich behält!\""
+    extend " Ich lasse nicht zu, dass mein hinterhältiger Bruder das ganze Erbe für sich behält!\""
     rud "\"Das klingt logisch... Solange du dich an die Aufteilung hältst und im Ernstfall Rede und Antwort stehst, bin ich dabei.\""
-    eva "\"Genau das wollte ich hören, wenn etwas schief geht, hole ich uns da raus.\""
+    extend "Trotzdem ist das so als würde ich mein ganzes Leben drauf verwetten," 
+    extend " dass eine unbedeutende Fußball-Mannschaft aus Portugal dieses Jahr den Europäischen Pokal gewinnt."
+    eva "Wirklich jetzt?" 
+    extend " Fußball?" 
+    extend " Damit kenne ich mich nicht aus."
+    rud "Was ich sagen kann, ist dass die Quoten schlecht für uns stehen, aber ein Treffer würde die Situation verändern."
+    eva "\"Risikobereitschaft kann großzügig belohnt werden und im besten Fall mit Vaters Erbe..\""
     rud "\"Ich hoffe einfach auf das beste...\""
-    """
-    sagt er, nimmt einen großen Zug von seiner Zigarre und bläst den feinen weißen Rauch wieder in die Luft.
-
-    Genau in diesem Moment ertönte die Stimme von Shannon, die heute zusammen mit Gohda die Familienmitglieder abholen sollte.
-    """
+    "sagte er, nimmt einen großen Zug von seiner Zigarre und bläst den feinen weißen Rauch wieder in die Luft."
+    "Genau in diesem Moment ertönte die Stimme von Shannon, einer Bediensteten, die heute zusammen mit Chefkoch Gohda die Familienmitglieder abholen sollte."
+    extend " Das Boot hat nämlich bereits die Anlegestelle auf Rokkenjima erreicht."
     sha "\"Entschuldigung, liebe Gäste, das Schiff legt gleich an!"
-    sha "Vorsicht beim Überqueren der Planke, danke!\""
-    geo "\"Das hast du gut gesagt, Shannon-chan.\""
-    sha "\"George-sama.... D-Das ist zu viel des Lobes..."
-    sha "....I-Ich bin nur das Mobiliar der Familie, das musste ich sagen.....\""
-    """
-    Shannon errötete, als sie diese Worte von George hörte.
-
-    Dann fuhr George fort, sich mit ihr in einem angenehmen und ruhigen Ton zu unterhalten.
-    """
-    geo "\"Shannon-chan du weißt selbst nicht, was für eine tolle Bedienstete du bist, du machst dich einfach nur unnötig runter."
-    geo "Und wenn ich schon dabei bin, du bist auf keinen Fall so etwas wie Mobilar, du bist ein Mensch."
+    extend " Vorsicht beim Überqueren der Planke, danke!\""
+    geo "\"Das hast du gut gesagt, Shannon-chan."
+    extend " Genau wie ich es von dir erwartet habe.\""
+    sha "\"George-sama...." 
+    extend " D-Das ist zu viel des Lobes..."
+    extend " ....I-Ich bin nur das Mobiliar der Familie, das musste ich sagen.....\""
+    "Shannon errötete, als sie diese Worte von George hörte."
+    extend " Dann fuhr George fort, sich mit ihr in einem angenehmen und ruhigen Ton zu unterhalten."
+    geo "\"Shannon-chan..." 
+    extend " Du weißt selbst nicht, was für eine tolle Bedienstete du bist, du kannst auch mal mehr mit deiner Leistung zufrieden sein."
+    extend " Und wenn ich schon dabei bin, du bist auf keinen Fall so etwas wie Mobiliar," 
+    extend " du bist ein Mensch."
     geo "Ich will so etwas nicht mehr hören, ist das klar?\""
     sha "\"G-George-sama......\""
-    $ persistent.shannon = True
-    play sound "audio/sfx/umise_1060.ogg"
-    $ renpy.notify("Ein neuer Charakter wurde im Charaktermenü freigeschaltet.")
-    """
-    Die Bedienstete heißt, wie wir bereits wissen, Shannon, und sie ist eine junge, aber sehr erfahrene Bedienstete.
-    Normalerweise ist sie ruhig und erledigt ihre Arbeit effizient, aber wenn sie nervös wird, macht sie Fehler.
-
-    Da sie kein Familienmitglied ist, ist ihr Name völlig in Ordnung und nicht seltsam.
-    Ich habe sie seit 6 Jahren nicht mehr gesehen und sie ist noch schöner als in meiner Erinnerung.
-    """
+    if persistent.shannon == False:
+        $ persistent.shannon = True
+        play sound "audio/sfx/umise_1060.ogg"
+        $ renpy.notify("Ein neuer Charakter wurde im Charaktermenü freigeschaltet.")
+    "Diese junge Bedienstete heißt Shannon."
+    extend " Sie ist zwar eine junge, aber sehr erfahrene Bedienstete."
+    "Normalerweise ist sie ruhig und erledigt ihre Arbeit effizient, aber wenn sie nervös wird, macht sie Fehler."
+    extend " Da sie kein Familienmitglied ist, ist ihr Name völlig in Ordnung und nicht seltsam."
+    "Ich habe sie seit 6 Jahren nicht mehr gesehen und sie ist noch schöner als in meiner Erinnerung."
     but "\"Sag mal Jessica-chan... kann es sein, dass die beiden sich ein bisschen nahe stehen?\""
     jes "\".....wahahahaha....wahahahaha..... das hast du so schnell kapiert?\""
     but "\"Also sind sie wirklich ein Paar?\""

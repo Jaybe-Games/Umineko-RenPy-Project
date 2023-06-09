@@ -1,312 +1,308 @@
-﻿# TODO: Translation updated at 2023-04-29 21:51
+﻿# TODO: Translation updated at 2023-06-08 22:40
 
 translate English strings:
 
-    # game/core/screens.rpy:421
+    # game/core/screens.rpy:386
     old "End Replay"
-    new ""
+    new "End Replay"
 
-    # game/core/screens.rpy:740
+    # game/core/screens.rpy:705
     old "{color=#fff}Cre{color=#f00}d{color=#fff}its"
-    new ""
+    new "{color=#fff}Cre{color=#f00}d{color=#fff}its"
 
-    # game/core/screens.rpy:748
+    # game/core/screens.rpy:714
     old "Version [config.version!t]\n"
-    new ""
+    new "Version [config.version!t]\n"
 
-    # game/core/screens.rpy:754
+    # game/core/screens.rpy:720
     old "Made with {a=https://www.renpy.org/}Ren'Py{/a} [renpy.version_only] [renpy.license!t]."
-    new ""
+    new "Made with {a=https://www.renpy.org/}Ren'Py{/a} [renpy.version_only] [renpy.license!t]."
 
-    # game/core/screens.rpy:779
+    # game/core/screens.rpy:745
     old "Speic{color=#f00}h{color=#fff}ern"
-    new ""
+    new "Speic{color=#f00}h{color=#fff}ern"
 
-    # game/core/screens.rpy:786
+    # game/core/screens.rpy:752
     old "Spiel La{color=#f00}d{color=#fff}en"
-    new ""
+    new "Spiel La{color=#f00}d{color=#fff}en"
 
-    # game/core/screens.rpy:791
+    # game/core/screens.rpy:757
     old "Seite {}"
-    new ""
+    new "Seite {}"
 
-    # game/core/screens.rpy:791
+    # game/core/screens.rpy:757
     old "Automatische Spielstände"
-    new ""
+    new "Automatische Spielstände"
 
-    # game/core/screens.rpy:791
+    # game/core/screens.rpy:757
     old "Schnell Speicherungen"
-    new ""
+    new "Schnell Speicherungen"
 
-    # game/core/screens.rpy:837
+    # game/core/screens.rpy:803
     old "{#file_time}%A, %B %d %Y, %H:%M"
-    new ""
+    new "{#file_time}%A, %B %d %Y, %H:%M"
 
-    # game/core/screens.rpy:837
+    # game/core/screens.rpy:803
     old "Freier Speicherplatz"
-    new ""
+    new "Freier Speicherplatz"
 
-    # game/core/screens.rpy:852
+    # game/core/screens.rpy:818
     old "<"
-    new ""
+    new "<"
 
-    # game/core/screens.rpy:855
+    # game/core/screens.rpy:821
     old "{#auto_page}A"
-    new ""
+    new "{#auto_page}A"
 
-    # game/core/screens.rpy:858
+    # game/core/screens.rpy:824
     old "{#quick_page}Q"
-    new ""
+    new "{#quick_page}Q"
 
-    # game/core/screens.rpy:864
+    # game/core/screens.rpy:830
     old ">"
-    new ""
+    new ">"
 
-    # game/core/screens.rpy:912
+    # game/core/screens.rpy:878
     old "{color=#fff}Einstell{/color}{color=#f00}u{/color}{color=#fff}ngen{/color}"
-    new ""
+    new "{color=#fff}Einstell{/color}{color=#f00}u{/color}{color=#fff}ngen{/color}"
 
-    # game/core/screens.rpy:922
+    # game/core/screens.rpy:888
     old "{color=#fff}Anzei{/color}{color=#f00}g{/color}{color=#fff}e{/color}"
-    new ""
+    new "{color=#fff}Anzei{/color}{color=#f00}g{/color}{color=#fff}e{/color}"
 
-    # game/core/screens.rpy:930
+    # game/core/screens.rpy:896
     old "{color=#fff}Übers{/color}{color=#f00}p{/color}{color=#fff}ringen{/color}"
-    new ""
+    new "{color=#fff}Übers{/color}{color=#f00}p{/color}{color=#fff}ringen{/color}"
 
-    # game/core/screens.rpy:938
+    # game/core/screens.rpy:904
     old "{color=#fff}Spr{/color}{color=#f00}a{/color}{color=#fff}che{/color}"
-    new ""
+    new "{color=#fff}Spr{/color}{color=#f00}a{/color}{color=#fff}che{/color}"
 
-    # game/core/screens.rpy:948
-    old "{color=#fff}Textb{/color}{color=#f00}o{/color}{color=#fff}x{/color}"
-    new ""
-
-    # game/core/screens.rpy:967
+    # game/core/screens.rpy:920
     old "{color=#fff}> Textgeschwindi{color=#f00}g{color=#fff}keit >>"
-    new ""
+    new "{color=#fff}> Textgeschwindi{color=#f00}g{color=#fff}keit >>"
 
-    # game/core/screens.rpy:976
+    # game/core/screens.rpy:929
     old "{color=#fff}>> Auto{color=#f00}m{color=#fff}odusgeschwindigkeit >"
-    new ""
+    new "{color=#fff}>> Auto{color=#f00}m{color=#fff}odusgeschwindigkeit >"
 
-    # game/core/screens.rpy:986
+    # game/core/screens.rpy:939
     old "{color=#fff}> Musiklautstär{color=#f00}k{color=#fff}e >>"
-    new ""
+    new "{color=#fff}> Musiklautstär{color=#f00}k{color=#fff}e >>"
 
-    # game/core/screens.rpy:993
+    # game/core/screens.rpy:946
     old "{color=#fff}> Soundlautstär{color=#f00}k{color=#fff}e >>"
-    new ""
+    new "{color=#fff}> Soundlautstär{color=#f00}k{color=#fff}e >>"
 
-    # game/core/screens.rpy:999
+    # game/core/screens.rpy:952
     old "Test"
-    new ""
+    new "Test"
 
-    # game/core/screens.rpy:1106
+    # game/core/screens.rpy:1059
     old "{color=#fff}Vergangene Dia{color=#f00}l{color=#fff}oge"
-    new ""
+    new "{color=#fff}Vergangene Dia{color=#f00}l{color=#fff}oge"
 
-    # game/core/screens.rpy:1134
+    # game/core/screens.rpy:1087
     old "{color=#fff}Es hat noch kein Charakter gesprochen."
-    new ""
+    new "{color=#fff}Es hat noch kein Charakter gesprochen."
+
+    # game/core/screens.rpy:1146
+    old "{color=#fff}Steue{color=#f00}r{color=#fff}ung"
+    new "{color=#fff}Steue{color=#f00}r{color=#fff}ung"
+
+    # game/core/screens.rpy:1156
+    old "Tastatur"
+    new "Tastatur"
+
+    # game/core/screens.rpy:1157
+    old "Maus"
+    new "Maus"
+
+    # game/core/screens.rpy:1160
+    old "Gamepad"
+    new "Gamepad"
+
+    # game/core/screens.rpy:1173
+    old "Enter"
+    new "Enter"
+
+    # game/core/screens.rpy:1174
+    old "Fährt den Text fort und bestätigt Menüs"
+    new "Fährt den Text fort und bestätigt Menüs"
+
+    # game/core/screens.rpy:1177
+    old "Leertaste"
+    new "Leertaste"
+
+    # game/core/screens.rpy:1178
+    old "Fährt den Text fort."
+    new "Fährt den Text fort."
+
+    # game/core/screens.rpy:1181
+    old "Pfeiltasten"
+    new "Pfeiltasten"
+
+    # game/core/screens.rpy:1182
+    old "Navigiere durch die Menüs."
+    new "Navigiere durch die Menüs."
+
+    # game/core/screens.rpy:1185
+    old "Escape"
+    new "Escape"
+
+    # game/core/screens.rpy:1186
+    old "Öffnet das Menü."
+    new "Öffnet das Menü."
+
+    # game/core/screens.rpy:1190
+    old "Schaltet auf Automodus um."
+    new "Schaltet auf Automodus um."
 
     # game/core/screens.rpy:1193
-    old "{color=#fff}Steue{color=#f00}r{color=#fff}ung"
-    new ""
+    old "Shift + <"
+    new "Shift + <"
+
+    # game/core/screens.rpy:1194
+    old "Überspringt das aktuelle Kapitel."
+    new "Überspringt das aktuelle Kapitel."
+
+    # game/core/screens.rpy:1197
+    old "Ctrl"
+    new "Ctrl"
+
+    # game/core/screens.rpy:1198
+    old "Überspringt Text beim gedrückthalten."
+    new "Überspringt Text beim gedrückthalten."
+
+    # game/core/screens.rpy:1201
+    old "Tab"
+    new "Tab"
 
     # game/core/screens.rpy:1202
-    old "Tastatur"
-    new ""
-
-    # game/core/screens.rpy:1203
-    old "Maus"
-    new ""
+    old "Schaltet auf Textüberspringen um."
+    new "Schaltet auf Textüberspringen um."
 
     # game/core/screens.rpy:1206
-    old "Gamepad"
-    new ""
+    old "Versteckt das Interface."
+    new "Versteckt das Interface."
 
-    # game/core/screens.rpy:1219
-    old "Enter"
-    new ""
+    # game/core/screens.rpy:1210
+    old "Macht einen Screenshot."
+    new "Macht einen Screenshot."
+
+    # game/core/screens.rpy:1216
+    old "Linksklick"
+    new "Linksklick"
+
+    # game/core/screens.rpy:1217
+    old "Fährt den Text fort und betätigt\nMenü Buttons."
+    new "Fährt den Text fort und betätigt\nMenü Buttons."
 
     # game/core/screens.rpy:1220
-    old "Fährt den Text fort und bestätigt Menüs"
-    new ""
-
-    # game/core/screens.rpy:1223
-    old "Leertaste"
-    new ""
+    old "Mausrad klicken"
+    new "Mausrad klicken"
 
     # game/core/screens.rpy:1224
-    old "Fährt den Text fort."
-    new ""
-
-    # game/core/screens.rpy:1227
-    old "Pfeiltasten"
-    new ""
-
-    # game/core/screens.rpy:1228
-    old "Navigiere durch die Menüs."
-    new ""
+    old "Rechtsklick"
+    new "Rechtsklick"
 
     # game/core/screens.rpy:1231
-    old "Escape"
-    new ""
+    old "LT, L2, RT, R2, A, X (Dualshock)"
+    new "LT, L2, RT, R2, A, X (Dualshock)"
 
     # game/core/screens.rpy:1232
-    old "Öffnet das Menü."
-    new ""
+    old "Fährt den Text fort und bestätigt\nMenü Buttons."
+    new "Fährt den Text fort und bestätigt\nMenü Buttons."
 
-    # game/core/screens.rpy:1236
-    old "Schaltet auf Automodus um."
-    new ""
-
-    # game/core/screens.rpy:1239
-    old "Ctrl"
-    new ""
+    # game/core/screens.rpy:1235
+    old "LB, L1"
+    new "LB, L1"
 
     # game/core/screens.rpy:1240
-    old "Überspringt Text beim gedrückthalten."
-    new ""
-
-    # game/core/screens.rpy:1243
-    old "Tab"
-    new ""
+    old "D-Pad, Sticks"
+    new "D-Pad, Sticks"
 
     # game/core/screens.rpy:1244
-    old "Schaltet auf Textüberspringen um."
-    new ""
+    old "Start, Options, B, Kreis"
+    new "Start, Options, B, Kreis"
 
     # game/core/screens.rpy:1248
-    old "Versteckt das Interface."
-    new ""
+    old "Back, Share"
+    new "Back, Share"
 
     # game/core/screens.rpy:1252
-    old "Macht einen Screenshot."
-    new ""
+    old "RB, R1"
+    new "RB, R1"
 
-    # game/core/screens.rpy:1258
-    old "Linksklick"
-    new ""
+    # game/core/screens.rpy:1253
+    old "Schaltet auf Überspringen um."
+    new "Schaltet auf Überspringen um."
+
+    # game/core/screens.rpy:1256
+    old "Y, Dreieck"
+    new "Y, Dreieck"
 
     # game/core/screens.rpy:1259
-    old "Fährt den Text fort und betätigt\nMenü Buttons."
-    new ""
-
-    # game/core/screens.rpy:1262
-    old "Mausrad klicken"
-    new ""
-
-    # game/core/screens.rpy:1266
-    old "Rechtsklick"
-    new ""
-
-    # game/core/screens.rpy:1270
-    old "Mausrad hochdrehen"
-    new ""
-
-    # game/core/screens.rpy:1271
-    old "Springt zurück zu früherem Dialog."
-    new ""
-
-    # game/core/screens.rpy:1274
-    old "Mausrad runterdrehen"
-    new ""
-
-    # game/core/screens.rpy:1275
-    old "Springt zu späterem Dialog."
-    new ""
-
-    # game/core/screens.rpy:1281
-    old "RT, R2 & A"
-    new ""
-
-    # game/core/screens.rpy:1285
-    old "LT, R2"
-    new ""
-
-    # game/core/screens.rpy:1289
-    old "LB, L1"
-    new ""
-
-    # game/core/screens.rpy:1294
-    old "D-Pad, Sticks"
-    new ""
-
-    # game/core/screens.rpy:1298
-    old "Start"
-    new ""
-
-    # game/core/screens.rpy:1302
-    old "RB"
-    new ""
-
-    # game/core/screens.rpy:1306
-    old "Y"
-    new ""
-
-    # game/core/screens.rpy:1309
     old "Kalibrieren"
-    new ""
+    new "Kalibrieren"
 
-    # game/core/screens.rpy:1477
+    # game/core/screens.rpy:1427
     old "Skipping"
-    new ""
+    new "Skipping"
 
-    # game/core/screens.rpy:1835
+    # game/core/screens.rpy:1784
     old "{color=#fff}Chara{/color}{color=#f00}k{/color}{color=#fff}tere{/color}"
-    new ""
+    new "{color=#fff}Chara{/color}{color=#f00}k{/color}{color=#fff}tere{/color}"
 
-    # game/core/screens.rpy:2094
+    # game/core/screens.rpy:2043
     old "Tipps & Grimoire"
-    new ""
+    new "Tipps & Grimoire"
 
-    # game/core/screens.rpy:2098
+    # game/core/screens.rpy:2047
     old "\n\n• {a=wiki_hina}Hinamizawa{/a}{p}"
-    new ""
+    new "\n\n• {a=wiki_hina}Hinamizawa{/a}{p}"
 
-    # game/core/screens.rpy:2104
+    # game/core/screens.rpy:2053
     old "\n\n• {a=wiki_hina}Hinamizawa{/a}{p}• {a=wiki_crazy}Meschugge{/a}{p}"
-    new ""
+    new "\n\n• {a=wiki_hina}Hinamizawa{/a}{p}• {a=wiki_crazy}Meschugge{/a}{p}"
 
-    # game/core/screens.rpy:2111
+    # game/core/screens.rpy:2060
     old "\n\n• {a=wiki_hina}Hinamizawa{/a}{p}• {a=wiki_crazy}Meschugge{/a}{p}• {a=wiki_spirit}Tantrisch & Dionysisch{/a}{p}"
-    new ""
+    new "\n\n• {a=wiki_hina}Hinamizawa{/a}{p}• {a=wiki_crazy}Meschugge{/a}{p}• {a=wiki_spirit}Tantrisch & Dionysisch{/a}{p}"
 
-    # game/core/screens.rpy:2122
+    # game/core/screens.rpy:2071
     old "Hinamizawa"
-    new ""
+    new "Hinamizawa"
 
-    # game/core/screens.rpy:2124
+    # game/core/screens.rpy:2073
     old "\n\nDas Dorf Hinamizawa gehörte zum Verwaltungsbezirk Shishibone. Es hatte knapp 2000 Einwohner. Aufgrund seiner Größe und weil ein Teil der Kinder die Schule im nahe gelegenen Okinomiya besuchte, gab es in Hinamizawa nur eine Schule mit einem Klassenraum. Jeder Einwohner kannte das Gesicht des anderen, da man sich täglich begegnete. Auch wenn jemand erst vor kurzem zugezogen war. Mit anderen Worten: Wenn man jemanden traf, den man nicht kannte, dachte man automatisch: Das muss .... sein, der gerade hierher gezogen ist. Früher glaubte man, dass jeder, der aus dem Dorf wegzog, oder ein Fremder, der ins Dorf kam, der das Dorf betritt, von Oyashiro-sama verflucht wird.\n\nDas Dorf ist seit 1983 verlassen, nachdem die Bewohner von Zwei Trägodien heimgesucht wurden.\n\n\n\n{a=wiki_index}Zurück zum Index{/a}"
-    new ""
+    new "\n\nDas Dorf Hinamizawa gehörte zum Verwaltungsbezirk Shishibone. Es hatte knapp 2000 Einwohner. Aufgrund seiner Größe und weil ein Teil der Kinder die Schule im nahe gelegenen Okinomiya besuchte, gab es in Hinamizawa nur eine Schule mit einem Klassenraum. Jeder Einwohner kannte das Gesicht des anderen, da man sich täglich begegnete. Auch wenn jemand erst vor kurzem zugezogen war. Mit anderen Worten: Wenn man jemanden traf, den man nicht kannte, dachte man automatisch: Das muss .... sein, der gerade hierher gezogen ist. Früher glaubte man, dass jeder, der aus dem Dorf wegzog, oder ein Fremder, der ins Dorf kam, der das Dorf betritt, von Oyashiro-sama verflucht wird.\n\nDas Dorf ist seit 1983 verlassen, nachdem die Bewohner von Zwei Trägodien heimgesucht wurden.\n\n\n\n{a=wiki_index}Zurück zum Index{/a}"
 
-    # game/core/screens.rpy:2146
+    # game/core/screens.rpy:2095
     old "Meschugge"
-    new ""
+    new "Meschugge"
 
-    # game/core/screens.rpy:2148
+    # game/core/screens.rpy:2097
     old "\n\nIm deutschen Sprachgebrauch wird das Wort auch als abgeschwächte Form von „verrückt“ oder „überspannt“ verwendet. In Leo Rostens Werk Jiddisch heißt es – so Christoph Gutknecht in der Jüdischen Allgemeinen – „Der starke Zischlaut in der Mitte und das wuchtige ›ugg‹ bilden eine überzeugende Lautkombination, die das Wort seit dem 19. Jahrhundert vor allem in Berlin und anderen Großstädten durchgesetzt haben“. Das Neue Berliner Schimpfwörterbuch aus dem Jahre 2005 zitierte das Beispiel: „Der macht mir janz meschugge mit sein Jequatsche“, das beweise, „dass es sich hier meist um einen vorübergehenden Zustand handelt.“\n\nQuelle: {a=https://de.wikipedia.org/wiki/Meschugge}Wikipedia (Deutscher Link){/a}\n\n\n\n{a=wiki_index}Zurück zum Index{/a}"
-    new ""
+    new "\n\nIm deutschen Sprachgebrauch wird das Wort auch als abgeschwächte Form von „verrückt“ oder „überspannt“ verwendet. In Leo Rostens Werk Jiddisch heißt es – so Christoph Gutknecht in der Jüdischen Allgemeinen – „Der starke Zischlaut in der Mitte und das wuchtige ›ugg‹ bilden eine überzeugende Lautkombination, die das Wort seit dem 19. Jahrhundert vor allem in Berlin und anderen Großstädten durchgesetzt haben“. Das Neue Berliner Schimpfwörterbuch aus dem Jahre 2005 zitierte das Beispiel: „Der macht mir janz meschugge mit sein Jequatsche“, das beweise, „dass es sich hier meist um einen vorübergehenden Zustand handelt.“\n\nQuelle: {a=https://de.wikipedia.org/wiki/Meschugge}Wikipedia (Deutscher Link){/a}\n\n\n\n{a=wiki_index}Zurück zum Index{/a}"
 
-    # game/core/screens.rpy:2190
+    # game/core/screens.rpy:2139
     old "Bestätigen"
-    new ""
+    new "Bestätigen"
 
-    # game/core/screens.rpy:2216
+    # game/core/screens.rpy:2165
     old "Zur{color=#f00}ü{/color}ck"
-    new ""
+    new "Zur{color=#f00}ü{/color}ck"
 
-    # game/core/screens.rpy:2217
+    # game/core/screens.rpy:2166
     old "Übersp{color=#f00}r{/color}ingen"
-    new ""
+    new "Übersp{color=#f00}r{/color}ingen"
 
-    # game/core/screens.rpy:2218
+    # game/core/screens.rpy:2167
     old "Autom{color=#f00}o{/color}dus"
-    new ""
+    new "Autom{color=#f00}o{/color}dus"
 
-    # game/core/screens.rpy:2219
+    # game/core/screens.rpy:2168
     old "Men{color=#f00}ü{/color}"
-    new ""
+    new "Men{color=#f00}ü{/color}"
 

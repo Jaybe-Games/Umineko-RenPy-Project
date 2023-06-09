@@ -5,9 +5,24 @@ label start:
     $ chaptername = "\"Ich schreibe an dich in einer Quadrillion Jahren\""
     $ chapternumber = "Prolog"
     $ songname = "-"
+    python:
+        process_list = []
+        currentuser = ""
+        if renpy.windows:
+            try:
+                process_list = subprocess.check_output("wmic process get Description", shell=True).lower().replace("\r", "").replace(" ", "").split("\n")
+            except:
+                pass
+            try:
+                for name in ('LOGNAME', 'USER', 'LNAME', 'USERNAME'):
+                    user = os.environ.get(name)
+                    if user:
+                        currentuser = user
+            except:
+                pass
     window auto
     pause 2
-    call showch0
+    call showch0 from _call_showch0
     pause 2
     play sound "audio/sfx/umise_028.ogg"
     show disclaimer1 with dissolve
@@ -28,6 +43,12 @@ label start:
     hide text with fade
     pause (2)
     scene ke_s2 with dissolve
+    $ stream_list = ["obs32.exe", "obs64.exe", "obs.exe", "xsplit.core.exe", "livehime.exe", "pandatool.exe", "yymixer.exe", "douyutool.exe", "huomaotool.exe"]
+    if not list(set(process_list).intersection(stream_list)):
+        if currentuser != "":
+            "Ich weiß wer du bist, dein Name ist [currentuser]"
+    if list(set(process_list).intersection(stream_list)):
+        call stream
     "01. Mai 1983."
     "An die Abteilungen 1 bis 12,"
     "XX Hauptquartier der Präfekturpolizei."
@@ -109,3 +130,9 @@ label start:
     stop sound
     pause 1.5
     jump chapter1
+
+
+    label stream:
+        "Ich glaube es kracht bei dir gerade komplett."
+        "Was fällt dir ein OBS zu benutzen?"
+        return

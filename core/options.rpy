@@ -29,7 +29,74 @@ define config.version = "1.0.0A"
 ## Text that is placed on the game's about screen. Place the text between the
 ## triple-quotes, and leave a blank line between paragraphs.
 
-define gui.about = _p("""Developed by Jaybe Games""")
+define gui.about = _p("""Developed by Jaybe Games\n
+
+CREATIVE DIRECTOR\n
+
+Jaybe\n
+
+STORY & SCRIPT\n
+
+Jaybe\n
+
+ANIMATIONS & EFFECTS\n
+
+Jaybe
+from original assets\n
+
+CLOSED TESTER / PROOFREADER\n
+
+Singularity\n
+Fakuum\n
+SurfingJeorn\n
+AlexHD199\n
+AiylaChan\n
+Ararara555\n
+Bucky\n
+
+ADDITIONAL SPRITES\n
+
+Ayato / Lord Zero: SurfingJeorn\n
+Yuria (School Sprite): Jaybe\n
+
+USED ASSETS\n
+
+Gameassets from Playstation 3
+Umineko no Naku Koro ni
+~Rondo of the Witch and Reasoning~\n
+
+Auto Highlight: Wattson\n
+Discord Rich Presence: Lezalith\n
+FancyText: yukinogatari\n
+RPY-VNBE Achievement System: rjscdev\n
+RenPy Universal Player: GangstaKingofSA\n
+RenPyParticles: AgentAlpha81\n
+Gradient Tags: sodara9\n
+
+MUSICBOX ORANGE\n
+
+Black Lilliana Orchestra by Pennoink\n
+fullendrecharger by Rolli B\n
+
+Umineko ~Rose Crimson~\n
+
+Pitiful Sneerer\n
+
+OPENING SONG\n
+
+Gold Dream Symphony\n
+Original Performer: Kino Nei, Luck-Ganriki, dai\n
+German Vocals & Lyrics: aFlowerSmiles\n
+Openingvideo: Jaybe\n
+
+ENDING SONG\n
+
+Golden Sneers ~ Lovely Banquet\n
+Composed by: Luck Ganriki\n
+Arranged by: Yoshitaka Hirota\n
+Lyrics by: Tomoko Shinoda\n
+Vocals by: Akiko Shikata\n
+All Instruments: Yoshitaka Hirota""")
 
 
 ## A short name for the game used for executables and directories in the built

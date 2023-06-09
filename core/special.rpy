@@ -108,3 +108,35 @@ init python:
         renpy.music.play(music_alias,fadein=fade)
         if persistent.audio_cues:
             renpy.notify("♪ " + music_dictionary[renpy.music.get_playing('music')])
+
+    #$ stream_list = ["obs32.exe", "obs64.exe", "obs.exe", "xsplit.core.exe", "livehime.exe", "pandatool.exe", "yymixer.exe", "douyutool.exe", "huomaotool.exe"]
+    #if not list(set(process_list).intersection(stream_list)):
+        #if currentuser != "":
+            #"Ich weiß wer du bist, dein Name ist [currentuser]"
+    #if list(set(process_list).intersection(stream_list)):
+        #call stream from _call_stream
+
+    #python:
+        #process_list = []
+        #currentuser = ""
+        #if renpy.windows:
+            #try:
+                #process_list = subprocess.check_output("wmic process get Description", shell=True).lower().replace("\r", "").replace(" ", "").split("\n")
+            #except:
+                #pass
+            #try:
+                #for name in ('LOGNAME', 'USER', 'LNAME', 'USERNAME'):
+                    #user = os.environ.get(name)
+                    #if user:
+                        #currentuser = user
+            #except:
+                #pass
+
+transform bgani:
+    subpixel True
+    xoffset 250
+    xalign 0.5
+    yalign 0.5
+    linear 120 xoffset -250
+    linear 120 xoffset 250
+    repeat

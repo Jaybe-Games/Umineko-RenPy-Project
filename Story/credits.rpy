@@ -30,6 +30,22 @@ label credits:
     $ _skipping = True 
     return
 
+label creditsmenu:
+    $ discord.update(state = "In Main Menu")
+    $ discord.update(details = "watching Credits")
+    $ chaptername = "\"Credits\""
+    $ chapternumber = "Main Menu"
+    $ songname = "Black Lilliana Orchestra"
+    $ _skipping = True
+    scene white zorder 80
+    with kanon_r
+    scene black with dissolve
+    show credits at credits_scroll
+    $ renpy.pause(293, hard=False)    
+    scene black with kanon_rev
+    $ renpy.pause(5, hard=False)   
+    return
+
 label endroll:
     $ renpy.pause(3, hard=True)
     $ songname = "Bring the Fate"

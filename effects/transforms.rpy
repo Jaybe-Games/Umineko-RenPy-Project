@@ -56,5 +56,5 @@ transform reset_shader:
     matrixcolor IdentityMatrix()
 
 
-image butterfly1 = Movie(channel="movie", play="videos/Butterfly.webm", mask="videos/Butterfly mask.webm", Delay=False, loop=False)
-image butterfly1_0 = Movie(channel="movie", play="videos/Butterfly away.webm", mask="videos/Butterfly away mask.webm", Delay=False, loop=False)
+image butterfly1 = Movie(channel="movie", play="videos/butterfly1.mov", Delay=False, loop=False, side_mask=True, image="images/efe/no83_0051.png")
+image butterfly1_0 = Movie(channel="movie", play="videos/Butterfly1_0.mov", side_mask=True, Delay=False, loop=False, start_image="images/efe/no83_0051.png")

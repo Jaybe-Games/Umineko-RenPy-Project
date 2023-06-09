@@ -1,20 +1,15 @@
 label butterfly1:
-
 play effect "audio/sfx/umise_022.ogg"
 show butterfly1
-pause(2.495)
-show no83_0051
 pause 2
 return
 
 
 label hidebf1:
-
 play effect "audio/sfx/umise_022.ogg"
+hide butterfly1
 show butterfly1_0
-pause(0.05)
-hide no83_0051
-pause 2
+pause 3
 return
 
 label chapterenda:

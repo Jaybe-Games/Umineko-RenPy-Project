@@ -718,6 +718,9 @@ screen about():
                 text "[gui.about!t]\n"
 
             text _("Made with {a=https://www.renpy.org/}Ren'Py{/a} [renpy.version_only] [renpy.license!t].")
+            
+            if main_menu:
+                imagebutton auto "gui/button/creditswatch_%s.png" action Start("creditsmenu") activate_sound "audio/sfx/umise_017.ogg" hover_sound "audio/sfx/click-21156.mp3"
 
 
 style about_label is gui_label
@@ -1186,8 +1189,12 @@ screen keyboard_help():
         text _("Öffnet das Menü.")
 
     hbox:
-        label "S"
+        label "A"
         text _("Schaltet auf Automodus um.")
+
+    hbox:
+        label _("Shift + <")
+        text _("Überspringt das aktuelle Kapitel.")
 
     hbox:
         label _("Ctrl")
@@ -1220,28 +1227,16 @@ screen mouse_help():
         label _("Rechtsklick")
         text _("Öffnet das Menü.")
 
-    hbox:
-        label _("Mausrad hochdrehen")
-        text _("Springt zurück zu früherem Dialog.")
-
-    hbox:
-        label _("Mausrad runterdrehen")
-        text _("Springt zu späterem Dialog.")
-
 
 screen gamepad_help():
 
     hbox:
-        label _("RT, R2 & A")
-        text _("Fährt den Text fort und betätigt\nMenü Buttons.")
-
-    hbox:
-        label _("LT, R2")
-        text _("Springt zurück zu früherem Dialog.")
+        label _("LT, L2, RT, R2, A, X (Dualshock)")
+        text _("Fährt den Text fort und bestätigt\nMenü Buttons.")
 
     hbox:
         label _("LB, L1")
-        text _("Springt zu späterem Dialog.")
+        text _("Schaltet auf Automodus um.")
 
 
     hbox:
@@ -1249,15 +1244,19 @@ screen gamepad_help():
         text _("Navigiere durch die Menüs.")
 
     hbox:
-        label _("Start")
+        label _("Start, Options, B, Kreis")
         text _("Öffnet das Menü.")
 
     hbox:
-        label _("RB")
-        text _("Schaltet auf Automodus um.")
+        label _("Back, Share")
+        text _("Überspringt das aktuelle Kapitel.")
 
     hbox:
-        label _("Y")
+        label _("RB, R1")
+        text _("Schaltet auf Überspringen um.")
+
+    hbox:
+        label _("Y, Dreieck")
         text _("Versteckt das Interface.")
 
     textbutton _("Kalibrieren") action GamepadCalibrate() activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
@@ -1311,12 +1310,12 @@ screen confirm(message, yes_action, no_action):
     if message == layout.ARE_YOU_SURE:
         add "gui/confirmblack.png" at center
         imagebutton auto "gui/button/accept_%s.png" action yes_action:
-            xpos 400
+            xpos 450
             ypos 650
             activate_sound "audio/sfx/umise_1005.ogg" 
             hover_sound "audio/sfx/click-21156.mp3"
         imagebutton auto "gui/button/refuse_%s.png" action no_action:
-            xpos 900
+            xpos 950
             ypos 650
             activate_sound "audio/sfx/umise_1005.ogg" 
             hover_sound "audio/sfx/click-21156.mp3"
@@ -1326,27 +1325,27 @@ screen confirm(message, yes_action, no_action):
     elif message == layout.OVERWRITE_SAVE:
         add "gui/confirmblack.png" at center
         imagebutton auto "gui/button/accept_%s.png" action [Play("sound", "audio/sfx/umise_056.ogg"), yes_action]:
-            xpos 400
+            xpos 450
             ypos 650
             activate_sound "audio/sfx/umise_1005.ogg" 
             hover_sound "audio/sfx/click-21156.mp3"
         imagebutton auto "gui/button/refuse_%s.png" action no_action:
-            xpos 900
+            xpos 950
             ypos 650
             activate_sound "audio/sfx/umise_1005.ogg" 
             hover_sound "audio/sfx/click-21156.mp3"
-        add "gui/button/load.png":
+        add "gui/button/save.png":
             xalign 0.5
             yalign 0.5
     elif message == layout.LOADING:
         add "gui/confirmblack.png" at center
         imagebutton auto "gui/button/accept_%s.png" action [Play("sound", "audio/sfx/umise_058.ogg"), yes_action]:
-            xpos 400
+            xpos 450
             ypos 650
             activate_sound "audio/sfx/umise_1005.ogg" 
             hover_sound "audio/sfx/click-21156.mp3"
         imagebutton auto "gui/button/refuse_%s.png" action no_action:
-            xpos 900
+            xpos 950
             ypos 650
             activate_sound "audio/sfx/umise_1005.ogg" 
             hover_sound "audio/sfx/click-21156.mp3"
@@ -1356,12 +1355,12 @@ screen confirm(message, yes_action, no_action):
     elif message == layout.QUIT:
         add "gui/confirmblack.png" at center
         imagebutton auto "gui/button/accept_%s.png" action [QuitWithScene(), yes_action]:
-            xpos 400
+            xpos 450
             ypos 650
             activate_sound "audio/sfx/umise_1005.ogg" 
             hover_sound "audio/sfx/click-21156.mp3"
         imagebutton auto "gui/button/refuse_%s.png" action no_action:
-            xpos 900
+            xpos 950
             ypos 650
             activate_sound "audio/sfx/umise_1005.ogg" 
             hover_sound "audio/sfx/click-21156.mp3"
@@ -1371,12 +1370,12 @@ screen confirm(message, yes_action, no_action):
     elif message == layout.MAIN_MENU:
         add "gui/confirmblack.png" at center
         imagebutton auto "gui/button/accept_%s.png" action [titurnd(), yes_action]: 
-            xpos 400
+            xpos 450
             ypos 650
             activate_sound "audio/sfx/umise_1005.ogg" 
             hover_sound "audio/sfx/click-21156.mp3"
         imagebutton auto "gui/button/refuse_%s.png" action no_action:
-            xpos 900
+            xpos 950
             ypos 650
             activate_sound "audio/sfx/umise_1005.ogg" 
             hover_sound "audio/sfx/click-21156.mp3"
@@ -1542,7 +1541,7 @@ screen nvl(dialogue, items=None):
                 action i.action
                 style "nvl_button"
 
-    add SideImage() xalign 0.0 yalign 1.0
+    #add SideImage() xalign 0.0 yalign 1.0
 
 
 screen nvl_dialogue(dialogue):
@@ -1581,7 +1580,6 @@ style nvl_window:
     xfill True
     yfill True
 
-    background "gui/nvl.png"
     padding gui.nvl_borders.padding
 
 style nvl_entry:
@@ -1604,7 +1602,9 @@ style nvl_dialogue:
     xsize gui.nvl_text_width
     min_width gui.nvl_text_width
     text_align gui.nvl_text_xalign
-    layout ("subtitle" if gui.nvl_text_xalign else "tex")
+    layout "greedy"
+    line_overlap_split -8
+    newline_indent True
 
 style nvl_thought:
     xpos gui.nvl_thought_xpos
@@ -1641,11 +1641,11 @@ screen story_select():
 
         text "Szenario Wählen:" ypos 0 xalign 0.5 yalign 0.5 size 90 font "fonts/ArnoPro.otf" outlines [ (absolute(3), "#000", absolute(0), absolute(0)) ]
 
-        imagebutton auto "gui/button/main_%s.png" action Start("startgame") hovered Show('mainstory') unhovered Hide('mainstory') activate_sound "audio/sfx/umise_017.ogg" hover_sound "audio/sfx/click-21156.mp3"
+        imagebutton auto "gui/button/main_%s.png" action Start("startgame") hovered Show('mainstory') unhovered Hide('mainstory') hover_sound "audio/sfx/click-21156.mp3"
 
         if persistent.mainstorycleared == True:
 
-            imagebutton auto "gui/button/teaparty_%s.png" action Start("teaparty") hovered Show('teaparty') unhovered Hide('teaparty') activate_sound "audio/sfx/umise_017.ogg" hover_sound "audio/sfx/click-21156.mp3"
+            imagebutton auto "gui/button/teaparty_%s.png" action Start("teaparty") hovered Show('teaparty') unhovered Hide('teaparty') hover_sound "audio/sfx/click-21156.mp3"
 
         else:
 
@@ -1654,19 +1654,18 @@ screen story_select():
 
         if persistent.teapartycleared == True:
 
-            imagebutton auto "gui/button/hidden_%s.png" action Start("urateaparty") hovered Show('urateaparty') unhovered Hide('urateaparty') activate_sound "audio/sfx/umise_017.ogg" hover_sound "audio/sfx/click-21156.mp3"
+            imagebutton auto "gui/button/hidden_%s.png" action Start("urateaparty") hovered Show('urateaparty') unhovered Hide('urateaparty') hover_sound "audio/sfx/click-21156.mp3"
         else:
 
             pass
 
         if persistent.gamecleared == True:
 
-            imagebutton auto "gui/button/bonus_%s.png" action NullAction() hovered Show('bonushover') unhovered Hide('bonushover') activate_sound "audio/sfx/umise_017.ogg" hover_sound "audio/sfx/click-21156.mp3"
+            imagebutton auto "gui/button/bonus_%s.png" action NullAction() hovered Show('bonushover') unhovered Hide('bonushover') hover_sound "audio/sfx/click-21156.mp3"
 
         else:
 
             pass
-
 
 screen mainstory():
     tag hover
@@ -1698,7 +1697,6 @@ screen bonushover():
     text "Bonuskapitel" style 'bigtext' at Position(xpos = 75, ypos = 420)
     text "Noch nicht genug?\n\nNun gut,\nein paar Stücke vom Kuchen wurden wohl übrig gelassen.\nNimm dir gerne so viel du willst." style 'menutext' at Position (xpos = 60, ypos = 490)
 
-
 ## hover textboxen ##
 screen starthover():
     tag hover
@@ -1718,21 +1716,21 @@ screen creditshover():
     tag hover
     imagemap:
         ground "gui/hovermenu.png"
-    text "Mitwirkende" style 'bigtext' at Position(xpos = 75, ypos = 420)
+    text "Credits" style 'bigtext' at Position(xpos = 75, ypos = 420)
     text "Mitwirkende und Danksagungen." style 'menutext' at Position (xpos = 60, ypos = 490)
 
 screen settingshover():
     tag hover
     imagemap:
         ground "gui/hovermenu.png"
-    text "Einstellungen" style 'bigtext' at Position(xpos = 75, ypos = 420)
+    text "Optionen" style 'bigtext' at Position(xpos = 75, ypos = 420)
     text "Gestalte dir das Spiel so wie du möchtest." style 'menutext' at Position (xpos = 60, ypos = 490)
 
 screen helphover():
     tag hover
     imagemap:
         ground "gui/hovermenu.png"
-    text "Hilfe" style 'bigtext' at Position(xpos = 75, ypos = 420)
+    text "Steuerung" style 'bigtext' at Position(xpos = 75, ypos = 420)
     text "Wer Hilfe benötigt, braucht nur zu Fragen.\n\nZeigt dir die Steuerung an." style 'menutext' at Position (xpos = 60, ypos = 490)
 
 screen quithover():
@@ -1753,7 +1751,7 @@ screen characterhover():
     tag hover
     imagemap:
         ground "gui/hovermenu.png"
-    text "Charaktere" style 'bigtext' at Position(xpos = 75, ypos = 420)
+    text "Charakterbox" style 'bigtext' at Position(xpos = 75, ypos = 420)
     text "Die Charaktere des Spiels.\n\nVielleicht eröffnen sich dir neue Erkenntisse?" style 'menutext' at Position (xpos = 60, ypos = 490)
 
 screen jukeboxhover():
@@ -1774,15 +1772,15 @@ screen tiphover():
     tag hover
     imagemap:
         ground "gui/hovermenu.png"
-    text "Tipps" style 'bigtext' at Position(xpos = 75, ypos = 420)
+    text "Tippsbox" style 'bigtext' at Position(xpos = 75, ypos = 420)
     text "Die Goldene Hexe hat dir einige Tipps zu verfügung gestellt.\n\nMöglicherweise erlangst du sogar neue Erkenntnise." style 'menutext' at Position (xpos = 60, ypos = 490)
 
 screen locked():
     tag hover
     imagemap:
         ground "gui/hovermenu.png"
-    text "GESPERRT!" style 'bigtext' at Position(xpos = 75, ypos = 420)
-    text "Die Goldene Hexe erlaubt es dir noch nicht hier zu verbleiben.\n\nKomm bitte später wieder." style 'menutext' at Position (xpos = 60, ypos = 490)
+    text "{red_truth}GESPERRT!{/red_truth}" style 'bigtext' at Position(xpos = 75, ypos = 420)
+    text "{red_truth}Die Goldene Hexe erlaubt es dir noch nicht hier zu verbleiben.\n\nKomm bitte später wieder.{/red_truth}" style 'menutext' at Position (xpos = 60, ypos = 490)
 
 screen characters():
     tag menu

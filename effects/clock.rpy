@@ -1,7 +1,4 @@
 ##################################---Clock Time---#######################
-init:
-    $ timuminutes = 0
-    $ timuhour = 0
 transform alpha_dissolve:
     alpha 0.0
     linear 0.5 alpha 1.0

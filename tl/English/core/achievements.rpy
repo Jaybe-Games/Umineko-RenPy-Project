@@ -1,84 +1,84 @@
-﻿# TODO: Translation updated at 2023-04-29 21:51
+﻿# TODO: Translation updated at 2023-06-08 22:40
 
 translate English strings:
 
     # game/core/achievements.rpy:55
     old "Tippsjäger"
-    new ""
+    new "Tippsjäger"
 
     # game/core/achievements.rpy:55
     old "Erhalte deinen ersten Tipp."
-    new ""
+    new "Erhalte deinen ersten Tipp."
 
     # game/core/achievements.rpy:55
     old "Charakterjäger"
-    new ""
+    new "Charakterjäger"
 
     # game/core/achievements.rpy:55
     old "Schalte den ersten Charakter frei."
-    new ""
+    new "Schalte den ersten Charakter frei."
 
     # game/core/achievements.rpy:55
     old "Musikboxjäger"
-    new ""
+    new "Musikboxjäger"
 
     # game/core/achievements.rpy:55
     old "Schalte die Musikbox frei."
-    new ""
+    new "Schalte die Musikbox frei."
 
     # game/core/achievements.rpy:55
     old "Runter vom Boot"
-    new ""
+    new "Runter vom Boot"
 
     # game/core/achievements.rpy:55
     old "Du hast Rokkenjima erreicht."
-    new ""
+    new "Du hast Rokkenjima erreicht."
 
     # game/core/achievements.rpy:55
     old "Konami Code"
-    new ""
+    new "Konami Code"
 
     # game/core/achievements.rpy:55
     old "War das etwa ein Nipah?"
-    new ""
+    new "War das etwa ein Nipah?"
 
     # game/core/achievements.rpy:55
     old "Autorentreffen"
-    new ""
+    new "Autorentreffen"
 
     # game/core/achievements.rpy:55
     old "Du hast den Autor gefunden."
-    new ""
+    new "Du hast den Autor gefunden."
 
     # game/core/achievements.rpy:55
     old "Eine andere Beatrice?"
-    new ""
+    new "Eine andere Beatrice?"
 
     # game/core/achievements.rpy:55
     old "Schließe die Hauptstory ab."
-    new ""
+    new "Schließe die Hauptstory ab."
 
     # game/core/achievements.rpy:55
     old "Ayato und Yuria"
-    new ""
+    new "Ayato und Yuria"
 
     # game/core/achievements.rpy:55
     old "Schließe die Tee Party ab."
-    new ""
+    new "Schließe die Tee Party ab."
 
     # game/core/achievements.rpy:55
-    old "Resurrection of the Golden Witch"
-    new ""
+    old "Auferstehung der Goldenen Hexe"
+    new "Auferstehung der Goldenen Hexe"
 
     # game/core/achievements.rpy:55
     old "Schließe ???? ab."
-    new ""
+    new "Schließe ???? ab."
 
     # game/core/achievements.rpy:55
     old "Platin: Gamemaster LV0"
-    new ""
+    new "Platin: Gamemaster LV0"
 
     # game/core/achievements.rpy:55
     old "Erhalte alle Trophäen!"
-    new ""
+    new "Erhalte alle Trophäen!"
 
