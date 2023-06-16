@@ -28,7 +28,7 @@ label showch2:
 
 label showch3:
 
-    show chaptertext "Sam, 04. Oktober 1986 11:00 Uhr\nAbsturz"
+    show chaptertext "Sam, 04. Oktober 1986 11:00 Uhr\nDer Überlebende"
     $ renpy.pause(5)
     hide chaptertext with dissolve
     return
@@ -42,7 +42,7 @@ label showch4:
 
 label showch5:
 
-    show chaptertext "Sam, 04. Oktober 1986 18:00 Uhr\nAyato"
+    show chaptertext "Sam, 04. Oktober 1986 18:00 Uhr\nTreffen mit der Hexe"
     $ renpy.pause(5)
     hide chaptertext with dissolve
     return
@@ -77,7 +77,7 @@ label showch9:
 
 label showch10:
 
-    show chaptertext "Son, 05. Oktober 1986 18:00 Uhr\nKampf der Magie"
+    show chaptertext "Son, 05. Oktober 1986 18:00 Uhr\nZwei Gruppen"
     $ renpy.pause(5)
     hide chaptertext with dissolve
     return
@@ -112,14 +112,14 @@ label showtea01:
 
 label showtea02:
 
-    show chaptertext "Wiedergeburt der Goldenen Hexe"
+    show chaptertext "Ayato & Yuria"
     $ renpy.pause(5)
     hide chaptertext with dissolve
     return
 
 label showtea03:
 
-    show chaptertext "Freunde"
+    show chaptertext "Auferstehung der Goldenen Hexe"
     $ renpy.pause(5)
     hide chaptertext with dissolve
     return
@@ -131,14 +131,29 @@ label showtea04:
     hide chaptertext with dissolve
     return
 
+label showtea05:
+
+    show chaptertext "ZERO"
+    $ renpy.pause(5)
+    hide chaptertext with dissolve
+    return
+
 label showura01:
+
+    show chaptertext "Die Illusionen der Falschen Hexe"
+    $ renpy.pause(5)
+    hide chaptertext with dissolve
+    return
+
+label showura02:
 
     show chaptertext "Walzer der Reflexionen und Trugbilder"
     $ renpy.pause(5)
     hide chaptertext with dissolve
     return
 
-label showura02:
+
+label showura03:
 
     show chaptertext "Geschrieben von dir, von vor einer Quadrillion Jahren"
     $ renpy.pause(5)

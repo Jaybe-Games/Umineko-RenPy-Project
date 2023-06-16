@@ -1670,9 +1670,7 @@ screen story_select():
 screen mainstory():
     tag hover
     imagemap:
-        ground "gui/hovermenu.png"
-    text "Episode 0\nAuferstehung der Goldenen Hexe" style 'bigtext' at Position(xpos = 75, ypos = 420)
-    text "Willkommen auf Rokkenjima.\nDie Goldene Hexe heißt dich zu einem neuen Spiel willkommen.\nWie amüsant, dich erwartet die Ehre gegen eine Hexe zu spielen.\n\nDie Hexe von Rokkenjima erwartet nicht, dass du bereits\nmit den Spielregeln vertraut bist, also lasse es ruhig angehen\nund geniesse das Narrativ solange du es noch kannst.\n\nDer Schwierigkeitsgrad ist viel zu einfach.\nDas klingt doch fair oder nicht?" style 'menutext' at Position (xpos = 60, ypos = 510)
+        ground "gui/hover/main.png"
 
 screen teaparty():
     tag hover
@@ -1701,86 +1699,58 @@ screen bonushover():
 screen starthover():
     tag hover
     imagemap:
-        ground "gui/hovermenu.png"
-    text "Spiel starten" style 'bigtext' at Position(xpos = 75, ypos = 420)
-    text "Willkommen auf Rokkenjima.\n\nBeginne das Spiel.\n\nWirst du die Goldene Hexe zufriedenstellen?" style 'menutext' at Position (xpos = 60, ypos = 490)
+        ground "gui/hover/start.png"
 
 screen loadhover():
     tag hover
     imagemap:
-        ground "gui/hovermenu.png"
-    text "Spiel Laden" style 'bigtext' at Position(xpos = 75, ypos = 420)
-    text "Nimm dein Spiel mit der Goldenen Hexe hier wieder auf." style 'menutext' at Position (xpos = 60, ypos = 490)
+        ground "gui/hover/load.png"
 
 screen creditshover():
     tag hover
     imagemap:
-        ground "gui/hovermenu.png"
-    text "Credits" style 'bigtext' at Position(xpos = 75, ypos = 420)
-    text "Mitwirkende und Danksagungen." style 'menutext' at Position (xpos = 60, ypos = 490)
+        ground "gui/hover/credits.png"
 
 screen settingshover():
     tag hover
     imagemap:
-        ground "gui/hovermenu.png"
-    text "Optionen" style 'bigtext' at Position(xpos = 75, ypos = 420)
-    text "Gestalte dir das Spiel so wie du möchtest." style 'menutext' at Position (xpos = 60, ypos = 490)
+        ground "gui/hover/settings.png"
 
 screen helphover():
     tag hover
     imagemap:
-        ground "gui/hovermenu.png"
-    text "Steuerung" style 'bigtext' at Position(xpos = 75, ypos = 420)
-    text "Wer Hilfe benötigt, braucht nur zu Fragen.\n\nZeigt dir die Steuerung an." style 'menutext' at Position (xpos = 60, ypos = 490)
+        ground "gui/hover/controls.png"
 
 screen quithover():
     tag hover
     imagemap:
-        ground "gui/hovermenu.png"
-    text "Beenden" style 'bigtext' at Position(xpos = 75, ypos = 420)
-    text "Schließt das Spiel.\n\nDie Goldene Hexe erwartet deine Rückkehr." style 'menutext' at Position (xpos = 60, ypos = 490)
+        ground "gui/hover/quit.png"
 
 screen trophyhover():
     tag hover
     imagemap:
-        ground "gui/hovermenu.png"
-    text "Trophäen" style 'bigtext' at Position(xpos = 75, ypos = 420)
-    text "Die Trophäen des Spiels.\n\nSieh dir deine Errungenschaften an." style 'menutext' at Position (xpos = 60, ypos = 490)
+        ground "gui/hover/trophy.png"
 
 screen characterhover():
     tag hover
     imagemap:
-        ground "gui/hovermenu.png"
-    text "Charakterbox" style 'bigtext' at Position(xpos = 75, ypos = 420)
-    text "Die Charaktere des Spiels.\n\nVielleicht eröffnen sich dir neue Erkenntisse?" style 'menutext' at Position (xpos = 60, ypos = 490)
+        ground "gui/hover/characterbox.png"
+
 
 screen jukeboxhover():
     tag hover
     imagemap:
-        ground "gui/hovermenu.png"
-    text "Musikbox" style 'bigtext' at Position(xpos = 75, ypos = 420)
-    text "Der Soundtrack des Spiels.\n\nGenieße großartige Musikstücke." style 'menutext' at Position (xpos = 60, ypos = 490)
-
-screen extrahover():
-    tag hover
-    imagemap:
-        ground "gui/hovermenu.png"
-    text "Zusatzinhalte" style 'bigtext' at Position(xpos = 75, ypos = 420)
-    text "Die Goldene Hexe gewährt dir zusätzliche Inhalte.\n\nDies sollte dein Spielerlebnis erweitern." style 'menutext' at Position (xpos = 60, ypos = 490)
+        ground "gui/hover/musicbox.png"
 
 screen tiphover():
     tag hover
     imagemap:
-        ground "gui/hovermenu.png"
-    text "Tippsbox" style 'bigtext' at Position(xpos = 75, ypos = 420)
-    text "Die Goldene Hexe hat dir einige Tipps zu verfügung gestellt.\n\nMöglicherweise erlangst du sogar neue Erkenntnise." style 'menutext' at Position (xpos = 60, ypos = 490)
+        ground "gui/hover/tips.png"
 
 screen locked():
     tag hover
     imagemap:
-        ground "gui/hovermenu.png"
-    text "{red_truth}GESPERRT!{/red_truth}" style 'bigtext' at Position(xpos = 75, ypos = 420)
-    text "{red_truth}Die Goldene Hexe erlaubt es dir noch nicht hier zu verbleiben.\n\nKomm bitte später wieder.{/red_truth}" style 'menutext' at Position (xpos = 60, ypos = 490)
+        ground "gui/hover/locked.png"
 
 screen characters():
     tag menu
