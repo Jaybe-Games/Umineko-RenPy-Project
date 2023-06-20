@@ -234,33 +234,37 @@ label chapter1:
     rud "“Er kann einfach nicht still sitzen, aus irgendeinem Grund."
     extend " ...Das ist wirklich peinlich, das darfst du niemandem erzählen.”"
     show but_b23_nayamu1 at l with fastdissolve
-    but "“.......Ey, .....halt den Mund!”"
+    but "“..Ey!" 
+    extend " .....halt den Mund!”"
     hide rud_a11_akuwarai1
     show rud_a11_akuwarai2 at r
-    rud "“Ja Battler-kun, das Frühstück, dass gerade im Meer gelandet ist, hat Geld gekostet und Lebensmittel werden nicht billiger...”"
+    rud "“Ey Battler-kun!" 
+    extend " Das Frühstück, dass gerade im Meer gelandet ist, hat Geld gekostet und Lebensmittel werden nicht billiger...”"
     hide but_b23_nayamu1
     show but_b22_nayamu1 at l
-    but "“.....ähm..... "
+    but "“...ähm....."
     hide but_b22_nayamu1
     show but_b22_nayamu2 at l
-    extend " ...Also wenn du es unbedingt wiederhaben willst, kannst du ja ins Meer springen und es wieder rausfischen... hihihihi..."
-    extend " ....Aber mal ernsthaft, das Schaukeln wurde gerade richtig schlimm...”"
+    extend " ...Also wenn du es unbedingt wiederhaben willst, kannst du ja ins Meer springen und dann ganz weit den Mund aufmachen..." 
+    extend " ....ihihihi”"
     hide rud_a11_akuwarai2
     show rud_a11_defo2 at r
     rud "“........Battler...”"
     show rud_a11_defo2 at l2
     hide rud_a11_defo2
-    show rud_a11_defo1 at l2
+    show rud_a11_defo1 at r
+    show rud_a11_defo1 at l2 with MoveTransition(0.1)
     play sound "audio/sfx/umise_047.ogg"
     hide but_b22_nayamu2
-    show but_b11_kuyasigaru1 at l
+    show but_b11_kuyasigaru1 behind rud_a11_defo1 at l
     but "“....owowowowowow......"
     extend " Du alter Bastard!" 
     extend " Scheiße......" 
     extend " owowowow......”"
     "Einen Moment hat Battler nicht aufgepasst und schon hat Rudolf sein Ohrläppchen gepackt und behandelt es nicht gerade zimperlich."
     but "“owowowowowowowow...." 
-    extend " lass los! owowowowowowow"
+    extend " lass los!" 
+    extend " ....owowowowowowow"
     extend " .......Das tut richtig weh," 
     extend " hör auf damit," 
     extend " .....owowowow”"
@@ -275,20 +279,26 @@ label chapter1:
     "Rudolf hat einen sehr starken Griff, besonders wenn es um Battlers Ohrläppchen geht, man hat das Gefühl, er reißt es jeden Moment ab."
     hide but_b11_kuyasigaru1
     show but_a11_aseru5 at l
-    but "“....Ich hoffe, du springst vom Boot und ertrinkst du alter Bastard.... Owowowow, lass los!"
+    but "“....Ich hoffe, dass du über das Geländer fällst und ertrinkst, du alter Bastard!...."
+    hide but_a11_aseru5
+    show but_b11_kuyasigaru1 at l 
+    extend " Owowowow..." 
+    extend " lass los!"
     but "...Ich...."
     extend " gebe....."
     extend " nicht....."
     extend " auuuuuuffffff!!!"
-    extend " .....owowowow..... lass doch endlich los owowowowow... es tut weh....”"
+    extend " ...owowowow....." 
+    extend " lass doch endlich los owowowowow..." 
+    extend " es tut weh!....”"
     hide rud_a11_defo1
     show rud_a11_akuwarai1 at l2
-    rud "“....Das ist deine Strafe, wenn du frech wirst, Battler-kun.”"
-    hide but_a11_aseru5 with fastdissolve
-    hide rud_a11_akuwarai1 with fastdissolve
+    rud "“....Das ist deine Strafe, wenn du frech wirst," 
+    extend " mein lieber Battler-kun.”"
+    scene ship_s2a with quickergradientwiperight
     show kir_a11_majime1 at m with fastdissolve
     kyr "“Lasst es für heute gut sein, ihr beiden."
-    extend " Das könnt ihr später auf der Insel austragen.”"
+    extend " Ihr solltet euren Vater-Sohn Konflikt wann anders austragen.”"
     "Nachdem Kyrie den kleinen Konflikt erfolgreich beendet hatte, hörte man jemanden von unter Deck nach draußen gehen."
     hide kir_a11_majime1 with fastdissolve
     show jes_a11_atya2 at m with fastdissolve
