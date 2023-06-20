@@ -352,9 +352,15 @@ screen navigation():
 
                 imagebutton auto "gui/button/load_%s.png" action [ShowMenu("load"), Hide('loadhover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" hovered Show('loadhover') unhovered Hide('loadhover')
 
+                $ lastsave=renpy.newest_slot(r"\d+")
+        
+                if lastsave is not None:
+                    $ name, page = lastsave.split("-")
+                    imagebutton auto "gui/button/continue_%s.png" action FileLoad(name, page) hovered Show('continuehover') unhovered Hide('continuehover') hover_sound "audio/sfx/click-21156.mp3"
+
                 imagebutton auto "gui/button/settings_%s.png" action [ShowMenu("preferences"), Hide('settingshover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" hovered Show('settingshover') unhovered Hide('settingshover')
 
-                imagebutton auto "gui/button/credits_%s.png" action [ShowMenu("about"), Hide('creditshover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" hovered Show('creditshover') unhovered Hide('creditshover')
+                #imagebutton auto "gui/button/credits_%s.png" action [ShowMenu("about"), Hide('creditshover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" hovered Show('creditshover') unhovered Hide('creditshover')
 
                 imagebutton auto "gui/button/achieve_%s.png" action [ShowMenu("achievement_menu"), Hide('trophyhover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" hovered Show('trophyhover') unhovered Hide('trophyhover')
 
@@ -555,7 +561,7 @@ screen game_menu(title, scroll=None, yinitial=0.0):
 
             imagebutton auto "gui/button/settings_%s.png" action [ShowMenu("preferences")] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
 
-            imagebutton auto "gui/button/credits_%s.png" action ShowMenu("about") activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+            #imagebutton auto "gui/button/credits_%s.png" action ShowMenu("about") activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
 
             imagebutton auto "gui/button/help_%s.png" action [ShowMenu("help")] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
 
@@ -578,7 +584,7 @@ screen game_menu(title, scroll=None, yinitial=0.0):
 
             imagebutton auto "gui/button/mainmenu_%s.png" action MainMenu() activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
 
-            imagebutton auto "gui/button/back_%s.png" activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" action Return()
+            #imagebutton auto "gui/button/back_%s.png" activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" action Return()
 
         text "{i}Episode 0 " + chapternumber ypos 875 xpos 10 xalign 0.0 size 70 font "fonts/ariston.ttf" outlines [ (absolute(3), "#000", absolute(0), absolute(0)) ]
 
@@ -601,9 +607,15 @@ screen game_menu(title, scroll=None, yinitial=0.0):
 
                 imagebutton auto "gui/button/load_%s.png" action [ShowMenu("load"), Hide('loadhover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
 
+                $ lastsave=renpy.newest_slot(r"\d+")
+        
+                if lastsave is not None:
+                    $ name, page = lastsave.split("-")
+                    imagebutton auto "gui/button/continue_%s.png" action FileLoad(name, page) hovered Show('continuehover') unhovered Hide('continuehover') hover_sound "audio/sfx/click-21156.mp3"
+
                 imagebutton auto "gui/button/settings_%s.png" action [ShowMenu("preferences"), Hide('settingshover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
 
-                imagebutton auto "gui/button/credits_%s.png" action [ShowMenu("about"), Hide('creditshover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+                #imagebutton auto "gui/button/credits_%s.png" action [ShowMenu("about"), Hide('creditshover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
 
                 imagebutton auto "gui/button/achieve_%s.png" action [ShowMenu("achievement_menu"), Hide('trophyhover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
 
@@ -1667,6 +1679,7 @@ screen story_select():
 
             pass
 
+
 screen mainstory():
     tag hover
     imagemap:
@@ -1675,25 +1688,23 @@ screen mainstory():
 screen teaparty():
     tag hover
     imagemap:
-        ground "gui/hovermenu.png"
-    text "Tee Party" style 'bigtext' at Position(xpos = 75, ypos = 420)
-
-    text "Bitte nimm Platz und entspanne dich.\nWar dein Aufenthalt auf Rokkenjima angenehm?\n\nDie Goldene Hexe hat dir eine Einladung\nzu ihrer Teeparty geschenkt.\nIch hoffe, dass du daran teilnehmen wirst." style 'menutext' at Position (xpos = 60, ypos = 490)
+        ground "gui/hover/teaparty.png"
 
 screen urateaparty():
     tag hover
     imagemap:
-        ground "gui/hovermenu.png"
-    text "????" style 'bigtext' at Position(xpos = 75, ypos = 420)
-
-    text "Willkommen zur Tee Party der Nichtmenschen.\n\nDie Goldene Hexe hat dir alle Geheimnisse offenbart.\nNun liegt es an dir ihr den Gnadenstoß zu geben." style 'menutext' at Position (xpos = 60, ypos = 490)
+        ground "gui/hover/ura.png"
 
 screen bonushover():
     tag hover
     imagemap:
-        ground "gui/hovermenu.png"
-    text "Bonuskapitel" style 'bigtext' at Position(xpos = 75, ypos = 420)
-    text "Noch nicht genug?\n\nNun gut,\nein paar Stücke vom Kuchen wurden wohl übrig gelassen.\nNimm dir gerne so viel du willst." style 'menutext' at Position (xpos = 60, ypos = 490)
+        ground "gui/hover/bonus.png"
+
+screen continuehover():
+    tag hover
+    imagemap:
+        ground "gui/hover/continue.png"
+
 
 ## hover textboxen ##
 screen starthover():

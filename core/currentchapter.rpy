@@ -14,77 +14,77 @@ label showch0:
 
 label showch1:
 
-    show chaptertext "Sam, 04. Oktober 1986 09:30 Uhr\nBootsfahrt nach Rokkenjima"
+    show chaptertext "Bootsfahrt nach Rokkenjima"
     $ renpy.pause(5)
     hide chaptertext with dissolve
     return
 
 label showch2:
 
-    show chaptertext "Sam, 04. Oktober 1986 10:00 Uhr\nDie Hexe auf dem Balkon"
+    show chaptertext "Die Hexe auf dem Balkon"
     $ renpy.pause(5)
     hide chaptertext with dissolve
     return
 
 label showch3:
 
-    show chaptertext "Sam, 04. Oktober 1986 11:00 Uhr\nDer Überlebende"
+    show chaptertext "Der Überlebende"
     $ renpy.pause(5)
     hide chaptertext with dissolve
     return
 
 label showch4:
 
-    show chaptertext "Sam, 04. Oktober 1986 12:00 Uhr\nDas Rätsel um die Inschrift der Hexe"
+    show chaptertext "Das Rätsel um die Inschrift der Hexe"
     $ renpy.pause(5)
     hide chaptertext with dissolve
     return
 
 label showch5:
 
-    show chaptertext "Sam, 04. Oktober 1986 18:00 Uhr\nTreffen mit der Hexe"
+    show chaptertext "Treffen mit der Hexe"
     $ renpy.pause(5)
     hide chaptertext with dissolve
     return
 
 label showch6:
 
-    show chaptertext "Sam, 04. Oktober 1986 22:00 Uhr\nDie Familienkonferenz"
+    show chaptertext "Die Familienkonferenz"
     $ renpy.pause(5)
     hide chaptertext with dissolve
     return
 
 label showch7:
 
-    show chaptertext "Son, 05. Oktober 1986 6:00 Uhr\nBrief und Schlüssel"
+    show chaptertext "Brief und Schlüssel"
     $ renpy.pause(5)
     hide chaptertext with dissolve
     return
 
 label showch8:
 
-    show chaptertext "Son, 05. Oktober 1986 12:00 Uhr\nAuf ewig Vereint und für immer getrennt"
+    show chaptertext "Auf ewig Vereint und für immer getrennt"
     $ renpy.pause(5)
     hide chaptertext with dissolve
     return
 
 label showch9:
 
-    show chaptertext "Son, 05. Oktober 1986 15:00 Uhr\nVertrauen und Misstrauen"
+    show chaptertext "Vertrauen und Misstrauen"
     $ renpy.pause(5)
     hide chaptertext with dissolve
     return
 
 label showch10:
 
-    show chaptertext "Son, 05. Oktober 1986 18:00 Uhr\nZwei Gruppen"
+    show chaptertext "Aufteilung"
     $ renpy.pause(5)
     hide chaptertext with dissolve
     return
 
 label showch11:
 
-    show chaptertext "Son, 05. Oktober 1986 23:00 Uhr\nNarrenmatt"
+    show chaptertext "Narrenmatt"
     $ renpy.pause(5)
     hide chaptertext with dissolve
     return
@@ -98,7 +98,7 @@ label showch12:
 
 label showch13:
 
-    show chaptertext "Son, 05. Oktober 1986 23:59 Uhr\nDer Sieger des Spiels ist..."
+    show chaptertext "Der Sieger des Spiels ist..."
     $ renpy.pause(5)
     hide chaptertext with dissolve
     return

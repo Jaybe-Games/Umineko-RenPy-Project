@@ -20,7 +20,7 @@ label credits:
     $ renpy.pause(3, hard=True)
     $ songname = "Golden Sneers - Lovely Banquet"
     $ _skipping = False
-    $ play_music(credits)
+    $ play_music(ending)
     show credits at credits_scroll
     $ renpy.pause(293, hard=True)   
     stop music
@@ -28,22 +28,6 @@ label credits:
     scene black with kanon_rev
     $ renpy.pause(5, hard=True)   
     $ _skipping = True 
-    return
-
-label creditsmenu:
-    $ discord.update(state = "In Main Menu")
-    $ discord.update(details = "watching Credits")
-    $ chaptername = "\"Credits\""
-    $ chapternumber = "Main Menu"
-    $ songname = "Black Lilliana Orchestra"
-    $ _skipping = True
-    scene white zorder 80
-    with kanon_r
-    scene black with dissolve
-    show credits at credits_scroll
-    $ renpy.pause(293, hard=False)    
-    scene black with kanon_rev
-    $ renpy.pause(5, hard=False)   
     return
 
 label endroll:
@@ -66,7 +50,7 @@ label gameresult:
     show gameresult at gameresult_scroll
     $ renpy.pause(105, hard=True)   
     $ renpy.pause(5, hard=True)   
-    scene black with kanon_rev
+    scene black with kanon_r
     stop music fadeout 5.0
     $ renpy.pause(5, hard=True)   
     $ _skipping = True 

@@ -36,6 +36,8 @@ init python:
     config.pad_bindings['repeat_pad_lefttrigger_pos'].remove('rollback')
     config.pad_bindings['repeat_pad_back_press'].remove('rollback')
 
+    config.pad_bindings['pad_x_press'] = ['game_menu']
+
     config.pad_bindings['pad_b_press'].append('game_menu')
 
     config.pad_bindings['pad_leftshoulder_press'].append('toggle_afm')

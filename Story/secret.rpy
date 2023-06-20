@@ -23,7 +23,7 @@ pause (2)
 play sound "audio/sfx/umise_052.ogg"
 hide blackpic with gradientcirclefade
 pause(2)
-"\"Hey!"
+"“Hey!"
 extend " Du da!"
 extend " Erklär mir bitte, wie du hierher gekommen bist."
 window hide
@@ -48,7 +48,7 @@ extend " hast du gar nichts zu sagen?"
 extend " Dann benutze ich jetzt meine Macht als Autor, um dich zurück zum Hauptmenü zu bringen."
 "Aber denk daran, wenn du zurückkommst, werde ich mich nicht mehr an dich erinnern, denn ich bin nur der Autor, ich weiß nicht, wer mich an diesem stillen Ort belästigt."
 "Ich bin sicher, dass ich dir genau dasselbe noch einmal erzählen werde."
-"Also dann, lebe wohl.\""
+"Also dann, lebe wohl.”"
 window hide
 call hidebf1 from _call_hidebf1
 pause(2)
