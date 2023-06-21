@@ -904,47 +904,284 @@ label chapter1:
     extend " aber aus irgendeinem Grund habe ich so ein beklemmendes Gefühl..."
     "Verliere ich langsam aber sicher die Nerven? Liegt es an meiner 6-jährigen Abwesenheit?"
     extend " Oder an Marias gruseliger Show von vorhin? Ich hoffe, ich werde es nie erfahren..."
+    stop audio fadeout 2.0
+    stop music fadeout 2.0
+    scene black with dissolve
+    pause(2)
+    $ songname = "Ride on"
+    $ renpy.notify("♪Ride on")
+    play music "audio/bgm/umib_004.ogg"
+    pause(1)
+    show op1 with dissolve
+    pause(11)
+    scene white with quickergradientwiperight
+    show op2 with quickergradientwiperight
+    pause(11)
+    scene white with quickergradientwiperight
+    show op3 with quickergradientwiperight
+    pause(11)
+    scene white with quickergradientwiperight
+    show op4 with quickergradientwiperight
+    pause(11)
+    scene white with quickergradientwiperight
+    show op5 with quickergradientwiperight
+    pause(11)
+    scene white with quickergradientwiperight
+    show op6 with quickergradientwiperight
+    pause(11)
+    scene white with quickergradientwiperight
+    show op7 with quickergradientwiperight
+    pause(11)
+    scene white with quickergradientwiperight
+    show op8 with quickergradientwiperight
+    pause(11)
+    scene white with flash
+    scene op9 with dissolve
+    play sound "audio/sfx/umise_028.ogg"
+    pause(11)
+    scene black with longdissolve
+    show mlib_1a_bg at bgani
+    call rainlayer
+    show mlib_1a at bgani
+    show blackpic 
+    stop music fadeout 3.0
+    pause(5)
+    hide blackpic with gradientcirclefade
+    $ songname = "Rose"
+    $ renpy.notify("♪Rose")
+    play music "audio/bgm/umib_013.ogg"
+    play rain "audio/sfx/umilse_012.ogg"
+    show nan_a1_defo1 at l2 with fastdissolve
+    nan "“Musste das wieder sein?..."
+    extend " Du trinkst immer noch, obwohl ich dir schon so oft gesagt habe, dass du damit aufhören sollst?”"
+    hide nan_a1_defo1
+    show nan_a1_fumu1 at l2
+    with fastdissolve
+    "Als er seine Untersuchung beendet hatte, stieß der Doktor im Spätherbst seines Lebens einen ärgerlichen Seufzer aus."
+    "Zwei ältere Herren standen in einem dunklen, staubigen und übel riechenden Arbeitszimmer."
+    scene mlib_1b_bg at bgani
+    call rainlayer
+    show mlib_1b at bgani
+    with dissolve
+    "Es ist anzumerken, dass dieses Arbeitszimmer nicht wie ein gewöhnliches Arbeitszimmer aussieht."
+    extend " Es ist komplett möbliert mit Schlafzimmer, Küche und eigener Toilette."
+    "Es ist praktisch eine komplett eigene Wohnung."
+    extend " Niemand würde auf die Idee kommen, dass es sich hier nur um ein Arbeitszimmer handelt."
+    show nan_a1_defo1 at m with fastdissolve
+    nan "“Kinzo-san...." 
+    extend " ...Wenn du damit nicht sofort aufhörst, muss ich meine Berechnungen korrigieren.”"
+    if persistent.nanjo == False:
+        $ persistent.nanjo = True
+        play sound "audio/sfx/umise_1060.ogg"
+        $ renpy.notify("Ein neuer Charakter wurde im Charaktermenü freigeschaltet.")
+    "Das ist Nanjo Terumasa."
+    extend " Er ist der langjährige Arzt von Kinzo und sein bester Freund."
+    "Jetzt, da Kinzos ständiges Misstrauen außergewöhnliche Ausmaße angenommen hat, ist Nanjo einer der wenigen Menschen, denen er vertraut." 
+    "Dank Nanjos großherziger Natur konnte er die Freundschaft mit Kinzo aufrechterhalten, obwohl dieser bei der geringsten Provokation in Wut gerät."
+    scene mlib_1b_bg at bgani
+    call rainlayer
+    show mlib_1b at bgani
+    show kin_a11_warai1 at m
+    with quickergradientwiperight
+    kin "“....Danke"
+    extend " ....Nanjo"
+    extend " ...Du bist mein bester Freund..."
+    extend " ...Doch die Flasche ist es ebenfalls..." 
+    extend " Und gerade deshalb kann mich nichts auf der Welt davon abbringen.”"
+    if persistent.kinzo == False:
+        $ persistent.kinzo = True
+        play sound "audio/sfx/umise_1060.ogg"
+        $ renpy.notify("Ein neuer Charakter wurde im Charaktermenü freigeschaltet.")
+    "Das ist das Familienoberhaupt Ushiromiya Kinzo."
+    "Er ist sehr mürrisch und leicht zu provozieren."
+    extend " Er ist stark vom Westen beeinflusst und ist sehr interessiert an dem Okkulten." 
+    extend " Deswegen ist sein Arbeitszimmer vollgepackt mit geheimnisvollen Grimoires."
+    "Obwohl er dem tot sehr nahe ist, strotzt er nur so vor Energie."
+    extend " und obwohl er in der Vergangenheit ein großes Vermögen angehäuft hat, hat er seinen Kindern gegenüber nie etwas über das Erbe bekannt gegeben."
+    kin "“Deine Medikamente halten mich zwar am Leben, aber ich würde ebenfalls sterben, wenn ich aufhören würde.”"
+    "Ruhig und ohne Umschweife sprach der Mann, der sich von seinem geliebten Alkohol nicht trennen wollte."
+    hide kin_a11_warai1
+    show kin_a11_warai2 at m
+    with fastdissolve
+    kin "“Genji..."
+    extend " Noch ein Glas...."
+    extend " Mach eine Mischung daraus, damit Nanjo nicht aus allen Wolken fällt.”"
+    scene mlib_1c_bg at bgani
+    call rainlayer
+    show mlib_1c at bgani
+    show gen_a11_defo1 at m
+    with quickergradientwiperight
+    gen "“Herr...."
+    extend " ....Seid ich Euch absolut sicher?”"
+    "Der alte Butler, der zuerst seinen Herrn ansah, der auf sein nächstes Getränk wartete" 
+    extend " und dann auf den Arzt, der die Augen verdreht um sich danach dann am Schnapsschrank zu schaffen zu machen."
+    hide gen_a11_defo1
+    show gen_a11_komaru1 at m
+    with fastdissolve
+    "Der Duft des alkoholischen Getränks erfüllte den ganzen Raum, als würde sich der Gestank in der Luft buchstäblich verflüchtigen."
+    extend " Dieser Duft kitzelt die Riechschleimhaut so angenehm, dass nicht nur die Seele dahinschmelzen möchte."
+    scene black with gradientwipeup
+    "Erneut stieß Nanjo einen tiefen Seufzer aus, als er mit ansah, wie der Butler seinen Befehl ausführte."
+    "Das herrliche Aroma des giftgrünen Getränks hat mittlerweile den ganzen Raum eingenommen."
+    extend " Wenn man nicht gerade Alkoholexperte ist, würde man bei der Farbe nicht daran denken, dass es sich hierbei um ein Alkoholisches Getränk handelt."
+    scene mlib_1b_bg at bgani
+    call rainlayer
+    show mlib_1b at bgani
+    show kin_a11_warai2 at r
+    with gradientwipedown
+    kin "“.......Nanjo,"
+    extend " ich weiß, dass du mir nur ein längeres Leben ermöglichen willst, und ich weiß das zu schätzen."
+    extend " Dafür bin ich dir von Herzen dankbar.”"
+    show nan_a1_defo1 at l with fastdissolve
+    nan "“......Ach was,"
+    extend " ich habe nichts gemacht," 
+    extend " du hast mir nie zugehört.”"
+    kin "“Hahahahaha..."
+    extend " Touché”"
+    show gen_a11_defo1 at m with fastdissolve
+    gen "“.....Herr"
+    kin "Vielen Dank.”"
+    "Genji führte die Anweisung gewissenhaft aus und reichte seinem Herrn eine Mischung mit geringerem Alkoholgehalt."
+    scene mlib_1c_bg at bgani
+    call rainlayer
+    show mlib_1c at bgani
+    with gradientwiperight
+    show kin_a11_defo1 at r with dissolve
+    kin "“....Nanjo," 
+    extend " .....wie lange noch?”"
+    show nan_a2_fumu1 at l with fastdissolve
+    nan "“...Wenn ich ehrlich sein soll,"
+    extend " ...wohl nicht mehr lange."
+    nan "...Das liegt aber auch an deinem übermäßigen Alkoholkonsum."
+    extend " ...Du verkürzt dir dein eigenes Leben enorm.”"
+    kin "“......Nanjo,"
+    extend " dass du mich am Leben hältst, gefällt hier längst nicht jedem.”"
+    hide nan_a2_fumu1
+    show nan_a1_defo1 at l
+    with fastdissolve
+    nan "“...Kinzo-san”"
+    hide kin_a11_defo1
+    show kin_a11_akuwarai1 at r
+    kin "“...Die Aasgeier, die sich meine Kinder nennen, warten doch nur sehnsüchtig darauf, dass ich diese Welt verlasse."
+    extend " ....Sobald mein Ende gekommen ist, stürzen sie sich auf mich und reißen mir das Fleisch von den Knochen bis nichts mehr übrig ist."
+    kin "Doch sie bekommen nichts!" 
+    extend " Absolut garnichts!”"
+    nan "“Bitte beruhige dich doch, noch bist du nicht tot."
+    extend " Wie wäre es, wenn du ein Testament aufsetzt, als letzter Wille nach dem tot?"
+    extend " So kannst du selbst entscheiden, was wer bekommt.”"
+    hide kin_a11_akuwarai1
+    show kin_a11_fukigen1 at r
+    with fastdissolve
+    kin "“....Wie bitte?"
+    extend " .....Ein Testament?"
+    extend " .....Lächerlich"
+    scene mlib_1e with gradientwipeup
+    kin "Ich, Ushiromiya Kinzo, habe keine Verwendung für so einen Quatsch wie ein Testament!"
+    extend " Geboren wurde ich mit nichts!"
+    extend " Sterben werde ich mit nichts!"
+    kin "Als ob es etwas geben würde, was ich meinen törichten Kindern hinterlassen möchte!”"
+    nan "“...Du könntest aber auch aufschreiben, was du erledigt haben möchtest,"
+    extend " ...Dinge die du zu Lebzeiten nicht selber tun konntest.”"
+    kin "“Ich habe absolut nichts zum weitergeben!"
+    extend " Wenn der Tod mich jetzt holen käme, würde ich ohne eine Spur von Angst mit ihm gehen!"
+    extend " Mein Schicksal ist der Tod und alles, was ich je besessen habe, nehme ich mit mir!"
+    kin "Ich habe alles hier geschaffen und es wird mit mir untergehen!"
+    extend " Ich verlange gar nichts!"
+    kin "Denn das ist der Vertrag, den ich mit der Hexe geschlossen habe!"
+    extend " ....So war es von Anfang an bestimmt und so wird es auch sein!”"
+    "Nach einem heftigen Wutanfall brach der alte Mann plötzlich zusammen."
+    extend " Sein Gesicht war völlig schlaff und kraftlos,"
+    extend " Als hätte ein sehr mächtiger Dämon von ihm Besitz ergriffen und ihn dann wieder verlassen."
+    kin "“..........."
+    extend " Aber eines fehlt mir noch in meinem Leben."
+    extend " Ich lasse nichts zurück, aber eines fehlt noch.”"
+    nan "“Dann schreib es auf, für die Nachwelt."
+    extend " Wenn du es jetzt aufschreibst, kann sich sicher jemand darum kümmern."
+    extend " Es wäre natürlich besser, wenn du das selbst machen könntest."
+    nan "Höre einmal auf meinen Rat und halte ihn fest, damit dein Bedauern auch dann noch aufgelöst werden kann, wenn du gegangen bist."
+    extend " ....Dafür ist ein Testament da.”"
+    "Als Nanjo versuchte, Kinzos Rücken sanft zu streicheln, bekam der Sterbende einen weiteren Wutanfall und schlug Nanjos Hand weg."
+    scene mlib_1e
+    play sound "audio/sfx/umise_020.ogg" 
+    with vpunch
+    scene black
+    kin "“Es hat keinen Sinn, es hat alles keinen Sinn!"
+    kin "Bevor ich sterbe, muss es vollbracht sein!"
+    extend " ...Bevor mich die Dämonen des Vertrages im Augenblick meines Todes verschlingen, muss es geschehen!"
+    kin "Für mich gibt es so etwas wie Frieden nicht!"
+    extend " Deshalb ist ein Testament sinnlos!"
+    extend " ...Selbst wenn ich etwas tun könnte."
+    kin "....Dann"
+    extend " ....Würde ich es nochmal sehen wollen."
+    extend " .....Ich möchte dein bezauberndes Lächeln wieder sehen."
+    extend " Ich will Beatrice noch einmal lächeln sehen!"
+    kin "Oh Beatrice, warum hast du mich nur verlassen?"
+    extend " ....War ich dir etwa nicht gut genug?"
+    extend " Ich werde dir alles zurückgeben, ich bin bereit alles zu verlieren!"
+    kin "Bitte, ein letztes Mal, bevor ich sterbe..."
+    extend " Zeig mir noch einmal dein Lächeln, ein letztes Mal!"
+    kin "Beatrice!"
+    extend " ....Ich flehe dich an!"
+    extend " Seit dem Tag an dem du verschwunden bist, sehne ich mich nach nichts anderem mehr!"
+    kin "....Du bist hier oder?"
+    extend " Du bist hier irgendwo im Raum und machst dich über mich lustig, nicht wahr?"
+    extend " ...Es ist doch so, denn das ist die Art von Frau die du bist."
+    kin "Aah, Beatrice!"
+    extend " Beatrice!"
+    kin "Es tut mir so leid, es tut mir alles so unendlich leid...."
+    extend " Es ist alles meine Schuld gewesen!"
+    extend " Ich biete dir als Wiedergutmachung mein Leben an!"
+    extend " Ich biete es dir an!"
+    kin "Beatriceeeeeee!!!”"
+    stop music
+    play sound "audio/sfx/umise_019.ogg"
+    pause(1.5)
+    "Plötzlich klopfte es an der Tür, dabei war es doch verboten um diese Zeit zu stören."
+    "Kinzos Wutanfall war nur noch wie ein Echo, der im Raum verblieben war."
+    scene mlib_1b_bg at bgani
+    call rainlayer
+    show mlib_1b at bgani
+    show kin_a11_fukigen1 at m
+    with quickergradientwiperight
+    kin "“....Wer stört?"
+    extend " Es ist doch ausdrücklich verboten worden, um diese Zeit zu stören, also wer besitzt die Dreißtigkeit?"
+    "Kinzo ist außer sich, er wird von seinen gierigen Kindern gestört, denkt er."
+    kin "“....Genji,"
+    extend " öffne die Tür!”"
+    extend " ....Wer es wagt zu stören, hat bestimmt auch einen Grund dafür.”"
+    show gen_a11_komaru1 at r with fastdissolve
+    gen "“Wie Ihr wünscht, Herr.”"
+    scene m_door1k with gradientwiperight
+    "Sofort ging Genji zum Schreibtisch um den Knopf zu drücken, der die Tür öffnen lässt."
+    extend " Die Tür öffnet sich langsam und eine seltsame Gestalt konnte erblickt werden, die dabei ist einzutreten."
+    window hide
+    play sound "audio/sfx/umise_017.ogg"
+    stop rain fadeout 2.0
+    scene white zorder 99
+    with kanon_r
+    pause(1.5)
+    scene black with dissolve
+    window show
+    nan "“......."
+    extend " ....Du bist doch?”"
+    kin "“Das ist...."
+    extend " ....unmöglich!”"
+    window hide
+    call chapterendb
+    pause(2)
+    hide screen cinemalogo with dissolve
+    pause(2)
     if persistent.musicbox == False:
         play sound "audio/sfx/umise_1060.ogg"
         $ persistent.musicbox = True
         $ renpy.notify("Die Musikbox wurde unter 'Extras' freigeschaltet.")
         $ Achievement.add(achievement_bronze3)
         $ Achievement.add(achievement_bronze4)
-    stop audio fadeout 2.0
-    stop music fadeout 2.0
-    scene black with dissolve
-    pause(2)
-    $ songname = "Ride on"
-    $ play_music(ride_on)
-    pause (1)
-    show op1 with dissolve
-    pause (11)
-    scene white with quickergradientwiperight
-    show op2 with quickergradientwiperight
-    pause (11)
-    scene white with quickergradientwiperight
-    show op3 with quickergradientwiperight
-    pause (11)
-    scene white with quickergradientwiperight
-    show op4 with quickergradientwiperight
-    pause (11)
-    scene white with quickergradientwiperight
-    show op5 with quickergradientwiperight
-    pause (11)
-    scene white with quickergradientwiperight
-    show op6 with quickergradientwiperight
-    pause (11)
-    scene white with quickergradientwiperight
-    show op7 with quickergradientwiperight
-    pause (11)
-    scene white with quickergradientwiperight
-    show op8 with quickergradientwiperight
-    pause (11)
-    scene white with flash
-    scene op9 with dissolve
-    play sound "audio/sfx/umise_028.ogg"
-    pause (11)
-    scene black with longdissolve
-    stop music fadeout 3.0
-    pause (5)
     jump chapter2
+
+
+
+
+    
+
+
