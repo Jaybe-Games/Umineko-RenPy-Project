@@ -20,8 +20,9 @@ label start:
     pause (10)
     hide disclaimer2 with dissolve
     pause (2)
+    $ renpy.notify("♪At Death's Door")
     $ songname = "At Death's Door"
-    $ play_music(deaths_door)
+    play music "audio/bgm/umib_014_intro.ogg"
     queue music "audio/bgm/umib_014_loop.ogg" loop 
     show text "Polizeiliche Kriminalakten zum Fall im Dorf Hinamizawa" with dissolve
     pause (5)

@@ -103,12 +103,6 @@ init -10 python:
             # Return the render.
             return render
 
-init python:
-    def play_music(music_alias,fade=0):
-        renpy.music.play(music_alias,fadein=fade)
-        if persistent.audio_cues:
-            renpy.notify("♪ " + music_dictionary[renpy.music.get_playing('music')])
-
     #$ stream_list = ["obs32.exe", "obs64.exe", "obs.exe", "xsplit.core.exe", "livehime.exe", "pandatool.exe", "yymixer.exe", "douyutool.exe", "huomaotool.exe"]
     #if not list(set(process_list).intersection(stream_list)):
         #if currentuser != "":

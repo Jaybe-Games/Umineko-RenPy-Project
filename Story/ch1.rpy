@@ -12,7 +12,9 @@ label chapter1:
     pause (7)
     play ship "audio/sfx/umilse_004.ogg"
     $ songname = "HANE (Feathers)"
-    $ play_music(hane)
+    $ renpy.notify("♪HANE (Feathers)")
+    play music "audio/bgm/umib_003_intro.ogg"
+    queue music "audio/bgm/umib_003_loop.ogg" loop 
     show white with m1trans
     camera at Shake(None, float('inf'), dist=4)
     scene ship_s2a with m1trans1
@@ -295,34 +297,40 @@ label chapter1:
     show rud_a11_akuwarai1 at l2
     rud "“....Das ist deine Strafe, wenn du frech wirst," 
     extend " mein lieber Battler-kun.”"
-    scene ship_s2a with quickergradientwiperight
+    scene ship_s2bf with quickergradientwiperight
     show kir_a11_majime1 at m with fastdissolve
     kyr "“Lasst es für heute gut sein, ihr beiden."
     extend " Ihr solltet euren Vater-Sohn Konflikt wann anders austragen.”"
     "Nachdem Kyrie den kleinen Konflikt erfolgreich beendet hatte, hörte man jemanden von unter Deck nach draußen gehen."
     hide kir_a11_majime1 with fastdissolve
     show jes_a11_atya2 at m with fastdissolve
-    jes "“...B-Battler-kun?" 
-    extend " hast du gerade eben vom Deck gekotzt? Ich schaue nach draußen und plötzlich kommt so eine widerliche Suppe von oben runter, das war eklig!"
-    extend " Nächstes Mal nimm einen Eimer mit!”"
-    show jes_a11_aisowarai1 at m with fastdissolve
+    jes "“...B.."
+    extend " ...Battler-kun?" 
+    extend " hast du gerade eben vom Deck gekotzt?" 
+    extend " Ich schaue nach draußen und plötzlich kommt so eine widerliche Suppe von oben runter..." 
+    jes "...Das war eklig!"
+    extend " ...Nächstes Mal nimm besser einen Eimer mit!"
     hide jes_a11_atya2
-    jes "Ach ja, und was war das für ein 'Ich falle, ich falle' -Geschrei?"
+    show jes_a11_aisowarai1 at m
+    jes "Ach ja," 
+    extend " und was war das für ein 'Ich falle, ich falle' -Geschrei?"
     $ persistent.wiki_unlocked.add("wiki_crazy")
     $ persistent.tip = 2
     extend " ...Bist du ein bisschen {note_green}meschugge{/note_green}?"
-    extend " ...wahahahaha!"
+    extend " ...wahahahahahahahaha!"
     jes ".....Das war die eine Sache,"
     extend " .....und dann war da noch die Kotze, die vom Deck segelte."
-    extend " ....pahahahaha.”"
+    extend " ....pahahahahahahaha!”"
     scene ship_s2a with quickergradientwiperight
     show but_a11_defo1 at r with fastdissolve
     but "“......Entschuldigung...."
     extend " Das verfluchte Boot schaukelt so viel....."
     extend " ....Das Schiff schaukelt und schaukelt und schaukelt....."
-    show but_a21_kuyasigaru1 at r
+    show but_a21_kuyasigaru1_open_mouth at r
     hide but_a11_defo1
-    but "....ahhhhhh!!!"
+    but "....aaaaaaaahhhhhhhhhhhhhhhh!!!!!!!"
+    hide but_a21_kuyasigaru1_open_mouth
+    show but_a21_kuyasigaru1 at r
     extend " Mach, dass es aufhört, sonst falle ich wieder!”"
     show jes_a11_atya3 at l with fastdissolve
     hide jes_a11_defo2
@@ -332,15 +340,15 @@ label chapter1:
     hide but_a21_kuyasigaru1
     but "“Ja..." 
     extend " ....Vielen Dank, Jessica-chan.”"
-    hide but_b11_odoroki3 with fastdissolve
-    hide jes_a11_atya3 with fastdissolve
+    scene ship_s2bf with quickergradientwiperight   
     show jes_a11_warai1 at m with quickgradientwiperight
     if persistent.jessica == False:
         $ persistent.jessica = True
         play sound "audio/sfx/umise_1060.ogg"
         $ renpy.notify("Ein neuer Charakter wurde im Charaktermenü freigeschaltet.")
-    "Das war meine Cousine Ushiromiya Jessica." 
-    extend " Sie ist echt cool drauf und ist wohl aktuell in dieser Phase, wo man gegen seine Eltern rebelliert."
+    "Das ist meine Cousine Ushiromiya Jessica."
+    extend " Sie ist die Tochter von Onkel Krauss und Tante Natsuhi." 
+    extend " Jessica ist echt cool drauf und ist wohl aktuell in dieser Phase, wo man gegen seine Eltern rebelliert."
     "Sie ist aber auch in dieser Phase, wo die Mädchen so große Brüste bekommen."
     extend " hihihihih... ich würde sie mal gerne in die Hand nehmen...."
     "Aber dann würde sie mich windelweich schlagen, denn mit ihr ist es nicht gut Kirschen zu essen, wenn man es sich mit ihr verscherzt."
@@ -348,22 +356,29 @@ label chapter1:
     extend " sie muss richtig unzufrieden mit ihrem Namen sein."
     "Sie hat außerdem so eine 'Verrückte Art zu reden'." 
     extend " Sie flucht viel und ihre Wortwahl ist gewöhnungsbedürftig."
-    "Früher waren wir das Chaotenduo, haben viel Unsinn gemacht und waren uns auch nicht zu fein, gegenüber der Hauptfamilie einen sehr rauen Ton anzuwenden"
+    "Früher waren wir das Chaotenduo, haben viel Unsinn gemacht und waren uns auch nicht zu fein, gegenüber ihren Eltern einen sehr rauen Ton anzuwenden"
     extend " Die Vorträge der Erwachsenen über gutes Benehmen nervten uns zwar jedes Mal, aber es war auch einfach zu lustig zu sehen, wie sich die vorbildlichen Erwachsenen aufregten."
     camera at Shake(None, float('inf'), dist=0)
     "Der Kapitän hat zugestimmt langsamer zu fahren und jetzt schaukelt das Boot nicht mehr so stark."
-    jes "“....Verdammte Scheiße Battler-kun, jetzt werden wir uns wegen dir verspäten....”"
+    jes "“....Verdammte Scheiße Battler-kun," 
+    extend " ...jetzt werden wir uns wegen dir verspäten....”"
     hide jes_a11_warai1 with fastdissolve
     show but_b22_warai1 at r2 with quickergradientwiperight
-    but "“.....Halt doch mal dein Maul, immerhin kann ich jetzt ein wenig chillen....”"
+    but "“.....Halt doch mal dein Maul," 
+    extend " ...immerhin kann ich jetzt ein wenig chillen....”"
     show jes_a11_defo2 at l with quickergradientwipeupright
     jes "“.....Wir sollten besser runter gehen zum 'chillen', wir sind gleich auf der Insel.”"
-    but "“....Ja, das kann ich versuchen, jetzt, wo das Boot etwas langsamer fährt."
+    but "“....Ja," 
+    extend " ...das kann ich versuchen," 
+    extend " jetzt, wo das Boot etwas langsamer fährt."
     show but_b22_nayamu2 at r2
-    extend " ....Aber ich kann trotzdem nicht garantieren, dass ich den Rest meines Frühstücks bei mir behalte.... Ihihihi....' "
+    extend " ....Aber ich kann trotzdem nicht garantieren, dass ich den Rest meines Frühstücks bei mir behalte...." 
+    extend " Ihihihi....' "
     stop ship
     $ songname = "Door of Summer"
-    $ play_music(summer)
+    $ renpy.notify("♪Door of Summer")
+    play music "audio/bgm/umib_002_intro.ogg"
+    queue music "audio/bgm/umib_002_loop.ogg" loop 
     scene ship_s3a with gradientwiperight
     show eva_b22_akire2 at r behind ship_s3a
     show hid_a21_warai1 at m behind ship_s3a
