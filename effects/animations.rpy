@@ -78,10 +78,11 @@ label clockch2:
     return
 
 label rainlayer:
-    show rain4
-    show rain3
-    show rain2 
+    
     show rain
+    show rain2
+    show rain3
+    show rain4
     return
 
 label hiderain:
