@@ -27,11 +27,11 @@ label chapter1:
     play sound "audio/sfx/umise_003.ogg"
     show but_b23_kuyasigaru1 at m with fastdissolve
     but "“whaoooo!!!!" 
-    extend " ....Ich falle runter, ....ich falle runteeeeeer!!!...."
+    extend " ....Ich falle runter, ....ich falle runteeeeeer!!!"
     extend " ....Ich hasse Boote! ...Gleich muss ich kotzen, ich falleeeee!!!"
-    extend " ...Warum muss das verfluchte Ding auch so stark schaukeln?...."
-    but "Das wars!..." 
-    extend " Ich werde diese Insel nicht mehr erreichen, eher sterbe ich hier...”"
+    extend " ...Warum muss das verfluchte Ding auch so stark schaukeln?"
+    but "....Das wars!" 
+    extend " ....Ich werde diese Insel nicht mehr erreichen, eher sterbe ich hier!”"
     show but_b23_kuyasigaru1 at l
     play sound "audio/sfx/umise_047.ogg"
     show mar_a11_warai1 at r,jump_shake
@@ -42,14 +42,14 @@ label chapter1:
     hide but_b23_kuyasigaru1
     show but_b23_nayamu1 at l
     with fastdissolve
-    but "“Bitte..." 
-    extend " Maria-chan..." 
-    extend " Bitte etwas ruhiger..." 
-    extend " Das macht alles mein Magen nicht mit.”"
+    but "“...Bitte" 
+    extend " ...Maria-chan," 
+    extend " ...bitte etwas ruhiger," 
+    extend " ...das macht alles mein Magen nicht mit.”"
     show mar_a11_uuu1 at r
     with fastdissolve
-    mar "“Uu~...?" 
-    extend " du findest das nicht lustig?...."
+    mar "“Uu~?" 
+    extend " ....du findest das nicht lustig?"
     hide mar_a11_uuu1
     play sound "audio/sfx/umise_047.ogg"
     show mar_a11_warai1 at r,jump_shake
@@ -87,8 +87,8 @@ label chapter1:
     with quickergradientwiperight  
     rud "“...Hey Battler-kun!" 
     extend " Wenn du kotzen musst, dann bitte in einen Eimer!"
-    extend " .....Bei dem, was du dir in den Hals schaufelst, würdest du eine Menge Fische auf dem Gewissen haben..." 
-    extend " hehe..."
+    extend " .....Bei dem, was du dir in den Hals schaufelst, würdest du eine Menge Fische auf dem Gewissen haben." 
+    extend " ....hehe."
     rud "....Unglaublich, dass du schon im Flugzeug so durchgedreht bist," 
     extend " du konntest ja nicht mal im Auto still sitzen.”"
     hide rud_a11_akuwarai1
@@ -104,7 +104,7 @@ label chapter1:
     extend " .....Wag es nicht, ins Meer zu kotzen!”"
     hide but_b22_odoroki2
     show but_b22_nayamu2 at l
-    but "“Ich gebe mir hier die größte Mühe...”"
+    but "“...Ich gebe mir hier die größte Mühe.”"
     scene ship_s2bf
     show rud_a11_warai1 at m
     with quickergradientwiperight  
@@ -131,16 +131,16 @@ label chapter1:
     scene ship_s2bf
     show kir_a11_defo1 at l
     with quickergradientwiperight
-    kyr "“Ist es nicht schön, dass Battler-kun wieder da ist?...."
+    kyr "“...Ist es nicht schön, dass Battler-kun wieder da ist?"
     extend " Ich meine, nach 6 Jahren Abwesenheit immer noch ein Theater bei der Ankunft? *kicher*”"
     show rud_a11_warai1 at r with dissolve
-    rud "“Ja...."
-    extend " Aber das war viel schlimmer, als er noch jünger war...." 
-    extend " Da hatte man die ganze Anreise keine Ruhe.”"
+    rud "“....Ja"
+    extend " ....Aber das war viel schlimmer, als er noch jünger war," 
+    extend " ...da hatte man die ganze Anreise keine Ruhe.”"
     hide kir_a11_defo1
     show kir_a11_majime1 at l
     with fastdissolve
-    kyr "“Aber er ist selbst schuld, wenn er da rumturnt, obwohl er weiß, dass er seekrank wird.”"
+    kyr "“...Aber er ist selbst schuld, wenn er da rumturnt, obwohl er weiß, dass er seekrank wird.”"
     scene ship_s2bf
     show kir_a11_defo1 at m
     with fastdissolve
@@ -164,18 +164,18 @@ label chapter1:
     hide kir_a11_defo1
     show but_b23_kuyasigaru1 at m
     with quickergradientwiperight
-    but "“Ich finde das gar nicht lustig..." 
-    extend " Ich kämpfe hier schließlich um....."
-    extend " mein..."
-    extend " ....Leben..." 
+    but "“Ich finde das gar nicht lustig" 
+    extend " Ich kämpfe hier schließlich um"
+    extend " ...mein"
+    extend " ....Leben" 
     extend " ...*würg*”"
     play sound "audio/sfx/umise_003.ogg"
     show but_b23_kuyasigaru1 at m,run
     hide but_b23_kuyasigaru1 with dissolve
     "Battler wurde so übel, dass er sich nicht zurückhalten konnte und den ganzen gekochten Reis vom Vormittag ins Wasser schleuderte."
     show rud_a11_akuwarai1 at r with dissolve
-    rud "“.....Jetzt hat dieser Kasper tatsächlich die Fische gefüttert, ach herrje..." 
-    extend " ....ahahaha”"
+    rud "“.....Jetzt hat dieser Kasper tatsächlich die Fische gefüttert, ach herrje," 
+    extend " ....ahahaha!”"
     camera at Shake(None, float('inf'), dist=4)
     show mar_a22_warai2 at l with dissolve
     mar "“uu-uu~!" 
@@ -206,11 +206,11 @@ label chapter1:
     extend " ....Es reicht jetzt," 
     extend " .....lass Battler-kun in Ruhe!”"
     show mar_a11_defo1 at l with dissolve
-    mar "“...uu~.....”"
+    mar "“....uu~”"
     hide ros_a11_ikari1
     show ros_a11_ikari2 at r
     with fastdissolve
-    ros "“und hör auf mit diesem 'uu-uu'!"
+    ros "“...und hör auf mit diesem 'uu-uu'!"
     extend " .....Du bist kein kleines Kind mehr!”"
     "Maria war nicht begeistert, dass ihre Mama ihre Freude unterbrach."
     extend " Rosa ist eine sehr strenge Mutter."
@@ -233,8 +233,8 @@ label chapter1:
     hide ros_a11_komaru4
     show ros_a11_majime1 at r
     with fastdissolve
-    ros "“.....aber dass dein größter Feind das Fahrzeugfahren ist, verstehe ich nicht..."
-    extend " .....Du wirkst so erwachsen und reif und jetzt das?”"
+    ros "“.....aber dass dein größter Feind das Fahrzeugfahren ist, verstehe ich nicht,"
+    extend " .....denn du wirkst so reif und erwachsen und jetzt das?”"
     scene ship_s2a
     show ros_a11_warai1 at m
     with quickgradientwiperight
@@ -248,7 +248,7 @@ label chapter1:
     extend " auch wenn das Taschengeld, dass sie uns Kindern gibt, nicht so hoch ist wie bei den anderen Erwachsenen."
     "Trotz ihres blöden Namens ist ihre Aussprache nur Ushiromiya Rooza,"
     extend " was nur halb so schlimm ist wie der Name meines Vaters."
-    "Trotzdem ist der Name in jeder Hinsicht lächerlich...." 
+    "Trotzdem ist der Name in jeder Hinsicht lächerlich." 
     extend " Danke Großvater nochmal dafür."
     scene ship_s2a
     show rud_a11_akuwarai1 at r
@@ -261,21 +261,21 @@ label chapter1:
     hide rud_a11_akuwarai1
     show rud_a11_akuwarai2 at r
     with fastdissolve
-    rud "“Ey Battler-kun!" 
-    extend " Das Frühstück, dass gerade im Meer gelandet ist, hat Geld gekostet und Lebensmittel werden nicht billiger...”"
+    rud "“...Ey Battler-kun!" 
+    extend " ...Das Frühstück, dass gerade im Meer gelandet ist, hat Geld gekostet und Lebensmittel werden nicht billiger!”"
     hide but_b23_nayamu1
     show but_b22_nayamu1 at l
     with fastdissolve
-    but "“...ähm....."
+    but "“...Ähm,"
     hide but_b22_nayamu1
     show but_b22_nayamu2 at l
     with fastdissolve
-    extend " ...Also wenn du es unbedingt wiederhaben willst, kannst du ja ins Meer springen und dann ganz weit den Mund aufmachen..." 
-    extend " ....ihihihi”"
+    extend " ...also wenn du es unbedingt wiederhaben willst, kannst du ja ins Meer springen und dann ganz weit den Mund aufmachen," 
+    extend " ....ihihihi!”"
     hide rud_a11_akuwarai2
     show rud_a11_defo2 at r
     with fastdissolve
-    rud "“........Battler...”"
+    rud "“........Battler....”"
     show rud_a11_defo2 at l2
     hide rud_a11_defo2
     show rud_a11_defo1 at r
@@ -284,42 +284,42 @@ label chapter1:
     hide but_b22_nayamu2
     show but_b11_kuyasigaru1 behind rud_a11_defo1 at l
     with fastdissolve
-    but "“....owowowowowow......"
-    extend " Du alter Bastard!" 
-    extend " Scheiße......" 
-    extend " owowowow......”"
+    but "“....owowowowowow"
+    extend " ....Du alter Bastard!" 
+    extend " ....Scheiße," 
+    extend " .....owowowow”"
     "Einen Moment hat Battler nicht aufgepasst und schon hat Rudolf sein Ohrläppchen gepackt und behandelt es nicht gerade zimperlich."
-    but "“owowowowowowowow...." 
+    but "“....Owowowowowowowow," 
     extend " lass los!" 
-    extend " ....owowowowowowow"
+    extend " ....Owowowowowowow"
     extend " .......Das tut richtig weh," 
     extend " hör auf damit," 
     extend " .....owowowow”"
-    rud "“Du...." 
-    extend " willst...." 
-    extend " also....," 
-    extend " dass ich es mir zu..."
-    extend " rück...."
-    extend " ho..."
-    extend " le..."
-    extend " jaaaa~?”"
+    rud "“....Du" 
+    extend " ...willst" 
+    extend " ...also," 
+    extend " ....dass ich es mir zu"
+    extend " ....rück"
+    extend " ...ho"
+    extend " ...le"
+    extend " ....jaaaa~?”"
     "Rudolf hat einen sehr starken Griff, besonders wenn es um Battlers Ohrläppchen geht, man hat das Gefühl, er reißt es jeden Moment ab."
     hide but_b11_kuyasigaru1
     show but_a11_aseru5 at l
     with fastdissolve
-    but "“....Ich hoffe, dass du über das Geländer fällst und ertrinkst, du alter Bastard!...."
+    but "“....Ich hoffe, dass du über das Geländer fällst und ertrinkst, du alter Bastard!"
     hide but_a11_aseru5
     show but_b11_kuyasigaru1 at l
     with fastdissolve 
-    extend " Owowowow..." 
+    extend " ....Owowowow" 
     extend " lass los!"
-    but "...Ich...."
-    extend " gebe....."
-    extend " nicht....."
-    extend " auuuuuuffffff!!!"
-    extend " ...owowowow....." 
-    extend " lass doch endlich los owowowowow..." 
-    extend " es tut weh!....”"
+    but "...Ich"
+    extend " ....gebe"
+    extend " ....nicht"
+    extend " .....auuuuuuffffff!!!"
+    extend " ...owowowow" 
+    extend " ....lass doch endlich los owowowowow" 
+    extend " ....es tut weh!”"
     hide rud_a11_defo1
     show rud_a11_akuwarai1 at l2
     with fastdissolve
@@ -337,7 +337,7 @@ label chapter1:
     jes "“...B.."
     extend " ...Battler-kun?" 
     extend " hast du gerade eben vom Deck gekotzt?" 
-    extend " Ich schaue nach draußen und plötzlich kommt so eine widerliche Suppe von oben runter..." 
+    extend " ...Ich schaue nach draußen und plötzlich kommt so eine widerliche Suppe von oben runter" 
     jes "...Das war eklig!"
     extend " ...Nächstes Mal nimm besser einen Eimer mit!"
     hide jes_a11_atya2
@@ -355,9 +355,9 @@ label chapter1:
     scene ship_s2a
     show but_a11_defo1 at r
     with quickergradientwiperight
-    but "“......Entschuldigung...."
-    extend " Das verfluchte Boot schaukelt so viel....."
-    extend " ....Das Schiff schaukelt und schaukelt und schaukelt....."
+    but "“......Entschuldigung"
+    extend " Das verfluchte Boot schaukelt so viel!"
+    extend " ....Das Schiff schaukelt und schaukelt und schaukelt!!!"
     show but_a21_kuyasigaru1_open_mouth at r
     hide but_a11_defo1
     with fastdissolve
@@ -368,12 +368,12 @@ label chapter1:
     show jes_a11_atya3 at l with fastdissolve
     hide jes_a11_defo2
     with fastdissolve
-    jes "“....Vielleicht sollte der Kapitän etwas langsamer fahren, sonst geht es dir gleich noch schlechter..."
-    extend " Ich werde sofort den Kapitän bitten, etwas langsamer zu fahren, aber bitte nicht mehr ins Meer kotzen....”"
+    jes "“....Vielleicht sollte der Kapitän etwas langsamer fahren, sonst geht es dir gleich noch schlechter."
+    extend " ...Ich werde sofort den Kapitän bitten, etwas langsamer zu fahren, aber bitte nicht mehr ins Meer kotzen.”"
     show but_b11_odoroki3 at r
     hide but_a21_kuyasigaru1
     with fastdissolve
-    but "“Ja..." 
+    but "“.....Ja" 
     extend " ....Vielen Dank, Jessica-chan.”"
     scene ship_s2bf 
     show jes_a11_warai1 at m
@@ -386,23 +386,23 @@ label chapter1:
     extend " Sie ist die Tochter von Onkel Krauss und Tante Natsuhi." 
     extend " Jessica ist echt cool drauf und ist wohl aktuell in dieser Phase, wo man gegen seine Eltern rebelliert."
     "Sie ist aber auch in dieser Phase, wo die Mädchen so große Brüste bekommen."
-    extend " hihihihih... ich würde sie mal gerne in die Hand nehmen...."
+    extend " hihihihih... ich würde sie mal gerne in die Hand nehmen."
     "Aber dann würde sie mich windelweich schlagen, denn mit ihr ist es nicht gut Kirschen zu essen, wenn man es sich mit ihr verscherzt."
     "Jessica klingt sehr nach englischer Herkunft und wird bei uns Ushiromiya Jeshka ausgesprochen," 
     extend " sie muss richtig unzufrieden mit ihrem Namen sein."
     "Sie hat außerdem so eine 'Verrückte Art zu reden'." 
     extend " Sie flucht viel und ihre Wortwahl ist gewöhnungsbedürftig."
-    "Früher waren wir das Chaotenduo, haben viel Unsinn gemacht und waren uns auch nicht zu fein, gegenüber ihren Eltern einen sehr rauen Ton anzuwenden"
+    "Früher waren wir das Chaotenduo, haben viel Unsinn gemacht und waren uns auch nicht zu fein, gegenüber ihren Eltern einen sehr rauen Ton anzuwenden."
     extend " Die Vorträge der Erwachsenen über gutes Benehmen nervten uns zwar jedes Mal, aber es war auch einfach zu lustig zu sehen, wie sich die vorbildlichen Erwachsenen aufregten."
     camera at Shake(None, float('inf'), dist=0)
     "Der Kapitän hat zugestimmt langsamer zu fahren und jetzt schaukelt das Boot nicht mehr so stark."
     jes "“....Verdammte Scheiße Battler-kun," 
-    extend " ...jetzt werden wir uns wegen dir verspäten....”"
+    extend " ...jetzt werden wir uns wegen dir verspäten!”"
     hide jes_a11_warai1
     show but_b22_warai1 at r2
     with fastdissolve
     but "“.....Halt doch mal dein Maul," 
-    extend " ...immerhin kann ich jetzt ein wenig chillen....”"
+    extend " ...immerhin kann ich jetzt ein wenig chillen.”"
     show jes_a11_defo2 at l with quickergradientwipeupright
     jes "“.....Wir sollten besser runter gehen zum 'chillen', wir sind gleich auf der Insel.”"
     but "“....Ja," 
@@ -411,8 +411,8 @@ label chapter1:
     hide but_b22_warai1
     show but_b22_nayamu2 at r2
     with fastdissolve
-    extend " ....Aber ich kann trotzdem nicht garantieren, dass ich den Rest meines Frühstücks bei mir behalte...." 
-    extend " Ihihihi....' "
+    extend " ....Aber ich kann trotzdem nicht garantieren, dass ich den Rest meines Frühstücks bei mir behalte." 
+    extend " Ihihihi!”"
     stop ship
     $ songname = "Door of Summer"
     $ renpy.notify("♪Door of Summer")
@@ -424,7 +424,7 @@ label chapter1:
     show hid_a21_warai1 at m
     show kum_a12_defo2 at l
     with quickergradientwiperight
-    " ....Moment mal, dieses 'ruhig' sein ist falsch! Ich sehe es klar und deutlich! Die anderen Erwachsenen verkneifen sich doch alle gerade das Lachen...."
+    " ....Moment mal, dieses 'ruhig' sein ist falsch! Ich sehe es klar und deutlich! Die anderen Erwachsenen verkneifen sich doch alle gerade das Lachen."
     scene ship_s3a at bgani
     show geo_a11_defo1 at m
     with quickergradientwiperight
@@ -451,8 +451,8 @@ label chapter1:
     show jes_b22_warai1 at l
     with fastdissolve
     jes "“Ja,"
-    extend " .....es ist, als wäre er nie weg gewesen......"
-    extend " Mit dem Unterschied, dass er sich heute zum ersten Mal übergeben hat.”"
+    extend " .....es ist, als wäre er nie weg gewesen,"
+    extend " nur mit dem Unterschied, dass er sich heute zum ersten Mal auf dem Boot übergeben hat.”"
     show geo_a11_komaru3 at r
     hide geo_a11_warai1
     with fastdissolve
@@ -477,17 +477,18 @@ label chapter1:
     scene ship_s3a at bgani
     show but_b22_warai1 at r
     with quickergradientwiperight
-    but "“Ich finde, heute ist auch ein besonderer Tag...."
-    extend " Denn um die Mittagszeit soll ein Sturm aufziehen, der sich erst am Montag wieder legen soll."
+    but "“....Ich finde, heute ist auch ein besonderer Tag,"
+    extend " ...denn um die Mittagszeit soll ein Sturm aufziehen, der sich erst am Montag wieder legen soll."
     hide but_b22_warai1
     show but_b11_warai3 at r
     with fastdissolve
     extend " Es ist das erste Mal, dass wir länger als einen Tag auf der Insel bleiben.”"
     show geo_a11_hohoemi1 at l with quickergradientwiperight
     geo "“...Ja, aber wir haben auch immer ein wenig Glück gehabt, dass so ein starker Sturm nie über unsere Familienkonferenz hereingebrochen ist."
-    extend " Wie heißt es so schön?" 
+    extend " ...Wie heißt es so schön?" 
     extend " Es gibt immer ein erstes Mal.”"
     "Für Battler war die entspannte Atmosphäre eine sehr gute Ablenkung, um nicht mehr an das schaukelnde Boot denken zu müssen."
+    extend " Es wäre ziemlich unvorteilhaft, wenn er die guten Sitze ruinieren würde."
     show geo_a11_majime2 at l
     hide geo_a11_hohoemi1
     with fastdissolve
@@ -497,8 +498,8 @@ label chapter1:
     show but_b11_aseru1 at r
     hide but_b11_warai3
     with fastdissolve
-    but "“....Ähhhhm...." 
-    extend " ...Meinst du Zeus...?”"
+    but "“....Ähhhhm," 
+    extend " ...meinst du Zeus...?”"
     show geo_a11_warai1 at l
     hide geo_a11_majime2
     with fastdissolve
@@ -508,10 +509,11 @@ label chapter1:
     hide but_b11_aseru1
     with fastdissolve
     but "“.........." 
-    extend " Was?”"
+    extend " ...Was?”"
     geo "“Okay, es geht um folgendes:"
-    geo "In der tantrischen Spiritualität gibt es intensivere Gefühle und auch bei den Griechen gab es die dionysische Spiritualität, "
-    extend " die auch besonders heftige Gefühle beinhaltet. In diesem Sinne hat jeder Mensch auch Sturmgötter in sich."
+    geo "In der tantrischen Spiritualität gibt es intensivere Gefühle und auch bei den Griechen gab es die dionysische Spiritualität,"
+    extend " die auch besonders heftige Gefühle beinhaltet." 
+    extend " In diesem Sinne hat jeder Mensch auch Sturmgötter in sich."
     geo ".....diese können auch in einem selbst aktiviert werden."
     show geo_a11_majime2 at l
     hide geo_a11_warai1
@@ -527,7 +529,7 @@ label chapter1:
     show jes_a11_atya3 at m
     hide jes_a11_tereru1
     with fastdissolve 
-    extend " ...Ich kenne nicht einmal die Bedeutung von {note_green}tantrisch oder dionysisch{/note_green}...."
+    extend " ...Ich kenne nicht einmal die Bedeutung von {note_green}tantrisch oder dionysisch{/note_green}."
     extend " Es klingt einfach unironisch, als hätte jemand einfach Wörter erfunden."
     scene ship_s3a at bgani
     show but_b23_nayamu1
@@ -540,14 +542,14 @@ label chapter1:
     show but_b23_nayamu2 at r
     hide but_b23_nayamu1
     with fastdissolve
-    extend " ....Das hast du aus dieser einen Yoga-Zeitschrift.....' "
+    extend " ....Das hast du aus dieser einen Yoga-Zeitschrift."
     show geo_a11_komaru1 at l with quickergradientwiperight
-    geo "“Ähm......."
+    geo "“......Ähm,"
     show geo_a11_komaru3 at l
     hide geo_a11_komaru1
     with fastdissolve
-    extend " ....Oh...."
-    extend " ....Hahahaha, aber ich habe dich zum Nachdenken gebracht."
+    extend " ....oh,"
+    extend " ....hahahaha, aber ich habe dich zum Nachdenken gebracht, nicht wahr?"
     show geo_a11_hohoemi1 at l
     hide geo_a11_komaru3
     with fastdissolve
@@ -555,9 +557,9 @@ label chapter1:
     show but_b11_warai2 at r
     hide but_b23_nayamu2
     with fastdissolve
-    but "“ ....Hihihi...." 
+    but "“ ....Hihihi" 
     extend " ....Du hast nur Pech gehabt, dass ich vor der Abreise auf der Toilette so ein Yoga-Magazin in der Hand hatte, weil ich mich vergriffen habe.”"
-    geo "“Was es manchmal für Zufälle gibt.”"
+    geo "“Was es manchmal für Zufälle gibt."
     show geo_a11_defo1 at l
     hide geo_a11_hohoemi1
     with fastdissolve
@@ -571,35 +573,35 @@ label chapter1:
     extend " uhmm...."
     extend " ....Sexualität”"
     but "“Sehr stark, das muss ich mal ausprobieren!"
-    extend " ...Ihihihi.....”"
+    extend " ...Ihihihi”"
     jes "“...Trottel!"
     extend " ....Du Holzkopf!"
-    extend " ......War ja zu erwarten, dass das deine einzige Motivation ist, Trottel-Battler."
-    jes "Perverser Battler!"
-    extend " ...Du bist sofort Feuer und Flamme, sobald es auch nur im Entferntesten in diese Richtung geht....”"
-    but "“.....Ihihihihi...."
-    extend " Tut mir leid....”"
+    extend " ......War ja zu erwarten, dass das deine einzige Motivation ist, Trottel-Battler!"
+    jes ".....Perverser Battler!"
+    extend " ...Du bist sofort Feuer und Flamme, sobald es auch nur im Entferntesten in diese Richtung geht!”"
+    but "“.....Ihihihihi"
+    extend " ......Tut mir leid”"
     geo "“Tantrisch ist das Tantra."
     extend " ....Es ist ein Begriff ursprünglich aus Indien, und wird mit 'Zusammenhang' oder auch 'Gefüge' übersetzt."
     extend " ....Berührungen des Körpers sollen also auch die Seele berühren, sie nähren."
     geo "Es ist ein sehr breites Thema..."
     extend " .........Ja....."
     jes "Das klingt für mich so, als hätte jemand einen Vorwand gesucht mit einem anderen Menschen engen Kontakt zu haben...."
-    but "Ja, " 
-    extend " .....letztlich läuft alles darauf hinaus, dass man in gewisser Weise seine Lust wiederbelebt...."
-    extend " Wenn wir so darüber reden, klingt es absolut lächerlich..."
+    geo "....Ja," 
+    extend " .....letztlich läuft alles darauf hinaus, dass man in gewisser Weise seine Lust wiederbelebt."
+    extend " Wenn wir so darüber reden, klingt es absolut lächerlich."
     geo "Ahahahaha...."
-    extend " Ich denke da hast du Recht..."
-    extend " Ach ja.... Wusstest du?...."
+    extend " Ich denke da hast du Recht."
+    extend " Ach ja, wusstest du?"
     extend " ....Ein echter Sturmgott aus der griechischen Mythologie. ist jedoch Aigaion.”"
     show but_b24_futeki3 at r
     hide but_b11_warai2
     with fastdissolve
-    but "“....Ein leckerer Teller Gyros-Geschnetzeltes ist das einzige Griechische, das ich schätze....."
+    but "“....Ein leckerer Teller Gyros-Geschnetzeltes ist das einzige Griechische, das ich schätze."
     show but_b24_warai1 at r
     hide but_b24_futeki3
     with fastdissolve
-    extend " Yumyumyumyum....”"
+    extend " Yumyumyumyum!”"
     geo "“.........."
     extend " ...Jedenfalls kann dieser Gott Meeresstürme auslösen, ähnlich wie wir ihn heute erleben.”"
     but "“Du willst mir also sagen, dass irgendeine Gottheit, auf die wir keinen Einfluss haben, diesen Sturm ausgelöst hat?”"
@@ -607,16 +609,17 @@ label chapter1:
     extend " ....So könnte man es ausdrücken ja!”"
     but "“....Auf jeden Fall können wir die Zeit, die uns Aigaion jetzt schenkt, nutzen, um wieder mehr Zeit miteinander zu verbringen.”"
     jes "“Ja, das hast du wirklich nötig, Battler-kun!”"
-    extend " ...Es war ja auch notwendig, dass du deine Familie für sechs Jahre verlässt.....”"
+    extend " ...Es war ja auch notwendig, dass du deine Familie für sechs Jahre verlässt.”"
     but "“.....Ach man”"
-    jes "“Auf die Familienkonferenz freue ich mich am meisten...."
+    jes "“Auf die Familienkonferenz freue ich mich am meisten."
     extend "Es ist die kurze Zeit, die meinen langweiligen Alltag auflockert.”"
     but "“Ja, ich bin auch froh, wieder bei euch zu sein, das hat mir in den 6 Jahren am meisten gefehlt.”"
     jes "“Es ist schrecklich, nur mit meinen Eltern und meinem Großvater auf der Insel zu leben."
     extend " Ich muss jeden Tag ziemlich früh aufstehen, weil meine Schule nicht wirklich in der Nähe ist, sondern auf Niijima."
     jes "Nach der Schule muss ich sofort nach Hause, so dass ich keine Zeit mit meinen Freunden verbringen kann.”"
     "Jessica wird immer wütender und die Wut steht ihr ins Gesicht geschrieben."
-    jes "“Danach habe ich nur noch Zeit, meine Hausaufgaben zu machen und in meinem Zimmer zu bleiben.... Es gibt nichts zu tun."
+    jes "“Danach habe ich nur noch Zeit, meine Hausaufgaben zu machen und in meinem Zimmer zu bleiben." 
+    extend " Es gibt nichts zu tun."
     extend " ...Am liebsten würde ich diese blöde Insel für immer verlassen und auf dem Festland ein neues Leben beginnen."
     jes "........"
     extend " .....Da ich keinen direkten Kontakt zu meinen Schulfreunden habe," 
@@ -632,7 +635,7 @@ label chapter1:
     extend " Bis dahin solltest du immer dein Bestes geben, denn das wird sich am Ende des Tages definitiv auszahlen!”"
     jes "“.......Eines Tages?"
     extend " Aber ich warte schon so viele Jahre.....”"
-    hid "“...Du hast dein ganzes Leben noch vor dir, glaub mir, deine Zeit als Teenager auf der Insel wird später nur noch eine Erinnerung sein...."
+    hid "“...Du hast dein ganzes Leben noch vor dir, glaub mir, deine Zeit als Teenager auf der Insel wird später nur noch eine Erinnerung sein."
     extend " Jetzt habe ich mich aber verquatscht," 
     extend " wahahahahaha!"
     hid "Aber lass den Kopf nicht hängen und häng dich weiter rein, ja?”"
@@ -654,7 +657,7 @@ label chapter1:
     jes "“Ja vielen Dank, das hilft mir wirklich sehr, danke!”"
     "Die Worte von Hideyoshi und George haben Jessica sehr gut aufgemuntert."
     extend " Man sieht deutlich, wie Jessica wieder ein wenig lächelt."
-    eva "“Hey, sieht so aus, als wären wir gleich da, Battler-kun..."
+    eva "“Hey, sieht so aus, als wären wir gleich da, Battler-kun."
     eva "Wusstest du, dass die Seekrankheit auch noch nach der Reise anhalten kann?”"
     but "............."
     but "“Bitte mach mir keine Angst, Tante Eva!”"
@@ -670,12 +673,14 @@ label chapter1:
     "Sie beherrscht auch einige chinesische Kampfsporttechniken." 
     extend " Einer ihrer Roundhousekicks soll einmal bei einem Trainingskampf getroffen haben, und ihr Gegner wurde kaltgestellt wie ein Softdrink."
     "Auf keinen Fall möchte ich von ihr unter die Dachlatte getreten werden."
-    extend " Ach ja! Fast hätte ich ihren Namen vergessen.... Sie heißt hier Ushiromiya Eba......" 
+    extend " Ach ja! Fast hätte ich ihren Namen vergessen.... Sie heißt hier Ushiromiya Eba." 
     extend " mit b....."
     but "“.....Nein, du verarschst mich Tante Eva....”"
     eva "“Oh nein..." 
     extend " .....Das würde ich nie tun... *kicher*"
-    eva "....Ich wollte dir nur etwas über die Seekrankheit erzählen... mehr nicht... *kicher*”"
+    eva "....Ich wollte dir nur etwas über die Seekrankheit erzählen," 
+    extend " mehr nicht," 
+    extend " *kicher*”"
     "Tante Eva wollte mich wahrscheinlich nicht erschrecken,"
     extend " sondern meinen Kopf auf die Probe stellen, denn wenn ich an ihre Worte denke, sobald ich an Land bin,"
     extend " dann wird mir bestimmt wieder schlecht," 
