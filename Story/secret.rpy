@@ -4,24 +4,20 @@ label supersecret:
 
 $ discord.update(state = "Talking with the Author")
 $ discord.update(details = "Unknown")
-$ chaptername = "\"Autorentreffen\""
-$ chapternumber = "Kapitel 0"
+$ chapter = 404
 $ songname = "-"
 play sound "audio/sfx/umise_1006.ogg"
 show ware2
 stop music fadeout 2.0
 pause(3)
 scene black with dissolve
+pause (2)
 show moon_1p
 call rainlayer from _call_rainlayer
-show blackpic
-pause(2)
 play wind "audio/sfx/umilse_005.ogg" fadein 3.0
-pause(2)
 play rain "audio/sfx/umilse_012.ogg" fadein 3.0
-pause (2)
 play sound "audio/sfx/umise_052.ogg"
-hide blackpic with gradientcirclefade
+with gradientcirclefade
 pause(2)
 "“Hey!"
 extend " Du da!"

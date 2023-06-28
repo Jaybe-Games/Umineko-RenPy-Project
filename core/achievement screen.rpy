@@ -1,81 +1,92 @@
 """Here we have the menu screen to display all the locked
 and unlocked achievements."""
-screen achievement_menu():
+screen achievement_menu(scroll="viewport"):
 
     tag menu
-
+    modal True
+    add "gui/game_menu.png" at center
+    add "gui/trophys/background.png" at center
+    imagebutton auto "gui/button/back2_%s.png" action Return() activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" yalign 0.02 xalign 0.97
+    add partObj
     ## If you'd like to display a number and total of achievements you can use this.
-    use game_menu(_("Trophäen | {:01d}/{}".format(len(persistent.my_achievements), len(achievement_name) if len(persistent.my_achievements) == len(achievement_name) else len(achievement_name) - 1)), scroll="viewport"):
+    #use cleanmenu(_("Trophäen | {:01d}/{}".format(len(persistent.my_achievements), len(achievement_name) if len(persistent.my_achievements) == len(achievement_name) else len(achievement_name) - 1)), scroll="viewport"):
     ## Else, use this.
     ## Else, use this.
     #use game_menu(_("Achievements"), scroll="viewport"):
 
-        style_prefix "achievements"
+    style_prefix "achievements"
 
-        frame:
-            background None
-            padding (20, 20, 20, 20)
-            align (0.0, 0.0)
-            ysize 1080
-            
-            
+    text _("Freigeschaltet | {:01d}/{}".format(len(persistent.my_achievements), len(achievement_name) if len(persistent.my_achievements) == len(achievement_name) else len(achievement_name) - 1)) yalign 0.1 xalign 0.1 size 50
 
-            vpgrid:
-                cols 2
-                spacing 10
-                xoffset 300
+    frame:
+        background None
+        padding (20, 20, 20, 20)
+        #align (0.0, 0.0)
+        ysize 1080
+        ymargin 150
+        yalign 0.5
+        yoffset 60     
 
-                ## Granted achievements
-                for t in persistent.my_achievements:
-                    if achievement.has(t.name):
+        vpgrid:
+            cols 3
+            spacing 10
+            xalign 0.5
+            yalign 0.7
+            scrollbars "vertical"
+            mousewheel True
+            draggable True
+
+            ## Granted achievements
+            for t in persistent.my_achievements:
+                if achievement.has(t.name):
+                    frame:
+                        background Solid('#00000067')
+
+                        hbox:
+                            yalign 0.5
+                            xysize (50, 100)
+                            add t.image size (100, 100) yalign 0.5
+
+                            null width 20
+
+                            vbox:
+                                spacing 0
+                                yfill False
+                                text t.name style 'achievements_label' color '#ffffff'
+                                text t.message color '#ffffff'
+
+            ## Locked achievements
+            for v in achievement_name.values():
+                ## Index '0' is the name of the achievement.
+                if not achievement.has(v[0]):
+
+                    ## We're doing a check for all achievements
+                    ## that is not a 'platinum'.
+                    ## The platinum achievement will not appear
+                    ## in the list.
+                    ## Index '3' is the type of achievement.
+                    #if v[3] != 'platinum':
                         frame:
-                            background Solid('#00000067')
-
                             hbox:
                                 yalign 0.5
-                                xysize (50, 100)
-                                add t.image size (100, 100) yalign 0.5
+                                xysize (100, 100)
+                                ## This will display a locked icon.
+                                add 'gui/trophys/locked.png' size (100, 100) yalign 0.5
 
                                 null width 20
 
                                 vbox:
                                     spacing 0
                                     yfill False
-                                    text t.name style 'achievements_label' color '#ffffff'
-                                    text t.message color '#ffffff'
 
-                ## Locked achievements
-                for v in achievement_name.values():
-                    ## Index '0' is the name of the achievement.
-                    if not achievement.has(v[0]):
-
-                        ## We're doing a check for all achievements
-                        ## that is not a 'platinum'.
-                        ## The platinum achievement will not appear
-                        ## in the list.
-                        ## Index '3' is the type of achievement.
-                        #if v[3] != 'platinum':
-                            frame:
-                                hbox:
-                                    yalign 0.5
-                                    xysize (100, 100)
-                                    ## This will display a locked icon.
-                                    add 'gui/trophys/locked.png' size (100, 100) yalign 0.5
-
-                                    null width 20
-
-                                    vbox:
-                                        spacing 0
-                                        yfill False
-
-                                        ## We're setting the data feedback to represent
-                                        ## the None and 'hidden' achievements.
-                                        if v[3] is None:
-                                            ## Index '1' is the description of the achievemnt.
-                                            text str(v[0]) style 'achievements_label' color '#FFF3'
-                                            text str(v[1]) color '#FFF3'
-                                        else:
-                                            text _('Versteckte Trophäe') style 'achievements_label' color '#FFF3'
+                                    ## We're setting the data feedback to represent
+                                    ## the None and 'hidden' achievements.
+                                    if v[3] is None:
+                                        ## Index '1' is the description of the achievemnt.
+                                        text str(v[0]) style 'achievements_label' color '#FFF3'
+                                        text str(v[1]) color '#FFF3'
+                                    else:
+                                        text _('Versteckte Trophäe') style 'achievements_label' color '#FFF3'
 
 
 init python:
@@ -131,38 +142,37 @@ screen achievement_notification_catcher():
 screen achievement_notification():
 
     zorder 100
-
     if achievement_notification_list:
 
         frame at achievement_appear:
             background Solid('#00000098')
             align (0.5, 0.0)
-            padding (20, 20, 20, 20)
+            padding (20, 20, 200, 20)
 
             hbox:
-                xysize (100, 100)
+                xysize (300, 100)
                 add achievement_notification_list[0].image
 
                 null width 20
 
                 vbox:
                     yalign 0.5
-                    xminimum 340
-                    xmaximum 440
+                    xminimum 700
+                    xmaximum 900
                     yfill False
                     xfill False
 
                     text str(achievement_notification_list[0].name):
                         color '#ffffff'
-                        size 25
+                        size 50
 
                     text str(achievement_notification_list[0].message):
                         style 'victory_message_text'
-                        size 16
+                        size 40
 
 style victory_message_text:
     color "#ffffff"
-    size 40
+    size 30
 
 transform achievement_appear:
     subpixel True

@@ -61,11 +61,10 @@ Yuria (School Sprite): Jaybe\n
 
 USED ASSETS\n
 
-Gameassets from Playstation 3
-Umineko no Naku Koro ni
-~Rondo of the Witch and Reasoning~\n
+Gameassets from
+Umineko no Naku Koro ni Saku
+~Symphony of Catbox and Dreams~\n
 
-Auto Highlight: Wattson\n
 Discord Rich Presence: Lezalith\n
 FancyText: yukinogatari\n
 RPY-VNBE Achievement System: rjscdev\n
@@ -164,8 +163,8 @@ define config.game_main_transition = dissolve
 define config.exit_yesno_transition = ImageDissolve("images/masks/circle.png", 1.0, reverse=True, ramplen = 100)
 
 define config.enter_yesno_transition = ImageDissolve("images/backgrounds/different_spiral_1a.png",0.6,reverse=False, ramplen = 30)
-
-define config.say_attribute_transition = dissolve
+define fastdissolve = Dissolve(0.2)
+define config.say_attribute_transition = fastdissolve
 
 define config.manage_gc = True
 
@@ -209,13 +208,17 @@ define config.window_hide_transition = Dissolve(.5)
 ## Controls the default text speed. The default, 0, is infinite, while any other
 ## number is the number of characters per second to type out.
 
-default preferences.text_cps = 80
+default preferences.text_cps = 50
 
 
 ## The default auto-forward delay. Larger numbers lead to longer waits, with 0
 ## to 30 being the valid range.
 
-default preferences.afm_time = 10
+default preferences.afm_time = 15
+
+
+define config.default_music_volume = 0.5
+define config.default_sfx_volume = 0.5
 
 
 ## Save directory ##############################################################

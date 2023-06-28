@@ -62,15 +62,29 @@ init python:
         ##       changes to be reflected.
 
         ## Example
-        "tipshunter": [_("Tippsjäger"), _("Erhalte deinen ersten Tipp."), 'gui/trophys/bronze1.png', None],
-        "charhunter": [_("Charakterjäger"), _("Schalte den ersten Charakter frei."), 'gui/trophys/bronze2.png', None],
-        "musichunter": [_("Musikboxjäger"), _("Schalte die Musikbox frei."), 'gui/trophys/bronze3.png', None],
-        "chapter1": [_("Runter vom Boot"), _("Du hast Rokkenjima erreicht."), 'gui/trophys/bronze4.png', 'hidden'],
-        "konami": [_("Konami Code"), _("War das etwa ein Nipah?"), 'gui/trophys/silver1.png', 'hidden'],
-        "secret": [_("Autorentreffen"), _("Du hast den Autor gefunden."), 'gui/trophys/silver2.png', 'hidden'],
-        "mainclear": [_("Eine andere Beatrice?"), _("Schließe die Hauptstory ab."), 'gui/trophys/silver3.png', 'hidden'],
-        "teaclear": [_("Ayato und Yuria"), _("Schließe die Tee Party ab."), 'gui/trophys/silver4.png', 'hidden'],
-        "gameclear": [_("Auferstehung der Goldenen Hexe"), _("Schließe ???? ab."), 'gui/trophys/gold1.png', 'hidden'],
+        "tipshunter": [_("Tippsjäger"), _("Erhalte deinen ersten Tipp"), 'gui/trophys/bronze1.png', None],
+        "charhunter": [_("Charakterjäger"), _("Schalte den ersten Charakter frei"), 'gui/trophys/bronze2.png', None],
+        "musichunter": [_("Musikboxjäger"), _("Schalte die Musikbox frei"), 'gui/trophys/bronze3.png', None],
+        "chapter1": [_("Runter vom Boot"), _("Du hast Rokkenjima erreicht"), 'gui/trophys/bronze4.png', 'hidden'],
+        "rules": [_("Kenner der Spielregeln"), _("Rokkenjimas Spielregeln erlernt"), 'gui/trophys/bronze5.png', 'hidden'],
+        "ayato": [_("Das hat jemand überlebt?"), _("Ayato vor dem sterben bewahrt"), 'gui/trophys/bronze6.png', 'hidden'],
+        "letter": [_("Post ist da!"), _("Einen seltsamen Brief von Beatrice erhalten"), 'gui/trophys/bronze7.png', 'hidden'],
+        "midnight": [_("05. Oktober"), _("Wer hat die Nacht wohl überlebt?"), 'gui/trophys/bronze8.png', 'hidden'],
+        "fight": [_("Wortgefecht"), _("Du hast dir mit Beatrice einen Kampf des Intellekts geliefert"), 'gui/trophys/bronze9.png', 'hidden'],
+        "wedding": [_("Bis der Tod euch scheidet"), _("An der 'Hochzeit' teilgenommen"), 'gui/trophys/bronze10.png', 'hidden'],
+        "separate": [_("Trennung"), _("In zwei Gruppen aufgeteilt"), 'gui/trophys/bronze11.png', 'hidden'],
+        "accused": [_("Angeklagt"), _("Werde vom Senat der Hexen angeklagt"), 'gui/trophys/bronze12.png', 'hidden'],
+        "family": [_("Familienprobleme"), _("Die eigene Mutter.... Wie grausam...."), 'gui/trophys/bronze13.png', 'hidden'],
+        "panic": [_("Den Spiegel durchbrechen"), _("Dein anderes Ich ist entkommen!"), 'gui/trophys/bronze14.png', 'hidden'],
+        "lllusions": [_("Illusionen zu Illusionen"), _("Die Illusion der Falschen Hexe gebrochen"), 'gui/trophys/bronze15.png', 'hidden'],
+        "final": [_("Ich bin der pragmatische Teil!"), _("Wieder eins geworden!"), 'gui/trophys/bronze16.png', 'hidden'],
+        "charcollector": [_("Charaktersammler"), _("Schalte alle Charaktere frei"), 'gui/trophys/silver1.png', 'hidden'],
+        "secret": [_("Autorentreffen"), _("Du hast den Autor gefunden"), 'gui/trophys/silver2.png', 'hidden'],
+        "mainclear": [_("Eine andere Beatrice?"), _("Schließe die Hauptstory ab"), 'gui/trophys/silver3.png', 'hidden'],
+        "teaclear": [_("Ayato und Yuria"), _("Schließe die Tee Party ab"), 'gui/trophys/silver4.png', 'hidden'],
+        "tipscollector": [_("Tippsfanatiker"), _("Erhalte alle Tipps und Grimoireeinträge"), 'gui/trophys/silver5.png', 'hidden'],
+        "gameclear": [_("Auferstehung der Goldenen Hexe"), _("Schließe ???? ab"), 'gui/trophys/gold1.png', 'hidden'],
+        "bonusclear": [_("Verbotene Erinnerungen"), _("Schließe alle Bonuskapitel ab"), 'gui/trophys/gold2.png', 'hidden'],
         ## The None, means that the achievement will be displayed greyed-out before it is granted (or achieved).
         ## I use these words to describe the type of achievement it is;
         ##            None = default (greyed out and can see the name and description of the achievement.)
@@ -96,7 +110,7 @@ default achievement_bronze1 = Achievement(name=achievement_name['tipshunter'][0]
 default achievement_bronze2 = Achievement(name=achievement_name['charhunter'][0], message=achievement_name['charhunter'][1], image=achievement_name['charhunter'][2])
 default achievement_bronze3 = Achievement(name=achievement_name['musichunter'][0], message=achievement_name['musichunter'][1], image=achievement_name['musichunter'][2])
 default achievement_bronze4 = Achievement(name=achievement_name['chapter1'][0], message=achievement_name['chapter1'][1], image=achievement_name['chapter1'][2])
-default achievement_silver1 = Achievement(name=achievement_name['konami'][0], message=achievement_name['konami'][1], image=achievement_name['konami'][2])
+default achievement_silver1 = Achievement(name=achievement_name['charcollector'][0], message=achievement_name['charcollector'][1], image=achievement_name['charcollector'][2])
 default achievement_silver2 = Achievement(name=achievement_name['secret'][0], message=achievement_name['secret'][1], image=achievement_name['secret'][2])
 default achievement_silver3 = Achievement(name=achievement_name['mainclear'][0], message=achievement_name['mainclear'][1], image=achievement_name['mainclear'][2])
 default achievement_silver4 = Achievement(name=achievement_name['teaclear'][0], message=achievement_name['teaclear'][1], image=achievement_name['teaclear'][2])

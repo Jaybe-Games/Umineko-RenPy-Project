@@ -1,4 +1,4 @@
-image kin_a11_warai1 = Composite(
+image kin a11warai1 = Composite(
     (1242, 1192),
     (0, 0), "images/sprites/kin/a11/warai1/0.png",
     (0, 0), WhileSpeaking("kin", "kin_a11_warai1_mouth", "images/sprites/kin/a11/warai1/0.png"),
@@ -13,7 +13,7 @@ image kin_a11_warai1_mouth:
     .20
     repeat
 
-image kin_a11_warai2 = Composite(
+image kin a11warai2 = Composite(
     (1242, 1192),
     (0, 0), "images/sprites/kin/a11/warai2/0.png",
     (0, 0), WhileSpeaking("kin", "kin_a11_warai2_mouth", "images/sprites/kin/a11/warai2/0.png"),
@@ -28,7 +28,7 @@ image kin_a11_warai2_mouth:
     .20
     repeat
 
-image kin_a11_defo1 = Composite(
+image kin a11defo1 = Composite(
     (1242, 1192),
     (0, 0), "images/sprites/kin/a11/defo1/0.png",
     (0, 0), WhileSpeaking("kin", "kin_a11_defo1_mouth", "images/sprites/kin/a11/defo1/0.png"),
@@ -43,7 +43,7 @@ image kin_a11_defo1_mouth:
     .20
     repeat
 
-image kin_a11_akuwarai1 = Composite(
+image kin a11akuwarai1 = Composite(
     (1242, 1192),
     (0, 0), "images/sprites/kin/a11/akuwarai1/0.png",
     (0, 0), WhileSpeaking("kin", "kin_a11_akuwarai1_mouth", "images/sprites/kin/a11/akuwarai1/0.png"),
@@ -58,7 +58,7 @@ image kin_a11_akuwarai1_mouth:
     .20
     repeat
 
-image kin_a11_fukigen1 = Composite(
+image kin a11fukigen1 = Composite(
     (1242, 1192),
     (0, 0), "images/sprites/kin/a11/fukigen1/0.png",
     (0, 0), WhileSpeaking("kin", "kin_a11_fukigen1_mouth", "images/sprites/kin/a11/fukigen1/0.png"),

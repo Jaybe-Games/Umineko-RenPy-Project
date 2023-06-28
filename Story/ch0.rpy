@@ -1,11 +1,11 @@
+
 label start:
 
     $ discord.update(state = "Writing to you in a quadrillion years")
     $ discord.update(details = "Reading Prologue")
-    $ chaptername = "“Ich schreibe an dich in einer Quadrillion Jahren”"
-    $ chapternumber = "Prolog"
+    $ chapter = 0
     $ songname = "-"
-    window auto
+    $ _game_menu_screen = "cleanmenu"
     pause 2
     call showch0 from _call_showch0
     pause 2
@@ -14,20 +14,14 @@ label start:
     pause (5)
     hide disclaimer1 with dissolve
     pause (2)
-    show disclaimer2 with dissolve
-    pause (1)
-    play sound "audio/sfx/umise_032.ogg"
-    pause (10)
-    hide disclaimer2 with dissolve
-    pause (2)
     $ renpy.notify("♪At Death's Door")
     $ songname = "At Death's Door"
     play music "audio/bgm/umib_014_intro.ogg"
     queue music "audio/bgm/umib_014_loop.ogg" loop 
-    show text "Polizeiliche Kriminalakten zum Fall im Dorf Hinamizawa" with dissolve
+    show may_1_1983 with dissolve
     pause (5)
-    hide text with fade
-    pause (2)
+    hide may_1_1983 with dissolve
+    pause (3)
     scene ke_s2 with dissolve
     "01. Mai 1983."
     "An die Abteilungen 1 bis 12,"
@@ -35,12 +29,12 @@ label start:
     "Generaldirektor XXX"
     "An den Polizeipräsidenten und alle Abteilungsleiter."
     "Über den Fall im Dorf Hinamizawa."  
-    if persistent.tip == 0:
+    if persistent.tipunlocked == 0:
+        $ persistent.newelement1 = True
         $ Achievement.add(achievement_bronze1)
-        $ persistent.wiki_unlocked.add("wiki_hina")
         play sound "audio/sfx/umise_1060.ogg"
         $ renpy.notify("Das Tippsmenü wurde unter \"Extras\" freigeschaltet.")
-        $ persistent.tip = 1
+        $ persistent.tip1 = True
         $ persistent.tipunlocked = True
     "Über den Fall im Dorf {note_green}Hinamizawa{/note_green} wurde in einigen Massenmedien berichtet."
     "Er hat weltweit Aufmerksamkeit erregt," 
@@ -100,6 +94,7 @@ label start:
     "Für die Dorfbewohner ist das so, als ob hier Teufel oder Hexen am Werk gewesen sind,"
     extend " was die Suche nach Zeugen ebenfalls sehr schwierig macht."
     "Mehr konnten meine Kollegen und ich bisher nicht herausfinden, so dass wir leider immer noch im Dunkeln tappen."
+    window hide
     $ songname = "-"
     stop music fadeout 3
     pause (2)

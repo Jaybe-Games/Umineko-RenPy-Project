@@ -3,7 +3,7 @@ init python:
     chaptername = "ChapterName"
     songname = "SongName"
 
-image chaptertext = ParameterizedText(xalign=0.0, yalign=1.0, font="fonts/arial.ttf", outlines= [ (absolute(3), "#000", absolute(0), absolute(0)) ])
+image chaptertext = ParameterizedText(xalign=0.0, yalign=1.0, font="fonts/AOTFShinGoProMedium.otf", outlines= [ (absolute(3), "#000", absolute(0), absolute(0)) ])
 
 label showch0:
 
@@ -147,7 +147,7 @@ label showura01:
 
 label showura02:
 
-    show chaptertext "Walzer der Reflexionen und Trugbilder"
+    show chaptertext "Bis zum Zentrum des Universums"
     $ renpy.pause(5)
     hide chaptertext with dissolve
     return

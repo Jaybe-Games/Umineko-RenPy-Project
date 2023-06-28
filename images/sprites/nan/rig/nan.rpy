@@ -1,4 +1,4 @@
-image nan_a1_defo1 = Composite(
+image nan a1defo1 = Composite(
     (904, 1104),
     (0, 0), "images/sprites/nan/a1/defo1/0.png",
     (0, 0), WhileSpeaking("nan", "nan_a1_defo1_mouth", "images/sprites/nan/a1/defo1/0.png"),
@@ -13,7 +13,7 @@ image nan_a1_defo1_mouth:
     .20
     repeat
 
-image nan_a1_fumu1 = Composite(
+image nan a1fumu1 = Composite(
     (904, 1104),
     (0, 0), "images/sprites/nan/a1/fumu1/0.png",
     (0, 0), WhileSpeaking("nan", "nan_a1_fumu1_mouth", "images/sprites/nan/a1/fumu1/0.png"),
@@ -28,7 +28,7 @@ image nan_a1_fumu1_mouth:
     .20
     repeat
 
-image nan_a2_fumu1 = Composite(
+image nan a2fumu1 = Composite(
     (904, 1104),
     (0, 0), "images/sprites/nan/a2/fumu1/0.png",
     (0, 0), WhileSpeaking("nan", "nan_a2_fumu1_mouth", "images/sprites/nan/a2/fumu1/0.png"),

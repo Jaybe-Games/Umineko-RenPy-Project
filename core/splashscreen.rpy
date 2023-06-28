@@ -2,6 +2,7 @@
 label splashscreen:
 
 #jump test
+#jump test2
 scene black with dissolve
 pause (1)
 show splash1 with dissolve
@@ -107,3 +108,17 @@ label quit:
 
 label after_load:
     play sound "audio/sfx/umise_1006.ogg"
+
+label before_main_menu:
+    if persistent.newelement1 == True:
+        $ persistent.newelement1 = False
+        play effect "audio/sfx/umise_022.ogg"
+        show unlocked1 with gradientcirclefade
+        pause(5)
+        show screen navigationfake
+        with fastdissolve
+        hide screen navigationfake
+        hide unlocked1
+        return
+    else:
+        pass

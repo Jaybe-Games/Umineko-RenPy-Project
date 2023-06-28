@@ -1,4 +1,4 @@
-image gen_a11_defo1 = Composite(
+image gen a11defo1 = Composite(
     (786, 1173),
     (0, 0), "images/sprites/gen/a11/defo1/0.png",
     (0, 0), WhileSpeaking("gen", "gen_a11_defo1_mouth", "images/sprites/gen/a11/defo1/0.png"),
@@ -13,7 +13,7 @@ image gen_a11_defo1_mouth:
     .20
     repeat
 
-image gen_a11_komaru1 = Composite(
+image gen a11komaru1 = Composite(
     (786, 1173),
     (0, 0), "images/sprites/gen/a11/komaru1/0.png",
     (0, 0), WhileSpeaking("gen", "gen_a11_komaru1_mouth", "images/sprites/gen/a11/komaru1/0.png"),

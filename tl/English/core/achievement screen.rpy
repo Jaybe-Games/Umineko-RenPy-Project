@@ -10,5 +10,4 @@ translate English strings:
 
     # game/core/achievement screen.rpy:78
     old "Versteckte Trophäe"
-    new "Versteckte Trophäe"
-
+    new "Hidden Trophy"

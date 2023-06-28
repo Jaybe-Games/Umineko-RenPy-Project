@@ -1,4 +1,4 @@
-image mar_a11_warai1 = Composite(
+image mar a11warai1 = Composite(
     (633, 1026),
     (0, 0), "images/sprites/mar/a11/warai1/0.png",
     (0, 0), WhileSpeaking("mar", "mar_a11_warai1_mouth", "images/sprites/mar/a11/warai1/0.png"),
@@ -13,7 +13,7 @@ image mar_a11_warai1_mouth:
     .20
     repeat
 
-image mar_a11_uuu1 = Composite(
+image mar a11uuu1 = Composite(
     (633, 1026),
     (0, 0), "images/sprites/mar/a11/uuu1/0.png",
     (0, 0), WhileSpeaking("mar", "mar_a11_uuu1_mouth", "images/sprites/mar/a11/uuu1/0.png"),
@@ -28,7 +28,7 @@ image mar_a11_uuu1_mouth:
     .20
     repeat
 
-image mar_a22_warai2 = Composite(
+image mar a22warai2 = Composite(
     (633, 1026),
     (0, 0), "images/sprites/mar/a22/warai2/0.png",
     (0, 0), WhileSpeaking("mar", "mar_a22_warai2_mouth", "images/sprites/mar/a22/warai2/0.png"),
@@ -43,7 +43,7 @@ image mar_a22_warai2_mouth:
     .20
     repeat
 
-image mar_a11_defo1 = Composite(
+image mar a11defo1 = Composite(
     (633, 1026),
     (0, 0), "images/sprites/mar/a11/defo1/0.png",
     (0, 0), WhileSpeaking("mar", "mar_a11_defo1_mouth", "images/sprites/mar/a11/defo1//0.png"),
@@ -55,5 +55,20 @@ image mar_a11_defo1_mouth:
     "images/sprites/mar/a11/defo1/1.png"
     .10
     "images/sprites/mar/a11/defo1/2.png"
+    .20
+    repeat
+
+image mar a11niyari1 = Composite(
+    (633, 1026),
+    (0, 0), "images/sprites/mar/a11/niyari1/0.png",
+    (0, 0), WhileSpeaking("mar", "mar_a11_niyari1_mouth", "images/sprites/mar/a11/niyari1//0.png"),
+)
+
+image mar_a11_niyari1_mouth:
+    "images/sprites/mar/a11/niyari1/0.png"
+    .10
+    "images/sprites/mar/a11/niyari1/1.png"
+    .10
+    "images/sprites/mar/a11/niyari1/2.png"
     .20
     repeat

@@ -38,6 +38,7 @@ image ctc_blink:
     linear 0.75 alpha 0.0
     repeat
 
+
 init -10 python:
     
     class PreviewSlowText(renpy.Displayable):

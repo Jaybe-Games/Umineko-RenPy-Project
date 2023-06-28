@@ -224,23 +224,23 @@ define gui.choice_button_text_insensitive_color = "#444444"
 ## image files in gui/button, like the other kinds of buttons.
 
 ## The save slot button.
-define gui.slot_button_width = 414
-define gui.slot_button_height = 309
+define gui.slot_button_width = 365
+define gui.slot_button_height = 275
 define gui.slot_button_borders = Borders(14, 14, 14, 14)
-define gui.slot_button_text_size = 40
-define gui.slot_button_text_xalign = 0.0
+define gui.slot_button_text_size = 10
+define gui.slot_button_text_xalign = 0.5
 define gui.slot_button_text_ypos = 30
 define gui.slot_button_text_idle_color = gui.idle_small_color
 define gui.slot_button_text_selected_idle_color = gui.selected_color
 define gui.slot_button_text_selected_hover_color = gui.hover_color
 
 ## The width and height of thumbnails used by the save slots.
-define config.thumbnail_width = 384
-define config.thumbnail_height = 216
+define config.thumbnail_width = 336
+define config.thumbnail_height = 189
 
 ## The number of columns and rows in the grid of save slots.
-define gui.file_slot_cols = 3
-define gui.file_slot_rows = 2
+define gui.file_slot_cols = 4
+define gui.file_slot_rows = 3
 
 
 ## Positioning and Spacing #####################################################
@@ -273,10 +273,10 @@ define gui.pref_button_spacing = 0
 define gui.pref_button_xalign = 300
 
 ## The spacing between file page buttons.
-define gui.page_spacing = -50
+define gui.page_spacing = -20
 
 ## The spacing between file slots.
-define gui.slot_spacing = 15
+define gui.slot_spacing = 0
 
 ## The position of the main menu text.
 define gui.main_menu_text_xalign = 1.0
@@ -318,7 +318,7 @@ define gui.slider_size = 50
 ## True if bar images should be tiled. False if they should be linearly scaled.
 define gui.bar_tile = False
 define gui.scrollbar_tile = False
-define gui.slider_tile = True
+define gui.slider_tile = False
 
 ## Horizontal borders.
 define gui.bar_borders = Borders(6, 6, 6, 6)
@@ -340,23 +340,23 @@ define gui.unscrollable = "hide"
 ## The history screen displays dialogue that the player has already dismissed.
 
 ## The number of blocks of dialogue history Ren'Py will keep.
-define config.history_length = 100
+define config.history_length = 300
 
 ## The height of a history screen entry, or None to make the height variable at
 ## the cost of performance.
-define gui.history_height = 210
+define gui.history_height = 320
 
 ## The position, width, and alignment of the label giving the name of the
 ## speaking character.
-define gui.history_name_xpos = 233
+define gui.history_name_xpos = 0
 define gui.history_name_ypos = 0
-define gui.history_name_width = 233
-define gui.history_name_xalign = 1.0
+define gui.history_name_width = 300
+define gui.history_name_xalign = 0.0
 
 ## The position, width, and alignment of the dialogue text.
-define gui.history_text_xpos = 255
-define gui.history_text_ypos = 3
-define gui.history_text_width = 550
+define gui.history_text_xpos = 260
+define gui.history_text_ypos = 0
+define gui.history_text_width = 1300
 define gui.history_text_xalign = 0.0
 
 
@@ -458,8 +458,8 @@ init python:
         gui.history_text_width = 490
 
         ## File button layout.
-        gui.file_slot_cols = 2
-        gui.file_slot_rows = 2
+        gui.file_slot_cols = 1
+        gui.file_slot_rows = 10
 
         ## NVL-mode.
         gui.nvl_height = 255

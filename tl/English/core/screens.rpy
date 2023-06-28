@@ -2,6 +2,9 @@
 
 translate English strings:
 
+    old "Spielzeit: [minutes]:[seconds:02d]"
+    new "Playtime: [minutes]:[seconds:02d]"
+
     # game/core/screens.rpy:386
     old "End Replay"
     new "End Replay"
@@ -305,4 +308,28 @@ translate English strings:
     # game/core/screens.rpy:2168
     old "Men{color=#f00}ü{/color}"
     new "Men{color=#f00}ü{/color}"
+
+# TODO: Translation updated at 2023-06-24 01:29
+
+translate English strings:
+
+    # game/core/screens.rpy:891
+    old "{#file_time}%A, %B %d %Y, %H:%M "
+    new "{#file_time}%A, %B %d %Y, %H:%M "
+
+    # game/core/screens.rpy:1009
+    old "{color=#fff}- Textgeschwindi{color=#f00}g{color=#fff}keit >>"
+    new "{color=#fff}- Textgeschwindi{color=#f00}g{color=#fff}keit >>"
+
+    # game/core/screens.rpy:1018
+    old "{color=#fff}+ Auto{color=#f00}m{color=#fff}odusgeschwindigkeit -"
+    new "{color=#fff}+ Auto{color=#f00}m{color=#fff}odusgeschwindigkeit -"
+
+    # game/core/screens.rpy:1025
+    old "{color=#fff}- Musiklautstär{color=#f00}k{color=#fff}e +"
+    new "{color=#fff}- Musiklautstär{color=#f00}k{color=#fff}e +"
+
+    # game/core/screens.rpy:1032
+    old "{color=#fff}- Soundlautstär{color=#f00}k{color=#fff}e +"
+    new "{color=#fff}- Soundlautstär{color=#f00}k{color=#fff}e +"
 

@@ -132,3 +132,17 @@ translate English supersecret_9e68c3cf:
     # "Also dann, lebe wohl.\""
     "Also dann, lebe wohl.\""
 
+# TODO: Translation updated at 2023-06-24 01:29
+
+# game/Story/secret.rpy:26
+translate English supersecret_7cb61011:
+
+    # "“Hey!"
+    "“Hey!"
+
+# game/Story/secret.rpy:51
+translate English supersecret_af5c3778:
+
+    # "Also dann, lebe wohl.”"
+    "Also dann, lebe wohl.”"
+
