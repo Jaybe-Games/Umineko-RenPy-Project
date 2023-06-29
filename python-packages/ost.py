@@ -324,7 +324,7 @@ def current_music_pause():
         game_soundtrack_pause = ("<from " + str(soundtrack_position) + ">" 
                                 + game_soundtrack.path)
 
-    music.stop(channel='music_room')
+    music.stop(channel='music_room',fadeout=2.0)
 
 def current_music_play():
     '''

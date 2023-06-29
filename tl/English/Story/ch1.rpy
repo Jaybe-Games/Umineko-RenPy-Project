@@ -8032,3 +8032,341 @@ translate English chapter1_2d83db4b:
     # extend " Das kann doch nicht wahr sein!"
     extend " Das kann doch nicht wahr sein!"
 
+# TODO: Translation updated at 2023-06-28 23:28
+
+# game/Story/ch1.rpy:210
+translate English chapter1_87be92b1:
+
+    # extend " Entschuldigung, dass ich einen falschen Eindruck erweckt habe."
+    extend " Entschuldigung, dass ich einen falschen Eindruck erweckt habe."
+
+# game/Story/ch1.rpy:424
+translate English chapter1_deea878b:
+
+    # geo "Es gibt die tantrische Spiritualität für intensivere Gefühle und auch bei den Griechen gab es die dionysische Spiritualität,"
+    geo "Es gibt die tantrische Spiritualität für intensivere Gefühle und auch bei den Griechen gab es die dionysische Spiritualität,"
+
+# game/Story/ch1.rpy:426
+translate English chapter1_a608b996:
+
+    # extend " In diesem Sinne hat jeder Mensch Sturmgötter in sich."
+    extend " In diesem Sinne hat jeder Mensch Sturmgötter in sich."
+
+# game/Story/ch1.rpy:427
+translate English chapter1_e2354a4c:
+
+    # geo ".....Diese können in einem selbst aktiviert werden."
+    geo ".....Diese können in einem selbst aktiviert werden."
+
+# game/Story/ch1.rpy:428
+translate English chapter1_ff19fc61:
+
+    # extend a11majime2 " ....Solche Sturmgötter können aber auch zu schlimmen Taten, zu Verbrechen und Gewalt verleiten."
+    extend a11majime2 " ....Solche Sturmgötter können aber auch zu schlimmen Taten, zu Verbrechen und Gewalt verleiten."
+
+# game/Story/ch1.rpy:437
+translate English chapter1_1a90af4f:
+
+    # extend a11atya3 " ...Ich wusste nicht mal, dass Wörter wie tantrisch oder dionysisch existieren."
+    extend a11atya3 " ...Ich wusste nicht mal, dass Wörter wie tantrisch oder dionysisch existieren."
+
+# game/Story/ch1.rpy:442
+translate English chapter1_4976d91f:
+
+    # but ".............hmm"
+    but ".............hmm"
+
+# game/Story/ch1.rpy:444
+translate English chapter1_28ca3b47:
+
+    # but "“.....Ähm,"
+    but "“.....Ähm,"
+
+# game/Story/ch1.rpy:445
+translate English chapter1_e8b7010c:
+
+    # extend " .....ähm,"
+    extend " .....ähm,"
+
+# game/Story/ch1.rpy:446
+translate English chapter1_b064de8d:
+
+    # extend " .......tantrisch,"
+    extend " .......tantrisch,"
+
+# game/Story/ch1.rpy:447
+translate English chapter1_f127f3a6:
+
+    # extend " ......intensivere Gefühle,"
+    extend " ......intensivere Gefühle,"
+
+# game/Story/ch1.rpy:448
+translate English chapter1_07e60a74:
+
+    # extend " ........dionysische Spiritualität?"
+    extend " ........dionysische Spiritualität?"
+
+# game/Story/ch1.rpy:449
+translate English chapter1_15157815:
+
+    # extend b23nayamu2 " ....Das hast du aus dieser einen Yoga-Zeitschrift von heute Morgen."
+    extend b23nayamu2 " ....Das hast du aus dieser einen Yoga-Zeitschrift von heute Morgen."
+
+# game/Story/ch1.rpy:453
+translate English chapter1_bf63e26b:
+
+    # extend " ....hahahaha,"
+    extend " ....hahahaha,"
+
+# game/Story/ch1.rpy:454
+translate English chapter1_7aacff9d:
+
+    # extend " ....aber ich habe dich zum Nachdenken gebracht, nicht wahr?"
+    extend " ....aber ich habe dich zum Nachdenken gebracht, nicht wahr?"
+
+# game/Story/ch1.rpy:463
+translate English chapter1_19dc5d0d:
+
+    # extend a11komaru3 " uhmmmm na ja...."
+    extend a11komaru3 " uhmmmm na ja...."
+
+# game/Story/ch1.rpy:467
+translate English chapter1_d321c261:
+
+    # extend " ....Sexualität"
+    extend " ....Sexualität"
+
+# game/Story/ch1.rpy:468
+translate English chapter1_b3b4d8db:
+
+    # geo a11defo1 " ....Es ist ein Begriff ursprünglich aus Indien, und wird mit 'Zusammenhang' oder auch 'Gefüge' übersetzt."
+    geo a11defo1 " ....Es ist ein Begriff ursprünglich aus Indien, und wird mit 'Zusammenhang' oder auch 'Gefüge' übersetzt."
+
+# game/Story/ch1.rpy:470
+translate English chapter1_a5560983:
+
+    # geo "Es ist ein sehr breites Thema...”"
+    geo "Es ist ein sehr breites Thema...”"
+
+# game/Story/ch1.rpy:471
+translate English chapter1_adc540c1:
+
+    # but b11ero1 "“Geil,"
+    but b11ero1 "“Geil,"
+
+# game/Story/ch1.rpy:472
+translate English chapter1_1f6b0183:
+
+    # extend " .....das muss ich mal ausprobieren!"
+    extend " .....das muss ich mal ausprobieren!"
+
+# game/Story/ch1.rpy:473
+translate English chapter1_734663e1:
+
+    # extend " ....Wenn ich für so eine 'Spiritualität' nur dieses Tantra Dings machen muss, bin ich dabei!"
+    extend " ....Wenn ich für so eine 'Spiritualität' nur dieses Tantra Dings machen muss, bin ich dabei!"
+
+# game/Story/ch1.rpy:482
+translate English chapter1_e92534ec:
+
+    # but "“.....Auauau, Jessica-chan..."
+    but "“.....Auauau, Jessica-chan..."
+
+# game/Story/ch1.rpy:483
+translate English chapter1_df09c713:
+
+    # extend " Das hat richtig weh getan!”"
+    extend " Das hat richtig weh getan!”"
+
+# game/Story/ch1.rpy:489
+translate English chapter1_e479f55d:
+
+    # extend " ......War ja zu erwarten, dass das deine einzige Motivation ist, Trottel-Battler!”"
+    extend " ......War ja zu erwarten, dass das deine einzige Motivation ist, Trottel-Battler!”"
+
+# game/Story/ch1.rpy:490
+translate English chapter1_753de5ba:
+
+    # "Kaum hatte Battler ausgesprochen, dass er sowas gerne 'ausprobieren' möchte, hatte er auch schon Jessicas Faust im Gesicht."
+    "Kaum hatte Battler ausgesprochen, dass er sowas gerne 'ausprobieren' möchte, hatte er auch schon Jessicas Faust im Gesicht."
+
+# game/Story/ch1.rpy:491
+translate English chapter1_1a36127e:
+
+    # "Jessica reagiert immer sehr allergisch darauf, wenn ihr perverser Cousin mit diesem Schweinkram anfängt."
+    "Jessica reagiert immer sehr allergisch darauf, wenn ihr perverser Cousin mit diesem Schweinkram anfängt."
+
+# game/Story/ch1.rpy:492
+translate English chapter1_7d751425:
+
+    # extend " Battler hat jetzt eine ziemlich rote Wange, als hätte er es auf eine heiße Herdplatte gelegt."
+    extend " Battler hat jetzt eine ziemlich rote Wange, als hätte er es auf eine heiße Herdplatte gelegt."
+
+# game/Story/ch1.rpy:493
+translate English chapter1_4dc3d689:
+
+    # jes "“.....Perverser Battler!"
+    jes "“.....Perverser Battler!"
+
+# game/Story/ch1.rpy:499
+translate English chapter1_e777103e:
+
+    # geo "“.....Hey!"
+    geo "“.....Hey!"
+
+# game/Story/ch1.rpy:500
+translate English chapter1_bd9d1d3b:
+
+    # extend " ....Beruhigt euch bitte!”"
+    extend " ....Beruhigt euch bitte!”"
+
+# game/Story/ch1.rpy:501
+translate English chapter1_1d0d9333:
+
+    # "George ist nicht sehr begeistert davon, dass Jessica und Battler diese lautstarke Außeinandersetzung haben,"
+    "George ist nicht sehr begeistert davon, dass Jessica und Battler diese lautstarke Außeinandersetzung haben,"
+
+# game/Story/ch1.rpy:502
+translate English chapter1_fde426dc:
+
+    # extend " vorallem wenn das Thema eigentlich Ruhe und Gelassenheit vermitteln soll und geht prompt dazwischen."
+    extend " vorallem wenn das Thema eigentlich Ruhe und Gelassenheit vermitteln soll und geht prompt dazwischen."
+
+# game/Story/ch1.rpy:503
+translate English chapter1_dc0bb061:
+
+    # jes a11atya3 "“.........Ja, ist gut."
+    jes a11atya3 "“.........Ja, ist gut."
+
+# game/Story/ch1.rpy:504
+translate English chapter1_0f67f636:
+
+    # extend " Aber dieses Spiritu-irgendwas klingt für mich so, als hätte jemand einen Vorwand gesucht mit einem anderen Menschen 'engen' Kontakt zu haben.”"
+    extend " Aber dieses Spiritu-irgendwas klingt für mich so, als hätte jemand einen Vorwand gesucht mit einem anderen Menschen 'engen' Kontakt zu haben.”"
+
+# game/Story/ch1.rpy:505
+translate English chapter1_b6b8b311:
+
+    # geo a11warai1 "“....Ja,"
+    geo a11warai1 "“....Ja,"
+
+# game/Story/ch1.rpy:506
+translate English chapter1_7f23c4a4:
+
+    # extend " .....letztlich läuft alles darauf hinaus, dass man in gewisser Weise seine Lust wiederbelebt.”"
+    extend " .....letztlich läuft alles darauf hinaus, dass man in gewisser Weise seine Lust wiederbelebt.”"
+
+# game/Story/ch1.rpy:507
+translate English chapter1_816f7ed6:
+
+    # jes a11tereru1 "“Wenn wir so darüber reden, klingt es absolut lächerlich."
+    jes a11tereru1 "“Wenn wir so darüber reden, klingt es absolut lächerlich."
+
+# game/Story/ch1.rpy:508
+translate English chapter1_c5b1ccfb:
+
+    # extend "....Wahahahahaha!”"
+    extend "....Wahahahahaha!”"
+
+# game/Story/ch1.rpy:509
+translate English chapter1_621c586e:
+
+    # geo a11hohoemi1 "“Ahahahaha...."
+    geo a11hohoemi1 "“Ahahahaha...."
+
+# game/Story/ch1.rpy:516
+translate English chapter1_50d8e83d:
+
+    # extend " Ach ja, wusstet ihr?"
+    extend " Ach ja, wusstet ihr?"
+
+# game/Story/ch1.rpy:520
+translate English chapter1_69508e40:
+
+    # extend b24warai1 " ......Yumyumyumyum!”"
+    extend b24warai1 " ......Yumyumyumyum!”"
+
+# game/Story/ch1.rpy:521
+translate English chapter1_2bb83134:
+
+    # geo a11hohoemi1_closed_mouth "“.........."
+    geo a11hohoemi1_closed_mouth "“.........."
+
+# game/Story/ch1.rpy:522
+translate English chapter1_b23df521:
+
+    # extend a11warai1 " ...Jedenfalls kann dieser Gott Meeresstürme auslösen, ähnlich wie wir ihn heute erleben.”"
+    extend a11warai1 " ...Jedenfalls kann dieser Gott Meeresstürme auslösen, ähnlich wie wir ihn heute erleben.”"
+
+# game/Story/ch1.rpy:523
+translate English chapter1_b520bc35:
+
+    # but b11oya1 "“Du willst mir also sagen, dass irgendeine Gottheit, auf die wir keinen Einfluss haben, diesen Sturm ausgelöst hat?”"
+    but b11oya1 "“Du willst mir also sagen, dass irgendeine Gottheit, auf die wir keinen Einfluss haben, diesen Sturm ausgelöst hat?”"
+
+# game/Story/ch1.rpy:524
+translate English chapter1_c9734936:
+
+    # geo a11majime2 "“......Hmm"
+    geo a11majime2 "“......Hmm"
+
+# game/Story/ch1.rpy:526
+translate English chapter1_bdf9a99d:
+
+    # but b11warai3 "“....Auf jeden Fall können wir die Zeit, die uns Aigaion jetzt schenkt, nutzen, um wieder mehr Zeit miteinander zu verbringen.”"
+    but b11warai3 "“....Auf jeden Fall können wir die Zeit, die uns Aigaion jetzt schenkt, nutzen, um wieder mehr Zeit miteinander zu verbringen.”"
+
+# game/Story/ch1.rpy:529
+translate English chapter1_700cb3d0:
+
+    # extend " ...Es war ja auch dringend notwendig, dass du deine Familie für sechs Jahre verlässt.”"
+    extend " ...Es war ja auch dringend notwendig, dass du deine Familie für sechs Jahre verlässt.”"
+
+# game/Story/ch1.rpy:530
+translate English chapter1_6cef8a11:
+
+    # but b11odoroki3 "“.....Ach man”"
+    but b11odoroki3 "“.....Ach man”"
+
+# game/Story/ch1.rpy:532
+translate English chapter1_388c20ba:
+
+    # extend " ....Es ist die kurze Zeit, die meinen langweiligen Alltag auflockert.”"
+    extend " ....Es ist die kurze Zeit, die meinen langweiligen Alltag auflockert.”"
+
+# game/Story/ch1.rpy:535
+translate English chapter1_57ea9718:
+
+    # extend " ....Ich muss jeden Tag ziemlich früh aufstehen, weil meine Schule nicht wirklich in der Nähe ist, sondern auf Niijima."
+    extend " ....Ich muss jeden Tag ziemlich früh aufstehen, weil meine Schule nicht wirklich in der Nähe ist, sondern auf Niijima."
+
+# game/Story/ch1.rpy:539
+translate English chapter1_905c6021:
+
+    # extend " ....Es gibt nichts zu tun."
+    extend " ....Es gibt nichts zu tun."
+
+# game/Story/ch1.rpy:1101
+translate English chapter1_591a7ccc:
+
+    # extend " Bitte, ein letztes Mal, bevor ich sterbe..."
+    extend " Bitte, ein letztes Mal, bevor ich sterbe..."
+
+# game/Story/ch1.rpy:1147
+translate English chapter1_73ad6c8d:
+
+    # extend " ....Was sehen meine alten Augen?”"
+    extend " ....Was sehen meine alten Augen?”"
+
+# game/Story/ch1.rpy:1149
+translate English chapter1_d1cdd32d:
+
+    # extend " ....Unmöglich!"
+    extend " ....Unmöglich!"
+
+# game/Story/ch1.rpy:1151
+translate English chapter1_54cbc68e:
+
+    # extend " ....Das kann doch nicht wahr sein!"
+    extend " ....Das kann doch nicht wahr sein!"
+

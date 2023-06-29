@@ -7,14 +7,16 @@ label start:
     $ songname = "-"
     $ _game_menu_screen = "cleanmenu"
     pause 2
-    call showch0 from _call_showch0
-    pause 2
+    if persistent.showch == True:
+        call showch0 from _call_showch0
+        pause 2
     play sound "audio/sfx/umise_028.ogg"
     show disclaimer1 with dissolve
     pause (5)
     hide disclaimer1 with dissolve
     pause (2)
-    $ renpy.notify("♪At Death's Door")
+    if persistent.showbgm == True:
+        $ renpy.notify("♪At Death's Door")
     $ songname = "At Death's Door"
     play music "audio/bgm/umib_014_intro.ogg"
     queue music "audio/bgm/umib_014_loop.ogg" loop 
@@ -33,7 +35,7 @@ label start:
         $ persistent.newelement1 = True
         $ Achievement.add(achievement_bronze1)
         play sound "audio/sfx/umise_1060.ogg"
-        $ renpy.notify("Das Tippsmenü wurde unter \"Extras\" freigeschaltet.")
+        $ renpy.notify("Die Tippsbox wurde freigeschaltet")
         $ persistent.tip1 = True
         $ persistent.tipunlocked = True
     "Über den Fall im Dorf {note_green}Hinamizawa{/note_green} wurde in einigen Massenmedien berichtet."

@@ -124,3 +124,18 @@ image geo_a21_majime4_mouth:
     "images/sprites/geo/a21/majime4/2.png"
     .20
     repeat
+
+image geo a23kkomaru5k = Composite(
+    (745, 1175),
+    (0, 0), "images/sprites/geo/a23k/komaru5k/0.png",
+    (0, 0), WhileSpeaking("geo", "geo_a23k_komaru5k_mouth", "images/sprites/geo/a23k/komaru5k/0.png"),
+    )
+
+image geo_a23k_komaru5k_mouth:
+    "images/sprites/geo/a23k/komaru5k/0.png"
+    .10
+    "images/sprites/geo/a23k/komaru5k/1.png"
+    .10
+    "images/sprites/geo/a23k/komaru5k/2.png"
+    .20
+    repeat

@@ -5,13 +5,15 @@ label chapter1:
     $ chapter = 1
     $ songname = "-"
     $ persistent.openingplayed = True
-    call showch1 from _call_showch1
+    if persistent.showch == True:
+        call showch1 from _call_showch1
     play sound "audio/sfx/umise_028.ogg"
     show oct_4_1986 with dissolve
     pause (7)
     play ship "audio/sfx/umilse_004.ogg"
     $ songname = "HANE (Feathers)"
-    $ renpy.notify("♪HANE (Feathers)")
+    if persistent.showbgm == True:
+        $ renpy.notify("♪HANE (Feathers)")
     play music "audio/bgm/umib_003_intro.ogg"
     queue music "audio/bgm/umib_003_loop.ogg" loop 
     show white with m1trans
@@ -24,7 +26,7 @@ label chapter1:
     "Die Familie Ushiromiya ist mit dem Boot von der Insel Niijima zur jährlichen Familienkonferenz auf der Insel Rokkenjima unterwegs."
     extend " Aber ein Familienmitglied scheint die Fahrt gar nicht gut zu tun, er schreit herum, dass er vom Boot fällt und so." 
     play sound "audio/sfx/umise_003.ogg"
-    show but b23kuyasigaru1 at m with fastdissolve
+    show but b23kuyasigaru1 at m with dis
     but "“whaoooo!!!!" 
     extend " ....Ich falle runter, ....ich falle runteeeeeer!!!"
     extend " ....Ich hasse Boote! ...Gleich muss ich kotzen, ich falleeeee!!!"
@@ -35,7 +37,7 @@ label chapter1:
     show but b23kuyasigaru1 at l
     play sound "audio/sfx/umise_047.ogg"
     show mar a11warai1 at r,jump_shake
-    with fastdissolve
+    with dis
     mar "“*kicher*kicher*" 
     extend " ....Battler fällt runter, Battler fällt runter!" 
     extend " uu-uu~!!"
@@ -57,7 +59,7 @@ label chapter1:
         $ persistent.battler = True
         $ Achievement.add(achievement_bronze2)
         play sound "audio/sfx/umise_1060.ogg"
-        $ renpy.notify("Ein neuer Charakter wurde im Charaktermenü freigeschaltet.")
+        $ renpy.notify("Die Charakterbox wurde freigeschaltet.")
     "Mein Name ist Ushiromiya Battler."
     extend " Ich bin der Sohn von Rudolf und Asumu, Asumu ist vor ungefähr 6 Jahren gestorben."
     "Danach habe ich die Familie wegen eines Konflikts mit Dad für 6 lange Jahre verlassen und habe bei meinen Großeltern mütterlicherseits gelebt."
@@ -83,7 +85,7 @@ label chapter1:
     rud "....Unglaublich, dass du schon im Flugzeug so durchgedreht bist," 
     extend " du konntest ja nicht mal im Auto still sitzen.”"
     show but b22odoroki2_mouth_closed at l
-    with fastdissolve
+    with dis
     but "“..........."
     extend b22odoroki2 " ...Lass mich in Ruhe!"
     extend " ....Das ist echt kein guter Zeitpunkt!”"
@@ -125,11 +127,11 @@ label chapter1:
     kir a11majime1 "“...Aber er ist selbst schuld, wenn er da rumturnt, obwohl er weiß, dass er seekrank wird.”"
     scene ship_s2bf
     show kir a11defo1 at m
-    with fastdissolve
+    with dis
     if persistent.kyrie == False:
         $ persistent.kyrie = True
         play sound "audio/sfx/umise_1060.ogg"
-        $ renpy.notify("Ein neuer Charakter wurde im Charaktermenü freigeschaltet.")
+        $ renpy.notify("Die Charaktere wurden geupdated.")
     "Das ist meine Stiefmutter Kyrie-san, der alte Bastard hat diese Frau kurz nach dem Tod meiner Mutter geheiratet."
     "Sie ist sehr intelligent und hat mir viel über das Schachbrettdenken beigebracht."
     extend " Also wie man eine Partie mit den Augen des Gegners sehen kann."
@@ -170,7 +172,7 @@ label chapter1:
     if persistent.maria == False:
         $ persistent.maria = True
         play sound "audio/sfx/umise_1060.ogg"
-        $ renpy.notify("Ein neuer Charakter wurde im Charaktermenü freigeschaltet.")
+        $ renpy.notify("Die Charaktere wurden geupdated.")
     "Das kleine Mädchen, das definitiv mehr Spaß daran hat, mir zuzusehen, als mit dem Boot zu fahren," 
     extend " ist meine jüngste Cousine Maria,"
     "Auch sie hat unsere Namenstradition übernommen," 
@@ -197,7 +199,7 @@ label chapter1:
     extend " was schon zu unangenehm anzusehenden Szenen mit den beiden geführt hat."
     hide mar a11defo1
     show but b11odoroki3 at l
-    with fastdissolve
+    with dis
     ros a11komaru4 "“....Tut mir leid," 
     extend " ......Battler-kun," 
     extend " .....ich kriege es einfach nicht aus ihr raus.”"
@@ -214,7 +216,7 @@ label chapter1:
     if persistent.rosa == False:
         $ persistent.rosa = True
         play sound "audio/sfx/umise_1060.ogg"
-        $ renpy.notify("Ein neuer Charakter wurde im Charaktermenü freigeschaltet.")
+        $ renpy.notify("Die Charaktere wurden geupdated.")
     "Das ist Tante Rosa," 
     extend " sie ist die Mutter von Maria die sie sehr streng erzieht."
     "Trotzdem kenne ich Tante Rosa als sehr liebe Person,"
@@ -228,7 +230,7 @@ label chapter1:
     with quickergradientwiperight
     rud "“Er kann einfach nicht still sitzen, aus irgendeinem Grund."
     extend " ...Das ist wirklich peinlich, das darfst du niemandem erzählen.”"
-    show but b23nayamu1 at l with fastdissolve
+    show but b23nayamu1 at l with dis
     but "“..Ey!" 
     extend " .....halt den Mund!”"
     rud a11akuwarai2  "“...Ey Battler-kun!" 
@@ -240,7 +242,7 @@ label chapter1:
     show rud a11defo1 at l2 with MoveTransition(0.1)
     play sound "audio/sfx/umise_047.ogg"
     show but b11kuyasigaru1 behind rud at l
-    with fastdissolve
+    with vpunch
     but "“....owowowowowow"
     extend " ....Du alter Bastard!" 
     extend " ....Scheiße," 
@@ -282,7 +284,7 @@ label chapter1:
     extend " Jemand scheint von unters Deck nach draußen kommen zu wollen."
     hide kir a11majime1
     show jes a11atya2 at m
-    with fastdissolve
+    with dis
     jes "“...B.."
     extend " ...Battler-kun?" 
     extend " hast du gerade eben vom Deck gekotzt?" 
@@ -305,7 +307,8 @@ label chapter1:
     extend " ....Das Schiff schaukelt und schaukelt und schaukelt!!!"
     but a21kuyasigaru1_open_mouth "....aaaaaaaahhhhhhhhhhhhhhhh!!!!!!!"
     extend a21kuyasigaru1 " Mach, dass es aufhört, sonst falle ich wieder!”"
-    jes a11atya3 "“....Vielleicht sollte der Kapitän etwas langsamer fahren, sonst geht es dir gleich noch schlechter."
+    show jes a11atya3 at l with dis
+    jes "“....Vielleicht sollte der Kapitän etwas langsamer fahren, sonst geht es dir gleich noch schlechter."
     extend " ...Ich werde sofort den Kapitän bitten, etwas langsamer zu fahren, aber bitte nicht mehr ins Meer kotzen.”"
     but b11odoroki3 "“.....Ja" 
     extend " ....Vielen Dank, Jessica-chan.”"
@@ -315,7 +318,7 @@ label chapter1:
     if persistent.jessica == False:
         $ persistent.jessica = True
         play sound "audio/sfx/umise_1060.ogg"
-        $ renpy.notify("Ein neuer Charakter wurde im Charaktermenü freigeschaltet.")
+        $ renpy.notify("Die Charaktere wurden geupdated.")
     "Das ist meine Cousine Ushiromiya Jessica."
     extend " Sie ist die Tochter von Onkel Krauss und Tante Natsuhi." 
     extend " Jessica ist echt cool drauf und ist wohl aktuell in dieser Phase, wo man gegen seine Eltern rebelliert."
@@ -332,8 +335,8 @@ label chapter1:
     "Der Kapitän hat zugestimmt langsamer zu fahren und jetzt schaukelt das Boot nicht mehr so stark."
     jes "“....Verdammte Scheiße Battler-kun," 
     extend " ...jetzt werden wir uns wegen dir verspäten!”"
-    show but b22warai1 at r
-    with fastdissolve
+    show but b22warai1 at l
+    with dis
     but "“.....Halt doch mal dein Maul," 
     extend " ...immerhin kann ich jetzt ein wenig chillen.”"
     jes a11defo2 "“.....Wir sollten besser runter gehen zum 'chillen', wir sind gleich auf der Insel.”"
@@ -344,10 +347,13 @@ label chapter1:
     extend " Ihihihi!”"
     stop ship
     $ songname = "Door of Summer"
-    $ renpy.notify("♪Door of Summer")
+    if persistent.showbgm == True:
+        $ renpy.notify("♪Door of Summer")
     play music "audio/bgm/umib_002_intro.ogg"
     queue music "audio/bgm/umib_002_loop.ogg" loop 
-    scene ship_s3a at bgani with gradientwiperight
+    scene ship_s3a at bgani
+    show expression(CustomParticles("images/system/particle.png", 10))
+    with gradientwiperight
     "Dann gingen Battler und Jessica unter Deck zu den anderen, die im Gegensatz zu Battler ruhig warten, bis sie endlich die Insel erreichen."
     show eva_b22_akire2 at r
     show hid_a21_warai1 at m
@@ -362,7 +368,7 @@ label chapter1:
     geo "“Battler-kun!"
     extend " ....Wir alle wissen bereits, dass es dich schon erwischt hat."
     extend " ...Dir scheint es gerade wohl gar nicht gut zu gehen.”"
-    show but b22nayamu1 at l,nod with fastdissolve
+    show but b22nayamu1 at l,nod with dis
     "Mit einem leichten, aber nicht ganz ernstgemeinten Nicken stimmte Battler zu."
     but "“Mir geht es gut, den Umständen entsprechend...."
     extend b23kuyasigaru1 " Der Kapitän hat das Schiff doch absichtlich so schaukeln lassen.”"
@@ -374,7 +380,7 @@ label chapter1:
     extend " ....Jessica-chan?”"
     hide but b23kuyasigaru1
     show jes b22warai1 at l
-    with fastdissolve
+    with dis
     jes "“Ja,"
     extend " .....es ist, als wäre er nie weg gewesen,"
     extend " ....nur mit dem Unterschied, dass er sich heute zum ersten Mal auf dem Boot übergeben hat.”"
@@ -387,7 +393,7 @@ label chapter1:
     if persistent.george == False:
         $ persistent.george = True
         play sound "audio/sfx/umise_1060.ogg"
-        $ renpy.notify("Ein neuer Charakter wurde im Charaktermenü freigeschaltet.")
+        $ renpy.notify("Die Charaktere wurden geupdated.")
     "Das ist mein Cousin George." 
     extend " er wird von Tante Eva und Onkel Hideyoshi zu einem echten Gentleman erzogen."
     "Er arbeitet sehr hart und will schon sein eigenes Unternehmen gründen, was ich sehr beeindruckend finde."
@@ -422,8 +428,8 @@ label chapter1:
     geo "Es gibt die tantrische Spiritualität für intensivere Gefühle und auch bei den Griechen gab es die dionysische Spiritualität,"
     extend " die auch besonders heftige Gefühle beinhaltet." 
     extend " In diesem Sinne hat jeder Mensch Sturmgötter in sich."
-    geo ".....diese können in einem selbst aktiviert werden."
-    extend a11majime2 " ....Diese Sturmgötter können aber auch zu schlimmen Taten, zu Verbrechen und Gewalt verleiten."
+    geo ".....Diese können in einem selbst aktiviert werden."
+    extend a11majime2 " ....Solche Sturmgötter können aber auch zu schlimmen Taten, zu Verbrechen und Gewalt verleiten."
     geo "Man kann ihn aber auch dazu bringen, sich intensiv vorwärts zu bewegen und aus der Bequemlichkeit des Alltags auszubrechen.”"
     hide geo a11majime2
     hide but b11oya1
@@ -437,7 +443,7 @@ label chapter1:
     hide jes a11atya3
     show but b23nayamu1 at r
     with quickergradientwiperight
-    but "............."
+    but ".............hmm"
     "Battler war ein auch wenig überwältigt von diesem Input, im Leben nicht hätte er jetzt einen Vortrag über Gefühle und Spiritualität erwartet."
     but "“.....Ähm,"
     extend " .....ähm,"
@@ -460,7 +466,7 @@ label chapter1:
     geo "“Da kommt noch was und zwar....."
     extend a11komaru3 " uhmmmm na ja...."
     extend " hehe, wie soll ich sagen?"
-    geo "Es ist auch eine Spiritualität der...."
+    geo a23kkomaru5k "Es ist auch eine Spiritualität der...."
     extend " uhmm...."
     extend " ....Sexualität"
     geo a11defo1 " ....Es ist ein Begriff ursprünglich aus Indien, und wird mit 'Zusammenhang' oder auch 'Gefüge' übersetzt."
@@ -469,11 +475,9 @@ label chapter1:
     but b11ero1 "“Geil," 
     extend " .....das muss ich mal ausprobieren!"
     extend " ....Wenn ich für so eine 'Spiritualität' nur dieses Tantra Dings machen muss, bin ich dabei!"
-    extend " ...Ihihihi”"
+    extend " ...Pralle Brüste von sexy Yoginis, ich kom...”"
     play sound "audio/sfx/umise_012.ogg"
-    camera at Shake(None, float('inf'), dist=10)
-    show but b11kuyasigaru1 with fastdissolve
-    camera at Shake(None, float('inf'), dist=0)
+    show but b11kuyasigaru1 with vpunch
     pause (.50)
     hide but b11kuyasigaru1 with quickgradientwipedown
     play sound "audio/sfx/umise_013.ogg"
@@ -481,19 +485,19 @@ label chapter1:
     extend " Das hat richtig weh getan!”"
     hide geo a11komaru3
     show jes a11ikari1 at l
-    with fastdissolve
+    with dis
     jes "“...Trottel!"
     extend " ....Du Holzkopf!"
     extend " ......War ja zu erwarten, dass das deine einzige Motivation ist, Trottel-Battler!”"
     "Kaum hatte Battler ausgesprochen, dass er sowas gerne 'ausprobieren' möchte, hatte er auch schon Jessicas Faust im Gesicht."
     "Jessica reagiert immer sehr allergisch darauf, wenn ihr perverser Cousin mit diesem Schweinkram anfängt."
     extend " Battler hat jetzt eine ziemlich rote Wange, als hätte er es auf eine heiße Herdplatte gelegt."
-    jes "“.....Perverser Battler!"
+    jes a12ikari1 "“.....Perverser Battler!"
     extend " ...Du bist sofort Feuer und Flamme, sobald es auch nur im Entferntesten in diese Richtung geht!”"
-    show but b23nayamu2 at r with fastdissolve
+    show but b23nayamu2 at r with dis
     but "“.....Ihihihihi"
     extend " ......Tut mir leid”"
-    show geo a11niramu1 at m with fastdissolve
+    show geo a11niramu1 at m with dis
     geo "“.....Hey!"
     extend " ....Beruhigt euch bitte!”"
     "George ist nicht sehr begeistert davon, dass Jessica und Battler diese lautstarke Außeinandersetzung haben,"
@@ -510,10 +514,10 @@ label chapter1:
     hide but a11niramu1
     hide jes a11tereru1
     with quickergradientwiperight
-    show geo a11defo1 at m with fastdissolve
-    extend " Ach ja, wusstet ihr?"
+    show geo a11defo1 at m with dis
+    geo " Ach ja, wusstet ihr?"
     extend " ....Ein echter Sturmgott aus der griechischen Mythologie. ist jedoch Aigaion.”"
-    show but b24futeki3 at l with fastdissolve
+    show but b24futeki3 at l with dis
     but "“....Ein leckerer Teller Gyros-Geschnetzeltes ist das einzige Griechische, das ich schätze."
     extend b24warai1 " ......Yumyumyumyum!”"
     geo a11hohoemi1_closed_mouth "“.........."
@@ -522,7 +526,7 @@ label chapter1:
     geo a11majime2 "“......Hmm"
     extend " ....So könnte man es ausdrücken ja!”"
     but b11warai3 "“....Auf jeden Fall können wir die Zeit, die uns Aigaion jetzt schenkt, nutzen, um wieder mehr Zeit miteinander zu verbringen.”"
-    show jes b22warai1 at r with fastdissolve
+    show jes b22warai1 at r with dis
     jes "“Ja, das hast du wirklich nötig, Battler-kun!”"
     extend " ...Es war ja auch dringend notwendig, dass du deine Familie für sechs Jahre verlässt.”"
     but b11odoroki3 "“.....Ach man”"
@@ -560,7 +564,7 @@ label chapter1:
     if persistent.hideyoshi == False:
         $ persistent.hideyoshi = True
         play sound "audio/sfx/umise_1060.ogg"
-        $ renpy.notify("Ein neuer Charakter wurde im Charaktermenü freigeschaltet.")
+        $ renpy.notify("Die Charaktere wurden geupdated.")
     "Das ist Georges Vater und mein Onkel Hideyoshi." 
     extend " Er ist ein netter und sympathischer Mann und ich glaube, ich mag ihn von allen Erwachsenen am meisten."
     "Er ist der Ehemann von Tante Eva und hat seine Firma von Grund auf neu aufgebaut."
@@ -652,7 +656,7 @@ label chapter1:
     if persistent.kumasawa == False:
         $ persistent.kumasawa = True
         play sound "audio/sfx/umise_1060.ogg"
-        $ renpy.notify("Ein neuer Charakter wurde im Charaktermenü freigeschaltet.")
+        $ renpy.notify("Die Charaktere wurden geupdated.")
     "Die ältere Frau heißt Kumasawa Chiyo." 
     extend " Sie ist eine Teilzeitarbeiterin, die zwar mehrmals gekündigt hat, aber insgesamt schon viele Jahre im Dienst der Familie steht."
     "Sie ist geschickt und mehr als fähig, ihre Aufgaben zu erfüllen,"
@@ -769,7 +773,7 @@ label chapter1:
     if persistent.shannon == False:
         $ persistent.shannon = True
         play sound "audio/sfx/umise_1060.ogg"
-        $ renpy.notify("Ein neuer Charakter wurde im Charaktermenü freigeschaltet.")
+        $ renpy.notify("Die Charaktere wurden geupdated.")
     "Diese junge Bedienstete heißt Shannon."
     extend " Sie ist zwar eine junge, aber sehr erfahrene Bedienstete."
     "Normalerweise ist sie ruhig und erledigt ihre Arbeit effizient, aber wenn sie nervös wird, macht sie Fehler."
@@ -931,15 +935,16 @@ label chapter1:
     pause(5)
     hide blackpic with gradientcirclefade
     $ songname = "Rose"
-    $ renpy.notify("♪Rose")
+    if persistent.showbgm == True:
+        $ renpy.notify("♪Rose")
     play music "audio/bgm/umib_013.ogg"
     play rain "audio/sfx/umilse_012.ogg"
-    show nan a1defo1 at l2 with fastdissolve
+    show nan a1defo1 at l2 with dis
     nan "“Musste das wieder sein?..."
     extend " Du trinkst immer noch, obwohl ich dir schon so oft gesagt habe, dass du damit aufhören sollst?”"
     hide nan a1defo1
     show nan a1fumu1 at l2
-    with fastdissolve
+    with dis
     "Als er seine Untersuchung beendet hatte, stieß der Doktor im Spätherbst seines Lebens einen ärgerlichen Seufzer aus."
     "Zwei ältere Herren standen in einem dunklen, staubigen und übel riechenden Arbeitszimmer."
     scene mlib_1b_bg at bgani
@@ -950,13 +955,13 @@ label chapter1:
     extend " Es ist komplett möbliert mit Schlafzimmer, Küche und eigener Toilette."
     "Es ist praktisch eine komplett eigene Wohnung."
     extend " Niemand würde auf die Idee kommen, dass es sich hier nur um ein Arbeitszimmer handelt."
-    show nan a1defo1 at m with fastdissolve
+    show nan a1defo1 at m with dis
     nan "“Kinzo-san...." 
     extend " ...Wenn du damit nicht sofort aufhörst, muss ich meine Berechnungen korrigieren.”"
     if persistent.nanjo == False:
         $ persistent.nanjo = True
         play sound "audio/sfx/umise_1060.ogg"
-        $ renpy.notify("Ein neuer Charakter wurde im Charaktermenü freigeschaltet.")
+        $ renpy.notify("Die Charaktere wurden geupdated.")
     "Das ist Nanjo Terumasa."
     extend " Er ist der langjährige Arzt von Kinzo und sein bester Freund."
     "Jetzt, da Kinzos ständiges Misstrauen außergewöhnliche Ausmaße angenommen hat, ist Nanjo einer der wenigen Menschen, denen er vertraut." 
@@ -975,7 +980,7 @@ label chapter1:
     if persistent.kinzo == False:
         $ persistent.kinzo = True
         play sound "audio/sfx/umise_1060.ogg"
-        $ renpy.notify("Ein neuer Charakter wurde im Charaktermenü freigeschaltet.")
+        $ renpy.notify("Die Charaktere wurden geupdated.")
     "Das ist das Familienoberhaupt Ushiromiya Kinzo."
     "Er ist sehr mürrisch und leicht zu provozieren."
     extend " Er ist stark vom Westen beeinflusst und ist sehr interessiert an dem Okkulten." 
@@ -998,7 +1003,7 @@ label chapter1:
     extend " und dann auf den Arzt, der die Augen verdrehte um sich danach dann am Schnapsschrank zu schaffen zu machen."
     hide gen a11defo1
     show gen a11komaru1 at m
-    with fastdissolve
+    with dis
     "Der Duft des alkoholischen Getränks erfüllte den ganzen Raum, als würde sich der Gestank in der Luft buchstäblich verflüchtigen."
     extend " Dieser Duft kitzelt die Riechschleimhaut so angenehm, dass nicht nur die Seele dahinschmelzen möchte."
     scene black with gradientwipeup
@@ -1013,13 +1018,13 @@ label chapter1:
     kin "“.......Nanjo,"
     extend " ich weiß, dass du mir nur ein längeres Leben ermöglichen willst, und ich weiß das zu schätzen."
     extend " Dafür bin ich dir von Herzen dankbar.”"
-    show nan a1defo1 at l with fastdissolve
+    show nan a1defo1 at l with dis
     nan "“......Ach was,"
     extend " ich habe nichts gemacht," 
     extend " du hast mir nie zugehört.”"
     kin "“Hahahahaha..."
     extend " Touché”"
-    show gen a11defo1 at m with fastdissolve
+    show gen a11defo1 at m with dis
     gen "“.....Herr”"
     kin "“Vielen Dank.”"
     "Genji führte die Anweisung gewissenhaft aus und reichte seinem Herrn eine Mischung mit geringerem Alkoholgehalt."
@@ -1030,7 +1035,7 @@ label chapter1:
     show kin a11defo1 at r with dissolve
     kin "“....Nanjo," 
     extend " .....wie lange noch?”"
-    show nan a2fumu1 at l with fastdissolve
+    show nan a2fumu1 at l with dis
     nan "“...Wenn ich ehrlich sein soll,"
     extend " ...wohl nicht mehr lange."
     nan "...Das liegt aber auch an deinem übermäßigen Alkoholkonsum."
@@ -1128,7 +1133,7 @@ label chapter1:
     kin "“....Genji,"
     extend " öffne die Tür!”"
     extend " ....Wer es wagt zu stören, hat bestimmt auch einen Grund dafür.”"
-    show gen a11komaru1 at r with fastdissolve
+    show gen a11komaru1 at r with dis
     gen "“Wie Ihr wünscht, Herr.”"
     scene m_door1k with gradientwiperight
     "Sofort ging Genji zum Schreibtisch um den Knopf zu drücken, der die Tür öffnen lässt."
@@ -1152,7 +1157,7 @@ label chapter1:
         $ persistent.newelement1 = True
         play sound "audio/sfx/umise_1060.ogg"
         $ persistent.musicbox = True
-        $ renpy.notify("Die Musikbox wurde unter 'Extras' freigeschaltet.")
+        $ renpy.notify("Die Musikbox wurde freigeschaltet.")
         $ Achievement.add(achievement_bronze3)
         $ Achievement.add(achievement_bronze4)
     call chapterendb from _call_chapterendb

@@ -1,45 +1,44 @@
 # Position definitions
 transform m:
-    xanchor 0.5
-    xpos 960
-
+    xalign 0.5
+    zoom 0.995
     yanchor 1.0
-    ypos 1200
+    ypos 1202
 
 transform l:
     xanchor 0.5
-    xpos 480
-
+    xpos 525
+    zoom 0.995
     yanchor 1.0
-    ypos 1200
+    ypos 1202
 
 transform r:
     xanchor 0.5
-    xpos 1440
-
+    xpos 1350
+    zoom 0.995
     yanchor 1.0
-    ypos 1200
+    ypos 1202
 
 transform r2:
     xanchor 0.5
     xpos 1040
-
+    zoom 0.995
     yanchor 1.0
-    ypos 1200
+    ypos 1202
 
 transform r3:
     xanchor 0.5
     xpos 980
-
+    zoom 0.995
     yanchor 1.0
-    ypos 1200
+    ypos 1202
 
 transform l2:
     xanchor 0.5
     xpos 880
-
+    zoom 0.995
     yanchor 1.0
-    ypos 1200
+    ypos 1202
 
 # Color transforms
 

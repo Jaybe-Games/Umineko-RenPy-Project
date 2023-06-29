@@ -580,7 +580,9 @@ screen game_menu(scroll=None, yinitial=0.0):
     style_prefix "game_menu"
 
     add "images/system/hana3.png"
+    imagebutton auto "gui/button/back2_%s.png" action Return() activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" yalign 0.02 xalign 0.97
     add partObj
+
 
     
 
@@ -632,7 +634,7 @@ screen game_menu(scroll=None, yinitial=0.0):
 
     if not main_menu:
 
-        if showch == True:
+        if persistent.showch == True:
 
             if chapter == 0:
 
@@ -745,7 +747,6 @@ screen game_menu(scroll=None, yinitial=0.0):
 screen cleanmenu():
 
     tag menu
-    imagebutton auto "gui/button/back2_%s.png" action Return() activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" yalign 0.02 xalign 0.97
     add partObj
 
     use game_menu()
@@ -1120,53 +1121,57 @@ screen preferences():
 
     vbox:
 
-        xalign 0.0
-        yalign 0.5
-        xoffset 150
-        yoffset 50
+        xalign 0.35
+        yalign 0.6
         spacing 50
         
 
         hbox:
 
             style_prefix "radio"
-            label _("{color=#fff}Anzei{/color}{color=#f00}g{/color}{color=#fff}e{/color}")
-            imagebutton auto "gui/button/window_%s.png" action Preference("display", "window") activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" xpos 255
-            imagebutton auto "gui/button/full_%s.png" action Preference("display", "fullscreen") activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" xpos 255
+            imagebutton auto "gui/button/window_%s.png" action Preference("display", "window") activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+            imagebutton auto "gui/button/full_%s.png" action Preference("display", "fullscreen") activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
 
         hbox:
 
             style_prefix "check"
-            label _("{color=#fff}Übers{/color}{color=#f00}p{/color}{color=#fff}ringen{/color}")
-            imagebutton auto "gui/button/on_%s.png" action Preference("skip", "Toggle") activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"  xpos 355
+            imagebutton auto "gui/button/on_%s.png" action Preference("skip", "Toggle") activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
 
         hbox:
 
             style_prefix "check"
-            label _("{color=#fff}Spr{/color}{color=#f00}a{/color}{color=#fff}che{/color}")
-            imagebutton auto "gui/button/de_%s.png" action Language(None) activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"  xpos 255
-            imagebutton auto "gui/button/en_%s.png" action Language("English") activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"  xpos 255
+            imagebutton auto "gui/button/de_%s.png" action Language(None) activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+            imagebutton auto "gui/button/en_%s.png" action Language("English") activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
 
         hbox:
 
             style_prefix "check"
-            label _("Zeige Kapite{red_truth}l{/red_truth}namen")
-            imagebutton auto "gui/button/off_%s.png" action SetVariable("showch", False) activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"  xpos 50
-            imagebutton auto "gui/button/on_%s.png" action SetVariable("showch", True) activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"  xpos 50
+            imagebutton auto "gui/button/off_%s.png" action SetVariable("persistent.howch", False) activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+            imagebutton auto "gui/button/on_%s.png" action SetVariable("persistent.showch", True) activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
         
         hbox:
 
             style_prefix "check"
-            label _("Zeige BGM T{red_truth}i{/red_truth}tel")
-            imagebutton auto "gui/button/off_%s.png" action SetVariable("showbgm", False) activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" xpos 105
-            imagebutton auto "gui/button/on_%s.png" action SetVariable("showbgm", True) activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"  xpos 105
+            imagebutton auto "gui/button/off_%s.png" action SetVariable("persistent.showbgm", False) activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+            imagebutton auto "gui/button/on_%s.png" action SetVariable("persistent.showbgm", True) activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
 
         hbox:
 
             style_prefix "check"
-            label _("Zeige S{red_truth}p{/red_truth}ielzeit")
-            imagebutton auto "gui/button/off_%s.png" action SetVariable("showplaytime", False) activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" xpos 145
-            imagebutton auto "gui/button/on_%s.png" action SetVariable("showplaytime", True) activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"  xpos 145
+            imagebutton auto "gui/button/off_%s.png" action SetVariable("persistent.showplaytime", False) activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+            imagebutton auto "gui/button/on_%s.png" action SetVariable("persistent.showplaytime", True) activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+
+    vbox:
+        xalign 0.1
+        yalign 0.60
+        spacing 75
+        yoffset 2
+        label _("{color=#fff}Anzei{/color}{color=#f00}g{/color}{color=#fff}e{/color}")
+        label _("{color=#fff}Übers{/color}{color=#f00}p{/color}{color=#fff}ringen{/color}")
+        label _("{color=#fff}Spr{/color}{color=#f00}a{/color}{color=#fff}che{/color}")
+        label _("Zeige Kapite{red_truth}l{/red_truth}namen")
+        label _("Zeige BGM T{red_truth}i{/red_truth}tel")
+        label _("Zeige S{red_truth}p{/red_truth}ielzeit")
     vbox:
         xalign 0.85
         yalign 0.5
@@ -1314,7 +1319,7 @@ screen history():
     add "gui/game_menu.png" at center
     add "gui/backlog/background.png" at center
     imagebutton auto "gui/button/back2_%s.png" action Return() activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" yalign 0.02 xalign 0.97
-    add partObj
+    #add partObj
     predict False
 
     frame:

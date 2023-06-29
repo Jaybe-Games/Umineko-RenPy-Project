@@ -79,7 +79,7 @@ translate English strings:
 
     # game/core/screens.rpy:904
     old "{color=#fff}Spr{/color}{color=#f00}a{/color}{color=#fff}che{/color}"
-    new "{color=#fff}Spr{/color}{color=#f00}a{/color}{color=#fff}che{/color}"
+    new "{color=#fff}Lan{/color}{color=#f00}g{/color}{color=#fff}uage{/color}"
 
     # game/core/screens.rpy:920
     old "{color=#fff}> Textgeschwindi{color=#f00}g{color=#fff}keit >>"
@@ -332,4 +332,20 @@ translate English strings:
     # game/core/screens.rpy:1032
     old "{color=#fff}- Soundlautstär{color=#f00}k{color=#fff}e +"
     new "{color=#fff}- Soundlautstär{color=#f00}k{color=#fff}e +"
+
+# TODO: Translation updated at 2023-06-28 23:28
+
+translate English strings:
+
+    # game/core/screens.rpy:1153
+    old "Zeige Kapite{red_truth}l{/red_truth}namen"
+    new "Zeige Kapite{red_truth}l{/red_truth}namen"
+
+    # game/core/screens.rpy:1160
+    old "Zeige BGM T{red_truth}i{/red_truth}tel"
+    new "Zeige BGM T{red_truth}i{/red_truth}tel"
+
+    # game/core/screens.rpy:1167
+    old "Zeige S{red_truth}p{/red_truth}ielzeit"
+    new "Zeige S{red_truth}p{/red_truth}ielzeit"
 

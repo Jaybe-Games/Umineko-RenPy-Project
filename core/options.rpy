@@ -163,8 +163,8 @@ define config.game_main_transition = dissolve
 define config.exit_yesno_transition = ImageDissolve("images/masks/circle.png", 1.0, reverse=True, ramplen = 100)
 
 define config.enter_yesno_transition = ImageDissolve("images/backgrounds/different_spiral_1a.png",0.6,reverse=False, ramplen = 30)
-define fastdissolve = Dissolve(0.2)
-define config.say_attribute_transition = fastdissolve
+define dis = { "master" : Dissolve(0.15) }
+define config.say_attribute_transition = dis
 
 define config.manage_gc = True
 
@@ -215,6 +215,12 @@ default preferences.text_cps = 50
 ## to 30 being the valid range.
 
 default preferences.afm_time = 15
+default preferences.fullscreen = True
+default preferences.gl_powersave = False
+default preferences.gl_tearing = False
+default preferences.gl_framerate = None
+define config.image_cache_size_mb = 800
+
 
 
 define config.default_music_volume = 0.5

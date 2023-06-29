@@ -73,18 +73,15 @@ image playPauseButton = DynamicDisplayable(ost.auto_play_pause_button)
 screen music_room():
 
     tag menu
-
+    modal True
+    add "gui/game_menu.png" at center
+    imagebutton auto "gui/button/back2_%s.png" action [Return(), Function(ost.check_paused_state), 
+                If(not ost.prevTrack, None, 
+                false=Play('music', ost.prevTrack, fadein=2.0))] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" yalign 0.02 xalign 0.97
+    add partObj
     default bar_val = ost.AdjustableAudioPositionValue()
 
     style_prefix "music_room"
-
-    if main_menu:
-
-        add "gui/game_menu1.png" at center
-
-    else:
-
-        add "gui/overlay/game_menu.png" at center
 
     frame:
         style "music_room_frame"
@@ -223,12 +220,6 @@ screen music_room():
     if not config.developer:
         add "rpa_map_warning" xpos 0.23 ypos 0.85 xsize 950
 
-    textbutton _("Zurück"):
-        style "return_button"
-        action [Return(), Function(ost.check_paused_state), 
-                If(not ost.prevTrack, None, 
-                false=Play('music', ost.prevTrack, fadein=2.0))]
-
 style music_room_frame is empty
 style music_room_viewport is gui_viewport
 style music_room_progress_bar is gui_slider
@@ -244,7 +235,7 @@ style music_room_duration_text is gui_text
 style music_room_frame:
     yfill True
 
-    background "gui/overlay/main_menu.png"
+    #background "gui/overlay/main_menu.png"
 
 style music_room_list_button is default:
     size 30

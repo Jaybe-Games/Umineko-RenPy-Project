@@ -177,3 +177,18 @@ image jes_b33_naku1_mouth:
     "images/sprites/jes/b33/naku1/2.png"
     .20
     repeat
+
+image jes a12ikari1 = Composite(
+    (503, 1112),
+    (0, 0), "images/sprites/jes/a12/ikari1/0.png",
+    (0, 0), WhileSpeaking("jes", "jes_a12_ikari1_mouth", "images/sprites/jes/a12/ikari1/0.png"),
+    )
+
+image jes_a12_ikari1_mouth:
+    "images/sprites/jes/a12/ikari1/0.png"
+    .10
+    "images/sprites/jes/a12/ikari1/1.png"
+    .10
+    "images/sprites/jes/a12/ikari1/2.png"
+    .20
+    repeat
