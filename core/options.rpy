@@ -220,6 +220,7 @@ default preferences.gl_powersave = False
 default preferences.gl_tearing = False
 default preferences.gl_framerate = None
 define config.image_cache_size_mb = 800
+define config.debug_prediction = True
 
 
 
