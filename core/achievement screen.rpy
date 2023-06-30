@@ -146,7 +146,7 @@ screen achievement_notification():
 
         frame at achievement_appear:
             background Solid('#00000098')
-            align (0.5, 0.0)
+            align (1.0, 0.0)
             padding (20, 20, 200, 20)
 
             hbox:

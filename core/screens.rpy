@@ -2307,6 +2307,8 @@ screen tipps():
 
         imagebutton auto "gui/tipps/tip01_%s.png" action ShowMenu("tip01") activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
 
+        if persistent.tip2 == True:
+            imagebutton auto "gui/tipps/tip02_%s.png" action ShowMenu("tip02") activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
 
 screen grimoire():
     tag menu
@@ -2323,6 +2325,14 @@ screen tip01():
     use tipps
 
     add "gui/tipps/tip01_details.png" at center
+
+screen tip02():
+
+    tag menu
+    modal True
+    use tipps
+
+    add "gui/tipps/tip02_details.png" at center
 
 
 screen confirmrestart():

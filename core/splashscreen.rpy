@@ -104,7 +104,7 @@ else:
         window show
         bea a11akuwarai4 "*Cackle*Cackle*"
         extend " ....Don't forget those who don't know German and only understand English, Battlerrrrrrr!" 
-        extend a11defo2 " ....A warm Welcome to Umineko When They Cry Zero ~Waltz of Reflections and Delusions~ Please choose a language aswell."
+        bea a11defo2 " ....A warm Welcome to Umineko When They Cry Zero ~Waltz of Reflections and Delusions~ Please choose a language aswell."
         window hide
         menu:
             "English":
@@ -112,7 +112,9 @@ else:
 
             "German":
                 stop wind fadeout 1.0
+                scene black with dissolve
                 return
+    scene black with dissolve
     stop wind fadeout 1.0
     return
 

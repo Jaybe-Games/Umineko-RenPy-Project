@@ -296,7 +296,10 @@ label chapter1:
     extend " ...Nächstes Mal nimm besser einen Eimer mit!"
     jes a11aisowarai1 "Ach ja," 
     extend " und was war das für ein 'Ich falle, ich falle' -Geschrei?"
-    $ persistent.tip2 = True
+    if persistent.tip2 == False:
+        $ persistent.tip2 = True
+        play sound "audio/sfx/umise_1060.ogg"
+        $ renpy.notify("Die Tipps wurden geupdated.")
     extend " ...Bist du ein bisschen {note_green}meschugge{/note_green}?"
     extend " ...wahahahahahahahaha!"
     jes ".....Das war die eine Sache,"
