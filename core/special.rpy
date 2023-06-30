@@ -6,7 +6,8 @@ label quit_scene:
     hide window
     stop music fadeout 1.0
     play sound "audio/sfx/umise_018.ogg"
-    scene black at shakezoom zorder 99
+    scene black zorder 99
+    camera
     with kanon_rev
     $ renpy.pause(4, hard=True)
     $ Quit(confirm=False)()
@@ -22,7 +23,8 @@ label title_return:
     hide window
     stop music fadeout 2.0
     play sound "audio/sfx/umise_018.ogg"
-    scene black at shakezoom zorder 99
+    scene black zorder 99
+    camera
     with kanon_rev
     $ renpy.pause(4, hard=True)
     return

@@ -41,6 +41,19 @@ transform l2:
     yanchor 1.0
     ypos 1202
 
+transform leftedge:
+    xanchor 0.5
+    xpos 400
+    zoom 0.995
+    yanchor 1.0
+    ypos 1202
+
+transform rightedge:
+    xanchor 0.5
+    xpos 1500
+    zoom 0.995
+    yanchor 1.0
+    ypos 1202
 # Color transforms
 
 transform grayscale:
@@ -64,8 +77,8 @@ transform bgani:
     xoffset 250
     xalign 0.5
     yalign 0.5
-    linear 120 xoffset -250
-    linear 120 xoffset 250
+    ease 120 xoffset -250
+    ease 120 xoffset 250
     repeat
 
 transform rotatebg:
@@ -82,5 +95,40 @@ transform shakezoom:
     zoom 1.05
     xalign 0.5
     yalign 0.5
+
+transform boatswing:
+    subpixel True
+    xalign 0.5
+    yalign 0.5
+    ease 5 xoffset -50
+    ease 5 xoffset 50
+    repeat
+
+transform gonnafallgonnafall:
+    subpixel True
+    zoom 1.05
+    xalign 0.5
+    yalign 0.5
+    ease 0.9333333333333334 offset (0, 180)
+    ease 0.9333333333333334 offset (0,-25)
+    repeat
+
+transform gonnavomit:
+    subpixel True
+    zoom 1.05
+    xalign 0.5
+    yalign 0.5
+    ease 0.4333333333333334 offset (0, 180)
+    ease 0.4333333333333334 offset (0,-25)
+    repeat
+
+transform slowerboat:
+    subpixel True
+    zoom 1.05
+    xalign 0.5
+    yalign 0.5
+    ease 4.9333333333333334 offset (0, 180)
+    ease 4.9333333333333334 offset (0,-25)
+    repeat
 
 

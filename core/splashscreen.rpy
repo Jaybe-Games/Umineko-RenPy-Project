@@ -94,13 +94,13 @@ else:
         show different_space_1a at bgani
         show expression(CustomParticles("images/system/particle.png", 10))
         with gradientcirclefade
-        show but b11warai3 at r with dissolve
+        show but b11warai3 at rightedge with dissolve
         window show
         but "Willkommen zu Umineko When They Cry Zero ~Waltz of Reflections and Delusions~ Sieht mir nach deinem ersten Spielstart aus, also wähle bitte eine Sprache!"
         window hide
         call butterfly1
         play sound "audio/sfx/umise_052.ogg"
-        show bea a11defo2 at l with witchfadein
+        show bea a11defo2 at leftedge with witchfadein
         window show
         bea a11akuwarai4 "*Cackle*Cackle*"
         extend " ....Don't forget those who don't know German and only understand English, Battlerrrrrrr!" 

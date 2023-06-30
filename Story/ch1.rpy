@@ -18,7 +18,7 @@ label chapter1:
     play music "audio/bgm/umib_003_intro.ogg"
     queue music "audio/bgm/umib_003_loop.ogg" loop 
     show white with m1trans
-    camera at gonnafallgonnafall
+    camera at gonnafallgonnafall,boatswing
     scene ship_s2a with m1trans1
     window auto
     "In der Luft liegt der typische Meeresgeruch von Salz und auch ein wenig von Algen."
@@ -119,7 +119,7 @@ label chapter1:
     "Ich bin also wieder Teil der Familie und nehme nach sechs Jahren zum ersten Mal wieder an der Konferenz teil."
     scene ship_s2bf
     show kir a11defo1 at l
-    camera at gonnafallgonnafall
+    camera at gonnafallgonnafall,boatswing
     with quickergradientwiperight
     kir "“...Ist es nicht schön, dass Battler-kun wieder da ist?"
     extend " Ich meine, nach 6 Jahren Abwesenheit immer noch ein Theater bei der Ankunft? *kicher*”"
@@ -147,7 +147,7 @@ label chapter1:
     "Und nein, ...."
     extend " man spricht es nicht komisch aus, ihr Name ist absolut perfekt!"
     "Ich hasse Großvater den alten Kauz dafür, dass wir so komische Namen haben."
-    camera at gonnavomit
+    camera at gonnavomit,boatswing
     scene ship_s2bf
     show but b23kuyasigaru1 at m
     with quickergradientwiperight
@@ -163,7 +163,7 @@ label chapter1:
     show rud a11akuwarai1 at r with dissolve
     rud "“.....Jetzt hat dieser Kasper tatsächlich die Fische gefüttert, ach herrje," 
     extend " ....ahahaha!”"
-    camera at gonnafallgonnafall
+    camera at gonnafallgonnafall,boatswing
     show mar a22warai2 at l with dissolve
     mar "“uu-uu~!" 
     extend " Battler hat sich übergeben!" 
@@ -522,7 +522,7 @@ label chapter1:
     show geo a11defo1 at m with dis
     geo " Ach ja, wusstet ihr?"
     extend " ....Ein echter Sturmgott aus der griechischen Mythologie. ist jedoch Aigaion.”"
-    show but b24futeki3 at l with dis
+    show but b24futeki3 at leftedge with dis
     but "“....Ein leckerer Teller Gyros-Geschnetzeltes ist das einzige Griechische, das ich schätze."
     extend b24warai1 " ......Yumyumyumyum!”"
     geo a11hohoemi1_closed_mouth "“.........."
@@ -531,7 +531,7 @@ label chapter1:
     geo a11majime2 "“......Hmm"
     extend " ....So könnte man es ausdrücken ja!”"
     but b11warai3 "“....Auf jeden Fall können wir die Zeit, die uns Aigaion jetzt schenkt, nutzen, um wieder mehr Zeit miteinander zu verbringen.”"
-    show jes b22warai1 at r with dis
+    show jes b22warai1 at rightedge with dis
     jes "“Ja, das hast du wirklich nötig, Battler-kun!”"
     extend " ...Es war ja auch dringend notwendig, dass du deine Familie für sechs Jahre verlässt.”"
     but b11odoroki3 "“.....Ach man”"
@@ -932,9 +932,9 @@ label chapter1:
     play sound "audio/sfx/umise_028.ogg"
     pause(11)
     scene black with longdissolve
-    show mlib_1a_bg at bgani
+    show mlib_1a_bg at boatswing
     call rainlayer from _call_rainlayer_1
-    show mlib_1a at bgani
+    show mlib_1a at boatswing
     show blackpic 
     stop music fadeout 3.0
     pause(5)
@@ -952,9 +952,9 @@ label chapter1:
     with dis
     "Als er seine Untersuchung beendet hatte, stieß der Doktor im Spätherbst seines Lebens einen ärgerlichen Seufzer aus."
     "Zwei ältere Herren standen in einem dunklen, staubigen und übel riechenden Arbeitszimmer."
-    scene mlib_1b_bg at bgani
+    scene mlib_1b_bg at boatswing
     call rainlayer from _call_rainlayer_2
-    show mlib_1b at bgani
+    show mlib_1b at boatswing
     with dissolve
     "Es ist anzumerken, dass dieses Arbeitszimmer nicht wie ein gewöhnliches Arbeitszimmer aussieht."
     extend " Es ist komplett möbliert mit Schlafzimmer, Küche und eigener Toilette."
@@ -971,9 +971,9 @@ label chapter1:
     extend " Er ist der langjährige Arzt von Kinzo und sein bester Freund."
     "Jetzt, da Kinzos ständiges Misstrauen außergewöhnliche Ausmaße angenommen hat, ist Nanjo einer der wenigen Menschen, denen er vertraut." 
     "Dank Nanjos großherziger Natur konnte er die Freundschaft mit Kinzo aufrechterhalten, obwohl dieser bei der geringsten Provokation in Wut gerät."
-    scene mlib_1b_bg at bgani
+    scene mlib_1b_bg at boatswing
     call rainlayer from _call_rainlayer_3
-    show mlib_1b at bgani
+    show mlib_1b at boatswing
     show kin a11warai1 at m
     with quickergradientwiperight
     kin "“....Danke"
@@ -997,9 +997,9 @@ label chapter1:
     kin a11warai2 "“Genji..."
     extend " Noch ein Glas...."
     extend " Mach eine Mischung daraus, damit Nanjo nicht aus allen Wolken fällt.”"
-    scene mlib_1c_bg at bgani
+    scene mlib_1c_bg at boatswing
     call rainlayer from _call_rainlayer_4
-    show mlib_1c at bgani
+    show mlib_1c at boatswing
     show gen a11defo1 at m
     with quickergradientwiperight
     gen "“Herr...."
@@ -1015,9 +1015,9 @@ label chapter1:
     "Erneut stieß Nanjo einen tiefen Seufzer aus, als er mit ansah, wie der Butler seinen Befehl ausführte."
     "Das herrliche Aroma des giftgrünen Getränks hat mittlerweile den ganzen Raum eingenommen."
     extend " Wenn man nicht gerade Alkoholexperte ist, würde man bei der Farbe nicht daran denken, dass es sich hierbei um ein Alkoholisches Getränk handelt."
-    scene mlib_1b_bg at bgani
+    scene mlib_1b_bg at boatswing
     call rainlayer from _call_rainlayer_5
-    show mlib_1b at bgani
+    show mlib_1b at boatswing
     show kin a11warai2 at r
     with gradientwipedown
     kin "“.......Nanjo,"
@@ -1033,9 +1033,9 @@ label chapter1:
     gen "“.....Herr”"
     kin "“Vielen Dank.”"
     "Genji führte die Anweisung gewissenhaft aus und reichte seinem Herrn eine Mischung mit geringerem Alkoholgehalt."
-    scene mlib_1c_bg at bgani
+    scene mlib_1c_bg at boatswing
     call rainlayer from _call_rainlayer_6
-    show mlib_1c at bgani
+    show mlib_1c at boatswing
     with gradientwiperight
     show kin a11defo1 at r with dissolve
     kin "“....Nanjo," 
@@ -1127,9 +1127,9 @@ label chapter1:
     pause(1.5)
     "Plötzlich klopfte es an der Tür, dabei war es doch verboten um diese Zeit zu stören."
     "Kinzos Wutanfall war nur noch wie ein Echo, das im Raum verblieben war."
-    scene mlib_1b_bg at bgani
+    scene mlib_1b_bg at boatswing
     call rainlayer from _call_rainlayer_7
-    show mlib_1b at bgani
+    show mlib_1b at boatswing
     show kin a11fukigen1 at m
     with quickergradientwiperight
     kin "“....Wer stört?"
