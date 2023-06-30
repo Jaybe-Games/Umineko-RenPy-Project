@@ -217,9 +217,9 @@ default preferences.text_cps = 50
 default preferences.afm_time = 15
 default preferences.fullscreen = True
 default preferences.gl_powersave = False
-default preferences.gl_tearing = False
+default preferences.gl_tearing = True
 default preferences.gl_framerate = None
-define config.image_cache_size_mb = 800
+define config.image_cache_size_mb = 1000
 define config.debug_prediction = True
 
 
@@ -281,7 +281,7 @@ init python:
     build.archive("audio", "all")
     build.archive("fonts", "all")
     build.archive("images", "all")
-    build.archive("video", "all")
+    build.archive("movies", "all")
 
     build.classify('**~', None)
     build.classify('**.bak', None)
@@ -311,8 +311,8 @@ init python:
     build.classify('**/**.rpyc', 'scripts')
     build.classify('**/**.json', 'scripts')
     build.classify('**.json', 'scripts')
-    build.classify('**/**.webm', 'video')
-    build.classify('**/**.mov', 'video')
+    build.classify('**/**.webm', 'movies')
+    build.classify('**/**.mov', 'movies')
     build.classify('**/**.otf', 'fonts')
     build.classify('**/**.ttf', 'fonts')
 

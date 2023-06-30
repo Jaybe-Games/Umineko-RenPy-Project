@@ -1,4 +1,5 @@
 # Position definitions
+
 transform m:
     xalign 0.5
     zoom 0.995
@@ -57,3 +58,29 @@ transform reset_shader:
 
 image butterfly1 = Movie(channel="movie", play="videos/butterfly1.mov", Delay=False, loop=False, side_mask=True, image="images/efe/no83_0051.png")
 image butterfly1_0 = Movie(channel="movie", play="videos/Butterfly1_0.mov", side_mask=True, Delay=False, loop=False, start_image="images/efe/no83_0051.png")
+
+transform bgani:
+    subpixel True
+    xoffset 250
+    xalign 0.5
+    yalign 0.5
+    linear 120 xoffset -250
+    linear 120 xoffset 250
+    repeat
+
+transform rotatebg:
+    subpixel True
+    zoom 1.65
+    xalign 0.5
+    yalign 0.5
+    rotate 0
+    linear 300 rotate 360
+    repeat
+
+transform shakezoom:
+    subpixel True
+    zoom 1.05
+    xalign 0.5
+    yalign 0.5
+
+

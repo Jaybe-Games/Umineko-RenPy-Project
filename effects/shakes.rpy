@@ -47,9 +47,33 @@ transform walk_updown1:
  ease 0.20833333333333334 offset (0, 20)
  ease 0.20833333333333334 offset (0,0)
  repeat 3
-transform deepbreath:
- ease 0.8333333333333334 offset (0, 20)
- ease 0.8333333333333334 offset (0,0)
+transform gonnafallgonnafall:
+ subpixel True
+ zoom 1.05
+ xalign 0.5
+ yalign 0.5
+ ease 0.9333333333333334 offset (0, 180)
+ ease 0.9333333333333334 offset (0,-25)
+ repeat
+
+transform gonnavomit:
+ subpixel True
+ zoom 1.05
+ xalign 0.5
+ yalign 0.5
+ ease 0.4333333333333334 offset (0, 180)
+ ease 0.4333333333333334 offset (0,-25)
+ repeat
+
+transform slowerboat:
+ subpixel True
+ zoom 1.05
+ xalign 0.5
+ yalign 0.5
+ ease 4.9333333333333334 offset (0, 180)
+ ease 4.9333333333333334 offset (0,-25)
+ repeat
+
 transform screenshake:
  choice:
   ease 0.03333333333333333 offset (12, 0)

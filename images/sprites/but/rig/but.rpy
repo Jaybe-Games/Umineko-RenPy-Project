@@ -2,6 +2,7 @@ image but b23kuyasigaru1 = Composite(
     (895, 1216),
     (0, 0), "images/sprites/but/b23/Kayasigaru1/0.png",
     (0, 0), WhileSpeaking("but", "but_b23_kuyasigaru1_mouth", "images/sprites/but/b23/Kayasigaru1/0.png"),
+    predict_all=True
     )
 
 image but_b23_kuyasigaru1_mouth:

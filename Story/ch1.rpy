@@ -5,6 +5,7 @@ label chapter1:
     $ chapter = 1
     $ songname = "-"
     $ persistent.openingplayed = True
+    $ renpy.free_memory()
     if persistent.showch == True:
         call showch1 from _call_showch1
     play sound "audio/sfx/umise_028.ogg"
@@ -17,7 +18,7 @@ label chapter1:
     play music "audio/bgm/umib_003_intro.ogg"
     queue music "audio/bgm/umib_003_loop.ogg" loop 
     show white with m1trans
-    camera at Shake(None, float('inf'), dist=4)
+    camera at gonnafallgonnafall
     scene ship_s2a with m1trans1
     window auto
     "In der Luft liegt der typische Meeresgeruch von Salz und auch ein wenig von Algen."
@@ -99,13 +100,15 @@ label chapter1:
     if persistent.rudolf == False:
         $ persistent.rudolf = True
         play sound "audio/sfx/umise_1060.ogg"
-        $ renpy.notify("Das Charaktermenü wurde unter 'Extras' freigeschaltet.")
+        $ renpy.notify("Die Charaktere wurden geupdated.")
+    $ renpy.start_predict("kir *")
     "Das ist mein Vater Rudolf. Der alte Bastard ist so groß wie ich und macht sich bei Gelegenheit gerne über mich lustig."
     extend " Sein Name wird auf Japanisch Ushiromiya Rudorfu ausgesprochen, fast die ganze Familie hat diese seltsame Namenstradition."
     "Seit meine Mutter Asumu gestorben ist, hat sich unser Verhältnis sehr verschlechtert,"
     extend " aber ich bin sicher, dass es mit der Zeit wieder funktionieren kann."
-    scene black with quickgradientwipedown
-    camera at Shake(None, float('inf'), dist=0)
+    scene black
+    camera
+    with quickgradientwipedown
     "Vor sechs Jahren, kurz nach dem Tod meiner Mutter, hat mein Vater seine Arbeitskollegin geheiratet."
     extend " Das hat mich gebrochen, weil es einfach viel zu schnell ging, kaum war meine Mutter gestorben, hat er wieder geheiratet."
     "Das nächste Problem war, dass Dad schon eine Affäre mit ihr gehabt hatte."
@@ -114,9 +117,9 @@ label chapter1:
     extend " und da ich mit solchen Leuten nicht in einem Haushalt leben wollte, bin ich zu meinen Großeltern mütterlicherseits gezogen und habe die Ushiromiya-Familie verlassen."
     "Leider sind meine Großeltern vor kurzem gestorben, und ich hatte die Gelegenheit, mit meinem Vater und meiner Stiefmutter zu sprechen, und wir konnten irgendwie einen gemeinsamen Nenner finden."
     "Ich bin also wieder Teil der Familie und nehme nach sechs Jahren zum ersten Mal wieder an der Konferenz teil."
-    camera at Shake(None, float('inf'), dist=4)
     scene ship_s2bf
     show kir a11defo1 at l
+    camera at gonnafallgonnafall
     with quickergradientwiperight
     kir "“...Ist es nicht schön, dass Battler-kun wieder da ist?"
     extend " Ich meine, nach 6 Jahren Abwesenheit immer noch ein Theater bei der Ankunft? *kicher*”"
@@ -144,7 +147,7 @@ label chapter1:
     "Und nein, ...."
     extend " man spricht es nicht komisch aus, ihr Name ist absolut perfekt!"
     "Ich hasse Großvater den alten Kauz dafür, dass wir so komische Namen haben."
-    camera at Shake(None, float('inf'), dist=10)
+    camera at gonnavomit
     scene ship_s2bf
     show but b23kuyasigaru1 at m
     with quickergradientwiperight
@@ -160,7 +163,7 @@ label chapter1:
     show rud a11akuwarai1 at r with dissolve
     rud "“.....Jetzt hat dieser Kasper tatsächlich die Fische gefüttert, ach herrje," 
     extend " ....ahahaha!”"
-    camera at Shake(None, float('inf'), dist=4)
+    camera at gonnafallgonnafall
     show mar a22warai2 at l with dissolve
     mar "“uu-uu~!" 
     extend " Battler hat sich übergeben!" 
@@ -264,7 +267,7 @@ label chapter1:
     extend " ....jaaaa~?”"
     "Rudolf hat einen sehr starken Griff, besonders wenn es um Battlers Ohrläppchen geht, man hat das Gefühl, er reißt es jeden Moment ab."
     but a11aseru5 "“....Ich hoffe, dass du über das Geländer fällst und ertrinkst, du alter Bastard!"
-    extend b11kuyasigaru1 " ....Owowowow" 
+    extend b11kuyasigaru1 " ....Owowowow"
     extend " lass los!"
     but "...Ich"
     extend " ....gebe"
@@ -312,7 +315,7 @@ label chapter1:
     extend " ...Ich werde sofort den Kapitän bitten, etwas langsamer zu fahren, aber bitte nicht mehr ins Meer kotzen.”"
     but b11odoroki3 "“.....Ja" 
     extend " ....Vielen Dank, Jessica-chan.”"
-    scene ship_s2bf 
+    scene ship_s2bf
     show jes a11warai1 at m
     with quickergradientwiperight  
     if persistent.jessica == False:
@@ -331,12 +334,13 @@ label chapter1:
     extend " Sie flucht viel und ihre Wortwahl ist gewöhnungsbedürftig."
     "Früher waren wir das Chaotenduo, haben viel Unsinn gemacht und waren uns auch nicht zu fein, gegenüber ihren Eltern einen sehr rauen Ton anzuwenden."
     extend " Die Vorträge der Erwachsenen über gutes Benehmen nervten uns zwar jedes Mal, aber es war auch einfach zu lustig zu sehen, wie sich die vorbildlichen Erwachsenen aufregten."
-    camera at Shake(None, float('inf'), dist=0)
+    camera at slowerboat
     "Der Kapitän hat zugestimmt langsamer zu fahren und jetzt schaukelt das Boot nicht mehr so stark."
     jes "“....Verdammte Scheiße Battler-kun," 
     extend " ...jetzt werden wir uns wegen dir verspäten!”"
     show but b22warai1 at l
     with dis
+    $ renpy.start_predict("geo *") 
     but "“.....Halt doch mal dein Maul," 
     extend " ...immerhin kann ich jetzt ein wenig chillen.”"
     jes a11defo2 "“.....Wir sollten besser runter gehen zum 'chillen', wir sind gleich auf der Insel.”"
@@ -352,6 +356,7 @@ label chapter1:
     play music "audio/bgm/umib_002_intro.ogg"
     queue music "audio/bgm/umib_002_loop.ogg" loop 
     scene ship_s3a at bgani
+    camera
     show expression(CustomParticles("images/system/particle.png", 10))
     with gradientwiperight
     "Dann gingen Battler und Jessica unter Deck zu den anderen, die im Gegensatz zu Battler ruhig warten, bis sie endlich die Insel erreichen."

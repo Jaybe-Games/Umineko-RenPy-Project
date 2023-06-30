@@ -5,39 +5,12 @@ transform alpha_dissolve:
     on hide:
         linear 0.5 alpha 0
     # This is to fade in the clock.
-transform rotateshort:
-    xanchor 0.5
-    yanchor 0.5
-    xalign -0.0095
-    yalign 0.1
-    rotate (timuhour*6)
 
-transform rotatelong:
-    xanchor 0.5
-    yanchor 0.5
-    xalign -0.0365
-    yalign 0.05
-    rotate (timuminutes*0.5)
-
-transform clock_rotation:
-    around (.5, .5) alignaround (.5, .5) xalign .5 yalign .5
-    rotate 0
-    linear 10 rotate 360
-    repeat
-transform clock_rotation_h:
-    around (.5, .5) alignaround (.5, .5) xalign .5 yalign .5
-    rotate 355
-    linear 1 rotate 364
-transform clock_rotation_m:
-    around (.5, .5) alignaround (.5, .5) xalign .5 yalign .5
-    rotate 338
-    linear 1 rotate 459
-
-transform clock_rotation_h1:
+transform clock_rotation_h_ch2:
     around (.5, .5) alignaround (.5, .5) xalign .5 yalign .5
     rotate 300
     linear 2 rotate 330
-transform clock_rotation_m1:
+transform clock_rotation_m_ch2:
     around (.5, .5) alignaround (.5, .5) xalign .5 yalign .5
     rotate 0
     linear 2 rotate 360
@@ -120,23 +93,11 @@ screen cinemalogo():
     zorder 999
     add "images/system/cinemalogo.png" at [alpha_dissolve, Position(xpos = 1000, ypos = 780)]
 
-screen clocktimu():
-    add "gui/time/clock.png" at Position(xpos = -75, ypos = 14)
-    add "gui/time/clock_m.png" at rotatelong
-    add "gui/time/clock_h.png" at rotateshort
-    add "gui/time/clock_c.png" at Position(xpos = 50, ypos = 145)
-
-screen clocktimu_break():
-    add "gui/time/clock.png" at [alpha_dissolve, Position(xpos = 1000, ypos = 300)]
-    add "gui/time/clock_m.png" at [clock_rotation_m, Position(xpos = 1430, ypos = 727)]
-    add "gui/time/clock_h.png" at [clock_rotation_h, Position(xpos = 1430, ypos = 727)]
-    add "gui/time/clock_c.png" at Position(xpos = 1380, ypos = 700)
-
-screen clocktimu_break1():
+screen clockch2():
     zorder 50
     add "gui/time/clock.png" at [alpha_dissolve, Position(xpos = 1000, ypos = 300)]
-    add "gui/time/clock_m.png" at [clock_rotation_m1, Position(xpos = 1430, ypos = 727)]
-    add "gui/time/clock_h.png" at [clock_rotation_h1, Position(xpos = 1430, ypos = 727)]
+    add "gui/time/clock_m.png" at [clock_rotation_h_ch2, Position(xpos = 1430, ypos = 727)]
+    add "gui/time/clock_h.png" at [clock_rotation_m_ch2, Position(xpos = 1430, ypos = 727)]
     add "gui/time/clock_c.png" at Position(xpos = 1380, ypos = 700)
 
 screen clocktimu_break2():

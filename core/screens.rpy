@@ -691,9 +691,9 @@ screen game_menu(scroll=None, yinitial=0.0):
             imagebutton auto "gui/button/mainmenu_%s.png" action MainMenu() activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
 
             #imagebutton auto "gui/button/back_%s.png" activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" action Return()
-        if showbgm == True:
+        if persistent.showbgm == True:
             text "Soundtrack: " + songname ypos 1005 xpos 1900 xalign 1.0 size 30 font "fonts/AOTFShinGoProMedium.otf" outlines [ (absolute(3), "#000", absolute(0), absolute(0)) ]
-        if showplaytime == True:
+        if persistent.showplaytime == True:
             text "Spielzeit: " + getPlayTime() + "" ypos 1040 xpos 1900 xalign 1.0 size 30 font "fonts/AOTFShinGoProMedium.otf" outlines [ (absolute(3), "#000", absolute(0), absolute(0)) ]
 
     else:
@@ -1146,7 +1146,7 @@ screen preferences():
         hbox:
 
             style_prefix "check"
-            imagebutton auto "gui/button/off_%s.png" action SetVariable("persistent.howch", False) activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+            imagebutton auto "gui/button/off_%s.png" action SetVariable("persistent.showch", False) activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
             imagebutton auto "gui/button/on_%s.png" action SetVariable("persistent.showch", True) activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
         
         hbox:
