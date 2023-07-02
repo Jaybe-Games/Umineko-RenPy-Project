@@ -2,58 +2,58 @@
 
 transform m:
     xalign 0.5
-    zoom 0.995
+    zoom 0.990
     yanchor 1.0
-    ypos 1202
+    ypos 1210
 
 transform l:
     xanchor 0.5
     xpos 525
     zoom 0.995
     yanchor 1.0
-    ypos 1202
+    ypos 1210
 
 transform r:
     xanchor 0.5
     xpos 1350
-    zoom 0.995
+    zoom 0.990
     yanchor 1.0
-    ypos 1202
+    ypos 1210
 
 transform r2:
     xanchor 0.5
     xpos 1040
-    zoom 0.995
+    zoom 0.990
     yanchor 1.0
-    ypos 1202
+    ypos 1210
 
 transform r3:
     xanchor 0.5
     xpos 980
-    zoom 0.995
+    zoom 0.990
     yanchor 1.0
-    ypos 1202
+    ypos 1210
 
 transform l2:
     xanchor 0.5
     xpos 880
-    zoom 0.995
+    zoom 0.990
     yanchor 1.0
-    ypos 1202
+    ypos 1210
 
 transform leftedge:
     xanchor 0.5
     xpos 400
-    zoom 0.995
+    zoom 0.990
     yanchor 1.0
-    ypos 1202
+    ypos 1210
 
 transform rightedge:
     xanchor 0.5
     xpos 1500
-    zoom 0.995
+    zoom 0.990
     yanchor 1.0
-    ypos 1202
+    ypos 1210
 # Color transforms
 
 transform grayscale:
@@ -104,16 +104,16 @@ transform boatswing:
     ease 5 xoffset 50
     repeat
 
-transform gonnafallgonnafall:
+transform normalboat:
     subpixel True
     zoom 1.05
     xalign 0.5
     yalign 0.5
-    ease 0.9333333333333334 offset (0, 180)
-    ease 0.9333333333333334 offset (0,-25)
+    ease 1.1333333333333334 offset (0, 180)
+    ease 1.1333333333333334 offset (0,-25)
     repeat
 
-transform gonnavomit:
+transform extremboat:
     subpixel True
     zoom 1.05
     xalign 0.5
@@ -131,4 +131,70 @@ transform slowerboat:
     ease 4.9333333333333334 offset (0,-25)
     repeat
 
+transform buttondissolvetitle:
+    alpha 0.0
+    pause 0.5
+    ease 0.5 alpha 1.0
+
+transform buttondissolve1:
+    subpixel True
+    alpha 0.0
+    pause 1.0
+    ease 0.5 alpha 1.0
+
+transform buttondissolve2:
+    subpixel True
+    alpha 0.0
+    pause 1.5
+    ease 0.5 alpha 1.0
+
+transform buttondissolve3:
+    subpixel True
+    alpha 0.0
+    pause 2.0
+    ease 0.5 alpha 1.0
+transform buttondissolve4:
+    subpixel True
+    alpha 0.0
+    pause 2.5
+    ease 0.5 alpha 1.0
+
+transform buttondissolve5:
+    subpixel True
+    alpha 0.0
+    pause 3.0
+    ease 0.5 alpha 1.0
+
+transform bganistart:
+    subpixel True
+    xoffset 250
+    xalign 0.5
+    yalign 0.5
+
+transform gamemenubuttontransform:
+    subpixel True
+    xoffset 500
+    zoom 0.85
+    xalign 0.5
+    yalign 0.5
+    linear 0.4 xoffset 0
+
+transform hanatoptransform:
+    subpixel True
+    yoffset -500
+    xalign 0.5
+    yalign 0.0
+    linear 0.4 yoffset 0
+
+transform hanabottomtransform:
+    subpixel True
+    yoffset 500
+    xalign 0.5
+    yalign 1.0
+    linear 0.4 yoffset 0
+
+transform chapterdissolve:
+    alpha 1.0
+    pause 3
+    ease 0.5 alpha 0.0
 

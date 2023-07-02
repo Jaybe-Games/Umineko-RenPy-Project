@@ -25,8 +25,8 @@ init python:
 
     config.keymap['accessibility'].remove('K_a')
 
-    #config.keymap['save_delete'].remove('K_DELETE')
-    #config.keymap['save_delete'].remove('KP_DELETE')
+    config.keymap['save_delete'].remove('K_DELETE')
+    config.keymap['save_delete'].remove('KP_DELETE')
 
     config.pad_bindings['pad_leftshoulder_press'].remove('rollback')
     config.pad_bindings['pad_lefttrigger_pos'].remove('rollback')

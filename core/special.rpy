@@ -128,3 +128,6 @@ init -10 python:
                         #currentuser = user
             #except:
                 #pass
+
+image title_menu = "gui/title/menu.png"
+image menu_bg = "gui/title/bg.png"

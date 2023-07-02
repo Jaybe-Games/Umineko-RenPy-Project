@@ -34,3 +34,21 @@ translate English strings:
     old "German"
     new "German"
 
+# TODO: Translation updated at 2023-07-01 00:04
+
+# game/core/splashscreen.rpy:107
+translate English splashscreen_59bc7e9c:
+
+    # bea a11defo2 " ....A warm Welcome to Umineko When They Cry Zero ~Waltz of Reflections and Delusions~ Please choose a language aswell."
+    bea a11defo2 " ....A warm Welcome to Umineko When They Cry Zero ~Waltz of Reflections and Delusions~ Please choose a language aswell."
+
+translate English strings:
+
+    # game/core/splashscreen.rpy:109
+    old "EN-English"
+    new "EN-English"
+
+    # game/core/splashscreen.rpy:109
+    old "DE-German"
+    new "DE-German"
+

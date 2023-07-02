@@ -1,7 +1,7 @@
 label chapter1:
 
-    $ discord.update(state = "Boat trip to Rokkenjima")
-    $ discord.update(details = "Reading Chapter 1")
+    $ discord.update(state = "Episode 0 - DEBUGMODE")
+    $ discord.update(details = "Editing Chapter 1")
     $ chapter = 1
     $ songname = "-"
     $ persistent.openingplayed = True
@@ -18,7 +18,7 @@ label chapter1:
     play music "audio/bgm/umib_003_intro.ogg"
     queue music "audio/bgm/umib_003_loop.ogg" loop 
     show white with m1trans
-    camera at gonnafallgonnafall,boatswing
+    camera at normalboat,boatswing
     scene ship_s2a with m1trans1
     window auto
     "In der Luft liegt der typische Meeresgeruch von Salz und auch ein wenig von Algen."
@@ -58,6 +58,7 @@ label chapter1:
     if persistent.battler == False:
         $ persistent.newelement1 = True
         $ persistent.battler = True
+        $ persistent.menustate = 3
         $ Achievement.add(achievement_bronze2)
         play sound "audio/sfx/umise_1060.ogg"
         $ renpy.notify("Die Charakterbox wurde freigeschaltet.")
@@ -66,7 +67,7 @@ label chapter1:
     "Danach habe ich die Familie wegen eines Konflikts mit Dad für 6 lange Jahre verlassen und habe bei meinen Großeltern mütterlicherseits gelebt."
     "Mein Name wird im Japanischen übrigens so geschrieben: Ushiromiya Batora."
     extend " Ja, man spricht mich nicht Battler aus, sondern 'Batora', klingt echt komisch."
-    "Meine Japanischen Schriftzeichen machen mich wütend. Ich werde mit den Zeichen von 'Person' und 'Kampf' geschrieben"
+    "Meine Japanischen Schriftzeichen machen mich wütend. Ich werde mit den Zeichen von 'Person' und 'Kampf' geschrieben."
     extend " Deswegen denkt ein typischer Japaner ich heiße Sento-kun. Niemand würde auch nur im Traum daran denken, dass es 'Battler' ausgesprochen wird."
     "Aber der Spaß hört bei mir noch lange nicht auf..."
     extend " Hier sind einige, die ihren Namensgeber am liebsten in dunkle Kammern sperren würden."
@@ -96,7 +97,6 @@ label chapter1:
     scene ship_s2bf
     show rud a11warai1 at m
     with quickergradientwiperight  
-    pause (0.3)
     if persistent.rudolf == False:
         $ persistent.rudolf = True
         play sound "audio/sfx/umise_1060.ogg"
@@ -119,7 +119,7 @@ label chapter1:
     "Ich bin also wieder Teil der Familie und nehme nach sechs Jahren zum ersten Mal wieder an der Konferenz teil."
     scene ship_s2bf
     show kir a11defo1 at l
-    camera at gonnafallgonnafall,boatswing
+    camera at normalboat,boatswing
     with quickergradientwiperight
     kir "“...Ist es nicht schön, dass Battler-kun wieder da ist?"
     extend " Ich meine, nach 6 Jahren Abwesenheit immer noch ein Theater bei der Ankunft? *kicher*”"
@@ -147,7 +147,7 @@ label chapter1:
     "Und nein, ...."
     extend " man spricht es nicht komisch aus, ihr Name ist absolut perfekt!"
     "Ich hasse Großvater den alten Kauz dafür, dass wir so komische Namen haben."
-    camera at gonnavomit,boatswing
+    camera at extremboat,boatswing
     scene ship_s2bf
     show but b23kuyasigaru1 at m
     with quickergradientwiperight
@@ -163,7 +163,7 @@ label chapter1:
     show rud a11akuwarai1 at r with dissolve
     rud "“.....Jetzt hat dieser Kasper tatsächlich die Fische gefüttert, ach herrje," 
     extend " ....ahahaha!”"
-    camera at gonnafallgonnafall,boatswing
+    camera at normalboat,boatswing
     show mar a22warai2 at l with dissolve
     mar "“uu-uu~!" 
     extend " Battler hat sich übergeben!" 
@@ -308,8 +308,8 @@ label chapter1:
     scene ship_s2a
     show but a11defo1 at r
     with quickergradientwiperight
-    but "“......Entschuldigung"
-    extend " Das verfluchte Boot schaukelt so viel!"
+    but "“......Tut mir voll traurig."
+    extend " ....Das verfluchte Boot schaukelt so viel!"
     extend " ....Das Schiff schaukelt und schaukelt und schaukelt!!!"
     but a21kuyasigaru1_open_mouth "....aaaaaaaahhhhhhhhhhhhhhhh!!!!!!!"
     extend a21kuyasigaru1 " Mach, dass es aufhört, sonst falle ich wieder!”"
@@ -343,7 +343,6 @@ label chapter1:
     extend " ...jetzt werden wir uns wegen dir verspäten!”"
     show but b22warai1 at l
     with dis
-    $ renpy.start_predict("geo *") 
     but "“.....Halt doch mal dein Maul," 
     extend " ...immerhin kann ich jetzt ein wenig chillen.”"
     jes a11defo2 "“.....Wir sollten besser runter gehen zum 'chillen', wir sind gleich auf der Insel.”"
@@ -363,9 +362,9 @@ label chapter1:
     show expression(CustomParticles("images/system/particle.png", 10))
     with gradientwiperight
     "Dann gingen Battler und Jessica unter Deck zu den anderen, die im Gegensatz zu Battler ruhig warten, bis sie endlich die Insel erreichen."
-    show eva_b22_akire2 at r
+    show eva_b22_akire2 at rightedge
     show hid_a21_warai1 at m
-    show kum_a12_defo2 at l
+    show kum_a12_defo2 at leftedge
     with quickergradientwiperight
     " ....Moment mal, dieses 'ruhig' sein ist falsch! Ich sehe es klar und deutlich! Die anderen Erwachsenen verkneifen sich doch alle gerade das Lachen."
     hide eva_b22_akire2
@@ -376,7 +375,7 @@ label chapter1:
     geo "“Battler-kun!"
     extend " ....Wir alle wissen bereits, dass es dich schon erwischt hat."
     extend " ...Dir scheint es gerade wohl gar nicht gut zu gehen.”"
-    show but b22nayamu1 at l,nod with dis
+    show but b22nayamu1 at leftedge,nod with dis
     "Mit einem leichten, aber nicht ganz ernstgemeinten Nicken stimmte Battler zu."
     but "“Mir geht es gut, den Umständen entsprechend...."
     extend b23kuyasigaru1 " Der Kapitän hat das Schiff doch absichtlich so schaukeln lassen.”"
@@ -387,7 +386,7 @@ label chapter1:
     extend " ....nicht wahr," 
     extend " ....Jessica-chan?”"
     hide but b23kuyasigaru1
-    show jes b22warai1 at l
+    show jes b22warai1 at leftedge
     with dis
     jes "“Ja,"
     extend " .....es ist, als wäre er nie weg gewesen,"
@@ -412,12 +411,12 @@ label chapter1:
     extend " dass er heute einen Massenmord begehen wird."
     "Am liebsten würde ich auch diejenigen umbringen, die für diese schreckliche Namenstradition verantwortlich sind."
     hide geo a11defo1
-    show but b22warai1 at r
+    show but b22warai1 at rightedge
     with quickergradientwiperight
     but "“....Ich finde, heute ist auch ein besonderer Tag,"
     extend " ...denn um die Mittagszeit soll ein Sturm aufziehen, der sich erst am Montag wieder legen soll."
     extend b11warai3 " Es ist das erste Mal, dass wir länger als einen Tag auf der Insel bleiben.”"
-    show geo a11hohoemi1 at l with quickergradientwiperight
+    show geo a11hohoemi1 at leftedge with quickergradientwiperight
     geo "“...Ja, aber wir haben auch immer ein wenig Glück gehabt, dass so ein starker Sturm nie über unsere Familienkonferenz hereingebrochen ist."
     extend " ...Wie heißt es so schön?" 
     extend " Es gibt immer ein erstes Mal.”"
@@ -449,7 +448,7 @@ label chapter1:
     extend a11atya3 " ...Ich wusste nicht mal, dass Wörter wie tantrisch oder dionysisch existieren."
     extend " Es klingt einfach unironisch, als hätte jemand einfach Wörter erfunden."
     hide jes a11atya3
-    show but b23nayamu1 at r
+    show but b23nayamu1 at rightedge
     with quickergradientwiperight
     but ".............hmm"
     "Battler war ein auch wenig überwältigt von diesem Input, im Leben nicht hätte er jetzt einen Vortrag über Gefühle und Spiritualität erwartet."
@@ -459,7 +458,7 @@ label chapter1:
     extend " ......intensivere Gefühle," 
     extend " ........dionysische Spiritualität?"
     extend b23nayamu2 " ....Das hast du aus dieser einen Yoga-Zeitschrift von heute Morgen."
-    show geo a11komaru1 at l with quickergradientwiperight
+    show geo a11komaru1 at leftedge with quickergradientwiperight
     geo "“......Ähm,"
     extend a11komaru3 " ....oh,"
     extend " ....hahahaha," 
@@ -477,7 +476,7 @@ label chapter1:
     geo a23kkomaru5k "Es ist auch eine Spiritualität der...."
     extend " uhmm...."
     extend " ....Sexualität"
-    geo a11defo1 " ....Es ist ein Begriff ursprünglich aus Indien, und wird mit 'Zusammenhang' oder auch 'Gefüge' übersetzt."
+    geo " ....Es ist ein Begriff ursprünglich aus Indien, und wird mit 'Zusammenhang' oder auch 'Gefüge' übersetzt."
     extend " ....Berührungen des Körpers sollen also auch die Seele berühren, sie nähren."
     geo "Es ist ein sehr breites Thema...”"
     but b11ero1 "“Geil," 
@@ -492,7 +491,7 @@ label chapter1:
     but "“.....Auauau, Jessica-chan..."
     extend " Das hat richtig weh getan!”"
     hide geo a11komaru3
-    show jes a11ikari1 at l
+    show jes a11ikari1 at leftedge
     with dis
     jes "“...Trottel!"
     extend " ....Du Holzkopf!"
@@ -502,9 +501,11 @@ label chapter1:
     extend " Battler hat jetzt eine ziemlich rote Wange, als hätte er es auf eine heiße Herdplatte gelegt."
     jes a12ikari1 "“.....Perverser Battler!"
     extend " ...Du bist sofort Feuer und Flamme, sobald es auch nur im Entferntesten in diese Richtung geht!”"
-    show but b23nayamu2 at r with dis
+    show but b23nayamu2 at rightedge with dis
     but "“.....Ihihihihi"
     extend " ......Tut mir leid”"
+    "Von außen betrachtet sieht es nicht anders aus, als zwei Blagen die sich zanken und sich gegenseitig Sachen an den Kopf werfen."
+    extend " ....Was noch nicht mal das schlimmste Szenario ist, wenn man mal darüber nachdenkt, dass sich sogar die Erwachsenen ständig wie kleine Kinder in die Haare kriegen."
     show geo a11niramu1 at m with dis
     geo "“.....Hey!"
     extend " ....Beruhigt euch bitte!”"
@@ -535,12 +536,13 @@ label chapter1:
     extend " ....So könnte man es ausdrücken ja!”"
     but b11warai3 "“....Auf jeden Fall können wir die Zeit, die uns Aigaion jetzt schenkt, nutzen, um wieder mehr Zeit miteinander zu verbringen.”"
     show jes b22warai1 at rightedge with dis
-    jes "“Ja, das hast du wirklich nötig, Battler-kun!”"
-    extend " ...Es war ja auch dringend notwendig, dass du deine Familie für sechs Jahre verlässt.”"
+    jes "“Ja, das hast du wirklich nötig, Battler-kun!"
+    extend " ...Es war ja auch dringend notwendig, dass du deine Familie für sechs Jahre verlässt."
+    extend " *kicher*”"
     but b11odoroki3 "“.....Ach man”"
-    jes "“Auf die Familienkonferenz freue ich mich am meisten."
+    jes  "“Auf die Familienkonferenz freue ich mich am meisten."
     extend " ....Es ist die kurze Zeit, die meinen langweiligen Alltag auflockert.”"
-    but "“Ja, ich bin auch froh, wieder bei euch zu sein, das hat mir in den 6 Jahren am meisten gefehlt.”"
+    but "“Ja, ich bin auch froh, wieder bei euch zu sein, das hat mir in den sechs Jahren am meisten gefehlt.”"
     jes "“Es ist schrecklich, nur mit meinen Eltern und meinem Großvater auf der Insel zu leben."
     extend " ....Ich muss jeden Tag ziemlich früh aufstehen, weil meine Schule nicht wirklich in der Nähe ist, sondern auf Niijima."
     jes "Nach der Schule muss ich sofort nach Hause, so dass ich keine Zeit mit meinen Freunden verbringen kann.”"
@@ -935,18 +937,17 @@ label chapter1:
     play sound "audio/sfx/umise_028.ogg"
     pause(11)
     scene black with longdissolve
-    show mlib_1a_bg at boatswing
-    call rainlayer from _call_rainlayer_1
-    show mlib_1a at boatswing
-    show blackpic 
     stop music fadeout 3.0
     pause(5)
-    hide blackpic with gradientcirclefade
     $ songname = "Rose"
     if persistent.showbgm == True:
         $ renpy.notify("♪Rose")
     play music "audio/bgm/umib_013.ogg"
     play rain "audio/sfx/umilse_012.ogg"
+    show mlib_1a_bg at bgani
+    call rainlayer from _call_rainlayer_1
+    show mlib_1a at bgani
+    with gradientcirclefade
     show nan a1defo1 at l2 with dis
     nan "“Musste das wieder sein?..."
     extend " Du trinkst immer noch, obwohl ich dir schon so oft gesagt habe, dass du damit aufhören sollst?”"
@@ -955,9 +956,9 @@ label chapter1:
     with dis
     "Als er seine Untersuchung beendet hatte, stieß der Doktor im Spätherbst seines Lebens einen ärgerlichen Seufzer aus."
     "Zwei ältere Herren standen in einem dunklen, staubigen und übel riechenden Arbeitszimmer."
-    scene mlib_1b_bg at boatswing
+    scene mlib_1b_bg at bgani
     call rainlayer from _call_rainlayer_2
-    show mlib_1b at boatswing
+    show mlib_1b at bgani
     with dissolve
     "Es ist anzumerken, dass dieses Arbeitszimmer nicht wie ein gewöhnliches Arbeitszimmer aussieht."
     extend " Es ist komplett möbliert mit Schlafzimmer, Küche und eigener Toilette."
@@ -974,9 +975,9 @@ label chapter1:
     extend " Er ist der langjährige Arzt von Kinzo und sein bester Freund."
     "Jetzt, da Kinzos ständiges Misstrauen außergewöhnliche Ausmaße angenommen hat, ist Nanjo einer der wenigen Menschen, denen er vertraut." 
     "Dank Nanjos großherziger Natur konnte er die Freundschaft mit Kinzo aufrechterhalten, obwohl dieser bei der geringsten Provokation in Wut gerät."
-    scene mlib_1b_bg at boatswing
+    scene mlib_1b_bg at bgani
     call rainlayer from _call_rainlayer_3
-    show mlib_1b at boatswing
+    show mlib_1b at bgani
     show kin a11warai1 at m
     with quickergradientwiperight
     kin "“....Danke"
@@ -1000,9 +1001,9 @@ label chapter1:
     kin a11warai2 "“Genji..."
     extend " Noch ein Glas...."
     extend " Mach eine Mischung daraus, damit Nanjo nicht aus allen Wolken fällt.”"
-    scene mlib_1c_bg at boatswing
+    scene mlib_1c_bg at bgani
     call rainlayer from _call_rainlayer_4
-    show mlib_1c at boatswing
+    show mlib_1c at bgani
     show gen a11defo1 at m
     with quickergradientwiperight
     gen "“Herr...."
@@ -1018,9 +1019,9 @@ label chapter1:
     "Erneut stieß Nanjo einen tiefen Seufzer aus, als er mit ansah, wie der Butler seinen Befehl ausführte."
     "Das herrliche Aroma des giftgrünen Getränks hat mittlerweile den ganzen Raum eingenommen."
     extend " Wenn man nicht gerade Alkoholexperte ist, würde man bei der Farbe nicht daran denken, dass es sich hierbei um ein Alkoholisches Getränk handelt."
-    scene mlib_1b_bg at boatswing
+    scene mlib_1b_bg at bgani
     call rainlayer from _call_rainlayer_5
-    show mlib_1b at boatswing
+    show mlib_1b at bgani
     show kin a11warai2 at r
     with gradientwipedown
     kin "“.......Nanjo,"
@@ -1036,9 +1037,9 @@ label chapter1:
     gen "“.....Herr”"
     kin "“Vielen Dank.”"
     "Genji führte die Anweisung gewissenhaft aus und reichte seinem Herrn eine Mischung mit geringerem Alkoholgehalt."
-    scene mlib_1c_bg at boatswing
+    scene mlib_1c_bg at bgani
     call rainlayer from _call_rainlayer_6
-    show mlib_1c at boatswing
+    show mlib_1c at bgani
     with gradientwiperight
     show kin a11defo1 at r with dissolve
     kin "“....Nanjo," 
@@ -1126,13 +1127,14 @@ label chapter1:
     extend " Ich biete es dir an!"
     extend " .....Beatriceeeeeee!!!”"
     stop music
+    $ songname = "-"
     play sound "audio/sfx/umise_019.ogg"
     pause(1.5)
     "Plötzlich klopfte es an der Tür, dabei war es doch verboten um diese Zeit zu stören."
     "Kinzos Wutanfall war nur noch wie ein Echo, das im Raum verblieben war."
-    scene mlib_1b_bg at boatswing
+    scene mlib_1b_bg at bgani
     call rainlayer from _call_rainlayer_7
-    show mlib_1b at boatswing
+    show mlib_1b at bgani
     show kin a11fukigen1 at m
     with quickergradientwiperight
     kin "“....Wer stört?"
@@ -1165,6 +1167,7 @@ label chapter1:
         $ persistent.newelement1 = True
         play sound "audio/sfx/umise_1060.ogg"
         $ persistent.musicbox = True
+        $ persistent.menustate = 4
         $ renpy.notify("Die Musikbox wurde freigeschaltet.")
         $ Achievement.add(achievement_bronze3)
         $ Achievement.add(achievement_bronze4)

@@ -41,3 +41,6 @@ default persistent.showch = True
 default persistent.showbgm = True
 default persistent.showplaytime = True
 default highfps = True
+default persistent.menustate = 0
+default persistent.new = True
+default persistent.alreadyread1 = False

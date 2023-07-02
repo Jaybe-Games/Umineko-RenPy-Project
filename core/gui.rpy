@@ -208,11 +208,12 @@ define gui.quick_button_text_selected_color = gui.accent_color
 define gui.choice_button_width = 1185
 define gui.choice_button_height = None
 define gui.choice_button_tile = False
-define gui.choice_button_borders = Borders(150, 8, 150, 8)
+define gui.choice_button_borders = Borders(150, 15, 150, 8)
 define gui.choice_button_text_font = gui.text_font
 define gui.choice_button_text_size = gui.text_size
 define gui.choice_button_text_xalign = 0.5
-define gui.choice_button_text_idle_color = "#cccccc"
+define gui.choice_button_text_yalign = 0.5
+define gui.choice_button_text_idle_color = "#ffffff"
 define gui.choice_button_text_hover_color = "#ffffff"
 define gui.choice_button_text_insensitive_color = "#444444"
 
@@ -340,7 +341,7 @@ define gui.unscrollable = "hide"
 ## The history screen displays dialogue that the player has already dismissed.
 
 ## The number of blocks of dialogue history Ren'Py will keep.
-define config.history_length = 100
+define config.history_length = 50
 
 ## The height of a history screen entry, or None to make the height variable at
 ## the cost of performance.
@@ -350,7 +351,7 @@ define gui.history_height = 320
 ## speaking character.
 define gui.history_name_xpos = 0
 define gui.history_name_ypos = 0
-define gui.history_name_width = 300
+define gui.history_name_width = 250
 define gui.history_name_xalign = 0.0
 
 ## The position, width, and alignment of the dialogue text.

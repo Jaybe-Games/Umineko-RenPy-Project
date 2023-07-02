@@ -9,14 +9,14 @@ init python:
     ## Base Template
     ######################################
 
-    zeroopfull = ost.soundtrack(
+    op = ost.soundtrack(
     name = "Gold Dream Symphony", 
     path = "audio/bgm/op.ogg",
     priority = 0,
     author = "aFlowerSmiles",
     cover_art = False,
     )     
-    ost.manualDefineList.append(zeroopfull)
+    ost.manualDefineList.append(op)
 
 
     mmtheme = ost.soundtrack(

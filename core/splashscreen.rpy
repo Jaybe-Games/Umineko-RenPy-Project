@@ -53,6 +53,15 @@ if persistent.openingplayed == True:
     pause 0.1
 
     hide load4
+    pause 0.1
+
+    if persistent.newelement1 == False:
+        show menu_bg at bganistart
+        show title_menu
+        with gradientwipedown
+        hide title_menu
+        hide menu_bg
+
     return
 else:
     pause (1)
@@ -89,6 +98,7 @@ else:
 
     hide load4
     pause 0.1
+
     if not renpy.seen_label("start"):
         play wind "audio/sfx/umilse_005.ogg"
         show different_space_1a at bgani
@@ -107,15 +117,19 @@ else:
         bea a11defo2 " ....A warm Welcome to Umineko When They Cry Zero ~Waltz of Reflections and Delusions~ Please choose a language aswell."
         window hide
         menu:
-            "English":
+            "EN-English":
                 $ renpy.change_language("English")
 
-            "German":
+            "DE-German":
                 stop wind fadeout 1.0
                 scene black with dissolve
                 return
-    scene black with dissolve
     stop wind fadeout 1.0
+    scene menu_bg at bganistart
+    show title_menu
+    with gradientwipedown
+    hide title_menu
+    hide menu_bg
     return
 
 label quit:
@@ -143,9 +157,11 @@ label before_main_menu:
         play effect "audio/sfx/umise_022.ogg"
         show unlocked1 with gradientcirclefade
         pause(5)
-        show screen navigationfake
-        with fastdissolve
-        hide screen navigationfake
+        show menu_bg at bganistart
+        show title_menu
+        with gradientwipedown
+        hide title_menu
+        hide menu_bg
         hide unlocked1
         return
     else:

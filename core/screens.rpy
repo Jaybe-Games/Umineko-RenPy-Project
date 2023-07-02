@@ -320,85 +320,14 @@ style quick_button_text:
 ## This screen is included in the main and game menus, and provides navigation
 ## to other menus, and to start the game.
 
-screen navigationfake():
-
-    add "gui/title/bg.png" at bgani
-    add "gui/title/menu.png" at center
-    add "gui/title/titlelogo.png" at topright
-    add partObj
-    text "v1.0.0A" at topleft size 30 antialias True outlines [ (absolute(3), "#000", absolute(0), absolute(0)) ]
-
-    fixed:
-
-        if main_menu:
-
-            imagebutton auto "gui/button/secret_%s.png" action Start("supersecret") xpos 210 ypos 1032
-            imagebutton auto "gui/button/secret_%s.png" action Start("supersecret") xpos 338 ypos 1032
-
-        else:
-
-            pass
-
-        if main_menu:
-
-            vpgrid:
-
-                cols 2
-                xpos 1280
-                ypos 680
-                yalign 0.5
-                spacing 10 
-
-                imagebutton auto "gui/button/start_%s.png" action [Play("sound", "/audio/sfx/umise_051.ogg"), ShowMenu("story_select"), Hide('starthover')] hover_sound "audio/sfx/click-21156.mp3" hovered Show('starthover') unhovered Hide('starthover')
-
-                imagebutton auto "gui/button/load_%s.png" action [ShowMenu("load"), Hide('loadhover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" hovered Show('loadhover') unhovered Hide('loadhover')
-
-                $ lastsave=renpy.newest_slot(r"\d+")
-        
-                if lastsave is not None:
-                    $ name, page = lastsave.split("-")
-                    imagebutton auto "gui/button/continue_%s.png" action FileLoad(name, page) hovered Show('continuehover') unhovered Hide('continuehover') hover_sound "audio/sfx/click-21156.mp3"
-
-                imagebutton auto "gui/button/settings_%s.png" action [ShowMenu("preferences"), Hide('settingshover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" hovered Show('settingshover') unhovered Hide('settingshover')
-
-                #imagebutton auto "gui/button/credits_%s.png" action [ShowMenu("about"), Hide('creditshover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" hovered Show('creditshover') unhovered Hide('creditshover')
-
-                imagebutton auto "gui/button/achieve_%s.png" action [ShowMenu("achievement_menu"), Hide('trophyhover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" hovered Show('trophyhover') unhovered Hide('trophyhover')
-
-                if persistent.battler == True:
-                    imagebutton auto "gui/button/chars_%s.png" action [ShowMenu("characters"), Hide('characterhover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" hovered Show('characterhover') unhovered Hide('characterhover')
-                else:
-                    pass
-
-                if persistent.tipunlocked == True:
-                    imagebutton auto "gui/button/tip_%s.png" action [ShowMenu("tipps"), Hide('tiphover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" hovered Show('tiphover') unhovered Hide('tiphover')
-                else:
-                    pass
-
-                if persistent.musicbox == True:
-                    imagebutton auto "gui/button/jukebox_%s.png" action [ShowMenu("music_room"), Hide('jukeboxhover'), Function(ost.get_music_channel_info), Stop('music', fadeout=1.0), Stop('sound', fadeout=1.0), Stop('ship', fadeout=1.0), Stop('wind', fadeout=1.0), Function(ost.refresh_list)] hovered Show('jukeboxhover') unhovered Hide('jukeboxhover') activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
-                else:
-                    pass
-
-                imagebutton auto "gui/button/help_%s.png" action [ShowMenu("help"), Hide('helphover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" hovered Show('helphover') unhovered Hide('helphover')
-
-                imagebutton auto "gui/button/quit_%s.png" action [QuitWithScene(), Hide('quithover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" hovered Show('quithover') unhovered Hide('quithover')
-
-        else:
-
-            pass
-
-        if _in_replay:
-
-            textbutton _("End Replay") action EndReplay(confirm=True)
-
 screen navigation():
 
     add "gui/title/bg.png" at bgani
     add "gui/title/menu.png" at center
-    add "gui/title/titlelogo.png" at topright
+    add "gui/title/titlelogo.png" at topright,buttondissolvetitle
     add partObj
     text "v1.0.0A" at topleft size 30 antialias True outlines [ (absolute(3), "#000", absolute(0), absolute(0)) ]
+    text _("menustate:" + str(persistent.menustate)) at topright size 30 antialias True outlines [ (absolute(3), "#000", absolute(0), absolute(0)) ]
 
     fixed:
 
@@ -413,49 +342,73 @@ screen navigation():
 
         if main_menu:
 
-            vpgrid:
+            vbox:
 
-                cols 2
-                xpos 1280
-                ypos 680
-                yalign 0.5
-                spacing 10 
-
-                imagebutton auto "gui/button/start_%s.png" action [Play("sound", "/audio/sfx/umise_051.ogg"), ShowMenu("story_select"), Hide('starthover'), SetVariable("ismain", True)] hover_sound "audio/sfx/click-21156.mp3" hovered Show('starthover') unhovered Hide('starthover')
-
-                imagebutton auto "gui/button/load_%s.png" action [ShowMenu("load"), Hide('loadhover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" hovered Show('loadhover') unhovered Hide('loadhover')
-
+                xalign 0.98
+                yalign 0.8
+                spacing 3 
+                if persistent.new == True:
+                    imagebutton auto "gui/button/startnew_%s.png" action [Play("sound", "/audio/sfx/umise_051.ogg"), ShowMenu("story_select"), Hide('starthover'), SetVariable("ismain", True)] hover_sound "audio/sfx/click-21156.mp3" hovered Show('starthover') unhovered Hide('starthover') at buttondissolve1
+                else:
+                    imagebutton auto "gui/button/start_%s.png" action [Play("sound", "/audio/sfx/umise_051.ogg"), ShowMenu("story_select"), Hide('starthover'), SetVariable("ismain", True)] hover_sound "audio/sfx/click-21156.mp3" hovered Show('starthover') unhovered Hide('starthover') at buttondissolve1
                 $ lastsave=renpy.newest_slot(r"\d+")
-        
-                if lastsave is not None:
-                    $ name, page = lastsave.split("-")
-                    imagebutton auto "gui/button/continue_%s.png" action FileLoad(name, page) hovered Show('continuehover') unhovered Hide('continuehover') hover_sound "audio/sfx/click-21156.mp3"
+                if renpy.seen_label("start"):
+                    if lastsave is not None:
+                        $ name, page = lastsave.split("-")
+                        imagebutton auto "gui/button/continue_%s.png" action FileLoad(name, page) hovered Show('continuehover') unhovered Hide('continuehover') hover_sound "audio/sfx/click-21156.mp3" at buttondissolve1
+                
+                if persistent.menustate == 1:
+                    imagebutton auto "gui/button/load2_%s.png" action [ShowMenu("load"), Hide('loadhover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" hovered Show('loadhover') unhovered Hide('loadhover') at buttondissolve1
+                else:
+                    imagebutton auto "gui/button/load_%s.png" action [ShowMenu("load"), Hide('loadhover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" hovered Show('loadhover') unhovered Hide('loadhover') at buttondissolve2
 
-                imagebutton auto "gui/button/settings_%s.png" action [ShowMenu("preferences"), Hide('settingshover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" hovered Show('settingshover') unhovered Hide('settingshover')
+                if persistent.menustate == 1:
+                    imagebutton auto "gui/button/settings2_%s.png" action [ShowMenu("preferences"), Hide('settingshover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" hovered Show('settingshover') unhovered Hide('settingshover') at buttondissolve2
+                else:
+                    imagebutton auto "gui/button/settings_%s.png" action [ShowMenu("preferences"), Hide('settingshover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" hovered Show('settingshover') unhovered Hide('settingshover') at buttondissolve2
 
-                #imagebutton auto "gui/button/credits_%s.png" action [ShowMenu("about"), Hide('creditshover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" hovered Show('creditshover') unhovered Hide('creditshover')
+                if persistent.menustate == 1:
+                    imagebutton auto "gui/button/achieve2_%s.png" action [ShowMenu("achievement_menu"), Hide('trophyhover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" hovered Show('trophyhover') unhovered Hide('trophyhover') at buttondissolve3
+                else:
+                    imagebutton auto "gui/button/achieve_%s.png" action [ShowMenu("achievement_menu"), Hide('trophyhover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" hovered Show('trophyhover') unhovered Hide('trophyhover') at buttondissolve3
 
-                imagebutton auto "gui/button/achieve_%s.png" action [ShowMenu("achievement_menu"), Hide('trophyhover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" hovered Show('trophyhover') unhovered Hide('trophyhover')
-
-                if persistent.battler == True:
-                    imagebutton auto "gui/button/chars_%s.png" action [ShowMenu("characters"), Hide('characterhover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" hovered Show('characterhover') unhovered Hide('characterhover')
+                if persistent.tipunlocked == True:
+                    imagebutton auto "gui/button/tip_%s.png" action [ShowMenu("tipps"), Hide('tiphover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" hovered Show('tiphover') unhovered Hide('tiphover') at buttondissolve3
                 else:
                     pass
 
-                if persistent.tipunlocked == True:
-                    imagebutton auto "gui/button/tip_%s.png" action [ShowMenu("tipps"), Hide('tiphover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" hovered Show('tiphover') unhovered Hide('tiphover')
+                if persistent.battler == True:
+                    imagebutton auto "gui/button/chars_%s.png" action [ShowMenu("characters"), Hide('characterhover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" hovered Show('characterhover') unhovered Hide('characterhover') at buttondissolve4
                 else:
                     pass
 
                 if persistent.musicbox == True:
-                    imagebutton auto "gui/button/jukebox_%s.png" action [ShowMenu("music_room"), Hide('jukeboxhover'), Function(ost.get_music_channel_info), Stop('music', fadeout=1.0), Stop('sound', fadeout=1.0), Stop('ship', fadeout=1.0), Stop('wind', fadeout=1.0), Function(ost.refresh_list)] hovered Show('jukeboxhover') unhovered Hide('jukeboxhover') activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+                    imagebutton auto "gui/button/jukebox_%s.png" action [ShowMenu("music_room"), Hide('jukeboxhover'), Function(ost.get_music_channel_info), Stop('music', fadeout=1.0), Stop('sound', fadeout=1.0), Stop('ship', fadeout=1.0), Stop('wind', fadeout=1.0), Function(ost.refresh_list)] hovered Show('jukeboxhover') unhovered Hide('jukeboxhover') activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" at buttondissolve4
                 else:
                     pass
 
-                imagebutton auto "gui/button/help_%s.png" action [ShowMenu("help"), Hide('helphover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" hovered Show('helphover') unhovered Hide('helphover')
+                if persistent.menustate == 0:
+                    imagebutton auto "gui/button/help2_%s.png" action [ShowMenu("help"), Hide('helphover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" hovered Show('helphover') unhovered Hide('helphover') at buttondissolve3
+                if persistent.menustate == 1:
+                    imagebutton auto "gui/button/help0_%s.png" action [ShowMenu("help"), Hide('helphover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" hovered Show('helphover') unhovered Hide('helphover') at buttondissolve3
+                if persistent.menustate == 2:
+                    imagebutton auto "gui/button/help3_%s.png" action [ShowMenu("help"), Hide('helphover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" hovered Show('helphover') unhovered Hide('helphover') at buttondissolve4
+                if persistent.menustate == 3:
+                    imagebutton auto "gui/button/help4_%s.png" action [ShowMenu("help"), Hide('helphover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" hovered Show('helphover') unhovered Hide('helphover') at buttondissolve4
+                if persistent.menustate == 4:
+                    imagebutton auto "gui/button/help_%s.png" action [ShowMenu("help"), Hide('helphover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" hovered Show('helphover') unhovered Hide('helphover') at buttondissolve5
+            
 
-                imagebutton auto "gui/button/quit_%s.png" action [QuitWithScene(), Hide('quithover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" hovered Show('quithover') unhovered Hide('quithover')
-
+                if persistent.menustate == 0:
+                    imagebutton auto "gui/button/quit2_%s.png" action [QuitWithScene(), Hide('quithover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" hovered Show('quithover') unhovered Hide('quithover') at buttondissolve4
+                if persistent.menustate == 1:
+                    imagebutton auto "gui/button/quit0_%s.png" action [QuitWithScene(), Hide('quithover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" hovered Show('quithover') unhovered Hide('quithover') at buttondissolve4
+                if persistent.menustate == 2:
+                    imagebutton auto "gui/button/quit3_%s.png" action [QuitWithScene(), Hide('quithover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" hovered Show('quithover') unhovered Hide('quithover') at buttondissolve4
+                if persistent.menustate == 3:
+                    imagebutton auto "gui/button/quit4_%s.png" action [QuitWithScene(), Hide('quithover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" hovered Show('quithover') unhovered Hide('quithover') at buttondissolve5
+                if persistent.menustate == 4:
+                    imagebutton auto "gui/button/quit_%s.png" action [QuitWithScene(), Hide('quithover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" hovered Show('quithover') unhovered Hide('quithover') at buttondissolve5
         else:
 
             pass
@@ -579,7 +532,9 @@ screen game_menu(scroll=None, yinitial=0.0):
 
     style_prefix "game_menu"
 
-    add "images/system/hana3.png"
+    add "gui/gamemenu/hanabottom.png" at hanabottomtransform
+    add "gui/gamemenu/hanatop.png" at hanatoptransform
+    add "gui/gamemenu/darken.png" at center
     imagebutton auto "gui/button/back2_%s.png" action Return() activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" yalign 0.02 xalign 0.97
     add partObj
 
@@ -652,94 +607,44 @@ screen game_menu(scroll=None, yinitial=0.0):
 
                 pass
 
-        vpgrid:
+        vbox:
 
-            cols 2
-            xpos 1280
             yalign 0.5
-            spacing 10
+            xalign 0.98
 
-            imagebutton auto "gui/button/save_%s.png" action ShowMenu("save") activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+            imagebutton auto "gui/gamemenu/save_%s.png" action ShowMenu("save") activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" at gamemenubuttontransform
 
-            imagebutton auto "gui/button/load_%s.png" action ShowMenu("load") activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+            imagebutton auto "gui/gamemenu/load_%s.png" action ShowMenu("load") activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" at gamemenubuttontransform
 
-            imagebutton auto "gui/button/history_%s.png" action ShowMenu("history") activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+            imagebutton auto "gui/gamemenu/backlog_%s.png" action ShowMenu("history") activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" at gamemenubuttontransform
 
-            imagebutton auto "gui/button/settings_%s.png" action [ShowMenu("preferences")] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+            imagebutton auto "gui/gamemenu/settings_%s.png" action [ShowMenu("preferences")] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" at gamemenubuttontransform
 
-            #imagebutton auto "gui/button/credits_%s.png" action ShowMenu("about") activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+            imagebutton auto "gui/gamemenu/control_%s.png" action [ShowMenu("help")] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" at gamemenubuttontransform
 
-            imagebutton auto "gui/button/help_%s.png" action [ShowMenu("help")] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
-
-            imagebutton auto "gui/button/achieve_%s.png" action [ShowMenu("achievement_menu"), Hide('trophyhover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+            imagebutton auto "gui/gamemenu/trophy_%s.png" action [ShowMenu("achievement_menu"), Hide('trophyhover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" at gamemenubuttontransform
 
             if persistent.battler == True:
-                imagebutton auto "gui/button/chars_%s.png" action [ShowMenu("characters"), Hide('characterhover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+                imagebutton auto "gui/gamemenu/chars_%s.png" action [ShowMenu("characters"), Hide('characterhover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" at gamemenubuttontransform
             else:
                 pass
 
             if persistent.tipunlocked == True:
-                imagebutton auto "gui/button/tip_%s.png" action [ShowMenu("tipps"), Hide('tiphover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+                imagebutton auto "gui/gamemenu/tip_%s.png" action [ShowMenu("tipps"), Hide('tiphover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" at gamemenubuttontransform
             else:
                 pass
 
             if persistent.musicbox == True:
-                imagebutton auto "gui/button/jukebox_%s.png" action [ShowMenu("music_room"), Hide('jukeboxhover'), Function(ost.get_music_channel_info), Stop('music', fadeout=1.0), Stop('sound', fadeout=1.0), Stop('ship', fadeout=1.0), Stop('wind', fadeout=1.0), Function(ost.refresh_list)] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+                imagebutton auto "gui/gamemenu/music_%s.png" action [ShowMenu("music_room"), Hide('jukeboxhover'), Function(ost.get_music_channel_info), Stop('music', fadeout=1.0), Stop('sound', fadeout=1.0), Stop('ship', fadeout=1.0), Stop('wind', fadeout=1.0), Function(ost.refresh_list)] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" at gamemenubuttontransform
             else:
                 pass
 
-            imagebutton auto "gui/button/mainmenu_%s.png" action MainMenu() activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+            imagebutton auto "gui/gamemenu/backtomain_%s.png" action MainMenu() activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" at gamemenubuttontransform
 
-            #imagebutton auto "gui/button/back_%s.png" activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" action Return()
         if persistent.showbgm == True:
             text "Soundtrack: " + songname ypos 1005 xpos 1900 xalign 1.0 size 30 font "fonts/AOTFShinGoProMedium.otf" outlines [ (absolute(3), "#000", absolute(0), absolute(0)) ]
         if persistent.showplaytime == True:
             text "Spielzeit: " + getPlayTime() + "" ypos 1040 xpos 1900 xalign 1.0 size 30 font "fonts/AOTFShinGoProMedium.otf" outlines [ (absolute(3), "#000", absolute(0), absolute(0)) ]
-
-    else:
-
-        vpgrid:
-
-                cols 2
-                xpos 1280
-                ypos 680
-                yalign 0.5
-                spacing 10 
-
-                imagebutton auto "gui/button/start_%s.png" action [Play("sound", "/audio/sfx/umise_051.ogg"), ShowMenu("story_select"), Hide('starthover')] hover_sound "audio/sfx/click-21156.mp3"
-
-                imagebutton auto "gui/button/load_%s.png" action [ShowMenu("load"), Hide('loadhover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
-
-                $ lastsave=renpy.newest_slot(r"\d+")
-        
-                if lastsave is not None:
-                    $ name, page = lastsave.split("-")
-                    imagebutton auto "gui/button/continue_%s.png" action FileLoad(name, page), Hide('continuehover') hover_sound "audio/sfx/click-21156.mp3"
-
-                imagebutton auto "gui/button/settings_%s.png" action [ShowMenu("preferences"), Hide('settingshover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
-
-                #imagebutton auto "gui/button/credits_%s.png" action [ShowMenu("about"), Hide('creditshover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
-
-                imagebutton auto "gui/button/achieve_%s.png" action [ShowMenu("achievement_menu"), Hide('trophyhover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
-
-                if persistent.battler == True:
-                    imagebutton auto "gui/button/chars_%s.png" action [ShowMenu("characters"), Hide('characterhover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
-                else:
-                    pass
-
-                if persistent.tipunlocked == True:
-                    imagebutton auto "gui/button/tip_%s.png" action [ShowMenu("tipps"), Hide('tiphover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
-                else:
-                    pass
-
-                if persistent.musicbox == True:
-                    imagebutton auto "gui/button/jukebox_%s.png" action [ShowMenu("music_room"), Hide('jukeboxhover'), Function(ost.get_music_channel_info), Stop('music', fadeout=1.0), Stop('sound', fadeout=1.0), Stop('ship', fadeout=1.0), Stop('wind', fadeout=1.0), Stop('rain', fadeout=1.0), Function(ost.refresh_list)] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
-                else:
-                    pass
-
-                imagebutton auto "gui/button/help_%s.png" action [ShowMenu("help"), Hide('helphover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
-
-                imagebutton auto "gui/button/quit_%s.png" action [QuitWithScene(), Hide('quithover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
 
     if main_menu:
         key "game_menu" action ShowMenu("main_menu") activate_sound "audio/sfx/umise_1005.ogg"
@@ -1316,7 +1221,7 @@ screen history():
 
     tag menu
     modal True
-    add "gui/game_menu.png" at center
+    add "gui/backlog/bg.png" at center
     add "gui/backlog/background.png" at center
     imagebutton auto "gui/button/back2_%s.png" action Return() activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" yalign 0.02 xalign 0.97
     #add partObj
@@ -1355,7 +1260,7 @@ screen history():
 
                             label h.who:
                                 style "history_name"
-                                substitute False
+                                substitute True
 
                                 ## Take the color of the who text from the Character, if
                                 ## set.
@@ -1366,16 +1271,15 @@ screen history():
 
                             label h.what:
                                 style "history_new"
-                                substitute False
+                                substitute True
 
-                                ## Take the color of the who text from the Character, if
-                                ## set.
+                                
                                 if "color" in h.what_args:
                                     text_color h.what_args["color"]
 
 
                     ## This puts some space between entries so it's easier to read
-                    null height 5
+                    null height 50
 
                 if not _history_list:
 
@@ -1901,14 +1805,6 @@ screen story_select():
         else:
 
             imagebutton auto "gui/button/uralocked_%s.png" action NullAction() hovered Show('locked') unhovered Hide('locked') hover_sound "audio/sfx/click-21156.mp3"
-
-        if persistent.gamecleared == True:
-
-            imagebutton auto "gui/button/bonus_%s.png" action NullAction() hovered Show('bonushover') unhovered Hide('bonushover') hover_sound "audio/sfx/click-21156.mp3"
-
-        else:
-
-            pass
 
 screen story_select_bonus():
 
@@ -2476,3 +2372,22 @@ style slider_vbox:
 style slider_slider:
     variant "small"
     xsize 800
+
+
+###DEBUG####
+
+screen Debugscreen():
+    
+    $ director.button = True
+    vbox:
+        yalign 0.4
+        xalign 0.01
+        text "Toggle Directormode = D" outlines [ (absolute(3), "#000", absolute(0), absolute(0)) ] size 25
+        text "Toggle FPS = F3" outlines [ (absolute(3), "#000", absolute(0), absolute(0)) ] size 25
+        text "Toggle Imagelog = F4" outlines [ (absolute(3), "#000", absolute(0), absolute(0)) ] size 25
+        text "Reload Game = Shift + R" outlines [ (absolute(3), "#000", absolute(0), absolute(0)) ] size 25
+        text "Menustate = " + str(persistent.menustate) outlines [ (absolute(3), "#000", absolute(0), absolute(0)) ] size 25
+        text "Current Chapter = " + str(chapter) outlines [ (absolute(3), "#000", absolute(0), absolute(0)) ] size 25
+        text "Current Soundtrack = " + songname outlines [ (absolute(3), "#000", absolute(0), absolute(0)) ] size 25
+        text "Current Playtime = " + getPlayTime() outlines [ (absolute(3), "#000", absolute(0), absolute(0)) ] size 25
+        text "Current Speaker = " + str(speaking) outlines [ (absolute(3), "#000", absolute(0), absolute(0)) ] size 25

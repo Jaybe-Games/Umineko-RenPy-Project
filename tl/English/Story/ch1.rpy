@@ -8370,3 +8370,65 @@ translate English chapter1_54cbc68e:
     # extend " ....Das kann doch nicht wahr sein!"
     extend " ....Das kann doch nicht wahr sein!"
 
+# TODO: Translation updated at 2023-07-01 00:04
+
+# game/Story/ch1.rpy:477
+translate English chapter1_1a20579c:
+
+    # geo a23kkomaru5k "Es ist auch eine Spiritualität der...."
+    geo a23kkomaru5k "Es ist auch eine Spiritualität der...."
+
+# game/Story/ch1.rpy:480
+translate English chapter1_ed61da9e:
+
+    # geo " ....Es ist ein Begriff ursprünglich aus Indien, und wird mit 'Zusammenhang' oder auch 'Gefüge' übersetzt."
+    geo " ....Es ist ein Begriff ursprünglich aus Indien, und wird mit 'Zusammenhang' oder auch 'Gefüge' übersetzt."
+
+# game/Story/ch1.rpy:486
+translate English chapter1_a71274c3:
+
+    # extend " ...Pralle Brüste von sexy Yoginis, ich kom...”"
+    extend " ...Pralle Brüste von sexy Yoginis, ich kom...”"
+
+# game/Story/ch1.rpy:503
+translate English chapter1_5cfdf77c:
+
+    # jes a12ikari1 "“.....Perverser Battler!"
+    jes a12ikari1 "“.....Perverser Battler!"
+
+# game/Story/ch1.rpy:508
+translate English chapter1_47b35fc3:
+
+    # "Von außen betrachtet sieht es nicht anders aus, als zwei Blagen die sich zanken und sich gegenseitig Sachen an den Kopf werfen."
+    "Von außen betrachtet sieht es nicht anders aus, als zwei Blagen die sich zanken und sich gegenseitig Sachen an den Kopf werfen."
+
+# game/Story/ch1.rpy:509
+translate English chapter1_a582f632:
+
+    # extend " ....Was noch nicht mal das schlimmste Szenario ist, wenn man mal darüber nachdenkt, dass sich sogar die Erwachsenen ständig wie kleine Kinder in die Haare kriegen."
+    extend " ....Was noch nicht mal das schlimmste Szenario ist, wenn man mal darüber nachdenkt, dass sich sogar die Erwachsenen ständig wie kleine Kinder in die Haare kriegen."
+
+# game/Story/ch1.rpy:528
+translate English chapter1_2b82dc0e:
+
+    # geo " Ach ja, wusstet ihr?"
+    geo " Ach ja, wusstet ihr?"
+
+# game/Story/ch1.rpy:540
+translate English chapter1_da1d6323:
+
+    # jes "“Ja, das hast du wirklich nötig, Battler-kun!"
+    jes "“Ja, das hast du wirklich nötig, Battler-kun!"
+
+# game/Story/ch1.rpy:541
+translate English chapter1_0292ecb8:
+
+    # extend " ...Es war ja auch dringend notwendig, dass du deine Familie für sechs Jahre verlässt."
+    extend " ...Es war ja auch dringend notwendig, dass du deine Familie für sechs Jahre verlässt."
+
+# game/Story/ch1.rpy:613
+translate English chapter1_175dc431_1:
+
+    # extend " *kicher*”"
+    extend " *kicher*”"
+

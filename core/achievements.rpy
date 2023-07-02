@@ -80,10 +80,10 @@ init python:
         "final": [_("Ich bin der pragmatische Teil!"), _("Wieder eins geworden!"), 'gui/trophys/bronze16.png', 'hidden'],
         "charcollector": [_("Charaktersammler"), _("Schalte alle Charaktere frei"), 'gui/trophys/silver1.png', 'hidden'],
         "secret": [_("Autorentreffen"), _("Du hast den Autor gefunden"), 'gui/trophys/silver2.png', 'hidden'],
-        "mainclear": [_("Eine andere Beatrice?"), _("Schließe die Hauptstory ab"), 'gui/trophys/silver3.png', 'hidden'],
-        "teaclear": [_("Ayato und Yuria"), _("Schließe die Tee Party ab"), 'gui/trophys/silver4.png', 'hidden'],
-        "tipscollector": [_("Tippsfanatiker"), _("Erhalte alle Tipps und Grimoireeinträge"), 'gui/trophys/silver5.png', 'hidden'],
-        "gameclear": [_("Auferstehung der Goldenen Hexe"), _("Schließe ???? ab"), 'gui/trophys/gold1.png', 'hidden'],
+        "tipscollector": [_("Tippsfanatiker"), _("Erhalte alle Tipps und Grimoireeinträge"), 'gui/trophys/silver3.png', 'hidden'],
+        "mainclear": [_("Der Sieger des Spiels ist..."), _("Schließe Episode 0 ab"), 'gui/trophys/silver4.png', None],
+        "teaclear": [_("Eins zu einer Quadrillion"), _("Schließe die Tee Party ab"), 'gui/trophys/silver5.png', None],
+        "gameclear": [_("Auferstehung der Goldenen Hexe"), _("Schließe ???? ab"), 'gui/trophys/gold1.png', None],
         "bonusclear": [_("Verbotene Erinnerungen"), _("Schließe alle Bonuskapitel ab"), 'gui/trophys/gold2.png', 'hidden'],
         ## The None, means that the achievement will be displayed greyed-out before it is granted (or achieved).
         ## I use these words to describe the type of achievement it is;

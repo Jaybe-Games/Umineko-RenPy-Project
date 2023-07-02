@@ -30,7 +30,7 @@ image but_b23_nayamu1_mouth:
     repeat
 
 image but b22odoroki2 = Composite(
-    (816, 1208),
+    (832, 1216),
     (0, 0), "images/sprites/but/b22/odoroki2/0.png",
     (0, 0), WhileSpeaking("but", "but_b22_odoroki2_mouth", "images/sprites/but/b22/odoroki2/0.png"),
     )
@@ -45,12 +45,12 @@ image but_b22_odoroki2_mouth:
     repeat
 
 image but b22odoroki2_mouth_closed = Composite(
-    (816, 1208),
+    (832, 1216),
     (0, 0), "images/sprites/but/b22/odoroki2/0.png"
 )
 
 image but b22nayamu2 = Composite(
-    (816, 1208),
+    (832, 1216),
     (0, 0), "images/sprites/but/b22/nayamu2/0.png",
     (0, 0), WhileSpeaking("but", "but_b22_nayamu2_mouth", "images/sprites/but/b22/nayamu2/0.png"),
     )
@@ -95,7 +95,7 @@ image but_b22_warai1_mouth:
     repeat
 
 image but b22nayamu1 = Composite(
-    (816, 1208),
+    (832, 1216),
     (0, 0), "images/sprites/but/b22/nayamu1/0.png",
     (0, 0), WhileSpeaking("but", "but_b22_nayamu1_mouth", "images/sprites/but/b22/nayamu1/0.png"),
     )
@@ -110,7 +110,7 @@ image but_b22_nayamu1_mouth:
     repeat
 
 image but b11kuyasigaru1 = Composite(
-    (816, 1208),
+    (772, 1227),
     (0, 0), "images/sprites/but/b11/kuyasigaru1/0.png",
     (0, 0), WhileSpeaking("but", "but_b11_kuyasigaru1_mouth", "images/sprites/but/b11/kuyasigaru1/0.png"),
     )
@@ -216,7 +216,7 @@ image but_a21_nayamu2_mouth:
     repeat
 
 image but b11aseru1 = Composite(
-    (816, 1208),
+    (772, 1227),
     (0, 0), "images/sprites/but/b11/aseru1/0.png",
     (0, 0), WhileSpeaking("but", "but_b11_aseru1_mouth", "images/sprites/but/b11/aseru1/0.png"),
     )
@@ -231,7 +231,7 @@ image but_b11_aseru1_mouth:
     repeat
 
 image but b11oya1 = Composite(
-    (816, 1208),
+    (772, 1227),
     (0, 0), "images/sprites/but/b11/oya1/0.png",
     (0, 0), WhileSpeaking("but", "but_b11_oya1_mouth", "images/sprites/but/b11/oya1/0.png"),
     )
@@ -246,7 +246,7 @@ image but_b11_oya1_mouth:
     repeat
 
 image but b11warai3 = Composite(
-    (816, 1208),
+    (772, 1227),
     (0, 0), "images/sprites/but/b11/warai3/0.png",
     (0, 0), WhileSpeaking("but", "but_b11_warai3_mouth", "images/sprites/but/b11/warai3/0.png"),
     )
@@ -306,7 +306,7 @@ image but_b24_warai1_mouth:
     repeat
 
 image but b11ero1 = Composite(
-    (816, 1208),
+    (772, 1227),
     (0, 0), "images/sprites/but/b11/ero1/0.png",
     (0, 0), WhileSpeaking("but", "but_b11_ero1_mouth", "images/sprites/but/b11/ero1/0.png"),
     )

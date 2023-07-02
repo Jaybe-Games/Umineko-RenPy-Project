@@ -1,11 +1,15 @@
 
 label start:
 
-    $ discord.update(state = "Writing to you in a quadrillion years")
-    $ discord.update(details = "Reading Prologue")
+    $ discord.update(state = "Episode 0 - DEBUGMODE")
+    $ discord.update(details = "Editing Prologue")
     $ chapter = 0
     $ songname = "-"
     $ _game_menu_screen = "cleanmenu"
+    show screen Debugscreen
+    if persistent.alreadyread1 == False:
+        $ persistent.menustate = 1
+        $ persistent.new = False
     pause 2
     if persistent.showch == True:
         call showch0 from _call_showch0
@@ -38,6 +42,7 @@ label start:
         $ renpy.notify("Die Tippsbox wurde freigeschaltet")
         $ persistent.tip1 = True
         $ persistent.tipunlocked = True
+        $ persistent.menustate = 2
     "Über den Fall im Dorf {note_green}Hinamizawa{/note_green} wurde in einigen Massenmedien berichtet."
     "Er hat weltweit Aufmerksamkeit erregt," 
     extend " was schwerwiegende Auswirkungen auf die Bewohner hatte. Die Lage ist sehr ernst geworden."

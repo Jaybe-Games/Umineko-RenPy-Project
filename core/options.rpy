@@ -137,16 +137,16 @@ define config.main_menu_music = "audio/bgm/umib_000.ogg"
 ## transition should be used.
 
 ## Entering or exiting the game menu.
-
-define config.enter_transition = ImageDissolve("images/masks/circle.png", 2.0, reverse=True, ramplen = 100)
+define dis = { "master" : Dissolve(0.15) }
+define config.enter_transition = ImageDissolve("images/masks/circle.png", 0.5, reverse=True, ramplen = 200)
 define config.enter_sound = "audio/sfx/umise_1001.ogg"
-define config.exit_transition = ImageDissolve("images/masks/circle.png", 0.5, reverse=True, ramplen = 100)
+define config.exit_transition = ImageDissolve("images/masks/circle.png", 0.5, reverse=True, ramplen = 200)
 define config.exit_sound = "audio/sfx/umise_1006.ogg"
 
 
 ## Between screens of the game menu.
 
-define config.intra_transition = ImageDissolve("images/masks/circle.png", 1.0, reverse=True, ramplen = 100)
+define config.intra_transition = ImageDissolve("images/masks/circle.png", 1.0, reverse=True, ramplen = 200)
 
 ## Used when entering the main menu after the game has ended.
 
@@ -163,7 +163,6 @@ define config.game_main_transition = dissolve
 define config.exit_yesno_transition = ImageDissolve("images/masks/circle.png", 1.0, reverse=True, ramplen = 100)
 
 define config.enter_yesno_transition = ImageDissolve("images/backgrounds/different_spiral_1a.png",0.6,reverse=False, ramplen = 30)
-define dis = { "master" : Dissolve(0.15) }
 define config.say_attribute_transition = dis
 
 define config.manage_gc = True
@@ -214,13 +213,14 @@ default preferences.text_cps = 50
 ## The default auto-forward delay. Larger numbers lead to longer waits, with 0
 ## to 30 being the valid range.
 
-default preferences.afm_time = 15
+default preferences.afm_time = 12
 default preferences.fullscreen = True
-default preferences.gl_powersave = False
-default preferences.gl_tearing = True
+default preferences.gl_powersave = "auto"
+default preferences.gl_tearing = False
 default preferences.gl_framerate = None
-define config.image_cache_size_mb = 1000
-define config.debug_prediction = True
+define config.image_cache_size_mb = 1024
+define config.cache_surfaces = False
+define director.button = True
 
 
 

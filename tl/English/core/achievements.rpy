@@ -238,3 +238,19 @@ translate English strings:
     old "Schließe alle Bonuskapitel ab"
     new "Schließe alle Bonuskapitel ab"
 
+# TODO: Translation updated at 2023-07-01 00:04
+
+translate English strings:
+
+    # game/core/achievements.rpy:55
+    old "Der Sieger des Spiels ist..."
+    new "Der Sieger des Spiels ist..."
+
+    # game/core/achievements.rpy:55
+    old "Schließe Episode 0 ab"
+    new "Schließe Episode 0 ab"
+
+    # game/core/achievements.rpy:55
+    old "Eins zu einer Quadrillion"
+    new "Eins zu einer Quadrillion"
+

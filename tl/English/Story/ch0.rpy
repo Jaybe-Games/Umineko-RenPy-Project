@@ -378,3 +378,11 @@ translate English start_10c79ec3:
     # "Mehr konnten meine Kollegen und ich bisher nicht herausfinden, so dass wir leider immer noch im Dunkeln tappen."
     "Mehr konnten meine Kollegen und ich bisher nicht herausfinden, so dass wir leider immer noch im Dunkeln tappen."
 
+# TODO: Translation updated at 2023-07-01 00:10
+
+translate English strings:
+
+    # game/Story/ch0.rpy:5
+    old "Liest den Prolog"
+    new "Reading Prologue"
+
