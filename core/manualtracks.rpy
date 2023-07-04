@@ -11,8 +11,8 @@ init python:
 
     op = ost.soundtrack(
     name = "Gold Dream Symphony", 
-    path = "audio/bgm/op.ogg",
-    priority = 0,
+    path = "audio/musicbox orange/01 Gold Dream Symphony.ogg",
+    priority = 1,
     author = "aFlowerSmiles",
     cover_art = False,
     )     
@@ -21,8 +21,8 @@ init python:
 
     mmtheme = ost.soundtrack(
     name = "Black Lilliana Orchestra", 
-    path = "audio/bgm/umib_000.ogg",
-    priority = 1,
+    path = "audio/musicbox orange/02 Black Lilliana Orchestra.ogg",
+    priority = 2,
     author = "Pennoink",
     cover_art = False,
     )     
@@ -31,8 +31,8 @@ init python:
 
     death_door = ost.soundtrack(
     name = "At Death's Door", 
-    path = "audio/bgm/umib_014.ogg",
-    priority = 2,
+    path = "audio/musicbox orange/03 At Death's Door.ogg",
+    priority = 3,
     author = "Pureco",
     cover_art = False,
     )     
@@ -40,8 +40,8 @@ init python:
 
     hane = ost.soundtrack(
     name = "HANE (Feathers)", 
-    path = "audio/bgm/umib_003.ogg",
-    priority = 3,
+    path = "audio/musicbox orange/04 HANE (Feathers).ogg",
+    priority = 4,
     author = "Dai",
     cover_art = False,
     )     
@@ -49,10 +49,40 @@ init python:
 
     doorway = ost.soundtrack(
     name = "Doorway of Summer", 
-    path = "audio/bgm/umib_002.ogg",
-    priority = 4,
+    path = "audio/musicbox orange/05 Doorway of Summer.ogg",
+    priority = 5,
     author = "Dai",
     cover_art = False,
-    #unlocked = renpy.seen_audio("bgm/09 Easy.mp3")
+    #unlocked = renpy.seen_audio("musicbox orange/09 Easy.mp3")
     )     
     ost.manualDefineList.append(doorway)
+
+    worldend = ost.soundtrack(
+    name = "Worldend", 
+    path = "audio/musicbox orange/06 Worldend.ogg",
+    priority = 6,
+    author = "zts",
+    cover_art = False,
+    #unlocked = renpy.seen_audio("musicbox orange/09 Easy.mp3")
+    )     
+    ost.manualDefineList.append(worldend)
+
+    praise = ost.soundtrack(
+    name = "Praise", 
+    path = "audio/musicbox orange/07 Praise.ogg",
+    priority = 7,
+    author = "sumiisan",
+    cover_art = False,
+    #unlocked = renpy.seen_audio("musicbox orange/09 Easy.mp3")
+    )     
+    ost.manualDefineList.append(praise)
+
+    stupefaction = ost.soundtrack(
+    name = "Stupefaction", 
+    path = "audio/musicbox orange/08 Stupefaction.ogg",
+    priority = 8,
+    author = "zts",
+    cover_art = False,
+    #unlocked = renpy.seen_audio("musicbox orange/09 Easy.mp3")
+    )     
+    ost.manualDefineList.append(praise)

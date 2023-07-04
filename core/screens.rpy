@@ -326,8 +326,7 @@ screen navigation():
     add "gui/title/menu.png" at center
     add "gui/title/titlelogo.png" at topright,buttondissolvetitle
     add partObj
-    text "v1.0.0A" at topleft size 30 antialias True outlines [ (absolute(3), "#000", absolute(0), absolute(0)) ]
-    text _("menustate:" + str(persistent.menustate)) at topright size 30 antialias True outlines [ (absolute(3), "#000", absolute(0), absolute(0)) ]
+    text "[config.version!t]" at topleft size 30 antialias True outlines [ (absolute(3), "#000", absolute(0), absolute(0)) ]
 
     fixed:
 
@@ -357,19 +356,37 @@ screen navigation():
                         $ name, page = lastsave.split("-")
                         imagebutton auto "gui/button/continue_%s.png" action FileLoad(name, page) hovered Show('continuehover') unhovered Hide('continuehover') hover_sound "audio/sfx/click-21156.mp3" at buttondissolve1
                 
-                if persistent.menustate == 1:
+                if persistent.menustate == 0:
                     imagebutton auto "gui/button/load2_%s.png" action [ShowMenu("load"), Hide('loadhover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" hovered Show('loadhover') unhovered Hide('loadhover') at buttondissolve1
-                else:
+                if persistent.menustate == 1:
+                    imagebutton auto "gui/button/load_%s.png" action [ShowMenu("load"), Hide('loadhover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" hovered Show('loadhover') unhovered Hide('loadhover') at buttondissolve2
+                if persistent.menustate == 2:
+                    imagebutton auto "gui/button/load_%s.png" action [ShowMenu("load"), Hide('loadhover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" hovered Show('loadhover') unhovered Hide('loadhover') at buttondissolve2
+                if persistent.menustate == 3:
+                    imagebutton auto "gui/button/load_%s.png" action [ShowMenu("load"), Hide('loadhover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" hovered Show('loadhover') unhovered Hide('loadhover') at buttondissolve2
+                if persistent.menustate == 4:
                     imagebutton auto "gui/button/load_%s.png" action [ShowMenu("load"), Hide('loadhover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" hovered Show('loadhover') unhovered Hide('loadhover') at buttondissolve2
 
-                if persistent.menustate == 1:
+                if persistent.menustate == 0:
                     imagebutton auto "gui/button/settings2_%s.png" action [ShowMenu("preferences"), Hide('settingshover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" hovered Show('settingshover') unhovered Hide('settingshover') at buttondissolve2
-                else:
+                if persistent.menustate == 1:
+                    imagebutton auto "gui/button/settings_%s.png" action [ShowMenu("preferences"), Hide('settingshover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" hovered Show('settingshover') unhovered Hide('settingshover') at buttondissolve2
+                if persistent.menustate == 2:
+                    imagebutton auto "gui/button/settings_%s.png" action [ShowMenu("preferences"), Hide('settingshover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" hovered Show('settingshover') unhovered Hide('settingshover') at buttondissolve2
+                if persistent.menustate == 3:
+                    imagebutton auto "gui/button/settings_%s.png" action [ShowMenu("preferences"), Hide('settingshover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" hovered Show('settingshover') unhovered Hide('settingshover') at buttondissolve2
+                if persistent.menustate == 4:
                     imagebutton auto "gui/button/settings_%s.png" action [ShowMenu("preferences"), Hide('settingshover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" hovered Show('settingshover') unhovered Hide('settingshover') at buttondissolve2
 
+                if persistent.menustate == 0:
+                    imagebutton auto "gui/button/achieve2_%s.png" action [ShowMenu("achievement_menu"), Hide('trophyhover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" hovered Show('trophyhover') unhovered Hide('trophyhover') at buttondissolve2
                 if persistent.menustate == 1:
-                    imagebutton auto "gui/button/achieve2_%s.png" action [ShowMenu("achievement_menu"), Hide('trophyhover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" hovered Show('trophyhover') unhovered Hide('trophyhover') at buttondissolve3
-                else:
+                    imagebutton auto "gui/button/achieve_%s.png" action [ShowMenu("achievement_menu"), Hide('trophyhover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" hovered Show('trophyhover') unhovered Hide('trophyhover') at buttondissolve3
+                if persistent.menustate == 2:
+                    imagebutton auto "gui/button/achieve_%s.png" action [ShowMenu("achievement_menu"), Hide('trophyhover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" hovered Show('trophyhover') unhovered Hide('trophyhover') at buttondissolve3
+                if persistent.menustate == 3:
+                    imagebutton auto "gui/button/achieve_%s.png" action [ShowMenu("achievement_menu"), Hide('trophyhover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" hovered Show('trophyhover') unhovered Hide('trophyhover') at buttondissolve3
+                if persistent.menustate == 4:
                     imagebutton auto "gui/button/achieve_%s.png" action [ShowMenu("achievement_menu"), Hide('trophyhover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" hovered Show('trophyhover') unhovered Hide('trophyhover') at buttondissolve3
 
                 if persistent.tipunlocked == True:
@@ -400,7 +417,7 @@ screen navigation():
             
 
                 if persistent.menustate == 0:
-                    imagebutton auto "gui/button/quit2_%s.png" action [QuitWithScene(), Hide('quithover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" hovered Show('quithover') unhovered Hide('quithover') at buttondissolve4
+                    imagebutton auto "gui/button/quit2_%s.png" action [QuitWithScene(), Hide('quithover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" hovered Show('quithover') unhovered Hide('quithover') at buttondissolve3
                 if persistent.menustate == 1:
                     imagebutton auto "gui/button/quit0_%s.png" action [QuitWithScene(), Hide('quithover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" hovered Show('quithover') unhovered Hide('quithover') at buttondissolve4
                 if persistent.menustate == 2:
@@ -1027,8 +1044,8 @@ screen preferences():
     vbox:
 
         xalign 0.35
-        yalign 0.6
-        spacing 50
+        yalign 0.65
+        spacing 25
         
 
         hbox:
@@ -1036,6 +1053,10 @@ screen preferences():
             style_prefix "radio"
             imagebutton auto "gui/button/window_%s.png" action Preference("display", "window") activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
             imagebutton auto "gui/button/full_%s.png" action Preference("display", "fullscreen") activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+        hbox:
+            style_prefix "radio"
+            imagebutton auto "gui/button/gl_%s.png" action _SetRenderer("gl2") activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+            imagebutton auto "gui/button/angle2_%s.png" action _SetRenderer("angle2") activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
 
         hbox:
 
@@ -1066,17 +1087,26 @@ screen preferences():
             imagebutton auto "gui/button/off_%s.png" action SetVariable("persistent.showplaytime", False) activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
             imagebutton auto "gui/button/on_%s.png" action SetVariable("persistent.showplaytime", True) activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
 
+        hbox:
+
+            style_prefix "check"
+            imagebutton auto "gui/button/off_%s.png" action Preference("gl powersave", False) activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+            imagebutton auto "gui/button/on_%s.png" action Preference("gl powersave", True) activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+        
+
     vbox:
         xalign 0.1
-        yalign 0.60
-        spacing 75
+        yalign 0.65
+        spacing 50
         yoffset 2
-        label _("{color=#fff}Anzei{/color}{color=#f00}g{/color}{color=#fff}e{/color}")
-        label _("{color=#fff}Übers{/color}{color=#f00}p{/color}{color=#fff}ringen{/color}")
-        label _("{color=#fff}Spr{/color}{color=#f00}a{/color}{color=#fff}che{/color}")
+        label _("Anzei{red_truth}g{/red_truth}e")
+        label _("Rende{red_truth}r{/red_truth}er")
+        label _("Ungel. Übersp{red_truth}r{/red_truth}ingbar")
+        label _("Spr{red_truth}a{/red_truth}che")
         label _("Zeige Kapite{red_truth}l{/red_truth}namen")
         label _("Zeige BGM T{red_truth}i{/red_truth}tel")
         label _("Zeige S{red_truth}p{/red_truth}ielzeit")
+        label _("Energie{red_truth}s{/red_truth}parmodus")
     vbox:
         xalign 0.85
         yalign 0.5
@@ -1221,7 +1251,7 @@ screen history():
 
     tag menu
     modal True
-    add "gui/backlog/bg.png" at center
+    add "gui/game_menu.png" at center
     add "gui/backlog/background.png" at center
     imagebutton auto "gui/button/back2_%s.png" action Return() activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" yalign 0.02 xalign 0.97
     #add partObj

@@ -5,29 +5,30 @@ label start:
     $ discord.update(details = "Editing Prologue")
     $ chapter = 0
     $ songname = "-"
-    $ _game_menu_screen = "cleanmenu"
     show screen Debugscreen
     if persistent.alreadyread1 == False:
+        $ persistent.alreadyread1 = True
         $ persistent.menustate = 1
         $ persistent.new = False
     pause 2
     if persistent.showch == True:
-        call showch0 from _call_showch0
-        pause 2
+        show screen showch
+        pause 5
     play sound "audio/sfx/umise_028.ogg"
     show disclaimer1 with dissolve
     pause (5)
     hide disclaimer1 with dissolve
     pause (2)
-    if persistent.showbgm == True:
-        $ renpy.notify("♪At Death's Door")
     $ songname = "At Death's Door"
+    if persistent.showbgm == True:
+        show screen showsong
     play music "audio/bgm/umib_014_intro.ogg"
     queue music "audio/bgm/umib_014_loop.ogg" loop 
     show may_1_1983 with dissolve
     pause (5)
     hide may_1_1983 with dissolve
     pause (3)
+    $ _game_menu_screen = "cleanmenu"
     scene ke_s2 with dissolve
     "01. Mai 1983."
     "An die Abteilungen 1 bis 12,"
@@ -39,7 +40,7 @@ label start:
         $ persistent.newelement1 = True
         $ Achievement.add(achievement_bronze1)
         play sound "audio/sfx/umise_1060.ogg"
-        $ renpy.notify("Die Tippsbox wurde freigeschaltet")
+        show screen tipupdate
         $ persistent.tip1 = True
         $ persistent.tipunlocked = True
         $ persistent.menustate = 2
@@ -47,6 +48,7 @@ label start:
     "Er hat weltweit Aufmerksamkeit erregt," 
     extend " was schwerwiegende Auswirkungen auf die Bewohner hatte. Die Lage ist sehr ernst geworden."
     "Um das Leben und das Wohlergehen der Anwohner zu schützen, wurde die folgende Bekanntmachung veröffentlicht."
+    hide screen tipupdate
     "1. die folgenden strafrechtlichen Ermittlungen als Verschlusssache zu behandeln"
     "Station Okinomiya 1983 Fallnummer 862"
     scene ke5 with gradientwipeupright

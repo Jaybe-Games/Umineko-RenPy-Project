@@ -49,6 +49,11 @@ image mar a11defo1 = Composite(
     (0, 0), WhileSpeaking("mar", "mar_a11_defo1_mouth", "images/sprites/mar/a11/defo1//0.png"),
 )
 
+image mar a11defo1_mouth_closed = Composite(
+    (633, 1026),
+    (0, 0), "images/sprites/mar/a11/defo1/0.png",
+)
+
 image mar_a11_defo1_mouth:
     "images/sprites/mar/a11/defo1/0.png"
     .10

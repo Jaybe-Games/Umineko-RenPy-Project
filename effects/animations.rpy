@@ -71,18 +71,18 @@ label clockch2:
     show screen clocktimu_break1
     play sound "<from 0 to 2>/audio/sfx/umilse_1050.ogg"
     pause 7
-    scene blackpic with dissolve
-    hide screen clocktimu_break1 with dissolve
-    pause 1
-    hide screen cinemalogo with dissolve
+    scene black with dissolve
+    hide screen clocktimu_break1
+    hide screen cinemalogo
+    with dissolve
     return
 
 label rainlayer:
     
-    show rain
-    show rain2
-    show rain3
     show rain4
+    show rain3
+    show rain2
+    show rain
     return
 
 label hiderain:

@@ -133,36 +133,36 @@ transform slowerboat:
 
 transform buttondissolvetitle:
     alpha 0.0
-    pause 0.5
+    pause 0.2
     ease 0.5 alpha 1.0
 
 transform buttondissolve1:
     subpixel True
     alpha 0.0
-    pause 1.0
+    pause 0.4
     ease 0.5 alpha 1.0
 
 transform buttondissolve2:
     subpixel True
     alpha 0.0
-    pause 1.5
+    pause 0.6
     ease 0.5 alpha 1.0
 
 transform buttondissolve3:
     subpixel True
     alpha 0.0
-    pause 2.0
+    pause 0.8
     ease 0.5 alpha 1.0
 transform buttondissolve4:
     subpixel True
     alpha 0.0
-    pause 2.5
+    pause 1.0
     ease 0.5 alpha 1.0
 
 transform buttondissolve5:
     subpixel True
     alpha 0.0
-    pause 3.0
+    pause 1.2
     ease 0.5 alpha 1.0
 
 transform bganistart:
@@ -194,7 +194,22 @@ transform hanabottomtransform:
     linear 0.4 yoffset 0
 
 transform chapterdissolve:
+    subpixel True
     alpha 1.0
-    pause 3
+    pause 5
     ease 0.5 alpha 0.0
 
+transform songflyin:
+    subpixel True
+    alpha 1.0
+    yoffset -200
+    ease 0.5 yoffset 0
+    pause 5
+    ease 0.5 yoffset -200
+
+transform updatemessagetransform:
+    subpixel True
+    xoffset 800
+    ease 0.5 xoffset 0
+    pause 5
+    ease 0.5 xoffset 800

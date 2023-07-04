@@ -23,7 +23,7 @@ define gui.show_name = False
 
 ## The version of the game.
 
-define config.version = "1.0.0A"
+define config.version = "Technical Preview - Closed Testing"
 
 
 ## Text that is placed on the game's about screen. Place the text between the
@@ -215,7 +215,7 @@ default preferences.text_cps = 50
 
 default preferences.afm_time = 12
 default preferences.fullscreen = True
-default preferences.gl_powersave = "auto"
+default preferences.gl_powersave = False
 default preferences.gl_tearing = False
 default preferences.gl_framerate = None
 define config.image_cache_size_mb = 1024

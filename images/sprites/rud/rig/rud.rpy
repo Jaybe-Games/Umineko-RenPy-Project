@@ -19,6 +19,7 @@ image rud a11defo1 = Composite(
     (0, 0), WhileSpeaking("rud", "rud_a11_defo1_mouth", "images/sprites/rud/a11/defo1//0.png"),
 )
 
+
 image rud_a11_defo1_mouth:
     "images/sprites/rud/a11/defo1/0.png"
     .10
@@ -70,5 +71,35 @@ image rud_a11_defo2_mouth:
     "images/sprites/rud/a11/defo2/1.png"
     .10
     "images/sprites/rud/a11/defo2/2.png"
+    .20
+    repeat
+
+image rud a13odoroki1 = Composite(
+    (1039, 1201),
+    (0, 0), "images/sprites/rud/a13/odoroki1/0.png",
+    (0, 0), WhileSpeaking("rud", "rud_a13_odoroki1_mouth", "images/sprites/rud/a13/odoroki1/0.png"),
+)
+
+image rud_a13_odoroki1_mouth:
+    "images/sprites/rud/a13/odoroki1/0.png"
+    .10
+    "images/sprites/rud/a13/odoroki1/1.png"
+    .10
+    "images/sprites/rud/a13/odoroki1/2.png"
+    .20
+    repeat
+
+image rud a13warai1 = Composite(
+    (1039, 1201),
+    (0, 0), "images/sprites/rud/a13/warai1/0.png",
+    (0, 0), WhileSpeaking("rud", "rud_a13_warai1_mouth", "images/sprites/rud/a13/warai1/0.png"),
+)
+
+image rud_a13_warai1_mouth:
+    "images/sprites/rud/a13/warai1/0.png"
+    .10
+    "images/sprites/rud/a13/warai1/1.png"
+    .10
+    "images/sprites/rud/a13/warai1/2.png"
     .20
     repeat

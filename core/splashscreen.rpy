@@ -149,6 +149,8 @@ label quit:
     return
 
 label after_load:
+    hide screen tipupdate
+    hide screen charupdate
     play sound "audio/sfx/umise_1006.ogg"
 
 label before_main_menu:

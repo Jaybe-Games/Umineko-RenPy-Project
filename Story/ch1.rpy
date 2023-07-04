@@ -7,14 +7,16 @@ label chapter1:
     $ persistent.openingplayed = True
     $ renpy.free_memory()
     if persistent.showch == True:
-        call showch1 from _call_showch1
+        show screen showch
+        pause 5
     play sound "audio/sfx/umise_028.ogg"
     show oct_4_1986 with dissolve
     pause (7)
     play ship "audio/sfx/umilse_004.ogg"
     $ songname = "HANE (Feathers)"
     if persistent.showbgm == True:
-        $ renpy.notify("♪HANE (Feathers)")
+        hide screen showsong
+        show screen showsong
     play music "audio/bgm/umib_003_intro.ogg"
     queue music "audio/bgm/umib_003_loop.ogg" loop 
     show white with m1trans
@@ -61,7 +63,8 @@ label chapter1:
         $ persistent.menustate = 3
         $ Achievement.add(achievement_bronze2)
         play sound "audio/sfx/umise_1060.ogg"
-        $ renpy.notify("Die Charakterbox wurde freigeschaltet.")
+        hide screen charupdate
+        show screen charupdate
     "Mein Name ist Ushiromiya Battler."
     extend " Ich bin der Sohn von Rudolf und Asumu, Asumu ist vor ungefähr 6 Jahren gestorben."
     "Danach habe ich die Familie wegen eines Konflikts mit Dad für 6 lange Jahre verlassen und habe bei meinen Großeltern mütterlicherseits gelebt."
@@ -100,8 +103,8 @@ label chapter1:
     if persistent.rudolf == False:
         $ persistent.rudolf = True
         play sound "audio/sfx/umise_1060.ogg"
-        $ renpy.notify("Die Charaktere wurden geupdated.")
-    $ renpy.start_predict("kir *")
+        hide screen charupdate
+        show screen charupdate
     "Das ist mein Vater Rudolf. Der alte Bastard ist so groß wie ich und macht sich bei Gelegenheit gerne über mich lustig."
     extend " Sein Name wird auf Japanisch Ushiromiya Rudorfu ausgesprochen, fast die ganze Familie hat diese seltsame Namenstradition."
     "Seit meine Mutter Asumu gestorben ist, hat sich unser Verhältnis sehr verschlechtert,"
@@ -134,7 +137,8 @@ label chapter1:
     if persistent.kyrie == False:
         $ persistent.kyrie = True
         play sound "audio/sfx/umise_1060.ogg"
-        $ renpy.notify("Die Charaktere wurden geupdated.")
+        hide screen charupdate
+        show screen charupdate
     "Das ist meine Stiefmutter Kyrie-san, der alte Bastard hat diese Frau kurz nach dem Tod meiner Mutter geheiratet."
     "Sie ist sehr intelligent und hat mir viel über das Schachbrettdenken beigebracht."
     extend " Also wie man eine Partie mit den Augen des Gegners sehen kann."
@@ -158,7 +162,7 @@ label chapter1:
     extend " ...................*würg*”"
     play sound "audio/sfx/umise_003.ogg"
     show but b23kuyasigaru1 at m,run
-    hide but b23kuyasigaru1 with dissolve
+    hide but with dissolve
     "Battler wurde so übel, dass er sich nicht zurückhalten konnte und den ganzen gekochten Reis vom Vormittag ins Wasser schleuderte."
     show rud a11akuwarai1 at r with dissolve
     rud "“.....Jetzt hat dieser Kasper tatsächlich die Fische gefüttert, ach herrje," 
@@ -175,7 +179,8 @@ label chapter1:
     if persistent.maria == False:
         $ persistent.maria = True
         play sound "audio/sfx/umise_1060.ogg"
-        $ renpy.notify("Die Charaktere wurden geupdated.")
+        hide screen charupdate
+        show screen charupdate
     "Das kleine Mädchen, das definitiv mehr Spaß daran hat, mir zuzusehen, als mit dem Boot zu fahren," 
     extend " ist meine jüngste Cousine Maria,"
     "Auch sie hat unsere Namenstradition übernommen," 
@@ -200,7 +205,7 @@ label chapter1:
     extend " Rosa ist eine sehr strenge Mutter."
     extend " Sie nimmt Marias eher kindliches Verhalten sehr ernst,"
     extend " was schon zu unangenehm anzusehenden Szenen mit den beiden geführt hat."
-    hide mar a11defo1
+    hide mar
     show but b11odoroki3 at l
     with dis
     ros a11komaru4 "“....Tut mir leid," 
@@ -219,10 +224,11 @@ label chapter1:
     if persistent.rosa == False:
         $ persistent.rosa = True
         play sound "audio/sfx/umise_1060.ogg"
-        $ renpy.notify("Die Charaktere wurden geupdated.")
+        hide screen charupdate
+        show screen charupdate
     "Das ist Tante Rosa," 
     extend " sie ist die Mutter von Maria die sie sehr streng erzieht."
-    "Trotzdem kenne ich Tante Rosa als sehr liebe Person,"
+    "Trotzdem kenne ich Tante Rosa als sehr liebe Person," 
     extend " auch wenn das Taschengeld, dass sie uns Kindern gibt, nicht so hoch ist wie bei den anderen Erwachsenen."
     "Trotz ihres blöden Namens ist ihre Aussprache nur Ushiromiya Rooza,"
     extend " was nur halb so schlimm ist wie der Name meines Vaters."
@@ -285,7 +291,7 @@ label chapter1:
     extend " Ihr solltet euren Vater-Sohn Konflikt wann anders austragen.”"
     "Nachdem Kyrie den kleinen Konflikt erfolgreich beendet hatte, waren Schritte zu hören." 
     extend " Jemand scheint von unters Deck nach draußen kommen zu wollen."
-    hide kir a11majime1
+    hide kir
     show jes a11atya2 at m
     with dis
     jes "“...B.."
@@ -299,7 +305,8 @@ label chapter1:
     if persistent.tip2 == False:
         $ persistent.tip2 = True
         play sound "audio/sfx/umise_1060.ogg"
-        $ renpy.notify("Die Tipps wurden geupdated.")
+        hide screen tipupdate
+        show screen tipupdate
     extend " ...Bist du ein bisschen {note_green}meschugge{/note_green}?"
     extend " ...wahahahahahahahaha!"
     jes ".....Das war die eine Sache,"
@@ -324,7 +331,8 @@ label chapter1:
     if persistent.jessica == False:
         $ persistent.jessica = True
         play sound "audio/sfx/umise_1060.ogg"
-        $ renpy.notify("Die Charaktere wurden geupdated.")
+        hide screen charupdate
+        show screen charupdate
     "Das ist meine Cousine Ushiromiya Jessica."
     extend " Sie ist die Tochter von Onkel Krauss und Tante Natsuhi." 
     extend " Jessica ist echt cool drauf und ist wohl aktuell in dieser Phase, wo man gegen seine Eltern rebelliert."
@@ -351,24 +359,25 @@ label chapter1:
     extend " jetzt, wo das Boot etwas langsamer fährt."
     extend b22nayamu2 " ....Aber ich kann trotzdem nicht garantieren, dass ich den Rest meines Frühstücks bei mir behalte." 
     extend " Ihihihi!”"
-    stop ship
-    $ songname = "Door of Summer"
+    $ songname = "Doorway of Summer"
     if persistent.showbgm == True:
-        $ renpy.notify("♪Door of Summer")
+        hide screen showsong
+        show screen showsong
     play music "audio/bgm/umib_002_intro.ogg"
-    queue music "audio/bgm/umib_002_loop.ogg" loop 
+    queue music "audio/bgm/umib_002_loop.ogg" loop
+    play ship "audio/sfx/umilse_004.ogg" volume 0.2
     scene ship_s3a at bgani
     camera
     show expression(CustomParticles("images/system/particle.png", 10))
     with gradientwiperight
     "Dann gingen Battler und Jessica unter Deck zu den anderen, die im Gegensatz zu Battler ruhig warten, bis sie endlich die Insel erreichen."
-    show eva_b22_akire2 at rightedge
-    show hid_a21_warai1 at m
+    show eva b22akire2 at rightedge
+    show hid a21warai1 at m
     show kum_a12_defo2 at leftedge
     with quickergradientwiperight
     " ....Moment mal, dieses 'ruhig' sein ist falsch! Ich sehe es klar und deutlich! Die anderen Erwachsenen verkneifen sich doch alle gerade das Lachen."
-    hide eva_b22_akire2
-    hide hid_a21_warai1
+    hide eva
+    hide hid
     hide kum_a12_defo2
     show geo a11defo1 at m
     with quickergradientwiperight
@@ -385,7 +394,7 @@ label chapter1:
     geo a11warai1 "Erinnert an alte Zeiten," 
     extend " ....nicht wahr," 
     extend " ....Jessica-chan?”"
-    hide but b23kuyasigaru1
+    hide but
     show jes b22warai1 at leftedge
     with dis
     jes "“Ja,"
@@ -395,12 +404,13 @@ label chapter1:
     extend " ....ja,"
     extend " ....manche Dinge ändern sich, andere nie.”"
     show geo a11defo1 at m
-    hide jes b22warai1
+    hide jes
     with quickergradientwiperight
     if persistent.george == False:
         $ persistent.george = True
         play sound "audio/sfx/umise_1060.ogg"
-        $ renpy.notify("Die Charaktere wurden geupdated.")
+        hide screen charupdate
+        show screen charupdate
     "Das ist mein Cousin George." 
     extend " er wird von Tante Eva und Onkel Hideyoshi zu einem echten Gentleman erzogen."
     "Er arbeitet sehr hart und will schon sein eigenes Unternehmen gründen, was ich sehr beeindruckend finde."
@@ -410,7 +420,7 @@ label chapter1:
     extend " So spricht man ihn bei uns aus, und ich bin fest davon überzeugt,"
     extend " dass er heute einen Massenmord begehen wird."
     "Am liebsten würde ich auch diejenigen umbringen, die für diese schreckliche Namenstradition verantwortlich sind."
-    hide geo a11defo1
+    hide geo
     show but b22warai1 at rightedge
     with quickergradientwiperight
     but "“....Ich finde, heute ist auch ein besonderer Tag,"
@@ -438,8 +448,8 @@ label chapter1:
     geo ".....Diese können in einem selbst aktiviert werden."
     extend a11majime2 " ....Solche Sturmgötter können aber auch zu schlimmen Taten, zu Verbrechen und Gewalt verleiten."
     geo "Man kann ihn aber auch dazu bringen, sich intensiv vorwärts zu bewegen und aus der Bequemlichkeit des Alltags auszubrechen.”"
-    hide geo a11majime2
-    hide but b11oya1
+    hide geo
+    hide but
     show jes a11tereru1 at m
     with quickergradientwiperight
     jes "....Wahahahahahaha "
@@ -447,7 +457,7 @@ label chapter1:
     jes "Ich habe kein Wort verstanden...."
     extend a11atya3 " ...Ich wusste nicht mal, dass Wörter wie tantrisch oder dionysisch existieren."
     extend " Es klingt einfach unironisch, als hätte jemand einfach Wörter erfunden."
-    hide jes a11atya3
+    hide jes
     show but b23nayamu1 at rightedge
     with quickergradientwiperight
     but ".............hmm"
@@ -490,7 +500,7 @@ label chapter1:
     play sound "audio/sfx/umise_013.ogg"
     but "“.....Auauau, Jessica-chan..."
     extend " Das hat richtig weh getan!”"
-    hide geo a11komaru3
+    hide geo
     show jes a11ikari1 at leftedge
     with dis
     jes "“...Trottel!"
@@ -519,9 +529,9 @@ label chapter1:
     extend "....Wahahahahaha!”"
     geo a11hohoemi1 "“Ahahahaha...."
     extend " Ich denke da hast du Recht."
-    hide geo a11hohoemi1
-    hide but a11niramu1
-    hide jes a11tereru1
+    hide geo
+    hide but
+    hide jes
     with quickergradientwiperight
     show geo a11defo1 at m with dis
     geo " Ach ja, wusstet ihr?"
@@ -540,146 +550,294 @@ label chapter1:
     extend " ...Es war ja auch dringend notwendig, dass du deine Familie für sechs Jahre verlässt."
     extend " *kicher*”"
     but b11odoroki3 "“.....Ach man”"
+    "Es war Battler ein wenig unangenehm das wieder unter die Nase gerieben zu bekommen."
+    extend " Es war damals eine sehr schwere Entscheidung die Familie zu verlassen."
+    extend " Wer soll ihm das verübeln?"
+    hide but
+    hide geo
+    hide jes
+    show jes a11tohoho4 at m
+    with quickergradientwiperight
     jes  "“Auf die Familienkonferenz freue ich mich am meisten."
     extend " ....Es ist die kurze Zeit, die meinen langweiligen Alltag auflockert.”"
+    show but b11warai2 at rightedge with dis
     but "“Ja, ich bin auch froh, wieder bei euch zu sein, das hat mir in den sechs Jahren am meisten gefehlt.”"
-    jes "“Es ist schrecklich, nur mit meinen Eltern und meinem Großvater auf der Insel zu leben."
-    extend " ....Ich muss jeden Tag ziemlich früh aufstehen, weil meine Schule nicht wirklich in der Nähe ist, sondern auf Niijima."
-    jes "Nach der Schule muss ich sofort nach Hause, so dass ich keine Zeit mit meinen Freunden verbringen kann.”"
-    "Jessica wird immer wütender und die Wut steht ihr ins Gesicht geschrieben."
-    jes "“Danach habe ich nur noch Zeit, meine Hausaufgaben zu machen und in meinem Zimmer zu bleiben." 
+    jes "“Ich finde es super toll, dass ihr dieses Wochenende da seid."
+    extend " Es ist schrecklich, nur mit meinen Eltern und meinem Großvater auf der Insel zu leben."
+    extend " ....Ich muss jeden Tag ziemlich früh aufstehen, weil meine Schule nicht wirklich in der Nähe ist, sondern außerhalb der Insel.”"
+    stop music fadeout 2.0
+    $ songname = "-"
+    "Sofort scheint die gute Atmossphäre etwas zu kippen, da Jessicas Stimmung ebenfalls am kippen ist."
+    jes b22komaru1 "“Nach der Schule muss ich sofort nach Hause, so dass ich keine Zeit mit meinen Freunden verbringen kann.”"
+    "Jessicas Laune bricht immer weiter in sich zusammen, je mehr sie erzählt."
+    " Sie holte etwas luft und fährt mit niedergeschlagener Miene fort."
+    scene black with quickgradientwipedown
+    play music "audio/bgm/umib_035_Intro.ogg"
+    queue music "audio/bgm/umib_035_loop.ogg" loop 
+    $ songname = "Worldend"
+    if persistent.showbgm == True:
+        hide screen showsong
+        show screen showsong
+    jes "“Ich hasse einfach alles an dieser verfickten Insel..."
+    extend " ...Ich habe nur noch Zeit, meine Hausaufgaben zu machen und in meinem Zimmer zu bleiben." 
     extend " ....Es gibt nichts zu tun."
-    extend " ...Am liebsten würde ich diese blöde Insel für immer verlassen und auf dem Festland ein neues Leben beginnen."
+    extend " ...Am liebsten würde ich diese scheiss Insel für immer verlassen und auf dem Festland ein neues Leben beginnen."
     jes "........"
     extend " .....Da ich keinen direkten Kontakt zu meinen Schulfreunden habe," 
     extend " ....fühle ich mich hier ziemlich einsam."
     "Man merkt sofort, dass es Jessica sehr nahe geht, nach der Schule von der Außenwelt abgeschnitten zu sein."
-    extend " Auch George und Battler sind bedrückt, aber verständnisvoll, als sie Jessicas Worte über ihren Alltag auf der Insel hören."
-    "Onkel Hideyoshi scheint das Gespräch mitgehört zu haben und erhebt sich von seinem bequemen Platz."
-    hid "“Na, na Jessica-chan, du musst es positiv sehen!"
+    extend " Auch George und Battler sind bedrückt, aber verständnisvoll, als sie Jessicas Worte über ihren Alltag auf der Insel hörten."
+    scene schr_p1b at bgani
+    show jes d11warai1 at m
+    with quickergradientwiperight
+    "Jessicas Situation ist etwas besonders, da sie im Gegensatz zu normalen Schülern auf einer Insel lebt."
+    extend " ...Normalerweise würden solche Kinder in der Schule nicht sehr beliebt sein," 
+    extend " da sowas schnell mal zu Neid und Missgunst führen kann."
+    "Aber Jessica konnte mit ihrem Auftreten und ihren Charakter die meisten dieser Leute ruhig halten."
+    extend " Sie konnte auch Freunde während ihrer Schulzeit finden mit denen sie eine tolle Schulzeit genießt."
+    window hide
+    camera at grayscale
+    with gradientcirclefade
+    window auto
+    "Nur leider begrenzt sich diese Schöne Zeit alleine auf die Schule."
+    extend " ...Zuhause auf Rokkenjima ist die Welt eine ganz andere."
+    scene mjes_1cf at bgani,grayscale
+    show jes a11tohoho4 at m,grayscale
+    camera
+    with gradientwiperight
+    "Ihre Mutter ist sehr streng, sie erlaubt es nicht, dass sie sich amüsiert."
+    extend " Sie will, dass ihre Tochter gute Noten schreibt und einen guten Abschluss erwirbt."
+    "Dabei kann Jessica die Insel nur sehr selten außerschullisch verlassen."
+    extend " Sie muss entweder lernen oder alleine die Zeit totschlagen, bis sie wieder zum Schulalltag zurückkehren darf."
+    "Gott bewahre," 
+    extend " ....wenn sie Jungs in ihrem Alter treffen will." 
+    extend " ...Gott bewahre."
+    extend " ....Die Überfürsorge einer Mutter ist das gruseligste was man in einem 'normalen' Haushalt finden kann."
+    scene black with gradientcirclefade
+    "Onkel Hideyoshi scheint die ganze Szene mitgehört zu haben und erhebt sich von seinem bequemen Platz."
+    extend " Er nähert sich langsam der in Tränen versunkenen Jessica und spricht ruhig und sanft zu ihr."
+    scene ship_s3a at bgani
+    show expression(CustomParticles("images/system/particle.png", 10))
+    show hid a21warai1 at l
+    with quickergradientwiperight
+    hid "“Na, na Jessica-chan,"
+    extend " ....du musst es positiv sehen!"
     extend " Eines Tages wirst du die Insel wirklich verlassen und dein eigenes Leben führen können.”"
+    show jes b33naku1 at r with dis
     jes "“Aber wie lange noch?" 
-    extend " .....Was wäre wenn meine Schulfreunde nichts mehr mit mir zu tun haben wollen?”"
-    hid "“Auch deine Schulfreunde werden deine Situation verstehen, eines Tages wirst du zu ihnen gehen können und ab da viel Zeit mit ihnen verbringen."
+    extend " .....Was wäre wenn meine Schulfreunde bis dahin nichts mehr mit mir zu tun haben wollen?”"
+    "Jessicas Stimme, hatte eine tiefe trauer in sich, in diesem Moment scheint alles aus ihr heraus zu kommen."
+    hid a11odayaka1 "“Auch deine Schulfreunde werden deine Situation verstehen, eines Tages wirst du zu ihnen gehen können und ab da viel Zeit mit ihnen verbringen."
     extend " Bis dahin solltest du immer dein Bestes geben, denn das wird sich am Ende des Tages definitiv auszahlen!”"
-    jes "“.......Eines Tages?"
+    jes a11naku3 "“.......Eines Tages?"
     extend " Aber ich warte schon so viele Jahre.....”"
-    hid "“...Du hast dein ganzes Leben noch vor dir, glaub mir, deine Zeit als Teenager auf der Insel wird später nur noch eine Erinnerung sein."
-    extend " Jetzt habe ich mich aber verquatscht," 
-    extend " wahahahahaha!"
+    hid a21warai1 "“...Du hast dein ganzes Leben noch vor dir, glaub mir." 
+    extend " Deine Zeit als Teenager auf der Insel wird später nur noch eine Erinnerung sein."
+    extend " Es ist auch okay mal traurig zu sein, denn Weinen ist die aufrichtigste Emotion die es gibt."
+    hid a21warai2 " Jetzt habe ich mich aber verquatscht," 
+    extend " ....wahahahahaha!"
     hid "Aber lass den Kopf nicht hängen und häng dich weiter rein, ja?”"
-    jes "“Danke Hideyoshi, ich denke der Plan ist gut, ich werde ihn mir zu Herzen nehmen."
-    extend " Ich fühle mich schon besser.”"
+    jes a11tereru1 "“Danke Hideyoshi, ich werde es mir zu Herzen nehmen."
+    extend " ...Ich fühle mich schon besser.”"
     hid "“So ist's gut, du schaffst es!, wahahahaha”"
     if persistent.hideyoshi == False:
         $ persistent.hideyoshi = True
         play sound "audio/sfx/umise_1060.ogg"
-        $ renpy.notify("Die Charaktere wurden geupdated.")
+        hide screen charupdate
+        show screen charupdate
+    hide jes
+    show hid a11defo1 at m
+    with quickergradientwiperight
     "Das ist Georges Vater und mein Onkel Hideyoshi." 
     extend " Er ist ein netter und sympathischer Mann und ich glaube, ich mag ihn von allen Erwachsenen am meisten."
     "Er ist der Ehemann von Tante Eva und hat seine Firma von Grund auf neu aufgebaut."
     extend " Desweiteren ist er als Präsident einer mittelgroßen Restaurantkette tätig. Die Kette scheint zu wachsen und sehr gut zu laufen."
     "Sein Name wird Ushiromiya Hideyoshi ausgesprochen, wie Kyrie ist sein Name absolut perfekt!"
     extend " Das liegt daran, dass er als Japaner in die Familie eingeheiratet hat. ..... Ich beneide jeden, der einen normalen Namen hat."
+    hide hid
+    show geo a11hohoemi1 at r
+    with quickergradientwiperight
     geo "“Jessica-chan, allein ein Ziel zu haben, auf das man hinarbeiten kann, ist etwas, das einen jeden Tag motivieren sollte, nicht aufzugeben."
     geo "Auch ich oder Battler-kun haben unsere Sorgen und Probleme, die wir überall mit hinnehmen. Also halte noch ein bisschen durch, okay?”"
+    show jes a11tohoho4 at l with dis
     jes "“Ja vielen Dank, das hilft mir wirklich sehr, danke!”"
     "Die Worte von Hideyoshi und George haben Jessica sehr gut aufgemuntert."
     extend " Man sieht deutlich, wie Jessica wieder ein wenig lächelt."
-    eva "“Hey, sieht so aus, als wären wir gleich da, Battler-kun."
-    eva "Wusstest du, dass die Seekrankheit auch noch nach der Reise anhalten kann?”"
-    but "............."
-    but "“Bitte mach mir keine Angst, Tante Eva!”"
-    eva "“Oh... Entschuldige, ich wollte dir nur sagen, dass, wenn sich dein Körper an die Bewegungen des Bootes gewöhnt hat, er sich an Land wieder umgewöhnen muss."
-    eva "Aber mach dir darüber keinen Kopf. Battler-kun, das passiert nicht unbedingt. *kicher*”"
+    stop music fadeout 2.0
+    $ songname = "-"
+    scene black with quickergradientwiperight
+    "Ich saß zuhörend in unmittelbarer Nähe zur Szenerie und hab nicht darauf geachtet was in meiner Umgebung passiert."
+    extend " ...Diesen Moment in der ich meine Deckung links liegen ließ, hat Tante Eva benutzt um sich an mich heranzuschleichen und mir etwas ins Ohr zu flüstern."
+    $ songname = "Praise"
+    play music "audio/bgm/umib_021_Intro.ogg"
+    queue music "audio/bgm/umib_021_loop.ogg" loop 
+    if persistent.showbgm == True:
+        hide screen showsong
+        show screen showsong
+    eva "“Wusstest du, dass deine Seekrankheit auch noch nach der Reise anhalten kann?”"
+    "Battler hat sich wie erwartet erschrocken und springt auf, als hätte ihm eine Biene in den Hintern gestochen."
+    scene ship_s3a at bgani
+    play sound "audio/sfx/umise_047.ogg"
+    show but b11kuyasigaru1 at m,jumping
+    with vpunch
+    but "......Wuahhhh....." 
+    extend " ...Was soll das?"
+    extend " .....Bitte schleich dich nie wieder an mich ran, Tante Eva!”"
+    show eva b22akire2 at r with dis
+    eva "“Oh... Entschuldige," 
+    extend " ...ich wollte dir nur sagen, dass, wenn sich dein Körper an die Bewegungen des Bootes gewöhnt hat, er sich an Land wieder umgewöhnen muss."
+    show eva b21akire1go at rightedge with dis
+    eva "Aber mach dir darüber bloß keinen Kopf. Battler-kun, so etwas passiert nicht unbedingt." 
+    extend " *kicher*”"
     if persistent.eva == False:
         $ persistent.eva = True
         play sound "audio/sfx/umise_1060.ogg"
-        $ renpy.notify("Ein neuer Charakter wurde im Charaktermenü freigeschaltet.")
-    "Das ist meine Tante Eva, die Mutter von George." 
-    extend " Sie und der alte Bastard Papa sind so etwas wie ein Spaßvogel-Duo."
+        hide screen charupdate
+        show screen charupdate
+    hide but
+    show eva b25defo1 at m
+    with quickergradientwiperight
+    "Das ist meine Tante Eva, die Mutter von George und die Ehefrau von Onkel Hideyoshi." 
+    extend " Sie und der alte Bastard Dad sind so etwas wie ein Spaßvogel-Duo."
     extend " ...Wenn die beiden richtig loslegen, bleibt kein Stein auf dem anderen."
+    extend " Als wir Kinder waren, war sie zu uns immer lieb und vorallem witzig."
     "Sie beherrscht auch einige chinesische Kampfsporttechniken." 
     extend " Einer ihrer Roundhousekicks soll einmal bei einem Trainingskampf getroffen haben, und ihr Gegner wurde kaltgestellt wie ein Softdrink."
-    "Auf keinen Fall möchte ich von ihr unter die Dachlatte getreten werden."
-    extend " Ach ja! Fast hätte ich ihren Namen vergessen.... Sie heißt hier Ushiromiya Eba." 
-    extend " mit b....."
-    but "“.....Nein, du verarschst mich Tante Eva....”"
+    "Auf keinen Fall möchte ich von ihr einen Tritt unter die Dachlatte abbekommen...."
+    extend " Ach ja!" 
+    extend " Fast hätte ich ihren seltsamen Namen vergessen...." 
+    extend " ....Sie wird Ushiromiya Äba ausgesprochen." 
+    "mit Ä und b....."
+    extend " ....Wann hört das endlich auf?"
+    show but b11aseru1 at leftedge
+    hide eva
+    with quickergradientwiperight
+    but "“.....Nein," 
+    extend " du verarschst mich Tante Eva....”"
+    show eva b22akire2 at r with dis
     eva "“Oh nein..." 
-    extend " .....Das würde ich nie tun... *kicher*"
-    eva "....Ich wollte dir nur etwas über die Seekrankheit erzählen," 
+    extend " .....Das würde ich nie tun..." 
+    extend " *kicher*"
+    eva a11hohoemi1 "....Ich wollte dir nur etwas über Seekrankheiten erzählen," 
     extend " mehr nicht," 
     extend " *kicher*”"
     "Tante Eva wollte mich wahrscheinlich nicht erschrecken,"
     extend " sondern meinen Kopf auf die Probe stellen, denn wenn ich an ihre Worte denke, sobald ich an Land bin,"
     extend " dann wird mir bestimmt wieder schlecht," 
     extend " ......ganz schön raffiniert."
+    "Während wir uns fröhlich über Seekrankheiten unterhalten, kommt Kyrie runter um uns zu sagen, dass wir gleich anlegen werden."
+    hide but
+    hide eva
+    show kir a11defo1 at m
+    with quickgradientwiperight
     kir "“Wir sind jetzt gleich da!" 
     extend " .....Die Insel ist ganz nah!”"
-    "Unser Gespräch wird jäh unterbrochen durch die erfreuliche Nachricht, dass wir bald an Land gehen werden!"
+    hide kir
+    show but a11defo1 at m
+    with quickergradientwiperight
     but "“....Wir werden sehen, ob du Recht hast Tante Eva...”"
+    show eva b22akire2 at leftedge with dis
     eva "“*kicher*"
     extend " Forder es besser nicht heraus.... Battler-kun....”"
+    show hid a21warai1 at rightedge with dis
     hid "“Wahahahahaha!" 
     extend " ....Ihr zwei seid mir ja welche." 
-    extend " ...Lasst uns lieber an Deck gehen, wir gehen gleich an Land!”"
-    jes "“Ja, das ist eine gute Idee!”"
-    "So erhoben sich alle von ihren Plätzen und bemerkten, dass sich draußen die Wolken unerwartet und viel zu früh verdunkelt hatten."
+    extend a11defo1 " ...Lasst uns lieber an Deck gehen, wir gehen gleich an Land!”"
+    hide eva
+    show jes a11warai1 at leftedge
+    with dis
+    jes "“Ja, das ist eine gute Idee!"
+    extend " ...So langsam bekomme ich keine Luft mehr und das liegt nicht an meinem Asthma!"
+    "Jessica leidet an Asthma, dass bedeutet bei ihr sind die Atemwege verengt und sie wird manchmal von derartigen Anfällen heimgesucht."
+    "So erhoben sich alle von ihren Plätzen und bemerkten beim rausgehen, dass sich draußen die Wolken unerwartet und viel zu früh verdunkelt hatten."
+    stop music
+    $ songname = "-"
+    play wind "audio/sfx/umilse_005.ogg"
+    play ship "audio/sfx/umilse_004.ogg"
+    scene sky_1c 
+    with gradientwipeup
+    "So wie der Himmel, hat sich auch die Gesamtatmosphäre auf dem Boot verfinstert."
+    extend " Der Wind hat ordentlich an Stärke zugenommen und es sieht nach starken Regen aus."
+    "Dabei kommt der angekündigte Taifun früher als berichtet."
+    extend " Normalerweise sollte der Taifun um die Mittagszeit herum anfangen."
+    scene ship_s2b 
+    camera at boatswing,slowerboat
+    show kir a11majime1 at r
+    with gradientwipedown
     kir "“War der Taifun nicht für heute Mittag angekündigt?"
     extend " Vielleicht fängt es gleich an zu regnen.”"
     "Kyrie hat sofort bemerkt, dass etwas nicht stimmt."
     extend " Der Himmel hat sich in der Zwischenzeit bereits verdunkelt,"
     extend " was zu diesem Zeitpunkt noch gar nicht hätte passieren dürfen."
+    show rud a13odoroki1 at l with dis
     rud "“In etwa 10 Minuten sind wir da, aber gemütlich wird es nicht mehr.”"
-    kir "“Stimmt..." 
+    kir a13majime1 "“Stimmt..." 
     extend " Der Wind hat auch schon stark zugenommen.”"
     "Der Wind, der von Minute zu Minute stärker über das Meer peitscht,"
     extend " ist kein Wind, wie ihn die meisten Menschen vom Festland kennen."
     "Der Wind kann ungehindert und mit voller Kraft über das Wasser fegen,"
     extend " während es auf dem Land immer Häuser, Berge und Gelände gibt, die den Wind abschwächen können."
     kir "“Dass die Wettervorhersage sich mal irrt?”"
-    rud "“Ich habe einmal ein Geschäftsessen wegen eines angeblichen Taifuns abgesagt...."
+    rud a13warai1 "“Ich habe einmal ein Geschäftsessen wegen eines angeblichen Taifuns abgesagt...."
     extend " Der Taifun kam erst 2 Tage später, ich habe mich noch nie so dumm gefühlt wie in dieser Situation.”"
-    kir "“Das war sicher eine Erfahrung, so etwas am Ende erklären zu müssen....”"
+    kir a13warai2 "“Das war sicher eine Erfahrung, so etwas am Ende erklären zu müssen..."
+    extend " *kicher*”"
     rud "“Bitte erinnere mich nicht daran....”"
     "Nicht nur Rudolf und Kyrie sind beunruhigt," 
     extend " auch alle anderen sind überrascht,"
-    "dass der Sturm einige Stunden zu früh kommt. Dabei hatte der Wetterbericht garantiert, dass es erst um die Mittagszeit losgehen würde."
-    extend " ...Die Folge könnten turbulente Flüge sein, die noch eine Starterlaubnis für Kurzflüge haben."
+    extend " dass der Sturm einige Stunden zu früh kommt. Dabei hatte der Wetterbericht garantiert, dass es erst um die Mittagszeit losgehen würde."
+    "Die Folgen könnten turbulente Flüge sein, die noch eine Starterlaubnis für Kurzflüge haben."
     "Inzwischen hat sich Maria ganz vorne auf der Brücke niedergelassen, und ihr Blick schweift nicht mehr von einer ganz bestimmten Klippe ab."
-    mar "“......................Uu~..........."
-    mar "..................................."
-    mar "......................Es ist weg................."
-    extend " ......................Uu~.............."
-    extend " ......Uu~........nicht mehr da......”"
+    hide rud
+    hide kir  
+    show mar a11defo1 at m
+    with quickergradientwiperight
+    mar "“..........Uu~"
+    mar a11defo1_mouth_closed "......................."
+    mar a11defo1 ".............Es ist weg"
+    extend " ......................Uu~"
+    extend " ......Uu~"
+    extend " ........nicht mehr da”"
+    $ songname = "Stupefaction"
+    play music "audio/bgm/umib_020_Intro.ogg"
+    queue music "audio/bgm/umib_020_loop.ogg" loop 
+    if persistent.showbgm == True:
+        hide screen showsong
+        show screen showsong
+    show but b11warai2 at rightedge with dis
     but "“hmm?" 
-    extend " .....Was ist los Maria?”"
+    extend " .....Was ist los Maria?"
+    extend " ...Wo drückt der Schuh?”"
+    show jes a11atya3 at l with dis
     jes "“Etwas scheint sie sehr zu beunruhigen...”"
     mar "“Der Schrein ist weg! Es ist weg!.... Uu!"
     extend " Es ist weg!... Uu~...!"
     mar "Es war immer da, aber jetzt ist es weg!..." 
     extend " Uu!..”"
+    "Maria fängt sich buchstäblich an in Rage zu reden nur Jessica scheint eine Idee zu haben, was Maria meinen könnte."
     jes "“Stimmt ja..." 
     extend " Der Schrein fehlt, er war letztes Jahr noch da...."
     jes "Es sieht auch so aus, als wäre ein Teil des Riffs mitgerissen worden....”"
-    kum "“Ohohohoh, der Schrein wurde während eines Gewitters von einem gewaltigen Blitz getroffen und zerstört.”"
+    kum "“Ohohohoh," 
+    extend " ...der Schrein wurde während eines Gewitters letztens von einem gewaltigen Blitz getroffen und zerstört.”"
     if persistent.kumasawa == False:
         $ persistent.kumasawa = True
         play sound "audio/sfx/umise_1060.ogg"
-        $ renpy.notify("Die Charaktere wurden geupdated.")
+        hide screen charupdate
+        show screen charupdate
     "Die ältere Frau heißt Kumasawa Chiyo." 
     extend " Sie ist eine Teilzeitarbeiterin, die zwar mehrmals gekündigt hat, aber insgesamt schon viele Jahre im Dienst der Familie steht."
     "Sie ist geschickt und mehr als fähig, ihre Aufgaben zu erfüllen,"
     extend " aber wegen ihrer Geschwätzigkeit und ihrer Vorliebe für Gerüchte ist sie als Angestellte nicht sehr beliebt."
     "Ihr Name auf Japanisch?" 
     extend " ...Auch bei uns Kumasawa, ihre Eltern haben ihr einen vernünftigen Namen gegeben" 
-    extend " ....*seufz*...."
+    extend " ....*seufz"
     jes "“Ein Blitzeinschlag?..."
     extend " Ein Blitz kann so gewaltig sein?”"
     kum "“Die Fischer sagen, es sei ein Zeichen von Unglück....”"
     mar "“Ein Zeichen von Unglück....Uu~..."
     extend " ...........................”"
-    "Kumasawas Worte haben die sonst so entspannte Atmosphäre auf dem Schiff in ein beklemmendes Gefühl verwandelt."
+    "Kumasawas Worte haben die sonst so entspannte Atmosphäre auf dem Schiff in ein beklemmenderes Gefühl verwandelt."
     extend " Maria hat ihren Blick noch immer nicht von der Stelle abgewandt, an der der Schrein stehen sollte..."
     extend " Und es scheint, als würde in genau diesem Moment der heftige Wind für einen Moment nachlassen."
     mar "“Unglück..."
