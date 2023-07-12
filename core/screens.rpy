@@ -31,7 +31,7 @@ style chartext:
 
 style button_back:
     activate_sound "audio/sfx/umise_1001.ogg"
-    hover_sound "audio/sfx/click-21156.mp3"
+    hover_sound "audio/sys/sysse_move.wav"
     idle_background "gui/button/BtnBackBlank.png"
     hover_background "gui/button/BtnBackBlankOn.png"
     xpos 40
@@ -347,85 +347,85 @@ screen navigation():
                 yalign 0.8
                 spacing 3 
                 if persistent.new == True:
-                    imagebutton auto "gui/button/startnew_%s.png" action [Play("sound", "/audio/sfx/umise_051.ogg"), ShowMenu("story_select"), Hide('starthover'), SetVariable("ismain", True)] hover_sound "audio/sfx/click-21156.mp3" hovered Show('starthover') unhovered Hide('starthover') at buttondissolve1
+                    imagebutton auto "gui/title/buttons/startnew_%s.png" action [Play("sound", "/audio/sfx/umise_051.ogg"), ShowMenu("story_select"), Hide('starthover'), SetVariable("ismain", True)] hover_sound "audio/sys/sysse_move.wav" hovered Show('starthover') unhovered Hide('starthover') at buttondissolve1
                 else:
-                    imagebutton auto "gui/button/start_%s.png" action [Play("sound", "/audio/sfx/umise_051.ogg"), ShowMenu("story_select"), Hide('starthover'), SetVariable("ismain", True)] hover_sound "audio/sfx/click-21156.mp3" hovered Show('starthover') unhovered Hide('starthover') at buttondissolve1
+                    imagebutton auto "gui/title/buttons/start_%s.png" action [Play("sound", "/audio/sfx/umise_051.ogg"), ShowMenu("story_select"), Hide('starthover'), SetVariable("ismain", True)] hover_sound "audio/sys/sysse_move.wav" hovered Show('starthover') unhovered Hide('starthover') at buttondissolve1
                 $ lastsave=renpy.newest_slot(r"\d+")
                 if renpy.seen_label("start"):
                     if lastsave is not None:
                         $ name, page = lastsave.split("-")
-                        imagebutton auto "gui/button/continue_%s.png" action FileLoad(name, page) hovered Show('continuehover') unhovered Hide('continuehover') hover_sound "audio/sfx/click-21156.mp3" at buttondissolve1
+                        imagebutton auto "gui/title/buttons/continue_%s.png" action FileLoad(name, page) hovered Show('continuehover') unhovered Hide('continuehover') hover_sound "audio/sys/sysse_move.wav" at buttondissolve1
                 
                 if persistent.menustate == 0:
-                    imagebutton auto "gui/button/load2_%s.png" action [ShowMenu("load"), Hide('loadhover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" hovered Show('loadhover') unhovered Hide('loadhover') at buttondissolve1
+                    imagebutton auto "gui/title/buttons/load2_%s.png" action [ShowMenu("load"), Hide('loadhover')] activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav" hovered Show('loadhover') unhovered Hide('loadhover') at buttondissolve1
                 if persistent.menustate == 1:
-                    imagebutton auto "gui/button/load_%s.png" action [ShowMenu("load"), Hide('loadhover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" hovered Show('loadhover') unhovered Hide('loadhover') at buttondissolve2
+                    imagebutton auto "gui/title/buttons/load_%s.png" action [ShowMenu("load"), Hide('loadhover')] activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav" hovered Show('loadhover') unhovered Hide('loadhover') at buttondissolve2
                 if persistent.menustate == 2:
-                    imagebutton auto "gui/button/load_%s.png" action [ShowMenu("load"), Hide('loadhover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" hovered Show('loadhover') unhovered Hide('loadhover') at buttondissolve2
+                    imagebutton auto "gui/title/buttons/load_%s.png" action [ShowMenu("load"), Hide('loadhover')] activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav" hovered Show('loadhover') unhovered Hide('loadhover') at buttondissolve2
                 if persistent.menustate == 3:
-                    imagebutton auto "gui/button/load_%s.png" action [ShowMenu("load"), Hide('loadhover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" hovered Show('loadhover') unhovered Hide('loadhover') at buttondissolve2
+                    imagebutton auto "gui/title/buttons/load_%s.png" action [ShowMenu("load"), Hide('loadhover')] activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav" hovered Show('loadhover') unhovered Hide('loadhover') at buttondissolve2
                 if persistent.menustate == 4:
-                    imagebutton auto "gui/button/load_%s.png" action [ShowMenu("load"), Hide('loadhover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" hovered Show('loadhover') unhovered Hide('loadhover') at buttondissolve2
+                    imagebutton auto "gui/title/buttons/load_%s.png" action [ShowMenu("load"), Hide('loadhover')] activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav" hovered Show('loadhover') unhovered Hide('loadhover') at buttondissolve2
 
                 if persistent.menustate == 0:
-                    imagebutton auto "gui/button/settings2_%s.png" action [ShowMenu("preferences"), Hide('settingshover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" hovered Show('settingshover') unhovered Hide('settingshover') at buttondissolve2
+                    imagebutton auto "gui/title/buttons/settings2_%s.png" action [ShowMenu("preferences"), Hide('settingshover')] activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav" hovered Show('settingshover') unhovered Hide('settingshover') at buttondissolve2
                 if persistent.menustate == 1:
-                    imagebutton auto "gui/button/settings_%s.png" action [ShowMenu("preferences"), Hide('settingshover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" hovered Show('settingshover') unhovered Hide('settingshover') at buttondissolve2
+                    imagebutton auto "gui/title/buttons/settings_%s.png" action [ShowMenu("preferences"), Hide('settingshover')] activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav" hovered Show('settingshover') unhovered Hide('settingshover') at buttondissolve2
                 if persistent.menustate == 2:
-                    imagebutton auto "gui/button/settings_%s.png" action [ShowMenu("preferences"), Hide('settingshover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" hovered Show('settingshover') unhovered Hide('settingshover') at buttondissolve2
+                    imagebutton auto "gui/title/buttons/settings_%s.png" action [ShowMenu("preferences"), Hide('settingshover')] activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav" hovered Show('settingshover') unhovered Hide('settingshover') at buttondissolve2
                 if persistent.menustate == 3:
-                    imagebutton auto "gui/button/settings_%s.png" action [ShowMenu("preferences"), Hide('settingshover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" hovered Show('settingshover') unhovered Hide('settingshover') at buttondissolve2
+                    imagebutton auto "gui/title/buttons/settings_%s.png" action [ShowMenu("preferences"), Hide('settingshover')] activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav" hovered Show('settingshover') unhovered Hide('settingshover') at buttondissolve2
                 if persistent.menustate == 4:
-                    imagebutton auto "gui/button/settings_%s.png" action [ShowMenu("preferences"), Hide('settingshover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" hovered Show('settingshover') unhovered Hide('settingshover') at buttondissolve2
+                    imagebutton auto "gui/title/buttons/settings_%s.png" action [ShowMenu("preferences"), Hide('settingshover')] activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav" hovered Show('settingshover') unhovered Hide('settingshover') at buttondissolve2
 
                 if persistent.menustate == 0:
-                    imagebutton auto "gui/button/achieve2_%s.png" action [ShowMenu("achievement_menu"), Hide('trophyhover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" hovered Show('trophyhover') unhovered Hide('trophyhover') at buttondissolve2
+                    imagebutton auto "gui/title/buttons/achieve2_%s.png" action [ShowMenu("achievement_menu"), Hide('trophyhover')] activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav" hovered Show('trophyhover') unhovered Hide('trophyhover') at buttondissolve2
                 if persistent.menustate == 1:
-                    imagebutton auto "gui/button/achieve_%s.png" action [ShowMenu("achievement_menu"), Hide('trophyhover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" hovered Show('trophyhover') unhovered Hide('trophyhover') at buttondissolve3
+                    imagebutton auto "gui/title/buttons/achieve_%s.png" action [ShowMenu("achievement_menu"), Hide('trophyhover')] activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav" hovered Show('trophyhover') unhovered Hide('trophyhover') at buttondissolve3
                 if persistent.menustate == 2:
-                    imagebutton auto "gui/button/achieve_%s.png" action [ShowMenu("achievement_menu"), Hide('trophyhover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" hovered Show('trophyhover') unhovered Hide('trophyhover') at buttondissolve3
+                    imagebutton auto "gui/title/buttons/achieve_%s.png" action [ShowMenu("achievement_menu"), Hide('trophyhover')] activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav" hovered Show('trophyhover') unhovered Hide('trophyhover') at buttondissolve3
                 if persistent.menustate == 3:
-                    imagebutton auto "gui/button/achieve_%s.png" action [ShowMenu("achievement_menu"), Hide('trophyhover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" hovered Show('trophyhover') unhovered Hide('trophyhover') at buttondissolve3
+                    imagebutton auto "gui/title/buttons/achieve_%s.png" action [ShowMenu("achievement_menu"), Hide('trophyhover')] activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav" hovered Show('trophyhover') unhovered Hide('trophyhover') at buttondissolve3
                 if persistent.menustate == 4:
-                    imagebutton auto "gui/button/achieve_%s.png" action [ShowMenu("achievement_menu"), Hide('trophyhover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" hovered Show('trophyhover') unhovered Hide('trophyhover') at buttondissolve3
+                    imagebutton auto "gui/title/buttons/achieve_%s.png" action [ShowMenu("achievement_menu"), Hide('trophyhover')] activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav" hovered Show('trophyhover') unhovered Hide('trophyhover') at buttondissolve3
 
                 if persistent.tipunlocked == True:
-                    imagebutton auto "gui/button/tip_%s.png" action [ShowMenu("tipps"), Hide('tiphover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" hovered Show('tiphover') unhovered Hide('tiphover') at buttondissolve3
+                    imagebutton auto "gui/title/buttons/tip_%s.png" action [ShowMenu("tipps"), Hide('tiphover')] activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav" hovered Show('tiphover') unhovered Hide('tiphover') at buttondissolve3
                 else:
                     pass
 
                 if persistent.battler == True:
-                    imagebutton auto "gui/button/chars_%s.png" action [ShowMenu("characters"), Hide('characterhover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" hovered Show('characterhover') unhovered Hide('characterhover') at buttondissolve4
+                    imagebutton auto "gui/title/buttons/chars_%s.png" action [ShowMenu("characters"), Hide('characterhover')] activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav" hovered Show('characterhover') unhovered Hide('characterhover') at buttondissolve4
                 else:
                     pass
 
                 if persistent.musicbox == True:
-                    imagebutton auto "gui/button/jukebox_%s.png" action [ShowMenu("music_room"), Hide('jukeboxhover'), Function(ost.get_music_channel_info), Stop('music', fadeout=1.0), Stop('sound', fadeout=1.0), Stop('ship', fadeout=1.0), Stop('wind', fadeout=1.0), Function(ost.refresh_list)] hovered Show('jukeboxhover') unhovered Hide('jukeboxhover') activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" at buttondissolve4
+                    imagebutton auto "gui/title/buttons/jukebox_%s.png" action [ShowMenu("music_room"), Hide('jukeboxhover'), Function(ost.get_music_channel_info), Stop('music', fadeout=1.0), Stop('sound', fadeout=1.0), Stop('ship', fadeout=1.0), Stop('wind', fadeout=1.0), Stop('rain', fadeout=1.0), Function(ost.refresh_list)] hovered Show('jukeboxhover') unhovered Hide('jukeboxhover') activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav" at buttondissolve4
                 else:
                     pass
 
                 if persistent.menustate == 0:
-                    imagebutton auto "gui/button/help2_%s.png" action [ShowMenu("help"), Hide('helphover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" hovered Show('helphover') unhovered Hide('helphover') at buttondissolve3
+                    imagebutton auto "gui/title/buttons/help2_%s.png" action [ShowMenu("help"), Hide('helphover')] activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav" hovered Show('helphover') unhovered Hide('helphover') at buttondissolve3
                 if persistent.menustate == 1:
-                    imagebutton auto "gui/button/help0_%s.png" action [ShowMenu("help"), Hide('helphover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" hovered Show('helphover') unhovered Hide('helphover') at buttondissolve3
+                    imagebutton auto "gui/title/buttons/help0_%s.png" action [ShowMenu("help"), Hide('helphover')] activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav" hovered Show('helphover') unhovered Hide('helphover') at buttondissolve3
                 if persistent.menustate == 2:
-                    imagebutton auto "gui/button/help3_%s.png" action [ShowMenu("help"), Hide('helphover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" hovered Show('helphover') unhovered Hide('helphover') at buttondissolve4
+                    imagebutton auto "gui/title/buttons/help3_%s.png" action [ShowMenu("help"), Hide('helphover')] activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav" hovered Show('helphover') unhovered Hide('helphover') at buttondissolve4
                 if persistent.menustate == 3:
-                    imagebutton auto "gui/button/help4_%s.png" action [ShowMenu("help"), Hide('helphover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" hovered Show('helphover') unhovered Hide('helphover') at buttondissolve4
+                    imagebutton auto "gui/title/buttons/help4_%s.png" action [ShowMenu("help"), Hide('helphover')] activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav" hovered Show('helphover') unhovered Hide('helphover') at buttondissolve4
                 if persistent.menustate == 4:
-                    imagebutton auto "gui/button/help_%s.png" action [ShowMenu("help"), Hide('helphover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" hovered Show('helphover') unhovered Hide('helphover') at buttondissolve5
+                    imagebutton auto "gui/title/buttons/help_%s.png" action [ShowMenu("help"), Hide('helphover')] activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav" hovered Show('helphover') unhovered Hide('helphover') at buttondissolve5
             
 
                 if persistent.menustate == 0:
-                    imagebutton auto "gui/button/quit2_%s.png" action [QuitWithScene(), Hide('quithover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" hovered Show('quithover') unhovered Hide('quithover') at buttondissolve3
+                    imagebutton auto "gui/title/buttons/quit2_%s.png" action [QuitWithScene(), Hide('quithover')] activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav" hovered Show('quithover') unhovered Hide('quithover') at buttondissolve3
                 if persistent.menustate == 1:
-                    imagebutton auto "gui/button/quit0_%s.png" action [QuitWithScene(), Hide('quithover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" hovered Show('quithover') unhovered Hide('quithover') at buttondissolve4
+                    imagebutton auto "gui/title/buttons/quit0_%s.png" action [QuitWithScene(), Hide('quithover')] activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav" hovered Show('quithover') unhovered Hide('quithover') at buttondissolve4
                 if persistent.menustate == 2:
-                    imagebutton auto "gui/button/quit3_%s.png" action [QuitWithScene(), Hide('quithover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" hovered Show('quithover') unhovered Hide('quithover') at buttondissolve4
+                    imagebutton auto "gui/title/buttons/quit3_%s.png" action [QuitWithScene(), Hide('quithover')] activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav" hovered Show('quithover') unhovered Hide('quithover') at buttondissolve4
                 if persistent.menustate == 3:
-                    imagebutton auto "gui/button/quit4_%s.png" action [QuitWithScene(), Hide('quithover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" hovered Show('quithover') unhovered Hide('quithover') at buttondissolve5
+                    imagebutton auto "gui/title/buttons/quit4_%s.png" action [QuitWithScene(), Hide('quithover')] activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav" hovered Show('quithover') unhovered Hide('quithover') at buttondissolve5
                 if persistent.menustate == 4:
-                    imagebutton auto "gui/button/quit_%s.png" action [QuitWithScene(), Hide('quithover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" hovered Show('quithover') unhovered Hide('quithover') at buttondissolve5
+                    imagebutton auto "gui/title/buttons/quit_%s.png" action [QuitWithScene(), Hide('quithover')] activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav" hovered Show('quithover') unhovered Hide('quithover') at buttondissolve5
         else:
 
             pass
@@ -552,7 +552,7 @@ screen game_menu(scroll=None, yinitial=0.0):
     add "gui/gamemenu/hanabottom.png" at hanabottomtransform
     add "gui/gamemenu/hanatop.png" at hanatoptransform
     add "gui/gamemenu/darken.png" at center
-    imagebutton auto "gui/button/back2_%s.png" action Return() activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" yalign 0.02 xalign 0.97
+    imagebutton auto "images/system/back2_%s.png" action Return() activate_sound "audio/sys/sysse_cancel.wav" hover_sound "audio/sys/sysse_move.wav" yalign 0.02 xalign 0.97
     add partObj
 
 
@@ -616,6 +616,10 @@ screen game_menu(scroll=None, yinitial=0.0):
 
                 add "gui/chapter/ch1.png"
 
+            elif chapter == 2: 
+
+                add "gui/chapter/ch2.png"
+
             elif chapter == 404: 
 
                 add "gui/chapter/ch404.png"
@@ -629,42 +633,42 @@ screen game_menu(scroll=None, yinitial=0.0):
             yalign 0.5
             xalign 0.98
 
-            imagebutton auto "gui/gamemenu/save_%s.png" action ShowMenu("save") activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" at gamemenubuttontransform
+            imagebutton auto "gui/gamemenu/save_%s.png" action ShowMenu("save") activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav" at gamemenubuttontransform
 
-            imagebutton auto "gui/gamemenu/load_%s.png" action ShowMenu("load") activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" at gamemenubuttontransform
+            imagebutton auto "gui/gamemenu/load_%s.png" action ShowMenu("load") activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav" at gamemenubuttontransform
 
-            imagebutton auto "gui/gamemenu/backlog_%s.png" action ShowMenu("history") activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" at gamemenubuttontransform
+            imagebutton auto "gui/gamemenu/backlog_%s.png" action ShowMenu("history") activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav" at gamemenubuttontransform
 
-            imagebutton auto "gui/gamemenu/settings_%s.png" action [ShowMenu("preferences")] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" at gamemenubuttontransform
+            imagebutton auto "gui/gamemenu/settings_%s.png" action [ShowMenu("preferences")] activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav" at gamemenubuttontransform
 
-            imagebutton auto "gui/gamemenu/control_%s.png" action [ShowMenu("help")] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" at gamemenubuttontransform
+            imagebutton auto "gui/gamemenu/control_%s.png" action [ShowMenu("help")] activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav" at gamemenubuttontransform
 
-            imagebutton auto "gui/gamemenu/trophy_%s.png" action [ShowMenu("achievement_menu"), Hide('trophyhover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" at gamemenubuttontransform
+            imagebutton auto "gui/gamemenu/trophy_%s.png" action [ShowMenu("achievement_menu"), Hide('trophyhover')] activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav" at gamemenubuttontransform
 
             if persistent.battler == True:
-                imagebutton auto "gui/gamemenu/chars_%s.png" action [ShowMenu("characters"), Hide('characterhover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" at gamemenubuttontransform
+                imagebutton auto "gui/gamemenu/chars_%s.png" action [ShowMenu("characters"), Hide('characterhover')] activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav" at gamemenubuttontransform
             else:
                 pass
 
             if persistent.tipunlocked == True:
-                imagebutton auto "gui/gamemenu/tip_%s.png" action [ShowMenu("tipps"), Hide('tiphover')] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" at gamemenubuttontransform
+                imagebutton auto "gui/gamemenu/tip_%s.png" action [ShowMenu("tipps"), Hide('tiphover')] activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav" at gamemenubuttontransform
             else:
                 pass
 
             if persistent.musicbox == True:
-                imagebutton auto "gui/gamemenu/music_%s.png" action [ShowMenu("music_room"), Hide('jukeboxhover'), Function(ost.get_music_channel_info), Stop('music', fadeout=1.0), Stop('sound', fadeout=1.0), Stop('ship', fadeout=1.0), Stop('wind', fadeout=1.0), Function(ost.refresh_list)] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" at gamemenubuttontransform
+                imagebutton auto "gui/gamemenu/music_%s.png" action [ShowMenu("music_room"), Hide('jukeboxhover'), Function(ost.get_music_channel_info), Stop('music', fadeout=1.0), Stop('sound', fadeout=1.0), Stop('ship', fadeout=1.0), Stop('wind', fadeout=1.0), Stop('rain', fadeout=1.0), Function(ost.refresh_list)] activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav" at gamemenubuttontransform
             else:
                 pass
 
-            imagebutton auto "gui/gamemenu/backtomain_%s.png" action MainMenu() activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" at gamemenubuttontransform
+            imagebutton auto "gui/gamemenu/backtomain_%s.png" action MainMenu() activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav" at gamemenubuttontransform
 
         if persistent.showbgm == True:
             text "Soundtrack: " + songname ypos 1005 xpos 1900 xalign 1.0 size 30 font "fonts/AOTFShinGoProMedium.otf" outlines [ (absolute(3), "#000", absolute(0), absolute(0)) ]
         if persistent.showplaytime == True:
-            text "Spielzeit: " + getPlayTime() + "" ypos 1040 xpos 1900 xalign 1.0 size 30 font "fonts/AOTFShinGoProMedium.otf" outlines [ (absolute(3), "#000", absolute(0), absolute(0)) ]
+            text _("Spielzeit: ") + getPlayTime() ypos 1040 xpos 1900 xalign 1.0 size 30 font "fonts/AOTFShinGoProMedium.otf" outlines [ (absolute(3), "#000", absolute(0), absolute(0)) ]
 
     if main_menu:
-        key "game_menu" action ShowMenu("main_menu") activate_sound "audio/sfx/umise_1005.ogg"
+        key "game_menu" action ShowMenu("main_menu") activate_sound "audio/sys/sysse_decide.wav"
 
 screen cleanmenu():
 
@@ -760,7 +764,7 @@ screen about():
             text _("Made with {a=https://www.renpy.org/}Ren'Py{/a} [renpy.version_only] [renpy.license!t].")
             
             if main_menu:
-                imagebutton auto "gui/button/creditswatch_%s.png" action Start("creditsmenu") activate_sound "audio/sfx/umise_017.ogg" hover_sound "audio/sfx/click-21156.mp3"
+                imagebutton auto "gui/button/creditswatch_%s.png" action Start("creditsmenu") activate_sound "audio/sfx/umise_017.ogg" hover_sound "audio/sys/sysse_move.wav"
 
 
 style about_label is gui_label
@@ -800,7 +804,7 @@ screen file_slots_save():
     default page_name_value = FilePageNameInputValue(pattern=_("Seite {}"), auto=_("Automatische Spielstände"), quick=_("Schnell Speicherungen"))
     add "gui/game_menu.png" at center
     add "gui/saveload/savebg.png" at center
-    imagebutton auto "gui/button/back2_%s.png" action Return() activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" yalign 0.02 xalign 0.97
+    imagebutton auto "images/system/back2_%s.png" action Return() activate_sound "audio/sys/sysse_cancel.wav" hover_sound "audio/sys/sysse_move.wav" yalign 0.02 xalign 0.97
     add partObj
 
     
@@ -864,16 +868,16 @@ screen file_slots_save():
             textbutton _("<") action FilePagePrevious()
 
             if config.has_autosave:
-                textbutton _("{#auto_page}A") hover_sound "audio/sfx/click-21156.mp3" activate_sound "audio/sfx/umise_1005.ogg" action FilePage("auto")
+                textbutton _("{#auto_page}A") hover_sound "audio/sys/sysse_move.wav" activate_sound "audio/sys/sysse_decide.wav" action FilePage("auto")
 
             if config.has_quicksave:
-                textbutton _("{#quick_page}Q") hover_sound "audio/sfx/click-21156.mp3" activate_sound "audio/sfx/umise_1005.ogg" action FilePage("quick")
+                textbutton _("{#quick_page}Q") hover_sound "audio/sys/sysse_move.wav" activate_sound "audio/sys/sysse_decide.wav" action FilePage("quick")
 
             ## range(1, 10) gives the numbers from 1 to 9.
             for page in range(1, 6):
-                textbutton "[page]" hover_sound "audio/sfx/click-21156.mp3" activate_sound "audio/sfx/umise_1005.ogg" action FilePage(page)
+                textbutton "[page]" hover_sound "audio/sys/sysse_move.wav" activate_sound "audio/sys/sysse_decide.wav" action FilePage(page)
 
-            textbutton _(">") hover_sound "audio/sfx/click-21156.mp3" activate_sound "audio/sfx/umise_1005.ogg" action FilePageNext()
+            textbutton _(">") hover_sound "audio/sys/sysse_move.wav" activate_sound "audio/sys/sysse_decide.wav" action FilePageNext()
 
 
 style page_label is gui_label
@@ -914,7 +918,7 @@ screen file_slots_load():
     default page_name_value = FilePageNameInputValue(pattern=_("Seite {}"), auto=_("Automatische Spielstände"), quick=_("Schnell Speicherungen"))
     add "gui/game_menu.png" at center
     add "gui/saveload/loadbg.png" at center
-    imagebutton auto "gui/button/back2_%s.png" action Return() activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" yalign 0.02 xalign 0.97
+    imagebutton auto "images/system/back2_%s.png" action Return() activate_sound "audio/sys/sysse_cancel.wav" hover_sound "audio/sys/sysse_move.wav" yalign 0.02 xalign 0.97
     add partObj
 
     
@@ -979,16 +983,16 @@ screen file_slots_load():
             textbutton _("<") action FilePagePrevious()
 
             if config.has_autosave:
-                textbutton _("{#auto_page}A") hover_sound "audio/sfx/click-21156.mp3" activate_sound "audio/sfx/umise_1005.ogg" action FilePage("auto")
+                textbutton _("{#auto_page}A") hover_sound "audio/sys/sysse_move.wav" activate_sound "audio/sys/sysse_decide.wav" action FilePage("auto")
 
             if config.has_quicksave:
-                textbutton _("{#quick_page}Q") hover_sound "audio/sfx/click-21156.mp3" activate_sound "audio/sfx/umise_1005.ogg" action FilePage("quick")
+                textbutton _("{#quick_page}Q") hover_sound "audio/sys/sysse_move.wav" activate_sound "audio/sys/sysse_decide.wav" action FilePage("quick")
 
             ## range(1, 10) gives the numbers from 1 to 9.
             for page in range(1, 6):
-                textbutton "[page]" hover_sound "audio/sfx/click-21156.mp3" activate_sound "audio/sfx/umise_1005.ogg" action FilePage(page)
+                textbutton "[page]" hover_sound "audio/sys/sysse_move.wav" activate_sound "audio/sys/sysse_decide.wav" action FilePage(page)
 
-            textbutton _(">") hover_sound "audio/sfx/click-21156.mp3" activate_sound "audio/sfx/umise_1005.ogg" action FilePageNext()
+            textbutton _(">") hover_sound "audio/sys/sysse_move.wav" activate_sound "audio/sys/sysse_decide.wav" action FilePageNext()
 
 
 style page_label is gui_label
@@ -1038,7 +1042,7 @@ screen preferences():
     modal True
     add "gui/game_menu.png" at center
     add "gui/settings/background.png" at center
-    imagebutton auto "gui/button/back2_%s.png" action Return() activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" yalign 0.02 xalign 0.97
+    imagebutton auto "images/system/back2_%s.png" action Return() activate_sound "audio/sys/sysse_cancel.wav" hover_sound "audio/sys/sysse_move.wav" yalign 0.02 xalign 0.97
     add partObj
 
     vbox:
@@ -1051,47 +1055,47 @@ screen preferences():
         hbox:
 
             style_prefix "radio"
-            imagebutton auto "gui/button/window_%s.png" action Preference("display", "window") activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
-            imagebutton auto "gui/button/full_%s.png" action Preference("display", "fullscreen") activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+            imagebutton auto "gui/settings/buttons/window_%s.png" action Preference("display", "window") activate_sound "audio/sys/sysse_son.wav" hover_sound "audio/sys/sysse_move.wav"
+            imagebutton auto "gui/settings/buttons/full_%s.png" action Preference("display", "fullscreen") activate_sound "audio/sys/sysse_son.wav" hover_sound "audio/sys/sysse_move.wav"
         hbox:
             style_prefix "radio"
-            imagebutton auto "gui/button/gl_%s.png" action _SetRenderer("gl2") activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
-            imagebutton auto "gui/button/angle2_%s.png" action _SetRenderer("angle2") activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+            imagebutton auto "gui/settings/buttons/gl_%s.png" action [_SetRenderer("gl2"), SelectedIf(SetVariable("persistent.renderer", 0)), SetVariable("persistent.renderer", 0)] activate_sound "audio/sys/sysse_son.wav" hover_sound "audio/sys/sysse_move.wav"
+            imagebutton auto "gui/settings/buttons/angle2_%s.png" action [_SetRenderer("angle2"), SelectedIf(SetVariable("persistent.renderer", 1)), SetVariable("persistent.renderer", 1)] activate_sound "audio/sys/sysse_son.wav" hover_sound "audio/sys/sysse_move.wav"
 
         hbox:
 
             style_prefix "check"
-            imagebutton auto "gui/button/on_%s.png" action Preference("skip", "Toggle") activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+            imagebutton auto "gui/settings/buttons/on_%s.png" action Preference("skip", "Toggle") activate_sound "audio/sys/sysse_son.wav" hover_sound "audio/sys/sysse_move.wav"
 
         hbox:
 
             style_prefix "check"
-            imagebutton auto "gui/button/de_%s.png" action Language(None) activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
-            imagebutton auto "gui/button/en_%s.png" action Language("English") activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+            imagebutton auto "gui/settings/buttons/de_%s.png" action Language(None) activate_sound "audio/sys/sysse_son.wav" hover_sound "audio/sys/sysse_move.wav"
+            imagebutton auto "gui/settings/buttons/en_%s.png" action Language("English") activate_sound "audio/sys/sysse_son.wav" hover_sound "audio/sys/sysse_move.wav"
 
         hbox:
 
             style_prefix "check"
-            imagebutton auto "gui/button/off_%s.png" action SetVariable("persistent.showch", False) activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
-            imagebutton auto "gui/button/on_%s.png" action SetVariable("persistent.showch", True) activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+            imagebutton auto "gui/settings/buttons/off_%s.png" action SetVariable("persistent.showch", False) activate_sound "audio/sys/sysse_soff.wav" hover_sound "audio/sys/sysse_move.wav"
+            imagebutton auto "gui/settings/buttons/on_%s.png" action SetVariable("persistent.showch", True) activate_sound "audio/sys/sysse_son.wav" hover_sound "audio/sys/sysse_move.wav"
         
         hbox:
 
             style_prefix "check"
-            imagebutton auto "gui/button/off_%s.png" action SetVariable("persistent.showbgm", False) activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
-            imagebutton auto "gui/button/on_%s.png" action SetVariable("persistent.showbgm", True) activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+            imagebutton auto "gui/settings/buttons/off_%s.png" action SetVariable("persistent.showbgm", False) activate_sound "audio/sys/sysse_soff.wav" hover_sound "audio/sys/sysse_move.wav"
+            imagebutton auto "gui/settings/buttons/on_%s.png" action SetVariable("persistent.showbgm", True) activate_sound "audio/sys/sysse_son.wav" hover_sound "audio/sys/sysse_move.wav"
 
         hbox:
 
             style_prefix "check"
-            imagebutton auto "gui/button/off_%s.png" action SetVariable("persistent.showplaytime", False) activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
-            imagebutton auto "gui/button/on_%s.png" action SetVariable("persistent.showplaytime", True) activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+            imagebutton auto "gui/settings/buttons/off_%s.png" action SetVariable("persistent.showplaytime", False) activate_sound "audio/sys/sysse_soff.wav" hover_sound "audio/sys/sysse_move.wav"
+            imagebutton auto "gui/settings/buttons/on_%s.png" action SetVariable("persistent.showplaytime", True) activate_sound "audio/sys/sysse_son.wav" hover_sound "audio/sys/sysse_move.wav"
 
         hbox:
 
             style_prefix "check"
-            imagebutton auto "gui/button/off_%s.png" action Preference("gl powersave", False) activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
-            imagebutton auto "gui/button/on_%s.png" action Preference("gl powersave", True) activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+            imagebutton auto "gui/settings/buttons/off_%s.png" action Preference("gl powersave", False) activate_sound "audio/sys/sysse_soff.wav" hover_sound "audio/sys/sysse_move.wav"
+            imagebutton auto "gui/settings/buttons/on_%s.png" action Preference("gl powersave", True) activate_sound "audio/sys/sysse_son.wav" hover_sound "audio/sys/sysse_move.wav"
         
 
     vbox:
@@ -1114,7 +1118,7 @@ screen preferences():
         style_prefix "slider"
         box_wrap True
 
-        default text_cps_preview = PreviewSlowText("So sieht der Text aus.")
+        default text_cps_preview = PreviewSlowText("Text Text Text Text.")
 
         vbox:
                     
@@ -1161,7 +1165,7 @@ screen preferences():
 
                     #if config.has_music or config.has_sound or config.has_voice:
                         #null height gui.pref_spacing
-                        #imagebutton auto "gui/button/mute_%s.png" action Preference("all mute", "toggle") activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+                        #imagebutton auto "gui/button/mute_%s.png" action Preference("all mute", "toggle") activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav"
                         #textbutton _("Alles Stummschal{color=#f00}t{/color}en"):
                             #action Preference("all mute", "toggle")
                             #style "mute_all_button"
@@ -1253,7 +1257,7 @@ screen history():
     modal True
     add "gui/game_menu.png" at center
     add "gui/backlog/background.png" at center
-    imagebutton auto "gui/button/back2_%s.png" action Return() activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" yalign 0.02 xalign 0.97
+    imagebutton auto "images/system/back2_%s.png" action Return() activate_sound "audio/sys/sysse_cancel.wav" hover_sound "audio/sys/sysse_move.wav" yalign 0.02 xalign 0.97
     #add partObj
     predict False
 
@@ -1393,7 +1397,7 @@ screen help():
     tag menu
     add "gui/game_menu.png" at center
     add "gui/controls/background.png" at center
-    imagebutton auto "gui/button/back2_%s.png" action Return() activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" yalign 0.02 xalign 0.97
+    imagebutton auto "images/system/back2_%s.png" action Return() activate_sound "audio/sys/sysse_cancel.wav" hover_sound "audio/sys/sysse_move.wav" yalign 0.02 xalign 0.97
     add partObj
 
     default device = "keyboard"
@@ -1406,10 +1410,10 @@ screen help():
 
         hbox:
             yalign 0.5
-            imagebutton auto "gui/button/keyboard_%s.png" action SetScreenVariable("device", "keyboard") activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+            imagebutton auto "gui/controls/buttons/keyboard_%s.png" action SetScreenVariable("device", "keyboard") activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav"
 
             if GamepadExists():
-                imagebutton auto "gui/button/gamepad_%s.png" action SetScreenVariable("device", "gamepad") activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+                imagebutton auto "gui/controls/buttons/gamepad_%s.png" action SetScreenVariable("device", "gamepad") activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav"
 
     if device == "keyboard":
         use keyboard_help
@@ -1472,77 +1476,77 @@ screen confirm(message, yes_action, no_action):
 
     if message == layout.ARE_YOU_SURE:
         add "gui/confirmblack.png" at center
-        imagebutton auto "gui/button/accept_%s.png" action yes_action:
+        imagebutton auto "images/system/accept_%s.png" action yes_action:
             xpos 450
             ypos 650
-            activate_sound "audio/sfx/umise_1005.ogg" 
-            hover_sound "audio/sfx/click-21156.mp3"
-        imagebutton auto "gui/button/refuse_%s.png" action no_action:
+            activate_sound "audio/sys/sysse_decide.wav" 
+            hover_sound "audio/sys/sysse_move.wav"
+        imagebutton auto "images/system/refuse_%s.png" action no_action:
             xpos 950
             ypos 650
-            activate_sound "audio/sfx/umise_1005.ogg" 
-            hover_sound "audio/sfx/click-21156.mp3"
-        add "gui/button/sure.png":
+            activate_sound "audio/sys/sysse_cancel.wav" 
+            hover_sound "audio/sys/sysse_move.wav"
+        add "images/system/sure.png":
             xalign 0.5
             yalign 0.5
     elif message == layout.OVERWRITE_SAVE:
         add "gui/confirmblack.png" at center
-        imagebutton auto "gui/button/accept_%s.png" action [Play("sound", "audio/sfx/umise_056.ogg"), yes_action]:
+        imagebutton auto "images/system/accept_%s.png" action [Play("sound", "audio/sfx/umise_056.ogg"), yes_action]:
             xpos 450
             ypos 650
-            activate_sound "audio/sfx/umise_1005.ogg" 
-            hover_sound "audio/sfx/click-21156.mp3"
-        imagebutton auto "gui/button/refuse_%s.png" action no_action:
+            activate_sound "audio/sys/sysse_decide.wav" 
+            hover_sound "audio/sys/sysse_move.wav"
+        imagebutton auto "images/system/refuse_%s.png" action no_action:
             xpos 950
             ypos 650
-            activate_sound "audio/sfx/umise_1005.ogg" 
-            hover_sound "audio/sfx/click-21156.mp3"
-        add "gui/button/save.png":
+            activate_sound "audio/sys/sysse_cancel.wav" 
+            hover_sound "audio/sys/sysse_move.wav"
+        add "images/system/save.png":
             xalign 0.5
             yalign 0.5
     elif message == layout.LOADING:
         add "gui/confirmblack.png" at center
-        imagebutton auto "gui/button/accept_%s.png" action [Play("sound", "audio/sfx/umise_058.ogg"), yes_action]:
+        imagebutton auto "images/system/accept_%s.png" action [Play("sound", "audio/sfx/umise_058.ogg"), yes_action]:
             xpos 450
             ypos 650
-            activate_sound "audio/sfx/umise_1005.ogg" 
-            hover_sound "audio/sfx/click-21156.mp3"
-        imagebutton auto "gui/button/refuse_%s.png" action no_action:
+            activate_sound "audio/sys/sysse_decide.wav" 
+            hover_sound "audio/sys/sysse_move.wav"
+        imagebutton auto "images/system/refuse_%s.png" action no_action:
             xpos 950
             ypos 650
-            activate_sound "audio/sfx/umise_1005.ogg" 
-            hover_sound "audio/sfx/click-21156.mp3"
-        add "gui/button/load.png":
+            activate_sound "audio/sys/sysse_cancel.wav" 
+            hover_sound "audio/sys/sysse_move.wav"
+        add "images/system/load.png":
             xalign 0.5
             yalign 0.5
     elif message == layout.QUIT:
         add "gui/confirmblack.png" at center
-        imagebutton auto "gui/button/accept_%s.png" action [QuitWithScene(), yes_action]:
+        imagebutton auto "images/system/accept_%s.png" action [QuitWithScene(), yes_action]:
             xpos 450
             ypos 650
-            activate_sound "audio/sfx/umise_1005.ogg" 
-            hover_sound "audio/sfx/click-21156.mp3"
-        imagebutton auto "gui/button/refuse_%s.png" action no_action:
+            activate_sound "audio/sys/sysse_decide.wav" 
+            hover_sound "audio/sys/sysse_move.wav"
+        imagebutton auto "images/system/refuse_%s.png" action no_action:
             xpos 950
             ypos 650
-            activate_sound "audio/sfx/umise_1005.ogg" 
-            hover_sound "audio/sfx/click-21156.mp3"
-        add "gui/button/quit.png":
+            activate_sound "audio/sys/sysse_cancel.wav" 
+            hover_sound "audio/sys/sysse_move.wav"
+        add "images/system/quit.png":
             xalign 0.5
             yalign 0.5
     elif message == layout.MAIN_MENU:
         add "gui/confirmblack.png" at center
-        imagebutton auto "gui/button/accept_%s.png" action [titurnd(), yes_action]: 
+        imagebutton auto "images/system/accept_%s.png" action [titurnd(), yes_action]: 
             xpos 450
             ypos 650
-            activate_sound "audio/sfx/umise_1005.ogg" 
-            hover_sound "audio/sfx/click-21156.mp3"
-        imagebutton auto "gui/button/refuse_%s.png" action no_action:
+            activate_sound "audio/sys/sysse_decide.wav" 
+            hover_sound "audio/sys/sysse_move.wav"
+        imagebutton auto "images/system/refuse_%s.png" action no_action:
             xpos 950
             ypos 650
-            activate_sound "audio/sfx/umise_1005.ogg" 
-            hover_sound "audio/sfx/click-21156.mp3"
-        add "gui/button/quit.png":
+            activate_sound "audio/sys/sysse_cancel.wav" 
+            hover_sound "audio/sys/sysse_move.wav"
+        add "images/system/quit.png":
             xalign 0.5
             yalign 0.5
 
@@ -1590,7 +1594,7 @@ screen skip_indicator():
         hbox:
             spacing 9
 
-            text _("Skipping")
+            text _("Überspringe")
 
             text "▸" at delayed_blink(0.0, 1.0) style "skip_triangle"
             text "▸" at delayed_blink(0.2, 1.0) style "skip_triangle"
@@ -1707,7 +1711,7 @@ screen nvl(dialogue, items=None):
     #add SideImage() xalign 0.0 yalign 1.0
 
 
-screen nvl_dialogue(dialogue):
+screen nvl_dialogue(dialogue, slow_effect = slow_typewriter, slow_effect_delay = 0, always_effect = None):
 
     for d in dialogue:
 
@@ -1795,7 +1799,7 @@ screen story_select():
     add "gui/scenario/background.png" at center
     add partObj
 
-    imagebutton auto "gui/button/back2_%s.png" action ShowMenu("main_menu") activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" yalign 0.01 xalign 0.98
+    imagebutton auto "images/system/back2_%s.png" action ShowMenu("main_menu") activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav" yalign 0.01 xalign 0.98
 
     hbox:
 
@@ -1803,38 +1807,38 @@ screen story_select():
         xpos 10
 
 
-        imagebutton idle "gui/button/main2_selected_idle.png" action NullAction()
+        imagebutton idle "gui/scenario/buttons/main2_selected_idle.png" action NullAction()
 
         if persistent.gamecleared == True:
 
-            imagebutton auto "gui/button/bonus2_%s.png" action ShowMenu("story_select_bonus") activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+            imagebutton auto "gui/scenario/buttons/bonus2_%s.png" action ShowMenu("story_select_bonus") activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav"
 
         else:
 
-            imagebutton auto "gui/button/bonuslocked_%s.png" action NullAction() hovered Show('locked') unhovered Hide('locked') hover_sound "audio/sfx/click-21156.mp3"
+            imagebutton auto "gui/scenario/buttons/bonuslocked_%s.png" action NullAction() activate_sound "audio/sys/sysse_error.wav" hovered Show('locked') unhovered Hide('locked') hover_sound "audio/sys/sysse_move.wav"
     vbox:
         
         xpos 73
         yalign 0.5
 
 
-        imagebutton auto "gui/button/main_%s.png" action Start("startgame") hovered Show('mainstory') unhovered Hide('mainstory') hover_sound "audio/sfx/click-21156.mp3"
+        imagebutton auto "gui/scenario/buttons/main_%s.png" action Start("startgame") hovered Show('mainstory') unhovered Hide('mainstory') hover_sound "audio/sys/sysse_move.wav"
 
         if persistent.mainstorycleared == True:
 
-            imagebutton auto "gui/button/teaparty_%s.png" action Start("teaparty") hovered Show('teaparty') unhovered Hide('teaparty') hover_sound "audio/sfx/click-21156.mp3"
+            imagebutton auto "gui/scenario/buttons/teaparty_%s.png" action Start("teaparty") hovered Show('teaparty') unhovered Hide('teaparty') hover_sound "audio/sys/sysse_move.wav"
 
         else:
 
-            imagebutton auto "gui/button/tealocked_%s.png" action NullAction() hovered Show('locked') unhovered Hide('locked') hover_sound "audio/sfx/click-21156.mp3"
+            imagebutton auto "gui/scenario/buttons/tealocked_%s.png" action NullAction() activate_sound "audio/sys/sysse_error.wav" hovered Show('locked') unhovered Hide('locked') hover_sound "audio/sys/sysse_move.wav"
 
 
         if persistent.teapartycleared == True:
 
-            imagebutton auto "gui/button/hidden_%s.png" action Start("urateaparty") hovered Show('urateaparty') unhovered Hide('urateaparty') hover_sound "audio/sfx/click-21156.mp3"
+            imagebutton auto "gui/scenario/buttons/hidden_%s.png" action Start("urateaparty") hovered Show('urateaparty') unhovered Hide('urateaparty') hover_sound "audio/sys/sysse_move.wav"
         else:
 
-            imagebutton auto "gui/button/uralocked_%s.png" action NullAction() hovered Show('locked') unhovered Hide('locked') hover_sound "audio/sfx/click-21156.mp3"
+            imagebutton auto "gui/scenario/buttons/uralocked_%s.png" action NullAction() activate_sound "audio/sys/sysse_error.wav" hovered Show('locked') unhovered Hide('locked') hover_sound "audio/sys/sysse_move.wav"
 
 screen story_select_bonus():
 
@@ -1843,7 +1847,7 @@ screen story_select_bonus():
     add "gui/scenario/background.png" at center
     add partObj
 
-    imagebutton auto "gui/button/back2_%s.png" action ShowMenu("main_menu") activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" yalign 0.01 xalign 0.98
+    imagebutton auto "gui/scenario/buttons/back2_%s.png" action ShowMenu("main_menu") activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav" yalign 0.01 xalign 0.98
 
     hbox:
 
@@ -1851,9 +1855,9 @@ screen story_select_bonus():
         xpos 10
 
 
-        imagebutton auto "gui/button/main2_%s.png" action ShowMenu("story_select") activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+        imagebutton auto "gui/scenario/buttons/main2_%s.png" action ShowMenu("story_select") activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav"
 
-        imagebutton idle "gui/button/bonus2_selected_idle.png" action NullAction()
+        imagebutton idle "gui/scenario/buttons/bonus2_selected_idle.png" action NullAction()
 
 screen mainstory():
     tag hover
@@ -1944,31 +1948,31 @@ screen characters():
     add "gui/game_menu.png" at center
     add "gui/charbox/background.png" at center
     add partObj
-    imagebutton auto "gui/button/back2_%s.png" action Return() activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" yalign 0.02 xalign 0.97
+    imagebutton auto "images/system/back2_%s.png" action Return() activate_sound "audio/sys/sysse_cancel.wav" hover_sound "audio/sys/sysse_move.wav" yalign 0.02 xalign 0.97
     hbox:
 
         xpos 110
         ypos 200
 
         if persistent.kinzo == True:
-            imagebutton auto "gui/chars/char01_%s.png" action ShowMenu("char01") activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+            imagebutton auto "gui/charbox/icons/char01_%s.png" action ShowMenu("char01") activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav"
         else:
-            imagebutton auto "gui/chars/char00_%s.png" action NullAction()
+            imagebutton auto "gui/charbox/icons/char00_%s.png" action NullAction() activate_sound "audio/sys/sysse_error.wav" hover_sound "audio/sys/sysse_move.wav"
 
         if persistent.krauss == True:
-            imagebutton auto "gui/chars/char02_%s.png" action ShowMenu("char02") activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+            imagebutton auto "gui/charbox/icons/char02_%s.png" action ShowMenu("char02") activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav"
         else:
-            imagebutton auto "gui/chars/char00_%s.png" action NullAction()
+            imagebutton auto "gui/charbox/icons/char00_%s.png" action NullAction() activate_sound "audio/sys/sysse_error.wav" hover_sound "audio/sys/sysse_move.wav"
 
         if persistent.natsuhi == True:
-            imagebutton auto "gui/chars/char03_%s.png" action ShowMenu("char03") activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+            imagebutton auto "gui/charbox/icons/char03_%s.png" action ShowMenu("char03") activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav"
         else:
-            imagebutton auto "gui/chars/char00_%s.png" action NullAction()
+            imagebutton auto "gui/charbox/icons/char00_%s.png" action NullAction() activate_sound "audio/sys/sysse_error.wav" hover_sound "audio/sys/sysse_move.wav"
 
         if persistent.jessica == True:
-            imagebutton auto "gui/chars/char05_%s.png" action ShowMenu("char05") activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+            imagebutton auto "gui/charbox/icons/char05_%s.png" action ShowMenu("char05") activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav"
         else:
-            imagebutton auto "gui/chars/char00_%s.png" action NullAction()
+            imagebutton auto "gui/charbox/icons/char00_%s.png" action NullAction() activate_sound "audio/sys/sysse_error.wav" hover_sound "audio/sys/sysse_move.wav"
 
     hbox:
 
@@ -1976,71 +1980,71 @@ screen characters():
         ypos 300
 
         if persistent.nanjo == True:
-            imagebutton auto "gui/chars/char15_%s.png" action ShowMenu("char15") activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+            imagebutton auto "gui/charbox/icons/char15_%s.png" action ShowMenu("char15") activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav"
         else:
-            imagebutton auto "gui/chars/char00_%s.png" action NullAction()
+            imagebutton auto "gui/charbox/icons/char00_%s.png" action NullAction() activate_sound "audio/sys/sysse_error.wav" hover_sound "audio/sys/sysse_move.wav"
 
         if persistent.eva == True:
-            imagebutton auto "gui/chars/char06_%s.png" action ShowMenu("char06") activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+            imagebutton auto "gui/charbox/icons/char06_%s.png" action ShowMenu("char06") activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav"
         else:
-            imagebutton auto "gui/chars/char00_%s.png" action NullAction()
+            imagebutton auto "gui/charbox/icons/char00_%s.png" action NullAction() activate_sound "audio/sys/sysse_error.wav" hover_sound "audio/sys/sysse_move.wav"
 
         if persistent.hideyoshi == True:    
-            imagebutton auto "gui/chars/char07_%s.png" action ShowMenu("char07") activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+            imagebutton auto "gui/charbox/icons/char07_%s.png" action ShowMenu("char07") activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav"
         else:
-            imagebutton auto "gui/chars/char00_%s.png" action NullAction()
+            imagebutton auto "gui/charbox/icons/char00_%s.png" action NullAction() activate_sound "audio/sys/sysse_error.wav" hover_sound "audio/sys/sysse_move.wav"
 
         if persistent.george == True:
-            imagebutton auto "gui/chars/char08_%s.png" action ShowMenu("char08") activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+            imagebutton auto "gui/charbox/icons/char08_%s.png" action ShowMenu("char08") activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav"
         else:
-            imagebutton auto "gui/chars/char00_%s.png" action NullAction()
+            imagebutton auto "gui/charbox/icons/char00_%s.png" action NullAction() activate_sound "audio/sys/sysse_error.wav" hover_sound "audio/sys/sysse_move.wav"
     hbox:
 
         xpos 110
         ypos 400
 
         if persistent.beatrice == True:
-            imagebutton auto "gui/chars/char21_%s.png" action ShowMenu("char21") activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+            imagebutton auto "gui/charbox/icons/char21_%s.png" action ShowMenu("char21") activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav"
         else:
-            imagebutton auto "gui/chars/char00_%s.png" action NullAction()
+            imagebutton auto "gui/charbox/icons/char00_%s.png" action NullAction() activate_sound "audio/sys/sysse_error.wav" hover_sound "audio/sys/sysse_move.wav"
 
         if persistent.rudolf == True:
-            imagebutton auto "gui/chars/char09_%s.png" action ShowMenu("char09") activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+            imagebutton auto "gui/charbox/icons/char09_%s.png" action ShowMenu("char09") activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav"
         else:
-            imagebutton auto "gui/chars/char00_%s.png" action NullAction()
+            imagebutton auto "gui/charbox/icons/char00_%s.png" action NullAction() activate_sound "audio/sys/sysse_error.wav" hover_sound "audio/sys/sysse_move.wav"
 
         if persistent.kyrie == True:
-            imagebutton auto "gui/chars/char10_%s.png" action ShowMenu("char10") activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+            imagebutton auto "gui/charbox/icons/char10_%s.png" action ShowMenu("char10") activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav"
         else:
-            imagebutton auto "gui/chars/char00_%s.png" action NullAction()
+            imagebutton auto "gui/charbox/icons/char00_%s.png" action NullAction() activate_sound "audio/sys/sysse_error.wav" hover_sound "audio/sys/sysse_move.wav"
 
         if persistent.battlerdead == True:
-            imagebutton auto "gui/chars/char11_%s.png" action [ShowMenu("char11dead"), SelectedIf(SetVariable("battlerexe", True)), SetVariable("battlerexe", True)] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+            imagebutton auto "gui/charbox/icons/char11_%s.png" action [ShowMenu("char11dead"), SelectedIf(SetVariable("battlerexe", True)), SetVariable("battlerexe", True)] activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav"
         elif persistent.battler == True:
-            imagebutton auto "gui/chars/char11_%s.png" action ShowMenu("char11") activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+            imagebutton auto "gui/charbox/icons/char11_%s.png" action ShowMenu("char11") activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav"
         else:
-            imagebutton auto "gui/chars/char00_%s.png" action NullAction()
+            imagebutton auto "gui/charbox/icons/char00_%s.png" action NullAction() activate_sound "audio/sys/sysse_error.wav" hover_sound "audio/sys/sysse_move.wav"
     hbox:
 
         xpos 110
         ypos 500
 
         if persistent.genji == True:
-            imagebutton auto "gui/chars/char16_%s.png" action ShowMenu("char16") activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+            imagebutton auto "gui/charbox/icons/char16_%s.png" action ShowMenu("char16") activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav"
         else:
-            imagebutton auto "gui/chars/char00_%s.png" action NullAction()
+            imagebutton auto "gui/charbox/icons/char00_%s.png" action NullAction() activate_sound "audio/sys/sysse_error.wav" hover_sound "audio/sys/sysse_move.wav"
 
         if persistent.rosa == True:
-            imagebutton auto "gui/chars/char13_%s.png" action ShowMenu("char13") activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+            imagebutton auto "gui/charbox/icons/char13_%s.png" action ShowMenu("char13") activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav"
         else:
-            imagebutton auto "gui/chars/char00_%s.png" action NullAction()
+            imagebutton auto "gui/charbox/icons/char00_%s.png" action NullAction() activate_sound "audio/sys/sysse_error.wav" hover_sound "audio/sys/sysse_move.wav"
 
-        add "gui/chars/emptyspace.png"
+        add "gui/charbox/icons/emptyspace.png"
 
         if persistent.maria == True:
-            imagebutton auto "gui/chars/char14_%s.png" action ShowMenu("char14") activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+            imagebutton auto "gui/charbox/icons/char14_%s.png" action ShowMenu("char14") activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav"
         else:
-            imagebutton auto "gui/chars/char00_%s.png" action NullAction()
+            imagebutton auto "gui/charbox/icons/char00_%s.png" action NullAction() activate_sound "audio/sys/sysse_error.wav" hover_sound "audio/sys/sysse_move.wav"
 
     hbox:
 
@@ -2048,24 +2052,24 @@ screen characters():
         ypos 600
 
         if persistent.shannon == True:
-            imagebutton auto "gui/chars/char19_%s.png" action ShowMenu("char19") activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+            imagebutton auto "gui/charbox/icons/char19_%s.png" action ShowMenu("char19") activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav"
         else:
-            imagebutton auto "gui/chars/char00_%s.png" action NullAction()
+            imagebutton auto "gui/charbox/icons/char00_%s.png" action NullAction() activate_sound "audio/sys/sysse_error.wav" hover_sound "audio/sys/sysse_move.wav"
 
         if persistent.kanon == True:
-            imagebutton auto "gui/chars/char20_%s.png" action ShowMenu("char20") activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+            imagebutton auto "gui/charbox/icons/char20_%s.png" action ShowMenu("char20") activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav"
         else:
-            imagebutton auto "gui/chars/char00_%s.png" action NullAction()
+            imagebutton auto "gui/charbox/icons/char00_%s.png" action NullAction() activate_sound "audio/sys/sysse_error.wav" hover_sound "audio/sys/sysse_move.wav"
 
         if persistent.gohda == True:
-            imagebutton auto "gui/chars/char18_%s.png" action ShowMenu("char18") activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+            imagebutton auto "gui/charbox/icons/char18_%s.png" action ShowMenu("char18") activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav"
         else:
-            imagebutton auto "gui/chars/char00_%s.png" action NullAction()
+            imagebutton auto "gui/charbox/icons/char00_%s.png" action NullAction() activate_sound "audio/sys/sysse_error.wav" hover_sound "audio/sys/sysse_move.wav"
 
         if persistent.kumasawa == True:
-            imagebutton auto "gui/chars/char17_%s.png" action ShowMenu("char17") activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+            imagebutton auto "gui/charbox/icons/char17_%s.png" action ShowMenu("char17") activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav"
         else:
-            imagebutton auto "gui/chars/char00_%s.png" action NullAction()
+            imagebutton auto "gui/charbox/icons/char00_%s.png" action NullAction() activate_sound "audio/sys/sysse_error.wav" hover_sound "audio/sys/sysse_move.wav"
 
 
 screen witches():
@@ -2078,74 +2082,53 @@ screen hina():
     imagemap:
         ground "gui/title/hovermenu2.png"
 
+screen char01():
+    tag menu
+    use characters
+    imagemap:
+        ground "gui/charbox/kindesc.png"
+
 screen char05():
     tag menu
     use characters
     imagemap:
-        ground "gui/title/hovermenu2.png"
-    image jes_char at r3
-    text "Ushiromiya Jessica" style 'charnametext' at Position(xpos = 75, ypos = 500)
-    text "Hier sollten Infos über Jessica stehen." style 'chartext' at Position (xpos = 60, ypos = 550)
+        ground "gui/charbox/jesdesc.png"
 
 screen char06():
     tag menu
     use characters
     imagemap:
-        ground "gui/title/hovermenu2.png"
-    image eva_char at r3
-    text "Ushiromiya Eva" style 'charnametext' at Position(xpos = 75, ypos = 500)
-    text "Hier sollten Infos über Eva stehen." style 'chartext' at Position (xpos = 60, ypos = 550)
+        ground "gui/charbox/evadesc.png"
 
 screen char07():
     tag menu
     use characters
     imagemap:
-        ground "gui/title/hovermenu2.png"
-    image hid_char at r3
-    text "Ushiromiya Hideyoshi" style 'charnametext' at Position(xpos = 75, ypos = 500)
-    text "Hier sollten Infos über Hideyoshi stehen." style 'chartext' at Position (xpos = 60, ypos = 550)
+        ground "gui/charbox/hiddesc.png"
 
 screen char08():
     tag menu
     use characters
     imagemap:
-        ground "gui/title/hovermenu2.png"
-    image geo_char at r3
-    text "Ushiromiya George" style 'charnametext' at Position(xpos = 75, ypos = 500)
-    text "Hier sollten Infos über George stehen." style 'chartext' at Position (xpos = 60, ypos = 550)
+        ground "gui/charbox/geodesc.png"
 
 screen char09():
     tag menu
     use characters
     imagemap:
-        ground "gui/title/hovermenu2.png"
-    image rud_char at r3
-    text "Ushiromiya Rudolf" style 'charnametext' at Position(xpos = 75, ypos = 500)
-    text "Hier sollten Infos über Rudolf stehen." style 'chartext' at Position (xpos = 60, ypos = 550)
+        ground "gui/charbox/ruddesc.png"
 
 screen char10():
     tag menu
     use characters
     imagemap:
-        ground "gui/charbox/hovermenu2.png"
-    image kyr_char at r3
-    text "Ushiromiya Kyrie" style 'charnametext' at Position(xpos = 75, ypos = 500)
-    text "Hier sollten Infos über Kyrie stehen." style 'chartext' at Position (xpos = 60, ypos = 550)
+        ground "gui/charbox/kirdesc.png"
 
 screen char11():
     tag menu
     use characters
     imagemap:
         ground "gui/charbox/butdesc.png"
-
-    vbox:
-        xpos 100
-        ypos 700
-
-        if persistent.battlerdead == True:
-            imagebutton auto "gui/button/execute_%s.png" action Show("char11dead") activate_sound "audio/sfx/umise_1006.ogg" hover_sound "audio/sfx/click-21156.mp3"
-        else: 
-            pass
 
 screen char11dead():
     tag menu
@@ -2157,7 +2140,7 @@ screen char11dead():
             xpos 100
             ypos 700
 
-            imagebutton auto "gui/button/resurrect_%s.png" action Show("char11") activate_sound "audio/sfx/umise_1021.ogg" hover_sound "audio/sfx/click-21156.mp3"
+            imagebutton auto "gui/button/resurrect_%s.png" action Show("char11") activate_sound "audio/sfx/umise_1021.ogg" hover_sound "audio/sys/sysse_move.wav"
 
     
 
@@ -2165,46 +2148,43 @@ screen char13():
     tag menu
     use characters
     imagemap:
-        ground "gui/title/hovermenu2.png"
-    image ros_char at r3
-    text "Ushiromiya Rosa" style 'charnametext' at Position(xpos = 75, ypos = 500)
-    text "Hier sollten Infos über Rosa stehen." style 'chartext' at Position (xpos = 60, ypos = 550)
+        ground "gui/charbox/rosdesc.png"
 
 screen char14():
     tag menu
     use characters
     imagemap:
-        ground "gui/title/hovermenu2.png"
-    image mar_char at r3
-    text "Ushiromiya Maria" style 'charnametext' at Position(xpos = 75, ypos = 500)
-    text "Hier sollten Infos über Maria stehen." style 'chartext' at Position (xpos = 60, ypos = 550)
+        ground "gui/charbox/mardesc.png"
+
+screen char15():
+    tag menu
+    use characters
+    imagemap:
+        ground "gui/charbox/nandesc.png"
+
+screen char16():
+    tag menu
+    use characters
+    imagemap:
+        ground "gui/charbox/gendesc.png"
 
 screen char17():
     tag menu
     use characters
     imagemap:
-        ground "gui/title/hovermenu2.png"
-    image kum_char at r3
-    text "Kumasawa Chiyo" style 'charnametext' at Position(xpos = 75, ypos = 500)
-    text "Hier sollten Infos über Kumasawa stehen." style 'chartext' at Position (xpos = 60, ypos = 550)
+        ground "gui/charbox/kumdesc.png"
 
 screen char18():
     tag menu
     use characters
     imagemap:
-        ground "gui/title/hovermenu2.png"
-    image goh_char at r3
-    text "Gohda Toshiro" style 'charnametext' at Position(xpos = 75, ypos = 500)
-    text "Hier sollten Infos über Gohda stehen." style 'chartext' at Position (xpos = 60, ypos = 550)
+        ground "gui/charbox/gohdesc.png"
 
 screen char19():
     tag menu
     use characters
     imagemap:
-        ground "gui/title/hovermenu2.png"
-    image sha_char at r3
-    text "Shannon" style 'charnametext' at Position(xpos = 75, ypos = 500)
-    text "Hier sollten Infos über Shannon stehen." style 'chartext' at Position (xpos = 60, ypos = 550)
+        ground "gui/charbox/shadesc.png"
 
 screen char21():
     tag menu
@@ -2224,17 +2204,20 @@ screen tipps():
     add "gui/game_menu.png" at center
     add "gui/tipps/background1.png" at center
     add partObj
-    imagebutton auto "gui/button/back2_%s.png" action Return() activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" yalign 0.02 xalign 0.97
+    imagebutton auto "images/system/back2_%s.png" action Return() activate_sound "audio/sys/sysse_cancel.wav" hover_sound "audio/sys/sysse_move.wav" yalign 0.02 xalign 0.97
 
     vbox:
         xpos 1373
         yalign 0.5
 
 
-        imagebutton auto "gui/tipps/tip01_%s.png" action ShowMenu("tip01") activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+        imagebutton auto "gui/tipps/tip01_%s.png" action ShowMenu("tip01") activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav"
 
         if persistent.tip2 == True:
-            imagebutton auto "gui/tipps/tip02_%s.png" action ShowMenu("tip02") activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
+            imagebutton auto "gui/tipps/tip02_%s.png" action ShowMenu("tip02") activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav"
+
+        if persistent.tip3 == True:
+            imagebutton auto "gui/tipps/tip03_%s.png" action ShowMenu("tip03") activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav"
 
 screen grimoire():
     tag menu
@@ -2242,7 +2225,7 @@ screen grimoire():
     add "gui/game_menu.png" at center
     add "gui/tipps/background2.png" at center
     add partObj
-    imagebutton auto "gui/button/back2_%s.png" action Return() activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" yalign 0.02 xalign 0.97
+    imagebutton auto "images/system/back2_%s.png" action Return() activate_sound "audio/sys/sysse_cancel.wav" hover_sound "audio/sys/sysse_move.wav" yalign 0.02 xalign 0.97
 
 screen tip01():
 
@@ -2259,6 +2242,14 @@ screen tip02():
     use tipps
 
     add "gui/tipps/tip02_details.png" at center
+
+screen tip03():
+
+    tag menu
+    modal True
+    use tipps
+
+    add "gui/tipps/tip03_details.png" at center
 
 
 screen confirmrestart():
@@ -2305,104 +2296,17 @@ screen quick_menu():
 
     if quick_menu:
 
-        hbox:
+        vbox:
             style_prefix "quick"
 
-            xalign 0.5
-            yalign 1.0
-            ypos 1050
+            xalign 0.995
+            yalign 0.97
+            spacing 30
 
 
-            textbutton _("Zur{color=#f00}ü{/color}ck") action Rollback() activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
-            textbutton _("Übersp{color=#f00}r{/color}ingen") action Skip() alternate Skip(fast=True, confirm=True) activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
-            textbutton _("Autom{color=#f00}o{/color}dus") action Preference("auto-forward", "toggle") activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
-            textbutton _("Men{color=#f00}ü{/color}") action ShowMenu() activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3"
-
-
-style window:
-    variant "small"
-    background "gui/phone/textbox.png"
-
-
-
-style quick_button_text:
-    properties gui.button_text_properties("quick_button")
-    size 21
-
-
-style radio_button:
-    variant "small"
-    foreground "gui/phone/button/radio_[prefix_]foreground.png"
-
-style check_button:
-    variant "small"
-    foreground "gui/phone/button/check_[prefix_]foreground.png"
-
-style nvl_window:
-    variant "small"
-    background "gui/phone/nvl.png"
-
-style game_menu_outer_frame:
-    variant "small"
-    #background "gui/phone/overlay/game_menu.png"
-
-style game_menu_navigation_frame:
-    variant "small"
-    xsize 510
-
-style game_menu_content_frame:
-    variant "small"
-    top_margin -80
-    bottom_margin 0
-
-style pref_vbox:
-    variant "small"
-    xsize 650
-
-style bar:
-    variant "small"
-    ysize gui.bar_size
-    left_bar Frame("gui/phone/bar/left.png", gui.bar_borders, tile=gui.bar_tile)
-    right_bar Frame("gui/phone/bar/right.png", gui.bar_borders, tile=gui.bar_tile)
-
-style vbar:
-    variant "small"
-    xsize gui.bar_size
-    top_bar Frame("gui/phone/bar/top.png", gui.vbar_borders, tile=gui.bar_tile)
-    bottom_bar Frame("gui/phone/bar/bottom.png", gui.vbar_borders, tile=gui.bar_tile)
-
-style scrollbar:
-    variant "small"
-    ysize gui.scrollbar_size
-    base_bar Frame("gui/phone/scrollbar/horizontal_[prefix_]bar.png", gui.scrollbar_borders, tile=gui.scrollbar_tile)
-    thumb Frame("gui/phone/scrollbar/horizontal_[prefix_]thumb.png", gui.scrollbar_borders, tile=gui.scrollbar_tile)
-
-style vscrollbar:
-    variant "small"
-    xsize gui.scrollbar_size
-    base_bar Frame("gui/phone/scrollbar/vertical_[prefix_]bar.png", gui.vscrollbar_borders, tile=gui.scrollbar_tile)
-    thumb Frame("gui/phone/scrollbar/vertical_[prefix_]thumb.png", gui.vscrollbar_borders, tile=gui.scrollbar_tile)
-
-style slider:
-    variant "small"
-    ysize gui.slider_size
-    base_bar Frame("gui/phone/slider/horizontal_[prefix_]bar.png", gui.slider_borders, tile=gui.slider_tile)
-    thumb "gui/phone/slider/horizontal_[prefix_]thumb.png"
-
-style vslider:
-    variant "small"
-    xsize gui.slider_size
-    base_bar Frame("gui/phone/slider/vertical_[prefix_]bar.png", gui.vslider_borders, tile=gui.slider_tile)
-    thumb "gui/phone/slider/vertical_[prefix_]thumb.png"
-
-style slider_vbox:
-    variant "small"
-    xsize None
-
-style slider_slider:
-    variant "small"
-    xsize 800
-
+            imagebutton auto "gui/phone/button/skip_%s.png" action Skip() alternate Skip(fast=True, confirm=True) activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav"
+            imagebutton auto "gui/phone/button/auto_%s.png" action Preference("auto-forward", "toggle") activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav"
+            imagebutton auto "gui/phone/button/menu_%s.png" action ShowMenu() activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav"
 
 ###DEBUG####
 

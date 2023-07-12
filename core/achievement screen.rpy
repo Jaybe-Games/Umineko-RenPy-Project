@@ -6,7 +6,7 @@ screen achievement_menu(scroll="viewport"):
     modal True
     add "gui/game_menu.png" at center
     add "gui/trophys/background.png" at center
-    imagebutton auto "gui/button/back2_%s.png" action Return() activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" yalign 0.02 xalign 0.97
+    imagebutton auto "images/system/back2_%s.png" action Return() activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" yalign 0.02 xalign 0.97
     add partObj
     ## If you'd like to display a number and total of achievements you can use this.
     #use cleanmenu(_("Trophäen | {:01d}/{}".format(len(persistent.my_achievements), len(achievement_name) if len(persistent.my_achievements) == len(achievement_name) else len(achievement_name) - 1)), scroll="viewport"):
@@ -29,7 +29,7 @@ screen achievement_menu(scroll="viewport"):
 
         vpgrid:
             cols 3
-            spacing 10
+            spacing 15
             xalign 0.5
             yalign 0.7
             scrollbars "vertical"

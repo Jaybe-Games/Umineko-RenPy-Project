@@ -212,3 +212,33 @@ image jes d11warai1 = Composite(
     (613, 1118),
     (0, 0), "images/sprites/jes/d11/warai1/0.png",
     )
+
+image jes a11majime1 = Composite(
+    (623, 1126),
+    (0, 0), "images/sprites/jes/a11/majime1/0.png",
+    (0, 0), WhileSpeaking("jes", "jes_a11_majime1_mouth", "images/sprites/jes/a11/majime1/0.png"),
+    )
+
+image jes_a11_majime1_mouth:
+    "images/sprites/jes/a11/majime1/0.png"
+    .10
+    "images/sprites/jes/a11/majime1/1.png"
+    .10
+    "images/sprites/jes/a11/majime1/2.png"
+    .20
+    repeat
+
+image jes a11tereru2 = Composite(
+    (623, 1126),
+    (0, 0), "images/sprites/jes/a11/tereru2/0.png",
+    (0, 0), WhileSpeaking("jes", "jes_a11_tereru2_mouth", "images/sprites/jes/a11/tereru2/0.png"),
+    )
+
+image jes_a11_tereru2_mouth:
+    "images/sprites/jes/a11/tereru2/0.png"
+    .10
+    "images/sprites/jes/a11/tereru2/1.png"
+    .10
+    "images/sprites/jes/a11/tereru2/2.png"
+    .20
+    repeat

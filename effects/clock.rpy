@@ -6,6 +6,15 @@ transform alpha_dissolve:
         linear 0.5 alpha 0
     # This is to fade in the clock.
 
+transform clock_rotation_h_ch2_1:
+    around (.5, .5) alignaround (.5, .5) xalign .5 yalign .5
+    rotate 270
+    linear 2 rotate 300
+transform clock_rotation_m_ch2_1:
+    around (.5, .5) alignaround (.5, .5) xalign .5 yalign .5
+    rotate 180
+    linear 2 rotate 360
+
 transform clock_rotation_h_ch2:
     around (.5, .5) alignaround (.5, .5) xalign .5 yalign .5
     rotate 300
@@ -93,11 +102,18 @@ screen cinemalogo():
     zorder 999
     add "images/system/cinemalogo.png" at [alpha_dissolve, Position(xpos = 1000, ypos = 780)]
 
-screen clockch2():
+screen clockch2_1():
     zorder 50
     add "gui/time/clock.png" at [alpha_dissolve, Position(xpos = 1000, ypos = 300)]
-    add "gui/time/clock_m.png" at [clock_rotation_h_ch2, Position(xpos = 1430, ypos = 727)]
-    add "gui/time/clock_h.png" at [clock_rotation_m_ch2, Position(xpos = 1430, ypos = 727)]
+    add "gui/time/clock_m.png" at [clock_rotation_m_ch2_1, Position(xpos = 1430, ypos = 727)]
+    add "gui/time/clock_h.png" at [clock_rotation_h_ch2_1, Position(xpos = 1430, ypos = 727)]
+    add "gui/time/clock_c.png" at Position(xpos = 1380, ypos = 700)
+
+screen clockch2_2():
+    zorder 50
+    add "gui/time/clock.png" at [alpha_dissolve, Position(xpos = 1000, ypos = 300)]
+    add "gui/time/clock_m.png" at [clock_rotation_m_ch2, Position(xpos = 1430, ypos = 727)]
+    add "gui/time/clock_h.png" at [clock_rotation_h_ch2, Position(xpos = 1430, ypos = 727)]
     add "gui/time/clock_c.png" at Position(xpos = 1380, ypos = 700)
 
 screen clocktimu_break2():

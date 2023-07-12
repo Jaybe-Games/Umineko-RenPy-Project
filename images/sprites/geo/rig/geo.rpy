@@ -139,3 +139,18 @@ image geo_a23k_komaru5k_mouth:
     "images/sprites/geo/a23k/komaru5k/2.png"
     .20
     repeat
+
+image geo a12warai1 = Composite(
+    (1034, 1174),
+    (0, 0), "images/sprites/geo/a12/warai1/0.png",
+    (0, 0), WhileSpeaking("geo", "geo_a12_warai1_mouth", "images/sprites/geo/a12/warai1/0.png"),
+    )
+
+image geo_a12_warai1_mouth:
+    "images/sprites/geo/a12/warai1/0.png"
+    .10
+    "images/sprites/geo/a12/warai1/1.png"
+    .10
+    "images/sprites/geo/a12/warai1/2.png"
+    .20
+    repeat

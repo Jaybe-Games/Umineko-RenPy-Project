@@ -73,3 +73,18 @@ image ros_a11_warai1_mouth:
     .20
     repeat
 
+image ros a12ikari1 = Composite(
+    (658, 1088),
+    (0, 0), "images/sprites/ros/a12/ikari1/0.png",
+    (0, 0), WhileSpeaking("ros", "ros_a12_ikari1_mouth", "images/sprites/ros/a12/ikari1/0.png"),
+)
+
+image ros_a12_ikari1_mouth:
+    "images/sprites/ros/a12/ikari1/0.png"
+    .10
+    "images/sprites/ros/a12/ikari1/1.png"
+    .10
+    "images/sprites/ros/a12/ikari1/2.png"
+    .20
+    repeat
+

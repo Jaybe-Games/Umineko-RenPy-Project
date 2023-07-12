@@ -1,106 +1,38 @@
-﻿# TODO: Translation updated at 2023-06-08 22:40
+﻿# TODO: Translation updated at 2023-07-05 15:54
 
 translate English strings:
 
     # game/core/achievements.rpy:55
     old "Tippsjäger"
-    new "Tippsjäger"
-
-    # game/core/achievements.rpy:55
-    old "Erhalte deinen ersten Tipp."
-    new "Erhalte deinen ersten Tipp."
-
-    # game/core/achievements.rpy:55
-    old "Charakterjäger"
-    new "Charakterjäger"
-
-    # game/core/achievements.rpy:55
-    old "Schalte den ersten Charakter frei."
-    new "Schalte den ersten Charakter frei."
-
-    # game/core/achievements.rpy:55
-    old "Musikboxjäger"
-    new "Musikboxjäger"
-
-    # game/core/achievements.rpy:55
-    old "Schalte die Musikbox frei."
-    new "Schalte die Musikbox frei."
-
-    # game/core/achievements.rpy:55
-    old "Runter vom Boot"
-    new "Runter vom Boot"
-
-    # game/core/achievements.rpy:55
-    old "Du hast Rokkenjima erreicht."
-    new "Du hast Rokkenjima erreicht."
-
-    # game/core/achievements.rpy:55
-    old "Konami Code"
-    new "Konami Code"
-
-    # game/core/achievements.rpy:55
-    old "War das etwa ein Nipah?"
-    new "War das etwa ein Nipah?"
-
-    # game/core/achievements.rpy:55
-    old "Autorentreffen"
-    new "Autorentreffen"
-
-    # game/core/achievements.rpy:55
-    old "Du hast den Autor gefunden."
-    new "Du hast den Autor gefunden."
-
-    # game/core/achievements.rpy:55
-    old "Eine andere Beatrice?"
-    new "Eine andere Beatrice?"
-
-    # game/core/achievements.rpy:55
-    old "Schließe die Hauptstory ab."
-    new "Schließe die Hauptstory ab."
-
-    # game/core/achievements.rpy:55
-    old "Ayato und Yuria"
-    new "Ayato und Yuria"
-
-    # game/core/achievements.rpy:55
-    old "Schließe die Tee Party ab."
-    new "Schließe die Tee Party ab."
-
-    # game/core/achievements.rpy:55
-    old "Auferstehung der Goldenen Hexe"
-    new "Auferstehung der Goldenen Hexe"
-
-    # game/core/achievements.rpy:55
-    old "Schließe ???? ab."
-    new "Schließe ???? ab."
-
-    # game/core/achievements.rpy:55
-    old "Platin: Gamemaster LV0"
-    new "Platin: Gamemaster LV0"
-
-    # game/core/achievements.rpy:55
-    old "Erhalte alle Trophäen!"
-    new "Erhalte alle Trophäen!"
-
-# TODO: Translation updated at 2023-06-28 23:28
-
-translate English strings:
+    new "Tip hunter"
 
     # game/core/achievements.rpy:55
     old "Erhalte deinen ersten Tipp"
-    new "Erhalte deinen ersten Tipp"
+    new "Receive your first tip"
+
+    # game/core/achievements.rpy:55
+    old "Charakterjäger"
+    new "Character Hunter"
 
     # game/core/achievements.rpy:55
     old "Schalte den ersten Charakter frei"
-    new "Schalte den ersten Charakter frei"
+    new "Unlock the first character"
+
+    # game/core/achievements.rpy:55
+    old "Musikboxjäger"
+    new "Music Box Hunter"
 
     # game/core/achievements.rpy:55
     old "Schalte die Musikbox frei"
-    new "Schalte die Musikbox frei"
+    new "Unlock the Music Box"
+
+    # game/core/achievements.rpy:55
+    old "Runter vom Boot"
+    new "Off the boat"
 
     # game/core/achievements.rpy:55
     old "Du hast Rokkenjima erreicht"
-    new "Du hast Rokkenjima erreicht"
+    new "You have reached Rokkenjima"
 
     # game/core/achievements.rpy:55
     old "Kenner der Spielregeln"
@@ -207,16 +139,12 @@ translate English strings:
     new "Schalte alle Charaktere frei"
 
     # game/core/achievements.rpy:55
+    old "Autorentreffen"
+    new "Authors' meeting"
+
+    # game/core/achievements.rpy:55
     old "Du hast den Autor gefunden"
-    new "Du hast den Autor gefunden"
-
-    # game/core/achievements.rpy:55
-    old "Schließe die Hauptstory ab"
-    new "Schließe die Hauptstory ab"
-
-    # game/core/achievements.rpy:55
-    old "Schließe die Tee Party ab"
-    new "Schließe die Tee Party ab"
+    new "You have found the author"
 
     # game/core/achievements.rpy:55
     old "Tippsfanatiker"
@@ -227,8 +155,28 @@ translate English strings:
     new "Erhalte alle Tipps und Grimoireeinträge"
 
     # game/core/achievements.rpy:55
+    old "Der Sieger des Spiels ist..."
+    new "The winner of the game is..."
+
+    # game/core/achievements.rpy:55
+    old "Schließe Episode 0 ab"
+    new "Complete Episode 0"
+
+    # game/core/achievements.rpy:55
+    old "Eins zu einer Quadrillion"
+    new "One in a quadrillion"
+
+    # game/core/achievements.rpy:55
+    old "Schließe die Tee Party ab"
+    new "Complete the tea party"
+
+    # game/core/achievements.rpy:55
+    old "Auferstehung der Goldenen Hexe"
+    new "Resurrection of the Golden Witch"
+
+    # game/core/achievements.rpy:55
     old "Schließe ???? ab"
-    new "Schließe ???? ab"
+    new "Complete ????"
 
     # game/core/achievements.rpy:55
     old "Verbotene Erinnerungen"
@@ -238,19 +186,11 @@ translate English strings:
     old "Schließe alle Bonuskapitel ab"
     new "Schließe alle Bonuskapitel ab"
 
-# TODO: Translation updated at 2023-07-01 00:04
-
-translate English strings:
+    # game/core/achievements.rpy:55
+    old "Platin: Gamemaster LV0"
+    new "Platin: Gamemaster LV0"
 
     # game/core/achievements.rpy:55
-    old "Der Sieger des Spiels ist..."
-    new "Der Sieger des Spiels ist..."
-
-    # game/core/achievements.rpy:55
-    old "Schließe Episode 0 ab"
-    new "Schließe Episode 0 ab"
-
-    # game/core/achievements.rpy:55
-    old "Eins zu einer Quadrillion"
-    new "Eins zu einer Quadrillion"
+    old "Erhalte alle Trophäen!"
+    new "Erhalte alle Trophäen!"
 

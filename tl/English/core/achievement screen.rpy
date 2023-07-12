@@ -1,4 +1,4 @@
-﻿# TODO: Translation updated at 2023-06-08 22:40
+﻿# TODO: Translation updated at 2023-07-05 15:54
 
 # game/core/achievement screen.rpy:1
 translate English 91e1b733:
@@ -8,6 +8,7 @@ translate English 91e1b733:
 
 translate English strings:
 
-    # game/core/achievement screen.rpy:78
+    # game/core/achievement screen.rpy:89
     old "Versteckte Trophäe"
     new "Hidden Trophy"
+

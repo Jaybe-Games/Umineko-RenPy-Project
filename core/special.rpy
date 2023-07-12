@@ -44,17 +44,6 @@ image ctc_blink:
 init -10 python:
     
     class PreviewSlowText(renpy.Displayable):
-        """
-        A class to display a preview of the current CPS settings.
-
-        Attributes:
-        -----------
-        text : string
-            The text to display for this displayable preview.
-        properties : dict
-            Optional keyword arguments that will be applied to the text
-            to style it.
-        """
         def __init__(self, text, **properties):
 
             super(PreviewSlowText, self).__init__()
@@ -72,17 +61,14 @@ init -10 python:
             self.current_st = 0
 
         def new_text(self):
-            """Create a new Text object with the current CPS."""
             return Text(self.original_text, slow_cps = preferences.text_cps,
                         **self.original_properties)
 
         def update_cps(self):
-            """Update the displayable to show the text at the new CPS."""
             self.current_child = self.new_text()
             self.start_st = self.current_st
 
         def render(self, width, height, st, at):
-            """Render the text to the screen."""
 
             # Record when this animation is starting
             if self.start_st is None:

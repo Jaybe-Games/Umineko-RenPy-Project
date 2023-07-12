@@ -6,6 +6,7 @@ $ discord.update(state = "Talking with the Author")
 $ discord.update(details = "Unknown")
 $ chapter = 404
 $ songname = "-"
+$ _game_menu_screen = None
 play sound "audio/sfx/umise_1006.ogg"
 show ware2
 stop music fadeout 2.0
@@ -19,6 +20,7 @@ play rain "audio/sfx/umilse_012.ogg" fadein 3.0
 play sound "audio/sfx/umise_052.ogg"
 with gradientcirclefade
 pause(2)
+$ _game_menu_screen = "cleanmenu"
 "“Hey!"
 extend " Du da!"
 extend " Erklär mir bitte, wie du hierher gekommen bist."

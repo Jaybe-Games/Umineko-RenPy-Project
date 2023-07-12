@@ -81,6 +81,15 @@ transform bgani:
     ease 120 xoffset 250
     repeat
 
+transform bganifast:
+    subpixel True
+    xoffset 250
+    xalign 0.5
+    yalign 0.5
+    ease 30 xoffset -250
+    ease 30 xoffset 250
+    repeat
+
 transform rotatebg:
     subpixel True
     zoom 1.65
@@ -213,3 +222,25 @@ transform updatemessagetransform:
     ease 0.5 xoffset 0
     pause 5
     ease 0.5 xoffset 800
+
+transform zoomin:
+    yalign 0.5
+    xalign 0.5
+    zoom 1.05
+
+transform portrait:
+    subpixel True
+    yoffset -800
+    ease 60 yoffset -100
+    ease 60 yoffset -800
+    repeat
+
+transform textzoom:
+    subpixel True
+    yalign 0.5
+    xalign 0.5
+    zoom 1.0
+    ease 30 zoom 1.2
+    ease 30 zoom 1.0
+    repeat
+

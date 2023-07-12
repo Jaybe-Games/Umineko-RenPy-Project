@@ -75,9 +75,9 @@ screen music_room():
     tag menu
     modal True
     add "gui/game_menu.png" at center
-    imagebutton auto "gui/button/back2_%s.png" action [Return(), Function(ost.check_paused_state), 
+    imagebutton auto "images/system/back2_%s.png" action [Return(), Function(ost.check_paused_state), 
                 If(not ost.prevTrack, None, 
-                false=Play('music', ost.prevTrack, fadein=2.0))] activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" yalign 0.02 xalign 0.97
+                false=Play('music', ost.prevTrack, fadein=2.0))] activate_sound "audio/sys/sysse_cancel.wav" hover_sound "audio/sys/sysse_move.wav" yalign 0.02 xalign 0.97
     add partObj
     default bar_val = ost.AdjustableAudioPositionValue()
 

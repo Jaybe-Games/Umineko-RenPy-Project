@@ -2,7 +2,6 @@ image but b23kuyasigaru1 = Composite(
     (895, 1216),
     (0, 0), "images/sprites/but/b23/Kayasigaru1/0.png",
     (0, 0), WhileSpeaking("but", "but_b23_kuyasigaru1_mouth", "images/sprites/but/b23/Kayasigaru1/0.png"),
-    predict_all=True
     )
 
 image but_b23_kuyasigaru1_mouth:
@@ -317,5 +316,50 @@ image but_b11_ero1_mouth:
     "images/sprites/but/b11/ero1/1.png"
     .10
     "images/sprites/but/b11/ero1/2.png"
+    .20
+    repeat
+
+image but b11nayamu2 = Composite(
+    (772, 1227),
+    (0, 0), "images/sprites/but/b11/nayamu2/0.png",
+    (0, 0), WhileSpeaking("but", "but_b11_nayamu2_mouth", "images/sprites/but/b11/nayamu2/0.png"),
+    )
+
+image but_b11_nayamu2_mouth:
+    "images/sprites/but/b11/nayamu2/0.png"
+    .10
+    "images/sprites/but/b11/nayamu2/1.png"
+    .10
+    "images/sprites/but/b11/nayamu2/2.png"
+    .20
+    repeat
+
+image but a11niramu3 = Composite(
+    (937, 1227),
+    (0, 0), "images/sprites/but/a11/niramu3/0.png",
+    (0, 0), WhileSpeaking("but", "but_a11_niramu3_mouth", "images/sprites/but/a11/niramu3/0.png"),
+    )
+
+image but_a11_niramu3_mouth:
+    "images/sprites/but/a11/niramu3/0.png"
+    .10
+    "images/sprites/but/a11/niramu3/1.png"
+    .10
+    "images/sprites/but/a11/niramu3/2.png"
+    .20
+    repeat
+
+image but a11aseru1 = Composite(
+    (937, 1227),
+    (0, 0), "images/sprites/but/a11/aseru1/0.png",
+    (0, 0), WhileSpeaking("but", "but_a11_aseru1_mouth", "images/sprites/but/a11/aseru1/0.png"),
+    )
+
+image but_a11_aseru1_mouth:
+    "images/sprites/but/a11/aseru1/0.png"
+    .10
+    "images/sprites/but/a11/aseru1/1.png"
+    .10
+    "images/sprites/but/a11/aseru1/2.png"
     .20
     repeat

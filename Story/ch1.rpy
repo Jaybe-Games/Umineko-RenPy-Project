@@ -1,21 +1,19 @@
 label chapter1:
 
-    $ discord.update(state = "Episode 0 - DEBUGMODE")
-    $ discord.update(details = "Editing Chapter 1")
+    $ discord.update(state = "Episode 0")
+    $ discord.update(details = "Chapter 1")
     $ chapter = 1
     $ songname = "-"
     $ persistent.openingplayed = True
     $ renpy.free_memory()
     if persistent.showch == True:
         show screen showch
-        pause 5
     play sound "audio/sfx/umise_028.ogg"
     show oct_4_1986 with dissolve
     pause (7)
     play ship "audio/sfx/umilse_004.ogg"
     $ songname = "HANE (Feathers)"
     if persistent.showbgm == True:
-        hide screen showsong
         show screen showsong
     play music "audio/bgm/umib_003_intro.ogg"
     queue music "audio/bgm/umib_003_loop.ogg" loop 
@@ -63,11 +61,10 @@ label chapter1:
         $ persistent.menustate = 3
         $ Achievement.add(achievement_bronze2)
         play sound "audio/sfx/umise_1060.ogg"
-        hide screen charupdate
         show screen charupdate
     "Mein Name ist Ushiromiya Battler."
-    extend " Ich bin der Sohn von Rudolf und Asumu, Asumu ist vor ungefähr 6 Jahren gestorben."
-    "Danach habe ich die Familie wegen eines Konflikts mit Dad für 6 lange Jahre verlassen und habe bei meinen Großeltern mütterlicherseits gelebt."
+    extend " Ich bin der Sohn von Rudolf und Asumu, Asumu ist vor ungefähr sechs Jahren gestorben."
+    "Danach habe ich die Familie wegen eines Konflikts mit Dad für sechs lange Jahre verlassen und habe bei meinen Großeltern mütterlicherseits gelebt."
     "Mein Name wird im Japanischen übrigens so geschrieben: Ushiromiya Batora."
     extend " Ja, man spricht mich nicht Battler aus, sondern 'Batora', klingt echt komisch."
     "Meine Japanischen Schriftzeichen machen mich wütend. Ich werde mit den Zeichen von 'Person' und 'Kampf' geschrieben."
@@ -103,11 +100,10 @@ label chapter1:
     if persistent.rudolf == False:
         $ persistent.rudolf = True
         play sound "audio/sfx/umise_1060.ogg"
-        hide screen charupdate
         show screen charupdate
     "Das ist mein Vater Rudolf. Der alte Bastard ist so groß wie ich und macht sich bei Gelegenheit gerne über mich lustig."
     extend " Sein Name wird auf Japanisch Ushiromiya Rudorfu ausgesprochen, fast die ganze Familie hat diese seltsame Namenstradition."
-    "Seit meine Mutter Asumu gestorben ist, hat sich unser Verhältnis sehr verschlechtert,"
+    "Seit meine Mutter Asumu verstorben ist, hat sich unser Verhältnis sehr verschlechtert,"
     extend " aber ich bin sicher, dass es mit der Zeit wieder funktionieren kann."
     scene black
     camera
@@ -116,9 +112,9 @@ label chapter1:
     extend " Das hat mich gebrochen, weil es einfach viel zu schnell ging, kaum war meine Mutter gestorben, hat er wieder geheiratet."
     "Das nächste Problem war, dass Dad schon eine Affäre mit ihr gehabt hatte."
     extend " Beide haben ein Kind meine Stiefschwester Ange, die heute leider Krank ist und Zuhause geblieben ist."
-    "Wenn man sich ausrechnet, wann Ange geboren wurde und wann meine Mutter gestorben ist, wird mir immer ganz übel."
-    extend " und da ich mit solchen Leuten nicht in einem Haushalt leben wollte, bin ich zu meinen Großeltern mütterlicherseits gezogen und habe die Ushiromiya-Familie verlassen."
-    "Leider sind meine Großeltern vor kurzem gestorben, und ich hatte die Gelegenheit, mit meinem Vater und meiner Stiefmutter zu sprechen, und wir konnten irgendwie einen gemeinsamen Nenner finden."
+    "Wenn man sich ausrechnet, wann Ange geboren wurde und wann meine Mutter verstorben ist, wird mir immer ganz übel."
+    extend " Da ich mit solchen Leuten nicht in einem Haushalt leben wollte, bin ich zu meinen Großeltern mütterlicherseits gezogen und habe die Ushiromiya-Familie verlassen."
+    "Leider sind meine Großeltern vor kurzem verstorben und ich hatte die Gelegenheit, mit meinem Vater und meiner Stiefmutter zu sprechen, und wir konnten irgendwie einen gemeinsamen Nenner finden."
     "Ich bin also wieder Teil der Familie und nehme nach sechs Jahren zum ersten Mal wieder an der Konferenz teil."
     scene ship_s2bf
     show kir a11defo1 at l
@@ -137,7 +133,6 @@ label chapter1:
     if persistent.kyrie == False:
         $ persistent.kyrie = True
         play sound "audio/sfx/umise_1060.ogg"
-        hide screen charupdate
         show screen charupdate
     "Das ist meine Stiefmutter Kyrie-san, der alte Bastard hat diese Frau kurz nach dem Tod meiner Mutter geheiratet."
     "Sie ist sehr intelligent und hat mir viel über das Schachbrettdenken beigebracht."
@@ -179,7 +174,6 @@ label chapter1:
     if persistent.maria == False:
         $ persistent.maria = True
         play sound "audio/sfx/umise_1060.ogg"
-        hide screen charupdate
         show screen charupdate
     "Das kleine Mädchen, das definitiv mehr Spaß daran hat, mir zuzusehen, als mit dem Boot zu fahren," 
     extend " ist meine jüngste Cousine Maria,"
@@ -216,15 +210,14 @@ label chapter1:
     ros a11majime1 "“...Dankeschön, Battler-kun, das beruhigt mich."
     extend " .....Nun, dass dein größter Feind das Fahrzeugfahren ist, verstehe ich nicht,"
     extend " .....denn du wirkst so reif und erwachsen und jetzt das?”"
-    but b11warai2 "....Ihihihi"
-    extend " Entschuldigung, dass ich einen falschen Eindruck erweckt habe."
+    but b11warai2 "....Ihihihi!"
+    extend " ...Entschuldigung, dass ich einen falschen Eindruck erweckt habe."
     scene ship_s2a
     show ros a11warai1 at m
     with quickgradientwiperight
     if persistent.rosa == False:
         $ persistent.rosa = True
         play sound "audio/sfx/umise_1060.ogg"
-        hide screen charupdate
         show screen charupdate
     "Das ist Tante Rosa," 
     extend " sie ist die Mutter von Maria die sie sehr streng erzieht."
@@ -305,7 +298,6 @@ label chapter1:
     if persistent.tip2 == False:
         $ persistent.tip2 = True
         play sound "audio/sfx/umise_1060.ogg"
-        hide screen tipupdate
         show screen tipupdate
     extend " ...Bist du ein bisschen {note_green}meschugge{/note_green}?"
     extend " ...wahahahahahahahaha!"
@@ -331,7 +323,6 @@ label chapter1:
     if persistent.jessica == False:
         $ persistent.jessica = True
         play sound "audio/sfx/umise_1060.ogg"
-        hide screen charupdate
         show screen charupdate
     "Das ist meine Cousine Ushiromiya Jessica."
     extend " Sie ist die Tochter von Onkel Krauss und Tante Natsuhi." 
@@ -345,7 +336,7 @@ label chapter1:
     extend " Sie flucht viel und ihre Wortwahl ist gewöhnungsbedürftig."
     "Früher waren wir das Chaotenduo, haben viel Unsinn gemacht und waren uns auch nicht zu fein, gegenüber ihren Eltern einen sehr rauen Ton anzuwenden."
     extend " Die Vorträge der Erwachsenen über gutes Benehmen nervten uns zwar jedes Mal, aber es war auch einfach zu lustig zu sehen, wie sich die vorbildlichen Erwachsenen aufregten."
-    camera at slowerboat
+    camera at slowerboat,boatswing
     "Der Kapitän hat zugestimmt langsamer zu fahren und jetzt schaukelt das Boot nicht mehr so stark."
     jes "“....Verdammte Scheiße Battler-kun," 
     extend " ...jetzt werden wir uns wegen dir verspäten!”"
@@ -361,7 +352,6 @@ label chapter1:
     extend " Ihihihi!”"
     $ songname = "Doorway of Summer"
     if persistent.showbgm == True:
-        hide screen showsong
         show screen showsong
     play music "audio/bgm/umib_002_intro.ogg"
     queue music "audio/bgm/umib_002_loop.ogg" loop
@@ -373,12 +363,12 @@ label chapter1:
     "Dann gingen Battler und Jessica unter Deck zu den anderen, die im Gegensatz zu Battler ruhig warten, bis sie endlich die Insel erreichen."
     show eva b22akire2 at rightedge
     show hid a21warai1 at m
-    show kum_a12_defo2 at leftedge
+    show kum a12defo2 at leftedge
     with quickergradientwiperight
     " ....Moment mal, dieses 'ruhig' sein ist falsch! Ich sehe es klar und deutlich! Die anderen Erwachsenen verkneifen sich doch alle gerade das Lachen."
     hide eva
     hide hid
-    hide kum_a12_defo2
+    hide kum
     show geo a11defo1 at m
     with quickergradientwiperight
     geo "“Battler-kun!"
@@ -409,13 +399,12 @@ label chapter1:
     if persistent.george == False:
         $ persistent.george = True
         play sound "audio/sfx/umise_1060.ogg"
-        hide screen charupdate
         show screen charupdate
     "Das ist mein Cousin George." 
     extend " er wird von Tante Eva und Onkel Hideyoshi zu einem echten Gentleman erzogen."
     "Er arbeitet sehr hart und will schon sein eigenes Unternehmen gründen, was ich sehr beeindruckend finde."
     "Er wird von den anderen Familienmitgliedern sehr geschätzt."
-    extend " Außerdem ist für sein Alter sehr reif und kennt sich gut aus."
+    extend " Außerdem ist er für sein Alter sehr reif und kennt sich gut aus."
     "Ushiromiya Joji..."
     extend " So spricht man ihn bei uns aus, und ich bin fest davon überzeugt,"
     extend " dass er heute einen Massenmord begehen wird."
@@ -514,7 +503,7 @@ label chapter1:
     show but b23nayamu2 at rightedge with dis
     but "“.....Ihihihihi"
     extend " ......Tut mir leid”"
-    "Von außen betrachtet sieht es nicht anders aus, als zwei Blagen die sich zanken und sich gegenseitig Sachen an den Kopf werfen."
+    "Von außen betrachtet sehen wir nicht anders aus, als zwei Blagen die sich zanken und sich gegenseitig Sachen an den Kopf werfen."
     extend " ....Was noch nicht mal das schlimmste Szenario ist, wenn man mal darüber nachdenkt, dass sich sogar die Erwachsenen ständig wie kleine Kinder in die Haare kriegen."
     show geo a11niramu1 at m with dis
     geo "“.....Hey!"
@@ -576,7 +565,6 @@ label chapter1:
     queue music "audio/bgm/umib_035_loop.ogg" loop 
     $ songname = "Worldend"
     if persistent.showbgm == True:
-        hide screen showsong
         show screen showsong
     jes "“Ich hasse einfach alles an dieser verfickten Insel..."
     extend " ...Ich habe nur noch Zeit, meine Hausaufgaben zu machen und in meinem Zimmer zu bleiben." 
@@ -643,7 +631,6 @@ label chapter1:
     if persistent.hideyoshi == False:
         $ persistent.hideyoshi = True
         play sound "audio/sfx/umise_1060.ogg"
-        hide screen charupdate
         show screen charupdate
     hide jes
     show hid a11defo1 at m
@@ -672,7 +659,6 @@ label chapter1:
     play music "audio/bgm/umib_021_Intro.ogg"
     queue music "audio/bgm/umib_021_loop.ogg" loop 
     if persistent.showbgm == True:
-        hide screen showsong
         show screen showsong
     eva "“Wusstest du, dass deine Seekrankheit auch noch nach der Reise anhalten kann?”"
     "Battler hat sich wie erwartet erschrocken und springt auf, als hätte ihm eine Biene in den Hintern gestochen."
@@ -692,7 +678,6 @@ label chapter1:
     if persistent.eva == False:
         $ persistent.eva = True
         play sound "audio/sfx/umise_1060.ogg"
-        hide screen charupdate
         show screen charupdate
     hide but
     show eva b25defo1 at m
@@ -788,6 +773,11 @@ label chapter1:
     extend " dass der Sturm einige Stunden zu früh kommt. Dabei hatte der Wetterbericht garantiert, dass es erst um die Mittagszeit losgehen würde."
     "Die Folgen könnten turbulente Flüge sein, die noch eine Starterlaubnis für Kurzflüge haben."
     "Inzwischen hat sich Maria ganz vorne auf der Brücke niedergelassen, und ihr Blick schweift nicht mehr von einer ganz bestimmten Klippe ab."
+    scene black
+    camera 
+    with quickergradientwiperight
+    scene ship_s2b 
+    camera at boatswing,slowerboat
     hide rud
     hide kir  
     show mar a11defo1 at m
@@ -802,7 +792,6 @@ label chapter1:
     play music "audio/bgm/umib_020_Intro.ogg"
     queue music "audio/bgm/umib_020_loop.ogg" loop 
     if persistent.showbgm == True:
-        hide screen showsong
         show screen showsong
     show but b11warai2 at rightedge with dis
     but "“hmm?" 
@@ -810,20 +799,27 @@ label chapter1:
     extend " ...Wo drückt der Schuh?”"
     show jes a11atya3 at l with dis
     jes "“Etwas scheint sie sehr zu beunruhigen...”"
-    mar "“Der Schrein ist weg! Es ist weg!.... Uu!"
-    extend " Es ist weg!... Uu~...!"
+    mar a22sakebu1 "“Es ist weg!" 
+    extend " .....Es ist weg!" 
+    extend " ....Uu!"
+    extend " ...Es ist weg!" 
+    extend " ...Uu~...!"
     mar "Es war immer da, aber jetzt ist es weg!..." 
     extend " Uu!..”"
     "Maria fängt sich buchstäblich an in Rage zu reden nur Jessica scheint eine Idee zu haben, was Maria meinen könnte."
-    jes "“Stimmt ja..." 
+    jes a11majime1 "“Stimmt ja..." 
     extend " Der Schrein fehlt, er war letztes Jahr noch da...."
     jes "Es sieht auch so aus, als wäre ein Teil des Riffs mitgerissen worden....”"
+    hide jes
+    hide but
+    hide mar
+    show kum a12defo2 at m
+    with quickergradientwiperight
     kum "“Ohohohoh," 
     extend " ...der Schrein wurde während eines Gewitters letztens von einem gewaltigen Blitz getroffen und zerstört.”"
     if persistent.kumasawa == False:
         $ persistent.kumasawa = True
         play sound "audio/sfx/umise_1060.ogg"
-        hide screen charupdate
         show screen charupdate
     "Die ältere Frau heißt Kumasawa Chiyo." 
     extend " Sie ist eine Teilzeitarbeiterin, die zwar mehrmals gekündigt hat, aber insgesamt schon viele Jahre im Dienst der Familie steht."
@@ -831,90 +827,160 @@ label chapter1:
     extend " aber wegen ihrer Geschwätzigkeit und ihrer Vorliebe für Gerüchte ist sie als Angestellte nicht sehr beliebt."
     "Ihr Name auf Japanisch?" 
     extend " ...Auch bei uns Kumasawa, ihre Eltern haben ihr einen vernünftigen Namen gegeben" 
-    extend " ....*seufz"
+    extend " ....*seufz*"
+    hide kum  
+    show jes a11atya3 at m
+    with quickergradientwiperight
     jes "“Ein Blitzeinschlag?..."
     extend " Ein Blitz kann so gewaltig sein?”"
+    show kum a12majime1 at r with dis
     kum "“Die Fischer sagen, es sei ein Zeichen von Unglück....”"
+    show mar a11defo1 at l with dis
     mar "“Ein Zeichen von Unglück....Uu~..."
-    extend " ...........................”"
-    "Kumasawas Worte haben die sonst so entspannte Atmosphäre auf dem Schiff in ein beklemmenderes Gefühl verwandelt."
-    extend " Maria hat ihren Blick noch immer nicht von der Stelle abgewandt, an der der Schrein stehen sollte..."
+    extend a11defo1_mouth_closed " ...........................”"
+    scene black
+    camera 
+    with quickgradientwipedown
+    "Kumasawas Worte haben die ohnehin schon düstere Atmosphäre auf dem Schiff in ein noch beklemmenderes Gefühl verwandelt."
+    extend " Maria hat ihren Blick noch immer nicht von der Stelle abgewandt, an der der Schrein stehen sollte."
+    stop wind fadeout 5
+    stop ship fadeout 5
     extend " Und es scheint, als würde in genau diesem Moment der heftige Wind für einen Moment nachlassen."
+    scene ship_s2b 
+    camera at boatswing,slowerboat
+    show mar a22defo1k
+    with gradientwipeup
+    pause 2
     mar "“Unglück..."
-    mar "Unglück...Unglück...”"
+    extend " ....Unglück...Unglück...”"
     but ".....Was hast du gesagt, Maria?"
-    mar "“UnglückUnglückUnglückUnglückUnglückUnglückUnglück"
-    extend " UnglückUnglückUnglückUnglückUnglückUnglückUng”"
+    play sound "audio/sfx/umise_021.ogg"
+    mar "“....Unglück Unglück Unglück Unglück Unglück Unglück Unglück"
+    extend " ....Unglück Unglück Unglück Unglück Unglück Unglück"
+    extend " .....Unglück Unglück Unglück Unglück Unglück Unglück”"
     "Maria fängt plötzlich an lautstark das Wort 'Unglück' sehr oft zu wiederholen,"
     extend " was das unheimliche Gefühl bei den Anwesenden nur noch verstärkt."
-    "Es dürfte ein Ding der Unmöglichkeit sein, Maria jetzt noch zu beruhigen."
     geo "“Kumasawa-san bitte gehen Sie mit ihren Witzen etwas vorsichtiger um!"
     extend " Maria-chan nimmt sowas ziemlich ernst, verstehen Sie?”"
-    mar "“UnglückUnglückUnglück”"
+    mar "“Unglück Unglück Unglück”"
+    show but b11odoroki3 at leftedge with dis
     but "“Hey Maria!"
-    extend " Wenn du so oft 'Unglück' sagst, wird es wirklich ein Unglück geben, also beruhige dich, ja?”"
-    geo "“Maria-chan, es wird nichts schlimmes passieren.”"
-    mar "“............Uu~.............."
-    extend " ............................”"
-    "Die anderen versuchen Maria zu beruhigen, um das Thema irgendwie abzuschließen."
+    extend " Wenn du so oft 'Unglück' sagst, wird es wirklich ein Unglück geben," 
+    extend " also beruhige dich, ja?”"
+    show geo a11majime2 at rightedge with dissolve
+    geo "“Maria-chan, es wird nichts schlimmes passieren."
+    extend " ....Also beruhigen wir uns wieder und warten bis wir gleich anlegen, okay?”"
+    mar "“............Uu~"
+    "Alle versuchen die Situation zu entschärfen, um das Thema irgendwie abzuschließen."
     extend " Aber Maria wendet den Blick vom Riff ab, dreht sich um, hebt den rechten Arm zum Himmel und öffnet langsam den Mund..."
-    mar "“Es geschieht definitiv....."
+    mar a11defo1 "“Es geschieht definitiv....."
     extend " .....Ein Unglück wird geschehen!......”"
+    play sound "audio/sfx/umise_027.ogg"
+    scene ship_s2b
+    call rainlayer from _call_rainlayer_8
+    camera at boatswing,slowerboat
+    play rain "audio/sfx/umilse_012.ogg"
+    play wind "audio/sfx/umilse_005.ogg"
+    play ship "audio/sfx/umilse_004.ogg"
+    show but b22odoroki2 behind rain at leftedge
+    show geo a11komaru1 behind rain at rightedge
+    show mar a11defo1 behind rain at m
+    with quickflash 
     "Mit diesen Worten, als hätte Maria gerade den Befehl dazu gegeben, hörte man es donnern und sofort begann es zu regnen."
     extend " ....Nicht nur Battler lief deswegen ein kalter Schauer über den Rücken."
-    but "“............................"
-    extend " .......Hä?.........................”"
+    but "“.......Was?"
+    extend " .......Hä?”"
     "Alle haben in diesem Moment ein mulmiges Gefühl."
     extend " Es ist fast so, als ob Maria ahnt, dass dieses Familientreffen etwas ganz Besonderes sein würde."
     extend " Doch Battler scheint als einziger zu erkennen, dass mit Marias erhobener Arm und das 'Unglück' wohl nur das Wetter gemeint sein muss."
+    hide but  
+    hide mar  
+    hide geo  
+    show but b11warai3 behind rain at m
+    with quickergradientwiperight
     but "“Du hast also gemerkt, dass es ein schlimmes Unwetter wird?”"
-    mar "“..........Uu~.....”"
-    but "“Die Wettervorhersage sagt, dass der Sturm erst gegen Mittag kommen wird. Aber er ist schon da...."
-    extend " ....Das nenne ich wirklich ein Unglück...."
+    show mar a11defo1 behind rain at rightedge with dis
+    mar "“..........Uu~”"
+    but "“Die Wettervorhersage sagt, dass der Taifun erst gegen Mittag kommen wird. Aber er ist schon da."
+    extend b11warai2 " ....Das nenne ich wirklich ein Unglück...."
     extend " ...hihihihi"
     but "Maria, ich bin sicher, dass dieser Taifun schneller vorbei ist, als du bis zehn zählen kannst. Alles wird gut.”"
     "Battler versucht Maria zu beruhigen, dass sie keine Angst vor dem Taifun haben muss, aber Marias Gesichtsausdruck spricht eine ganz andere Sprache."
+    play sound "audio/sfx/umise_011.ogg"
+    show mar a22sakebu1 behind rain at rightedge,jumping
+    show but b11aseru1 behind rain at m
+    with vpunch
     mar "“Uu~!!"
     extend " Uu~!!Uu~!!Uu~!!Uu~!!Uu~!!Uu~!!"
     extend " Ein Unglück wird geschehen! Uu~!!”"
+    "Wütend stampft Maria gefolgt von lauten 'Uus' da ihr anscheinend keiner zuhören möchte."
+    hide but  
+    hide mar  
+    show jes a11majime1 behind rain at m
+    with quickergradientwiperight
     jes "“Maria, warum sagst du sowas?”"
+    show kum a12majime1 behind rain at l with dis
     kum "“Es ist klar, dass sie etwas im Blick hat, das im Alter schnell verloren geht."
     extend " Sehr junge Menschen haben einen Sinn für das Übernatürliche..."
     extend " Aber dieses Gefühl wird schwächer, je älter man wird."
     kum "Was Maria fühlen kann, kann nur sie fühlen, weil sie die Jüngste hier ist.”"
+    show but b22odoroki2 behind rain at rightedge with dis
     "Battler erstarrt bei diesen Worten, ist das wirklich möglich? denkt er, das kann es doch gar nicht geben..."
     extend " Viel mehr ist es so, dass das seltsame Verhalten von Maria und die angespannte Atmospähre ihm diese Erklärung für einen kurzen Moment logisch vorkommen lässt."
     kum "“Es scheint so, dass in der Vergangenheit von Rokkenjima eine Hexe....”"
     jes "“Es reicht, Kumasawa! Darüber reden wir nicht!”"
-    kum "“Ohohohoh, ich muss mich entschuldigen, ich wollte nicht unhöflich sein.”"
+    kum a12defo2 "“Ohohohoh," 
+    extend " ich muss mich entschuldigen, ich wollte nicht unhöflich sein.”"
     "Kumasawas Geschichten sind im Moment eher ungünstig, denn es geht darum, Maria zu beruhigen und nicht darum, ihr noch mehr Dinge in den Kopf zu setzen."
     extend " Jessica hat richtig gehandelt, in dem sie Kumasawa unterbrochen hat."
-    but "“Eine......." 
-    extend " .......Hexe?"
-    but "....Hat Kumasawa Hexe gesagt?"
-    extend " ....Weiß Jessica irgendwas?"
-    but "Hexe.........."
-    but "...........”"
-    "Weit weg vom Geschehen konnte man Rudolf sehen, der sehr nachdenklich wirkte."
+    "Plötzlich konnte Hideyoshi gehört werden, der eine Kiste in der Hand hält."
+    scene black
+    camera 
+    with quickergradientwiperight
+    scene ship_s2b
+    call rainlayer from _call_rainlayer_9
+    camera at boatswing,slowerboat
+    show hid a21warai1 behind rain at m
+    with quickergradientwiperight
+    hid "Huuhuu!"
+    extend " ....Wir haben Regenschirme an Bord, also habe ich sie hergebracht!"
+    "Jeder außer Maria nahm sich einen Regenschirm um nicht weiter nass zu werden."
+    extend " Battler ist so lieb und hält seinen Schirm über Marias kopf."
+    "In der Ferne konnte man Rudolf sehen, der sehr nachdenklich zu sein scheint."
+    scene black
+    camera 
+    with quickergradientwiperight
+    scene ship_s2ab
+    camera at boatswing,slowerboat
+    call rainlayer from _call_rainlayer_10
+    show rud a11defo2 behind rain at m
+    with quickergradientwiperight
     rud "“*seufz*”"
-    "Nach etwa fünf Minuten stieß er einen tiefen Seufzer aus, während er sich eine Zigarette anzündete, weil ihn etwas sehr beschäftigte, und niemand außer Eva schien diesen Seufzer gehört zu haben."
-    eva "“Was ist los Rudolf?.... irgendwelche Sorgen wegen heute Abend?"
-    extend " Wir müssen uns nur genau an das halten, was wir besprochen haben, dann können wir gegen Krauss gewinnen.”"
-    rud "“....Ja, es liegt nicht am Plan..... Aber wenn unsere Vermutung falsch ist?...."
-    extend " Wir würden wegen Hochverrats an der Familie Ushiromiya den Haien zum Fraß vorgeworfen."
-    rud "Das wäre das absolute Ende meines Lebens und auch deines, Aneki."
+    "Rudolf stieß einen tiefen Seufzer aus, während er sich eine Zigarette anzündete, weil ihn etwas sehr beschäftigte, und niemand außer Eva schien diesen Seufzer gehört zu haben."
+    show eva a11hohoemi1 behind rain at rightedge with dis
+    eva "“Was ist los Rudolf?" 
+    extend " ....irgendwelche Sorgen wegen heute Abend?"
+    extend " ...Wir müssen uns nur genau an das halten, was wir besprochen haben, dann können wir gegen Krauss gewinnen.”"
+    rud a11defo1 "“....Ja, es liegt nicht am Plan." 
+    extend " Aber wenn unsere Vermutung falsch ist?...."
+    extend " Wir würden wegen Hochverrats an der Ushiromiya Familie von den Klippen geworfen werden."
+    if persistent.tip3 == False:
+        $ persistent.tip3 = True
+        play sound "audio/sfx/umise_1060.ogg"
+        show screen tipupdate
+    rud a13odoroki1 "Das wäre das absolute Ende meines Lebens und auch deines, {note_green}Aneki{/note_green}."
     extend " Damit würden wir unser Ziel um rund eine Quadrillion Kilometer verfehlen.”"
-    "Rudolf sieht sehr angespannt aus, während Eva versucht, sich ein leichtes Lächeln zu bewahren..."
+    "Rudolf sieht sehr angespannt aus und zieht stark an seiner Zigarette, während Eva versucht, sich ein leichtes Lächeln zu bewahren..."
     extend " Aber auch ihr ist anzumerken, dass sie so kurz vor der Familienkonferenz, bei der es um das Erbe des Familienoberhauptes geht, ein wenig weiche Knie bekommt."
-    eva "“Keine Sorge..." 
+    eva b21akire1go "“Keine Sorge..." 
     extend " Rudolf..." 
-    extend " Es ist ein sehr hoher Einsatz, aber ein Treffer wird mit Vaters Erbe belohnt."
+    extend " ....Es ist ein sehr hoher Einsatz, aber ein Treffer wird mit Vaters Erbe belohnt."
     eva "Außerdem denke ich, dass das Erbe, das man hier erhalten kann, das Risiko definitiv wert ist."
-    extend " Ich lasse nicht zu, dass mein hinterhältiger Bruder das ganze Erbe für sich behält!”"
-    rud "“Das klingt logisch... Solange du dich an die Aufteilung hältst und im Ernstfall Rede und Antwort stehst, bin ich dabei.”"
+    extend b21futeki1 " Ich lasse nicht zu, dass mein hinterhältiger Bruder das ganze Erbe für sich behält!”"
+    rud a13komaru1 "“Das klingt logisch... Solange du dich an die Aufteilung hältst und im Ernstfall Rede und Antwort stehst, bin ich dabei."
     extend " Trotzdem ist das so als würde ich mein ganzes Leben drauf verwetten," 
-    extend " dass eine unbedeutende Fußball-Mannschaft aus Portugal dieses Jahr den Europäischen Pokal gewinnt."
-    eva "Wirklich jetzt?" 
+    extend " dass eine unbedeutende Fußball-Mannschaft aus Portugal dieses Jahr den Europäischen Pokal gewinnt.”"
+    eva a11hohoemi1 "Wirklich jetzt?" 
     extend " Fußball?" 
     extend " Damit kenne ich mich nicht aus."
     rud "Was ich sagen kann, ist dass die Quoten schlecht für uns stehen, aber ein Treffer würde die Situation verändern."
@@ -923,184 +989,366 @@ label chapter1:
     "Sagte er, nimmt einen großen Zug von seiner Zigarre und bläst den feinen weißen Rauch wieder in die Luft."
     "Genau in diesem Moment ertönte die Stimme von Shannon, einer Bediensteten, die heute zusammen mit Chefkoch Gohda die Familienmitglieder abholen sollte."
     extend " Das Boot hat nämlich bereits die Anlegestelle auf Rokkenjima erreicht."
-    sha "“Entschuldigung, liebe Gäste, das Schiff legt gleich an!"
-    extend " Vorsicht beim Überqueren der Planke, danke!”"
+    scene black
+    camera 
+    with quickergradientwiperight
+    stop ship fadeout 3
+    stop music fadeout 3
+    scene ship_s1ab
+    call rainlayer from _call_rainlayer_11
+    show sha a11defo1 behind rain at m
+    with quickergradientwiperight
+    sha "“Entschuldigung, liebe Gäste," 
+    extend " das Schiff legt gleich an!"
+    extend " ...Ich bitte um Vorsicht beim Überqueren der Planke, danke!”"
+    $ songname = "Towering cloud in summer"
+    play music "audio/bgm/umib_011_Intro.ogg"
+    queue music "audio/bgm/umib_011_loop.ogg" loop 
+    if persistent.showbgm == True:
+        show screen showsong
+    show geo a12warai1 behind rain at l with dis
     geo "“Das hast du gut gesagt, Shannon-chan."
     extend " Genau wie ich es von dir erwartet habe.”"
+    show sha a11hajirai2 behind rain at r with dis
     sha "“George-sama...." 
-    extend " D-Das ist zu viel des Lobes..."
-    extend " ....I-Ich bin nur das Mobiliar der Familie, das musste ich sagen.....”"
+    extend " D-"
+    extend "Das ist zu viel des Lobes..."
+    extend " ....I-"
+    extend "Ich bin nur das Mobiliar der Familie, es ist meine Pflicht euch anständig zu empfangen.”"
     "Shannon errötete, als sie diese Worte von George hörte."
     extend " Dann fuhr George fort, sich mit ihr in einem angenehmen und ruhigen Ton zu unterhalten."
-    geo "“Shannon-chan..." 
-    extend " Du weißt selbst nicht, was für eine tolle Bedienstete du bist, du kannst auch mal mehr mit deiner Leistung zufrieden sein."
+    geo a11hohoemi1 "“Shannon-chan..." 
+    extend " Du weißt selbst nicht, was für eine tolle Bedienstete du bist, du kannst dich auch mal mehr etwas selber loben."
     extend " Und wenn ich schon dabei bin, du bist auf keinen Fall so etwas wie Mobiliar," 
     extend " du bist ein Mensch."
     geo "Ich will so etwas nicht mehr hören, ist das klar?”"
-    sha "“G-George-sama......”"
+    sha a12hajirai3 "“G-"
+    extend "George-sama......”"
+    scene black
+    camera 
+    with quickergradientwiperight
+    scene ship_s1ab
+    call rainlayer from _call_rainlayer_12
+    show sha a11defo1 behind rain at m
+    with quickergradientwiperight
     if persistent.shannon == False:
         $ persistent.shannon = True
         play sound "audio/sfx/umise_1060.ogg"
-        $ renpy.notify("Die Charaktere wurden geupdated.")
+        show screen charupdate
     "Diese junge Bedienstete heißt Shannon."
     extend " Sie ist zwar eine junge, aber sehr erfahrene Bedienstete."
     "Normalerweise ist sie ruhig und erledigt ihre Arbeit effizient, aber wenn sie nervös wird, macht sie Fehler."
     extend " Da sie kein Familienmitglied ist, ist ihr Name völlig in Ordnung und nicht seltsam."
     "Ich habe sie seit 6 Jahren nicht mehr gesehen und sie ist noch schöner als in meiner Erinnerung."
-    but "“Sag mal Jessica-chan... kann es sein, dass die beiden sich ein bisschen nahe stehen?”"
-    jes "“.....wahahahaha.." 
-    extend " ..wahahahaha..... das hast du so schnell kapiert?”"
+    scene black
+    camera 
+    with quickergradientwiperight
+    scene ship_s1ab
+    call rainlayer from _call_rainlayer_13
+    show but b11warai2 behind rain at m
+    with quickergradientwiperight
+    but "“Sag mal Jessica-chan," 
+    extend " ...kann es sein, dass die beiden sich ein bisschen nahe stehen?”"
+    show jes a11tereru2 behind rain at rightedge with dis
+    jes "“.....wahahahaha" 
+    extend " .....wahahahaha," 
+    extend " das hast du so schnell kapiert?”"
     but "“Also sind sie wirklich ein Paar?”"
-    jes "“Ich weiß es nicht genau, aber ich habe den Eindruck, dass George wirklich etwas für sie empfindet.”"
-    but "“Wenn ich ganz ehrlich bin, glaube ich, dass ich auch ein bisschen in sie verliebt war."
+    jes "“Ich weiß es nicht genau," 
+    extend " ...aber ich habe den Eindruck, dass George wirklich etwas für sie empfindet.”"
+    but b11aseru1 "“Wenn ich ganz ehrlich bin," 
+    extend " ....glaube ich, dass ich auch ein bisschen in sie verliebt war."
     but "Ich war damals auch in so einer Phase, wo ich immer so komische Sachen mit ihr geredet habe....."
-    extend " Sowas wie <see you again> oder total schnulziges Zeug wie...." 
-    extend " ....Ich komme auf..... einem weißen Pferd geritten oder so.”"
-    jes "“wahahahahahaha <see you again?> Du hattest wirklich einen Vogel! Ich bin mir ziemlich sicher, dass Shannon das heute sehr peinlich finden würde.”"
-    but "“Das glaube ich auch, das ist mir selbst maximal peinlich, also bitte behalte das für dich, okay?"
+    extend " Sowas wie" 
+    extend " <see you again>" 
+    extend " ....oder total schnulziges Zeug wie...." 
+    extend " ....Ich komme auf....." 
+    extend " ....einem weißen Pferd geritten oder so.”"
+    jes a11tereru1 "“wahahahahahaha!!" 
+    extend " <see you again?>"
+    extend " ....Du hattest wirklich einen Vogel!" 
+    extend "...Ich bin mir ziemlich sicher, dass Shannon das heute sehr peinlich finden würde.”"
+    but b11nayamu2 "“Das glaube ich auch," 
+    extend " ....das ist mir selber maximal peinlich, also bitte behalte das für dich, okay?"
     extend " Ich bin absolut tot, wenn sie sich auch noch an dieses peinliche Zeug erinnert.”"
-    jes "“Ja, das geht klar! Ich schweige wie ein Grab!”"
+    jes a11aisowarai1 "“Ja, das geht klar! Ich schweige wie ein Grab!”"
     "Während alle fröhlich miteinander plauderten, hat das Boot erfolgreich angelegt und alle beginnen, das Boot nach und nach zu verlassen,"
     "Auf der anderen Seite wartet schon der Koch Gohda, um die Familie zu empfangen."
-    goh "Meine Damen und Herren, herzlich willkommen auf der Insel Rokkenjima!”"
+    scene black
+    camera 
+    with quickergradientwiperight
+    scene ship_s1ab
+    call rainlayer from _call_rainlayer_14
+    show goh a11defo1 behind rain at m
+    with quickergradientwiperight
+    goh "“Meine Damen und Herren, herzlich willkommen auf der Insel Rokkenjima!”"
+    extend " ...Auch wenn uns dieses Wochenende ein schlimmer Taifun erwartet..." 
+    extend " ...Ich" 
+    extend " ....Gohda, werde euch immer erstklassiges Essen zubereiten!”"
+    goh "Wenn Sie nun so freundlich wären, mir Ihr Gepäck zu überlassen."
+    extend " Wir müssen uns sputen und schnell das Gästehaus erreichen."
     "Ein freundlicher Bediensteter der Familie nimmt die angereisten Verwandten in Empfang, um sie und ihr Gepäck in das Gästehaus zu bringen."
-    goh "“Auch wenn uns heute nachmittag ein schlimmer Taifun erwartet..." 
-    extend " Ich..." 
-    extend " Gohda, werde euch immer erstklassiges Essen zubereiten!”"
+    show jes a11defo2 behind rain at l with dis
     jes "“Vielen Dank, Gohda-san, ich glaube, die meisten von uns kommen jedes Jahr hierher, nur um deine leckeren Gerichte zu essen.”"
-    goh "“Mit solchen Worten macht das Kochen gleich viel mehr Spaß!"
+    goh a11hohoemi1 "“Mit solchen Worten macht das Kochen gleich viel mehr Spaß!"
     goh "Ich muss allerdings sagen, dass wir euch schon 20 Minuten früher erwartet haben, das ist nicht gut für unseren Zeitplan....."
-    goh "Außerdem scheint sich dieser Taifun schon früher als angekündigt zu formieren, so dass wir uns schnell auf den Weg zur Villa machen sollten.”"
+    goh "Außerdem scheint sich dieser Taifun schon früher als angekündigt zu formieren, so dass wir uns nun schnell auf den Weg machen sollten.”"
+    scene black
+    camera 
+    with quickergradientwiperight
+    scene ship_s1ab
+    call rainlayer from _call_rainlayer_15
+    show goh a11defo1 behind rain at m
+    with quickergradientwiperight
     if persistent.gohda == False:
         $ persistent.gohda = True
         play sound "audio/sfx/umise_1060.ogg"
-        $ renpy.notify("Ein neuer Charakter wurde im Charaktermenü freigeschaltet.")
+        show screen charupdate
     "Gohda ist ein Bediensteter, der bei der Familie als Koch angestellt ist."
     extend " Er ist noch nicht lange bei der Familie, aber durch seine früheren Tätigkeiten und Erfahrungen hat er ein Talent dafür entwickelt, Gäste zu bewirten."
     "Aus diesem Grund wird er als Bediensteter sehr geschätzt. Da er nicht zur Familie gehört, hat er auch nicht wie Shannon einen unserer seltsamen Namen."
+    scene black
+    camera 
+    with quickergradientwiperight
+    scene ship_s1ab
+    call rainlayer from _call_rainlayer_16
+    show kum a12defo2 behind rain at m
+    with quickergradientwiperight
     kum "“Aber vergiss nicht, dass es heute zum Mittagessen meine speziellen Spaghetti mit würziger Makrelenrahmsauce nach meinem Geheimrezept gibt, Gohda!" 
-    extend " Ohohohohoh!"
+    extend " ....Ohohohohoh!"
     kum "Man muss sie einfach probieren..." 
-    extend " ....Es gibt nichts Besseres als frische, saftige Makrelen. Ohohohoh!”"
+    extend " ....Es gibt nichts Besseres als frische, saftige Makrelen." 
+    extend " ....Ohohohoh!”"
+    show jes a11atya3 behind rain at r with dis
     jes "“.....Ich denke, ich passe....”"
-    kum "“Aber Jessica-sama, ihr könnt euch doch nicht die ganze Zeit von Junkfood ernähren!"
-    extend " Gib der Makrele eine Chance!”"
+    kum a11defo2 "“Aber Jessica-sama, Ihr könnt euch doch nicht die ganze Zeit von Junkfood ernähren!"
+    extend " Gebt der Makrele eine Chance!”"
     jes "“Aber...." 
-    extend " Ich habe heute Morgen in der Küche keine Makrele gesehen, Kumasawa...."
+    extend a11warai1 " Ich habe heute Morgen in der Küche keine Makrelen gesehen, Kumasawa...."
     extend " ...Deshalb kann es heute leider keine Makrele geben!”"
-    kum "“Ohohohoh, ihr habt mich erwischt, Jessica-sama.”"
-    rud "“Hey Battler-kun! Wenn dir immer noch schwindelig ist und du dich gleich auf den Esstisch übergibst, kannst du nach Hause schwimmen.”"
-    but "“Lass es gut sein!...." 
-    extend " Es geht mir schon besser.”"
-    extend " Danke der Nachfrage.... Dad...."
-    rud "“Naaa.... das hoffe ich doch....."
-    extend " Ich will mich nicht vor den anderen rechtfertigen müssen, warum du Holzkopf den Esstisch ruinierst.”"
+    kum a12defo2 "“Ohohohoh," 
+    extend " ....Ihr habt mich erwischt, Jessica-sama.”"
+    scene black
+    camera 
+    with quickergradientwiperight
+    scene beach_1ab
+    call rainlayer from _call_rainlayer_17
+    show rud a11akuwarai2 behind rain at r
+    with quickergradientwiperight
+    rud "“Hey Battler-kun!" 
+    extend " ...Wenn dir immer noch schwindelig ist und du dich gleich auf den Esstisch übergibst," 
+    extend " ....kannst du nach Hause schwimmen.”"
+    show but a11niramu3 behind rain at l with dis
+    but "“....Lass es gut sein!" 
+    extend " Es geht mir schon besser."
+    extend " Danke der Nachfrage," 
+    extend " ....Dad.”"
+    rud "“Naaa," 
+    extend " ....das hoffe ich doch!"
+    extend a11defo2 " ...Ich will mich nicht vor den anderen rechtfertigen müssen, warum du Holzkopf den Esstisch ruiniert hast.”"
     but "“Keine Sorge, Dad," 
-    extend " dein schicker Anzug passt mir auch, wenn's hart auf hart kommt...." 
+    extend a11aseru1 " ....dein schicker Anzug passt mir auch, wenn's hart auf hart kommt...." 
     extend " ...ihihihi"
-    but "........ahh......." 
-    extend " *würg*.............hmpf......”"
+    but a11niramu3 "........ahh" 
+    play sound "audio/sfx/umise_003.ogg"
+    show but a11niramu3 behind rain at l,run
+    hide but with dissolve
+    extend " .......*würg*"
     "Battler versuchte sein Schwindelgefühl herunterzuspielen, verlor aber gegen die Übelkeit und erbrach in den nächsten Busch."
-    eva "“....Meine Güte, Battler-kun..... *kicher*"
-    extend " ......Wir haben doch vorhin schon einmal darüber gesprochen, oder etwa nicht? *kicher*kicher*"
-    extend " .....Du wolltest deiner Tante nicht glauben... *kicher*”"
+    hide rud  
+    show eva b22akire2 behind rain at m
+    with quickergradientwiperight
+    eva "“....Meine Güte, Battler-kun....." 
+    extend " ....*kicher*"
+    extend a11hohoemi1 " ......Wir haben doch vorhin schon einmal darüber gesprochen, oder etwa nicht?" 
+    extend " *kicher*kicher*"
+    extend " .....Du wolltest deiner Tante ja nicht glauben”"
     "Tante Evas fettes Grinsen war nicht zu übersehen..." 
-    "sie hatte mich mit einem einfachen psychologischen Trick ausgetrickst."
+    extend " ...Sie hatte mich mit einem einfachen psychologischen Trick ausgetrickst."
     extend " Indem ich die ganze Zeit darauf achtete, nicht auf meine Übelkeit zu achten, provozierte ich es im Grunde selbst."
-    goh "“Liebe Gäste, wir haben Verspätung und der Sturm wird immer stärker! Wir müssen sofort ins Gästehaus!"
-    "Plötzlich platzt Gohda herein und tickt mit dem Zeigefinger in kurzen Abständen mehrmals auf seine Armbanduhr."
+    scene black
+    camera 
+    with quickergradientwiperight
+    scene beach_1ab
+    call rainlayer from _call_rainlayer_18
+    show goh a11komaru1 behind rain at m
+    with quickergradientwiperight
+    goh "“Liebe Gäste, wir haben Verspätung und der Sturm wird immer stärker!" 
+    extend " ...Wir müssen sofort ins Gästehaus!"
+    "Plötzlich platzt Gohda in unsere Gespräche und tickt mehrmals mit dem Zeigefinger in kurzen Abständen auf seine Armbanduhr."
     goh "Wir müssen uns beeilen, wir haben viel Zeit verloren, und Madam wird sehr böse sein, wenn wir nicht bald ankommen.”"
+    show but b22warai1 behind rain at l with dis
     but "“Beruhige dich, Gohda-san, wir sind jetzt alle da und bereit, ins Gästehaus zu gehen.”"
+    hide goh   
+    show jes a12ikari1 behind rain at m
+    with dis
     jes "“Hättest du nicht ins Meer gekotzt und hätte ich nicht den Kapitän angefleht, langsamer zu fahren, wären wir jetzt nicht im Verzug, Freund Nase!"
-    extend " Dafür müsste ich dich über die ganze Insel jagen, bis dir die Puste ausgeht....”"
-    but "“....hihihi...."
+    extend " .....Dafür müsste ich dir die Prügel rausschmeißen, bis mir die Puste ausgeht....”"
+    but b11aseru1 "“....hihihi...."
     extend " Da scheint etwas dran zu sein, tut mir voll traurig."
     but "Das nächste Mal teleportiere ich mich einfach mit Magie hierher, du wirst schon sehen!”"
-    jes "“Ahahahaha, das würde ich zu gerne sehen!”"
-    mar "“Uu???......"
+    jes b22warai1 "“Ahahahaha," 
+    extend " ...das würde ich zu gerne sehen!"
+    extend " ...Kannst mir ja dann verraten, wie man von der Insel weg kommt.”"
+    show mar a11uuu1 behind rain at rightedge with dis
+    mar "“....Uu???"
     extend " Battler kann Magie benutzen?”"
     jes "“Ganz genau Maria-chan, Battler kann Magie benutzen, aber nicht nur Battler!"
     extend " Jeder kann zaubern, denn jeder trägt etwas Magie im Herzen, auch du!”"
-    mar "“Uu-uu! Wir alle haben Magie! Wir alle haben Magie! Uu-uu!"
-    extend " Uu-uu! Ich möchte dir Beatrice vorstellen, Battler! Uu!”"
-    but "“Beatrice?.....”"
-    mar "“Wer Magie hat, kann sie sehen, also kannst auch du sie sehen! Uu-uu!”"
+    mar a22warai2 "“Uu-uu!" 
+    extend " ...Wir alle besitzen Magie!" 
+    extend " ...Wir alle besitzen Magie! Uu-uu!"
+    extend " Uu-uu!" 
+    extend " Ich möchte dir meine Freundinnen vorstellen, Battler!" 
+    extend " Uu~!"
+    mar "Ich möchte dir Beatrice vorstellen!"
+    extend " ..Uu!"
+    but b11oya1 "“.....Beatrice?”"
+    mar a11warai1 "“Wer Magie besitzt, kann sie sehen, also kannst auch du sie sehen! Uu-uu!”"
     "Battler war wieder nicht vorsichtig mit Maria und ließ sie versehentlich glauben, dass er magische Kräfte besaß, was natürlich Unsinn war."
+    scene black
+    camera 
+    with quickergradientwiperight
+    scene beach_1ab
+    call rainlayer from _call_rainlayer_19
+    show geo a11majime2 behind rain at m
+    with quickergradientwiperight
     geo "“Battler-kun...." 
     extend " Jessica-chan..." 
     extend " Ihr müsst vorsichtiger sein mit euren Witzen in Marias Umgebung, wie ihr erneut seht, nimmt sie alles viel zu ernst.”"
+    show but b22nayamu1 behind rain at rightedge with dis
     but "“Entschuldige... Aniki...”"
-    "“Aniki' bedeutet so viel wie 'großer Bruder', was aber keinen Sinn macht, weil wir ja Cousins sind und keine Geschwister..."
+    "'Aniki' bedeutet so viel wie 'großer Bruder', was aber keinen Sinn macht, weil wir ja Cousins sind und keine Geschwister..."
     extend " Aber es hat sich bei uns so eingebürgert, also ist es in Ordnung, auch weil George älter ist als ich."
     "Außerdem gibt es noch 'Aneki', was so viel wie 'große Schwester' bedeutet."
-    mar "“...uu~!..." 
-    extend " Battler hat Magie! Battler hat Magie!”"
-    geo "“....Du hast recht Maria-chan! Nur kann Battler-kun keine Hexen sehen."
+    scene black
+    camera 
+    with quickergradientwiperight
+    scene beach_1ab
+    call rainlayer from _call_rainlayer_20
+    show mar a22warai2 behind rain at l
+    with quickergradientwiperight
+    mar "“...uu~!" 
+    extend " Battler besitzt Magie!" 
+    extend " ...Battler besitzt Magie!"
+    extend " ...hahaha...haha...Uu~!”"
+    show geo a12warai1 behind rain at rightedge with dis
+    geo "“....Du hast recht Maria-chan! Nur kann Battler-kun keine magischen Wesen sehen."
     extend " ...Das ist nämlich etwas, dass nur du sehen kannst, da du was ganz besonderes bist.”"
-    mar "“Battler kann Beatrice nicht sehen?......."
-    mar "..........."
-    extend " .........Uu~..........”"
-    "George-Aniki konnte Maria schnell beruhigen, solche Momente zeigen immer wieder, wie gut er mit Kindern umgehen kann, er wird eines Tages ein guter Vater sein."
+    mar a11uuu1 "“Battler kann Beatrice nicht sehen?"
+    extend " .........Uu~”"
+    "George-Aniki konnte Maria schnell beruhigen," 
+    extend " solche Momente zeigen immer wieder, wie gut er mit Kindern umgehen kann, er wird eines Tages ein guter Vater sein."
+    hide geo  
+    show ros a11majime1 behind rain at rightedge 
+    with dis
+    ros ".....Maria!"
+    extend " Lass den Unsinn und komm her!"
+    extend a12ikari1 " ...Und ich möchte nichts mehr von Magie oder dieser Beatoriche-irgendwer hören!"
+    extend " ....Hast du mich verstanden?"
+    extend " ....Maria!"
+    "Rosa wollte Maria dazu zwingen mit diesem Magiekram aufzuhören," 
+    extend " laut ihrer Meinung ist Maria zu alt für sowas und das regt sie auf."
+    "Maria wurde darauf hin still, blieb aber bei Battler und den anderen."
+    scene black
+    camera 
+    with quickergradientwiperight
+    scene beach_1ab
+    call rainlayer from _call_rainlayer_21
+    show but b23nayamu1 behind rain at r
+    with quickergradientwiperight
     but "“.....Etwas ist anders in diesem Jahr...."
     extend " ...Ich habe das Gefühl, dass es hier an etwas fehlt..."
-    extend " ...Hmmm........."
-    but "....Richtig ...... Die Möwen sind weg, wir wurden doch immer von den Möwen begrüßt, oder irre ich mich?”"
+    extend " .....Hmmm"
+    but "....Richtig!" 
+    extend " ....Die Möwen sind weg," 
+    extend " ...wir wurden doch immer von den Möwen begrüßt, oder irre ich mich?”"
+    show jes a11majime1 behind rain at leftedge with dis
     jes "“.....Jetzt, wo du es sagst..." 
     extend " Das Schreien der Möwen war immer zu hören...”"
-    mar "“..Uu~....." 
+    show mar a11uuu1 behind rain at m with dis
+    mar "“Uu~....." 
     extend " Keine Möwen?"
     mar "....Wo sind die Möwen? uu~...”"
+    hide jes  
+    show geo a11defo1 behind rain at leftedge
+    with dis
     geo "“...Die Möwen sind längst in ihre Nester zurückgekehrt, denn der Taifun ist bereits in vollem Gange."
     extend " ....Auch für Möwen ist so ein Taifun gefährlich, weshalb sie bereits Schutz gesucht haben.”"
-    but "“Darauf hätte ich auch selbst kommen können.”"
-    "George, Battler, Jessica und Maria plaudern fröhlich miteinander, doch der Sturm wird von Minute zu Minute stärker und so werden sie erneut von Gohda unterbrochen."
-    goh "“Entschuldigt, aber wir müssen zur Villa, denn der Typhoon wird immer stärker und wir wollen auf keinen Fall, dass ihr nass ankommt.”"
-    "Dann gingen alle den Waldweg entlang zur Villa."
+    but b23nayamu2  "“Darauf hätte ich auch selbst kommen können.”"
+    scene black with gradientwipeup
+    scene sky_1c
+    call rainlayer from _call_rainlayer_22
+    stop music fadeout 3 
+    with gradientwipeup
+    "Wir plauderten fröhlich miteinander, doch der Taifun wird von Minute zu Minute stärker und haben beschlossen nun schnell zum Gästehaus zu eilen."
     extend " aber aus irgendeinem Grund habe ich so ein beklemmendes Gefühl..."
-    "Verliere ich langsam aber sicher die Nerven? Liegt es an meiner 6-jährigen Abwesenheit?"
+    "Verliere ich langsam aber sicher die Nerven? Liegt es an meinen sechs Jahren der Abwesenheit?"
     extend " Oder an Marias gruseliger Show von vorhin? Ich hoffe, ich werde es nie erfahren..."
     stop audio fadeout 2.0
-    stop music fadeout 2.0
     scene black with dissolve
     pause(2)
     $ songname = "Ride on"
-    $ renpy.notify("♪Ride on")
-    play music "audio/bgm/umib_004.ogg"
+    if persistent.showbgm == True:
+        show screen showsong
+    play music "audio/bgm/umib_004_Intro.ogg"
+    queue music "audio/bgm/umib_004_loop.ogg" loop
     pause(1)
-    show op1 with dissolve
+    show op1
+    call rainlayer from _call_rainlayer_23
+    with dissolve
     pause(11)
     scene white with quickergradientwiperight
-    show op2 with quickergradientwiperight
+    show op2
+    call rainlayer from _call_rainlayer_24 
+    with quickergradientwiperight
     pause(11)
     scene white with quickergradientwiperight
-    show op3 with quickergradientwiperight
+    show op3
+    call rainlayer from _call_rainlayer_25 
+    with quickergradientwiperight
     pause(11)
     scene white with quickergradientwiperight
-    show op4 with quickergradientwiperight
+    show op4
+    call rainlayer from _call_rainlayer_26 
+    with quickergradientwiperight
     pause(11)
     scene white with quickergradientwiperight
-    show op5 with quickergradientwiperight
+    show op5
+    call rainlayer from _call_rainlayer_27 
+    with quickergradientwiperight
     pause(11)
     scene white with quickergradientwiperight
-    show op6 with quickergradientwiperight
+    show op6
+    call rainlayer from _call_rainlayer_28 
+    with quickergradientwiperight
     pause(11)
     scene white with quickergradientwiperight
-    show op7 with quickergradientwiperight
+    show op7
+    call rainlayer from _call_rainlayer_29 
+    with quickergradientwiperight
     pause(11)
     scene white with quickergradientwiperight
-    show op8 with quickergradientwiperight
+    show op8
+    call rainlayer from _call_rainlayer_30 
+    with quickergradientwiperight
     pause(11)
     scene white with flash
-    scene op9 with dissolve
+    scene op9 
+    call rainlayer from _call_rainlayer_31
+    with dissolve
     play sound "audio/sfx/umise_028.ogg"
     pause(11)
     scene black with longdissolve
     stop music fadeout 3.0
+    stop wind fadeout 3.0
+    stop rain fadeout 3.0
     pause(5)
     $ songname = "Rose"
     if persistent.showbgm == True:
-        $ renpy.notify("♪Rose")
-    play music "audio/bgm/umib_013.ogg"
+        show screen showsong
+    play music "audio/bgm/umib_013_Intro.ogg"
+    queue music "audio/bgm/umib_013_loop.ogg" loop 
     play rain "audio/sfx/umilse_012.ogg"
     show mlib_1a_bg at bgani
     call rainlayer from _call_rainlayer_1
@@ -1112,7 +1360,7 @@ label chapter1:
     hide nan a1defo1
     show nan a1fumu1 at l2
     with dis
-    "Als er seine Untersuchung beendet hatte, stieß der Doktor im Spätherbst seines Lebens einen ärgerlichen Seufzer aus."
+    "Als er seine Untersuchung beendet hatte, stieß der Doktor, der sich im Spätherbst seines Lebens befindet einen ärgerlichen Seufzer aus."
     "Zwei ältere Herren standen in einem dunklen, staubigen und übel riechenden Arbeitszimmer."
     scene mlib_1b_bg at bgani
     call rainlayer from _call_rainlayer_2
@@ -1128,7 +1376,7 @@ label chapter1:
     if persistent.nanjo == False:
         $ persistent.nanjo = True
         play sound "audio/sfx/umise_1060.ogg"
-        $ renpy.notify("Die Charaktere wurden geupdated.")
+        show screen charupdate
     "Das ist Nanjo Terumasa."
     extend " Er ist der langjährige Arzt von Kinzo und sein bester Freund."
     "Jetzt, da Kinzos ständiges Misstrauen außergewöhnliche Ausmaße angenommen hat, ist Nanjo einer der wenigen Menschen, denen er vertraut." 
@@ -1147,7 +1395,7 @@ label chapter1:
     if persistent.kinzo == False:
         $ persistent.kinzo = True
         play sound "audio/sfx/umise_1060.ogg"
-        $ renpy.notify("Die Charaktere wurden geupdated.")
+        show screen charupdate
     "Das ist das Familienoberhaupt Ushiromiya Kinzo."
     "Er ist sehr mürrisch und leicht zu provozieren."
     extend " Er ist stark vom Westen beeinflusst und ist sehr interessiert an dem Okkulten." 
@@ -1166,13 +1414,21 @@ label chapter1:
     with quickergradientwiperight
     gen "“Herr...."
     extend " ....Seid ich Euch absolut sicher?”"
-    "Der alte Butler, der zuerst seinen Herrn ansah, der auf sein nächstes Getränk wartete" 
-    extend " und dann auf den Arzt, der die Augen verdrehte um sich danach dann am Schnapsschrank zu schaffen zu machen."
+    "Der alte Butler, sah zuerst seinen Herren an, der auf sein nächstes Getränk wartete" 
+    extend " und dann auf den Arzt, der die Augen verdrehte um sich danach am Schnapsschrank zu schaffen zu machen."
     hide gen a11defo1
     show gen a11komaru1 at m
     with dis
+    if persistent.genji == False:
+        $ persistent.genji = True
+        play sound "audio/sfx/umise_1060.ogg"
+        show screen charupdate
     "Der Duft des alkoholischen Getränks erfüllte den ganzen Raum, als würde sich der Gestank in der Luft buchstäblich verflüchtigen."
     extend " Dieser Duft kitzelt die Riechschleimhaut so angenehm, dass nicht nur die Seele dahinschmelzen möchte."
+    "Das ist Ronoue Genji, Kinzos treuerster Butler, er steht seinem Herrn schon so viele Jahre zur seite,"
+    extend " dass Kinzos Kinder denken, er sei ein Spion, der Kinzo immer auf den laufenden hält."
+    "Er ist so loyal, dass er absolut jeden Befehl seines Herren ausführen würde," 
+    extend " selbst dann, wenn er den Befehl erhalten würde, sein eigenes Leben herzugeben."
     scene black with gradientwipeup
     "Erneut stieß Nanjo einen tiefen Seufzer aus, als er mit ansah, wie der Butler seinen Befehl ausführte."
     "Das herrliche Aroma des giftgrünen Getränks hat mittlerweile den ganzen Raum eingenommen."
@@ -1299,7 +1555,7 @@ label chapter1:
     extend " Es ist doch ausdrücklich verboten worden, um diese Zeit zu stören, also wer besitzt die Dreißtigkeit?”"
     "Kinzo ist außer sich, er wird von seinen gierigen Kindern gestört, denkt er."
     kin "“....Genji,"
-    extend " öffne die Tür!”"
+    extend " öffne die Tür!"
     extend " ....Wer es wagt zu stören, hat bestimmt auch einen Grund dafür.”"
     show gen a11komaru1 at r with dis
     gen "“Wie Ihr wünscht, Herr.”"
@@ -1319,20 +1575,53 @@ label chapter1:
     kin "“......."
     extend " ....Unmöglich!"
     extend " ......Das..." 
-    extend " ....Das kann doch nicht wahr sein!"
+    extend " ....Das kann doch nicht wahr sein!”"
+    pause 1
     window hide
     if persistent.musicbox == False:
         $ persistent.newelement1 = True
         play sound "audio/sfx/umise_1060.ogg"
         $ persistent.musicbox = True
         $ persistent.menustate = 4
-        $ renpy.notify("Die Musikbox wurde freigeschaltet.")
+        show screen musicupdate
         $ Achievement.add(achievement_bronze3)
-        $ Achievement.add(achievement_bronze4)
-    call chapterendb from _call_chapterendb
-    pause(2)
-    hide screen cinemalogo with dissolve
-    pause(2)
+    play audio "audio/sfx/umise_030.ogg"
+    show text _("Ich wollte dich niemals mit reinziehen....") 
+    with fastdissolve
+    pause 0.5
+    hide text with fastdissolve
+    play audio "audio/sfx/umise_030.ogg"
+    show text _("Ich bin schon zu weit gegangen....") 
+    with fastdissolve
+    pause 0.5
+    hide text with fastdissolve
+    play audio "audio/sfx/umise_030.ogg"
+    show text _("Bitte halt mich auf....") 
+    with fastdissolve
+    pause 0.5
+    hide text with fastdissolve
+    play audio "audio/sfx/umise_030.ogg"
+    show text _("Lass mich endlich raus....") 
+    with fastdissolve
+    pause 0.5
+    hide text with fastdissolve
+    play audio "audio/sfx/umise_030.ogg"
+    show text _("Du kannst ohne mich nicht existieren....") 
+    with fastdissolve
+    pause 0.5
+    hide text with fastdissolve
+    play audio "audio/sfx/umise_030.ogg"
+    show text _("So zu tun als wäre ich nicht da ist sinnlos....") 
+    with fastdissolve
+    pause 0.5
+    hide text with fastdissolve
+    pause 0.5
+    play audio "audio/sfx/umise_046.ogg"
+    $ Achievement.add(achievement_bronze4)
+    show logo
+    pause 10
+    hide logo
+    with kanon_rev
     jump chapter2
 
 

@@ -103,3 +103,18 @@ image rud_a13_warai1_mouth:
     "images/sprites/rud/a13/warai1/2.png"
     .20
     repeat
+
+image rud a13komaru1 = Composite(
+    (1039, 1201),
+    (0, 0), "images/sprites/rud/a13/komaru1/0.png",
+    (0, 0), WhileSpeaking("rud", "rud_a13_komaru1_mouth", "images/sprites/rud/a13/komaru1/0.png"),
+)
+
+image rud_a13_komaru1_mouth:
+    "images/sprites/rud/a13/komaru1/0.png"
+    .10
+    "images/sprites/rud/a13/komaru1/1.png"
+    .10
+    "images/sprites/rud/a13/komaru1/2.png"
+    .20
+    repeat

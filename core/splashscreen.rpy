@@ -1,7 +1,7 @@
 
 label splashscreen:
 
-#jump test
+jump debug
 #jump test2
 scene black with dissolve
 pause (1)
@@ -108,7 +108,7 @@ else:
         window show
         but "Willkommen zu Umineko When They Cry Zero ~Waltz of Reflections and Delusions~ Sieht mir nach deinem ersten Spielstart aus, also wähle bitte eine Sprache!"
         window hide
-        call butterfly1
+        call butterfly1 from _call_butterfly1_2
         play sound "audio/sfx/umise_052.ogg"
         show bea a11defo2 at leftedge with witchfadein
         window show
@@ -118,18 +118,21 @@ else:
         window hide
         menu:
             "EN-English":
+                pause 1
+                call hidebf1 from _call_hidebf1_2
+                stop wind fadeout 1.0
+                play sound "audio/sfx/umise_056.ogg"
+                scene black with gradientcirclefade
                 $ renpy.change_language("English")
 
             "DE-German":
+                pause 1
+                call hidebf1 from _call_hidebf1_3
                 stop wind fadeout 1.0
-                scene black with dissolve
+                play sound "audio/sfx/umise_056.ogg"
+                scene black with gradientcirclefade
                 return
-    stop wind fadeout 1.0
-    scene menu_bg at bganistart
-    show title_menu
-    with gradientwipedown
-    hide title_menu
-    hide menu_bg
+
     return
 
 label quit:
@@ -159,12 +162,10 @@ label before_main_menu:
         play effect "audio/sfx/umise_022.ogg"
         show unlocked1 with gradientcirclefade
         pause(5)
-        show menu_bg at bganistart
-        show title_menu
-        with gradientwipedown
-        hide title_menu
-        hide menu_bg
-        hide unlocked1
-        return
-    else:
-        pass
+    show menu_bg at bganistart
+    show title_menu
+    with gradientwipedown
+    hide title_menu
+    hide menu_bg
+    hide unlocked1
+    return

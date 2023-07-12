@@ -47,3 +47,18 @@ image eva_a11_hohoemi1_mouth:
     "images/sprites/eva/a11/hohoemi1/2.png"
     .20
     repeat
+
+image eva b21futeki1 = Composite(
+    (804, 1163),
+    (0, 0), "images/sprites/eva/b21/futeki1/0.png",
+    (0, 0), WhileSpeaking("eva", "eva_b21_futeki1_mouth", "images/sprites/eva/b21/futeki1/0.png"),
+    )
+
+image eva_b21_futeki1_mouth:
+    "images/sprites/eva/b21/futeki1/0.png"
+    .10
+    "images/sprites/eva/b21/futeki1/1.png"
+    .10
+    "images/sprites/eva/b21/futeki1/2.png"
+    .20
+    repeat

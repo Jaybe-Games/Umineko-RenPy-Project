@@ -1,24 +1,99 @@
 
 label start:
 
-    $ discord.update(state = "Episode 0 - DEBUGMODE")
-    $ discord.update(details = "Editing Prologue")
+    $ discord.update(state = "Episode 0")
+    $ discord.update(details = "Prologue")
     $ chapter = 0
     $ songname = "-"
-    show screen Debugscreen
+    #show screen Debugscreen
     if persistent.alreadyread1 == False:
         $ persistent.alreadyread1 = True
         $ persistent.menustate = 1
         $ persistent.new = False
     pause 2
+    play sound "audio/sfx/umise_028.ogg"
+    show portrait at portrait
+    show disclaimer1 at textzoom
+    with dissolve
+    $ songname = "Hour of darkness"
+    play music "audio/bgm/umib_006_Intro.ogg"
+    queue music "audio/bgm/umib_006_loop.ogg" loop 
+    if persistent.showbgm == True:
+        show screen showsong
+    pause (12)
+    hide disclaimer1 with gradientwiperight
+    show disclaimer2 at textzoom with gradientwiperight
+    pause (12)
+    hide disclaimer2 with gradientwiperight
+    hide portrait with gradientwiperight
+    show intro1 at textzoom with dissolve
+    pause 2.0
+    play rain "audio/sfx/umilse_012.ogg"
+    play wind "audio/sfx/umilse_005.ogg"
+    show o_beach_1ac behind intro1 at bganifast
+    call rainlayer
+    with gradientwiperight
+    pause 6
+    scene black with dissolve
+    show intro2 at textzoom with dissolve
+    pause 2.0
+    show rose_1a behind intro2 at bganifast
+    call rainlayer
+    with gradientwiperight
+    pause 6
+    scene black with dissolve
+    show intro3 at textzoom with dissolve
+    pause 2.0
+    show m_o1a behind intro3 at bganifast
+    call rainlayer
+    with gradientwiperight
+    pause 6
+    scene black with dissolve
+    show intro4 at textzoom with dissolve
+    pause 2.0
+    show mhal_2cr behind intro4 at bganifast
+    with gradientwiperight
+    pause 3
+    scene black with dissolve
+    show intro5 at textzoom with dissolve
+    pause 2.0
+    show portrait2 behind intro5 at bganifast
+    with gradientwiperight
+    pause 3
+    play effect "audio/sfx/umise_022.ogg"
+    show butterfly1 behind intro5
+    pause 2
+    hide intro5 with gradientwiperight
+    show intro6 at textzoom with gradientwiperight
+    pause 3
+    play sound "audio/sfx/umise_038.ogg"
+    scene blood_1a at zoomin with vpunch
+    pause 0.5
+    play sound "audio/sfx/umise_038.ogg"
+    scene bite at zoomin with vpunch
+    pause 0.5
+    play sound "audio/sfx/umise_038.ogg"
+    scene blood_1b at zoomin with vpunch
+    pause 0.5
+    play sound "audio/sfx/umise_038.ogg"
+    scene blood_1ar at zoomin with vpunch
+    pause 0.5
+    play sound "audio/sfx/umise_038.ogg"
+    scene blood_2e at zoomin with vpunch
+    pause 0.5
+    play sound "audio/sfx/umise_034.ogg"
+    scene black
+    stop rain
+    stop wind
+    $ songname = "-"
+    stop music
+    show intro7 at textzoom
+    pause 3
+    scene black with gradientwiperight
+    pause 5
     if persistent.showch == True:
         show screen showch
         pause 5
-    play sound "audio/sfx/umise_028.ogg"
-    show disclaimer1 with dissolve
-    pause (5)
-    hide disclaimer1 with dissolve
-    pause (2)
     $ songname = "At Death's Door"
     if persistent.showbgm == True:
         show screen showsong
@@ -30,6 +105,7 @@ label start:
     pause (3)
     $ _game_menu_screen = "cleanmenu"
     scene ke_s2 with dissolve
+    window auto
     "01. Mai 1983."
     "An die Abteilungen 1 bis 12,"
     "XX Hauptquartier der Präfekturpolizei."
@@ -48,18 +124,24 @@ label start:
     "Er hat weltweit Aufmerksamkeit erregt," 
     extend " was schwerwiegende Auswirkungen auf die Bewohner hatte. Die Lage ist sehr ernst geworden."
     "Um das Leben und das Wohlergehen der Anwohner zu schützen, wurde die folgende Bekanntmachung veröffentlicht."
-    hide screen tipupdate
-    "1. die folgenden strafrechtlichen Ermittlungen als Verschlusssache zu behandeln"
-    "Station Okinomiya 1983 Fallnummer 862"
-    scene ke5 with gradientwipeupright
-    "Tötung einer alleinerziehenden Mutter mit zwei Kindern im Dorf Hinamizawa (Datum: April 1983)."
-    "Dieser Fall steht in keinem Zusammenhang mit den jährlichen Morden vom Juni 1979 bis 1982."
-    "Die Leiche einer alleinerziehenden Mutter wurde an einem Morgen im April 1983 in ihrem Haus, genauer gesagt in ihrer Küche, tot aufgefunden."
-    "Wir konnten nur eines der beiden Kinder bergen, das andere wird noch vermisst."
-    "Wahrscheinlich handelt es sich um eine Kindesentführung. Die Polizei tut bereits alles um das entführte Kind zu finden."
-    "Das geborgene Kind steht noch unter schwerem Schock und kann noch nicht sprechen,"
+    scene note1 at bgani 
+    play sound "audio/sys/sysse_page.wav"
+    with quickergradientwiperight
+    nvltext "1. die folgenden strafrechtlichen Ermittlungen als Verschlusssache zu behandeln"
+    nvltext "Station Okinomiya 1983 Fallnummer 862"
+    nvltext "Tötung einer alleinerziehenden Mutter mit zwei Kindern im Dorf Hinamizawa (Datum: April 1983)."
+    extend " Dieser Fall steht in keinem Zusammenhang mit den jährlichen Morden vom Juni 1979 bis 1982."
+    nvltext "Die Leiche einer alleinerziehenden Mutter wurde an einem Morgen im April 1983 in ihrem Haus, genauer gesagt in ihrer Küche, tot aufgefunden."
+    extend " Wir konnten nur eines der beiden Kinder bergen, das andere wird noch vermisst."
+    nvl clear
+    nvltext "Wahrscheinlich handelt es sich um eine Kindesentführung. Die Polizei tut bereits alles um das entführte Kind zu finden."
+    extend " Das geborgene Kind steht noch unter schwerem Schock und kann noch nicht sprechen,"
     extend " es wurde in das örtliche Krankenhaus gebracht und wird dort medizinisch versorgt."
-    "Ende der öffentlichen Mitteilung."
+    nvl clear
+    nvltext "Ende der öffentlichen Mitteilung."
+    nvl clear
+    scene ke5 
+    with gradientwipeupright
     "Das Kind wurde im selben Raum wie die Leiche gefunden." 
     extend " Es gab keine Blutspuren oder ähnliches an dem Kind."
     "Das Kind war vermutlich zu Hause, hat den Mord nicht mitbekommen, fand später seine eigene Mutter tot auf und rief die Polizei."
@@ -69,7 +151,7 @@ label start:
     extend " Laut Obduktionsbericht wurde dazu eine Machete benutzt."
     "Dem Bericht zufolge war das Blut an Händen und Füßen schon etwas älter, da die Spuren am Hals deutlich frischer waren,"
     extend " was bedeuten könnte, dass ihr bei lebendigem Leib die Gliedmaßen abgehackt wurden und sie Höllenqualen litt."
-    "Außerdem gab es Kampfspuren im Raum. Die Frau muss den Täter gesehen und sich gewehrt haben."
+    "Außerdem gab es Kampfspuren im Raum. Die Frau hat den Täter wahrscheinlich gesehen und sich gewehrt haben."
     extend " Sie muss aber vorher an dem Schock und dem immensen Blutverlust gestorben sein."
     extend " und erst danach habe der Täter ihr den Strick umgelegt, so der Obduktionsbericht."
     "Im weiteren Bericht heißt es, dass das Opfer zuvor hochprozentige alkoholische Getränke konsumiert hatte und während der Tat unter starkem Alkoholeinfluss stand."
