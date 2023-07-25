@@ -10,10 +10,10 @@ init python:
     ######################################
 
     op = ost.soundtrack(
-    name = "Gold Dream Symphony", 
-    path = "audio/musicbox orange/01 Gold Dream Symphony.ogg",
+    name = "Umineko no Naku Koro ni", 
+    path = "audio/musicbox orange/01 Umineko no Naku Koro ni.ogg",
     priority = 1,
-    author = "aFlowerSmiles",
+    author = "Hachimitsu Summer",
     cover_art = False,
     )     
     ost.manualDefineList.append(op)

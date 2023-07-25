@@ -5,7 +5,7 @@
 ######################################################################
 
 ## The positions and sizes of the music viewport list
-define gui.music_room_viewport_xsize = int(250 * ost.scale)
+define gui.music_room_viewport_xsize = int(260 * ost.scale)
 define gui.music_room_viewport_pos = int(20 * ost.scale)
 define gui.music_room_spacing = int(20 * ost.scale)
 define gui.music_room_viewport_ysize = 0.93

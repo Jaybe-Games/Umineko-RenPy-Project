@@ -24,76 +24,11 @@ label start:
     hide disclaimer1 with gradientwiperight
     show disclaimer2 at textzoom with gradientwiperight
     pause (12)
-    hide disclaimer2 with gradientwiperight
-    hide portrait with gradientwiperight
-    show intro1 at textzoom with dissolve
-    pause 2.0
-    play rain "audio/sfx/umilse_012.ogg"
-    play wind "audio/sfx/umilse_005.ogg"
-    show o_beach_1ac behind intro1 at bganifast
-    call rainlayer
-    with gradientwiperight
-    pause 6
     scene black with dissolve
-    show intro2 at textzoom with dissolve
-    pause 2.0
-    show rose_1a behind intro2 at bganifast
-    call rainlayer
-    with gradientwiperight
-    pause 6
-    scene black with dissolve
-    show intro3 at textzoom with dissolve
-    pause 2.0
-    show m_o1a behind intro3 at bganifast
-    call rainlayer
-    with gradientwiperight
-    pause 6
-    scene black with dissolve
-    show intro4 at textzoom with dissolve
-    pause 2.0
-    show mhal_2cr behind intro4 at bganifast
-    with gradientwiperight
-    pause 3
-    scene black with dissolve
-    show intro5 at textzoom with dissolve
-    pause 2.0
-    show portrait2 behind intro5 at bganifast
-    with gradientwiperight
-    pause 3
-    play effect "audio/sfx/umise_022.ogg"
-    show butterfly1 behind intro5
-    pause 2
-    hide intro5 with gradientwiperight
-    show intro6 at textzoom with gradientwiperight
-    pause 3
-    play sound "audio/sfx/umise_038.ogg"
-    scene blood_1a at zoomin with vpunch
-    pause 0.5
-    play sound "audio/sfx/umise_038.ogg"
-    scene bite at zoomin with vpunch
-    pause 0.5
-    play sound "audio/sfx/umise_038.ogg"
-    scene blood_1b at zoomin with vpunch
-    pause 0.5
-    play sound "audio/sfx/umise_038.ogg"
-    scene blood_1ar at zoomin with vpunch
-    pause 0.5
-    play sound "audio/sfx/umise_038.ogg"
-    scene blood_2e at zoomin with vpunch
-    pause 0.5
-    play sound "audio/sfx/umise_034.ogg"
-    scene black
-    stop rain
-    stop wind
-    $ songname = "-"
-    stop music
-    show intro7 at textzoom
-    pause 3
-    scene black with gradientwiperight
-    pause 5
+    stop music fadeout 3
+    pause (2)
     if persistent.showch == True:
         show screen showch
-        pause 5
     $ songname = "At Death's Door"
     if persistent.showbgm == True:
         show screen showsong
@@ -192,7 +127,7 @@ label start:
     scene black with fade
     pause (2)
     $ songname = "Gold Dream Symphony"
-    $ renpy.movie_cutscene("videos/opening.mov")
+    $ renpy.movie_cutscene("videos/op.mov")
     stop sound
     pause 1.5
     jump chapter1
