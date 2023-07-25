@@ -28,3 +28,4 @@ videos/startgame_shatter.webm
 *.save
 *.json
 saves/persistent
+gui/chessmenu/portraits.psd
