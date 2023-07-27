@@ -5,6 +5,7 @@ label start:
     $ discord.update(details = "Prologue")
     $ chapter = 0
     $ songname = "-"
+    $ save_name = "Prolog: Ich schreibe an dich in einer Quadrillion Jahren"
     #show screen Debugscreen
     if persistent.alreadyread1 == False:
         $ persistent.alreadyread1 = True
@@ -127,7 +128,7 @@ label start:
     scene black with fade
     pause (2)
     $ songname = "Gold Dream Symphony"
-    $ renpy.movie_cutscene("videos/op.mov")
+    $ renpy.movie_cutscene("videos/opening.mov")
     stop sound
     pause 1.5
     jump chapter1

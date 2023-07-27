@@ -1294,26 +1294,21 @@ screen history():
 
                             label h.who:
                                 style "history_name"
-                                substitute True
+                                substitute False
 
                                 ## Take the color of the who text from the Character, if
                                 ## set.
                                 if "color" in h.who_args:
                                     text_color h.who_args["color"]
 
-                        if h.what:
-
-                            label h.what:
-                                style "history_new"
-                                substitute True
-
-                                
-                                if "color" in h.what_args:
-                                    text_color h.what_args["color"]
+                        $ what = renpy.filter_text_tags(h.what, allow=gui.history_allow_tags)
+                        text what:
+                            line_spacing 5
+                            substitute False
 
 
                     ## This puts some space between entries so it's easier to read
-                    null height 50
+                    null height 15
 
                 if not _history_list:
 
@@ -1325,7 +1320,8 @@ screen history():
 
 ## This determines what tags are allowed to be displayed on the history screen.
 
-define gui.history_allow_tags = { "alt", "noalt", "rt", "rb", "art" }
+define gui.history_allow_tags = { "alt", "noalt", "rt", "rb", "art", "note_green", "red_truth", "blue_truth" }
+
 
 
 style history_window is empty
@@ -1356,6 +1352,7 @@ style history_name:
     xanchor gui.history_name_xalign
     ypos gui.history_name_ypos
     xsize gui.history_name_width
+    outlines [ (absolute(2), "#00000094", absolute(0), absolute(0)) ]
 
 style history_new:
     xpos gui.history_text_xpos
@@ -1369,6 +1366,7 @@ style history_new:
 style history_name_text:
     min_width gui.history_name_width
     text_align gui.history_name_xalign
+    outlines [ (absolute(2), "#00000094", absolute(0), absolute(0)) ]
 
 style history_text:
     xpos gui.history_text_xpos
@@ -1378,6 +1376,8 @@ style history_text:
     min_width gui.history_text_width
     text_align gui.history_text_xalign
     layout ("tex" if gui.history_text_xalign else "tex")
+    outlines [ (absolute(2), "#00000094", absolute(0), absolute(0)) ]
+    size 40
 
 style history_label:
     xfill True

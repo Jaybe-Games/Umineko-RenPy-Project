@@ -2,7 +2,7 @@
 label splashscreen:
 
 #jump beatricechess
-jump test2
+#jump test2
 scene black with dissolve
 pause (1)
 show splash1 with dissolve
@@ -19,7 +19,7 @@ hide splash3 with dissolve
 pause (1)
 
 if persistent.openingplayed == True:
-    $ renpy.movie_cutscene("videos/op.mov")
+    $ renpy.movie_cutscene("videos/opening.mov")
     pause (1)
     show load1 at right
     pause 0.1
