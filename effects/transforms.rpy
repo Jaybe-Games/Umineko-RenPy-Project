@@ -54,6 +54,10 @@ transform rightedge:
     zoom 0.990
     yanchor 1.0
     ypos 1210
+
+transform texttop:
+    xalign 0.5
+    yalign 0.3
 # Color transforms
 
 transform grayscale:
@@ -71,6 +75,7 @@ transform reset_shader:
 
 image butterfly1 = Movie(channel="movie", play="videos/butterfly1.mov", Delay=False, loop=False, side_mask=True, image="images/efe/no83_0051.png")
 image butterfly1_0 = Movie(channel="movie", play="videos/Butterfly1_0.mov", side_mask=True, Delay=False, loop=False, start_image="images/efe/no83_0051.png")
+image vortex = Movie(channel="movie", play="videos/vortex.mov", Delay=False, loop=True)
 
 transform bgani:
     subpixel True

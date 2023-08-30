@@ -2,7 +2,21 @@
 label splashscreen:
 
 #jump beatricechess
-#jump test2
+jump test2
+#jump debug
+
+if not renpy.seen_label("start"):
+    show text "Select a Language / Wähle eine Sprache" at texttop
+    menu:
+        "English":
+            $ renpy.change_language("English")
+            hide text
+            jump start
+
+        "Deutsch":
+            hide text
+            jump start
+
 scene black with dissolve
 pause (1)
 show splash1 with dissolve
@@ -57,10 +71,11 @@ if persistent.openingplayed == True:
 
     if persistent.newelement1 == False:
         show menu_bg at bganistart
-        show title_menu
+        show copyright at left
+        show titlehana at topright
         with gradientwipedown
-        hide title_menu
-        hide menu_bg
+        hide titlehana
+        hide copyright
 
     return
 else:
@@ -99,40 +114,6 @@ else:
     hide load4
     pause 0.1
 
-    if not renpy.seen_label("start"):
-        play wind "audio/sfx/umilse_005.ogg"
-        show different_space_1a at bgani
-        show expression(CustomParticles("images/system/particle.png", 10))
-        with gradientcirclefade
-        show but b11warai3 at rightedge with dissolve
-        window show
-        but "Willkommen zu Umineko When They Cry Zero ~Waltz of Reflections and Delusions~ Sieht mir nach deinem ersten Spielstart aus, also wähle bitte eine Sprache!"
-        window hide
-        call butterfly1 from _call_butterfly1_2
-        play sound "audio/sfx/umise_052.ogg"
-        show bea a11defo2 at leftedge with witchfadein
-        window show
-        bea a11akuwarai4 "*Cackle*Cackle*"
-        extend " ....Don't forget those who don't know German and only understand English, Battlerrrrrrr!" 
-        bea a11defo2 " ....A warm Welcome to Umineko When They Cry Zero ~Waltz of Reflections and Delusions~ Please choose a language aswell."
-        window hide
-        menu:
-            "EN-English":
-                pause 1
-                call hidebf1 from _call_hidebf1_2
-                stop wind fadeout 1.0
-                play sound "audio/sfx/umise_056.ogg"
-                scene black with gradientcirclefade
-                $ renpy.change_language("English")
-
-            "DE-German":
-                pause 1
-                call hidebf1 from _call_hidebf1_3
-                stop wind fadeout 1.0
-                play sound "audio/sfx/umise_056.ogg"
-                scene black with gradientcirclefade
-                return
-
     return
 
 label quit:
@@ -163,9 +144,10 @@ label before_main_menu:
         show unlocked1 with gradientcirclefade
         pause(5)
     show menu_bg at bganistart
-    show title_menu
+    show copyright at left
+    show titlehana at topright
     with gradientwipedown
-    hide title_menu
-    hide menu_bg
+    hide titlehana
+    hide copyright
     hide unlocked1
     return

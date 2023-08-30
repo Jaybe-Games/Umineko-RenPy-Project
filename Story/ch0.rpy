@@ -5,42 +5,49 @@ label start:
     $ discord.update(details = "Prologue")
     $ chapter = 0
     $ songname = "-"
-    $ save_name = "Prolog: Ich schreibe an dich in einer Quadrillion Jahren"
     #show screen Debugscreen
     if persistent.alreadyread1 == False:
         $ persistent.alreadyread1 = True
         $ persistent.menustate = 1
         $ persistent.new = False
+    pause (5)
+    play sound "audio/sfx/heartbeat.ogg"
+    show 01 with dissolve
+    pause 1
+    play music "audio/bgm/umib_015_intro.ogg"
+    queue music "audio/bgm/umib_015_loop.ogg" loop 
+    pause 4
+    hide 01 with dissolve
     pause 2
-    play sound "audio/sfx/umise_028.ogg"
-    show portrait at portrait
-    show disclaimer1 at textzoom
-    with dissolve
-    $ songname = "Hour of darkness"
-    play music "audio/bgm/umib_006_Intro.ogg"
-    queue music "audio/bgm/umib_006_loop.ogg" loop 
+    play sound "audio/sfx/heartbeat.ogg"
+    show 02 with dissolve
+    pause 4
+    hide 02 with dissolve
+    pause 2
+    play sound "audio/sfx/heartbeat.ogg"
+    show 03 with dissolve
+    pause 4
+    hide 03 with dissolve
+    pause 2
+    play sound "audio/sfx/heartbeat.ogg"
+    show 04 with dissolve
+    pause 4
+    scene black with dissolve
+    pause (2)
+    $ songname = "Corridor of Purgatory's Sands"
+    $ _game_menu_screen = "cleanmenu"
     if persistent.showbgm == True:
         show screen showsong
-    pause (12)
-    hide disclaimer1 with gradientwiperight
-    show disclaimer2 at textzoom with gradientwiperight
-    pause (12)
-    scene black with dissolve
-    stop music fadeout 3
-    pause (2)
     if persistent.showch == True:
         show screen showch
-    $ songname = "At Death's Door"
-    if persistent.showbgm == True:
-        show screen showsong
-    play music "audio/bgm/umib_014_intro.ogg"
-    queue music "audio/bgm/umib_014_loop.ogg" loop 
-    show may_1_1983 with dissolve
-    pause (5)
-    hide may_1_1983 with dissolve
-    pause (3)
-    $ _game_menu_screen = "cleanmenu"
-    scene ke_s2 with dissolve
+    scene fure2 with gradientcirclefade
+    pause 2
+    scene kakera with gradientcirclefade
+    pause 2
+    scene ke1 with gradientcirclefade
+    pause 2
+    scene ke_s2 with gradientwipeleft
+    pause 2
     window auto
     "01. Mai 1983."
     "An die Abteilungen 1 bis 12,"
@@ -76,7 +83,7 @@ label start:
     nvl clear
     nvltext "Ende der öffentlichen Mitteilung."
     nvl clear
-    scene ke5 
+    scene ma_d1 
     with gradientwipeupright
     "Das Kind wurde im selben Raum wie die Leiche gefunden." 
     extend " Es gab keine Blutspuren oder ähnliches an dem Kind."
@@ -115,6 +122,7 @@ label start:
     "Es gab keine Geheimwege oder Schlupflöcher." 
     extend " Es wurden auch keine potentiellen Täter im und um das Haus herum gefunden,"
     extend " was die Aufklärung des Falles um einiges schwieriger machte als zunächst angenommen."
+    scene kai_jyun with gradientwipedown
     "Jedenfalls ist dieser Mörder ein absolutes Genie." 
     extend " Detektive aus der ganzen Welt haben sich des Falles angenommen,"
     extend " doch niemand konnte sich erklären, wie dieser Mord begangen worden ist."

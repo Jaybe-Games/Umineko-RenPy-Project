@@ -259,7 +259,7 @@ style choice_button_text is button_text
 
 style choice_vbox:
     xalign 0.5
-    ypos 405
+    ypos 0.5
     yanchor 0.5
 
     spacing gui.choice_spacing
@@ -323,7 +323,8 @@ style quick_button_text:
 screen navigation():
 
     add "gui/title/bg.png" at bgani
-    add "gui/title/menu.png" at center
+    add "gui/title/title_hana.png" at topright
+    add "gui/title/copyright.png" at left
     add "gui/title/titlelogo.png" at topright,buttondissolvetitle
     add partObj
     text "[config.version!t]" at topleft size 30 antialias True outlines [ (absolute(3), "#000", absolute(0), absolute(0)) ]
@@ -344,7 +345,7 @@ screen navigation():
             vbox:
 
                 xalign 0.98
-                yalign 0.8
+                yalign 0.9
                 spacing 3 
                 if persistent.new == True:
                     imagebutton auto "gui/title/buttons/startnew_%s.png" action [Play("sound", "/audio/sfx/umise_051.ogg"), ShowMenu("story_select"), Hide('starthover'), SetVariable("ismain", True)] hover_sound "audio/sys/sysse_move.wav" hovered Show('starthover') unhovered Hide('starthover') at buttondissolve1
@@ -663,7 +664,7 @@ screen game_menu(scroll=None, yinitial=0.0):
             imagebutton auto "gui/gamemenu/backtomain_%s.png" action MainMenu() activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav" at gamemenubuttontransform
 
         if persistent.showbgm == True:
-            text "Soundtrack: " + songname ypos 1005 xpos 1900 xalign 1.0 size 30 font "fonts/AOTFShinGoProMedium.otf" outlines [ (absolute(3), "#000", absolute(0), absolute(0)) ]
+            text "♪" + songname ypos 1005 xpos 1900 xalign 1.0 size 30 font "fonts/AOTFShinGoProMedium.otf" outlines [ (absolute(3), "#000", absolute(0), absolute(0)) ]
         if persistent.showplaytime == True:
             text _("Spielzeit: ") + getPlayTime() ypos 1040 xpos 1900 xalign 1.0 size 30 font "fonts/AOTFShinGoProMedium.otf" outlines [ (absolute(3), "#000", absolute(0), absolute(0)) ]
 
@@ -849,7 +850,7 @@ screen file_slots_save():
 
                     add FileScreenshot(slot) xalign 0.0
             
-                    text FileTime(slot, format=_("{#file_time}%A, %B %d %Y, %H:%M "), empty=_("")):
+                    text FileTime(slot, format=_("{#file_time}%B %d %Y, %H:%M "), empty=_("")):
                         style "slot_time_text"
 
                     text FileSaveName(slot):

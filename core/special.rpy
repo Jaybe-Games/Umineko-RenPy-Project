@@ -115,5 +115,6 @@ init -10 python:
             #except:
                 #pass
 
-image title_menu = "gui/title/menu.png"
+image copyright = "gui/title/copyright.png"
+image titlehana = "gui/title/title_hana.png"
 image menu_bg = "gui/title/bg.png"

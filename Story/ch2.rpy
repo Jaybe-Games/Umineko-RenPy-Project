@@ -5,7 +5,6 @@ label chapter2:
         $ chapter = 2
         $ songname = "-"
         $ renpy.free_memory()
-        $ save_name = "Kapitel 2: Die Hexe auf dem Balkon"
         if persistent.showch == True:
                 show screen showch
         pause 2
