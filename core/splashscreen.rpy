@@ -2,7 +2,7 @@
 label splashscreen:
 
 #jump beatricechess
-jump test2
+#jump test2
 #jump debug
 
 if not renpy.seen_label("start"):

@@ -5,6 +5,7 @@ label start:
     $ discord.update(details = "Prologue")
     $ chapter = 0
     $ songname = "-"
+    $ save_name = _("Prolog: Ich schreibe an dich in einer Quadrillion Jahren")
     #show screen Debugscreen
     if persistent.alreadyread1 == False:
         $ persistent.alreadyread1 = True

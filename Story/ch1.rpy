@@ -6,6 +6,7 @@ label chapter1:
     $ songname = "-"
     $ persistent.openingplayed = True
     $ renpy.free_memory()
+    $ save_name = _("Kapitel 1: Bootsfahrt nach Rokkenjima")
     if persistent.showch == True:
         show screen showch
     play sound "audio/sfx/umise_028.ogg"

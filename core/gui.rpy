@@ -31,11 +31,11 @@ define gui.idle_color = '#FFFFFF'
 define gui.idle_small_color = '#ffffff'
 
 ## The color that is used for buttons and bars that are hovered.
-define gui.hover_color = '#FF8300'
+define gui.hover_color = '#ff7b00'
 
 ## The color used for a text button when it is selected but not focused. A
 ## button is selected if it is the current screen or preference value.
-define gui.selected_color = '#FF8300'
+define gui.selected_color = '#ff7b00'
 
 ## The color used for a text button when it cannot be selected.
 define gui.insensitive_color = '#888888ff'
@@ -225,22 +225,20 @@ define gui.choice_button_text_insensitive_color = "#444444"
 ## image files in gui/button, like the other kinds of buttons.
 
 ## The save slot button.
-define gui.slot_button_width = 365
-define gui.slot_button_height = 275
-define gui.slot_button_borders = Borders(14, 14, 14, 14)
-define gui.slot_button_text_size = 10
-define gui.slot_button_text_xalign = 0.5
-define gui.slot_button_text_ypos = 30
-define gui.slot_button_text_idle_color = gui.idle_small_color
-define gui.slot_button_text_selected_idle_color = gui.selected_color
-define gui.slot_button_text_selected_hover_color = gui.hover_color
+define gui.slot_button_width = 1500
+define gui.slot_button_height = 206
+define gui.slot_button_borders = Borders(14, 10, 14, 14)
+define gui.slot_button_text_size = 30
+define gui.slot_button_text_xalign = 1.0
+define gui.slot_button_text_ypos = 0
+define gui.slot_button_text_width = 500
 
 ## The width and height of thumbnails used by the save slots.
 define config.thumbnail_width = 336
 define config.thumbnail_height = 189
 
 ## The number of columns and rows in the grid of save slots.
-define gui.file_slot_cols = 4
+define gui.file_slot_cols = 1
 define gui.file_slot_rows = 3
 
 
@@ -277,7 +275,7 @@ define gui.pref_button_xalign = 300
 define gui.page_spacing = -20
 
 ## The spacing between file slots.
-define gui.slot_spacing = 0
+define gui.slot_spacing = 50
 
 ## The position of the main menu text.
 define gui.main_menu_text_xalign = 1.0

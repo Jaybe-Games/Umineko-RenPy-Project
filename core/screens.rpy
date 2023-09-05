@@ -835,7 +835,7 @@ screen file_slots_save():
             style_prefix "slot"
 
             xalign 0.5
-            yalign 0.8
+            yalign 0.7
 
             spacing gui.slot_spacing
 
@@ -846,15 +846,13 @@ screen file_slots_save():
                 button:
                     action FileAction(slot)
 
-                    has vbox
-
                     add FileScreenshot(slot) xalign 0.0
-            
+
                     text FileTime(slot, format=_("{#file_time}%B %d %Y, %H:%M "), empty=_("")):
-                        style "slot_time_text"
+                        style "new_slot_time_text"
 
                     text FileSaveName(slot):
-                        style "slot_name_text"
+                        style "new_slot_name_text"
 
                     key "save_delete" action FileDelete(slot)
 
@@ -914,6 +912,34 @@ style slot_button_text:
     ypos 40
     size 30
 
+style new_slot_time_text:
+    size 45
+    xalign 0.0
+    ypos 20
+    xpos 350
+    outlines [ (absolute(2), "#00000094", absolute(0), absolute(0)) ]
+    idle_color "#fff"
+    hover_color "#fff"
+
+style new_slot_name_text:
+    size 38
+    xalign 0.0
+    ypos 80
+    xpos 350
+    font "fonts/AOTFShinGoProMedium.otf"
+    outlines [ (absolute(2), "#00000094", absolute(0), absolute(0)) ]
+    idle_color "#fff"
+    hover_color "#fff"
+    
+
+style new_slot_episode_text:
+    size 45
+    xalign 0.0
+    ypos 60
+    xpos 350
+    font "fonts/AOTFShinGoProMedium.otf"
+    
+
 screen file_slots_load():
 
     default page_name_value = FilePageNameInputValue(pattern=_("Seite {}"), auto=_("Automatische Spielstände"), quick=_("Schnell Speicherungen"))
@@ -949,7 +975,7 @@ screen file_slots_load():
             style_prefix "slot"
 
             xalign 0.5
-            yalign 0.8
+            yalign 0.7
 
             spacing gui.slot_spacing
 
@@ -960,15 +986,13 @@ screen file_slots_load():
                 button:
                     action FileAction(slot)
 
-                    has vbox
-
                     add FileScreenshot(slot) xalign 0.0
-            
-                    text FileTime(slot, format=_("{#file_time}%A, %B %d %Y, %H:%M "), empty=_("")):
-                        style "slot_time_text"
+
+                    text FileTime(slot, format=_("{#file_time}%B %d %Y, %H:%M "), empty=_("")):
+                        style "new_slot_time_text"
 
                     text FileSaveName(slot):
-                        style "slot_name_text"
+                        style "new_slot_name_text"
 
                     key "save_delete" action FileDelete(slot)
 
