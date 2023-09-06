@@ -7,6 +7,7 @@ label start:
     $ songname = "-"
     $ save_name = _("Episode0 Auferstehung der Goldenen Hexe\nIch schreibe an dich in einer Quadrillion Jahren")
     #show screen Debugscreen
+    stop music
     if persistent.alreadyread1 == False:
         $ persistent.alreadyread1 = True
         $ persistent.menustate = 1
@@ -89,6 +90,8 @@ label start:
     "Das Kind wurde im selben Raum wie die Leiche gefunden." 
     extend " Es gab keine Blutspuren oder ähnliches an dem Kind."
     "Das Kind war vermutlich zu Hause, hat den Mord nicht mitbekommen, fand später seine eigene Mutter tot auf und rief die Polizei."
+    play sound "audio/sfx/umise_038.ogg"
+    show blood with dissolve
     "Die Küche, in der die Tote gefunden wurde, sah aus wie ein großes Schlachthaus."
     "Als die Beamten die Leiche fanden, fiel ihnen auf, dass es so aussah, als hätte sich die Frau mit einem Strick umgebracht."
     "Ihre Hände und Füße waren abgetrennt." 

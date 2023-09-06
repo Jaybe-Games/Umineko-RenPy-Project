@@ -1342,5 +1342,5 @@ translate English strings:
 
     # game/Story/ch2.rpy:8
     old "Episode0 Auferstehung der Goldenen Hexe\nDie Hexe auf dem Balkon"
-    new "Episode0 Auferstehung der Goldenen Hexe\nDie Hexe auf dem Balkon"
+    new "Episode0 Resurrection of the golden witch\nThe witch on the balcony"
 

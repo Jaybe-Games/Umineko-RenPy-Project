@@ -1,3 +1,8 @@
+label main_menu:
+    if renpy.seen_label("start"):
+        call screen main_menu()
+    return
+
 
 label splashscreen:
 
@@ -11,11 +16,12 @@ if not renpy.seen_label("start"):
         "English":
             $ renpy.change_language("English")
             hide text
-            jump start
+            return
+            
 
         "Deutsch":
             hide text
-            jump start
+            return
 
 scene black with dissolve
 pause (1)
@@ -138,6 +144,9 @@ label after_load:
     play sound "audio/sfx/umise_1006.ogg"
 
 label before_main_menu:
+    if not renpy.seen_label("start"):
+        stop music
+        return
     if persistent.newelement1 == True:
         $ persistent.newelement1 = False
         play effect "audio/sfx/umise_022.ogg"

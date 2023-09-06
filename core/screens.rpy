@@ -1321,27 +1321,17 @@ screen history():
                                 style "history_name"
                                 substitute False
 
-                                ## Take the color of the who text from the Character, if
-                                ## set.
+                        ## Take the color of the who text from the Character, if
+                        ## set.
                                 if "color" in h.who_args:
                                     text_color h.who_args["color"]
 
                         $ what = renpy.filter_text_tags(h.what, allow=gui.history_allow_tags)
                         text what:
-                            line_spacing 5
                             substitute False
 
-
-                    ## This puts some space between entries so it's easier to read
-                    null height 15
-
                 if not _history_list:
-
-                    text "Keine Nachrichten vorhanden." line_spacing 10
-                    ## Adding line_spacing prevents the bottom of the text
-                    ## from getting cut off. Adjust when replacing the
-                    ## default fonts.
-
+                    label _("Keine Nachrichten vorhanden")
 
 ## This determines what tags are allowed to be displayed on the history screen.
 

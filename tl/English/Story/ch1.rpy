@@ -5692,5 +5692,5 @@ translate English strings:
 
     # game/Story/ch1.rpy:9
     old "Episode0 Auferstehung der Goldenen Hexe\nBootsfahrt nach Rokkenjima"
-    new "Episode0 Auferstehung der Goldenen Hexe\nBootsfahrt nach Rokkenjima"
+    new "Episode0 Resurrection of the golden witch\nBoattrip to Rokkenjima"
 
