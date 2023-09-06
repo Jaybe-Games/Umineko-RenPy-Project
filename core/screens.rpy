@@ -835,7 +835,7 @@ screen file_slots_save():
             style_prefix "slot"
 
             xalign 0.5
-            yalign 0.7
+            yalign 0.68
 
             spacing gui.slot_spacing
 
@@ -848,13 +848,18 @@ screen file_slots_save():
 
                     add FileScreenshot(slot) xalign 0.0
 
-                    text FileTime(slot, format=_("{#file_time}%B %d %Y, %H:%M "), empty=_("")):
+                    text FileTime(slot, format=_("{#file_time}%Y/%b/%d   %H:%M "), empty=_("Freies Lesezeichen")):
                         style "new_slot_time_text"
 
                     text FileSaveName(slot):
                         style "new_slot_name_text"
 
+
                     key "save_delete" action FileDelete(slot)
+
+                    activate_sound "audio/sys/sysse_decide.wav" 
+                    
+                    hover_sound "audio/sys/sysse_move.wav"
 
             ## Buttons to access other pages.
         vbox:
@@ -913,32 +918,23 @@ style slot_button_text:
     size 30
 
 style new_slot_time_text:
-    size 45
-    xalign 0.0
-    ypos 20
-    xpos 350
-    outlines [ (absolute(2), "#00000094", absolute(0), absolute(0)) ]
+    size 35
+    xalign 0.97
+    ypos 48
+    outlines [ (absolute(3), "#583131ff", absolute(0), absolute(0)) ]
     idle_color "#fff"
     hover_color "#fff"
+    font "fonts/Montio-Regular.otf"
 
 style new_slot_name_text:
-    size 38
-    xalign 0.0
-    ypos 80
-    xpos 350
-    font "fonts/AOTFShinGoProMedium.otf"
-    outlines [ (absolute(2), "#00000094", absolute(0), absolute(0)) ]
+    size 45
+    ypos 130
+    xpos 360
+    font "fonts/Montio-Regular.otf"
+    outlines [ (absolute(3), "#583131ff", absolute(0), absolute(0)) ]
     idle_color "#fff"
     hover_color "#fff"
-    
-
-style new_slot_episode_text:
-    size 45
-    xalign 0.0
-    ypos 60
-    xpos 350
-    font "fonts/AOTFShinGoProMedium.otf"
-    
+    line_spacing 10
 
 screen file_slots_load():
 
@@ -975,7 +971,7 @@ screen file_slots_load():
             style_prefix "slot"
 
             xalign 0.5
-            yalign 0.7
+            yalign 0.68
 
             spacing gui.slot_spacing
 
@@ -988,13 +984,17 @@ screen file_slots_load():
 
                     add FileScreenshot(slot) xalign 0.0
 
-                    text FileTime(slot, format=_("{#file_time}%B %d %Y, %H:%M "), empty=_("")):
+                    text FileTime(slot, format=_("{#file_time}%Y/%b/%d   %H:%M "), empty=_("Freies Lesezeichen")):
                         style "new_slot_time_text"
 
                     text FileSaveName(slot):
                         style "new_slot_name_text"
 
                     key "save_delete" action FileDelete(slot)
+
+                    activate_sound "audio/sys/sysse_decide.wav" 
+                    
+                    hover_sound "audio/sys/sysse_move.wav"
 
             ## Buttons to access other pages.
         vbox:

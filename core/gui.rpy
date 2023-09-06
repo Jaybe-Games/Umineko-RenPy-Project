@@ -229,7 +229,7 @@ define gui.slot_button_width = 1500
 define gui.slot_button_height = 206
 define gui.slot_button_borders = Borders(14, 10, 14, 14)
 define gui.slot_button_text_size = 30
-define gui.slot_button_text_xalign = 1.0
+define gui.slot_button_text_xalign = 0.0
 define gui.slot_button_text_ypos = 0
 define gui.slot_button_text_width = 500
 
@@ -275,7 +275,7 @@ define gui.pref_button_xalign = 300
 define gui.page_spacing = -20
 
 ## The spacing between file slots.
-define gui.slot_spacing = 50
+define gui.slot_spacing = 20
 
 ## The position of the main menu text.
 define gui.main_menu_text_xalign = 1.0

@@ -34,3 +34,15 @@ translate English strings:
     old "DE-German"
     new "DE-German"
 
+# TODO: Translation updated at 2023-09-06 15:08
+
+translate English strings:
+
+    # game/core/splashscreen.rpy:10
+    old "English"
+    new "English"
+
+    # game/core/splashscreen.rpy:10
+    old "Deutsch"
+    new "Deutsch"
+

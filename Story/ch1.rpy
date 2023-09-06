@@ -1,12 +1,12 @@
 label chapter1:
 
-    $ discord.update(state = "Episode 0")
-    $ discord.update(details = "Chapter 1")
+    #$ discord.update(state = "Episode 0")
+    #$ discord.update(details = "Chapter 1")
     $ chapter = 1
     $ songname = "-"
     $ persistent.openingplayed = True
     $ renpy.free_memory()
-    $ save_name = _("Kapitel 1: Bootsfahrt nach Rokkenjima")
+    $ save_name = _("Episode0 Auferstehung der Goldenen Hexe\nBootsfahrt nach Rokkenjima")
     if persistent.showch == True:
         show screen showch
     play sound "audio/sfx/umise_028.ogg"

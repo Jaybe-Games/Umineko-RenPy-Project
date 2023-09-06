@@ -133,3 +133,15 @@ translate English strings:
     old "Spielzeit: "
     new "playtime: "
 
+# TODO: Translation updated at 2023-09-06 15:08
+
+translate English strings:
+
+    # game/core/screens.rpy:851
+    old "{#file_time}%Y/%b/%d   %H:%M "
+    new "{#file_time}%Y/%b/%d   %H:%M "
+
+    # game/core/screens.rpy:851
+    old "Freies Lesezeichen"
+    new "unused bookmark"
+

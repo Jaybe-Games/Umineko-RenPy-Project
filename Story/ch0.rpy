@@ -1,11 +1,11 @@
 
 label start:
 
-    $ discord.update(state = "Episode 0")
-    $ discord.update(details = "Prologue")
+    #$ discord.update(state = "Episode 0")
+    #$ discord.update(details = "Prologue")
     $ chapter = 0
     $ songname = "-"
-    $ save_name = _("Prolog: Ich schreibe an dich in einer Quadrillion Jahren")
+    $ save_name = _("Episode0 Auferstehung der Goldenen Hexe\nIch schreibe an dich in einer Quadrillion Jahren")
     #show screen Debugscreen
     if persistent.alreadyread1 == False:
         $ persistent.alreadyread1 = True

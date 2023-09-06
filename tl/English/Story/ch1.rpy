@@ -5674,3 +5674,23 @@ translate English chapter1_5e3383ee:
     # extend " selbst dann, wenn er den Befehl erhalten würde, sein eigenes Leben herzugeben."
     extend " even if he were ordered to give up his own life."
 
+# TODO: Translation updated at 2023-09-06 15:08
+
+# game/Story/ch1.rpy:1131
+translate English chapter1_b739f49d:
+
+    # extend " ....Ihr habt mich erwischt, Jessica-sama.”"
+    extend " ....Ihr habt mich erwischt, Jessica-sama.”"
+
+# game/Story/ch1.rpy:1559
+translate English chapter1_7928e858:
+
+    # extend " öffne die Tür!"
+    extend " öffne die Tür!"
+
+translate English strings:
+
+    # game/Story/ch1.rpy:9
+    old "Episode0 Auferstehung der Goldenen Hexe\nBootsfahrt nach Rokkenjima"
+    new "Episode0 Auferstehung der Goldenen Hexe\nBootsfahrt nach Rokkenjima"
+

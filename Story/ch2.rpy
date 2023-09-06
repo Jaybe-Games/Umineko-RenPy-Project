@@ -1,11 +1,11 @@
 label chapter2:
 
-        $ discord.update(state = "Episode 0")
-        $ discord.update(details = "Chapter 2")
+        #$ discord.update(state = "Episode 0")
+        #$ discord.update(details = "Chapter 2")
         $ chapter = 2
         $ songname = "-"
         $ renpy.free_memory()
-        $ save_name = _("Kapitel 2: Die Hexe auf dem Balkon")
+        $ save_name = _("Episode0 Auferstehung der Goldenen Hexe\nDie Hexe auf dem Balkon")
         if persistent.showch == True:
                 show screen showch
         pause 2

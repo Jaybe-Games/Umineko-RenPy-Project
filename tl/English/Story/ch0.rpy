@@ -378,3 +378,81 @@ translate English start_10c79ec3:
     # "Mehr konnten meine Kollegen und ich bisher nicht herausfinden, so dass wir leider immer noch im Dunkeln tappen."
     "That's all my staff and I have been able to find out so far, so unfortunately we are still in the dark."
 
+# TODO: Translation updated at 2023-09-06 15:08
+
+# game/Story/ch0.rpy:74
+translate English start_213196d4:
+
+    # nvltext "1. die folgenden strafrechtlichen Ermittlungen als Verschlusssache zu behandeln"
+    nvltext "1. die folgenden strafrechtlichen Ermittlungen als Verschlusssache zu behandeln"
+
+# game/Story/ch0.rpy:75
+translate English start_c4c60be9:
+
+    # nvltext "Station Okinomiya 1983 Fallnummer 862"
+    nvltext "Station Okinomiya 1983 Fallnummer 862"
+
+# game/Story/ch0.rpy:76
+translate English start_462f8916:
+
+    # nvltext "Tötung einer alleinerziehenden Mutter mit zwei Kindern im Dorf Hinamizawa (Datum: April 1983)."
+    nvltext "Tötung einer alleinerziehenden Mutter mit zwei Kindern im Dorf Hinamizawa (Datum: April 1983)."
+
+# game/Story/ch0.rpy:77
+translate English start_3a06f009:
+
+    # extend " Dieser Fall steht in keinem Zusammenhang mit den jährlichen Morden vom Juni 1979 bis 1982."
+    extend " Dieser Fall steht in keinem Zusammenhang mit den jährlichen Morden vom Juni 1979 bis 1982."
+
+# game/Story/ch0.rpy:78
+translate English start_035d2327:
+
+    # nvltext "Die Leiche einer alleinerziehenden Mutter wurde an einem Morgen im April 1983 in ihrem Haus, genauer gesagt in ihrer Küche, tot aufgefunden."
+    nvltext "Die Leiche einer alleinerziehenden Mutter wurde an einem Morgen im April 1983 in ihrem Haus, genauer gesagt in ihrer Küche, tot aufgefunden."
+
+# game/Story/ch0.rpy:79
+translate English start_2bb38455:
+
+    # extend " Wir konnten nur eines der beiden Kinder bergen, das andere wird noch vermisst."
+    extend " Wir konnten nur eines der beiden Kinder bergen, das andere wird noch vermisst."
+
+# game/Story/ch0.rpy:80
+translate English start_4620fe82:
+
+    # nvl clear
+    # nvltext "Wahrscheinlich handelt es sich um eine Kindesentführung. Die Polizei tut bereits alles um das entführte Kind zu finden."
+    nvl clear
+    nvltext "Wahrscheinlich handelt es sich um eine Kindesentführung. Die Polizei tut bereits alles um das entführte Kind zu finden."
+
+# game/Story/ch0.rpy:82
+translate English start_df946b7a:
+
+    # extend " Das geborgene Kind steht noch unter schwerem Schock und kann noch nicht sprechen,"
+    extend " Das geborgene Kind steht noch unter schwerem Schock und kann noch nicht sprechen,"
+
+# game/Story/ch0.rpy:84
+translate English start_baad1251:
+
+    # nvl clear
+    # nvltext "Ende der öffentlichen Mitteilung."
+    nvl clear
+    nvltext "Ende der öffentlichen Mitteilung."
+
+# game/Story/ch0.rpy:86
+translate English start_76b2fe88:
+
+    # nvl clear
+    nvl clear
+
+# game/Story/ch0.rpy:98
+translate English start_af958953:
+
+    # "Außerdem gab es Kampfspuren im Raum. Die Frau hat den Täter wahrscheinlich gesehen und sich gewehrt haben."
+    "Außerdem gab es Kampfspuren im Raum. Die Frau hat den Täter wahrscheinlich gesehen und sich gewehrt haben."
+
+translate English strings:
+
+    # game/Story/ch0.rpy:8
+    old "Episode0 Auferstehung der Goldenen Hexe\nIch schreibe an dich in einer Quadrillion Jahren"
+    new "Episode0 Resurrection of the golden witch\nWriting to you in a quadrillion years"
+
