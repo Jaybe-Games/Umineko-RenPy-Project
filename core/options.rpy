@@ -225,8 +225,8 @@ define config.developer = True
 
 
 
-define config.default_music_volume = 0.5
-define config.default_sfx_volume = 0.5
+define config.default_music_volume = 0.6
+define config.default_sfx_volume = 0.7
 
 
 ## Save directory ##############################################################
@@ -309,6 +309,7 @@ init python:
     build.classify('**/**.icns', 'images')
     build.classify('**/**.ogg', 'audio')
     build.classify('**/**.mp3', 'audio')
+    build.classify('**/**.wav', 'audio')
     build.classify('**/**.rpyc', 'scripts')
     build.classify('**/**.json', 'scripts')
     build.classify('**.json', 'scripts')
