@@ -140,8 +140,8 @@ transform slowerboat:
     subpixel True
     zoom 1.05
     xalign 0.5
-    yalign 0.5
-    ease 4.9333333333333334 offset (0, 180)
+    yalign 0.7
+    ease 4.9333333333333334 offset (0, 40)
     ease 4.9333333333333334 offset (0,-25)
     repeat
 

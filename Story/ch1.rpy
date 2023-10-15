@@ -878,14 +878,15 @@ label chapter1:
     extend " .....Ein Unglück wird geschehen!......”"
     play sound "audio/sfx/umise_027.ogg"
     scene ship_s2b
-    call rainlayer from _call_rainlayer_8
+    show rainbackscroll
+    show rainfrontscroll    
     camera at boatswing,slowerboat
     play rain "audio/sfx/umilse_012.ogg"
     play wind "audio/sfx/umilse_005.ogg"
     play ship "audio/sfx/umilse_004.ogg"
-    show but b22odoroki2 behind rain at leftedge
-    show geo a11komaru1 behind rain at rightedge
-    show mar a11defo1 behind rain at m
+    show but b22odoroki2 behind rainfrontscroll at leftedge
+    show geo a11komaru1 behind rainfrontscroll at rightedge
+    show mar a11defo1 behind rainfrontscroll at m
     with quickflash 
     "Mit diesen Worten, als hätte Maria gerade den Befehl dazu gegeben, hörte man es donnern und sofort begann es zu regnen."
     extend " ....Nicht nur Battler lief deswegen ein kalter Schauer über den Rücken."
@@ -897,10 +898,10 @@ label chapter1:
     hide but  
     hide mar  
     hide geo  
-    show but b11warai3 behind rain at m
+    show but b11warai3 behind rainfrontscroll at m
     with quickergradientwiperight
     but "“Du hast also gemerkt, dass es ein schlimmes Unwetter wird?”"
-    show mar a11defo1 behind rain at rightedge with dis
+    show mar a11defo1 behind rainfrontscroll at rightedge with dis
     mar "“..........Uu~”"
     but "“Die Wettervorhersage sagt, dass der Taifun erst gegen Mittag kommen wird. Aber er ist schon da."
     extend b11warai2 " ....Das nenne ich wirklich ein Unglück...."
@@ -908,8 +909,8 @@ label chapter1:
     but "Maria, ich bin sicher, dass dieser Taifun schneller vorbei ist, als du bis zehn zählen kannst. Alles wird gut.”"
     "Battler versucht Maria zu beruhigen, dass sie keine Angst vor dem Taifun haben muss, aber Marias Gesichtsausdruck spricht eine ganz andere Sprache."
     play sound "audio/sfx/umise_011.ogg"
-    show mar a22sakebu1 behind rain at rightedge,jumping
-    show but b11aseru1 behind rain at m
+    show mar a22sakebu1 behind rainfrontscroll at rightedge,jumping
+    show but b11aseru1 behind rainfrontscroll at m
     with vpunch
     mar "“Uu~!!"
     extend " Uu~!!Uu~!!Uu~!!Uu~!!Uu~!!Uu~!!"
@@ -917,15 +918,15 @@ label chapter1:
     "Wütend stampft Maria gefolgt von lauten 'Uus' da ihr anscheinend keiner zuhören möchte."
     hide but  
     hide mar  
-    show jes a11majime1 behind rain at m
+    show jes a11majime1 behind rainfrontscroll at m
     with quickergradientwiperight
     jes "“Maria, warum sagst du sowas?”"
-    show kum a12majime1 behind rain at l with dis
+    show kum a12majime1 behind rainfrontscroll at l with dis
     kum "“Es ist klar, dass sie etwas im Blick hat, das im Alter schnell verloren geht."
     extend " Sehr junge Menschen haben einen Sinn für das Übernatürliche..."
     extend " Aber dieses Gefühl wird schwächer, je älter man wird."
     kum "Was Maria fühlen kann, kann nur sie fühlen, weil sie die Jüngste hier ist.”"
-    show but b22odoroki2 behind rain at rightedge with dis
+    show but b22odoroki2 behind rainfrontscroll at rightedge with dis
     "Battler erstarrt bei diesen Worten, ist das wirklich möglich? denkt er, das kann es doch gar nicht geben..."
     extend " Viel mehr ist es so, dass das seltsame Verhalten von Maria und die angespannte Atmospähre ihm diese Erklärung für einen kurzen Moment logisch vorkommen lässt."
     kum "“Es scheint so, dass in der Vergangenheit von Rokkenjima eine Hexe....”"
@@ -939,9 +940,10 @@ label chapter1:
     camera 
     with quickergradientwiperight
     scene ship_s2b
-    call rainlayer from _call_rainlayer_9
+    show rainbackscroll
+    show rainfrontscroll    
     camera at boatswing,slowerboat
-    show hid a21warai1 behind rain at m
+    show hid a21warai1 behind rainfrontscroll at m
     with quickergradientwiperight
     hid "Huuhuu!"
     extend " ....Wir haben Regenschirme an Bord, also habe ich sie hergebracht!"
@@ -953,12 +955,13 @@ label chapter1:
     with quickergradientwiperight
     scene ship_s2ab
     camera at boatswing,slowerboat
-    call rainlayer from _call_rainlayer_10
-    show rud a11defo2 behind rain at m
+    show rainbackscroll
+    show rainfrontscroll    
+    show rud a11defo2 behind rainfrontscroll at m
     with quickergradientwiperight
     rud "“*seufz*”"
     "Rudolf stieß einen tiefen Seufzer aus, während er sich eine Zigarette anzündete, weil ihn etwas sehr beschäftigte, und niemand außer Eva schien diesen Seufzer gehört zu haben."
-    show eva a11hohoemi1 behind rain at rightedge with dis
+    show eva a11hohoemi1 behind rainfrontscroll at rightedge with dis
     eva "“Was ist los Rudolf?" 
     extend " ....irgendwelche Sorgen wegen heute Abend?"
     extend " ...Wir müssen uns nur genau an das halten, was wir besprochen haben, dann können wir gegen Krauss gewinnen.”"
@@ -996,8 +999,9 @@ label chapter1:
     stop ship fadeout 3
     stop music fadeout 3
     scene ship_s1ab
-    call rainlayer from _call_rainlayer_11
-    show sha a11defo1 behind rain at m
+    show rainbackscroll
+    show rainfrontscroll    
+    show sha a11defo1 behind rainfrontscroll at m
     with quickergradientwiperight
     sha "“Entschuldigung, liebe Gäste," 
     extend " das Schiff legt gleich an!"
@@ -1007,10 +1011,10 @@ label chapter1:
     queue music "audio/bgm/umib_011_loop.ogg" loop 
     if persistent.showbgm == True:
         show screen showsong
-    show geo a12warai1 behind rain at l with dis
+    show geo a12warai1 behind rainfrontscroll at l with dis
     geo "“Das hast du gut gesagt, Shannon-chan."
     extend " Genau wie ich es von dir erwartet habe.”"
-    show sha a11hajirai2 behind rain at r with dis
+    show sha a11hajirai2 behind rainfrontscroll at r with dis
     sha "“George-sama...." 
     extend " D-"
     extend "Das ist zu viel des Lobes..."
@@ -1029,8 +1033,9 @@ label chapter1:
     camera 
     with quickergradientwiperight
     scene ship_s1ab
-    call rainlayer from _call_rainlayer_12
-    show sha a11defo1 behind rain at m
+    show rainbackscroll
+    show rainfrontscroll
+    show sha a11defo1 behind rainfrontscroll at m
     with quickergradientwiperight
     if persistent.shannon == False:
         $ persistent.shannon = True
@@ -1045,12 +1050,13 @@ label chapter1:
     camera 
     with quickergradientwiperight
     scene ship_s1ab
-    call rainlayer from _call_rainlayer_13
-    show but b11warai2 behind rain at m
+    show rainbackscroll
+    show rainfrontscroll
+    show but b11warai2 behind rainfrontscroll at m
     with quickergradientwiperight
     but "“Sag mal Jessica-chan," 
     extend " ...kann es sein, dass die beiden sich ein bisschen nahe stehen?”"
-    show jes a11tereru2 behind rain at rightedge with dis
+    show jes a11tereru2 behind rainfrontscroll at rightedge with dis
     jes "“.....wahahahaha" 
     extend " .....wahahahaha," 
     extend " das hast du so schnell kapiert?”"
@@ -1079,8 +1085,9 @@ label chapter1:
     camera 
     with quickergradientwiperight
     scene ship_s1ab
-    call rainlayer from _call_rainlayer_14
-    show goh a11defo1 behind rain at m
+    show rainbackscroll
+    show rainfrontscroll
+    show goh a11defo1 behind rainfrontscroll at m
     with quickergradientwiperight
     goh "“Meine Damen und Herren, herzlich willkommen auf der Insel Rokkenjima!”"
     extend " ...Auch wenn uns dieses Wochenende ein schlimmer Taifun erwartet..." 
@@ -1089,7 +1096,7 @@ label chapter1:
     goh "Wenn Sie nun so freundlich wären, mir Ihr Gepäck zu überlassen."
     extend " Wir müssen uns sputen und schnell das Gästehaus erreichen."
     "Ein freundlicher Bediensteter der Familie nimmt die angereisten Verwandten in Empfang, um sie und ihr Gepäck in das Gästehaus zu bringen."
-    show jes a11defo2 behind rain at l with dis
+    show jes a11defo2 behind rainfrontscroll at l with dis
     jes "“Vielen Dank, Gohda-san, ich glaube, die meisten von uns kommen jedes Jahr hierher, nur um deine leckeren Gerichte zu essen.”"
     goh a11hohoemi1 "“Mit solchen Worten macht das Kochen gleich viel mehr Spaß!"
     goh "Ich muss allerdings sagen, dass wir euch schon 20 Minuten früher erwartet haben, das ist nicht gut für unseren Zeitplan....."
@@ -1098,8 +1105,9 @@ label chapter1:
     camera 
     with quickergradientwiperight
     scene ship_s1ab
-    call rainlayer from _call_rainlayer_15
-    show goh a11defo1 behind rain at m
+    show rainbackscroll
+    show rainfrontscroll
+    show goh a11defo1 behind rainfrontscroll at m
     with quickergradientwiperight
     if persistent.gohda == False:
         $ persistent.gohda = True
@@ -1112,15 +1120,16 @@ label chapter1:
     camera 
     with quickergradientwiperight
     scene ship_s1ab
-    call rainlayer from _call_rainlayer_16
-    show kum a12defo2 behind rain at m
+    show rainbackscroll
+    show rainfrontscroll
+    show kum a12defo2 behind rainfrontscroll at m
     with quickergradientwiperight
     kum "“Aber vergiss nicht, dass es heute zum Mittagessen meine speziellen Spaghetti mit würziger Makrelenrahmsauce nach meinem Geheimrezept gibt, Gohda!" 
     extend " ....Ohohohohoh!"
     kum "Man muss sie einfach probieren..." 
     extend " ....Es gibt nichts Besseres als frische, saftige Makrelen." 
     extend " ....Ohohohoh!”"
-    show jes a11atya3 behind rain at r with dis
+    show jes a11atya3 behind rainfrontscroll at r with dis
     jes "“.....Ich denke, ich passe....”"
     kum a11defo2 "“Aber Jessica-sama, Ihr könnt euch doch nicht die ganze Zeit von Junkfood ernähren!"
     extend " Gebt der Makrele eine Chance!”"
@@ -1133,13 +1142,14 @@ label chapter1:
     camera 
     with quickergradientwiperight
     scene beach_1ab
-    call rainlayer from _call_rainlayer_17
-    show rud a11akuwarai2 behind rain at r
+    show rainbackscroll
+    show rainfrontscroll
+    show rud a11akuwarai2 behind rainfrontscroll at r
     with quickergradientwiperight
     rud "“Hey Battler-kun!" 
     extend " ...Wenn dir immer noch schwindelig ist und du dich gleich auf den Esstisch übergibst," 
     extend " ....kannst du nach Hause schwimmen.”"
-    show but a11niramu3 behind rain at l with dis
+    show but a11niramu3 behind rainfrontscroll at l with dis
     but "“....Lass es gut sein!" 
     extend " Es geht mir schon besser."
     extend " Danke der Nachfrage," 
@@ -1152,12 +1162,12 @@ label chapter1:
     extend " ...ihihihi"
     but a11niramu3 "........ahh" 
     play sound "audio/sfx/umise_003.ogg"
-    show but a11niramu3 behind rain at l,run
+    show but a11niramu3 behind rainfrontscroll at l,run
     hide but with dissolve
     extend " .......*würg*"
     "Battler versuchte sein Schwindelgefühl herunterzuspielen, verlor aber gegen die Übelkeit und erbrach in den nächsten Busch."
     hide rud  
-    show eva b22akire2 behind rain at m
+    show eva b22akire2 behind rainfrontscroll at m
     with quickergradientwiperight
     eva "“....Meine Güte, Battler-kun....." 
     extend " ....*kicher*"
@@ -1171,17 +1181,18 @@ label chapter1:
     camera 
     with quickergradientwiperight
     scene beach_1ab
-    call rainlayer from _call_rainlayer_18
-    show goh a11komaru1 behind rain at m
+    show rainbackscroll
+    show rainfrontscroll
+    show goh a11komaru1 behind rainfrontscroll at m
     with quickergradientwiperight
     goh "“Liebe Gäste, wir haben Verspätung und der Sturm wird immer stärker!" 
     extend " ...Wir müssen sofort ins Gästehaus!"
     "Plötzlich platzt Gohda in unsere Gespräche und tickt mehrmals mit dem Zeigefinger in kurzen Abständen auf seine Armbanduhr."
     goh "Wir müssen uns beeilen, wir haben viel Zeit verloren, und Madam wird sehr böse sein, wenn wir nicht bald ankommen.”"
-    show but b22warai1 behind rain at l with dis
+    show but b22warai1 behind rainfrontscroll at l with dis
     but "“Beruhige dich, Gohda-san, wir sind jetzt alle da und bereit, ins Gästehaus zu gehen.”"
     hide goh   
-    show jes a12ikari1 behind rain at m
+    show jes a12ikari1 behind rainfrontscroll at m
     with dis
     jes "“Hättest du nicht ins Meer gekotzt und hätte ich nicht den Kapitän angefleht, langsamer zu fahren, wären wir jetzt nicht im Verzug, Freund Nase!"
     extend " .....Dafür müsste ich dir die Prügel rausschmeißen, bis mir die Puste ausgeht....”"
@@ -1191,7 +1202,7 @@ label chapter1:
     jes b22warai1 "“Ahahahaha," 
     extend " ...das würde ich zu gerne sehen!"
     extend " ...Kannst mir ja dann verraten, wie man von der Insel weg kommt.”"
-    show mar a11uuu1 behind rain at rightedge with dis
+    show mar a11uuu1 behind rainfrontscroll at rightedge with dis
     mar "“....Uu???"
     extend " Battler kann Magie benutzen?”"
     jes "“Ganz genau Maria-chan, Battler kann Magie benutzen, aber nicht nur Battler!"
@@ -1211,13 +1222,14 @@ label chapter1:
     camera 
     with quickergradientwiperight
     scene beach_1ab
-    call rainlayer from _call_rainlayer_19
-    show geo a11majime2 behind rain at m
+    show rainbackscroll
+    show rainfrontscroll
+    show geo a11majime2 behind rainfrontscroll at m
     with quickergradientwiperight
     geo "“Battler-kun...." 
     extend " Jessica-chan..." 
     extend " Ihr müsst vorsichtiger sein mit euren Witzen in Marias Umgebung, wie ihr erneut seht, nimmt sie alles viel zu ernst.”"
-    show but b22nayamu1 behind rain at rightedge with dis
+    show but b22nayamu1 behind rainfrontscroll at rightedge with dis
     but "“Entschuldige... Aniki...”"
     "'Aniki' bedeutet so viel wie 'großer Bruder', was aber keinen Sinn macht, weil wir ja Cousins sind und keine Geschwister..."
     extend " Aber es hat sich bei uns so eingebürgert, also ist es in Ordnung, auch weil George älter ist als ich."
@@ -1226,14 +1238,15 @@ label chapter1:
     camera 
     with quickergradientwiperight
     scene beach_1ab
-    call rainlayer from _call_rainlayer_20
-    show mar a22warai2 behind rain at l
+    show rainbackscroll
+    show rainfrontscroll
+    show mar a22warai2 behind rainfrontscroll at l
     with quickergradientwiperight
     mar "“...uu~!" 
     extend " Battler besitzt Magie!" 
     extend " ...Battler besitzt Magie!"
     extend " ...hahaha...haha...Uu~!”"
-    show geo a12warai1 behind rain at rightedge with dis
+    show geo a12warai1 behind rainfrontscroll at rightedge with dis
     geo "“....Du hast recht Maria-chan! Nur kann Battler-kun keine magischen Wesen sehen."
     extend " ...Das ist nämlich etwas, dass nur du sehen kannst, da du was ganz besonderes bist.”"
     mar a11uuu1 "“Battler kann Beatrice nicht sehen?"
@@ -1241,7 +1254,7 @@ label chapter1:
     "George-Aniki konnte Maria schnell beruhigen," 
     extend " solche Momente zeigen immer wieder, wie gut er mit Kindern umgehen kann, er wird eines Tages ein guter Vater sein."
     hide geo  
-    show ros a11majime1 behind rain at rightedge 
+    show ros a11majime1 behind rainfrontscroll at rightedge 
     with dis
     ros ".....Maria!"
     extend " Lass den Unsinn und komm her!"
@@ -1255,8 +1268,9 @@ label chapter1:
     camera 
     with quickergradientwiperight
     scene beach_1ab
-    call rainlayer from _call_rainlayer_21
-    show but b23nayamu1 behind rain at r
+    show rainbackscroll
+    show rainfrontscroll
+    show but b23nayamu1 behind rainfrontscroll at r
     with quickergradientwiperight
     but "“.....Etwas ist anders in diesem Jahr...."
     extend " ...Ich habe das Gefühl, dass es hier an etwas fehlt..."
@@ -1264,22 +1278,23 @@ label chapter1:
     but "....Richtig!" 
     extend " ....Die Möwen sind weg," 
     extend " ...wir wurden doch immer von den Möwen begrüßt, oder irre ich mich?”"
-    show jes a11majime1 behind rain at leftedge with dis
+    show jes a11majime1 behind rainfrontscroll at leftedge with dis
     jes "“.....Jetzt, wo du es sagst..." 
     extend " Das Schreien der Möwen war immer zu hören...”"
-    show mar a11uuu1 behind rain at m with dis
+    show mar a11uuu1 behind rainfrontscroll at m with dis
     mar "“Uu~....." 
     extend " Keine Möwen?"
     mar "....Wo sind die Möwen? uu~...”"
     hide jes  
-    show geo a11defo1 behind rain at leftedge
+    show geo a11defo1 behind rainfrontscroll at leftedge
     with dis
     geo "“...Die Möwen sind längst in ihre Nester zurückgekehrt, denn der Taifun ist bereits in vollem Gange."
     extend " ....Auch für Möwen ist so ein Taifun gefährlich, weshalb sie bereits Schutz gesucht haben.”"
     but b23nayamu2  "“Darauf hätte ich auch selbst kommen können.”"
     scene black with gradientwipeup
     scene sky_1c
-    call rainlayer from _call_rainlayer_22
+    show rainbackscroll
+    show rainfrontscroll
     stop music fadeout 3 
     with gradientwipeup
     "Wir plauderten fröhlich miteinander, doch der Taifun wird von Minute zu Minute stärker und haben beschlossen nun schnell zum Gästehaus zu eilen."
@@ -1296,47 +1311,38 @@ label chapter1:
     queue music "audio/bgm/umib_004_loop.ogg" loop
     pause(1)
     show op1
-    call rainlayer from _call_rainlayer_23
     with dissolve
     pause(11)
     scene white with quickergradientwiperight
     show op2
-    call rainlayer from _call_rainlayer_24 
     with quickergradientwiperight
     pause(11)
     scene white with quickergradientwiperight
     show op3
-    call rainlayer from _call_rainlayer_25 
     with quickergradientwiperight
     pause(11)
     scene white with quickergradientwiperight
     show op4
-    call rainlayer from _call_rainlayer_26 
     with quickergradientwiperight
     pause(11)
     scene white with quickergradientwiperight
     show op5
-    call rainlayer from _call_rainlayer_27 
     with quickergradientwiperight
     pause(11)
     scene white with quickergradientwiperight
     show op6
-    call rainlayer from _call_rainlayer_28 
     with quickergradientwiperight
     pause(11)
     scene white with quickergradientwiperight
     show op7
-    call rainlayer from _call_rainlayer_29 
     with quickergradientwiperight
     pause(11)
     scene white with quickergradientwiperight
     show op8
-    call rainlayer from _call_rainlayer_30 
     with quickergradientwiperight
     pause(11)
     scene white with flash
     scene op9 
-    call rainlayer from _call_rainlayer_31
     with dissolve
     play sound "audio/sfx/umise_028.ogg"
     pause(11)
@@ -1352,7 +1358,7 @@ label chapter1:
     queue music "audio/bgm/umib_013_loop.ogg" loop 
     play rain "audio/sfx/umilse_012.ogg"
     show mlib_1a_bg at bgani
-    call rainlayer from _call_rainlayer_1
+    show rainbackscroll
     show mlib_1a at bgani
     with gradientcirclefade
     show nan a1defo1 at l2 with dis
@@ -1364,7 +1370,8 @@ label chapter1:
     "Als er seine Untersuchung beendet hatte, stieß der Doktor, der sich im Spätherbst seines Lebens befindet einen ärgerlichen Seufzer aus."
     "Zwei ältere Herren standen in einem dunklen, staubigen und übel riechenden Arbeitszimmer."
     scene mlib_1b_bg at bgani
-    call rainlayer from _call_rainlayer_2
+    show rainbackscroll
+    show rainfrontscroll    
     show mlib_1b at bgani
     with dissolve
     "Es ist anzumerken, dass dieses Arbeitszimmer nicht wie ein gewöhnliches Arbeitszimmer aussieht."
@@ -1383,7 +1390,8 @@ label chapter1:
     "Jetzt, da Kinzos ständiges Misstrauen außergewöhnliche Ausmaße angenommen hat, ist Nanjo einer der wenigen Menschen, denen er vertraut." 
     "Dank Nanjos großherziger Natur konnte er die Freundschaft mit Kinzo aufrechterhalten, obwohl dieser bei der geringsten Provokation in Wut gerät."
     scene mlib_1b_bg at bgani
-    call rainlayer from _call_rainlayer_3
+    show rainbackscroll
+    show rainfrontscroll    
     show mlib_1b at bgani
     show kin a11warai1 at m
     with quickergradientwiperight
@@ -1409,7 +1417,8 @@ label chapter1:
     extend " Noch ein Glas...."
     extend " Mach eine Mischung daraus, damit Nanjo nicht aus allen Wolken fällt.”"
     scene mlib_1c_bg at bgani
-    call rainlayer from _call_rainlayer_4
+    show rainbackscroll
+    show rainfrontscroll    
     show mlib_1c at bgani
     show gen a11defo1 at m
     with quickergradientwiperight
@@ -1435,7 +1444,8 @@ label chapter1:
     "Das herrliche Aroma des giftgrünen Getränks hat mittlerweile den ganzen Raum eingenommen."
     extend " Wenn man nicht gerade Alkoholexperte ist, würde man bei der Farbe nicht daran denken, dass es sich hierbei um ein Alkoholisches Getränk handelt."
     scene mlib_1b_bg at bgani
-    call rainlayer from _call_rainlayer_5
+    show rainbackscroll
+    show rainfrontscroll    
     show mlib_1b at bgani
     show kin a11warai2 at r
     with gradientwipedown
@@ -1453,7 +1463,8 @@ label chapter1:
     kin "“Vielen Dank.”"
     "Genji führte die Anweisung gewissenhaft aus und reichte seinem Herrn eine Mischung mit geringerem Alkoholgehalt."
     scene mlib_1c_bg at bgani
-    call rainlayer from _call_rainlayer_6
+    show rainbackscroll
+    show rainfrontscroll    
     show mlib_1c at bgani
     with gradientwiperight
     show kin a11defo1 at r with dissolve
@@ -1548,7 +1559,8 @@ label chapter1:
     "Plötzlich klopfte es an der Tür, dabei war es doch verboten um diese Zeit zu stören."
     "Kinzos Wutanfall war nur noch wie ein Echo, das im Raum verblieben war."
     scene mlib_1b_bg at bgani
-    call rainlayer from _call_rainlayer_7
+    show rainbackscroll
+    show rainfrontscroll    
     show mlib_1b at bgani
     show kin a11fukigen1 at m
     with quickergradientwiperight
@@ -1579,13 +1591,6 @@ label chapter1:
     extend " ....Das kann doch nicht wahr sein!”"
     pause 1
     window hide
-    if persistent.musicbox == False:
-        $ persistent.newelement1 = True
-        play sound "audio/sfx/umise_1060.ogg"
-        $ persistent.musicbox = True
-        $ persistent.menustate = 4
-        show screen musicupdate
-        $ Achievement.add(achievement_bronze3)
     play audio "audio/sfx/umise_030.ogg"
     show text _("Ich wollte dich niemals mit reinziehen....") 
     with fastdissolve
