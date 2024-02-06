@@ -2,10 +2,6 @@ default persistent.openingplayed = False
 default persistent.mainstorycleared = False
 default persistent.teapartycleared = False
 default persistent.gamecleared = False
-
-define narratorbox = "orig"
-define textbox = "orig"
-
 default persistent.rudolf = False
 default persistent.kyrie = False
 default persistent.maria = False
@@ -28,16 +24,15 @@ default persistent.kanon = False
 default persistent.witches = False
 default persistent.goldenwitch = False
 default persistent.bernkastel = False
-
+default narratorbox = "narratorboxa"
+default namebox = "nameboxa"
+default textbox = "textboxa"
 default chapter = 0
 default persistent.tip1 = False
 default persistent.tip2 = False
 default persistent.tip3 = False
 default persistent.tipunlocked = False
-default persistent.musicbox = False
-default persistent.textbox = 0
 default persistent.newelement1 = False
-default persistent.battlerdead = False
 default battlerexe = False
 default ismain = True
 default isbonus = False

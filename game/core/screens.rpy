@@ -168,7 +168,7 @@ style window:
     yalign gui.textbox_yalign
     ysize gui.textbox_height
     yminimum gui.textbox_height
-    background Image("gui/textbox_[textbox].png", xalign=0.5, yalign=1.0)
+    background Transform("gui/[textbox].png", xalign=0.5, yalign=1.0)
 
 style namebox:
     xpos gui.name_xpos
@@ -177,7 +177,7 @@ style namebox:
     ypos gui.name_ypos
     ysize gui.namebox_height
 
-    background Frame("gui/namebox:[namebox].png", gui.namebox_borders, tile=gui.namebox_tile, xalign=gui.name_xalign)
+    background Frame("gui/[namebox].png", gui.namebox_borders, xalign=gui.name_xalign)
     padding gui.namebox_borders.padding
 
 style say_label:
@@ -965,9 +965,9 @@ screen preferences():
 
             style_prefix "check"
             text _("Schrif{red_truth}t{/red_truth}art") outlines [ (absolute(2), "#00000094", absolute(1), absolute(1)) ] size 40
-            imagebutton auto "gui/settings/buttons/off_%s.png" action Preference("font transform", None) activate_sound "audio/sys/sysse_soff.wav" hover_sound "audio/sys/sysse_move.wav"
-            imagebutton auto "gui/settings/buttons/off_%s.png" action Preference("font transform", "arnopro") activate_sound "audio/sys/sysse_soff.wav" hover_sound "audio/sys/sysse_move.wav"
-            imagebutton auto "gui/settings/buttons/on_%s.png" action Preference("font transform", "opendyslexic") activate_sound "audio/sys/sysse_son.wav" hover_sound "audio/sys/sysse_move.wav"
+            imagebutton auto "gui/settings/buttons/off_%s.png" action gui.SetPreference("font", "newrodin.otf", rebuild=True)  activate_sound "audio/sys/sysse_soff.wav" hover_sound "audio/sys/sysse_move.wav"
+            imagebutton auto "gui/settings/buttons/off_%s.png" action gui.SetPreference("font", "ArnoPro.otf", rebuild=True) activate_sound "audio/sys/sysse_soff.wav" hover_sound "audio/sys/sysse_move.wav"
+            imagebutton auto "gui/settings/buttons/on_%s.png" action gui.SetPreference("font", "OpenDyslexic3-Regular.ttf", rebuild=True) activate_sound "audio/sys/sysse_son.wav" hover_sound "audio/sys/sysse_move.wav"
         
     vbox:
         xalign 0.97
@@ -1499,25 +1499,54 @@ screen nvl(dialogue, items=None):
         style "nvl_window"
 
         has vbox:
-            style "nvl_vbox"
+            spacing gui.nvl_spacing
 
-        # Display dialogue.
-        for d in dialogue:
-            window:
-                id d.window_id
+        ## Displays dialogue in either a vpgrid or the vbox.
+        if gui.nvl_height:
 
-                has hbox:
-                    spacing 10
+            vpgrid:
+                cols 1
+                yinitial 1.0
+
+                use nvl_dialogue(dialogue)
+
+        else:
+
+            use nvl_dialogue(dialogue)
+
+        ## Displays the menu, if given. The menu may be displayed incorrectly if
+        ## config.narrator_menu is set to True.
+        for i in items:
+
+            textbutton i.caption:
+                action i.action
+                style "nvl_button"
+
+    add SideImage() xalign 0.0 yalign 1.0
+
+
+screen nvl_dialogue(dialogue):
+
+    for d in dialogue:
+
+        window:
+            id d.window_id
+
+            fixed:
+                yfit gui.nvl_height is None
 
                 if d.who is not None:
-                    text d.who id d.who_id
 
-                text d.what id d.what_id
+                    text d.who:
+                        id d.who_id
+
+                text d.what:
+                    id d.what_id
 
 
 ## This controls the maximum number of NVL-mode entries that can be displayed at
 ## once.
-define config.nvl_list_length = gui.nvl_list_length
+define config.nvl_list_length = 6
 
 style nvl_window is default
 style nvl_entry is default
@@ -1532,6 +1561,7 @@ style nvl_window:
     xfill True
     yfill True
 
+    background "gui/nvl.png"
     padding gui.nvl_borders.padding
 
 style nvl_entry:
@@ -1545,7 +1575,7 @@ style nvl_label:
     yanchor 0.0
     xsize gui.nvl_name_width
     min_width gui.nvl_name_width
-    text_align gui.nvl_name_xalign
+    textalign gui.nvl_name_xalign
 
 style nvl_dialogue:
     xpos gui.nvl_text_xpos
@@ -1553,10 +1583,8 @@ style nvl_dialogue:
     ypos gui.nvl_text_ypos
     xsize gui.nvl_text_width
     min_width gui.nvl_text_width
-    text_align gui.nvl_text_xalign
-    layout "greedy"
-    line_overlap_split -8
-    newline_indent True
+    textalign gui.nvl_text_xalign
+    layout ("subtitle" if gui.nvl_text_xalign else "tex")
 
 style nvl_thought:
     xpos gui.nvl_thought_xpos
@@ -1564,7 +1592,7 @@ style nvl_thought:
     ypos gui.nvl_thought_ypos
     xsize gui.nvl_thought_width
     min_width gui.nvl_thought_width
-    text_align gui.nvl_thought_xalign
+    textalign gui.nvl_thought_xalign
     layout ("subtitle" if gui.nvl_text_xalign else "tex")
 
 style nvl_button:
@@ -1573,7 +1601,7 @@ style nvl_button:
     xanchor gui.nvl_button_xalign
 
 style nvl_button_text:
-    properties gui.button_text_properties("nvl_button")
+    properties gui.text_properties("nvl_button")
 
 
 ## Ein gutes 100% Custom Screen
@@ -1809,9 +1837,7 @@ screen characters():
         else:
             imagebutton auto "gui/charbox/icons/char00_%s.png" action NullAction() activate_sound "audio/sys/sysse_error.wav" hover_sound "audio/sys/sysse_move.wav"
 
-        if persistent.battlerdead == True:
-            imagebutton auto "gui/charbox/icons/char11_%s.png" action [ShowMenu("char11dead"), SelectedIf(SetVariable("battlerexe", True)), SetVariable("battlerexe", True)] activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav"
-        elif persistent.battler == True:
+        if persistent.battler == True:
             imagebutton auto "gui/charbox/icons/char11_%s.png" action ShowMenu("char11") activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav"
         else:
             imagebutton auto "gui/charbox/icons/char00_%s.png" action NullAction() activate_sound "audio/sys/sysse_error.wav" hover_sound "audio/sys/sysse_move.wav"
@@ -1863,6 +1889,7 @@ screen characters():
             imagebutton auto "gui/charbox/icons/char00_%s.png" action NullAction() activate_sound "audio/sys/sysse_error.wav" hover_sound "audio/sys/sysse_move.wav"
 
 
+## Diese ganzen Sachen sind entweder nicht implementiert oder müssen ausgetauscht werden
 screen witches():
     imagemap:
         ground "gui/title/hovermenu2.png"
@@ -1986,6 +2013,7 @@ screen char21():
     text "Beatrice die Goldene" style 'charnametext' at Position(xpos = 75, ypos = 500)
     text "Hier sollten Infos über Beatrice stehen." style 'chartext' at Position (xpos = 60, ypos = 550)
 
+## Ich habe diesen define nie geschrieben
 define config.hyperlink_protocol = "showmenu"
 
 screen tipps():
@@ -2018,6 +2046,8 @@ screen grimoire():
     add partObj
     imagebutton auto "images/system/back2_%s.png" action Return() activate_sound "audio/sys/sysse_cancel.wav" hover_sound "audio/sys/sysse_move.wav" yalign 0.02 xalign 0.97
 
+## DIe Tipps sind kompletter bullshit und tragen nichts zur Story bei und werden sich höchstens auf relevantes beschreiben
+## To Do: Raus damit!
 screen tip01():
 
     tag menu
@@ -2042,7 +2072,7 @@ screen tip03():
 
     add "gui/tipps/tip03_details.png" at center
 
-
+## Obsolete und nicht in benutzung, sollte bei der nächsten Aufräumaktion rausfliegen.
 screen confirmrestart():
 
     modal True
@@ -2073,7 +2103,7 @@ Das ändern der Textbox erfordert einen sofortigen Neustart.
 ################################################################################
 ## Mobile Variants
 ################################################################################
-
+## Die Mobile Varianten werden extra entwickelt und das kann alles raus
 style pref_vbox:
     variant "medium"
     xsize 675
@@ -2100,7 +2130,7 @@ screen quick_menu():
             imagebutton auto "gui/phone/button/menu_%s.png" action ShowMenu() activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav"
 
 ###DEBUG####
-
+## Ich habe das nur eingefügt, weil es cool ist Debugfunktionen sehen zu können.
 screen Debugscreen():
     
     $ director.button = True
