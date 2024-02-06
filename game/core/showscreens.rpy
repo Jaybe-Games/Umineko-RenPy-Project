@@ -9,7 +9,17 @@ screen showch():
         text _("Bootsfahrt nach Rokkenjima") size 40 xalign 0.0 yalign 1.0 font "fonts/AOTFShinGoProMedium.otf" outlines [ (absolute(3), "#000", absolute(0), absolute(0)) ] at chapterdissolve
     if chapter == 2:
         text _("Die Hexe auf dem Balkon") size 40 xalign 0.0 yalign 1.0 font "fonts/AOTFShinGoProMedium.otf" outlines [ (absolute(3), "#000", absolute(0), absolute(0)) ] at chapterdissolve
-    
+        ## Nur für das Schulszenario, danach entfernen
+    if chapter == 1000:
+        text _("Prolog") size 40 xalign 0.0 yalign 1.0 font "fonts/AOTFShinGoProMedium.otf" outlines [ (absolute(3), "#000", absolute(0), absolute(0)) ] at chapterdissolve
+    if chapter == 1001:
+        text _("Die sechs außerwählten") size 40 xalign 0.0 yalign 1.0 font "fonts/AOTFShinGoProMedium.otf" outlines [ (absolute(3), "#000", absolute(0), absolute(0)) ] at chapterdissolve
+    if chapter == 1002:
+        text _("Die, die sich nahe stehen") size 40 xalign 0.0 yalign 1.0 font "fonts/AOTFShinGoProMedium.otf" outlines [ (absolute(3), "#000", absolute(0), absolute(0)) ] at chapterdissolve
+    if chapter == 1003:
+        text _("Verkettung der Ereignisse") size 40 xalign 0.0 yalign 1.0 font "fonts/AOTFShinGoProMedium.otf" outlines [ (absolute(3), "#000", absolute(0), absolute(0)) ] at chapterdissolve
+    if chapter == 1004:
+        text _("Die Illusion der Goldenen Hexe") size 40 xalign 0.0 yalign 1.0 font "fonts/AOTFShinGoProMedium.otf" outlines [ (absolute(3), "#000", absolute(0), absolute(0)) ] at chapterdissolve
     timer 5.25 action Hide('showch')
 
 screen showsong():
