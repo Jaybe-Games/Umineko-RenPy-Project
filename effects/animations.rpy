@@ -76,22 +76,3 @@ label clockch2:
     hide screen cinemalogo
     with dissolve
     return
-
-label rainlayer:
-    
-    show rain4
-    show rain3
-    show rain2
-    show rain
-    return
-
-label hiderain:
-    hide rain with dissolve
-    pause 0.5
-    hide rain2 with dissolve
-    pause 0.5
-    hide rain3 with dissolve
-    pause 0.5
-    hide rain4 with dissolve
-    stop rain fadeout 1.0
-    return

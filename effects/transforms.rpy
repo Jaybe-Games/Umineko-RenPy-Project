@@ -249,3 +249,9 @@ transform textzoom:
     ease 30 zoom 1.0
     repeat
 
+transform mmclouds:
+    subpixel True
+    xalign 1.0
+    linear 240 xalign 0.0
+    repeat
+

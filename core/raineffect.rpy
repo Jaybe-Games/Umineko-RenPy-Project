@@ -9,16 +9,16 @@ init:
 
         # RainY is rain speed, basically how long does it take
         # for the rain sheet to fall down by one tile
-        RainY = 0.50
+        RainY = 0.30
 
         # RainX is the same for horizontal movement,
         # and needs to be manually adjusted to fit the chosen raindrop angle
         # for the rain to fall naturally.
-        RainX = RainY * 30
+        RainX = RainY * 100
         
         # Total alpha of the rain is the sum of the alpha of all three layers,
         # so each sheet has a third of it.
-        RainLayerAlpha = RainAlpha / 3
+        RainLayerAlpha = RainAlpha / 4
 
         # Speed of the medium sheet of rain is two times faster than the front sheet.
         RainYM = RainY / 2

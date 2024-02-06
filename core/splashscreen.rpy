@@ -1,9 +1,3 @@
-label main_menu:
-    if renpy.seen_label("start"):
-        call screen main_menu()
-    return
-
-
 label splashscreen:
 
 #jump beatricechess
@@ -73,16 +67,6 @@ if persistent.openingplayed == True:
     pause 0.1
 
     hide load4
-    pause 0.1
-
-    if persistent.newelement1 == False:
-        show menu_bg at bganistart
-        show copyright at left
-        show titlehana at topright
-        with gradientwipedown
-        hide titlehana
-        hide copyright
-
     return
 else:
     pause (1)
@@ -118,8 +102,6 @@ else:
     pause 0.1
 
     hide load4
-    pause 0.1
-
     return
 
 label quit:
@@ -144,18 +126,22 @@ label after_load:
     play sound "audio/sfx/umise_1006.ogg"
 
 label before_main_menu:
-    if not renpy.seen_label("start"):
-        stop music
-        return
     if persistent.newelement1 == True:
         $ persistent.newelement1 = False
         play effect "audio/sfx/umise_022.ogg"
         show unlocked1 with gradientcirclefade
         pause(5)
-    show menu_bg at bganistart
+    show clouds at mmclouds
+    show menu_bg
+    show rainbackscroll
+    show rainfrontscroll
     show copyright at left
     show titlehana at topright
     with gradientwipedown
+    hide clouds
+    hide menu_bg
+    hide rainbackscroll
+    hide rainfrontscroll
     hide titlehana
     hide copyright
     hide unlocked1

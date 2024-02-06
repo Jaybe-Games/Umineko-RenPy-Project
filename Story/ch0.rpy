@@ -5,7 +5,7 @@ label start:
     #$ discord.update(details = "Prologue")
     $ chapter = 0
     $ songname = "-"
-    $ save_name = _("Episode0 Auferstehung der Goldenen Hexe\nIch schreibe an dich in einer Quadrillion Jahren")
+    $ save_name = _("Episode0 Resurrection of the golden witch\nIch schreibe an dich in einer Quadrillion Jahren")
     #show screen Debugscreen
     stop music
     if persistent.alreadyread1 == False:
@@ -13,7 +13,7 @@ label start:
         $ persistent.menustate = 1
         $ persistent.new = False
     pause (5)
-    play sound "audio/sfx/heartbeat.ogg"
+    play sound "audio/sfx/cinematicboom.mp3"
     show 01 with dissolve
     pause 1
     play music "audio/bgm/umib_015_intro.ogg"
@@ -21,17 +21,17 @@ label start:
     pause 4
     hide 01 with dissolve
     pause 2
-    play sound "audio/sfx/heartbeat.ogg"
+    play sound "audio/sfx/cinematicboom.mp3"
     show 02 with dissolve
     pause 4
     hide 02 with dissolve
     pause 2
-    play sound "audio/sfx/heartbeat.ogg"
+    play sound "audio/sfx/cinematicboom.mp3"
     show 03 with dissolve
     pause 4
     hide 03 with dissolve
     pause 2
-    play sound "audio/sfx/heartbeat.ogg"
+    play sound "audio/sfx/cinematicboom.mp3"
     show 04 with dissolve
     pause 4
     scene black with dissolve
@@ -65,7 +65,7 @@ label start:
         $ persistent.tip1 = True
         $ persistent.tipunlocked = True
         $ persistent.menustate = 2
-    "Über den Fall im Dorf {note_green}Hinamizawa{/note_green} wurde in einigen Massenmedien berichtet."
+    "Über den Fall im Dorf Hinamizawa wurde in einigen Massenmedien berichtet."
     "Er hat weltweit Aufmerksamkeit erregt," 
     extend " was schwerwiegende Auswirkungen auf die Bewohner hatte. Die Lage ist sehr ernst geworden."
     "Um das Leben und das Wohlergehen der Anwohner zu schützen, wurde die folgende Bekanntmachung veröffentlicht."
@@ -76,9 +76,9 @@ label start:
     nvltext "Station Okinomiya 1983 Fallnummer 862"
     nvltext "Tötung einer alleinerziehenden Mutter mit zwei Kindern im Dorf Hinamizawa (Datum: April 1983)."
     extend " Dieser Fall steht in keinem Zusammenhang mit den jährlichen Morden vom Juni 1979 bis 1982."
+    nvl clear
     nvltext "Die Leiche einer alleinerziehenden Mutter wurde an einem Morgen im April 1983 in ihrem Haus, genauer gesagt in ihrer Küche, tot aufgefunden."
     extend " Wir konnten nur eines der beiden Kinder bergen, das andere wird noch vermisst."
-    nvl clear
     nvltext "Wahrscheinlich handelt es sich um eine Kindesentführung. Die Polizei tut bereits alles um das entführte Kind zu finden."
     extend " Das geborgene Kind steht noch unter schwerem Schock und kann noch nicht sprechen,"
     extend " es wurde in das örtliche Krankenhaus gebracht und wird dort medizinisch versorgt."
@@ -100,8 +100,8 @@ label start:
     extend " was bedeuten könnte, dass ihr bei lebendigem Leib die Gliedmaßen abgehackt wurden und sie Höllenqualen litt."
     "Außerdem gab es Kampfspuren im Raum. Die Frau hat den Täter wahrscheinlich gesehen und sich gewehrt haben."
     extend " Sie muss aber vorher an dem Schock und dem immensen Blutverlust gestorben sein."
-    extend " und erst danach habe der Täter ihr den Strick umgelegt, so der Obduktionsbericht."
-    "Im weiteren Bericht heißt es, dass das Opfer zuvor hochprozentige alkoholische Getränke konsumiert hatte und während der Tat unter starkem Alkoholeinfluss stand."
+    "Erst danach habe der Täter ihr den Strick umgelegt, so der Obduktionsbericht."
+    extend " Im weiteren Bericht heißt es, dass das Opfer zuvor hochprozentige alkoholische Getränke konsumiert hatte und während der Tat unter starkem Alkoholeinfluss stand."
     "Außerdem wurden in Blutproben geringe Spuren von Tetrahydrocannabinol, MDMA und anderen Betäubungsmitteln gefunden, die auf einen aktiven Drogenmissbrauch hindeuten."
     "Der Täter befindet sich nach wie vor auf freiem Fuß und es gibt keine Spuren oder Hinweise auf die Identität des Täters."
     extend " Bei einer Hausdurchsuchung wurden keine versteckten Abschiedsbriefe oder ähnliches gefunden."

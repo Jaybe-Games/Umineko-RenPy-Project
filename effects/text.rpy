@@ -1,8 +1,8 @@
 init python:
     def red_tag(tag, argument, contents):
-        return [(renpy.TEXT_TAG, "gradient=#f05145-#f44336")] + contents + [(renpy.TEXT_TAG, "/gradient")]
+        return [(renpy.TEXT_TAG, "gradient=#ff0000-#dc0000")] + contents + [(renpy.TEXT_TAG, "/gradient")]
     def blue_tag(tag, argument, contents):
-        return [(renpy.TEXT_TAG, "gradient=#b9deff-#85c5ff")] + contents + [(renpy.TEXT_TAG, "/gradient")]
+        return [(renpy.TEXT_TAG, "gradient=#138fff-#41aeff")] + contents + [(renpy.TEXT_TAG, "/gradient")]
     def green_tag(tag, argument, contents):
         return [(renpy.TEXT_TAG, "gradient=#c2fdbb-#95ef8b")] + contents + [(renpy.TEXT_TAG, "/gradient")]
     def gold_tag(tag, argument, contents):

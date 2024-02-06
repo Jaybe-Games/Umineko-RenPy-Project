@@ -456,3 +456,29 @@ translate English strings:
     old "Episode0 Auferstehung der Goldenen Hexe\nIch schreibe an dich in einer Quadrillion Jahren"
     new "Episode0 Resurrection of the golden witch\nWriting to you in a quadrillion years"
 
+# TODO: Translation updated at 2023-10-28 23:57
+
+# game/Story/ch0.rpy:54
+translate English start_ab7ca6a3:
+
+    # lam "“Ich ficke einfach alles!"
+    lam "“Ich ficke einfach alles!"
+
+# game/Story/ch0.rpy:55
+translate English start_7fd952ab:
+
+    # extend " {red_truth}So funktioniert die Wahrheit!{/red_truth}"
+    extend " {red_truth}So funktioniert die Wahrheit!{/red_truth}"
+
+# game/Story/ch0.rpy:56
+translate English start_48a06941:
+
+    # extend " {blue_truth}Sie ist unantastbar!{/blue_truth}”"
+    extend " {blue_truth}Sie ist unantastbar!{/blue_truth}”"
+
+translate English strings:
+
+    # game/Story/ch0.rpy:8
+    old "Episode0 Resurrection of the golden witch\nIch schreibe an dich in einer Quadrillion Jahren"
+    new "Episode0 Resurrection of the golden witch\nIch schreibe an dich in einer Quadrillion Jahren"
+

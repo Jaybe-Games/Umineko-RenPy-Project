@@ -145,3 +145,11 @@ translate English strings:
     old "Freies Lesezeichen"
     new "unused bookmark"
 
+# TODO: Translation updated at 2023-10-28 23:57
+
+translate English strings:
+
+    # game/core/screens.rpy:1315
+    old "Keine Nachrichten vorhanden"
+    new "Keine Nachrichten vorhanden"
+

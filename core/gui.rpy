@@ -53,27 +53,27 @@ define gui.interface_text_color = '#ffffff'
 ## Fonts and Font Sizes ########################################################
 
 ## The font used for in-game text.
-define gui.text_font = "fonts/ArnoPro-Regular.otf"
+define gui.text_font = "fonts/newrodin.otf"
 
 ## The font used for character names.
-define gui.name_text_font = "fonts/ArnoPro-Regular.otf"
+define gui.name_text_font = "fonts/newrodin.otf"
 
 ## The font used for out-of-game text.
-define gui.interface_text_font = "fonts/ArnoPro-Regular.otf"
+define gui.interface_text_font = "fonts/newrodin.otf"
 
-define gui.glyph_font = "fonts/ArnoPro-Regular.otf"
+define gui.glyph_font = "fonts/newrodin.otf"
 
 ## The size of normal dialogue text.
-define gui.text_size = 50
+define gui.text_size = 45
 
 ## The size of character names.
-define gui.name_text_size = 50
+define gui.name_text_size = 45
 
 ## The size of text in the game's user interface.
 define gui.interface_text_size = 40
 
 ## The size of labels in the game's user interface.
-define gui.label_text_size = 45
+define gui.label_text_size = 30
 
 ## The size of text on the notify screen.
 define gui.notify_text_size = 40
@@ -98,7 +98,7 @@ define gui.game_menu1_background = "gui/game_menu1.png"
 ## time.
 
 ## The height of the textbox containing dialogue.
-define gui.textbox_height = 400
+define gui.textbox_height = 0.37
 
 ## The placement of the textbox vertically on the screen. 0.0 is the top, 0.5 is
 ## center, and 1.0 is the bottom.
@@ -107,8 +107,8 @@ define gui.textbox_yalign = 1.0
 
 ## The placement of the speaking character's name, relative to the textbox.
 ## These can be a whole number of pixels from the left or top, or 0.5 to center.
-define gui.name_xpos = 98
-define gui.name_ypos = -80
+define gui.name_xpos = 118
+define gui.name_ypos = -70
 
 ## The horizontal alignment of the character's name. This can be 0.0 for left-
 ## aligned, 0.5 for centered, and 1.0 for right-aligned.
@@ -121,7 +121,7 @@ define gui.namebox_height = None
 
 ## The borders of the box containing the character's name, in left, top, right,
 ## bottom order.
-define gui.namebox_borders = Borders(60, 25, 60, 0)
+define gui.namebox_borders = Borders(100, 10, 100, 10)
 
 ## If True, the background of the namebox will be tiled, if False, the
 ## background of the namebox will be scaled.
@@ -131,11 +131,11 @@ define gui.namebox_tile = False
 ## The placement of dialogue relative to the textbox. These can be a whole
 ## number of pixels relative to the left or top side of the textbox, or 0.5 to
 ## center.
-define gui.dialogue_xpos = 163
-define gui.dialogue_ypos = 0.07
+define gui.dialogue_xpos = 179
+define gui.dialogue_ypos = 30
 
 ## The maximum width of dialogue text, in pixels.
-define gui.dialogue_width = 1625
+define gui.dialogue_width = 1500
 
 ## The horizontal alignment of the dialogue text. This can be 0.0 for left-
 ## aligned, 0.5 for centered, and 1.0 for right-aligned.
@@ -353,9 +353,9 @@ define gui.history_name_width = 480
 define gui.history_name_xalign = 0.0
 
 ## The position, width, and alignment of the dialogue text.
-define gui.history_text_xpos = 460
+define gui.history_text_xpos = 260
 define gui.history_text_ypos = 0
-define gui.history_text_width = 1100
+define gui.history_text_width = 1300
 define gui.history_text_xalign = 0.0
 
 

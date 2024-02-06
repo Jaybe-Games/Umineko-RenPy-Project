@@ -167,6 +167,7 @@ style window:
     xfill True
     yalign gui.textbox_yalign
     ysize gui.textbox_height
+    yminimum gui.textbox_height
     background Image("gui/textbox.png", xalign=0.5, yalign=1.0)
 
 style namebox:
@@ -183,9 +184,10 @@ style say_label:
     properties gui.text_properties("name", accent=True)
     xalign gui.name_xalign
     yalign 0.5
-    outlines [ (absolute(2), "#00000094", absolute(0), absolute(0)) ]
-    kerning 1.5
+    outlines [ (absolute(2), "#00000094", absolute(1), absolute(1)) ]
+    kerning -1.7
     antialias True
+    shaper "hardbuzz"
 
 style say_dialogue:
     properties gui.text_properties("dialogue")
@@ -193,13 +195,14 @@ style say_dialogue:
     xpos gui.dialogue_xpos
     xsize gui.dialogue_width
     ypos gui.dialogue_ypos
-    outlines [ (absolute(2), "#00000094", absolute(0), absolute(0)) ]
-    line_spacing 5
-    kerning 1.3
+    outlines [ (absolute(2), "#000000a2", absolute(1), absolute(1)) ]
+    line_spacing 15
+    language "western"
+    kerning -1.0
     antialias True
-    layout "greedy"
-    line_overlap_split -8
-    newline_indent True
+    shaper "hardbuzz"
+    #line_overlap_split -12
+    #newline_indent True
 
 
 ## Input screen ################################################################
@@ -271,43 +274,6 @@ style choice_button_text is default:
     properties gui.button_text_properties("choice_button")
 
 
-## Quick Menu screen ###########################################################
-##
-## The quick menu is displayed in-game to provide easy access to the out-of-game
-## menus.
-
-screen quick_menu():
-
-    ## Ensure this appears on top of other screens.
-    #zorder 100
-
-    if quick_menu:
-
-        vbox:
-            style_prefix "quick"
-
-            xalign 0.0
-            yalign 0.0
-
-            #imagebutton auto "gui/button/quickbuttonautomode_%s.png" action Preference("auto-forward", "toggle") xpos 1850 ypos 25
-            #imagebutton auto "gui/button/quickbuttonskip_%s.png" action Skip() alternate Skip(fast=True, confirm=True) xpos 1825 ypos 25
-
-
-## This code ensures that the quick_menu screen is displayed in-game, whenever
-## the player has not explicitly hidden the interface.
-init python:
-    config.overlay_screens.append("quick_menu")
-
-default quick_menu = True
-
-style quick_button is default
-style quick_button_text is button_text
-
-style quick_button:
-    properties gui.button_properties("quick_button")
-
-style quick_button_text:
-    properties gui.button_text_properties("quick_button")
 
 
 
@@ -322,23 +288,19 @@ style quick_button_text:
 
 screen navigation():
 
-    add "gui/title/bg.png" at bgani
+    add "images/backgrounds/mmbackground.png" at mmclouds
+    add "images/backgrounds/mmbg.png"
+    add "rainbackscroll"
+    add "rainfrontscroll"
     add "gui/title/title_hana.png" at topright
     add "gui/title/copyright.png" at left
     add "gui/title/titlelogo.png" at topright,buttondissolvetitle
     add partObj
-    text "[config.version!t]" at topleft size 30 antialias True outlines [ (absolute(3), "#000", absolute(0), absolute(0)) ]
+    text "V[config.version!t]" at topleft size 30 antialias True outlines [ (absolute(3), "#000", absolute(0), absolute(0)) ]
+    on "show" action Play("rain", "audio/sfx/umilse_012.ogg")
+    on "hide" action Stop("rain")
 
     fixed:
-
-        if main_menu:
-
-            imagebutton auto "gui/button/secret_%s.png" action Start("supersecret") xpos 210 ypos 1032
-            imagebutton auto "gui/button/secret_%s.png" action Start("supersecret") xpos 338 ypos 1032
-
-        else:
-
-            pass
 
         if main_menu:
 
@@ -346,16 +308,16 @@ screen navigation():
 
                 xalign 0.98
                 yalign 0.9
-                spacing 3 
+                spacing 3
+                 
                 if persistent.new == True:
                     imagebutton auto "gui/title/buttons/startnew_%s.png" action [Play("sound", "/audio/sfx/umise_051.ogg"), ShowMenu("story_select"), Hide('starthover'), SetVariable("ismain", True)] hover_sound "audio/sys/sysse_move.wav" hovered Show('starthover') unhovered Hide('starthover') at buttondissolve1
                 else:
                     imagebutton auto "gui/title/buttons/start_%s.png" action [Play("sound", "/audio/sfx/umise_051.ogg"), ShowMenu("story_select"), Hide('starthover'), SetVariable("ismain", True)] hover_sound "audio/sys/sysse_move.wav" hovered Show('starthover') unhovered Hide('starthover') at buttondissolve1
-                $ lastsave=renpy.newest_slot(r"\d+")
+
                 if renpy.seen_label("start"):
-                    if lastsave is not None:
-                        $ name, page = lastsave.split("-")
-                        imagebutton auto "gui/title/buttons/continue_%s.png" action FileLoad(name, page) hovered Show('continuehover') unhovered Hide('continuehover') hover_sound "audio/sys/sysse_move.wav" at buttondissolve1
+
+                    imagebutton auto "gui/title/buttons/continue_%s.png" action Continue(confirm=True) hovered Show('continuehover') unhovered Hide('continuehover') hover_sound "audio/sys/sysse_move.wav" at buttondissolve1
                 
                 if persistent.menustate == 0:
                     imagebutton auto "gui/title/buttons/load2_%s.png" action [ShowMenu("load"), Hide('loadhover')] activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav" hovered Show('loadhover') unhovered Hide('loadhover') at buttondissolve1
@@ -713,50 +675,6 @@ style return_button:
     yalign 1.0
     yoffset -45
 
-## About screen ################################################################
-##
-## This screen gives credit and copyright information about the game and Ren'Py.
-##
-## There's nothing special about this screen, and hence it also serves as an
-## example of how to make a custom screen.
-
-screen about():
-
-    tag menu
-
-    ## This use statement includes the game_menu screen inside this one. The
-    ## vbox child is then included inside the viewport inside the game_menu
-    ## screen.
-    use game_menu(_("{color=#fff}Cre{color=#f00}d{color=#fff}its"), scroll="viewport"):
-
-        style_prefix "about"
-
-        vbox:
-            xalign 0.5
-            xoffset 270
-
-            label "\n      Umineko When They {red_truth}C{/red_truth}ry Zero\n~Waltz of Reflections and Delusions~"
-            text _("Version [config.version!t]\n")
-
-            ## gui.about is usually set in options.rpy.
-            if gui.about:
-                text "[gui.about!t]\n"
-
-            text _("Made with {a=https://www.renpy.org/}Ren'Py{/a} [renpy.version_only] [renpy.license!t].")
-            
-            if main_menu:
-                imagebutton auto "gui/button/creditswatch_%s.png" action Start("creditsmenu") activate_sound "audio/sfx/umise_017.ogg" hover_sound "audio/sys/sysse_move.wav"
-
-
-style about_label is gui_label
-style about_label_text is gui_label_text
-style about_text is gui_text
-
-
-style about_label_text:
-    size gui.label_text_size
-
-
 ## Load and Save screens #######################################################
 ##
 ## These screens are responsible for letting the player save the game and load
@@ -783,12 +701,9 @@ screen load():
 screen file_slots_save():
 
     default page_name_value = FilePageNameInputValue(pattern=_("Seite {}"), auto=_("Automatische Spielstände"), quick=_("Schnell Speicherungen"))
-    add "gui/game_menu.png" at center
     add "gui/saveload/savebg.png" at center
     imagebutton auto "images/system/back2_%s.png" action Return() activate_sound "audio/sys/sysse_cancel.wav" hover_sound "audio/sys/sysse_move.wav" yalign 0.02 xalign 0.97
     add partObj
-
-    
 
     fixed:
 
@@ -828,7 +743,7 @@ screen file_slots_save():
 
                     add FileScreenshot(slot) xalign 0.0
 
-                    text FileTime(slot, format=_("{#file_time}%Y/%b/%d   %H:%M "), empty=_("Freies Lesezeichen")):
+                    text FileTime(slot, format=_("{#file_time}%Y/%b/%d   %H:%M  "), empty=_("Freies Lesezeichen")):
                         style "new_slot_time_text"
 
                     text FileSaveName(slot):
@@ -919,7 +834,13 @@ style new_slot_name_text:
 screen file_slots_load():
 
     default page_name_value = FilePageNameInputValue(pattern=_("Seite {}"), auto=_("Automatische Spielstände"), quick=_("Schnell Speicherungen"))
-    add "gui/game_menu.png" at center
+    if main_menu:
+        add "images/backgrounds/mmbackground.png" at mmclouds
+        add "images/backgrounds/mmbg.png"
+        add "rainbackscroll"
+        add "rainfrontscroll"
+    else:
+        add "gui/game_menu.png" at center
     add "gui/saveload/loadbg.png" at center
     imagebutton auto "images/system/back2_%s.png" action Return() activate_sound "audio/sys/sysse_cancel.wav" hover_sound "audio/sys/sysse_move.wav" yalign 0.02 xalign 0.97
     add partObj
@@ -1052,105 +973,79 @@ screen preferences():
 
     vbox:
 
-        xalign 0.35
+        #xalign 0.0
+        xalign 0.2
         yalign 0.65
-        spacing 25
+        spacing 10
         
 
-        hbox:
+        vbox:
 
             style_prefix "radio"
+            text _("Anzei{red_truth}g{/red_truth}e") outlines [ (absolute(2), "#00000094", absolute(1), absolute(1)) ] size 40
             imagebutton auto "gui/settings/buttons/window_%s.png" action Preference("display", "window") activate_sound "audio/sys/sysse_son.wav" hover_sound "audio/sys/sysse_move.wav"
             imagebutton auto "gui/settings/buttons/full_%s.png" action Preference("display", "fullscreen") activate_sound "audio/sys/sysse_son.wav" hover_sound "audio/sys/sysse_move.wav"
-        hbox:
+        vbox:
             style_prefix "radio"
+            text _("Rende{red_truth}r{/red_truth}er") outlines [ (absolute(2), "#00000094", absolute(1), absolute(1)) ] size 40
             imagebutton auto "gui/settings/buttons/gl_%s.png" action [_SetRenderer("gl2"), SelectedIf(SetVariable("persistent.renderer", 0)), SetVariable("persistent.renderer", 0)] activate_sound "audio/sys/sysse_son.wav" hover_sound "audio/sys/sysse_move.wav"
             imagebutton auto "gui/settings/buttons/angle2_%s.png" action [_SetRenderer("angle2"), SelectedIf(SetVariable("persistent.renderer", 1)), SetVariable("persistent.renderer", 1)] activate_sound "audio/sys/sysse_son.wav" hover_sound "audio/sys/sysse_move.wav"
+    vbox:
 
-        hbox:
+        #xalign 0.0
+        xalign 0.4
+        yalign 0.65
+        spacing 10
+
+        vbox:
 
             style_prefix "check"
+            text _("Ungel. Übersp{red_truth}r{/red_truth}ingbar") outlines [ (absolute(2), "#00000094", absolute(1), absolute(1)) ] size 40
             imagebutton auto "gui/settings/buttons/on_%s.png" action Preference("skip", "Toggle") activate_sound "audio/sys/sysse_son.wav" hover_sound "audio/sys/sysse_move.wav"
 
-        hbox:
+        vbox:
 
             style_prefix "check"
+            text _("Spr{red_truth}a{/red_truth}che") outlines [ (absolute(2), "#00000094", absolute(1), absolute(1)) ] size 40
             imagebutton auto "gui/settings/buttons/de_%s.png" action Language(None) activate_sound "audio/sys/sysse_son.wav" hover_sound "audio/sys/sysse_move.wav"
             imagebutton auto "gui/settings/buttons/en_%s.png" action Language("English") activate_sound "audio/sys/sysse_son.wav" hover_sound "audio/sys/sysse_move.wav"
 
-        hbox:
+        vbox:
 
             style_prefix "check"
-            imagebutton auto "gui/settings/buttons/off_%s.png" action SetVariable("persistent.showch", False) activate_sound "audio/sys/sysse_soff.wav" hover_sound "audio/sys/sysse_move.wav"
-            imagebutton auto "gui/settings/buttons/on_%s.png" action SetVariable("persistent.showch", True) activate_sound "audio/sys/sysse_son.wav" hover_sound "audio/sys/sysse_move.wav"
+            text _("Schrif{red_truth}t{/red_truth}art") outlines [ (absolute(2), "#00000094", absolute(1), absolute(1)) ] size 40
+            imagebutton auto "gui/settings/buttons/off_%s.png" action Preference("font transform", None) activate_sound "audio/sys/sysse_soff.wav" hover_sound "audio/sys/sysse_move.wav"
+            imagebutton auto "gui/settings/buttons/off_%s.png" action Preference("font transform", "arnopro") activate_sound "audio/sys/sysse_soff.wav" hover_sound "audio/sys/sysse_move.wav"
+            imagebutton auto "gui/settings/buttons/on_%s.png" action Preference("font transform", "opendyslexic") activate_sound "audio/sys/sysse_son.wav" hover_sound "audio/sys/sysse_move.wav"
         
-        hbox:
-
-            style_prefix "check"
-            imagebutton auto "gui/settings/buttons/off_%s.png" action SetVariable("persistent.showbgm", False) activate_sound "audio/sys/sysse_soff.wav" hover_sound "audio/sys/sysse_move.wav"
-            imagebutton auto "gui/settings/buttons/on_%s.png" action SetVariable("persistent.showbgm", True) activate_sound "audio/sys/sysse_son.wav" hover_sound "audio/sys/sysse_move.wav"
-
-        hbox:
-
-            style_prefix "check"
-            imagebutton auto "gui/settings/buttons/off_%s.png" action SetVariable("persistent.showplaytime", False) activate_sound "audio/sys/sysse_soff.wav" hover_sound "audio/sys/sysse_move.wav"
-            imagebutton auto "gui/settings/buttons/on_%s.png" action SetVariable("persistent.showplaytime", True) activate_sound "audio/sys/sysse_son.wav" hover_sound "audio/sys/sysse_move.wav"
-
-        hbox:
-
-            style_prefix "check"
-            imagebutton auto "gui/settings/buttons/off_%s.png" action Preference("gl powersave", False) activate_sound "audio/sys/sysse_soff.wav" hover_sound "audio/sys/sysse_move.wav"
-            imagebutton auto "gui/settings/buttons/on_%s.png" action Preference("gl powersave", True) activate_sound "audio/sys/sysse_son.wav" hover_sound "audio/sys/sysse_move.wav"
-        
-
     vbox:
-        xalign 0.1
-        yalign 0.65
-        spacing 50
-        yoffset 2
-        label _("Anzei{red_truth}g{/red_truth}e")
-        label _("Rende{red_truth}r{/red_truth}er")
-        label _("Ungel. Übersp{red_truth}r{/red_truth}ingbar")
-        label _("Spr{red_truth}a{/red_truth}che")
-        label _("Zeige Kapite{red_truth}l{/red_truth}namen")
-        label _("Zeige BGM T{red_truth}i{/red_truth}tel")
-        label _("Zeige S{red_truth}p{/red_truth}ielzeit")
-        label _("Energie{red_truth}s{/red_truth}parmodus")
-    vbox:
-        xalign 0.85
+        xalign 0.97
         yalign 0.5
         yoffset 50
         style_prefix "slider"
         box_wrap True
 
-        default text_cps_preview = PreviewSlowText("Text Text Text Text.")
-
         vbox:
                     
-            label _("{color=#fff}- Textgeschwindi{color=#f00}g{color=#fff}keit >>")
+            text _("{color=#fff}- Textgeschwindi{color=#f00}g{color=#fff}keit >>") outlines [ (absolute(2), "#00000094", absolute(1), absolute(1)) ] size 35
 
-            bar value Preference("text speed"):
-                released Function(text_cps_preview.update_cps)
+            bar value Preference("text speed")
 
-            add text_cps_preview:                      #####
-                ysize 38 # Same size as the bar        #####
-                yoffset 3 # Slight offset down         #####
-
-            label _("{color=#fff}+ Auto{color=#f00}m{color=#fff}odusgeschwindigkeit -")
+            text _("{color=#fff}+ Auto{color=#f00}m{color=#fff}odusgeschwindigkeit -") outlines [ (absolute(2), "#00000094", absolute(1), absolute(1)) ] size 35
 
             bar value Preference("auto-forward time")
 
             vbox:
 
                 if config.has_music:
-                    label _("{color=#fff}- Musiklautstär{color=#f00}k{color=#fff}e +")
+                    text _("{color=#fff}- Musiklautstär{color=#f00}k{color=#fff}e +") outlines [ (absolute(2), "#00000094", absolute(1), absolute(1)) ] size 35
 
                     vbox:
                         bar value Preference("music volume")
 
                 if config.has_sound:
 
-                    label _("{color=#fff}- Soundlautstär{color=#f00}k{color=#fff}e +")
+                    text _("{color=#fff}- Soundlautstär{color=#f00}k{color=#fff}e +") outlines [ (absolute(2), "#00000094", absolute(1), absolute(1)) ] size 35
 
                     vbox:
                         bar value Preference("sound volume")
@@ -1233,7 +1128,7 @@ style check_button_text:
     properties gui.button_text_properties("check_button")
 
 style slider_slider:
-    xsize 800
+    xsize 500
 
 style slider_button:
     properties gui.button_properties("slider_button")
@@ -1246,6 +1141,11 @@ style slider_button_text:
 style slider_vbox:
     xsize 675
     spacing 15
+
+style optionname:
+    outlines [ (absolute(2), "#00000094", absolute(1), absolute(1)) ]
+
+
 
 
 ## History screen ##############################################################
@@ -1680,49 +1580,20 @@ screen nvl(dialogue, items=None):
         style "nvl_window"
 
         has vbox:
-            spacing gui.nvl_spacing
+            style "nvl_vbox"
 
-        ## Displays dialogue in either a vpgrid or the vbox.
-        if gui.nvl_height:
+        # Display dialogue.
+        for d in dialogue:
+            window:
+                id d.window_id
 
-            vpgrid:
-                cols 1
-                yinitial 1.0
-
-                use nvl_dialogue(dialogue)
-
-        else:
-
-            use nvl_dialogue(dialogue)
-
-        ## Displays the menu, if given. The menu may be displayed incorrectly if
-        ## config.narrator_menu is set to True.
-        for i in items:
-
-            textbutton i.caption:
-                action i.action
-                style "nvl_button"
-
-    #add SideImage() xalign 0.0 yalign 1.0
-
-
-screen nvl_dialogue(dialogue, slow_effect = slow_typewriter, slow_effect_delay = 0, always_effect = None):
-
-    for d in dialogue:
-
-        window:
-            id d.window_id
-
-            fixed:
-                yfit gui.nvl_height is None
+                has hbox:
+                    spacing 10
 
                 if d.who is not None:
+                    text d.who id d.who_id
 
-                    text d.who:
-                        id d.who_id
-
-                text d.what:
-                    id d.what_id
+                text d.what id d.what_id
 
 
 ## This controls the maximum number of NVL-mode entries that can be displayed at

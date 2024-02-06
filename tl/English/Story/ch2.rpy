@@ -1344,3 +1344,527 @@ translate English strings:
     old "Episode0 Auferstehung der Goldenen Hexe\nDie Hexe auf dem Balkon"
     new "Episode0 Resurrection of the golden witch\nThe witch on the balcony"
 
+# TODO: Translation updated at 2023-10-28 23:57
+
+# game/Story/ch2.rpy:27
+translate English chapter2_0276c543:
+
+    # ber "\"Ja,"
+    ber "\"Ja,"
+
+# game/Story/ch2.rpy:31
+translate English chapter2_51f1c048:
+
+    # ber "Sie machen das ewige Leben einer tausendjährigen Hexe etwas erträglicher.\""
+    ber "Sie machen das ewige Leben einer tausendjährigen Hexe etwas erträglicher.\""
+
+# game/Story/ch2.rpy:34
+translate English chapter2_c375ad50:
+
+    # bea "\"*gacker*gacker*...!"
+    bea "\"*gacker*gacker*...!"
+
+# game/Story/ch2.rpy:39
+translate English chapter2_99f7c7c6:
+
+    # extend " ...Allein aus diesem Grund können wir einen so ausgezeichneten Tee genießen.\""
+    extend " ...Allein aus diesem Grund können wir einen so ausgezeichneten Tee genießen.\""
+
+# game/Story/ch2.rpy:43
+translate English chapter2_90bc77c9:
+
+    # ber a11defo2 "\"Ich bin nicht interessiert an irgendwelchen Keksen.\""
+    ber a11defo2 "\"Ich bin nicht interessiert an irgendwelchen Keksen.\""
+
+# game/Story/ch2.rpy:44
+translate English chapter2_586c6b18:
+
+    # bea a13warai1 "\"Großes Fräulein Bernkastel,"
+    bea a13warai1 "\"Großes Fräulein Bernkastel,"
+
+# game/Story/ch2.rpy:47
+translate English chapter2_5d3276ca:
+
+    # extend " ...Darf ich fragen, was der Grund für Euren Besuch ist?\""
+    extend " ...Darf ich fragen, was der Grund für Euren Besuch ist?\""
+
+# game/Story/ch2.rpy:57
+translate English chapter2_093d9214:
+
+    # ber "\"...Beato,"
+    ber "\"...Beato,"
+
+# game/Story/ch2.rpy:60
+translate English chapter2_6a2dae0f:
+
+    # ber "Ich habe nicht die Absicht die Regeln deines Territoriums zu verletzen.\""
+    ber "Ich habe nicht die Absicht die Regeln deines Territoriums zu verletzen.\""
+
+# game/Story/ch2.rpy:63
+translate English chapter2_e78dfa69:
+
+    # bea "\"...*gacker*gacker*"
+    bea "\"...*gacker*gacker*"
+
+# game/Story/ch2.rpy:66
+translate English chapter2_b873752c:
+
+    # extend " Ich bin nur furchtbar erstaunt, dass die legendäre Hexe Bernkastel an meiner Teeparty teilnimmt.\""
+    extend " Ich bin nur furchtbar erstaunt, dass die legendäre Hexe Bernkastel an meiner Teeparty teilnimmt.\""
+
+# game/Story/ch2.rpy:67
+translate English chapter2_2ed60e70:
+
+    # ber a21defo2 "\"Nein,"
+    ber a21defo2 "\"Nein,"
+
+# game/Story/ch2.rpy:69
+translate English chapter2_0f10a9ae:
+
+    # ber " ...Auch wenn es mir widerstrebt, bin ich hier, um dir vor deinem nächsten Spiel mit Battler etwas über die Regeln dieser Welt zu erklären.\""
+    ber " ...Auch wenn es mir widerstrebt, bin ich hier, um dir vor deinem nächsten Spiel mit Battler etwas über die Regeln dieser Welt zu erklären.\""
+
+# game/Story/ch2.rpy:70
+translate English chapter2_46ec42af:
+
+    # bea a11futeki2 "\"Regeln dieser Welt, die ich nicht kenne?"
+    bea a11futeki2 "\"Regeln dieser Welt, die ich nicht kenne?"
+
+# game/Story/ch2.rpy:71
+translate English chapter2_d4e2af1c:
+
+    # extend " ..Ich bin eine tausendjährige Hexe, die millionenfach mit Menschenleben gespielt hat, bevor ich sie in Millionen feiner Fleischklumpen verwandelt habe.\""
+    extend " ..Ich bin eine tausendjährige Hexe, die millionenfach mit Menschenleben gespielt hat, bevor ich sie in Millionen feiner Fleischklumpen verwandelt habe.\""
+
+# game/Story/ch2.rpy:72
+translate English chapter2_f60a3ddd:
+
+    # ber "\"Es gibt Dinge auf dieser Welt, die du noch nicht verstehst.\""
+    ber "\"Es gibt Dinge auf dieser Welt, die du noch nicht verstehst.\""
+
+# game/Story/ch2.rpy:73
+translate English chapter2_1a3afc23:
+
+    # bea a11futeki1 "\"Hoh?"
+    bea a11futeki1 "\"Hoh?"
+
+# game/Story/ch2.rpy:75
+translate English chapter2_4cb08745:
+
+    # extend " ...Ich bin mehr als neugierig, was eine Hexe aus dem Senat mir zu sagen hat.\""
+    extend " ...Ich bin mehr als neugierig, was eine Hexe aus dem Senat mir zu sagen hat.\""
+
+# game/Story/ch2.rpy:84
+translate English chapter2_5dedb592:
+
+    # ber "\"Die Macht einer Hexe beruht ohne Einschränkung auf einer bestimmten Zahl."
+    ber "\"Die Macht einer Hexe beruht ohne Einschränkung auf einer bestimmten Zahl."
+
+# game/Story/ch2.rpy:95
+translate English chapter2_7082db59:
+
+    # ber "Seine Überlebenschance lag bei 1 zu 100.000.000, aber er überlebte.\""
+    ber "Seine Überlebenschance lag bei 1 zu 100.000.000, aber er überlebte.\""
+
+# game/Story/ch2.rpy:98
+translate English chapter2_dd042838:
+
+    # bea "\"Wenn ich das richtig verstehe, kann ein Wunder geschehen, solange die Wahrscheinlichkeit nicht gleich Null ist?\""
+    bea "\"Wenn ich das richtig verstehe, kann ein Wunder geschehen, solange die Wahrscheinlichkeit nicht gleich Null ist?\""
+
+# game/Story/ch2.rpy:100
+translate English chapter2_93b44a72:
+
+    # ber "\"Das ist korrekt."
+    ber "\"Das ist korrekt."
+
+# game/Story/ch2.rpy:102
+translate English chapter2_6fcb059c:
+
+    # ber "Darum werfe ich die Würfel des Schicksals immer wieder, bis ich mit dem Ergebnis zufrieden bin, das ist meine Macht.\""
+    ber "Darum werfe ich die Würfel des Schicksals immer wieder, bis ich mit dem Ergebnis zufrieden bin, das ist meine Macht.\""
+
+# game/Story/ch2.rpy:108
+translate English chapter2_66e7820f:
+
+    # ber a21defo1 "\"Deine Macht aber ist die Unendlichkeit."
+    ber a21defo1 "\"Deine Macht aber ist die Unendlichkeit."
+
+# game/Story/ch2.rpy:111
+translate English chapter2_24bb5872:
+
+    # extend " ...Eine beängstigende Fähigkeit, gegen die ich nicht antreten möchte.\""
+    extend " ...Eine beängstigende Fähigkeit, gegen die ich nicht antreten möchte.\""
+
+# game/Story/ch2.rpy:112
+translate English chapter2_6768b5ed:
+
+    # bea "\"Das ist richtig, für mich ist nicht wichtig, was ich bekomme, sondern was daraus wird."
+    bea "\"Das ist richtig, für mich ist nicht wichtig, was ich bekomme, sondern was daraus wird."
+
+# game/Story/ch2.rpy:116
+translate English chapter2_4e17e175:
+
+    # extend " ...Ich spiele einfach mit dessen Leben bis in alle Ewigkeit.\""
+    extend " ...Ich spiele einfach mit dessen Leben bis in alle Ewigkeit.\""
+
+# game/Story/ch2.rpy:121
+translate English chapter2_006ccbfd:
+
+    # ber a21shian1 "\"Und dann gibt es noch die Hexe der Gewissheit, die die Zahl 99 in der Hand hält."
+    ber a21shian1 "\"Und dann gibt es noch die Hexe der Gewissheit, die die Zahl 99 in der Hand hält."
+
+# game/Story/ch2.rpy:127
+translate English chapter2_eed3cd87:
+
+    # ber "Ich habe einmal gegen sie gewonnen, aber das war nur ein Ausdauerwettkampf.\""
+    ber "Ich habe einmal gegen sie gewonnen, aber das war nur ein Ausdauerwettkampf.\""
+
+# game/Story/ch2.rpy:128
+translate English chapter2_1689f71f:
+
+    # bea a11gaman4 "\"Das klingt sehr grausam, es muss sehr schwer sein, gegen eine solche Macht zu gewinnen."
+    bea a11gaman4 "\"Das klingt sehr grausam, es muss sehr schwer sein, gegen eine solche Macht zu gewinnen."
+
+# game/Story/ch2.rpy:132
+translate English chapter2_a19444bd:
+
+    # extend " ...Man erleidet das Schicksal des ertrinkens mit absoluter Gewissheit.\""
+    extend " ...Man erleidet das Schicksal des ertrinkens mit absoluter Gewissheit.\""
+
+# game/Story/ch2.rpy:133
+translate English chapter2_5f5e996d:
+
+    # ber a21defo1 "\"Das Problem ist, dass die Wahrscheinlichkeit bei 999.999.999 zu 1.000.000.000 liegt."
+    ber a21defo1 "\"Das Problem ist, dass die Wahrscheinlichkeit bei 999.999.999 zu 1.000.000.000 liegt."
+
+# game/Story/ch2.rpy:137
+translate English chapter2_ed42a32b:
+
+    # extend " ....Es würde meine Macht annulieren.\""
+    extend " ....Es würde meine Macht annulieren.\""
+
+# game/Story/ch2.rpy:141
+translate English chapter2_11141a71:
+
+    # ber "\"Dann gibt es noch die Hexe des Theaterbesuchs und der Zuschauerschaft."
+    ber "\"Dann gibt es noch die Hexe des Theaterbesuchs und der Zuschauerschaft."
+
+# game/Story/ch2.rpy:142
+translate English chapter2_7ae560bc:
+
+    # extend " ...Sie kontrolliert keine der Zahlen, aber sie duldet sie.\""
+    extend " ...Sie kontrolliert keine der Zahlen, aber sie duldet sie.\""
+
+# game/Story/ch2.rpy:143
+translate English chapter2_5c433356:
+
+    # bea a13warai1 "\"Ist das nicht die mächtige Große Hexe Aurora von der ich einmal gehört habe?"
+    bea a13warai1 "\"Ist das nicht die mächtige Große Hexe Aurora von der ich einmal gehört habe?"
+
+# game/Story/ch2.rpy:145
+translate English chapter2_3aa6172a:
+
+    # extend " ...Ich habe gehört sie ist unter allen Wesen dieser Welt sowas wie eine Gottheit.\""
+    extend " ...Ich habe gehört sie ist unter allen Wesen dieser Welt sowas wie eine Gottheit.\""
+
+# game/Story/ch2.rpy:146
+translate English chapter2_0bf82ef1:
+
+    # ber a21defo2 "\"Für uns Hexen ist sie das definitiv, sie mischt sich aber selten ein, sie beobachtet alles nur."
+    ber a21defo2 "\"Für uns Hexen ist sie das definitiv, sie mischt sich aber selten ein, sie beobachtet alles nur."
+
+# game/Story/ch2.rpy:147
+translate English chapter2_2353ecab:
+
+    # extend " ...Unsere Leben sind für sie nur wie ein Narrativ, dass man bis in alle Ewigkeit genießen kann.\""
+    extend " ...Unsere Leben sind für sie nur wie ein Narrativ, dass man bis in alle Ewigkeit genießen kann.\""
+
+# game/Story/ch2.rpy:148
+translate English chapter2_c63541f6:
+
+    # bea a11akuwarai5 "\"Also sind all die Milliarden von Leben die existieren, für die Große Aurora nur ein paar einfache Abendlektüren?"
+    bea a11akuwarai5 "\"Also sind all die Milliarden von Leben die existieren, für die Große Aurora nur ein paar einfache Abendlektüren?"
+
+# game/Story/ch2.rpy:150
+translate English chapter2_1e7281f0:
+
+    # extend " ...Das ist in der Tat sehr amüsant!\""
+    extend " ...Das ist in der Tat sehr amüsant!\""
+
+# game/Story/ch2.rpy:151
+translate English chapter2_95dca044:
+
+    # ber a21shian1 "\"Auch wenn sie nur zuschaut, werden wir nur geduldet!"
+    ber a21shian1 "\"Auch wenn sie nur zuschaut, werden wir nur geduldet!"
+
+# game/Story/ch2.rpy:153
+translate English chapter2_b13045b5:
+
+    # extend " ....Die gruseligste Macht aller Hexen.\""
+    extend " ....Die gruseligste Macht aller Hexen.\""
+
+# game/Story/ch2.rpy:160
+translate English chapter2_3c9fe362:
+
+    # bea a13futeki1 "\"Entschuldige, dass ich Euch unterbreche, aber die meisten Dinge waren mir bereits bewusst.."
+    bea a13futeki1 "\"Entschuldige, dass ich Euch unterbreche, aber die meisten Dinge waren mir bereits bewusst.."
+
+# game/Story/ch2.rpy:162
+translate English chapter2_1ee4a5d8:
+
+    # extend " ...Was wollt ihr mir wirklich sagen?\""
+    extend " ...Was wollt ihr mir wirklich sagen?\""
+
+# game/Story/ch2.rpy:163
+translate English chapter2_c39c05e6:
+
+    # ber "\"Du hast es also bemerkt?"
+    ber "\"Du hast es also bemerkt?"
+
+# game/Story/ch2.rpy:164
+translate English chapter2_c5dc3ed8:
+
+    # extend a21defo2 " ...Eigentlich bist du mir völlig egal, aber ich erzähle es dir trotzdem.\""
+    extend a21defo2 " ...Eigentlich bist du mir völlig egal, aber ich erzähle es dir trotzdem.\""
+
+# game/Story/ch2.rpy:165
+translate English chapter2_aff6a348:
+
+    # bea a13warai1 "\"*gacker*gacker*..!"
+    bea a13warai1 "\"*gacker*gacker*..!"
+
+# game/Story/ch2.rpy:166
+translate English chapter2_57b33d27:
+
+    # extend " ...Ich höre Euch sehr gerne zu, Großes Fräulein Bernkastel.\""
+    extend " ...Ich höre Euch sehr gerne zu, Großes Fräulein Bernkastel.\""
+
+# game/Story/ch2.rpy:180
+translate English chapter2_a5a01aea:
+
+    # ber a21warai4 "Sie mag zwar die mächtigste Hexe sein, aber das mächtigste Wesen ist sie definitiv nicht.\""
+    ber a21warai4 "Sie mag zwar die mächtigste Hexe sein, aber das mächtigste Wesen ist sie definitiv nicht.\""
+
+# game/Story/ch2.rpy:182
+translate English chapter2_6fb98eac:
+
+    # bea "\"Es gibt etwas mächtigeres als Fräulein Aurora?"
+    bea "\"Es gibt etwas mächtigeres als Fräulein Aurora?"
+
+# game/Story/ch2.rpy:184
+translate English chapter2_2d7e34b4:
+
+    # extend " *gacker*gacker*...!\""
+    extend " *gacker*gacker*...!\""
+
+# game/Story/ch2.rpy:185
+translate English chapter2_7f598de3:
+
+    # ber "\"Sei ruhig und hör zu..."
+    ber "\"Sei ruhig und hör zu..."
+
+# game/Story/ch2.rpy:192
+translate English chapter2_3fa68024:
+
+    # ber "In dieser Ebene liegt deine Existenz als Territorialherr.\""
+    ber "In dieser Ebene liegt deine Existenz als Territorialherr.\""
+
+# game/Story/ch2.rpy:210
+translate English chapter2_be862ca7:
+
+    # ber "\"Ganz weit draußen auf der höchsten Ebene....."
+    ber "\"Ganz weit draußen auf der höchsten Ebene....."
+
+# game/Story/ch2.rpy:217
+translate English chapter2_5719fd08:
+
+    # ber "Diese Gottheit soll sogar mal ein einfacher Mensch gewesen sein.\""
+    ber "Diese Gottheit soll sogar mal ein einfacher Mensch gewesen sein.\""
+
+# game/Story/ch2.rpy:223
+translate English chapter2_c375ad50_1:
+
+    # bea "\"*gacker*gacker*...!"
+    bea "\"*gacker*gacker*...!"
+
+# game/Story/ch2.rpy:227
+translate English chapter2_70477d27:
+
+    # extend " ....wie soll ein Schöpfergott ein Mensch gewesen sein, wenn er diese Welt erst erschaffen musste?\""
+    extend " ....wie soll ein Schöpfergott ein Mensch gewesen sein, wenn er diese Welt erst erschaffen musste?\""
+
+# game/Story/ch2.rpy:229
+translate English chapter2_6945e173:
+
+    # ber "\"...Das ist ganz einfach..."
+    ber "\"...Das ist ganz einfach..."
+
+# game/Story/ch2.rpy:236
+translate English chapter2_7e95c59e:
+
+    # extend " ...Er war es der vor einer Quadrillion Jahren, die Ebenen der Metawelt erschaffen hat und auch der, der Auauau erschaffen hat.\""
+    extend " ...Er war es der vor einer Quadrillion Jahren, die Ebenen der Metawelt erschaffen hat und auch der, der Auauau erschaffen hat.\""
+
+# game/Story/ch2.rpy:245
+translate English chapter2_5152ed5e:
+
+    # extend " ...'Für den von der Null erwählten, ist das Konzept der Existenz obsolet.'\""
+    extend " ...'Für den von der Null erwählten, ist das Konzept der Existenz obsolet.'\""
+
+# game/Story/ch2.rpy:249
+translate English chapter2_5a62449d:
+
+    # extend " ...Zu gerne würde ich diesen Gott einmal treffen, auch wenn es mir das Blut in den Adern gefrieren würde und es mich auf der Stelle vernichten würde.\""
+    extend " ...Zu gerne würde ich diesen Gott einmal treffen, auch wenn es mir das Blut in den Adern gefrieren würde und es mich auf der Stelle vernichten würde.\""
+
+# game/Story/ch2.rpy:250
+translate English chapter2_ca03bb8c:
+
+    # ber "\"Sei nicht dumm..."
+    ber "\"Sei nicht dumm..."
+
+# game/Story/ch2.rpy:251
+translate English chapter2_8fcbe707:
+
+    # extend " ...Er würde dich nicht mal bemerken, er hat nichts für unbedeutene Hexen wie dich und mich übrig.\""
+    extend " ...Er würde dich nicht mal bemerken, er hat nichts für unbedeutene Hexen wie dich und mich übrig.\""
+
+# game/Story/ch2.rpy:252
+translate English chapter2_b602ea23:
+
+    # bea a11gaman4 "\"Das ist hart, selbst für eine legendäre Hexe wie Ihr es seid.\""
+    bea a11gaman4 "\"Das ist hart, selbst für eine legendäre Hexe wie Ihr es seid.\""
+
+# game/Story/ch2.rpy:253
+translate English chapter2_395d9076:
+
+    # ber a21shian1 "\"Dadurch dass er diese Welt und seine Regeln erschaffen hat, besitzt er eine unglaubliche Macht, die nicht mal Auauau besitzt."
+    ber a21shian1 "\"Dadurch dass er diese Welt und seine Regeln erschaffen hat, besitzt er eine unglaubliche Macht, die nicht mal Auauau besitzt."
+
+# game/Story/ch2.rpy:255
+translate English chapter2_61fed9a6:
+
+    # extend " ...Er ist der, der die Limits von Null durchbrochen hat.\""
+    extend " ...Er ist der, der die Limits von Null durchbrochen hat.\""
+
+# game/Story/ch2.rpy:256
+translate English chapter2_e23ab2c6:
+
+    # bea a11futeki2 "\"Oho,"
+    bea a11futeki2 "\"Oho,"
+
+# game/Story/ch2.rpy:258
+translate English chapter2_73643259:
+
+    # extend " ...Ein Individum, dass selbst mein Spiel mit leichtigkeit gewinnen könnte...\""
+    extend " ...Ein Individum, dass selbst mein Spiel mit leichtigkeit gewinnen könnte...\""
+
+# game/Story/ch2.rpy:259
+translate English chapter2_140e0610:
+
+    # ber a21warai4 "\"Er würde dein Spiel in eine Quadrillion Stücke zerteilen, wieder zusammensetzen, die Regeln ändern, es eine Milliarde Jahre spielen und dann in die nächst gelegene Mülltonne werfen und dich auslöschen.\""
+    ber a21warai4 "\"Er würde dein Spiel in eine Quadrillion Stücke zerteilen, wieder zusammensetzen, die Regeln ändern, es eine Milliarde Jahre spielen und dann in die nächst gelegene Mülltonne werfen und dich auslöschen.\""
+
+# game/Story/ch2.rpy:269
+translate English chapter2_b43a6cc6:
+
+    # ber a21defo1 "\"Diese Gottheit, hat keinen Namen, aber da er die Macht der Null besitzt nennt man ihn nur"
+    ber a21defo1 "\"Diese Gottheit, hat keinen Namen, aber da er die Macht der Null besitzt nennt man ihn nur"
+
+# game/Story/ch2.rpy:276
+translate English chapter2_5b5920d3:
+
+    # ber "Es ist die gewaltige Macht ein Individum auf Null zu setzen.\""
+    ber "Es ist die gewaltige Macht ein Individum auf Null zu setzen.\""
+
+# game/Story/ch2.rpy:279
+translate English chapter2_86e9d4a9:
+
+    # bea "\"In anderen Worten, wenn Zero ein Individum auf Null setzt, wird nicht nur die Existenz ausgelöscht, absolut alle Erinnerungen an diese Existenz werden ebenfalls ausgelöscht."
+    bea "\"In anderen Worten, wenn Zero ein Individum auf Null setzt, wird nicht nur die Existenz ausgelöscht, absolut alle Erinnerungen an diese Existenz werden ebenfalls ausgelöscht."
+
+# game/Story/ch2.rpy:281
+translate English chapter2_76a91b94:
+
+    # ber a21akuwarai2 "\"Das versteht doch selbst die größte Dumpfbacke mit den kleinsten Gehirnzellen."
+    ber a21akuwarai2 "\"Das versteht doch selbst die größte Dumpfbacke mit den kleinsten Gehirnzellen."
+
+# game/Story/ch2.rpy:286
+translate English chapter2_7cfb23a6:
+
+    # ber a21warai4 "Hexen spielen Spiele gegen andere Hexen um der Langeweile zu entkommen, denn das ist das, was Hexen töten kann.\""
+    ber a21warai4 "Hexen spielen Spiele gegen andere Hexen um der Langeweile zu entkommen, denn das ist das, was Hexen töten kann.\""
+
+# game/Story/ch2.rpy:287
+translate English chapter2_6d5036c5:
+
+    # bea a11defo2 "\"...Das bedeutet also, er müsste mein Spiel nach den gesetzten Regeln spielen und kann nicht einfach mit seiner Macht schummeln?\""
+    bea a11defo2 "\"...Das bedeutet also, er müsste mein Spiel nach den gesetzten Regeln spielen und kann nicht einfach mit seiner Macht schummeln?\""
+
+# game/Story/ch2.rpy:289
+translate English chapter2_e4b093fe:
+
+    # ber a21akuwarai2 "\"....Ahahahaha!! ahahahaha!!!"
+    ber a21akuwarai2 "\"....Ahahahaha!! ahahahaha!!!"
+
+# game/Story/ch2.rpy:292
+translate English chapter2_611b00d2:
+
+    # extend " ...Er würde dich nicht mal am Spiel teilnehmen lassen, ohne dass du es überhaupt merkst!!!\""
+    extend " ...Er würde dich nicht mal am Spiel teilnehmen lassen, ohne dass du es überhaupt merkst!!!\""
+
+# game/Story/ch2.rpy:297
+translate English chapter2_3f6188b0:
+
+    # bea a11akuwarai4 "\"....Kyahahahahahahaahahahah!!!"
+    bea a11akuwarai4 "\"....Kyahahahahahahaahahahah!!!"
+
+# game/Story/ch2.rpy:301
+translate English chapter2_46a3ec21:
+
+    # bea "Zu gerne würde ich sehen, wie er meine Seele mit Leichtigkeit und einem einzigen Fingerschnipsen zermalmt, bis nichts mehr übrig ist!\""
+    bea "Zu gerne würde ich sehen, wie er meine Seele mit Leichtigkeit und einem einzigen Fingerschnipsen zermalmt, bis nichts mehr übrig ist!\""
+
+# game/Story/ch2.rpy:302
+translate English chapter2_4635a904:
+
+    # ber a21warai4 "\"*giggle*giggle*"
+    ber a21warai4 "\"*giggle*giggle*"
+
+# game/Story/ch2.rpy:312
+translate English chapter2_f15ea5ef:
+
+    # extend " ...Ich werde weiter durch den See der Fragmente wandern und versuchen meiner Langeweile zu entkommen.\""
+    extend " ...Ich werde weiter durch den See der Fragmente wandern und versuchen meiner Langeweile zu entkommen.\""
+
+# game/Story/ch2.rpy:317
+translate English chapter2_ec13a24c:
+
+    # bea "\"Die Freude war ganz meinerseits, Großes Fräulein Bernkastel."
+    bea "\"Die Freude war ganz meinerseits, Großes Fräulein Bernkastel."
+
+# game/Story/ch2.rpy:318
+translate English chapter2_067bf6c2:
+
+    # extend " ...Das nächste Spiel wird in den nächsten Tagen beginnen, schaut doch bei Gelegenheit mal vorbei.\""
+    extend " ...Das nächste Spiel wird in den nächsten Tagen beginnen, schaut doch bei Gelegenheit mal vorbei.\""
+
+# game/Story/ch2.rpy:335
+translate English chapter2_ec06f576:
+
+    # bea "\"Hoh?"
+    bea "\"Hoh?"
+
+# game/Story/ch2.rpy:340
+translate English chapter2_2d7e34b4_1:
+
+    # extend " *gacker*gacker*...!\""
+    extend " *gacker*gacker*...!\""
+
+translate English strings:
+
+    # game/Story/ch2.rpy:8
+    old "Episode0 Resurrection of the golden witch\nDie Hexe auf dem Balkon"
+    new "Episode0 Resurrection of the golden witch\nDie Hexe auf dem Balkon"
+

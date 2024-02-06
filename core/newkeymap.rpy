@@ -23,8 +23,6 @@ init python:
     config.keymap['screenshot'].remove('alt_shift_K_s')
     config.keymap['screenshot'].remove('noshift_K_s')
 
-    config.keymap['accessibility'].remove('K_a')
-
     config.keymap['save_delete'].remove('K_DELETE')
     config.keymap['save_delete'].remove('KP_DELETE')
 

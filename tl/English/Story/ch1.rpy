@@ -5694,3 +5694,2309 @@ translate English strings:
     old "Episode0 Auferstehung der Goldenen Hexe\nBootsfahrt nach Rokkenjima"
     new "Episode0 Resurrection of the golden witch\nBoattrip to Rokkenjima"
 
+# TODO: Translation updated at 2023-10-28 23:57
+
+# game/Story/ch1.rpy:32
+translate English chapter1_352a1ace:
+
+    # but "\"whaoooo!!!!"
+    but "\"whaoooo!!!!"
+
+# game/Story/ch1.rpy:37
+translate English chapter1_ff8dbe14:
+
+    # extend " ....Ich werde diese Insel nicht mehr erreichen, eher sterbe ich hier!\""
+    extend " ....Ich werde diese Insel nicht mehr erreichen, eher sterbe ich hier!\""
+
+# game/Story/ch1.rpy:43
+translate English chapter1_f6258322:
+
+    # mar "\"*kicher*kicher*"
+    mar "\"*kicher*kicher*"
+
+# game/Story/ch1.rpy:46
+translate English chapter1_01de762c:
+
+    # but b23nayamu1 "\"...Bitte"
+    but b23nayamu1 "\"...Bitte"
+
+# game/Story/ch1.rpy:49
+translate English chapter1_2980d49d:
+
+    # extend " ...das macht alles mein Magen nicht mit.\""
+    extend " ...das macht alles mein Magen nicht mit.\""
+
+# game/Story/ch1.rpy:50
+translate English chapter1_22fd377c:
+
+    # mar a11uuu1 "\"Uu~?"
+    mar a11uuu1 "\"Uu~?"
+
+# game/Story/ch1.rpy:55
+translate English chapter1_2b14417e:
+
+    # extend " uu~!\""
+    extend " uu~!\""
+
+# game/Story/ch1.rpy:84
+translate English chapter1_8af5b22e:
+
+    # rud "\"...Hey Battler-kun!"
+    rud "\"...Hey Battler-kun!"
+
+# game/Story/ch1.rpy:89
+translate English chapter1_bfce3c03:
+
+    # extend " du konntest ja nicht mal im Auto still sitzen.\""
+    extend " du konntest ja nicht mal im Auto still sitzen.\""
+
+# game/Story/ch1.rpy:92
+translate English chapter1_3a9c26e4:
+
+    # but "\"..........."
+    but "\"..........."
+
+# game/Story/ch1.rpy:94
+translate English chapter1_e0f9a36b:
+
+    # extend " ....Das ist echt kein guter Zeitpunkt!\""
+    extend " ....Das ist echt kein guter Zeitpunkt!\""
+
+# game/Story/ch1.rpy:95
+translate English chapter1_e20a4068:
+
+    # rud a11defo1 "\"Es ist nie ein guter Zeitpunkt, wenn du mit irgendetwas fahren musst."
+    rud a11defo1 "\"Es ist nie ein guter Zeitpunkt, wenn du mit irgendetwas fahren musst."
+
+# game/Story/ch1.rpy:96
+translate English chapter1_7693ad69:
+
+    # extend " .....Wag es nicht, ins Meer zu kotzen!\""
+    extend " .....Wag es nicht, ins Meer zu kotzen!\""
+
+# game/Story/ch1.rpy:97
+translate English chapter1_c5c34b82:
+
+    # but b22nayamu2 "\"...Ich gebe mir hier die größte Mühe.\""
+    but b22nayamu2 "\"...Ich gebe mir hier die größte Mühe.\""
+
+# game/Story/ch1.rpy:124
+translate English chapter1_36bbd12a:
+
+    # kir "\"...Ist es nicht schön, dass Battler-kun wieder da ist?"
+    kir "\"...Ist es nicht schön, dass Battler-kun wieder da ist?"
+
+# game/Story/ch1.rpy:125
+translate English chapter1_21245502:
+
+    # extend " Ich meine, nach 6 Jahren Abwesenheit immer noch ein Theater bei der Ankunft? *kicher*\""
+    extend " Ich meine, nach 6 Jahren Abwesenheit immer noch ein Theater bei der Ankunft? *kicher*\""
+
+# game/Story/ch1.rpy:127
+translate English chapter1_557dd52e:
+
+    # rud "\"....Ja"
+    rud "\"....Ja"
+
+# game/Story/ch1.rpy:129
+translate English chapter1_e068705d:
+
+    # extend " ...da hatte man die ganze Anreise keine Ruhe.\""
+    extend " ...da hatte man die ganze Anreise keine Ruhe.\""
+
+# game/Story/ch1.rpy:130
+translate English chapter1_ce835a43:
+
+    # kir a11majime1 "\"...Aber er ist selbst schuld, wenn er da rumturnt, obwohl er weiß, dass er seekrank wird.\""
+    kir a11majime1 "\"...Aber er ist selbst schuld, wenn er da rumturnt, obwohl er weiß, dass er seekrank wird.\""
+
+# game/Story/ch1.rpy:154
+translate English chapter1_de993b18:
+
+    # but "\"...........Ich finde das gar nicht lustig"
+    but "\"...........Ich finde das gar nicht lustig"
+
+# game/Story/ch1.rpy:158
+translate English chapter1_4c697116:
+
+    # extend " ...................*würg*\""
+    extend " ...................*würg*\""
+
+# game/Story/ch1.rpy:164
+translate English chapter1_4111acd4:
+
+    # rud "\".....Jetzt hat dieser Kasper tatsächlich die Fische gefüttert, ach herrje,"
+    rud "\".....Jetzt hat dieser Kasper tatsächlich die Fische gefüttert, ach herrje,"
+
+# game/Story/ch1.rpy:165
+translate English chapter1_b3c2dc11:
+
+    # extend " ....ahahaha!\""
+    extend " ....ahahaha!\""
+
+# game/Story/ch1.rpy:168
+translate English chapter1_c18ab260:
+
+    # mar "\"uu-uu~!"
+    mar "\"uu-uu~!"
+
+# game/Story/ch1.rpy:171
+translate English chapter1_7cdaf010:
+
+    # extend " *kicher*kicher*\""
+    extend " *kicher*kicher*\""
+
+# game/Story/ch1.rpy:192
+translate English chapter1_7442b4b7:
+
+    # ros "\"Maria!"
+    ros "\"Maria!"
+
+# game/Story/ch1.rpy:194
+translate English chapter1_8cf4cb0f:
+
+    # extend " .....lass Battler-kun in Ruhe!\""
+    extend " .....lass Battler-kun in Ruhe!\""
+
+# game/Story/ch1.rpy:196
+translate English chapter1_3b7ce39c:
+
+    # mar "\"....uu~\""
+    mar "\"....uu~\""
+
+# game/Story/ch1.rpy:197
+translate English chapter1_2a30953d:
+
+    # ros a11ikari2 "\"...und hör auf mit diesem 'uu-uu'!"
+    ros a11ikari2 "\"...und hör auf mit diesem 'uu-uu'!"
+
+# game/Story/ch1.rpy:198
+translate English chapter1_96b4550e:
+
+    # extend " .....Du bist kein kleines Kind mehr!\""
+    extend " .....Du bist kein kleines Kind mehr!\""
+
+# game/Story/ch1.rpy:206
+translate English chapter1_556387a5:
+
+    # ros a11komaru4 "\"....Tut mir leid,"
+    ros a11komaru4 "\"....Tut mir leid,"
+
+# game/Story/ch1.rpy:208
+translate English chapter1_10183901:
+
+    # extend " .....ich kriege es einfach nicht aus ihr raus.\""
+    extend " .....ich kriege es einfach nicht aus ihr raus.\""
+
+# game/Story/ch1.rpy:209
+translate English chapter1_a9f0d2cf:
+
+    # but b22warai1 "\"Schon gut, Tante Rosa,"
+    but b22warai1 "\"Schon gut, Tante Rosa,"
+
+# game/Story/ch1.rpy:210
+translate English chapter1_0cf26567:
+
+    # extend " ....sie meint es nicht böse, also bin ich es auch nicht.\""
+    extend " ....sie meint es nicht böse, also bin ich es auch nicht.\""
+
+# game/Story/ch1.rpy:211
+translate English chapter1_9ee38ef4:
+
+    # ros a11majime1 "\"...Dankeschön, Battler-kun, das beruhigt mich."
+    ros a11majime1 "\"...Dankeschön, Battler-kun, das beruhigt mich."
+
+# game/Story/ch1.rpy:213
+translate English chapter1_b7cafabf:
+
+    # extend " .....denn du wirkst so reif und erwachsen und jetzt das?\""
+    extend " .....denn du wirkst so reif und erwachsen und jetzt das?\""
+
+# game/Story/ch1.rpy:234
+translate English chapter1_3fc8511f:
+
+    # rud "\"Er kann einfach nicht still sitzen, aus irgendeinem Grund."
+    rud "\"Er kann einfach nicht still sitzen, aus irgendeinem Grund."
+
+# game/Story/ch1.rpy:235
+translate English chapter1_ed8a08c4:
+
+    # extend " ...Das ist wirklich peinlich, das darfst du niemandem erzählen.\""
+    extend " ...Das ist wirklich peinlich, das darfst du niemandem erzählen.\""
+
+# game/Story/ch1.rpy:237
+translate English chapter1_026be817:
+
+    # but "\"..Ey!"
+    but "\"..Ey!"
+
+# game/Story/ch1.rpy:238
+translate English chapter1_89209b3b:
+
+    # extend " .....halt den Mund!\""
+    extend " .....halt den Mund!\""
+
+# game/Story/ch1.rpy:239
+translate English chapter1_1e0cb0c0:
+
+    # rud a11akuwarai2 "\"...Ey Battler-kun!"
+    rud a11akuwarai2 "\"...Ey Battler-kun!"
+
+# game/Story/ch1.rpy:240
+translate English chapter1_132ff008:
+
+    # extend " ...Das Frühstück, dass gerade im Meer gelandet ist, hat Geld gekostet und Lebensmittel werden nicht billiger!\""
+    extend " ...Das Frühstück, dass gerade im Meer gelandet ist, hat Geld gekostet und Lebensmittel werden nicht billiger!\""
+
+# game/Story/ch1.rpy:241
+translate English chapter1_35b21106:
+
+    # but b22nayamu1 "\"...Ähm,"
+    but b22nayamu1 "\"...Ähm,"
+
+# game/Story/ch1.rpy:243
+translate English chapter1_16cd1a87:
+
+    # extend " ....ihihihi!\""
+    extend " ....ihihihi!\""
+
+# game/Story/ch1.rpy:244
+translate English chapter1_04cf6c8c:
+
+    # rud a11defo2 "\"........Battler....\""
+    rud a11defo2 "\"........Battler....\""
+
+# game/Story/ch1.rpy:249
+translate English chapter1_8c21251c:
+
+    # but "\"....owowowowowow"
+    but "\"....owowowowowow"
+
+# game/Story/ch1.rpy:252
+translate English chapter1_346f70a5:
+
+    # extend " .....owowowow\""
+    extend " .....owowowow\""
+
+# game/Story/ch1.rpy:254
+translate English chapter1_28d91a7f:
+
+    # but "\"....Owowowowowowowow,"
+    but "\"....Owowowowowowowow,"
+
+# game/Story/ch1.rpy:259
+translate English chapter1_346f70a5_1:
+
+    # extend " .....owowowow\""
+    extend " .....owowowow\""
+
+# game/Story/ch1.rpy:260
+translate English chapter1_ac30f3a2:
+
+    # rud "\"....Du"
+    rud "\"....Du"
+
+# game/Story/ch1.rpy:267
+translate English chapter1_d67723fc:
+
+    # extend " ....jaaaa~?\""
+    extend " ....jaaaa~?\""
+
+# game/Story/ch1.rpy:269
+translate English chapter1_294d1dd4:
+
+    # but a11aseru5 "\"....Ich hoffe, dass du über das Geländer fällst und ertrinkst, du alter Bastard!"
+    but a11aseru5 "\"....Ich hoffe, dass du über das Geländer fällst und ertrinkst, du alter Bastard!"
+
+# game/Story/ch1.rpy:278
+translate English chapter1_32de48cb:
+
+    # extend " ....es tut weh!\""
+    extend " ....es tut weh!\""
+
+# game/Story/ch1.rpy:279
+translate English chapter1_3e8ef1d5:
+
+    # rud a11akuwarai1 "\"....Das ist deine Strafe, wenn du frech wirst,"
+    rud a11akuwarai1 "\"....Das ist deine Strafe, wenn du frech wirst,"
+
+# game/Story/ch1.rpy:280
+translate English chapter1_13ded528:
+
+    # extend " ....mein lieber Battler-kun.\""
+    extend " ....mein lieber Battler-kun.\""
+
+# game/Story/ch1.rpy:284
+translate English chapter1_ad70fa9a:
+
+    # kir "\"Lasst es für heute gut sein, ihr beiden."
+    kir "\"Lasst es für heute gut sein, ihr beiden."
+
+# game/Story/ch1.rpy:285
+translate English chapter1_c374f15d:
+
+    # extend " Ihr solltet euren Vater-Sohn Konflikt wann anders austragen.\""
+    extend " Ihr solltet euren Vater-Sohn Konflikt wann anders austragen.\""
+
+# game/Story/ch1.rpy:291
+translate English chapter1_f5f31423:
+
+    # jes "\"...B.."
+    jes "\"...B.."
+
+# game/Story/ch1.rpy:307
+translate English chapter1_ff6f095f:
+
+    # extend " ....pahahahahahahaha!\""
+    extend " ....pahahahahahahaha!\""
+
+# game/Story/ch1.rpy:311
+translate English chapter1_cde81515:
+
+    # but "\"......Tut mir voll traurig."
+    but "\"......Tut mir voll traurig."
+
+# game/Story/ch1.rpy:315
+translate English chapter1_26be32fc:
+
+    # extend a21kuyasigaru1 " Mach, dass es aufhört, sonst falle ich wieder!\""
+    extend a21kuyasigaru1 " Mach, dass es aufhört, sonst falle ich wieder!\""
+
+# game/Story/ch1.rpy:317
+translate English chapter1_9d6109a9:
+
+    # jes "\"....Vielleicht sollte der Kapitän etwas langsamer fahren, sonst geht es dir gleich noch schlechter."
+    jes "\"....Vielleicht sollte der Kapitän etwas langsamer fahren, sonst geht es dir gleich noch schlechter."
+
+# game/Story/ch1.rpy:318
+translate English chapter1_198bf59a:
+
+    # extend " ...Ich werde sofort den Kapitän bitten, etwas langsamer zu fahren, aber bitte nicht mehr ins Meer kotzen.\""
+    extend " ...Ich werde sofort den Kapitän bitten, etwas langsamer zu fahren, aber bitte nicht mehr ins Meer kotzen.\""
+
+# game/Story/ch1.rpy:319
+translate English chapter1_5dbeb6db:
+
+    # but b11odoroki3 "\".....Ja"
+    but b11odoroki3 "\".....Ja"
+
+# game/Story/ch1.rpy:320
+translate English chapter1_e3451e27:
+
+    # extend " ....Vielen Dank, Jessica-chan.\""
+    extend " ....Vielen Dank, Jessica-chan.\""
+
+# game/Story/ch1.rpy:342
+translate English chapter1_7192836c:
+
+    # jes "\"....Verdammte Scheiße Battler-kun,"
+    jes "\"....Verdammte Scheiße Battler-kun,"
+
+# game/Story/ch1.rpy:343
+translate English chapter1_04ad327b:
+
+    # extend " ...jetzt werden wir uns wegen dir verspäten!\""
+    extend " ...jetzt werden wir uns wegen dir verspäten!\""
+
+# game/Story/ch1.rpy:346
+translate English chapter1_6bb61656:
+
+    # but "\".....Halt doch mal dein Maul,"
+    but "\".....Halt doch mal dein Maul,"
+
+# game/Story/ch1.rpy:347
+translate English chapter1_31841bbc:
+
+    # extend " ...immerhin kann ich jetzt ein wenig chillen.\""
+    extend " ...immerhin kann ich jetzt ein wenig chillen.\""
+
+# game/Story/ch1.rpy:348
+translate English chapter1_b8d50f07:
+
+    # jes a11defo2 "\".....Wir sollten besser runter gehen zum 'chillen', wir sind gleich auf der Insel.\""
+    jes a11defo2 "\".....Wir sollten besser runter gehen zum 'chillen', wir sind gleich auf der Insel.\""
+
+# game/Story/ch1.rpy:349
+translate English chapter1_abe5fa95:
+
+    # but "\"....Ja,"
+    but "\"....Ja,"
+
+# game/Story/ch1.rpy:353
+translate English chapter1_9c699150:
+
+    # extend " Ihihihi!\""
+    extend " Ihihihi!\""
+
+# game/Story/ch1.rpy:375
+translate English chapter1_e789ced1:
+
+    # geo "\"Battler-kun!"
+    geo "\"Battler-kun!"
+
+# game/Story/ch1.rpy:377
+translate English chapter1_cebe4342:
+
+    # extend " ...Dir scheint es gerade wohl gar nicht gut zu gehen.\""
+    extend " ...Dir scheint es gerade wohl gar nicht gut zu gehen.\""
+
+# game/Story/ch1.rpy:380
+translate English chapter1_f576265e:
+
+    # but "\"Mir geht es gut, den Umständen entsprechend...."
+    but "\"Mir geht es gut, den Umständen entsprechend...."
+
+# game/Story/ch1.rpy:381
+translate English chapter1_8017c76e:
+
+    # extend b23kuyasigaru1 " Der Kapitän hat das Schiff doch absichtlich so schaukeln lassen.\""
+    extend b23kuyasigaru1 " Der Kapitän hat das Schiff doch absichtlich so schaukeln lassen.\""
+
+# game/Story/ch1.rpy:382
+translate English chapter1_6b8d07a4:
+
+    # geo a11majime2 "\"...Ja gut,"
+    geo a11majime2 "\"...Ja gut,"
+
+# game/Story/ch1.rpy:387
+translate English chapter1_0f9d1bc4:
+
+    # extend " ....Jessica-chan?\""
+    extend " ....Jessica-chan?\""
+
+# game/Story/ch1.rpy:391
+translate English chapter1_e306e700:
+
+    # jes "\"Ja,"
+    jes "\"Ja,"
+
+# game/Story/ch1.rpy:393
+translate English chapter1_d34bb966:
+
+    # extend " ....nur mit dem Unterschied, dass er sich heute zum ersten Mal auf dem Boot übergeben hat.\""
+    extend " ....nur mit dem Unterschied, dass er sich heute zum ersten Mal auf dem Boot übergeben hat.\""
+
+# game/Story/ch1.rpy:394
+translate English chapter1_ff9b8a8b:
+
+    # geo a11komaru3 "\"Ahahahahaha,"
+    geo a11komaru3 "\"Ahahahahaha,"
+
+# game/Story/ch1.rpy:396
+translate English chapter1_b9774f10:
+
+    # extend " ....manche Dinge ändern sich, andere nie.\""
+    extend " ....manche Dinge ändern sich, andere nie.\""
+
+# game/Story/ch1.rpy:416
+translate English chapter1_9affb8c1:
+
+    # but "\"....Ich finde, heute ist auch ein besonderer Tag,"
+    but "\"....Ich finde, heute ist auch ein besonderer Tag,"
+
+# game/Story/ch1.rpy:418
+translate English chapter1_a4e99484:
+
+    # extend b11warai3 " Es ist das erste Mal, dass wir länger als einen Tag auf der Insel bleiben.\""
+    extend b11warai3 " Es ist das erste Mal, dass wir länger als einen Tag auf der Insel bleiben.\""
+
+# game/Story/ch1.rpy:420
+translate English chapter1_14bff9a9:
+
+    # geo "\"...Ja, aber wir haben auch immer ein wenig Glück gehabt, dass so ein starker Sturm nie über unsere Familienkonferenz hereingebrochen ist."
+    geo "\"...Ja, aber wir haben auch immer ein wenig Glück gehabt, dass so ein starker Sturm nie über unsere Familienkonferenz hereingebrochen ist."
+
+# game/Story/ch1.rpy:422
+translate English chapter1_f43f4e60:
+
+    # extend " Es gibt immer ein erstes Mal.\""
+    extend " Es gibt immer ein erstes Mal.\""
+
+# game/Story/ch1.rpy:425
+translate English chapter1_07cac6ee:
+
+    # geo a11majime2 "\"...ähm"
+    geo a11majime2 "\"...ähm"
+
+# game/Story/ch1.rpy:427
+translate English chapter1_aff04621:
+
+    # extend " Wusstest du, dass es so genannte Sturmgötter gibt?\""
+    extend " Wusstest du, dass es so genannte Sturmgötter gibt?\""
+
+# game/Story/ch1.rpy:428
+translate English chapter1_0b347487:
+
+    # but b11aseru1 "\"....Ähhhhm,"
+    but b11aseru1 "\"....Ähhhhm,"
+
+# game/Story/ch1.rpy:429
+translate English chapter1_69f4e64e:
+
+    # extend " ...meinst du Zeus...?\""
+    extend " ...meinst du Zeus...?\""
+
+# game/Story/ch1.rpy:430
+translate English chapter1_9752143e:
+
+    # geo a11warai1 "\"Auch richtig, aber nein, "
+    geo a11warai1 "\"Auch richtig, aber nein, "
+
+# game/Story/ch1.rpy:431
+translate English chapter1_1bc04023:
+
+    # extend " ....ich spreche vom Sturmgott in einem selbst.\""
+    extend " ....ich spreche vom Sturmgott in einem selbst.\""
+
+# game/Story/ch1.rpy:432
+translate English chapter1_d6047718:
+
+    # but b11oya1 "\".........."
+    but b11oya1 "\".........."
+
+# game/Story/ch1.rpy:433
+translate English chapter1_3137ca00:
+
+    # extend " ...Was?\""
+    extend " ...Was?\""
+
+# game/Story/ch1.rpy:434
+translate English chapter1_b4e158fb:
+
+    # geo "\"Okay, es geht um folgendes:"
+    geo "\"Okay, es geht um folgendes:"
+
+# game/Story/ch1.rpy:440
+translate English chapter1_89bd1b0b:
+
+    # geo "Man kann ihn aber auch dazu bringen, sich intensiv vorwärts zu bewegen und aus der Bequemlichkeit des Alltags auszubrechen.\""
+    geo "Man kann ihn aber auch dazu bringen, sich intensiv vorwärts zu bewegen und aus der Bequemlichkeit des Alltags auszubrechen.\""
+
+# game/Story/ch1.rpy:455
+translate English chapter1_6a86b30f:
+
+    # but "\".....Ähm,"
+    but "\".....Ähm,"
+
+# game/Story/ch1.rpy:462
+translate English chapter1_7f40cc81:
+
+    # geo "\"......Ähm,"
+    geo "\"......Ähm,"
+
+# game/Story/ch1.rpy:466
+translate English chapter1_4586f35b:
+
+    # geo a11hohoemi1 "Meine Mutter hat so eine Zeitschrift, und ab und zu schaue ich auch mal rein.\""
+    geo a11hohoemi1 "Meine Mutter hat so eine Zeitschrift, und ab und zu schaue ich auch mal rein.\""
+
+# game/Story/ch1.rpy:467
+translate English chapter1_0612261f:
+
+    # but b11warai2 "\" ....Hihihi"
+    but b11warai2 "\" ....Hihihi"
+
+# game/Story/ch1.rpy:468
+translate English chapter1_7855f5eb:
+
+    # extend " ....Du hast nur Pech gehabt, dass ich vor der Abreise auf der Toilette so ein Yoga-Magazin in der Hand hatte, weil ich mich vergriffen habe.\""
+    extend " ....Du hast nur Pech gehabt, dass ich vor der Abreise auf der Toilette so ein Yoga-Magazin in der Hand hatte, weil ich mich vergriffen habe.\""
+
+# game/Story/ch1.rpy:469
+translate English chapter1_f86e327a:
+
+    # geo "\"Was es manchmal für Zufälle gibt."
+    geo "\"Was es manchmal für Zufälle gibt."
+
+# game/Story/ch1.rpy:470
+translate English chapter1_9708e212:
+
+    # geo a11defo1 ".....Eine kurze Erklärung für dionysisch wäre, dass es eine Spiritualität der Ekstaze, Musik und des Tanzes ist.\""
+    geo a11defo1 ".....Eine kurze Erklärung für dionysisch wäre, dass es eine Spiritualität der Ekstaze, Musik und des Tanzes ist.\""
+
+# game/Story/ch1.rpy:471
+translate English chapter1_a116a842:
+
+    # but "\"Mehr nicht?"
+    but "\"Mehr nicht?"
+
+# game/Story/ch1.rpy:472
+translate English chapter1_a9ed6305:
+
+    # extend " Klingt ja nicht sehr originell.\""
+    extend " Klingt ja nicht sehr originell.\""
+
+# game/Story/ch1.rpy:473
+translate English chapter1_943dade2:
+
+    # geo "\"Da kommt noch was und zwar....."
+    geo "\"Da kommt noch was und zwar....."
+
+# game/Story/ch1.rpy:481
+translate English chapter1_2ba5e516:
+
+    # geo "Es ist ein sehr breites Thema...\""
+    geo "Es ist ein sehr breites Thema...\""
+
+# game/Story/ch1.rpy:482
+translate English chapter1_38ae9ba1:
+
+    # but b11ero1 "\"Geil,"
+    but b11ero1 "\"Geil,"
+
+# game/Story/ch1.rpy:485
+translate English chapter1_1458e3bd:
+
+    # extend " ...Pralle Brüste von sexy Yoginis, ich kom...\""
+    extend " ...Pralle Brüste von sexy Yoginis, ich kom...\""
+
+# game/Story/ch1.rpy:491
+translate English chapter1_536680fb:
+
+    # but "\".....Auauau, Jessica-chan..."
+    but "\".....Auauau, Jessica-chan..."
+
+# game/Story/ch1.rpy:492
+translate English chapter1_4b5ca6fc:
+
+    # extend " Das hat richtig weh getan!\""
+    extend " Das hat richtig weh getan!\""
+
+# game/Story/ch1.rpy:496
+translate English chapter1_1d212617:
+
+    # jes "\"...Trottel!"
+    jes "\"...Trottel!"
+
+# game/Story/ch1.rpy:498
+translate English chapter1_4f382ccb:
+
+    # extend " ......War ja zu erwarten, dass das deine einzige Motivation ist, Trottel-Battler!\""
+    extend " ......War ja zu erwarten, dass das deine einzige Motivation ist, Trottel-Battler!\""
+
+# game/Story/ch1.rpy:502
+translate English chapter1_a292ee00:
+
+    # jes a12ikari1 "\".....Perverser Battler!"
+    jes a12ikari1 "\".....Perverser Battler!"
+
+# game/Story/ch1.rpy:503
+translate English chapter1_a2f1eb1e:
+
+    # extend " ...Du bist sofort Feuer und Flamme, sobald es auch nur im Entferntesten in diese Richtung geht!\""
+    extend " ...Du bist sofort Feuer und Flamme, sobald es auch nur im Entferntesten in diese Richtung geht!\""
+
+# game/Story/ch1.rpy:505
+translate English chapter1_dfdb083b:
+
+    # but "\".....Ihihihihi"
+    but "\".....Ihihihihi"
+
+# game/Story/ch1.rpy:506
+translate English chapter1_73293e97:
+
+    # extend " ......Tut mir leid\""
+    extend " ......Tut mir leid\""
+
+# game/Story/ch1.rpy:510
+translate English chapter1_66f7ac2b:
+
+    # geo "\".....Hey!"
+    geo "\".....Hey!"
+
+# game/Story/ch1.rpy:511
+translate English chapter1_d090be3f:
+
+    # extend " ....Beruhigt euch bitte!\""
+    extend " ....Beruhigt euch bitte!\""
+
+# game/Story/ch1.rpy:514
+translate English chapter1_497a649a:
+
+    # jes a11atya3 "\".........Ja, ist gut."
+    jes a11atya3 "\".........Ja, ist gut."
+
+# game/Story/ch1.rpy:515
+translate English chapter1_d90b224b:
+
+    # extend " Aber dieses Spiritu-irgendwas klingt für mich so, als hätte jemand einen Vorwand gesucht mit einem anderen Menschen 'engen' Kontakt zu haben.\""
+    extend " Aber dieses Spiritu-irgendwas klingt für mich so, als hätte jemand einen Vorwand gesucht mit einem anderen Menschen 'engen' Kontakt zu haben.\""
+
+# game/Story/ch1.rpy:516
+translate English chapter1_0c039336:
+
+    # geo a11warai1 "\"....Ja,"
+    geo a11warai1 "\"....Ja,"
+
+# game/Story/ch1.rpy:517
+translate English chapter1_09792341:
+
+    # extend " .....letztlich läuft alles darauf hinaus, dass man in gewisser Weise seine Lust wiederbelebt.\""
+    extend " .....letztlich läuft alles darauf hinaus, dass man in gewisser Weise seine Lust wiederbelebt.\""
+
+# game/Story/ch1.rpy:518
+translate English chapter1_75a96607:
+
+    # jes a11tereru1 "\"Wenn wir so darüber reden, klingt es absolut lächerlich."
+    jes a11tereru1 "\"Wenn wir so darüber reden, klingt es absolut lächerlich."
+
+# game/Story/ch1.rpy:519
+translate English chapter1_5620f544:
+
+    # extend "....Wahahahahaha!\""
+    extend "....Wahahahahaha!\""
+
+# game/Story/ch1.rpy:520
+translate English chapter1_62a2d643:
+
+    # geo a11hohoemi1 "\"Ahahahaha...."
+    geo a11hohoemi1 "\"Ahahahaha...."
+
+# game/Story/ch1.rpy:528
+translate English chapter1_595991b6:
+
+    # extend " ....Ein echter Sturmgott aus der griechischen Mythologie. ist jedoch Aigaion.\""
+    extend " ....Ein echter Sturmgott aus der griechischen Mythologie. ist jedoch Aigaion.\""
+
+# game/Story/ch1.rpy:530
+translate English chapter1_dc97ed79:
+
+    # but "\"....Ein leckerer Teller Gyros-Geschnetzeltes ist das einzige Griechische, das ich schätze."
+    but "\"....Ein leckerer Teller Gyros-Geschnetzeltes ist das einzige Griechische, das ich schätze."
+
+# game/Story/ch1.rpy:531
+translate English chapter1_1cf975a3:
+
+    # extend b24warai1 " ......Yumyumyumyum!\""
+    extend b24warai1 " ......Yumyumyumyum!\""
+
+# game/Story/ch1.rpy:532
+translate English chapter1_770433b8:
+
+    # geo a11hohoemi1_closed_mouth "\".........."
+    geo a11hohoemi1_closed_mouth "\".........."
+
+# game/Story/ch1.rpy:533
+translate English chapter1_337a4576:
+
+    # extend a11warai1 " ...Jedenfalls kann dieser Gott Meeresstürme auslösen, ähnlich wie wir ihn heute erleben.\""
+    extend a11warai1 " ...Jedenfalls kann dieser Gott Meeresstürme auslösen, ähnlich wie wir ihn heute erleben.\""
+
+# game/Story/ch1.rpy:534
+translate English chapter1_a29825fc:
+
+    # but b11oya1 "\"Du willst mir also sagen, dass irgendeine Gottheit, auf die wir keinen Einfluss haben, diesen Sturm ausgelöst hat?\""
+    but b11oya1 "\"Du willst mir also sagen, dass irgendeine Gottheit, auf die wir keinen Einfluss haben, diesen Sturm ausgelöst hat?\""
+
+# game/Story/ch1.rpy:535
+translate English chapter1_0087fc7e:
+
+    # geo a11majime2 "\"......Hmm"
+    geo a11majime2 "\"......Hmm"
+
+# game/Story/ch1.rpy:536
+translate English chapter1_dc98b5bc:
+
+    # extend " ....So könnte man es ausdrücken ja!\""
+    extend " ....So könnte man es ausdrücken ja!\""
+
+# game/Story/ch1.rpy:537
+translate English chapter1_87cc5e85:
+
+    # but b11warai3 "\"....Auf jeden Fall können wir die Zeit, die uns Aigaion jetzt schenkt, nutzen, um wieder mehr Zeit miteinander zu verbringen.\""
+    but b11warai3 "\"....Auf jeden Fall können wir die Zeit, die uns Aigaion jetzt schenkt, nutzen, um wieder mehr Zeit miteinander zu verbringen.\""
+
+# game/Story/ch1.rpy:539
+translate English chapter1_7e218e60:
+
+    # jes "\"Ja, das hast du wirklich nötig, Battler-kun!"
+    jes "\"Ja, das hast du wirklich nötig, Battler-kun!"
+
+# game/Story/ch1.rpy:541
+translate English chapter1_80ef22a9:
+
+    # extend " *kicher*\""
+    extend " *kicher*\""
+
+# game/Story/ch1.rpy:542
+translate English chapter1_1c71c2f8:
+
+    # but b11odoroki3 "\".....Ach man\""
+    but b11odoroki3 "\".....Ach man\""
+
+# game/Story/ch1.rpy:551
+translate English chapter1_357b5b73:
+
+    # jes "\"Auf die Familienkonferenz freue ich mich am meisten."
+    jes "\"Auf die Familienkonferenz freue ich mich am meisten."
+
+# game/Story/ch1.rpy:552
+translate English chapter1_6be5658f:
+
+    # extend " ....Es ist die kurze Zeit, die meinen langweiligen Alltag auflockert.\""
+    extend " ....Es ist die kurze Zeit, die meinen langweiligen Alltag auflockert.\""
+
+# game/Story/ch1.rpy:554
+translate English chapter1_403b085f:
+
+    # but "\"Ja, ich bin auch froh, wieder bei euch zu sein, das hat mir in den sechs Jahren am meisten gefehlt.\""
+    but "\"Ja, ich bin auch froh, wieder bei euch zu sein, das hat mir in den sechs Jahren am meisten gefehlt.\""
+
+# game/Story/ch1.rpy:555
+translate English chapter1_ee923c02:
+
+    # jes "\"Ich finde es super toll, dass ihr dieses Wochenende da seid."
+    jes "\"Ich finde es super toll, dass ihr dieses Wochenende da seid."
+
+# game/Story/ch1.rpy:557
+translate English chapter1_21d90da5:
+
+    # extend " ....Ich muss jeden Tag ziemlich früh aufstehen, weil meine Schule nicht wirklich in der Nähe ist, sondern außerhalb der Insel.\""
+    extend " ....Ich muss jeden Tag ziemlich früh aufstehen, weil meine Schule nicht wirklich in der Nähe ist, sondern außerhalb der Insel.\""
+
+# game/Story/ch1.rpy:561
+translate English chapter1_58cd2ba0:
+
+    # jes b22komaru1 "\"Nach der Schule muss ich sofort nach Hause, so dass ich keine Zeit mit meinen Freunden verbringen kann.\""
+    jes b22komaru1 "\"Nach der Schule muss ich sofort nach Hause, so dass ich keine Zeit mit meinen Freunden verbringen kann.\""
+
+# game/Story/ch1.rpy:570
+translate English chapter1_2f126359:
+
+    # jes "\"Ich hasse einfach alles an dieser verfickten Insel..."
+    jes "\"Ich hasse einfach alles an dieser verfickten Insel..."
+
+# game/Story/ch1.rpy:612
+translate English chapter1_ff490ccc:
+
+    # hid "\"Na, na Jessica-chan,"
+    hid "\"Na, na Jessica-chan,"
+
+# game/Story/ch1.rpy:614
+translate English chapter1_db125ef8:
+
+    # extend " Eines Tages wirst du die Insel wirklich verlassen und dein eigenes Leben führen können.\""
+    extend " Eines Tages wirst du die Insel wirklich verlassen und dein eigenes Leben führen können.\""
+
+# game/Story/ch1.rpy:616
+translate English chapter1_b3e7216c:
+
+    # jes "\"Aber wie lange noch?"
+    jes "\"Aber wie lange noch?"
+
+# game/Story/ch1.rpy:617
+translate English chapter1_29651cb7:
+
+    # extend " .....Was wäre wenn meine Schulfreunde bis dahin nichts mehr mit mir zu tun haben wollen?\""
+    extend " .....Was wäre wenn meine Schulfreunde bis dahin nichts mehr mit mir zu tun haben wollen?\""
+
+# game/Story/ch1.rpy:619
+translate English chapter1_2de9210e:
+
+    # hid a11odayaka1 "\"Auch deine Schulfreunde werden deine Situation verstehen, eines Tages wirst du zu ihnen gehen können und ab da viel Zeit mit ihnen verbringen."
+    hid a11odayaka1 "\"Auch deine Schulfreunde werden deine Situation verstehen, eines Tages wirst du zu ihnen gehen können und ab da viel Zeit mit ihnen verbringen."
+
+# game/Story/ch1.rpy:620
+translate English chapter1_f76fc710:
+
+    # extend " Bis dahin solltest du immer dein Bestes geben, denn das wird sich am Ende des Tages definitiv auszahlen!\""
+    extend " Bis dahin solltest du immer dein Bestes geben, denn das wird sich am Ende des Tages definitiv auszahlen!\""
+
+# game/Story/ch1.rpy:621
+translate English chapter1_cfc71243:
+
+    # jes a11naku3 "\".......Eines Tages?"
+    jes a11naku3 "\".......Eines Tages?"
+
+# game/Story/ch1.rpy:622
+translate English chapter1_6c894ba7:
+
+    # extend " Aber ich warte schon so viele Jahre.....\""
+    extend " Aber ich warte schon so viele Jahre.....\""
+
+# game/Story/ch1.rpy:623
+translate English chapter1_9e7610ee:
+
+    # hid a21warai1 "\"...Du hast dein ganzes Leben noch vor dir, glaub mir."
+    hid a21warai1 "\"...Du hast dein ganzes Leben noch vor dir, glaub mir."
+
+# game/Story/ch1.rpy:628
+translate English chapter1_88adc9b8:
+
+    # hid "Aber lass den Kopf nicht hängen und häng dich weiter rein, ja?\""
+    hid "Aber lass den Kopf nicht hängen und häng dich weiter rein, ja?\""
+
+# game/Story/ch1.rpy:629
+translate English chapter1_1435a4e0:
+
+    # jes a11tereru1 "\"Danke Hideyoshi, ich werde es mir zu Herzen nehmen."
+    jes a11tereru1 "\"Danke Hideyoshi, ich werde es mir zu Herzen nehmen."
+
+# game/Story/ch1.rpy:630
+translate English chapter1_641b5b3b:
+
+    # extend " ...Ich fühle mich schon besser.\""
+    extend " ...Ich fühle mich schon besser.\""
+
+# game/Story/ch1.rpy:631
+translate English chapter1_576a269a:
+
+    # hid "\"So ist's gut, du schaffst es!, wahahahaha\""
+    hid "\"So ist's gut, du schaffst es!, wahahahaha\""
+
+# game/Story/ch1.rpy:648
+translate English chapter1_917bf25f:
+
+    # geo "\"Jessica-chan, allein ein Ziel zu haben, auf das man hinarbeiten kann, ist etwas, das einen jeden Tag motivieren sollte, nicht aufzugeben."
+    geo "\"Jessica-chan, allein ein Ziel zu haben, auf das man hinarbeiten kann, ist etwas, das einen jeden Tag motivieren sollte, nicht aufzugeben."
+
+# game/Story/ch1.rpy:649
+translate English chapter1_c390c8ae:
+
+    # geo "Auch ich oder Battler-kun haben unsere Sorgen und Probleme, die wir überall mit hinnehmen. Also halte noch ein bisschen durch, okay?\""
+    geo "Auch ich oder Battler-kun haben unsere Sorgen und Probleme, die wir überall mit hinnehmen. Also halte noch ein bisschen durch, okay?\""
+
+# game/Story/ch1.rpy:651
+translate English chapter1_0a6c6285:
+
+    # jes "\"Ja vielen Dank, das hilft mir wirklich sehr, danke!\""
+    jes "\"Ja vielen Dank, das hilft mir wirklich sehr, danke!\""
+
+# game/Story/ch1.rpy:664
+translate English chapter1_2057f8d9:
+
+    # eva "\"Wusstest du, dass deine Seekrankheit auch noch nach der Reise anhalten kann?\""
+    eva "\"Wusstest du, dass deine Seekrankheit auch noch nach der Reise anhalten kann?\""
+
+# game/Story/ch1.rpy:672
+translate English chapter1_61f281e8:
+
+    # extend " .....Bitte schleich dich nie wieder an mich ran, Tante Eva!\""
+    extend " .....Bitte schleich dich nie wieder an mich ran, Tante Eva!\""
+
+# game/Story/ch1.rpy:674
+translate English chapter1_656296a6:
+
+    # eva "\"Oh... Entschuldige,"
+    eva "\"Oh... Entschuldige,"
+
+# game/Story/ch1.rpy:678
+translate English chapter1_80ef22a9_1:
+
+    # extend " *kicher*\""
+    extend " *kicher*\""
+
+# game/Story/ch1.rpy:701
+translate English chapter1_9a38f550:
+
+    # but "\".....Nein,"
+    but "\".....Nein,"
+
+# game/Story/ch1.rpy:702
+translate English chapter1_0bcbd541:
+
+    # extend " du verarschst mich Tante Eva....\""
+    extend " du verarschst mich Tante Eva....\""
+
+# game/Story/ch1.rpy:704
+translate English chapter1_2cdb2f1c:
+
+    # eva "\"Oh nein..."
+    eva "\"Oh nein..."
+
+# game/Story/ch1.rpy:709
+translate English chapter1_80ef22a9_2:
+
+    # extend " *kicher*\""
+    extend " *kicher*\""
+
+# game/Story/ch1.rpy:719
+translate English chapter1_d5fdf736:
+
+    # kir "\"Wir sind jetzt gleich da!"
+    kir "\"Wir sind jetzt gleich da!"
+
+# game/Story/ch1.rpy:720
+translate English chapter1_65c8e361:
+
+    # extend " .....Die Insel ist ganz nah!\""
+    extend " .....Die Insel ist ganz nah!\""
+
+# game/Story/ch1.rpy:724
+translate English chapter1_4c66af8a:
+
+    # but "\"....Wir werden sehen, ob du Recht hast Tante Eva...\""
+    but "\"....Wir werden sehen, ob du Recht hast Tante Eva...\""
+
+# game/Story/ch1.rpy:726
+translate English chapter1_7b57d52d:
+
+    # eva "\"*kicher*"
+    eva "\"*kicher*"
+
+# game/Story/ch1.rpy:727
+translate English chapter1_8fe7657b:
+
+    # extend " Forder es besser nicht heraus.... Battler-kun....\""
+    extend " Forder es besser nicht heraus.... Battler-kun....\""
+
+# game/Story/ch1.rpy:729
+translate English chapter1_418009af:
+
+    # hid "\"Wahahahahaha!"
+    hid "\"Wahahahahaha!"
+
+# game/Story/ch1.rpy:731
+translate English chapter1_b7db7e55:
+
+    # extend a11defo1 " ...Lasst uns lieber an Deck gehen, wir gehen gleich an Land!\""
+    extend a11defo1 " ...Lasst uns lieber an Deck gehen, wir gehen gleich an Land!\""
+
+# game/Story/ch1.rpy:735
+translate English chapter1_6479e1c8:
+
+    # jes "\"Ja, das ist eine gute Idee!"
+    jes "\"Ja, das ist eine gute Idee!"
+
+# game/Story/ch1.rpy:753
+translate English chapter1_b3a47db8:
+
+    # kir "\"War der Taifun nicht für heute Mittag angekündigt?"
+    kir "\"War der Taifun nicht für heute Mittag angekündigt?"
+
+# game/Story/ch1.rpy:754
+translate English chapter1_8f3db2a6:
+
+    # extend " Vielleicht fängt es gleich an zu regnen.\""
+    extend " Vielleicht fängt es gleich an zu regnen.\""
+
+# game/Story/ch1.rpy:759
+translate English chapter1_dd77388a:
+
+    # rud "\"In etwa 10 Minuten sind wir da, aber gemütlich wird es nicht mehr.\""
+    rud "\"In etwa 10 Minuten sind wir da, aber gemütlich wird es nicht mehr.\""
+
+# game/Story/ch1.rpy:760
+translate English chapter1_404d6f7e:
+
+    # kir a13majime1 "\"Stimmt..."
+    kir a13majime1 "\"Stimmt..."
+
+# game/Story/ch1.rpy:761
+translate English chapter1_cf602c07:
+
+    # extend " Der Wind hat auch schon stark zugenommen.\""
+    extend " Der Wind hat auch schon stark zugenommen.\""
+
+# game/Story/ch1.rpy:766
+translate English chapter1_486d9359:
+
+    # kir "\"Dass die Wettervorhersage sich mal irrt?\""
+    kir "\"Dass die Wettervorhersage sich mal irrt?\""
+
+# game/Story/ch1.rpy:767
+translate English chapter1_bac88163:
+
+    # rud a13warai1 "\"Ich habe einmal ein Geschäftsessen wegen eines angeblichen Taifuns abgesagt...."
+    rud a13warai1 "\"Ich habe einmal ein Geschäftsessen wegen eines angeblichen Taifuns abgesagt...."
+
+# game/Story/ch1.rpy:768
+translate English chapter1_2105e85b:
+
+    # extend " Der Taifun kam erst 2 Tage später, ich habe mich noch nie so dumm gefühlt wie in dieser Situation.\""
+    extend " Der Taifun kam erst 2 Tage später, ich habe mich noch nie so dumm gefühlt wie in dieser Situation.\""
+
+# game/Story/ch1.rpy:769
+translate English chapter1_4f4a3bbc:
+
+    # kir a13warai2 "\"Das war sicher eine Erfahrung, so etwas am Ende erklären zu müssen..."
+    kir a13warai2 "\"Das war sicher eine Erfahrung, so etwas am Ende erklären zu müssen..."
+
+# game/Story/ch1.rpy:770
+translate English chapter1_80ef22a9_3:
+
+    # extend " *kicher*\""
+    extend " *kicher*\""
+
+# game/Story/ch1.rpy:771
+translate English chapter1_86ede4a3:
+
+    # rud "\"Bitte erinnere mich nicht daran....\""
+    rud "\"Bitte erinnere mich nicht daran....\""
+
+# game/Story/ch1.rpy:786
+translate English chapter1_9889d06a:
+
+    # mar "\"..........Uu~"
+    mar "\"..........Uu~"
+
+# game/Story/ch1.rpy:791
+translate English chapter1_62eadc81:
+
+    # extend " ........nicht mehr da\""
+    extend " ........nicht mehr da\""
+
+# game/Story/ch1.rpy:798
+translate English chapter1_967c77e7:
+
+    # but "\"hmm?"
+    but "\"hmm?"
+
+# game/Story/ch1.rpy:800
+translate English chapter1_f9e9a52d:
+
+    # extend " ...Wo drückt der Schuh?\""
+    extend " ...Wo drückt der Schuh?\""
+
+# game/Story/ch1.rpy:802
+translate English chapter1_59eae82b:
+
+    # jes "\"Etwas scheint sie sehr zu beunruhigen...\""
+    jes "\"Etwas scheint sie sehr zu beunruhigen...\""
+
+# game/Story/ch1.rpy:803
+translate English chapter1_27bdf2ce:
+
+    # mar a22sakebu1 "\"Es ist weg!"
+    mar a22sakebu1 "\"Es ist weg!"
+
+# game/Story/ch1.rpy:809
+translate English chapter1_1aa73427:
+
+    # extend " Uu!..\""
+    extend " Uu!..\""
+
+# game/Story/ch1.rpy:811
+translate English chapter1_c48f96a8:
+
+    # jes a11majime1 "\"Stimmt ja..."
+    jes a11majime1 "\"Stimmt ja..."
+
+# game/Story/ch1.rpy:813
+translate English chapter1_0180bf86:
+
+    # jes "Es sieht auch so aus, als wäre ein Teil des Riffs mitgerissen worden....\""
+    jes "Es sieht auch so aus, als wäre ein Teil des Riffs mitgerissen worden....\""
+
+# game/Story/ch1.rpy:819
+translate English chapter1_3440ff6a:
+
+    # kum "\"Ohohohoh,"
+    kum "\"Ohohohoh,"
+
+# game/Story/ch1.rpy:820
+translate English chapter1_158329b7:
+
+    # extend " ...der Schrein wurde während eines Gewitters letztens von einem gewaltigen Blitz getroffen und zerstört.\""
+    extend " ...der Schrein wurde während eines Gewitters letztens von einem gewaltigen Blitz getroffen und zerstört.\""
+
+# game/Story/ch1.rpy:835
+translate English chapter1_68cfc6f8:
+
+    # jes "\"Ein Blitzeinschlag?..."
+    jes "\"Ein Blitzeinschlag?..."
+
+# game/Story/ch1.rpy:836
+translate English chapter1_1587f0c0:
+
+    # extend " Ein Blitz kann so gewaltig sein?\""
+    extend " Ein Blitz kann so gewaltig sein?\""
+
+# game/Story/ch1.rpy:838
+translate English chapter1_b317f442:
+
+    # kum "\"Die Fischer sagen, es sei ein Zeichen von Unglück....\""
+    kum "\"Die Fischer sagen, es sei ein Zeichen von Unglück....\""
+
+# game/Story/ch1.rpy:840
+translate English chapter1_44001a55:
+
+    # mar "\"Ein Zeichen von Unglück....Uu~..."
+    mar "\"Ein Zeichen von Unglück....Uu~..."
+
+# game/Story/ch1.rpy:841
+translate English chapter1_8f38babd:
+
+    # extend a11defo1_mouth_closed " ...........................\""
+    extend a11defo1_mouth_closed " ...........................\""
+
+# game/Story/ch1.rpy:855
+translate English chapter1_804bab99:
+
+    # mar "\"Unglück..."
+    mar "\"Unglück..."
+
+# game/Story/ch1.rpy:856
+translate English chapter1_d6002f3c:
+
+    # extend " ....Unglück...Unglück...\""
+    extend " ....Unglück...Unglück...\""
+
+# game/Story/ch1.rpy:859
+translate English chapter1_98a296cd:
+
+    # mar "\"....Unglück Unglück Unglück Unglück Unglück Unglück Unglück"
+    mar "\"....Unglück Unglück Unglück Unglück Unglück Unglück Unglück"
+
+# game/Story/ch1.rpy:861
+translate English chapter1_41af168f:
+
+    # extend " .....Unglück Unglück Unglück Unglück Unglück Unglück\""
+    extend " .....Unglück Unglück Unglück Unglück Unglück Unglück\""
+
+# game/Story/ch1.rpy:864
+translate English chapter1_801b8438:
+
+    # geo "\"Kumasawa-san bitte gehen Sie mit ihren Witzen etwas vorsichtiger um!"
+    geo "\"Kumasawa-san bitte gehen Sie mit ihren Witzen etwas vorsichtiger um!"
+
+# game/Story/ch1.rpy:865
+translate English chapter1_8fd1b6c1:
+
+    # extend " Maria-chan nimmt sowas ziemlich ernst, verstehen Sie?\""
+    extend " Maria-chan nimmt sowas ziemlich ernst, verstehen Sie?\""
+
+# game/Story/ch1.rpy:866
+translate English chapter1_43b9255c:
+
+    # mar "\"Unglück Unglück Unglück\""
+    mar "\"Unglück Unglück Unglück\""
+
+# game/Story/ch1.rpy:868
+translate English chapter1_16d2ec3c:
+
+    # but "\"Hey Maria!"
+    but "\"Hey Maria!"
+
+# game/Story/ch1.rpy:870
+translate English chapter1_10b9cb1a:
+
+    # extend " also beruhige dich, ja?\""
+    extend " also beruhige dich, ja?\""
+
+# game/Story/ch1.rpy:872
+translate English chapter1_87ccaf19:
+
+    # geo "\"Maria-chan, es wird nichts schlimmes passieren."
+    geo "\"Maria-chan, es wird nichts schlimmes passieren."
+
+# game/Story/ch1.rpy:873
+translate English chapter1_1bd37c47:
+
+    # extend " ....Also beruhigen wir uns wieder und warten bis wir gleich anlegen, okay?\""
+    extend " ....Also beruhigen wir uns wieder und warten bis wir gleich anlegen, okay?\""
+
+# game/Story/ch1.rpy:874
+translate English chapter1_e2dbfd25:
+
+    # mar "\"............Uu~"
+    mar "\"............Uu~"
+
+# game/Story/ch1.rpy:877
+translate English chapter1_3ed7b191:
+
+    # mar a11defo1 "\"Es geschieht definitiv....."
+    mar a11defo1 "\"Es geschieht definitiv....."
+
+# game/Story/ch1.rpy:878
+translate English chapter1_28b9ba16:
+
+    # extend " .....Ein Unglück wird geschehen!......\""
+    extend " .....Ein Unglück wird geschehen!......\""
+
+# game/Story/ch1.rpy:893
+translate English chapter1_c95353e3:
+
+    # but "\".......Was?"
+    but "\".......Was?"
+
+# game/Story/ch1.rpy:894
+translate English chapter1_c4bae793:
+
+    # extend " .......Hä?\""
+    extend " .......Hä?\""
+
+# game/Story/ch1.rpy:903
+translate English chapter1_07e74a68:
+
+    # but "\"Du hast also gemerkt, dass es ein schlimmes Unwetter wird?\""
+    but "\"Du hast also gemerkt, dass es ein schlimmes Unwetter wird?\""
+
+# game/Story/ch1.rpy:905
+translate English chapter1_efc5e1f5:
+
+    # mar "\"..........Uu~\""
+    mar "\"..........Uu~\""
+
+# game/Story/ch1.rpy:906
+translate English chapter1_f8fb1563:
+
+    # but "\"Die Wettervorhersage sagt, dass der Taifun erst gegen Mittag kommen wird. Aber er ist schon da."
+    but "\"Die Wettervorhersage sagt, dass der Taifun erst gegen Mittag kommen wird. Aber er ist schon da."
+
+# game/Story/ch1.rpy:909
+translate English chapter1_14d29a69:
+
+    # but "Maria, ich bin sicher, dass dieser Taifun schneller vorbei ist, als du bis zehn zählen kannst. Alles wird gut.\""
+    but "Maria, ich bin sicher, dass dieser Taifun schneller vorbei ist, als du bis zehn zählen kannst. Alles wird gut.\""
+
+# game/Story/ch1.rpy:915
+translate English chapter1_1f187038:
+
+    # mar "\"Uu~!!"
+    mar "\"Uu~!!"
+
+# game/Story/ch1.rpy:917
+translate English chapter1_b627b53f:
+
+    # extend " Ein Unglück wird geschehen! Uu~!!\""
+    extend " Ein Unglück wird geschehen! Uu~!!\""
+
+# game/Story/ch1.rpy:923
+translate English chapter1_6b1568b5:
+
+    # jes "\"Maria, warum sagst du sowas?\""
+    jes "\"Maria, warum sagst du sowas?\""
+
+# game/Story/ch1.rpy:925
+translate English chapter1_c68d7972:
+
+    # kum "\"Es ist klar, dass sie etwas im Blick hat, das im Alter schnell verloren geht."
+    kum "\"Es ist klar, dass sie etwas im Blick hat, das im Alter schnell verloren geht."
+
+# game/Story/ch1.rpy:928
+translate English chapter1_c74b5ae2:
+
+    # kum "Was Maria fühlen kann, kann nur sie fühlen, weil sie die Jüngste hier ist.\""
+    kum "Was Maria fühlen kann, kann nur sie fühlen, weil sie die Jüngste hier ist.\""
+
+# game/Story/ch1.rpy:932
+translate English chapter1_795a5f47:
+
+    # kum "\"Es scheint so, dass in der Vergangenheit von Rokkenjima eine Hexe....\""
+    kum "\"Es scheint so, dass in der Vergangenheit von Rokkenjima eine Hexe....\""
+
+# game/Story/ch1.rpy:933
+translate English chapter1_ccdec7d5:
+
+    # jes "\"Es reicht, Kumasawa! Darüber reden wir nicht!\""
+    jes "\"Es reicht, Kumasawa! Darüber reden wir nicht!\""
+
+# game/Story/ch1.rpy:934
+translate English chapter1_eda9e28b:
+
+    # kum a12defo2 "\"Ohohohoh,"
+    kum a12defo2 "\"Ohohohoh,"
+
+# game/Story/ch1.rpy:935
+translate English chapter1_5ddb94f0:
+
+    # extend " ich muss mich entschuldigen, ich wollte nicht unhöflich sein.\""
+    extend " ich muss mich entschuldigen, ich wollte nicht unhöflich sein.\""
+
+# game/Story/ch1.rpy:962
+translate English chapter1_239ee09a:
+
+    # rud "\"*seufz*\""
+    rud "\"*seufz*\""
+
+# game/Story/ch1.rpy:965
+translate English chapter1_fab74b6d:
+
+    # eva "\"Was ist los Rudolf?"
+    eva "\"Was ist los Rudolf?"
+
+# game/Story/ch1.rpy:967
+translate English chapter1_2e0ed895:
+
+    # extend " ...Wir müssen uns nur genau an das halten, was wir besprochen haben, dann können wir gegen Krauss gewinnen.\""
+    extend " ...Wir müssen uns nur genau an das halten, was wir besprochen haben, dann können wir gegen Krauss gewinnen.\""
+
+# game/Story/ch1.rpy:968
+translate English chapter1_72f2f737:
+
+    # rud a11defo1 "\"....Ja, es liegt nicht am Plan."
+    rud a11defo1 "\"....Ja, es liegt nicht am Plan."
+
+# game/Story/ch1.rpy:976
+translate English chapter1_4514237b:
+
+    # extend " Damit würden wir unser Ziel um rund eine Quadrillion Kilometer verfehlen.\""
+    extend " Damit würden wir unser Ziel um rund eine Quadrillion Kilometer verfehlen.\""
+
+# game/Story/ch1.rpy:979
+translate English chapter1_455d074b:
+
+    # eva b21akire1go "\"Keine Sorge..."
+    eva b21akire1go "\"Keine Sorge..."
+
+# game/Story/ch1.rpy:983
+translate English chapter1_0a6436e3:
+
+    # extend b21futeki1 " Ich lasse nicht zu, dass mein hinterhältiger Bruder das ganze Erbe für sich behält!\""
+    extend b21futeki1 " Ich lasse nicht zu, dass mein hinterhältiger Bruder das ganze Erbe für sich behält!\""
+
+# game/Story/ch1.rpy:984
+translate English chapter1_26bd30d1:
+
+    # rud a13komaru1 "\"Das klingt logisch... Solange du dich an die Aufteilung hältst und im Ernstfall Rede und Antwort stehst, bin ich dabei."
+    rud a13komaru1 "\"Das klingt logisch... Solange du dich an die Aufteilung hältst und im Ernstfall Rede und Antwort stehst, bin ich dabei."
+
+# game/Story/ch1.rpy:986
+translate English chapter1_7d2e6d21:
+
+    # extend " dass eine unbedeutende Fußball-Mannschaft aus Portugal dieses Jahr den Europäischen Pokal gewinnt.\""
+    extend " dass eine unbedeutende Fußball-Mannschaft aus Portugal dieses Jahr den Europäischen Pokal gewinnt.\""
+
+# game/Story/ch1.rpy:991
+translate English chapter1_0e837416:
+
+    # eva "\"Risikobereitschaft kann großzügig belohnt werden und im besten Fall mit Vaters Erbe..\""
+    eva "\"Risikobereitschaft kann großzügig belohnt werden und im besten Fall mit Vaters Erbe..\""
+
+# game/Story/ch1.rpy:992
+translate English chapter1_f4c10b43:
+
+    # rud "\"Ich hoffe einfach auf das beste...\""
+    rud "\"Ich hoffe einfach auf das beste...\""
+
+# game/Story/ch1.rpy:1006
+translate English chapter1_638703f8:
+
+    # sha "\"Entschuldigung, liebe Gäste,"
+    sha "\"Entschuldigung, liebe Gäste,"
+
+# game/Story/ch1.rpy:1008
+translate English chapter1_b96b76f1:
+
+    # extend " ...Ich bitte um Vorsicht beim Überqueren der Planke, danke!\""
+    extend " ...Ich bitte um Vorsicht beim Überqueren der Planke, danke!\""
+
+# game/Story/ch1.rpy:1015
+translate English chapter1_3a4c1013:
+
+    # geo "\"Das hast du gut gesagt, Shannon-chan."
+    geo "\"Das hast du gut gesagt, Shannon-chan."
+
+# game/Story/ch1.rpy:1016
+translate English chapter1_4110d722:
+
+    # extend " Genau wie ich es von dir erwartet habe.\""
+    extend " Genau wie ich es von dir erwartet habe.\""
+
+# game/Story/ch1.rpy:1018
+translate English chapter1_954b8d31:
+
+    # sha "\"George-sama...."
+    sha "\"George-sama...."
+
+# game/Story/ch1.rpy:1022
+translate English chapter1_3d2292ba:
+
+    # extend "Ich bin nur das Mobiliar der Familie, es ist meine Pflicht euch anständig zu empfangen.\""
+    extend "Ich bin nur das Mobiliar der Familie, es ist meine Pflicht euch anständig zu empfangen.\""
+
+# game/Story/ch1.rpy:1025
+translate English chapter1_5db76708:
+
+    # geo a11hohoemi1 "\"Shannon-chan..."
+    geo a11hohoemi1 "\"Shannon-chan..."
+
+# game/Story/ch1.rpy:1029
+translate English chapter1_ba513a3a:
+
+    # geo "Ich will so etwas nicht mehr hören, ist das klar?\""
+    geo "Ich will so etwas nicht mehr hören, ist das klar?\""
+
+# game/Story/ch1.rpy:1030
+translate English chapter1_fa2fb079:
+
+    # sha a12hajirai3 "\"G-"
+    sha a12hajirai3 "\"G-"
+
+# game/Story/ch1.rpy:1031
+translate English chapter1_5c9e6a1c:
+
+    # extend "George-sama......\""
+    extend "George-sama......\""
+
+# game/Story/ch1.rpy:1057
+translate English chapter1_3fadd3fc:
+
+    # but "\"Sag mal Jessica-chan,"
+    but "\"Sag mal Jessica-chan,"
+
+# game/Story/ch1.rpy:1058
+translate English chapter1_955aead6:
+
+    # extend " ...kann es sein, dass die beiden sich ein bisschen nahe stehen?\""
+    extend " ...kann es sein, dass die beiden sich ein bisschen nahe stehen?\""
+
+# game/Story/ch1.rpy:1060
+translate English chapter1_df19344e:
+
+    # jes "\".....wahahahaha"
+    jes "\".....wahahahaha"
+
+# game/Story/ch1.rpy:1062
+translate English chapter1_f3c49a31:
+
+    # extend " das hast du so schnell kapiert?\""
+    extend " das hast du so schnell kapiert?\""
+
+# game/Story/ch1.rpy:1063
+translate English chapter1_454d2379:
+
+    # but "\"Also sind sie wirklich ein Paar?\""
+    but "\"Also sind sie wirklich ein Paar?\""
+
+# game/Story/ch1.rpy:1064
+translate English chapter1_b294670d:
+
+    # jes "\"Ich weiß es nicht genau,"
+    jes "\"Ich weiß es nicht genau,"
+
+# game/Story/ch1.rpy:1065
+translate English chapter1_1b53921d:
+
+    # extend " ...aber ich habe den Eindruck, dass George wirklich etwas für sie empfindet.\""
+    extend " ...aber ich habe den Eindruck, dass George wirklich etwas für sie empfindet.\""
+
+# game/Story/ch1.rpy:1066
+translate English chapter1_86dddcaf:
+
+    # but b11aseru1 "\"Wenn ich ganz ehrlich bin,"
+    but b11aseru1 "\"Wenn ich ganz ehrlich bin,"
+
+# game/Story/ch1.rpy:1073
+translate English chapter1_129c23e2:
+
+    # extend " ....einem weißen Pferd geritten oder so.\""
+    extend " ....einem weißen Pferd geritten oder so.\""
+
+# game/Story/ch1.rpy:1074
+translate English chapter1_8e9c2e51:
+
+    # jes a11tereru1 "\"wahahahahahaha!!"
+    jes a11tereru1 "\"wahahahahahaha!!"
+
+# game/Story/ch1.rpy:1077
+translate English chapter1_eee9721a:
+
+    # extend "...Ich bin mir ziemlich sicher, dass Shannon das heute sehr peinlich finden würde.\""
+    extend "...Ich bin mir ziemlich sicher, dass Shannon das heute sehr peinlich finden würde.\""
+
+# game/Story/ch1.rpy:1078
+translate English chapter1_0e75f2c0:
+
+    # but b11nayamu2 "\"Das glaube ich auch,"
+    but b11nayamu2 "\"Das glaube ich auch,"
+
+# game/Story/ch1.rpy:1080
+translate English chapter1_dd72fa4e:
+
+    # extend " Ich bin absolut tot, wenn sie sich auch noch an dieses peinliche Zeug erinnert.\""
+    extend " Ich bin absolut tot, wenn sie sich auch noch an dieses peinliche Zeug erinnert.\""
+
+# game/Story/ch1.rpy:1081
+translate English chapter1_00a95d04:
+
+    # jes a11aisowarai1 "\"Ja, das geht klar! Ich schweige wie ein Grab!\""
+    jes a11aisowarai1 "\"Ja, das geht klar! Ich schweige wie ein Grab!\""
+
+# game/Story/ch1.rpy:1092
+translate English chapter1_c84281d2:
+
+    # goh "\"Meine Damen und Herren, herzlich willkommen auf der Insel Rokkenjima!\""
+    goh "\"Meine Damen und Herren, herzlich willkommen auf der Insel Rokkenjima!\""
+
+# game/Story/ch1.rpy:1095
+translate English chapter1_f57b7cba:
+
+    # extend " ....Gohda, werde euch immer erstklassiges Essen zubereiten!\""
+    extend " ....Gohda, werde euch immer erstklassiges Essen zubereiten!\""
+
+# game/Story/ch1.rpy:1100
+translate English chapter1_dceca84a:
+
+    # jes "\"Vielen Dank, Gohda-san, ich glaube, die meisten von uns kommen jedes Jahr hierher, nur um deine leckeren Gerichte zu essen.\""
+    jes "\"Vielen Dank, Gohda-san, ich glaube, die meisten von uns kommen jedes Jahr hierher, nur um deine leckeren Gerichte zu essen.\""
+
+# game/Story/ch1.rpy:1101
+translate English chapter1_a0a58140:
+
+    # goh a11hohoemi1 "\"Mit solchen Worten macht das Kochen gleich viel mehr Spaß!"
+    goh a11hohoemi1 "\"Mit solchen Worten macht das Kochen gleich viel mehr Spaß!"
+
+# game/Story/ch1.rpy:1103
+translate English chapter1_6c7b7b2b:
+
+    # goh "Außerdem scheint sich dieser Taifun schon früher als angekündigt zu formieren, so dass wir uns nun schnell auf den Weg machen sollten.\""
+    goh "Außerdem scheint sich dieser Taifun schon früher als angekündigt zu formieren, so dass wir uns nun schnell auf den Weg machen sollten.\""
+
+# game/Story/ch1.rpy:1127
+translate English chapter1_907aefa5:
+
+    # kum "\"Aber vergiss nicht, dass es heute zum Mittagessen meine speziellen Spaghetti mit würziger Makrelenrahmsauce nach meinem Geheimrezept gibt, Gohda!"
+    kum "\"Aber vergiss nicht, dass es heute zum Mittagessen meine speziellen Spaghetti mit würziger Makrelenrahmsauce nach meinem Geheimrezept gibt, Gohda!"
+
+# game/Story/ch1.rpy:1131
+translate English chapter1_0ed958a6:
+
+    # extend " ....Ohohohoh!\""
+    extend " ....Ohohohoh!\""
+
+# game/Story/ch1.rpy:1133
+translate English chapter1_255badcf:
+
+    # jes "\".....Ich denke, ich passe....\""
+    jes "\".....Ich denke, ich passe....\""
+
+# game/Story/ch1.rpy:1134
+translate English chapter1_3048745a:
+
+    # kum a11defo2 "\"Aber Jessica-sama, Ihr könnt euch doch nicht die ganze Zeit von Junkfood ernähren!"
+    kum a11defo2 "\"Aber Jessica-sama, Ihr könnt euch doch nicht die ganze Zeit von Junkfood ernähren!"
+
+# game/Story/ch1.rpy:1135
+translate English chapter1_e09f71f5:
+
+    # extend " Gebt der Makrele eine Chance!\""
+    extend " Gebt der Makrele eine Chance!\""
+
+# game/Story/ch1.rpy:1136
+translate English chapter1_3b78b22c:
+
+    # jes "\"Aber...."
+    jes "\"Aber...."
+
+# game/Story/ch1.rpy:1138
+translate English chapter1_6cf3d166:
+
+    # extend " ...Deshalb kann es heute leider keine Makrele geben!\""
+    extend " ...Deshalb kann es heute leider keine Makrele geben!\""
+
+# game/Story/ch1.rpy:1139
+translate English chapter1_eda9e28b_1:
+
+    # kum a12defo2 "\"Ohohohoh,"
+    kum a12defo2 "\"Ohohohoh,"
+
+# game/Story/ch1.rpy:1140
+translate English chapter1_f15fb530:
+
+    # extend " ....Ihr habt mich erwischt, Jessica-sama.\""
+    extend " ....Ihr habt mich erwischt, Jessica-sama.\""
+
+# game/Story/ch1.rpy:1149
+translate English chapter1_09653b8b:
+
+    # rud "\"Hey Battler-kun!"
+    rud "\"Hey Battler-kun!"
+
+# game/Story/ch1.rpy:1151
+translate English chapter1_5881e033:
+
+    # extend " ....kannst du nach Hause schwimmen.\""
+    extend " ....kannst du nach Hause schwimmen.\""
+
+# game/Story/ch1.rpy:1153
+translate English chapter1_60d9b836:
+
+    # but "\"....Lass es gut sein!"
+    but "\"....Lass es gut sein!"
+
+# game/Story/ch1.rpy:1156
+translate English chapter1_65a67b7c:
+
+    # extend " ....Dad.\""
+    extend " ....Dad.\""
+
+# game/Story/ch1.rpy:1157
+translate English chapter1_30958891:
+
+    # rud "\"Naaa,"
+    rud "\"Naaa,"
+
+# game/Story/ch1.rpy:1159
+translate English chapter1_59fe4842:
+
+    # extend a11defo2 " ...Ich will mich nicht vor den anderen rechtfertigen müssen, warum du Holzkopf den Esstisch ruiniert hast.\""
+    extend a11defo2 " ...Ich will mich nicht vor den anderen rechtfertigen müssen, warum du Holzkopf den Esstisch ruiniert hast.\""
+
+# game/Story/ch1.rpy:1160
+translate English chapter1_0ad2b0c1:
+
+    # but "\"Keine Sorge, Dad,"
+    but "\"Keine Sorge, Dad,"
+
+# game/Story/ch1.rpy:1172
+translate English chapter1_20b57de3:
+
+    # eva "\"....Meine Güte, Battler-kun....."
+    eva "\"....Meine Güte, Battler-kun....."
+
+# game/Story/ch1.rpy:1176
+translate English chapter1_28c505e2:
+
+    # extend " .....Du wolltest deiner Tante ja nicht glauben\""
+    extend " .....Du wolltest deiner Tante ja nicht glauben\""
+
+# game/Story/ch1.rpy:1188
+translate English chapter1_4c5bd7bf:
+
+    # goh "\"Liebe Gäste, wir haben Verspätung und der Sturm wird immer stärker!"
+    goh "\"Liebe Gäste, wir haben Verspätung und der Sturm wird immer stärker!"
+
+# game/Story/ch1.rpy:1191
+translate English chapter1_dca12601:
+
+    # goh "Wir müssen uns beeilen, wir haben viel Zeit verloren, und Madam wird sehr böse sein, wenn wir nicht bald ankommen.\""
+    goh "Wir müssen uns beeilen, wir haben viel Zeit verloren, und Madam wird sehr böse sein, wenn wir nicht bald ankommen.\""
+
+# game/Story/ch1.rpy:1193
+translate English chapter1_08c15777:
+
+    # but "\"Beruhige dich, Gohda-san, wir sind jetzt alle da und bereit, ins Gästehaus zu gehen.\""
+    but "\"Beruhige dich, Gohda-san, wir sind jetzt alle da und bereit, ins Gästehaus zu gehen.\""
+
+# game/Story/ch1.rpy:1197
+translate English chapter1_b7a25acb:
+
+    # jes "\"Hättest du nicht ins Meer gekotzt und hätte ich nicht den Kapitän angefleht, langsamer zu fahren, wären wir jetzt nicht im Verzug, Freund Nase!"
+    jes "\"Hättest du nicht ins Meer gekotzt und hätte ich nicht den Kapitän angefleht, langsamer zu fahren, wären wir jetzt nicht im Verzug, Freund Nase!"
+
+# game/Story/ch1.rpy:1198
+translate English chapter1_45072a71:
+
+    # extend " .....Dafür müsste ich dir die Prügel rausschmeißen, bis mir die Puste ausgeht....\""
+    extend " .....Dafür müsste ich dir die Prügel rausschmeißen, bis mir die Puste ausgeht....\""
+
+# game/Story/ch1.rpy:1199
+translate English chapter1_282b0b1d:
+
+    # but b11aseru1 "\"....hihihi...."
+    but b11aseru1 "\"....hihihi...."
+
+# game/Story/ch1.rpy:1201
+translate English chapter1_680b295d:
+
+    # but "Das nächste Mal teleportiere ich mich einfach mit Magie hierher, du wirst schon sehen!\""
+    but "Das nächste Mal teleportiere ich mich einfach mit Magie hierher, du wirst schon sehen!\""
+
+# game/Story/ch1.rpy:1202
+translate English chapter1_1a02de68:
+
+    # jes b22warai1 "\"Ahahahaha,"
+    jes b22warai1 "\"Ahahahaha,"
+
+# game/Story/ch1.rpy:1204
+translate English chapter1_593a6288:
+
+    # extend " ...Kannst mir ja dann verraten, wie man von der Insel weg kommt.\""
+    extend " ...Kannst mir ja dann verraten, wie man von der Insel weg kommt.\""
+
+# game/Story/ch1.rpy:1206
+translate English chapter1_3c330089:
+
+    # mar "\"....Uu???"
+    mar "\"....Uu???"
+
+# game/Story/ch1.rpy:1207
+translate English chapter1_f2de6e09:
+
+    # extend " Battler kann Magie benutzen?\""
+    extend " Battler kann Magie benutzen?\""
+
+# game/Story/ch1.rpy:1208
+translate English chapter1_71685fde:
+
+    # jes "\"Ganz genau Maria-chan, Battler kann Magie benutzen, aber nicht nur Battler!"
+    jes "\"Ganz genau Maria-chan, Battler kann Magie benutzen, aber nicht nur Battler!"
+
+# game/Story/ch1.rpy:1209
+translate English chapter1_8a961571:
+
+    # extend " Jeder kann zaubern, denn jeder trägt etwas Magie im Herzen, auch du!\""
+    extend " Jeder kann zaubern, denn jeder trägt etwas Magie im Herzen, auch du!\""
+
+# game/Story/ch1.rpy:1210
+translate English chapter1_f7dd742a:
+
+    # mar a22warai2 "\"Uu-uu!"
+    mar a22warai2 "\"Uu-uu!"
+
+# game/Story/ch1.rpy:1216
+translate English chapter1_ed257192:
+
+    # mar "Ich möchte dir BEATRICE vorstellen!"
+    mar "Ich möchte dir BEATRICE vorstellen!"
+
+# game/Story/ch1.rpy:1218
+translate English chapter1_3cc6326e:
+
+    # but b11oya1 "\".....BEATRICE?\""
+    but b11oya1 "\".....BEATRICE?\""
+
+# game/Story/ch1.rpy:1219
+translate English chapter1_ef97a006:
+
+    # mar a11warai1 "\"Wer Magie besitzt, kann sie sehen, also kannst auch du sie sehen! Uu-uu!\""
+    mar a11warai1 "\"Wer Magie besitzt, kann sie sehen, also kannst auch du sie sehen! Uu-uu!\""
+
+# game/Story/ch1.rpy:1229
+translate English chapter1_1448722c:
+
+    # geo "\"Battler-kun...."
+    geo "\"Battler-kun...."
+
+# game/Story/ch1.rpy:1231
+translate English chapter1_df88fb1b:
+
+    # extend " Ihr müsst vorsichtiger sein mit euren Witzen in Marias Umgebung, wie ihr erneut seht, nimmt sie alles viel zu ernst.\""
+    extend " Ihr müsst vorsichtiger sein mit euren Witzen in Marias Umgebung, wie ihr erneut seht, nimmt sie alles viel zu ernst.\""
+
+# game/Story/ch1.rpy:1233
+translate English chapter1_b4f996d9:
+
+    # but "\"Entschuldige... Aniki...\""
+    but "\"Entschuldige... Aniki...\""
+
+# game/Story/ch1.rpy:1245
+translate English chapter1_445bdc06:
+
+    # mar "\"...uu~!"
+    mar "\"...uu~!"
+
+# game/Story/ch1.rpy:1248
+translate English chapter1_313c77da:
+
+    # extend " ...hahaha...haha...Uu~!\""
+    extend " ...hahaha...haha...Uu~!\""
+
+# game/Story/ch1.rpy:1250
+translate English chapter1_1b60f430:
+
+    # geo "\"....Du hast recht Maria-chan! Nur kann Battler-kun keine magischen Wesen sehen."
+    geo "\"....Du hast recht Maria-chan! Nur kann Battler-kun keine magischen Wesen sehen."
+
+# game/Story/ch1.rpy:1251
+translate English chapter1_5f783c88:
+
+    # extend " ...Das ist nämlich etwas, dass nur du sehen kannst, da du was ganz besonderes bist.\""
+    extend " ...Das ist nämlich etwas, dass nur du sehen kannst, da du was ganz besonderes bist.\""
+
+# game/Story/ch1.rpy:1252
+translate English chapter1_1d914ca1:
+
+    # mar a11uuu1 "\"Battler kann BEATRICE nicht sehen?"
+    mar a11uuu1 "\"Battler kann BEATRICE nicht sehen?"
+
+# game/Story/ch1.rpy:1253
+translate English chapter1_51c3f706:
+
+    # extend " .........Uu~\""
+    extend " .........Uu~\""
+
+# game/Story/ch1.rpy:1275
+translate English chapter1_8d067078:
+
+    # but "\".....Etwas ist anders in diesem Jahr...."
+    but "\".....Etwas ist anders in diesem Jahr...."
+
+# game/Story/ch1.rpy:1280
+translate English chapter1_52db28a1:
+
+    # extend " ...wir wurden doch immer von den Möwen begrüßt, oder irre ich mich?\""
+    extend " ...wir wurden doch immer von den Möwen begrüßt, oder irre ich mich?\""
+
+# game/Story/ch1.rpy:1282
+translate English chapter1_a23597b1:
+
+    # jes "\".....Jetzt, wo du es sagst..."
+    jes "\".....Jetzt, wo du es sagst..."
+
+# game/Story/ch1.rpy:1283
+translate English chapter1_83637618:
+
+    # extend " Das Schreien der Möwen war immer zu hören...\""
+    extend " Das Schreien der Möwen war immer zu hören...\""
+
+# game/Story/ch1.rpy:1285
+translate English chapter1_ebca9473:
+
+    # mar "\"Uu~....."
+    mar "\"Uu~....."
+
+# game/Story/ch1.rpy:1287
+translate English chapter1_f33be1c1:
+
+    # mar "....Wo sind die Möwen? uu~...\""
+    mar "....Wo sind die Möwen? uu~...\""
+
+# game/Story/ch1.rpy:1291
+translate English chapter1_9b2c49cc:
+
+    # geo "\"...Die Möwen sind längst in ihre Nester zurückgekehrt, denn der Taifun ist bereits in vollem Gange."
+    geo "\"...Die Möwen sind längst in ihre Nester zurückgekehrt, denn der Taifun ist bereits in vollem Gange."
+
+# game/Story/ch1.rpy:1292
+translate English chapter1_31d325a2:
+
+    # extend " ....Auch für Möwen ist so ein Taifun gefährlich, weshalb sie bereits Schutz gesucht haben.\""
+    extend " ....Auch für Möwen ist so ein Taifun gefährlich, weshalb sie bereits Schutz gesucht haben.\""
+
+# game/Story/ch1.rpy:1293
+translate English chapter1_139dfbf2:
+
+    # but b23nayamu2 "\"Darauf hätte ich auch selbst kommen können.\""
+    but b23nayamu2 "\"Darauf hätte ich auch selbst kommen können.\""
+
+# game/Story/ch1.rpy:1365
+translate English chapter1_bd5b96d6:
+
+    # nan "\"Musste das wieder sein?..."
+    nan "\"Musste das wieder sein?..."
+
+# game/Story/ch1.rpy:1366
+translate English chapter1_f22b560c:
+
+    # extend " Du trinkst immer noch, obwohl ich dir schon so oft gesagt habe, dass du damit aufhören sollst?\""
+    extend " Du trinkst immer noch, obwohl ich dir schon so oft gesagt habe, dass du damit aufhören sollst?\""
+
+# game/Story/ch1.rpy:1382
+translate English chapter1_24da1f8c:
+
+    # nan "\"Kinzo-san...."
+    nan "\"Kinzo-san...."
+
+# game/Story/ch1.rpy:1383
+translate English chapter1_f52126d4:
+
+    # extend " ...Wenn du damit nicht sofort aufhörst, muss ich meine Berechnungen korrigieren.\""
+    extend " ...Wenn du damit nicht sofort aufhörst, muss ich meine Berechnungen korrigieren.\""
+
+# game/Story/ch1.rpy:1398
+translate English chapter1_d5826f6d:
+
+    # kin "\"....Danke"
+    kin "\"....Danke"
+
+# game/Story/ch1.rpy:1402
+translate English chapter1_a294eb8a:
+
+    # extend " Und gerade deshalb kann mich nichts auf der Welt davon abbringen.\""
+    extend " Und gerade deshalb kann mich nichts auf der Welt davon abbringen.\""
+
+# game/Story/ch1.rpy:1414
+translate English chapter1_58902865:
+
+    # kin "\"Deine Medikamente halten mich zwar am Leben, aber ich würde ebenfalls sterben, wenn ich aufhören würde.\""
+    kin "\"Deine Medikamente halten mich zwar am Leben, aber ich würde ebenfalls sterben, wenn ich aufhören würde.\""
+
+# game/Story/ch1.rpy:1416
+translate English chapter1_e435f64b:
+
+    # kin a11warai2 "\"Genji..."
+    kin a11warai2 "\"Genji..."
+
+# game/Story/ch1.rpy:1418
+translate English chapter1_f2cbc6be:
+
+    # extend " Mach eine Mischung daraus, damit Nanjo nicht aus allen Wolken fällt.\""
+    extend " Mach eine Mischung daraus, damit Nanjo nicht aus allen Wolken fällt.\""
+
+# game/Story/ch1.rpy:1425
+translate English chapter1_2ff72957:
+
+    # gen "\"Herr...."
+    gen "\"Herr...."
+
+# game/Story/ch1.rpy:1426
+translate English chapter1_d9821d12:
+
+    # extend " ....Seid ich Euch absolut sicher?\""
+    extend " ....Seid ich Euch absolut sicher?\""
+
+# game/Story/ch1.rpy:1452
+translate English chapter1_076c25a5:
+
+    # kin "\".......Nanjo,"
+    kin "\".......Nanjo,"
+
+# game/Story/ch1.rpy:1454
+translate English chapter1_629b4b23:
+
+    # extend " Dafür bin ich dir von Herzen dankbar.\""
+    extend " Dafür bin ich dir von Herzen dankbar.\""
+
+# game/Story/ch1.rpy:1456
+translate English chapter1_b53cf67d:
+
+    # nan "\"......Ach was,"
+    nan "\"......Ach was,"
+
+# game/Story/ch1.rpy:1458
+translate English chapter1_ec95c135:
+
+    # extend " du hast mir nie zugehört.\""
+    extend " du hast mir nie zugehört.\""
+
+# game/Story/ch1.rpy:1459
+translate English chapter1_828cfd57:
+
+    # kin "\"Hahahahaha..."
+    kin "\"Hahahahaha..."
+
+# game/Story/ch1.rpy:1460
+translate English chapter1_ec849ef2:
+
+    # extend " Touché\""
+    extend " Touché\""
+
+# game/Story/ch1.rpy:1462
+translate English chapter1_5b1ce953:
+
+    # gen "\".....Herr\""
+    gen "\".....Herr\""
+
+# game/Story/ch1.rpy:1463
+translate English chapter1_3cb87544:
+
+    # kin "\"Vielen Dank.\""
+    kin "\"Vielen Dank.\""
+
+# game/Story/ch1.rpy:1471
+translate English chapter1_58b7b929:
+
+    # kin "\"....Nanjo,"
+    kin "\"....Nanjo,"
+
+# game/Story/ch1.rpy:1472
+translate English chapter1_0c8a292e:
+
+    # extend " .....wie lange noch?\""
+    extend " .....wie lange noch?\""
+
+# game/Story/ch1.rpy:1474
+translate English chapter1_844a97cf:
+
+    # nan "\"...Wenn ich ehrlich sein soll,"
+    nan "\"...Wenn ich ehrlich sein soll,"
+
+# game/Story/ch1.rpy:1477
+translate English chapter1_8e14bf14:
+
+    # extend " ...Du verkürzt dir dein eigenes Leben enorm.\""
+    extend " ...Du verkürzt dir dein eigenes Leben enorm.\""
+
+# game/Story/ch1.rpy:1478
+translate English chapter1_e4840559:
+
+    # kin "\"......Nanjo,"
+    kin "\"......Nanjo,"
+
+# game/Story/ch1.rpy:1479
+translate English chapter1_afb4b1b2:
+
+    # extend " dass du mich am Leben hältst, gefällt hier längst nicht jedem.\""
+    extend " dass du mich am Leben hältst, gefällt hier längst nicht jedem.\""
+
+# game/Story/ch1.rpy:1480
+translate English chapter1_d90cf3f5:
+
+    # nan a1defo1 "\"...Kinzo-san\""
+    nan a1defo1 "\"...Kinzo-san\""
+
+# game/Story/ch1.rpy:1481
+translate English chapter1_8bad8377:
+
+    # kin a11akuwarai1 "\"...Die Aasgeier, die sich meine Kinder nennen, warten doch nur sehnsüchtig darauf, dass ich diese Welt verlasse."
+    kin a11akuwarai1 "\"...Die Aasgeier, die sich meine Kinder nennen, warten doch nur sehnsüchtig darauf, dass ich diese Welt verlasse."
+
+# game/Story/ch1.rpy:1484
+translate English chapter1_966dbb62:
+
+    # extend " Absolut garnichts!\""
+    extend " Absolut garnichts!\""
+
+# game/Story/ch1.rpy:1485
+translate English chapter1_a08110dd:
+
+    # nan "\"Bitte beruhige dich doch, noch bist du nicht tot."
+    nan "\"Bitte beruhige dich doch, noch bist du nicht tot."
+
+# game/Story/ch1.rpy:1487
+translate English chapter1_483abdb5:
+
+    # extend " So kannst du selbst entscheiden, was wer bekommt.\""
+    extend " So kannst du selbst entscheiden, was wer bekommt.\""
+
+# game/Story/ch1.rpy:1488
+translate English chapter1_032d531b:
+
+    # kin a11fukigen1 "\"....Wie bitte?"
+    kin a11fukigen1 "\"....Wie bitte?"
+
+# game/Story/ch1.rpy:1495
+translate English chapter1_c4cf105b:
+
+    # kin "Als ob es etwas geben würde, was ich meinen törichten Kindern hinterlassen möchte!\""
+    kin "Als ob es etwas geben würde, was ich meinen törichten Kindern hinterlassen möchte!\""
+
+# game/Story/ch1.rpy:1496
+translate English chapter1_149c6ebb:
+
+    # nan "\"...Du könntest aber auch aufschreiben, was du erledigt haben möchtest,"
+    nan "\"...Du könntest aber auch aufschreiben, was du erledigt haben möchtest,"
+
+# game/Story/ch1.rpy:1497
+translate English chapter1_e9b9dd72:
+
+    # extend " ...Dinge die du zu Lebzeiten nicht selber tun konntest.\""
+    extend " ...Dinge die du zu Lebzeiten nicht selber tun konntest.\""
+
+# game/Story/ch1.rpy:1498
+translate English chapter1_b2a0cc1d:
+
+    # kin "\"Ich habe absolut nichts zum weitergeben!"
+    kin "\"Ich habe absolut nichts zum weitergeben!"
+
+# game/Story/ch1.rpy:1504
+translate English chapter1_3b311b01:
+
+    # extend " ....So war es von Anfang an bestimmt und so wird es auch sein!\""
+    extend " ....So war es von Anfang an bestimmt und so wird es auch sein!\""
+
+# game/Story/ch1.rpy:1508
+translate English chapter1_0b864d40:
+
+    # kin "\"..........."
+    kin "\"..........."
+
+# game/Story/ch1.rpy:1510
+translate English chapter1_b66a66fe:
+
+    # extend " Ich lasse nichts zurück, aber eines fehlt noch.\""
+    extend " Ich lasse nichts zurück, aber eines fehlt noch.\""
+
+# game/Story/ch1.rpy:1511
+translate English chapter1_df420e87:
+
+    # nan "\"Dann schreib es auf, für die Nachwelt."
+    nan "\"Dann schreib es auf, für die Nachwelt."
+
+# game/Story/ch1.rpy:1515
+translate English chapter1_a2d368c2:
+
+    # extend " ....Dafür ist ein Testament da.\""
+    extend " ....Dafür ist ein Testament da.\""
+
+# game/Story/ch1.rpy:1521
+translate English chapter1_87c3fe7c:
+
+    # kin "\"Es hat keinen Sinn, es hat alles keinen Sinn!"
+    kin "\"Es hat keinen Sinn, es hat alles keinen Sinn!"
+
+# game/Story/ch1.rpy:1530
+translate English chapter1_046a19bc:
+
+    # extend " Ich will BEATRICE noch einmal lächeln sehen!"
+    extend " Ich will BEATRICE noch einmal lächeln sehen!"
+
+# game/Story/ch1.rpy:1531
+translate English chapter1_717aa121:
+
+    # kin "Oh BEATRICE, warum hast du mich nur verlassen?"
+    kin "Oh BEATRICE, warum hast du mich nur verlassen?"
+
+# game/Story/ch1.rpy:1535
+translate English chapter1_11168e50:
+
+    # kin " ...Oh, BEATRICE,"
+    kin " ...Oh, BEATRICE,"
+
+# game/Story/ch1.rpy:1541
+translate English chapter1_6af0936a:
+
+    # kin "BEATRICE!"
+    kin "BEATRICE!"
+
+# game/Story/ch1.rpy:1548
+translate English chapter1_3a0b4605:
+
+    # kin "Aah, BEATRICE!"
+    kin "Aah, BEATRICE!"
+
+# game/Story/ch1.rpy:1549
+translate English chapter1_2a12e37e:
+
+    # extend " BEATRICE!"
+    extend " BEATRICE!"
+
+# game/Story/ch1.rpy:1554
+translate English chapter1_cad4646f:
+
+    # extend " .....BEATRICEEEEEEE!!!\""
+    extend " .....BEATRICEEEEEEE!!!\""
+
+# game/Story/ch1.rpy:1567
+translate English chapter1_fc8d2ca0:
+
+    # kin "\"....Wer stört?"
+    kin "\"....Wer stört?"
+
+# game/Story/ch1.rpy:1568
+translate English chapter1_4a78fee6:
+
+    # extend " Es ist doch ausdrücklich verboten worden, um diese Zeit zu stören, also wer besitzt die Dreißtigkeit?\""
+    extend " Es ist doch ausdrücklich verboten worden, um diese Zeit zu stören, also wer besitzt die Dreißtigkeit?\""
+
+# game/Story/ch1.rpy:1570
+translate English chapter1_16d89826:
+
+    # kin "\"....Genji,"
+    kin "\"....Genji,"
+
+# game/Story/ch1.rpy:1572
+translate English chapter1_02df96c9:
+
+    # extend " ....Wer es wagt zu stören, hat bestimmt auch einen Grund dafür.\""
+    extend " ....Wer es wagt zu stören, hat bestimmt auch einen Grund dafür.\""
+
+# game/Story/ch1.rpy:1574
+translate English chapter1_aad87975:
+
+    # gen "\"Wie Ihr wünscht, Herr.\""
+    gen "\"Wie Ihr wünscht, Herr.\""
+
+# game/Story/ch1.rpy:1586
+translate English chapter1_9ff638e0:
+
+    # nan "\"......."
+    nan "\"......."
+
+# game/Story/ch1.rpy:1587
+translate English chapter1_d5a6f5f1:
+
+    # extend " ....Was sehen meine alten Augen?\""
+    extend " ....Was sehen meine alten Augen?\""
+
+# game/Story/ch1.rpy:1588
+translate English chapter1_96b9f315:
+
+    # kin "\"......."
+    kin "\"......."
+
+# game/Story/ch1.rpy:1591
+translate English chapter1_d10e9714:
+
+    # extend " ....Das kann doch nicht wahr sein!\""
+    extend " ....Das kann doch nicht wahr sein!\""
+
+translate English strings:
+
+    # game/Story/ch1.rpy:9
+    old "Episode0 Resurrection of the golden witch\nBootsfahrt nach Rokkenjima"
+    new "Episode0 Resurrection of the golden witch\nBootsfahrt nach Rokkenjima"
+
