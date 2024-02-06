@@ -3,7 +3,6 @@ init python:
 
 
 screen showch():
-
     if chapter == 0:
         text _("Ich schreibe an dich in einer Quadrillion Jahren") size 40 xalign 0.0 yalign 1.0 font "fonts/AOTFShinGoProMedium.otf" outlines [ (absolute(3), "#000", absolute(0), absolute(0)) ] at chapterdissolve
     if chapter == 1:

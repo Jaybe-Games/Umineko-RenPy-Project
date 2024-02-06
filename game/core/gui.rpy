@@ -53,10 +53,10 @@ define gui.interface_text_color = '#ffffff'
 ## Fonts and Font Sizes ########################################################
 
 ## The font used for in-game text.
-define gui.text_font = "fonts/newrodin.otf"
+define gui.text_font = gui.preference("font", "newrodin.otf")
 
 ## The font used for character names.
-define gui.name_text_font = "fonts/newrodin.otf"
+define gui.name_text_font = gui.preference("font", "newrodin.otf")
 
 ## The font used for out-of-game text.
 define gui.interface_text_font = "fonts/newrodin.otf"
@@ -64,10 +64,10 @@ define gui.interface_text_font = "fonts/newrodin.otf"
 define gui.glyph_font = "fonts/newrodin.otf"
 
 ## The size of normal dialogue text.
-define gui.text_size = 45
+define gui.text_size = gui.preference("size", 45)
 
 ## The size of character names.
-define gui.name_text_size = 45
+define gui.name_text_size = gui.preference("size", 45)
 
 ## The size of text in the game's user interface.
 define gui.interface_text_size = 40

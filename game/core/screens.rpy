@@ -184,7 +184,7 @@ style say_label:
     properties gui.text_properties("name", accent=True)
     xalign gui.name_xalign
     yalign 0.5
-    outlines [ (absolute(2), "#00000094", absolute(1), absolute(1)) ]
+    outlines [ (absolute(2), "#000000ff", absolute(1), absolute(1)) ]
     kerning -1.7
     antialias True
     shaper "hardbuzz"
@@ -195,7 +195,7 @@ style say_dialogue:
     xpos gui.dialogue_xpos
     xsize gui.dialogue_width
     ypos gui.dialogue_ypos
-    outlines [ (absolute(2), "#000000a2", absolute(1), absolute(1)) ]
+    outlines [ (absolute(2), "#000000ff", absolute(1), absolute(1)) ]
     line_spacing 15
     language "western"
     kerning -1.0
@@ -963,11 +963,18 @@ screen preferences():
 
         vbox:
 
-            style_prefix "check"
+            style_prefix "radio"
             text _("Schrif{red_truth}t{/red_truth}art") outlines [ (absolute(2), "#00000094", absolute(1), absolute(1)) ] size 40
-            imagebutton auto "gui/settings/buttons/off_%s.png" action gui.SetPreference("font", "newrodin.otf", rebuild=True)  activate_sound "audio/sys/sysse_soff.wav" hover_sound "audio/sys/sysse_move.wav"
-            imagebutton auto "gui/settings/buttons/off_%s.png" action gui.SetPreference("font", "ArnoPro.otf", rebuild=True) activate_sound "audio/sys/sysse_soff.wav" hover_sound "audio/sys/sysse_move.wav"
-            imagebutton auto "gui/settings/buttons/on_%s.png" action gui.SetPreference("font", "OpenDyslexic3-Regular.ttf", rebuild=True) activate_sound "audio/sys/sysse_son.wav" hover_sound "audio/sys/sysse_move.wav"
+            imagebutton auto "gui/settings/buttons/off_%s.png" action gui.SetPreference("font", "newrodin.otf")  activate_sound "audio/sys/sysse_soff.wav" hover_sound "audio/sys/sysse_move.wav"
+            imagebutton auto "gui/settings/buttons/off_%s.png" action [gui.SetPreference("font", "ArnoPro.otf"), gui.SetPreference("size", 45)] activate_sound "audio/sys/sysse_soff.wav" hover_sound "audio/sys/sysse_move.wav"
+
+        vbox:
+
+            style_prefix "radio"
+            text _("Text{red_truth}b{/red_truth}ox") outlines [ (absolute(2), "#00000094", absolute(1), absolute(1)) ] size 40
+            imagebutton auto "gui/settings/buttons/off_%s.png" action [SetVariable("textbox", "textboxa"), SetVariable("namebox", "nameboxa"), SetVariable("narratorbox", "narratorboxa") ]  activate_sound "audio/sys/sysse_soff.wav" hover_sound "audio/sys/sysse_move.wav"
+            imagebutton auto "gui/settings/buttons/off_%s.png" action [SetVariable("textbox", "textboxb"), SetVariable("namebox", "nameboxb"), SetVariable("narratorbox", "narratorboxb") ] activate_sound "audio/sys/sysse_soff.wav" hover_sound "audio/sys/sysse_move.wav"
+            imagebutton auto "gui/settings/buttons/off_%s.png" action [SetVariable("textbox", "textboxc"), SetVariable("namebox", "nameboxc"), SetVariable("narratorbox", "narratorboxc") ] activate_sound "audio/sys/sysse_soff.wav" hover_sound "audio/sys/sysse_move.wav"
         
     vbox:
         xalign 0.97

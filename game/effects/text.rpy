@@ -10,7 +10,7 @@ init python:
     def orange_tag(tag, argument, contents):
         return [(renpy.TEXT_TAG, "gradient=#f5b674-#fa952b")] + contents + [(renpy.TEXT_TAG, "/gradient")]
     def dialogue(tag, argument, contents):
-        return [(renpy.TEXT_TAG, "gradient=#eeeeee-#bfbfbf")] + contents + [(renpy.TEXT_TAG, "/gradient")]
+        return [(renpy.TEXT_TAG, "gradient=#eeeeee-#CDCDCD")] + contents + [(renpy.TEXT_TAG, "/gradient")]
 
     config.custom_text_tags["red_truth"] = red_tag
     config.custom_text_tags["blue_truth"] = blue_tag
