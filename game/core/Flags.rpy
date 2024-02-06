@@ -3,6 +3,9 @@ default persistent.mainstorycleared = False
 default persistent.teapartycleared = False
 default persistent.gamecleared = False
 
+define narratorbox = "orig"
+define textbox = "orig"
+
 default persistent.rudolf = False
 default persistent.kyrie = False
 default persistent.maria = False

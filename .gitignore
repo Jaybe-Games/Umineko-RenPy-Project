@@ -29,3 +29,8 @@ videos/startgame_shatter.webm
 *.json
 saves/persistent
 gui/chessmenu/portraits.psd
+game/cache/shaders.txt
+*.rpyb
+*.rpyc
+*.rpyc
+*.txt

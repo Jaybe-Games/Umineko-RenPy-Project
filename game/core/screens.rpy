@@ -168,7 +168,7 @@ style window:
     yalign gui.textbox_yalign
     ysize gui.textbox_height
     yminimum gui.textbox_height
-    background Image("gui/textbox.png", xalign=0.5, yalign=1.0)
+    background Image("gui/textbox_[textbox].png", xalign=0.5, yalign=1.0)
 
 style namebox:
     xpos gui.name_xpos
@@ -177,7 +177,7 @@ style namebox:
     ypos gui.name_ypos
     ysize gui.namebox_height
 
-    background Frame("gui/namebox.png", gui.namebox_borders, tile=gui.namebox_tile, xalign=gui.name_xalign)
+    background Frame("gui/namebox:[namebox].png", gui.namebox_borders, tile=gui.namebox_tile, xalign=gui.name_xalign)
     padding gui.namebox_borders.padding
 
 style say_label:
@@ -200,21 +200,14 @@ style say_dialogue:
     language "western"
     kerning -1.0
     antialias True
+    ### Ich versuche nicht mal so zu tun, als wüsste ich, was der shaper macht, es ist neu, also habe ich es eingefügt.
     shaper "hardbuzz"
-    #line_overlap_split -12
+    ### Dieser overlay_split Kasper soll die Artefakte in der Font minimieren.
+    line_overlap_split -5
     #newline_indent True
 
 
-## Input screen ################################################################
-##
-## This screen is used to display renpy.input. The prompt parameter is used to
-## pass a text prompt in.
-##
-## This screen must create an input displayable with id "input" to accept the
-## various input parameters.
-##
-## https://www.renpy.org/doc/html/screen_special.html#input
-
+### Dieser Screen macht literarisch gar nichts und wird irgendwann entfernt.
 screen input(prompt):
     style_prefix "input"
 
@@ -240,13 +233,7 @@ style input:
     xmaximum gui.dialogue_width
 
 
-## Choice screen ###############################################################
-##
-## This screen is used to display the in-game choices presented by the menu
-## statement. The one parameter, items, is a list of objects, each with caption
-## and action fields.
-##
-## https://www.renpy.org/doc/html/screen_special.html#choice
+### Dieser Screen wird nur benutzt, damit man die Sprache vor Spielbeginn wählen kann
 
 screen choice(items):
     style_prefix "choice"
@@ -273,18 +260,7 @@ style choice_button is default:
 style choice_button_text is default:
     properties gui.button_text_properties("choice_button")
 
-
-
-
-
-################################################################################
-## Main and Game Menu Screens
-################################################################################
-
-## Navigation screen ###########################################################
-##
-## This screen is included in the main and game menus, and provides navigation
-## to other menus, and to start the game.
+### Der Screen der mehr generalüberholungen hatte, als ein 10 fach retouriertes Appleprodukt.
 
 screen navigation():
 
@@ -302,6 +278,7 @@ screen navigation():
 
     fixed:
 
+        ## if weil der Spieler ja theorethisch irgendwie außerhalb vom Hauptmenü den Navigationsscreen sehen könnte, was niemals passieren dürfte.
         if main_menu:
 
             vbox:
@@ -397,11 +374,7 @@ style navigation_button_text:
     xalign 1.0
 
 
-## Main Menu screen ############################################################
-##
-## Used to display the main menu when Ren'Py starts.
-##
-## https://www.renpy.org/doc/html/screen_special.html#main-menu
+## Bei Gott ich habe gar keine Ahnung warum das hier existiert.
 
 screen main_menu():
 
@@ -469,16 +442,7 @@ style main_menu_version:
     properties gui.text_properties("version")
 
 
-## Game Menu screen ############################################################
-##
-## This lays out the basic common structure of a game menu screen. It's called
-## with the screen title, and displays the background, title, and navigation.
-##
-## The scroll parameter can be None, or one of "viewport" or "vpgrid". When
-## this screen is intended to be used with one or more children, which are
-## transcluded (placed) inside it.
-
-## anywhere
+## Ein wenig Mathematik für einen Spielzeitzähler und das Pausenmenü
 
 init python:
     def getPlayTime():
@@ -505,7 +469,7 @@ screen game_menu(scroll=None, yinitial=0.0):
 
 
     
-
+    ## Dieser Teil hier wird gar nicht verwendet glaube ich, ich habe meine eigenen Methoden
     frame:
         style "game_menu_outer_frame"
 
@@ -551,7 +515,7 @@ screen game_menu(scroll=None, yinitial=0.0):
                 else:
 
                     transclude
-
+    ### Wieder ein If der überflüssiger nicht sein kann, wird mal Zeit für ein wenig Code aufräumen
     if not main_menu:
 
         if persistent.showch == True:
@@ -613,6 +577,7 @@ screen game_menu(scroll=None, yinitial=0.0):
     if main_menu:
         key "game_menu" action ShowMenu("main_menu") activate_sound "audio/sys/sysse_decide.wav"
 
+## Dieser Screen hatte mal irgend einen Sinn für einen Workaround
 screen cleanmenu():
 
     tag menu
@@ -675,14 +640,7 @@ style return_button:
     yalign 1.0
     yoffset -45
 
-## Load and Save screens #######################################################
-##
-## These screens are responsible for letting the player save the game and load
-## it again. Since they share nearly everything in common, both are implemented
-## in terms of a third screen, file_slots.
-##
-## https://www.renpy.org/doc/html/screen_special.html#save https://
-## www.renpy.org/doc/html/screen_special.html#load
+## Der Grund warum ich mit Visual Novel Maker auf Steam abgebrochen habe
 
 screen save():
 
@@ -811,7 +769,7 @@ style slot_button_text:
     properties gui.button_text_properties("slot_button")
     ypos 40
     size 30
-
+## Styles die ich mal für nen Workaround benutzt habe, den ich aber nicht mehr verwende, da mein Hirn immer schlauer wurde
 style new_slot_time_text:
     size 35
     xalign 0.97
@@ -954,14 +912,7 @@ style slot_button_text:
     ypos 40
     size 30
 
-
-## Preferences screen ##########################################################
-##
-## The preferences screen allows the player to configure the game to better suit
-## themselves.
-##
-## https://www.renpy.org/doc/html/screen_special.html#preferences
-
+## Ich neige dazu diesen Screen gerne voll zu müllen
 screen preferences():
 
     tag menu
@@ -1053,7 +1004,7 @@ screen preferences():
                         if config.sample_sound:
                             textbutton _("Test") action Play("sound", config.sample_sound)
 
-
+                    ### Eines Tages hat diese Config Voice... Eines Tages
                     #if config.has_voice:
                         #label _("Sprachlautstärke")
 
@@ -1148,13 +1099,7 @@ style optionname:
 
 
 
-## History screen ##############################################################
-##
-## This is a screen that displays the dialogue history to the player. While
-## there isn't anything special about this screen, it does have to access the
-## dialogue history stored in _history_list.
-##
-## https://www.renpy.org/doc/html/history.html
+## Wer sich diesen Screen vorgenommen hat, ist heute Internationaler Geschäftsmann (Ich)
 
 screen history():
 
@@ -1281,11 +1226,7 @@ style history_label_text:
     xalign 0.5
 
 
-## Help screen #################################################################
-##
-## A screen that gives information about key and mouse bindings. It uses other
-## screens (keyboard_help, mouse_help, and gamepad_help) to display the actual
-## help.
+## Dieser Screen, wird irgendwann in die Preferences landen, also mach dich darauf gefasst die Macht von STRG C und STRG V zu spüren
 
 screen help():
     modal True
@@ -1354,12 +1295,7 @@ style help_label_text:
 ################################################################################
 
 
-## Confirm screen ##############################################################
-##
-## The confirm screen is called when Ren'Py wants to ask the player a yes or no
-## question.
-##
-## https://www.renpy.org/doc/html/screen_special.html#confirm
+## Dieser Screen ist wirklich stark, ich habe dem nichts zuzufügen
 
 screen confirm(message, yes_action, no_action):
     ## Ensure other screens do not get input while this screen is displayed.
@@ -1472,12 +1408,7 @@ style confirm_button_text:
     properties gui.button_text_properties("confirm_button")
 
 
-## Skip indicator screen #######################################################
-##
-## The skip_indicator screen is displayed to indicate that skipping is in
-## progress.
-##
-## https://www.renpy.org/doc/html/screen_special.html#skip-indicator
+## Wird irgendwann auch mal besser aussehen
 
 screen skip_indicator():
 
@@ -1527,13 +1458,7 @@ style skip_triangle:
     ## glyph in it.
     font "DejaVuSans.ttf"
 
-
-## Notify screen ###############################################################
-##
-## The notify screen is used to show the player a message. (For example, when
-## the game is quicksaved or a screenshot has been taken.)
-##
-## https://www.renpy.org/doc/html/screen_special.html#notify-screen
+## Ich hoffe ich brauche diesen Lappen nie wieder
 
 screen notify(message):
 
@@ -1566,13 +1491,7 @@ style notify_frame:
 style notify_text:
     properties gui.text_properties("notify")
 
-
-## NVL screen ##################################################################
-##
-## This screen is used for NVL-mode dialogue and menus.
-##
-## https://www.renpy.org/doc/html/screen_special.html#nvl
-
+## Du kleiner Lümmel, eines Tages wirst auch du von FancyText profitieren
 
 screen nvl(dialogue, items=None):
 
@@ -1656,7 +1575,8 @@ style nvl_button:
 style nvl_button_text:
     properties gui.button_text_properties("nvl_button")
 
-## Story Select Screen ##############
+
+## Ein gutes 100% Custom Screen
 
 screen story_select():
 
@@ -1727,6 +1647,7 @@ screen story_select_bonus():
 
 screen mainstory():
     tag hover
+    ## TO DO: Durch Text ersetzen, der nichts mit einer PSD zutun hat
     imagemap:
         ground "gui/scenario/details_00.png"
 
@@ -1751,7 +1672,7 @@ screen continuehover():
         ground "gui/title/hover/continue.png"
 
 
-## hover textboxen ##
+## Was zu machen = Durch Ingametext ersetzen für bessere Übersetzbarkeit
 screen starthover():
     tag hover
     imagemap:
@@ -1807,6 +1728,10 @@ screen locked():
     tag hover
     imagemap:
         ground "gui/scenario/details_404.png"
+
+
+## Dieser Screen wird noch große Schmerzen verursachen
+## To Do: Charakterbeschreibungen durch Ingametext ersetzen.
 
 screen characters():
     tag menu
