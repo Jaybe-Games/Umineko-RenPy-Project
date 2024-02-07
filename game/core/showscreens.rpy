@@ -1,5 +1,5 @@
 init python:
-    songname = "SongName"
+    songname = "-"
 
 
 screen showch():

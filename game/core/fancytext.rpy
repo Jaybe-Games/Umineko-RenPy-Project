@@ -364,8 +364,6 @@ python early:
         .add_property("always_effect") \
         .add_property("slow") \
         .add_property("slow_done") \
-        .add_property("substitute") \
-        .add_property("scope") \
         .add_property_group("text")
 
 ################################################################################

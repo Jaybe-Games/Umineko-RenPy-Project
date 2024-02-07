@@ -5,18 +5,26 @@ label schule:
     $ songname = "-"
     $ save_name = _("EpisodeX Illusion of the golden witch\nProlog")
     ##Prolog
-    $ songname = "-"
     if persistent.showch == True:
         show screen showch
     $ _game_menu_screen = "cleanmenu"
-    nvltext "What the fuck is going on here?"
-    extend " ....Sucker merry barrelers"
-    nvltext "Back dir ein Eis du Suppenkasper."
-    vir "Eure Hoheit..."
-    extend " So früh habe ich Euch hier tatsächlich nicht erwartet..."
-    extend " Pu ku ku ku"
+    pause 3
+    play sound "audio/sfx/umise_028.ogg"
+    show text001
+    pause 8
+    hide text001 with dissolve
+    pause 2
+    $ songname = "Frenzy"
+    play music "audio/bgm/Frenzy.mp3"
     if persistent.showbgm == True:
         show screen showsong
+    show goddomain with dissolve
+    pause 5
+    hide goddomain with dissolve
+    $ _game_menu_screen = "cleanmenu"
+    vir "Eure Hoheit..."
+    vir "So früh habe ich Euch hier tatsächlich nicht erwartet..."
+    extend " Pu ku ku ku"
     "\"Virgilius!"
     extend " ..Hast du das Fragment vorbereitet, um das ich dich gebeten habe?"
     "Ich muss jeden Aspekt der Illusion der Goldenen Hexe genaustens kennen, damit mein Vorhaben gelingen kann\""
@@ -37,6 +45,7 @@ label schule:
     vir "Ich werde die große Featherine-sama umgehend darüber in Kenntnis setzen."
     vir "Ich bin mir sicher, dass jemand der die Null kontrolliert wie Ihr es tut, es schon früh im ersten Durchlauf herausfinden wird."
     extend " ...Pu ku ku ku"
+    $ renpy.movie_cutscene("videos/opening.mov")
     ##Kapitel 1 - Die sechs außerwählten
     $ chapter = 1001
     $ songname = "-"

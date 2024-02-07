@@ -128,7 +128,7 @@ style vslider:
 ##
 ## https://www.renpy.org/doc/html/screen_special.html#say
 
-screen say(who, what, slow_effect = slow_typewriter, slow_effect_delay = 0, always_effect = None):
+screen say(who, what, slow_effect = slow_fade, slow_effect_delay = 0, always_effect = None):
     style_prefix "say"
 
     window:
@@ -1167,7 +1167,7 @@ screen history():
 
 ## This determines what tags are allowed to be displayed on the history screen.
 
-define gui.history_allow_tags = { "alt", "noalt", "rt", "rb", "art", "note_green", "red_truth", "blue_truth" }
+define gui.history_allow_tags = { "alt", "noalt", "rt", "rb", "art", "note_green", "red_truth", "blue_truth", "dialogue" }
 
 
 
@@ -1500,7 +1500,7 @@ style notify_text:
 
 ## Du kleiner Lümmel, eines Tages wirst auch du von FancyText profitieren
 
-screen nvl(dialogue, items=None):
+screen nvl(dialogue, slow_effect = slow_fade, slow_effect_delay = 0, always_effect = None, items=None):
 
     window:
         style "nvl_window"
@@ -1515,24 +1515,19 @@ screen nvl(dialogue, items=None):
                 cols 1
                 yinitial 1.0
 
-                use nvl_dialogue(dialogue)
+                use nvl_dialogue(dialogue, slow_effect = slow_effect, slow_effect_delay = slow_effect_delay, always_effect = always_effect)
 
         else:
 
-            use nvl_dialogue(dialogue)
+            use nvl_dialogue(dialogue, slow_effect = slow_effect, slow_effect_delay = slow_effect_delay, always_effect = always_effect)
 
         ## Displays the menu, if given. The menu may be displayed incorrectly if
         ## config.narrator_menu is set to True.
-        for i in items:
-
-            textbutton i.caption:
-                action i.action
-                style "nvl_button"
 
     add SideImage() xalign 0.0 yalign 1.0
 
 
-screen nvl_dialogue(dialogue):
+screen nvl_dialogue(dialogue, slow_effect = slow_fade, slow_effect_delay = 0, always_effect = None):
 
     for d in dialogue:
 
@@ -1547,8 +1542,7 @@ screen nvl_dialogue(dialogue):
                     text d.who:
                         id d.who_id
 
-                text d.what:
-                    id d.what_id
+                fancytext d.what id d.what_id slow_effect slow_effect slow_effect_delay slow_effect_delay always_effect always_effect
 
 
 ## This controls the maximum number of NVL-mode entries that can be displayed at

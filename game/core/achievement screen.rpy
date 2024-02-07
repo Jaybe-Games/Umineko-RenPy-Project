@@ -4,15 +4,9 @@ screen achievement_menu(scroll="viewport"):
 
     tag menu
     modal True
-    add "gui/game_menu.png" at center
     add "gui/trophys/background.png" at center
     imagebutton auto "images/system/back2_%s.png" action Return() activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" yalign 0.02 xalign 0.97
     add partObj
-    ## If you'd like to display a number and total of achievements you can use this.
-    #use cleanmenu(_("Trophäen | {:01d}/{}".format(len(persistent.my_achievements), len(achievement_name) if len(persistent.my_achievements) == len(achievement_name) else len(achievement_name) - 1)), scroll="viewport"):
-    ## Else, use this.
-    ## Else, use this.
-    #use game_menu(_("Achievements"), scroll="viewport"):
 
     style_prefix "achievements"
 
@@ -172,7 +166,7 @@ screen achievement_notification():
 
 style victory_message_text:
     color "#ffffff"
-    size 30
+    size 20
 
 transform achievement_appear:
     subpixel True
@@ -199,20 +193,20 @@ style achievements_vbox:
     yfill False
 
 style achievements_label:
-    size 40
+    size 30
     outlines [(1, '#ffffff22', 0, 1)]
     yalign 0.5
     antialias True
 
 style achievements_text:
-    size 30
+    size 20
     yalign 0.5
     antialias True
 
 style achievements_locked_text:
     antialias True
     color "#ffffff"
-    size 25
+    size 20
 
 style achievements_frame:
     background Solid('#444444')

@@ -9,6 +9,7 @@ init python:
         return [(renpy.TEXT_TAG, "gradient=#ffd966-#fcca34")] + contents + [(renpy.TEXT_TAG, "/gradient")]
     def orange_tag(tag, argument, contents):
         return [(renpy.TEXT_TAG, "gradient=#f5b674-#fa952b")] + contents + [(renpy.TEXT_TAG, "/gradient")]
+    ##Mein löwe mein Bär, mein Gradient Text der leider nur Horizontal ist
     def dialogue(tag, argument, contents):
         return [(renpy.TEXT_TAG, "gradient=#eeeeee-#CDCDCD")] + contents + [(renpy.TEXT_TAG, "/gradient")]
 
@@ -16,6 +17,7 @@ init python:
     config.custom_text_tags["blue_truth"] = blue_tag
     config.custom_text_tags["gold_truth"] = gold_tag
     config.custom_text_tags["note_green"] = green_tag
+    ## Ich weiß nicht ob ich Orange Truth je brauchen werde
     config.custom_text_tags["orange_truth"] = orange_tag
     config.custom_text_tags["dialogue"] = dialogue
 

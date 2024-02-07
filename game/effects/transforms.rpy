@@ -273,7 +273,3 @@ transform credits_scroll:
     xalign 0.5
     linear 280 yoffset -17280
 
-transform fade_in_text(time=0.5, distance=20):
-    alpha 0 xoffset distance
-    ease time alpha 1 xoffset 0
-
