@@ -255,3 +255,25 @@ transform mmclouds:
     linear 240 xalign 0.0
     repeat
 
+transform end_scroll:
+    subpixel True
+    yoffset 0
+    xalign 0.5
+    linear 222 yoffset -17280
+
+transform gameresult_scroll:
+    subpixel True
+    yoffset 0
+    xalign 0.5
+    linear 100 yoffset -21420
+
+transform credits_scroll:
+    subpixel True
+    yoffset 0
+    xalign 0.5
+    linear 280 yoffset -17280
+
+transform fade_in_text(time=0.5, distance=20):
+    alpha 0 xoffset distance
+    ease time alpha 1 xoffset 0
+

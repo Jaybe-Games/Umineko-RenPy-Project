@@ -83,7 +83,7 @@ init python:
         "tipscollector": [_("Tippsfanatiker"), _("Erhalte alle Tipps und Grimoireeinträge"), 'gui/trophys/silver3.png', 'hidden'],
         "mainclear": [_("Der Sieger des Spiels ist..."), _("Schließe Episode 0 ab"), 'gui/trophys/silver4.png', None],
         "teaclear": [_("Eins zu einer Quadrillion"), _("Schließe die Tee Party ab"), 'gui/trophys/silver5.png', None],
-        "gameclear": [_("Auferstehung der Goldenen Hexe"), _("Schließe ???? ab"), 'gui/trophys/gold1.png', None],
+        "gameclear": [_("Resurrection of the golden witch"), _("Schließe ???? ab"), 'gui/trophys/gold1.png', None],
         "bonusclear": [_("Verbotene Erinnerungen"), _("Schließe alle Bonuskapitel ab"), 'gui/trophys/gold2.png', 'hidden'],
         ## The None, means that the achievement will be displayed greyed-out before it is granted (or achieved).
         ## I use these words to describe the type of achievement it is;
