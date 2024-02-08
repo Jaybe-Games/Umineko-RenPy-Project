@@ -75,14 +75,20 @@ label schule:
     eva "Alle bis auf George sind noch am schlafen."
     nat "Gott sei dank, ich bete dafür, dass den anderen nichts passiert ist."
     eva "George würde sich nie auf die Idee kommen, sich irgendwo zu verstecken, da ist was faul!"
-    gen "Wir sollten uns draußen umsehen, bitte nehmen Sie einen Regenschirm mit, sonst holen Sie sich eine Erkältung."
+    eva "Hideyoshi und Shannon sind in der nähe der Kapelle auf die Suche gegangen."
+    extend " ...Ich hoffe sie werden schnell gefunden."
+    gen "Wir sollten uns ebenfalls draußen umsehen, bitte nehmen Sie einen Regenschirm mit, sonst holen Sie sich eine Erkältung."
     gen "Kanon."
-    extend " Hast du die vermissten gefunden?"
-    kan "Nein ohne Chance..."
+    extend " Was ist hier los?"
+    kan "Ich weiß es nicht, Genji-sama..."
+    extend " ......Es fehlen exakt Sechs leute."
+    extend " Vielleicht war es ja die Hexe...."
+    eva "Red nicht so einen unsinn, geh lieber weiter suchen, als in so einem Moment an ein dummes Ammenmärchen zu denken."
+    kan "Ich bitte um Verzeihung, Eva-sama, das war taktlos von mir..."
     extend " mir ist aber etwas seltsames am Rosengartenschuppen aufgefallen, ich habe es aber nicht näher inspiziert und bin sofort hergekommen."
-    gen "Gut gemacht, Kanon."
+    gen "Wir werden es uns ansehen. Danke, Kanon."
     eva "Dann los zum Gartenschuppen!"
-    extend " Ich weiß zwar nicht, was George, Krauss und die anderen dort"
+    extend " Ich weiß zwar nicht, was George, Krauss und die anderen dort vorhaben, aber es ist unsere einzige Spur."
     nat "Es wäre besser für uns, sie so schnell wie möglich aus dem Regen zu holen."
     mar "Uu!"
     "Ist es schon morgen?"
@@ -100,7 +106,7 @@ label schule:
     extend " Jetzt tut mein Kopf weh, aber dafür bin ich jetzt wach."
     mar "*kicher*kicher* Kopf tut weh! Kopf tut weh!"
     extend " Uu~!!"
-    jes "Maria! Bitte etwas leiser Okay?"
+    jes "Maria! Bitte etwas leiser, Okay?"
     but "Jo, Jessica-chan!"
     extend " Was meintest du mit aufgescheuchte Hühner?"
     jes "Die Erwachsenen sind richtig panisch durch den Rosengarten gelaufen, es sah nach was ernstem aus."
@@ -120,6 +126,12 @@ label schule:
     if persistent.showbgm == True:
         show screen showsong
     jes "KYAAAAAAAAAAAAAAAAAA!!!!!!!!"
+    nat "Genji! Ruf sofort die Polizei!"
+    gen "Wie Ihr wünscht, es wird sofort erledigt!"
+    extend " Kanon..."
+    extend " Erstatte den werten Herrn Kinzo-sama umgehend Bericht!"
+    kan "Ich habe verstanden!"
+
 
 
 

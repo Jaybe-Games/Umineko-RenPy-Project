@@ -964,19 +964,19 @@ screen preferences():
             imagebutton auto "gui/settings/buttons/en_%s.png" action Language("English") activate_sound "audio/sys/sysse_son.wav" hover_sound "audio/sys/sysse_move.wav"
 
         vbox:
-            #TO DO: Buttons auswechseln
+            #TODO: Buttons auswechseln
             style_prefix "radio"
             text _("Schrif{red_truth}t{/red_truth}art") outlines [ (absolute(2), "#00000094", absolute(1), absolute(1)) ] size 40
-            imagebutton auto "gui/settings/buttons/off_%s.png" action gui.SetPreference("font", "newrodin.otf")  activate_sound "audio/sys/sysse_soff.wav" hover_sound "audio/sys/sysse_move.wav"
-            imagebutton auto "gui/settings/buttons/off_%s.png" action [gui.SetPreference("font", "ArnoPro.otf"), gui.SetPreference("size", 45)] activate_sound "audio/sys/sysse_soff.wav" hover_sound "audio/sys/sysse_move.wav"
+            imagebutton auto "gui/settings/buttons/off_%s.png" action [SelectedIf(gui.SetPreference("font", "newrodin.otf")), gui.SetPreference("font", "newrodin.otf")]  activate_sound "audio/sys/sysse_soff.wav" hover_sound "audio/sys/sysse_move.wav"
+            imagebutton auto "gui/settings/buttons/off_%s.png" action [SelectedIf(gui.SetPreference("font", "ArnoPro.otf")), gui.SetPreference("font", "ArnoPro.otf"), gui.SetPreference("size", 45)] activate_sound "audio/sys/sysse_soff.wav" hover_sound "audio/sys/sysse_move.wav"
 
         vbox:
-            #TO DO: Buttons auswechseln
+            #TODO: Buttons auswechseln
             style_prefix "radio"
             text _("Text{red_truth}b{/red_truth}ox") outlines [ (absolute(2), "#00000094", absolute(1), absolute(1)) ] size 40
-            imagebutton auto "gui/settings/buttons/off_%s.png" action [SetVariable("textbox", "textboxa"), SetVariable("namebox", "nameboxa"), SetVariable("narratorbox", "narratorboxa") ]  activate_sound "audio/sys/sysse_soff.wav" hover_sound "audio/sys/sysse_move.wav"
-            imagebutton auto "gui/settings/buttons/off_%s.png" action [SetVariable("textbox", "textboxb"), SetVariable("namebox", "nameboxb"), SetVariable("narratorbox", "narratorboxb") ] activate_sound "audio/sys/sysse_soff.wav" hover_sound "audio/sys/sysse_move.wav"
-            imagebutton auto "gui/settings/buttons/off_%s.png" action [SetVariable("textbox", "textboxc"), SetVariable("namebox", "nameboxc"), SetVariable("narratorbox", "narratorboxc") ] activate_sound "audio/sys/sysse_soff.wav" hover_sound "audio/sys/sysse_move.wav"
+            imagebutton auto "gui/settings/buttons/off_%s.png" action [SelectedIf(SetVariable("textbox", "textboxa")), SetVariable("textbox", "textboxa"), SetVariable("namebox", "nameboxa"), SetVariable("narratorbox", "narratorboxa") ]  activate_sound "audio/sys/sysse_soff.wav" hover_sound "audio/sys/sysse_move.wav"
+            imagebutton auto "gui/settings/buttons/off_%s.png" action [SelectedIf(SetVariable("textbox", "textboxb")), SetVariable("textbox", "textboxb"), SetVariable("namebox", "nameboxb"), SetVariable("narratorbox", "narratorboxb") ] activate_sound "audio/sys/sysse_soff.wav" hover_sound "audio/sys/sysse_move.wav"
+            imagebutton auto "gui/settings/buttons/off_%s.png" action [SelectedIf(SetVariable("textbox", "textboxc")), SetVariable("textbox", "textboxc"), SetVariable("namebox", "nameboxc"), SetVariable("narratorbox", "narratorboxc") ] activate_sound "audio/sys/sysse_soff.wav" hover_sound "audio/sys/sysse_move.wav"
         
     vbox:
         xalign 0.97
