@@ -4,13 +4,18 @@ screen achievement_menu(scroll="viewport"):
 
     tag menu
     modal True
+    if main_menu:
+        add "images/backgrounds/mmbackground.png" at mmclouds
+        add "images/backgrounds/mmbg.png"
+        add "rainbackscroll"
+        add "rainfrontscroll"
     add "gui/trophys/background.png" at center
     imagebutton auto "images/system/back2_%s.png" action Return() activate_sound "audio/sfx/umise_1005.ogg" hover_sound "audio/sfx/click-21156.mp3" yalign 0.02 xalign 0.97
     add partObj
 
     style_prefix "achievements"
 
-    text _("Freigeschaltet | {:01d}/{}".format(len(persistent.my_achievements), len(achievement_name) if len(persistent.my_achievements) == len(achievement_name) else len(achievement_name) - 1)) yalign 0.1 xalign 0.1 size 50
+    text _("Freigeschaltet | {:01d}/{}".format(len(persistent.my_achievements), len(achievement_name) if len(persistent.my_achievements) == len(achievement_name) else len(achievement_name) - 1)) yalign 0.1 xalign 0.1 size 50 outlines [ (absolute(2), "#000", absolute(0), absolute(0)) ]
 
     frame:
         background None

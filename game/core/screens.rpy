@@ -797,8 +797,6 @@ screen file_slots_load():
         add "images/backgrounds/mmbg.png"
         add "rainbackscroll"
         add "rainfrontscroll"
-    else:
-        add "gui/game_menu.png" at center
     add "gui/saveload/loadbg.png" at center
     imagebutton auto "images/system/back2_%s.png" action Return() activate_sound "audio/sys/sysse_cancel.wav" hover_sound "audio/sys/sysse_move.wav" yalign 0.02 xalign 0.97
     add partObj
@@ -917,7 +915,11 @@ screen preferences():
 
     tag menu
     modal True
-    add "gui/game_menu.png" at center
+    if main_menu:
+        add "images/backgrounds/mmbackground.png" at mmclouds
+        add "images/backgrounds/mmbg.png"
+        add "rainbackscroll"
+        add "rainfrontscroll"
     add "gui/settings/background.png" at center
     imagebutton auto "images/system/back2_%s.png" action Return() activate_sound "audio/sys/sysse_cancel.wav" hover_sound "audio/sys/sysse_move.wav" yalign 0.02 xalign 0.97
     add partObj
@@ -962,14 +964,14 @@ screen preferences():
             imagebutton auto "gui/settings/buttons/en_%s.png" action Language("English") activate_sound "audio/sys/sysse_son.wav" hover_sound "audio/sys/sysse_move.wav"
 
         vbox:
-
+            #TO DO: Buttons auswechseln
             style_prefix "radio"
             text _("Schrif{red_truth}t{/red_truth}art") outlines [ (absolute(2), "#00000094", absolute(1), absolute(1)) ] size 40
             imagebutton auto "gui/settings/buttons/off_%s.png" action gui.SetPreference("font", "newrodin.otf")  activate_sound "audio/sys/sysse_soff.wav" hover_sound "audio/sys/sysse_move.wav"
             imagebutton auto "gui/settings/buttons/off_%s.png" action [gui.SetPreference("font", "ArnoPro.otf"), gui.SetPreference("size", 45)] activate_sound "audio/sys/sysse_soff.wav" hover_sound "audio/sys/sysse_move.wav"
 
         vbox:
-
+            #TO DO: Buttons auswechseln
             style_prefix "radio"
             text _("Text{red_truth}b{/red_truth}ox") outlines [ (absolute(2), "#00000094", absolute(1), absolute(1)) ] size 40
             imagebutton auto "gui/settings/buttons/off_%s.png" action [SetVariable("textbox", "textboxa"), SetVariable("namebox", "nameboxa"), SetVariable("narratorbox", "narratorboxa") ]  activate_sound "audio/sys/sysse_soff.wav" hover_sound "audio/sys/sysse_move.wav"
@@ -1112,7 +1114,6 @@ screen history():
 
     tag menu
     modal True
-    add "gui/game_menu.png" at center
     add "gui/backlog/background.png" at center
     imagebutton auto "images/system/back2_%s.png" action Return() activate_sound "audio/sys/sysse_cancel.wav" hover_sound "audio/sys/sysse_move.wav" yalign 0.02 xalign 0.97
     #add partObj
@@ -1238,7 +1239,11 @@ style history_label_text:
 screen help():
     modal True
     tag menu
-    add "gui/game_menu.png" at center
+    if main_menu:
+        add "images/backgrounds/mmbackground.png" at mmclouds
+        add "images/backgrounds/mmbg.png"
+        add "rainbackscroll"
+        add "rainfrontscroll"
     add "gui/controls/background.png" at center
     imagebutton auto "images/system/back2_%s.png" action Return() activate_sound "audio/sys/sysse_cancel.wav" hover_sound "audio/sys/sysse_move.wav" yalign 0.02 xalign 0.97
     add partObj
@@ -1498,7 +1503,8 @@ style notify_frame:
 style notify_text:
     properties gui.text_properties("notify")
 
-## Du kleiner Lümmel, eines Tages wirst auch du von FancyText profitieren
+## Ich hoffe ich muss mich um diesen kleinen Schlingel nicht mehr kümmern, es hat mich alle nerven gekostet,
+## dass FancyText hier funktioniert.
 
 screen nvl(dialogue, slow_effect = slow_fade, slow_effect_delay = 0, always_effect = None, items=None):
 
@@ -1610,7 +1616,10 @@ style nvl_button_text:
 screen story_select():
 
     tag menu
-    add "gui/game_menu.png" at center
+    add "images/backgrounds/mmbackground.png" at mmclouds
+    add "images/backgrounds/mmbg.png"
+    add "rainbackscroll"
+    add "rainfrontscroll"
     add "gui/scenario/background.png" at center
     add partObj
 
@@ -1765,7 +1774,11 @@ screen locked():
 screen characters():
     tag menu
     modal True
-    add "gui/game_menu.png" at center
+    if main_menu:
+        add "images/backgrounds/mmbackground.png" at mmclouds
+        add "images/backgrounds/mmbg.png"
+        add "rainbackscroll"
+        add "rainfrontscroll"
     add "gui/charbox/background.png" at center
     add partObj
     imagebutton auto "images/system/back2_%s.png" action Return() activate_sound "audio/sys/sysse_cancel.wav" hover_sound "audio/sys/sysse_move.wav" yalign 0.02 xalign 0.97
@@ -2021,7 +2034,11 @@ screen tipps():
 
     tag menu
     modal True
-    add "gui/game_menu.png" at center
+    if main_menu:
+        add "images/backgrounds/mmbackground.png" at mmclouds
+        add "images/backgrounds/mmbg.png"
+        add "rainbackscroll"
+        add "rainfrontscroll"
     add "gui/tipps/background1.png" at center
     add partObj
     imagebutton auto "images/system/back2_%s.png" action Return() activate_sound "audio/sys/sysse_cancel.wav" hover_sound "audio/sys/sysse_move.wav" yalign 0.02 xalign 0.97
@@ -2038,14 +2055,6 @@ screen tipps():
 
         if persistent.tip3 == True:
             imagebutton auto "gui/tipps/tip03_%s.png" action ShowMenu("tip03") activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav"
-
-screen grimoire():
-    tag menu
-    modal True
-    add "gui/game_menu.png" at center
-    add "gui/tipps/background2.png" at center
-    add partObj
-    imagebutton auto "images/system/back2_%s.png" action Return() activate_sound "audio/sys/sysse_cancel.wav" hover_sound "audio/sys/sysse_move.wav" yalign 0.02 xalign 0.97
 
 ## DIe Tipps sind kompletter bullshit und tragen nichts zur Story bei und werden sich höchstens auf relevantes beschreiben
 ## To Do: Raus damit!
