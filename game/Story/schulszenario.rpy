@@ -154,7 +154,17 @@ label schule:
     but "Klar sagt man mal aus Wut, dass man jemanden tot sehen will, aber sie dann wirklich tot zu sehen, verkrafte ich nicht..."
     but "Dad, Kyrie, Gohda, Tante Rosa und wieso auch du George?"
     extend "Ich versteh nichts mehr, es ist einfach nicht fair!"
-    extend " Niemand von euch hat es verdient, dass man sein Gesicht nicht mehr erkennen kann...."
+    extend " Niemand von euch hat es verdient, dass man euer Gesicht nicht mehr erkennen kann...."
+    but "Es wäre viel einfacher gewesen, euch einfach nur ins Jenseits zu schicken und hier rein zu legen..."
+    extend " War das wirklich nötig? Macht es das wirklich besser?"
+    hid "bleib stark Battler-kun, die Polizei wird Morgen den Täter finden und verhaften."
+    extend " ich bin genauso traurig wie du, aber wir dürfen jetzt keine falsche Bewegung machen."
+    eva "GEORGE!!!! WAS HABEN SIE DIR ANGETAN!!"
+    extend " ahhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh!!!!!!!!!!!!"
+    eva "WARUM NUR MEIN GEORGE???!!?!??!"
+    eva "Es wäre besser diesen Ort der Polizei zu überlassen."
+    extend " Wenn wir auch nur etwas näher kommen, könnte es die Ermittlungen beeinträchtigen."
+
 
 
 
