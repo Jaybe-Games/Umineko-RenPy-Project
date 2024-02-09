@@ -1,9 +1,19 @@
-# WHEN THEY CRY 0 - Fanproject
-An Umineko When They Cry fan visual novel with a completely original story that anyone can easily read even without Umineko experience.
+# when they cry 0
 
-On 4th October 1986, during the annual family conference of the Ushiromiya family,
-a small passenger plane crashes on the island of Rokkenjima as the storm hits earlier than expected.
-Of all the passengers, only the young Ayato survived the accident, who has to witness mysterious closed room murders
-being carried out by an unknown person from midnight onwards, or was it the legendary Golden Witch Beatrice?
+#based on Umineko no Naku Koro ni Saku by 07th Expansion and Entergram (All rights reserved)
 
-This visual novel will first be published in German and shortly afterwards also in English.
+On 04 October 1986, the Ushiromiya family gathers on the island of Rokkenjima for the annual family conference. This year, Ushiromiya Battler, who has left the family for six years for family reasons, is back. While travelling to the island, a typhoon that had been forecast for midday days before hits much too early in the morning. A passenger plane that had been given the green light to take off had to make an emergency landing due to excessive turbulence and crashed on the island. Only one young man survived this accident, his name is Ayato. During his time on the island, Ayato witnesses mysterious murders that threaten everyone on the island. Does he have to watch as a non-human witch kills everyone one by one in locked rooms, or is there perhaps a dark truth behind it that no one could have foreseen?
+
+#Progress:
+
+Sprite set up = 40%
+UI & Menus = 90%
+Backgrounds = 100%
+Music & Sounds = 100%
+Animations = 70%
+Coding / Programming = 80%
+Current chapter = 2 out of 17
+
+07th Expansion and Entergram are not involved in the development of when they cry 0. 
+No profit is made from the assets of these companies, this is a non-commercial fan game
+
