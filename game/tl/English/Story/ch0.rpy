@@ -482,3 +482,37 @@ translate English strings:
     old "Episode0 Resurrection of the golden witch\nIch schreibe an dich in einer Quadrillion Jahren"
     new "Episode0 Resurrection of the golden witch\nIch schreibe an dich in einer Quadrillion Jahren"
 
+# TODO: Translation updated at 2024-02-09 14:16
+
+# game/Story/ch0.rpy:68
+translate English start_0a311b49:
+
+    # "Über den Fall im Dorf Hinamizawa wurde in einigen Massenmedien berichtet."
+    "Über den Fall im Dorf Hinamizawa wurde in einigen Massenmedien berichtet."
+
+# game/Story/ch0.rpy:79
+translate English start_c9c3f236:
+
+    # nvl clear
+    # nvltext "Die Leiche einer alleinerziehenden Mutter wurde an einem Morgen im April 1983 in ihrem Haus, genauer gesagt in ihrer Küche, tot aufgefunden."
+    nvl clear
+    nvltext "Die Leiche einer alleinerziehenden Mutter wurde an einem Morgen im April 1983 in ihrem Haus, genauer gesagt in ihrer Küche, tot aufgefunden."
+
+# game/Story/ch0.rpy:82
+translate English start_7765e2fe:
+
+    # nvltext "Wahrscheinlich handelt es sich um eine Kindesentführung. Die Polizei tut bereits alles um das entführte Kind zu finden."
+    nvltext "Wahrscheinlich handelt es sich um eine Kindesentführung. Die Polizei tut bereits alles um das entführte Kind zu finden."
+
+# game/Story/ch0.rpy:103
+translate English start_7552d4ac:
+
+    # "Erst danach habe der Täter ihr den Strick umgelegt, so der Obduktionsbericht."
+    "Erst danach habe der Täter ihr den Strick umgelegt, so der Obduktionsbericht."
+
+# game/Story/ch0.rpy:104
+translate English start_20bb713a:
+
+    # extend " Im weiteren Bericht heißt es, dass das Opfer zuvor hochprozentige alkoholische Getränke konsumiert hatte und während der Tat unter starkem Alkoholeinfluss stand."
+    extend " Im weiteren Bericht heißt es, dass das Opfer zuvor hochprozentige alkoholische Getränke konsumiert hatte und während der Tat unter starkem Alkoholeinfluss stand."
+

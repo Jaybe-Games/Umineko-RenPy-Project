@@ -194,3 +194,11 @@ translate English strings:
     old "Erhalte alle Trophäen!"
     new "Erhalte alle Trophäen!"
 
+# TODO: Translation updated at 2024-02-09 14:16
+
+translate English strings:
+
+    # game/core/achievements.rpy:55
+    old "Resurrection of the golden witch"
+    new "Resurrection of the golden witch"
+

@@ -153,3 +153,19 @@ translate English strings:
     old "Keine Nachrichten vorhanden"
     new "Keine Nachrichten vorhanden"
 
+# TODO: Translation updated at 2024-02-09 14:16
+
+translate English strings:
+
+    # game/core/screens.rpy:704
+    old "{#file_time}%Y/%b/%d   %H:%M  "
+    new "{#file_time}%Y/%b/%d   %H:%M  "
+
+    # game/core/screens.rpy:969
+    old "Schrif{red_truth}t{/red_truth}art"
+    new "Schrif{red_truth}t{/red_truth}art"
+
+    # game/core/screens.rpy:976
+    old "Text{red_truth}b{/red_truth}ox"
+    new "Text{red_truth}b{/red_truth}ox"
+

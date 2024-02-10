@@ -61,7 +61,7 @@ define gui.name_text_font = gui.preference("font", "newrodin.otf")
 ## The font used for out-of-game text.
 define gui.interface_text_font = "fonts/newrodin.otf"
 
-define gui.glyph_font = "fonts/newrodin.otf"
+define gui.glyph_font = "fonts/AOTFShinGoProMedium.otf"
 
 ## The size of normal dialogue text.
 define gui.text_size = gui.preference("size", 45)

@@ -14,3 +14,15 @@ translate English strings:
     old "Kapitel 2"
     new "Kapitel 2"
 
+# TODO: Translation updated at 2024-02-09 14:16
+
+translate English strings:
+
+    # game/core/debug.rpy:3
+    old "Main Menu"
+    new "Main Menu"
+
+    # game/core/debug.rpy:3
+    old "Schulprojekt"
+    new "Schulprojekt"
+

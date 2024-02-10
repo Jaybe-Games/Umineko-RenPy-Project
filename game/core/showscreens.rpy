@@ -24,7 +24,7 @@ screen showch():
 
 screen showsong():
 
-    text "♪"+ songname size 40 xalign 0.05 yalign 0.01 font "fonts/AOTFShinGoProMedium.otf" outlines [ (absolute(3), "#000", absolute(0), absolute(0)) ] at songflyin
+    text "{bt=a2-p1-s7.}{bgm}{font=fonts/AOTFShinGoProMedium.otf}♪{/font}{/bt}{bgm}" + songname size 40 xalign 0.05 yalign 0.01 font "fonts/AOTFShinGoProMedium.otf" outlines [ (absolute(3), "#000", absolute(0), absolute(0)) ] at songflyin
 
     timer 8 action Hide('showsong')
 

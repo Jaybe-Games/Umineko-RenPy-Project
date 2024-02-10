@@ -90,3 +90,23 @@ translate English strings:
     old "Geschrieben von dir, von vor einer Quadrillion Jahren"
     new "Geschrieben von dir, von vor einer Quadrillion Jahren"
 
+# TODO: Translation updated at 2024-02-09 14:16
+
+translate English strings:
+
+    # game/core/showscreens.rpy:16
+    old "Die sechs außerwählten"
+    new "Die sechs außerwählten"
+
+    # game/core/showscreens.rpy:18
+    old "Die, die sich nahe stehen"
+    new "Die, die sich nahe stehen"
+
+    # game/core/showscreens.rpy:20
+    old "Verkettung der Ereignisse"
+    new "Verkettung der Ereignisse"
+
+    # game/core/showscreens.rpy:22
+    old "Die Illusion der Goldenen Hexe"
+    new "Die Illusion der Goldenen Hexe"
+
