@@ -332,17 +332,7 @@ screen navigation():
                     imagebutton auto "gui/title/buttons/chars_%s.png" action [ShowMenu("characters"), Hide('characterhover')] activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav" hovered Show('characterhover') unhovered Hide('characterhover') at buttondissolve4
                 else:
                     pass
-
-                if persistent.menustate == 0:
-                    imagebutton auto "gui/title/buttons/help2_%s.png" action [ShowMenu("help"), Hide('helphover')] activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav" hovered Show('helphover') unhovered Hide('helphover') at buttondissolve3
-                if persistent.menustate == 1:
-                    imagebutton auto "gui/title/buttons/help0_%s.png" action [ShowMenu("help"), Hide('helphover')] activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav" hovered Show('helphover') unhovered Hide('helphover') at buttondissolve3
-                if persistent.menustate == 2:
-                    imagebutton auto "gui/title/buttons/help3_%s.png" action [ShowMenu("help"), Hide('helphover')] activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav" hovered Show('helphover') unhovered Hide('helphover') at buttondissolve4
-                if persistent.menustate == 3:
-                    imagebutton auto "gui/title/buttons/help4_%s.png" action [ShowMenu("help"), Hide('helphover')] activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav" hovered Show('helphover') unhovered Hide('helphover') at buttondissolve4
             
-
                 if persistent.menustate == 0:
                     imagebutton auto "gui/title/buttons/quit2_%s.png" action [QuitWithScene(), Hide('quithover')] activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav" hovered Show('quithover') unhovered Hide('quithover') at buttondissolve3
                 if persistent.menustate == 1:
@@ -355,91 +345,13 @@ screen navigation():
 
             pass
 
-        if _in_replay:
-
-            textbutton _("End Replay") action EndReplay(confirm=True)
-
-
-
-
-style navigation_button is gui_button
-style navigation_button_text is gui_button_text
-
-style navigation_button:
-    size_group "navigation"
-    properties gui.button_properties("navigation_button")
-
-style navigation_button_text:
-    properties gui.button_text_properties("navigation_button")
-    xalign 1.0
-
-
 ## Bei Gott ich habe gar keine Ahnung warum das hier existiert.
 
 screen main_menu():
 
-    ## This ensures that any other menu screen is replaced.
     tag menu
-
-    #if persistent.gamecleared == True:
-
-        #add gui.main_menu3_background
-
-    #elif persistent.teapartycleared == True:
-
-        #add gui.main_menu2_background
-
-    #else:
-
-        #add gui.main_menu_background
-
-    ## This empty frame darkens the main menu.
-    frame:
-        style "main_menu_frame"
-
-    ## The use statement includes another screen inside this one. The actual
-    ## contents of the main menu are in the navigation screen.
     use navigation
 
-    #if gui.show_name:
-
-        #vbox:
-            #style "main_menu_vbox"
-
-            #text "[config.name!t]":
-                #style "main_menu_title"
-
-            #text "[config.version]":
-                #style "main_menu_version"
-
-
-style main_menu_frame is empty
-style main_menu_vbox is vbox
-style main_menu_text is gui_text
-style main_menu_title is main_menu_text
-style main_menu_version is main_menu_text
-
-style main_menu_frame:
-    xsize 420
-    yfill True
-
-    #background "gui/overlay/main_menu.png"
-
-style main_menu_vbox:
-    xalign 1.0
-    xoffset -30
-    xmaximum 1200
-    yalign 1.0
-    yoffset -30
-
-style main_menu_text:
-    properties gui.text_properties("main_menu", accent=True)
-
-style main_menu_title:
-    properties gui.text_properties("title")
-
-style main_menu_version:
-    properties gui.text_properties("version")
 
 
 ## Ein wenig Mathematik für einen Spielzeitzähler und das Pausenmenü
@@ -578,6 +490,7 @@ screen game_menu(scroll=None, yinitial=0.0):
         key "game_menu" action ShowMenu("main_menu") activate_sound "audio/sys/sysse_decide.wav"
 
 ## Dieser Screen hatte mal irgend einen Sinn für einen Workaround
+## Ich erinnere mich, ohne den scheiß, kann man das Menü nicht öffnen.
 screen cleanmenu():
 
     tag menu
@@ -921,97 +834,62 @@ screen preferences():
         add "rainbackscroll"
         add "rainfrontscroll"
     add "gui/settings/background.png" at center
+    add "gui/settings/caption.png" at top
     imagebutton auto "images/system/back2_%s.png" action Return() activate_sound "audio/sys/sysse_cancel.wav" hover_sound "audio/sys/sysse_move.wav" yalign 0.02 xalign 0.97
     add partObj
 
+    hbox:
+        xalign 0.5
+        yalign 0.155
+
+        imagebutton idle "gui/settings/buttons/message_hover.png" action NullAction() activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav"
+        imagebutton auto "gui/settings/buttons/sound_%s.png" action ShowMenu("sound") activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav"
+        imagebutton auto "gui/settings/buttons/misc_%s.png" action ShowMenu("misc") activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav"
+
     vbox:
 
         #xalign 0.0
-        xalign 0.2
-        yalign 0.65
-        spacing 10
-        
+        xalign 0.5
+        yalign 0.8
+        spacing 30
 
-        vbox:
-
-            style_prefix "radio"
-            text _("Anzei{red_truth}g{/red_truth}e") outlines [ (absolute(2), "#00000094", absolute(1), absolute(1)) ] size 40
-            imagebutton auto "gui/settings/buttons/window_%s.png" action Preference("display", "window") activate_sound "audio/sys/sysse_son.wav" hover_sound "audio/sys/sysse_move.wav"
-            imagebutton auto "gui/settings/buttons/full_%s.png" action Preference("display", "fullscreen") activate_sound "audio/sys/sysse_son.wav" hover_sound "audio/sys/sysse_move.wav"
-        vbox:
-            style_prefix "radio"
-            text _("Rende{red_truth}r{/red_truth}er") outlines [ (absolute(2), "#00000094", absolute(1), absolute(1)) ] size 40
-            imagebutton auto "gui/settings/buttons/gl_%s.png" action [_SetRenderer("gl2"), SelectedIf(SetVariable("persistent.renderer", 0)), SetVariable("persistent.renderer", 0)] activate_sound "audio/sys/sysse_son.wav" hover_sound "audio/sys/sysse_move.wav"
-            imagebutton auto "gui/settings/buttons/angle2_%s.png" action [_SetRenderer("angle2"), SelectedIf(SetVariable("persistent.renderer", 1)), SetVariable("persistent.renderer", 1)] activate_sound "audio/sys/sysse_son.wav" hover_sound "audio/sys/sysse_move.wav"
-    vbox:
-
-        #xalign 0.0
-        xalign 0.4
-        yalign 0.65
-        spacing 10
-
-        vbox:
+        hbox:
 
             style_prefix "check"
-            text _("Ungel. Übersp{red_truth}r{/red_truth}ingbar") outlines [ (absolute(2), "#00000094", absolute(1), absolute(1)) ] size 40
+            text _("Ungel. Überspringbar") outlines [ (absolute(2), "#00000094", absolute(1), absolute(1)) ] size 40 yoffset 20
             imagebutton auto "gui/settings/buttons/on_%s.png" action Preference("skip", "Toggle") activate_sound "audio/sys/sysse_son.wav" hover_sound "audio/sys/sysse_move.wav"
 
-        vbox:
-
-            style_prefix "check"
-            text _("Spr{red_truth}a{/red_truth}che") outlines [ (absolute(2), "#00000094", absolute(1), absolute(1)) ] size 40
-            imagebutton auto "gui/settings/buttons/de_%s.png" action Language(None) activate_sound "audio/sys/sysse_son.wav" hover_sound "audio/sys/sysse_move.wav"
-            imagebutton auto "gui/settings/buttons/en_%s.png" action Language("English") activate_sound "audio/sys/sysse_son.wav" hover_sound "audio/sys/sysse_move.wav"
-
-        vbox:
+        hbox:
             #TODO: Buttons auswechseln
             style_prefix "radio"
-            text _("Schrif{red_truth}t{/red_truth}art") outlines [ (absolute(2), "#00000094", absolute(1), absolute(1)) ] size 40
-            imagebutton auto "gui/settings/buttons/off_%s.png" action [SelectedIf(gui.SetPreference("font", "newrodin.otf")), gui.SetPreference("font", "newrodin.otf")]  activate_sound "audio/sys/sysse_soff.wav" hover_sound "audio/sys/sysse_move.wav"
-            imagebutton auto "gui/settings/buttons/off_%s.png" action [SelectedIf(gui.SetPreference("font", "ArnoPro.otf")), gui.SetPreference("font", "ArnoPro.otf"), gui.SetPreference("size", 45)] activate_sound "audio/sys/sysse_soff.wav" hover_sound "audio/sys/sysse_move.wav"
+            text _("Schriftart") outlines [ (absolute(2), "#00000094", absolute(1), absolute(1)) ] size 40 yoffset 20
+            imagebutton auto "gui/settings/buttons/a_%s.png" action [SelectedIf(gui.SetPreference("font", "newrodin.otf")), gui.SetPreference("font", "newrodin.otf")]  activate_sound "audio/sys/sysse_soff.wav" hover_sound "audio/sys/sysse_move.wav"
+            imagebutton auto "gui/settings/buttons/b_%s.png" action [SelectedIf(gui.SetPreference("font", "ArnoPro.otf")), gui.SetPreference("font", "ArnoPro.otf"), gui.SetPreference("size", 45)] activate_sound "audio/sys/sysse_soff.wav" hover_sound "audio/sys/sysse_move.wav"
 
-        vbox:
+        hbox:
             #TODO: Buttons auswechseln
             style_prefix "radio"
-            text _("Text{red_truth}b{/red_truth}ox") outlines [ (absolute(2), "#00000094", absolute(1), absolute(1)) ] size 40
-            imagebutton auto "gui/settings/buttons/off_%s.png" action [SelectedIf(SetVariable("textbox", "textboxa")), SetVariable("textbox", "textboxa"), SetVariable("namebox", "nameboxa"), SetVariable("narratorbox", "narratorboxa") ]  activate_sound "audio/sys/sysse_soff.wav" hover_sound "audio/sys/sysse_move.wav"
-            imagebutton auto "gui/settings/buttons/off_%s.png" action [SelectedIf(SetVariable("textbox", "textboxb")), SetVariable("textbox", "textboxb"), SetVariable("namebox", "nameboxb"), SetVariable("narratorbox", "narratorboxb") ] activate_sound "audio/sys/sysse_soff.wav" hover_sound "audio/sys/sysse_move.wav"
-            imagebutton auto "gui/settings/buttons/off_%s.png" action [SelectedIf(SetVariable("textbox", "textboxc")), SetVariable("textbox", "textboxc"), SetVariable("namebox", "nameboxc"), SetVariable("narratorbox", "narratorboxc") ] activate_sound "audio/sys/sysse_soff.wav" hover_sound "audio/sys/sysse_move.wav"
+            text _("Textboxstil") outlines [ (absolute(2), "#00000094", absolute(1), absolute(1)) ] size 40 yoffset 20
+            imagebutton auto "gui/settings/buttons/a_%s.png" action [SelectedIf(SetVariable("textbox", "textboxa")), SetVariable("textbox", "textboxa"), SetVariable("namebox", "nameboxa"), SetVariable("narratorbox", "narratorboxa") ]  activate_sound "audio/sys/sysse_soff.wav" hover_sound "audio/sys/sysse_move.wav"
+            imagebutton auto "gui/settings/buttons/b_%s.png" action [SelectedIf(SetVariable("textbox", "textboxb")), SetVariable("textbox", "textboxb"), SetVariable("namebox", "nameboxb"), SetVariable("narratorbox", "narratorboxb") ] activate_sound "audio/sys/sysse_soff.wav" hover_sound "audio/sys/sysse_move.wav"
+            imagebutton auto "gui/settings/buttons/c_%s.png" action [SelectedIf(SetVariable("textbox", "textboxc")), SetVariable("textbox", "textboxc"), SetVariable("namebox", "nameboxc"), SetVariable("narratorbox", "narratorboxc") ] activate_sound "audio/sys/sysse_soff.wav" hover_sound "audio/sys/sysse_move.wav"
         
     vbox:
-        xalign 0.97
-        yalign 0.5
+        xalign 0.5
+        yalign 0.3
         yoffset 50
         style_prefix "slider"
         box_wrap True
 
         vbox:
                     
-            text _("{color=#fff}- Textgeschwindi{color=#f00}g{color=#fff}keit >>") outlines [ (absolute(2), "#00000094", absolute(1), absolute(1)) ] size 35
+            text _("- Textgeschwindigkeit +") outlines [ (absolute(2), "#00000094", absolute(1), absolute(1)) ] size 35
 
             bar value Preference("text speed")
 
-            text _("{color=#fff}+ Auto{color=#f00}m{color=#fff}odusgeschwindigkeit -") outlines [ (absolute(2), "#00000094", absolute(1), absolute(1)) ] size 35
+            text _("{color=#fff}+ Automodusgeschwindigkeit -") outlines [ (absolute(2), "#00000094", absolute(1), absolute(1)) ] size 35
 
             bar value Preference("auto-forward time")
-
-            vbox:
-
-                if config.has_music:
-                    text _("{color=#fff}- Musiklautstär{color=#f00}k{color=#fff}e +") outlines [ (absolute(2), "#00000094", absolute(1), absolute(1)) ] size 35
-
-                    vbox:
-                        bar value Preference("music volume")
-
-                if config.has_sound:
-
-                    text _("{color=#fff}- Soundlautstär{color=#f00}k{color=#fff}e +") outlines [ (absolute(2), "#00000094", absolute(1), absolute(1)) ] size 35
-
-                    vbox:
-                        bar value Preference("sound volume")
-
-                        if config.sample_sound:
-                            textbutton _("Test") action Play("sound", config.sample_sound)
 
                     ### Eines Tages hat diese Config Voice... Eines Tages
                     #if config.has_voice:
@@ -1088,7 +966,7 @@ style check_button_text:
     properties gui.button_text_properties("check_button")
 
 style slider_slider:
-    xsize 500
+    xsize 1000
 
 style slider_button:
     properties gui.button_properties("slider_button")
@@ -1105,7 +983,99 @@ style slider_vbox:
 style optionname:
     outlines [ (absolute(2), "#00000094", absolute(1), absolute(1)) ]
 
+screen sound():
 
+    tag menu
+    modal True
+    if main_menu:
+        add "images/backgrounds/mmbackground.png" at mmclouds
+        add "images/backgrounds/mmbg.png"
+        add "rainbackscroll"
+        add "rainfrontscroll"
+    add "gui/settings/background.png" at center
+    add "gui/settings/caption.png" at top
+    imagebutton auto "images/system/back2_%s.png" action Return() activate_sound "audio/sys/sysse_cancel.wav" hover_sound "audio/sys/sysse_move.wav" yalign 0.02 xalign 0.97
+    add partObj
+
+    hbox:
+        xalign 0.5
+        yalign 0.155
+
+        imagebutton auto "gui/settings/buttons/message_%s.png" action ShowMenu("preferences") activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav"
+        imagebutton idle "gui/settings/buttons/sound_hover.png" action NullAction() activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav"
+        imagebutton auto "gui/settings/buttons/misc_%s.png" action ShowMenu("misc") activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav"
+
+    vbox:
+
+        style_prefix "slider"
+        box_wrap True
+
+        xalign 0.5
+        yalign 0.5
+
+        text _("- Musiklautstärke +") outlines [ (absolute(2), "#00000094", absolute(1), absolute(1)) ] size 35
+
+        vbox:
+            bar value Preference("music volume")
+
+
+
+        text _("- Soundlautstärke +") outlines [ (absolute(2), "#00000094", absolute(1), absolute(1)) ] size 35
+
+        vbox:
+            bar value Preference("sound volume")
+
+screen misc():
+
+    tag menu
+    modal True
+    if main_menu:
+        add "images/backgrounds/mmbackground.png" at mmclouds
+        add "images/backgrounds/mmbg.png"
+        add "rainbackscroll"
+        add "rainfrontscroll"
+    add "gui/settings/background.png" at center
+    add "gui/settings/caption.png" at top
+    imagebutton auto "images/system/back2_%s.png" action Return() activate_sound "audio/sys/sysse_cancel.wav" hover_sound "audio/sys/sysse_move.wav" yalign 0.02 xalign 0.97
+    add partObj
+
+    hbox:
+        xalign 0.5
+        yalign 0.155
+
+        imagebutton auto "gui/settings/buttons/message_%s.png" action ShowMenu("preferences") activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav"
+        imagebutton auto "gui/settings/buttons/sound_%s.png" action ShowMenu("sound") activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav"
+        imagebutton idle "gui/settings/buttons/misc_hover.png" action NullAction() activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav"
+
+    vbox:
+
+        #xalign 0.0
+        xalign 0.5
+        yalign 0.5
+        spacing 10
+        
+
+        hbox:
+
+            style_prefix "radio"
+            text _("Vollbildmodus") outlines [ (absolute(2), "#00000094", absolute(1), absolute(1)) ] size 40 yoffset 20
+            imagebutton auto "gui/settings/buttons/off_%s.png" action Preference("display", "window") activate_sound "audio/sys/sysse_son.wav" hover_sound "audio/sys/sysse_move.wav"
+            imagebutton auto "gui/settings/buttons/on_%s.png" action Preference("display", "fullscreen") activate_sound "audio/sys/sysse_son.wav" hover_sound "audio/sys/sysse_move.wav"
+        hbox:
+            style_prefix "radio"
+            text _("Grafik-API") outlines [ (absolute(2), "#00000094", absolute(1), absolute(1)) ] size 40 yoffset 20
+            imagebutton auto "gui/settings/buttons/gl_%s.png" action [_SetRenderer("gl2"), SelectedIf(SetVariable("persistent.renderer", 0)), SetVariable("persistent.renderer", 0)] activate_sound "audio/sys/sysse_son.wav" hover_sound "audio/sys/sysse_move.wav"
+            imagebutton auto "gui/settings/buttons/angle2_%s.png" action [_SetRenderer("angle2"), SelectedIf(SetVariable("persistent.renderer", 1)), SetVariable("persistent.renderer", 1)] activate_sound "audio/sys/sysse_son.wav" hover_sound "audio/sys/sysse_move.wav"
+    vbox:
+
+        xalign 0.5
+        yalign 0.7
+
+        text ("Made with Ren'Py [renpy.version_only]") outlines [ (absolute(2), "#00000094", absolute(1), absolute(1)) ] size 40 yoffset 20 xalign 0.5
+        text ("07th Expansion & Entergram (All Rights reserved)") outlines [ (absolute(2), "#00000094", absolute(1), absolute(1)) ] size 40 yoffset 20 xalign 0.5
+        text ("Developed by Jaybe Games") outlines [ (absolute(2), "#00000094", absolute(1), absolute(1)) ] size 40 yoffset 20 xalign 0.5
+
+        
 
 
 ## Wer sich diesen Screen vorgenommen hat, ist heute Internationaler Geschäftsmann (Ich)
