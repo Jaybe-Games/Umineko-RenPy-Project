@@ -7,15 +7,13 @@ label chapter1:
     $ persistent.openingplayed = True
     $ renpy.free_memory()
     $ save_name = _("Episode0 Resurrection of the golden witch\nBootsfahrt nach Rokkenjima")
-    if persistent.showch == True:
-        show screen showch
+    show screen showch
     play sound "audio/sfx/umise_028.ogg"
     show oct_4_1986 with dissolve
     pause (7)
     play ship "audio/sfx/umilse_004.ogg"
     $ songname = "HANE (Feathers)"
-    if persistent.showbgm == True:
-        show screen showsong
+    show screen showsong
     play music "audio/bgm/umib_003_intro.ogg"
     queue music "audio/bgm/umib_003_loop.ogg" loop 
     show white with m1trans
@@ -352,8 +350,7 @@ label chapter1:
     extend b22nayamu2 " ....Aber ich kann trotzdem nicht garantieren, dass ich den Rest meines Frühstücks bei mir behalte." 
     extend " Ihihihi!"
     $ songname = "Doorway of Summer"
-    if persistent.showbgm == True:
-        show screen showsong
+    show screen showsong
     play music "audio/bgm/umib_002_intro.ogg"
     queue music "audio/bgm/umib_002_loop.ogg" loop
     play ship "audio/sfx/umilse_004.ogg" volume 0.2
@@ -565,8 +562,7 @@ label chapter1:
     play music "audio/bgm/umib_035_Intro.ogg"
     queue music "audio/bgm/umib_035_loop.ogg" loop 
     $ songname = "Worldend"
-    if persistent.showbgm == True:
-        show screen showsong
+    show screen showsong
     jes "Ich hasse einfach alles an dieser verfickten Insel..."
     extend " ...Ich habe nur noch Zeit, meine Hausaufgaben zu machen und in meinem Zimmer zu bleiben." 
     extend " ....Es gibt nichts zu tun."
@@ -659,8 +655,7 @@ label chapter1:
     $ songname = "Praise"
     play music "audio/bgm/umib_021_Intro.ogg"
     queue music "audio/bgm/umib_021_loop.ogg" loop 
-    if persistent.showbgm == True:
-        show screen showsong
+    show screen showsong
     eva "Wusstest du, dass deine Seekrankheit auch noch nach der Reise anhalten kann?"
     "Battler hat sich wie erwartet erschrocken und springt auf, als hätte ihm eine Biene in den Hintern gestochen."
     scene ship_s3a at bgani
@@ -792,8 +787,7 @@ label chapter1:
     $ songname = "Stupefaction"
     play music "audio/bgm/umib_020_Intro.ogg"
     queue music "audio/bgm/umib_020_loop.ogg" loop 
-    if persistent.showbgm == True:
-        show screen showsong
+    show screen showsong
     show but b11warai2 at rightedge with dis
     but "hmm?" 
     extend " .....Was ist los Maria?"
@@ -1009,8 +1003,7 @@ label chapter1:
     $ songname = "Towering cloud in summer"
     play music "audio/bgm/umib_011_Intro.ogg"
     queue music "audio/bgm/umib_011_loop.ogg" loop 
-    if persistent.showbgm == True:
-        show screen showsong
+    show screen showsong
     show geo a12warai1 behind rainfrontscroll at l with dis
     geo "Das hast du gut gesagt, Shannon-chan."
     extend " Genau wie ich es von dir erwartet habe."
@@ -1305,8 +1298,7 @@ label chapter1:
     scene black with dissolve
     pause(2)
     $ songname = "Ride on"
-    if persistent.showbgm == True:
-        show screen showsong
+    show screen showsong
     play music "audio/bgm/umib_004_Intro.ogg"
     queue music "audio/bgm/umib_004_loop.ogg" loop
     pause(1)
@@ -1352,8 +1344,7 @@ label chapter1:
     stop rain fadeout 3.0
     pause(5)
     $ songname = "Rose"
-    if persistent.showbgm == True:
-        show screen showsong
+    show screen showsong
     play music "audio/bgm/umib_013_Intro.ogg"
     queue music "audio/bgm/umib_013_loop.ogg" loop 
     play rain "audio/sfx/umilse_012.ogg"

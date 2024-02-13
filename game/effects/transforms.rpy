@@ -55,9 +55,6 @@ transform rightedge:
     yanchor 1.0
     ypos 1210
 
-transform texttop:
-    xalign 0.5
-    yalign 0.3
 # Color transforms
 
 transform grayscale:

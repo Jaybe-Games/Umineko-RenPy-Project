@@ -11,3 +11,6 @@ label debug:
             jump chapter2
         "Schulprojekt":
             jump schule
+        "gradient":
+            jump gradient_test
+

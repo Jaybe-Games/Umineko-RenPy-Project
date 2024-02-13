@@ -15,7 +15,7 @@ screen showch():
     if chapter == 1001:
         text _("Die sechs außerwählten") size 40 xalign 0.0 yalign 1.0 font "fonts/AOTFShinGoProMedium.otf" outlines [ (absolute(3), "#000", absolute(0), absolute(0)) ] at chapterdissolve
     if chapter == 1002:
-        text _("Die, die sich nahe stehen") size 40 xalign 0.0 yalign 1.0 font "fonts/AOTFShinGoProMedium.otf" outlines [ (absolute(3), "#000", absolute(0), absolute(0)) ] at chapterdissolve
+        text _("Die Zwei, die sich nahe stehen") size 40 xalign 0.0 yalign 1.0 font "fonts/AOTFShinGoProMedium.otf" outlines [ (absolute(3), "#000", absolute(0), absolute(0)) ] at chapterdissolve
     if chapter == 1003:
         text _("Verkettung der Ereignisse") size 40 xalign 0.0 yalign 1.0 font "fonts/AOTFShinGoProMedium.otf" outlines [ (absolute(3), "#000", absolute(0), absolute(0)) ] at chapterdissolve
     if chapter == 1004:
@@ -24,7 +24,7 @@ screen showch():
 
 screen showsong():
 
-    text "{bt=a2-p1-s7.}{bgm}{font=fonts/AOTFShinGoProMedium.otf}♪{/font}{/bt}{bgm}" + songname size 40 xalign 0.05 yalign 0.01 font "fonts/AOTFShinGoProMedium.otf" outlines [ (absolute(3), "#000", absolute(0), absolute(0)) ] at songflyin
+    text "{bgm}♪" + songname size 40 xalign 0.05 yalign 0.01 font "fonts/AOTFShinGoProMedium.otf" outlines [ (absolute(3), "#000", absolute(0), absolute(0)) ] at songflyin
 
     timer 8 action Hide('showsong')
 
