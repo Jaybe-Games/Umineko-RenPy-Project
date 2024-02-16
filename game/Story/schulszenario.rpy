@@ -100,9 +100,10 @@ label schule:
     extend " Leider habe ich Herrn Krauss nicht gesehen."
     gen "Ich muss gestehen, nicht nur der Herr ist nirgends zu sehen, auch Gohda ist nicht an seinem Arbeitsplatz."
     gen "Inzwischen sind auch Rosa-sama, Kyrie-sama, Rudolf-sama und George-sama verschwunden."
-    nat "Sechs von uns sind spurlos verschwunden?"
+    nat a12nayamu1 "Sechs von uns sind spurlos verschwunden?"
     extend " Genji. Hilf mir, sie zu finden, es ist ungewöhnlich, dass auch nur einer von ihnen so lange weg ist, vor allem, wenn wegen des Wetters sowieso niemand von hier weggehen kann."
-    gen "Wie Sie wünschen, Fräulein Natsuhi."
+    gen a11komaru1 "Wie Sie wünschen, Fräulein Natsuhi-sama."
+    scene black with gradientwipeup
     "Der Diener und die Herrin stellten die ganze Villa auf den Kopf, aber von den Vermissten fehlte jede Spur."
     "Als die beiden in die Eingangshalle zurückkehrten, lief ihnen ein bekanntes Gesicht entgegen."
     eva "Natsuhi!"
