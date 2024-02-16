@@ -5,11 +5,11 @@ init:
         RainBlur = 0
 
         # RainAlpha is the total alpha level of the entire rain sheet.
-        RainAlpha = 0.75
+        RainAlpha = 1
 
         # RainY is rain speed, basically how long does it take
         # for the rain sheet to fall down by one tile
-        RainY = 0.30
+        RainY = 0.20
 
         # RainX is the same for horizontal movement,
         # and needs to be manually adjusted to fit the chosen raindrop angle
@@ -66,11 +66,11 @@ init:
             subpixel True
             parallel:
                 ypos -RainTileSizeY
-                linear RainYF ypos 0
+                ease RainYF ypos 0
                 repeat
             parallel:
                 xpos 0
-                linear RainXF xpos -RainTileSizeX
+                ease RainXF xpos -RainTileSizeX
                 repeat
         #Medium drops
         contains:
@@ -80,11 +80,11 @@ init:
             subpixel True
             parallel:
                 ypos -RainTileSizeY
-                linear RainYM ypos 0
+                ease RainYM ypos 0
                 repeat
             parallel:
                 xpos 0
-                linear RainXM xpos -RainTileSizeX
+                ease RainXM xpos -RainTileSizeX
                 repeat
 
     # This is the front sheet of the rain, it goes /above/ the 
@@ -97,11 +97,11 @@ init:
             subpixel True
             parallel:
                 ypos -RainTileSizeY
-                linear RainY ypos 0
+                ease RainY ypos 0
                 repeat
             parallel:
                 xpos 0
-                linear RainX xpos -RainTileSizeX
+                ease RainX xpos -RainTileSizeX
                 repeat
 
     # Static sheets of rain for use when the rain does not need to animate,

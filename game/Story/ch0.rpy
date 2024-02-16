@@ -72,18 +72,18 @@ label start:
     scene note1 at bgani 
     play sound "audio/sys/sysse_page.wav"
     with quickergradientwiperight
-    nvltext "1. die folgenden strafrechtlichen Ermittlungen als Verschlusssache zu behandeln"
-    nvltext "Station Okinomiya 1983 Fallnummer 862"
-    nvltext "Tötung einer alleinerziehenden Mutter mit zwei Kindern im Dorf Hinamizawa (Datum: April 1983)."
+    ntxt "1. die folgenden strafrechtlichen Ermittlungen als Verschlusssache zu behandeln"
+    ntxt "Station Okinomiya 1983 Fallnummer 862"
+    ntxt "Tötung einer alleinerziehenden Mutter mit zwei Kindern im Dorf Hinamizawa (Datum: April 1983)."
     extend " Dieser Fall steht in keinem Zusammenhang mit den jährlichen Morden vom Juni 1979 bis 1982."
     nvl clear
-    nvltext "Die Leiche einer alleinerziehenden Mutter wurde an einem Morgen im April 1983 in ihrem Haus, genauer gesagt in ihrer Küche, tot aufgefunden."
+    ntxt "Die Leiche einer alleinerziehenden Mutter wurde an einem Morgen im April 1983 in ihrem Haus, genauer gesagt in ihrer Küche, tot aufgefunden."
     extend " Wir konnten nur eines der beiden Kinder bergen, das andere wird noch vermisst."
-    nvltext "Wahrscheinlich handelt es sich um eine Kindesentführung. Die Polizei tut bereits alles um das entführte Kind zu finden."
+    ntxt "Wahrscheinlich handelt es sich um eine Kindesentführung. Die Polizei tut bereits alles um das entführte Kind zu finden."
     extend " Das geborgene Kind steht noch unter schwerem Schock und kann noch nicht sprechen,"
     extend " es wurde in das örtliche Krankenhaus gebracht und wird dort medizinisch versorgt."
     nvl clear
-    nvltext "Ende der öffentlichen Mitteilung."
+    ntxt "Ende der öffentlichen Mitteilung."
     nvl clear
     scene ma_d1 
     with gradientwipeupright

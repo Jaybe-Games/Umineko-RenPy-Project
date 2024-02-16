@@ -33,3 +33,4 @@ game/cache/shaders.txt
 *.rpyb
 *.rpyc
 *.txt
+game/audio/voice/wel/test.wav

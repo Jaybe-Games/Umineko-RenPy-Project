@@ -1,12 +1,5 @@
-﻿################################################################################
-## Initialization
-################################################################################
+﻿init offset = -1
 
-init offset = -1
-
-################################################################################
-## Styles
-################################################################################
 
 style bigtext:
     bold False
@@ -25,9 +18,8 @@ style menutext:
 
 style chartext:
     bold False
-    font "fonts/ArnoPro.otf"
+    font "fonts/Georgia.otf"
     size 25
-
 
 style button_back:
     activate_sound "audio/sfx/umise_1001.ogg"
@@ -108,26 +100,6 @@ style vslider:
     base_bar Frame("gui/slider/vertical_[prefix_]bar.png", gui.vslider_borders, tile=gui.slider_tile)
     thumb "gui/slider/vertical_[prefix_]thumb.png"
 
-
-
-################################################################################
-## In-game screens
-################################################################################
-
-
-## Say screen ##################################################################
-##
-## The say screen is used to display dialogue to the player. It takes two
-## parameters, who and what, which are the name of the speaking character and
-## the text to be displayed, respectively. (The who parameter can be None if no
-## name is given.)
-##
-## This screen must create a text displayable with id "what", as Ren'Py uses
-## this to manage text display. It can also create displayables with id "who"
-## and id "window" to apply style properties.
-##
-## https://www.renpy.org/doc/html/screen_special.html#say
-
 screen say(who, what, slow_effect = slow_fade, slow_effect_delay = 0, always_effect = None):
     style_prefix "say"
 
@@ -207,32 +179,6 @@ style say_dialogue:
     #newline_indent True
 
 
-### Dieser Screen macht literarisch gar nichts und wird irgendwann entfernt.
-screen input(prompt):
-    style_prefix "input"
-
-    window:
-
-        vbox:
-            xanchor gui.dialogue_text_xalign
-            xpos gui.dialogue_xpos
-            xsize gui.dialogue_width
-            ypos gui.dialogue_ypos
-
-            text prompt style "input_prompt"
-            input id "input"
-
-style input_prompt is default
-
-style input_prompt:
-    xalign gui.dialogue_text_xalign
-    properties gui.text_properties("input_prompt")
-
-style input:
-    xalign gui.dialogue_text_xalign
-    xmaximum gui.dialogue_width
-
-
 ### Dieser Screen wird nur benutzt, damit man die Sprache vor Spielbeginn wählen kann
 
 screen choice(items):
@@ -278,74 +224,70 @@ screen navigation():
 
     fixed:
 
-        ## if weil der Spieler ja theorethisch irgendwie außerhalb vom Hauptmenü den Navigationsscreen sehen könnte, was niemals passieren dürfte.
-        if main_menu:
+        vbox:
 
-            vbox:
-
-                xalign 0.98
-                yalign 0.9
-                spacing 3
+            xalign 0.98
+            yalign 0.9
+            spacing 3
                  
-                if persistent.new == True:
-                    imagebutton auto "gui/title/buttons/startnew_%s.png" action [Play("sound", "/audio/sfx/umise_051.ogg"), ShowMenu("story_select"), Hide('starthover'), SetVariable("ismain", True)] hover_sound "audio/sys/sysse_move.wav" hovered Show('starthover') unhovered Hide('starthover') at buttondissolve1
-                else:
-                    imagebutton auto "gui/title/buttons/start_%s.png" action [Play("sound", "/audio/sfx/umise_051.ogg"), ShowMenu("story_select"), Hide('starthover'), SetVariable("ismain", True)] hover_sound "audio/sys/sysse_move.wav" hovered Show('starthover') unhovered Hide('starthover') at buttondissolve1
+            if persistent.new == True:
+                imagebutton auto "gui/title/buttons/startnew_%s.png" action [Play("sound", "/audio/sfx/umise_051.ogg"), ShowMenu("story_select"), Hide('starthover'), SetVariable("ismain", True)] hover_sound "audio/sys/sysse_move.wav" hovered Show('starthover') unhovered Hide('starthover') at buttondissolve1
+            else:
+                imagebutton auto "gui/title/buttons/start_%s.png" action [Play("sound", "/audio/sfx/umise_051.ogg"), ShowMenu("story_select"), Hide('starthover'), SetVariable("ismain", True)] hover_sound "audio/sys/sysse_move.wav" hovered Show('starthover') unhovered Hide('starthover') at buttondissolve1
 
-                if renpy.seen_label("start"):
+            if renpy.seen_label("start"):
 
-                    imagebutton auto "gui/title/buttons/continue_%s.png" action Continue(confirm=True) hovered Show('continuehover') unhovered Hide('continuehover') hover_sound "audio/sys/sysse_move.wav" at buttondissolve1
+                imagebutton auto "gui/title/buttons/continue_%s.png" action Continue(confirm=True) hovered Show('continuehover') unhovered Hide('continuehover') hover_sound "audio/sys/sysse_move.wav" at buttondissolve1
                 
-                if persistent.menustate == 0:
-                    imagebutton auto "gui/title/buttons/load2_%s.png" action [ShowMenu("load"), Hide('loadhover')] activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav" hovered Show('loadhover') unhovered Hide('loadhover') at buttondissolve1
-                if persistent.menustate == 1:
-                    imagebutton auto "gui/title/buttons/load_%s.png" action [ShowMenu("load"), Hide('loadhover')] activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav" hovered Show('loadhover') unhovered Hide('loadhover') at buttondissolve2
-                if persistent.menustate == 2:
-                    imagebutton auto "gui/title/buttons/load_%s.png" action [ShowMenu("load"), Hide('loadhover')] activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav" hovered Show('loadhover') unhovered Hide('loadhover') at buttondissolve2
-                if persistent.menustate == 3:
-                    imagebutton auto "gui/title/buttons/load_%s.png" action [ShowMenu("load"), Hide('loadhover')] activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav" hovered Show('loadhover') unhovered Hide('loadhover') at buttondissolve2
+            if persistent.menustate == 0:
+                imagebutton auto "gui/title/buttons/load2_%s.png" action [ShowMenu("load"), Hide('loadhover')] activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav" hovered Show('loadhover') unhovered Hide('loadhover') at buttondissolve1
+            if persistent.menustate == 1:
+                imagebutton auto "gui/title/buttons/load_%s.png" action [ShowMenu("load"), Hide('loadhover')] activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav" hovered Show('loadhover') unhovered Hide('loadhover') at buttondissolve2
+            if persistent.menustate == 2:
+                imagebutton auto "gui/title/buttons/load_%s.png" action [ShowMenu("load"), Hide('loadhover')] activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav" hovered Show('loadhover') unhovered Hide('loadhover') at buttondissolve2
+            if persistent.menustate == 3:
+                imagebutton auto "gui/title/buttons/load_%s.png" action [ShowMenu("load"), Hide('loadhover')] activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav" hovered Show('loadhover') unhovered Hide('loadhover') at buttondissolve2
 
-                if persistent.menustate == 0:
-                    imagebutton auto "gui/title/buttons/settings2_%s.png" action [ShowMenu("preferences"), Hide('settingshover')] activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav" hovered Show('settingshover') unhovered Hide('settingshover') at buttondissolve2
-                if persistent.menustate == 1:
-                    imagebutton auto "gui/title/buttons/settings_%s.png" action [ShowMenu("preferences"), Hide('settingshover')] activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav" hovered Show('settingshover') unhovered Hide('settingshover') at buttondissolve2
-                if persistent.menustate == 2:
-                    imagebutton auto "gui/title/buttons/settings_%s.png" action [ShowMenu("preferences"), Hide('settingshover')] activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav" hovered Show('settingshover') unhovered Hide('settingshover') at buttondissolve2
-                if persistent.menustate == 3:
-                    imagebutton auto "gui/title/buttons/settings_%s.png" action [ShowMenu("preferences"), Hide('settingshover')] activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav" hovered Show('settingshover') unhovered Hide('settingshover') at buttondissolve2
+            if persistent.menustate == 0:
+                imagebutton auto "gui/title/buttons/settings2_%s.png" action [ShowMenu("preferences"), Hide('settingshover')] activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav" hovered Show('settingshover') unhovered Hide('settingshover') at buttondissolve2
+            if persistent.menustate == 1:
+                imagebutton auto "gui/title/buttons/settings_%s.png" action [ShowMenu("preferences"), Hide('settingshover')] activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav" hovered Show('settingshover') unhovered Hide('settingshover') at buttondissolve2
+            if persistent.menustate == 2:
+                imagebutton auto "gui/title/buttons/settings_%s.png" action [ShowMenu("preferences"), Hide('settingshover')] activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav" hovered Show('settingshover') unhovered Hide('settingshover') at buttondissolve2
+            if persistent.menustate == 3:
+                imagebutton auto "gui/title/buttons/settings_%s.png" action [ShowMenu("preferences"), Hide('settingshover')] activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav" hovered Show('settingshover') unhovered Hide('settingshover') at buttondissolve2
 
-                if persistent.menustate == 0:
-                    imagebutton auto "gui/title/buttons/achieve2_%s.png" action [ShowMenu("achievement_menu"), Hide('trophyhover')] activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav" hovered Show('trophyhover') unhovered Hide('trophyhover') at buttondissolve2
-                if persistent.menustate == 1:
-                    imagebutton auto "gui/title/buttons/achieve_%s.png" action [ShowMenu("achievement_menu"), Hide('trophyhover')] activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav" hovered Show('trophyhover') unhovered Hide('trophyhover') at buttondissolve3
-                if persistent.menustate == 2:
-                    imagebutton auto "gui/title/buttons/achieve_%s.png" action [ShowMenu("achievement_menu"), Hide('trophyhover')] activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav" hovered Show('trophyhover') unhovered Hide('trophyhover') at buttondissolve3
-                if persistent.menustate == 3:
-                    imagebutton auto "gui/title/buttons/achieve_%s.png" action [ShowMenu("achievement_menu"), Hide('trophyhover')] activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav" hovered Show('trophyhover') unhovered Hide('trophyhover') at buttondissolve3
+            if persistent.menustate == 0:
+                imagebutton auto "gui/title/buttons/achieve2_%s.png" action [ShowMenu("achievement_menu"), Hide('trophyhover')] activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav" hovered Show('trophyhover') unhovered Hide('trophyhover') at buttondissolve2
+            if persistent.menustate == 1:
+                imagebutton auto "gui/title/buttons/achieve_%s.png" action [ShowMenu("achievement_menu"), Hide('trophyhover')] activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav" hovered Show('trophyhover') unhovered Hide('trophyhover') at buttondissolve3
+            if persistent.menustate == 2:
+                imagebutton auto "gui/title/buttons/achieve_%s.png" action [ShowMenu("achievement_menu"), Hide('trophyhover')] activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav" hovered Show('trophyhover') unhovered Hide('trophyhover') at buttondissolve3
+            if persistent.menustate == 3:
+                imagebutton auto "gui/title/buttons/achieve_%s.png" action [ShowMenu("achievement_menu"), Hide('trophyhover')] activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav" hovered Show('trophyhover') unhovered Hide('trophyhover') at buttondissolve3
 
-                if persistent.tipunlocked == True:
-                    imagebutton auto "gui/title/buttons/tip_%s.png" action [ShowMenu("tipps"), Hide('tiphover')] activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav" hovered Show('tiphover') unhovered Hide('tiphover') at buttondissolve3
-                else:
-                    pass
+            if persistent.tipunlocked == True:
+                imagebutton auto "gui/title/buttons/tip_%s.png" action [ShowMenu("tipps"), Hide('tiphover')] activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav" hovered Show('tiphover') unhovered Hide('tiphover') at buttondissolve3
+            else:
+                pass
 
-                if persistent.battler == True:
-                    imagebutton auto "gui/title/buttons/chars_%s.png" action [ShowMenu("characters"), Hide('characterhover')] activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav" hovered Show('characterhover') unhovered Hide('characterhover') at buttondissolve4
-                else:
-                    pass
+            if persistent.battler == True:
+                imagebutton auto "gui/title/buttons/chars_%s.png" action [ShowMenu("characters"), Hide('characterhover')] activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav" hovered Show('characterhover') unhovered Hide('characterhover') at buttondissolve4
+            else:
+                pass
             
-                if persistent.menustate == 0:
-                    imagebutton auto "gui/title/buttons/quit2_%s.png" action [QuitWithScene(), Hide('quithover')] activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav" hovered Show('quithover') unhovered Hide('quithover') at buttondissolve3
-                if persistent.menustate == 1:
-                    imagebutton auto "gui/title/buttons/quit0_%s.png" action [QuitWithScene(), Hide('quithover')] activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav" hovered Show('quithover') unhovered Hide('quithover') at buttondissolve4
-                if persistent.menustate == 2:
-                    imagebutton auto "gui/title/buttons/quit3_%s.png" action [QuitWithScene(), Hide('quithover')] activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav" hovered Show('quithover') unhovered Hide('quithover') at buttondissolve4
-                if persistent.menustate == 3:
-                    imagebutton auto "gui/title/buttons/quit4_%s.png" action [QuitWithScene(), Hide('quithover')] activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav" hovered Show('quithover') unhovered Hide('quithover') at buttondissolve5
-        else:
+            if persistent.menustate == 0:
+                imagebutton auto "gui/title/buttons/quit2_%s.png" action [QuitWithScene(), Hide('quithover')] activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav" hovered Show('quithover') unhovered Hide('quithover') at buttondissolve3
+            if persistent.menustate == 1:
+                imagebutton auto "gui/title/buttons/quit0_%s.png" action [QuitWithScene(), Hide('quithover')] activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav" hovered Show('quithover') unhovered Hide('quithover') at buttondissolve4
+            if persistent.menustate == 2:
+                imagebutton auto "gui/title/buttons/quit3_%s.png" action [QuitWithScene(), Hide('quithover')] activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav" hovered Show('quithover') unhovered Hide('quithover') at buttondissolve4
+            if persistent.menustate == 3:
+                imagebutton auto "gui/title/buttons/quit4_%s.png" action [QuitWithScene(), Hide('quithover')] activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav" hovered Show('quithover') unhovered Hide('quithover') at buttondissolve5
 
-            pass
 
 ## Bei Gott ich habe gar keine Ahnung warum das hier existiert.
+## Ohne diesen Mist funktioniert das Hauptmenü nicht
 
 screen main_menu():
 
@@ -379,115 +321,40 @@ screen game_menu(scroll=None, yinitial=0.0):
     imagebutton auto "images/system/back2_%s.png" action Return() activate_sound "audio/sys/sysse_cancel.wav" hover_sound "audio/sys/sysse_move.wav" yalign 0.02 xalign 0.97
     add partObj
 
-
-    
-    ## Dieser Teil hier wird gar nicht verwendet glaube ich, ich habe meine eigenen Methoden
-    frame:
-        style "game_menu_outer_frame"
-
-        hbox:
-
-            ## Reserve space for the navigation section.
-            frame:
-                style "game_menu_navigation_frame"
-
-            frame:
-                style "game_menu_content_frame"
-
-                if scroll == "viewport":
-
-                    viewport:
-                        yinitial yinitial
-                        scrollbars "vertical"
-                        mousewheel True
-                        draggable True
-                        pagekeys True
-                        xoffset -250
-
-                        side_yfill True
-
-                        vbox:
-                            transclude
-
-                elif scroll == "vpgrid":
-
-                    vpgrid:
-                        cols 1
-                        yinitial yinitial
-
-                        scrollbars "vertical"
-                        mousewheel True
-                        draggable True
-                        pagekeys True
-
-                        side_yfill True
-
-                        transclude
-
-                else:
-
-                    transclude
     ### Wieder ein If der überflüssiger nicht sein kann, wird mal Zeit für ein wenig Code aufräumen
-    if not main_menu:
 
-        if persistent.showch == True:
+    vbox:
 
-            if chapter == 0:
+        yalign 0.5
+        xalign 0.98
 
-                add "gui/chapter/ch0.png"
+        imagebutton auto "gui/gamemenu/save_%s.png" action ShowMenu("save") activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav" at gamemenubuttontransform
 
-            elif chapter == 1: 
+        imagebutton auto "gui/gamemenu/load_%s.png" action ShowMenu("load") activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav" at gamemenubuttontransform
 
-                add "gui/chapter/ch1.png"
+        imagebutton auto "gui/gamemenu/backlog_%s.png" action ShowMenu("history") activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav" at gamemenubuttontransform
 
-            elif chapter == 2: 
+        imagebutton auto "gui/gamemenu/settings_%s.png" action [ShowMenu("preferences")] activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav" at gamemenubuttontransform
 
-                add "gui/chapter/ch2.png"
+        imagebutton auto "gui/gamemenu/control_%s.png" action [ShowMenu("help")] activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav" at gamemenubuttontransform
 
-            elif chapter == 404: 
+        imagebutton auto "gui/gamemenu/trophy_%s.png" action [ShowMenu("achievement_menu"), Hide('trophyhover')] activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav" at gamemenubuttontransform
 
-                add "gui/chapter/ch404.png"
-        
-            else:
+        if persistent.battler == True:
+            imagebutton auto "gui/gamemenu/chars_%s.png" action [ShowMenu("characters"), Hide('characterhover')] activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav" at gamemenubuttontransform
+        else:
+            pass
 
-                pass
+        if persistent.tipunlocked == True:
+            imagebutton auto "gui/gamemenu/tip_%s.png" action [ShowMenu("tipps"), Hide('tiphover')] activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav" at gamemenubuttontransform
 
-        vbox:
+        imagebutton auto "gui/gamemenu/backtomain_%s.png" action MainMenu() activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav" at gamemenubuttontransform
 
-            yalign 0.5
-            xalign 0.98
+    if persistent.showbgm == True:
+        text "♪" + songname ypos 1005 xpos 1900 xalign 1.0 size 30 font "fonts/AOTFShinGoProMedium.otf" outlines [ (absolute(3), "#000", absolute(0), absolute(0)) ]
+    if persistent.showplaytime == True:
+        text _("Spielzeit: ") + getPlayTime() ypos 1040 xpos 1900 xalign 1.0 size 30 font "fonts/AOTFShinGoProMedium.otf" outlines [ (absolute(3), "#000", absolute(0), absolute(0)) ]
 
-            imagebutton auto "gui/gamemenu/save_%s.png" action ShowMenu("save") activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav" at gamemenubuttontransform
-
-            imagebutton auto "gui/gamemenu/load_%s.png" action ShowMenu("load") activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav" at gamemenubuttontransform
-
-            imagebutton auto "gui/gamemenu/backlog_%s.png" action ShowMenu("history") activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav" at gamemenubuttontransform
-
-            imagebutton auto "gui/gamemenu/settings_%s.png" action [ShowMenu("preferences")] activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav" at gamemenubuttontransform
-
-            imagebutton auto "gui/gamemenu/control_%s.png" action [ShowMenu("help")] activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav" at gamemenubuttontransform
-
-            imagebutton auto "gui/gamemenu/trophy_%s.png" action [ShowMenu("achievement_menu"), Hide('trophyhover')] activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav" at gamemenubuttontransform
-
-            if persistent.battler == True:
-                imagebutton auto "gui/gamemenu/chars_%s.png" action [ShowMenu("characters"), Hide('characterhover')] activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav" at gamemenubuttontransform
-            else:
-                pass
-
-            if persistent.tipunlocked == True:
-                imagebutton auto "gui/gamemenu/tip_%s.png" action [ShowMenu("tipps"), Hide('tiphover')] activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav" at gamemenubuttontransform
-            else:
-                pass
-
-            imagebutton auto "gui/gamemenu/backtomain_%s.png" action MainMenu() activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav" at gamemenubuttontransform
-
-        if persistent.showbgm == True:
-            text "♪" + songname ypos 1005 xpos 1900 xalign 1.0 size 30 font "fonts/AOTFShinGoProMedium.otf" outlines [ (absolute(3), "#000", absolute(0), absolute(0)) ]
-        if persistent.showplaytime == True:
-            text _("Spielzeit: ") + getPlayTime() ypos 1040 xpos 1900 xalign 1.0 size 30 font "fonts/AOTFShinGoProMedium.otf" outlines [ (absolute(3), "#000", absolute(0), absolute(0)) ]
-
-    if main_menu:
-        key "game_menu" action ShowMenu("main_menu") activate_sound "audio/sys/sysse_decide.wav"
 
 ## Dieser Screen hatte mal irgend einen Sinn für einen Workaround
 ## Ich erinnere mich, ohne den scheiß, kann man das Menü nicht öffnen.
@@ -1290,13 +1157,12 @@ screen confirm(message, yes_action, no_action):
     if message == layout.ARE_YOU_SURE:
         add "gui/confirmblack.png" at center
         imagebutton auto "images/system/accept_%s.png" action yes_action:
-            xpos 450
-            ypos 650
+            yalign 0.7
+            xalign 0.5
             activate_sound "audio/sys/sysse_decide.wav" 
             hover_sound "audio/sys/sysse_move.wav"
         imagebutton auto "images/system/refuse_%s.png" action no_action:
-            xpos 950
-            ypos 650
+            yalign 0.8
             activate_sound "audio/sys/sysse_cancel.wav" 
             hover_sound "audio/sys/sysse_move.wav"
         add "images/system/sure.png":
@@ -1305,13 +1171,11 @@ screen confirm(message, yes_action, no_action):
     elif message == layout.OVERWRITE_SAVE:
         add "gui/confirmblack.png" at center
         imagebutton auto "images/system/accept_%s.png" action [Play("sound", "audio/sfx/umise_056.ogg"), yes_action]:
-            xpos 450
-            ypos 650
+            yalign 0.7
             activate_sound "audio/sys/sysse_decide.wav" 
             hover_sound "audio/sys/sysse_move.wav"
         imagebutton auto "images/system/refuse_%s.png" action no_action:
-            xpos 950
-            ypos 650
+            yalign 0.8
             activate_sound "audio/sys/sysse_cancel.wav" 
             hover_sound "audio/sys/sysse_move.wav"
         add "images/system/save.png":
@@ -1320,13 +1184,13 @@ screen confirm(message, yes_action, no_action):
     elif message == layout.LOADING:
         add "gui/confirmblack.png" at center
         imagebutton auto "images/system/accept_%s.png" action [Play("sound", "audio/sfx/umise_058.ogg"), yes_action]:
-            xpos 450
-            ypos 650
+            yalign 0.7
+            xalign 0.5
             activate_sound "audio/sys/sysse_decide.wav" 
             hover_sound "audio/sys/sysse_move.wav"
         imagebutton auto "images/system/refuse_%s.png" action no_action:
-            xpos 950
-            ypos 650
+            yalign 0.8
+            xalign 0.5
             activate_sound "audio/sys/sysse_cancel.wav" 
             hover_sound "audio/sys/sysse_move.wav"
         add "images/system/load.png":
@@ -1335,13 +1199,13 @@ screen confirm(message, yes_action, no_action):
     elif message == layout.QUIT:
         add "gui/confirmblack.png" at center
         imagebutton auto "images/system/accept_%s.png" action [QuitWithScene(), yes_action]:
-            xpos 450
-            ypos 650
+            yalign 0.7
+            xalign 0.5
             activate_sound "audio/sys/sysse_decide.wav" 
             hover_sound "audio/sys/sysse_move.wav"
         imagebutton auto "images/system/refuse_%s.png" action no_action:
-            xpos 950
-            ypos 650
+            yalign 0.8
+            xalign 0.5
             activate_sound "audio/sys/sysse_cancel.wav" 
             hover_sound "audio/sys/sysse_move.wav"
         add "images/system/quit.png":
@@ -1350,13 +1214,13 @@ screen confirm(message, yes_action, no_action):
     elif message == layout.MAIN_MENU:
         add "gui/confirmblack.png" at center
         imagebutton auto "images/system/accept_%s.png" action [titurnd(), yes_action]: 
-            xpos 450
-            ypos 650
+            yalign 0.7
+            xalign 0.5
             activate_sound "audio/sys/sysse_decide.wav" 
             hover_sound "audio/sys/sysse_move.wav"
         imagebutton auto "images/system/refuse_%s.png" action no_action:
-            xpos 950
-            ypos 650
+            yalign 0.8
+            xalign 0.5
             activate_sound "audio/sys/sysse_cancel.wav" 
             hover_sound "audio/sys/sysse_move.wav"
         add "images/system/quit.png":
@@ -1395,83 +1259,8 @@ style confirm_button_text:
 screen skip_indicator():
 
     zorder 100
-    style_prefix "skip"
 
-    frame:
-
-        hbox:
-            spacing 9
-
-            text _("Überspringe")
-
-            text "▸" at delayed_blink(0.0, 1.0) style "skip_triangle"
-            text "▸" at delayed_blink(0.2, 1.0) style "skip_triangle"
-            text "▸" at delayed_blink(0.4, 1.0) style "skip_triangle"
-
-
-## This transform is used to blink the arrows one after another.
-transform delayed_blink(delay, cycle):
-    alpha .5
-
-    pause delay
-
-    block:
-        linear .2 alpha 1.0
-        pause .2
-        linear .2 alpha 0.5
-        pause (cycle - .4)
-        repeat
-
-
-style skip_frame is empty
-style skip_text is gui_text
-style skip_triangle is skip_text
-
-style skip_frame:
-    ypos gui.skip_ypos
-    background Frame("gui/skip.png", gui.skip_frame_borders, tile=gui.frame_tile)
-    padding gui.skip_frame_borders.padding
-
-style skip_text:
-    size gui.notify_text_size
-
-style skip_triangle:
-    ## We have to use a font that has the BLACK RIGHT-POINTING SMALL TRIANGLE
-    ## glyph in it.
-    font "DejaVuSans.ttf"
-
-## Ich hoffe ich brauche diesen Lappen nie wieder
-
-screen notify(message):
-
-    zorder 100
-    style_prefix "notify"
-
-    frame at notify_appear:
-        text "{font=fonts/AOTFShinGoProMedium.otf}{size=35}[message!tq]{/size}"
-
-    timer 5.25 action Hide('notify')
-
-
-transform notify_appear:
-    on show:
-        alpha 0
-        linear .25 alpha 1.0
-    on hide:
-        linear .5 alpha 0.0
-
-
-style notify_frame is empty
-style notify_text is gui_text
-
-style notify_frame:
-    ypos gui.notify_ypos
-
-    background Frame("gui/notify.png", gui.notify_frame_borders, tile=gui.frame_tile)
-    padding gui.notify_frame_borders.padding
-
-style notify_text:
-    properties gui.text_properties("notify")
+    imagebutton idle "images/system/skip.png" action NullAction at topleft
 
 ## Ich hoffe ich muss mich um diesen kleinen Schlingel nicht mehr kümmern, es hat mich alle nerven gekostet,
 ## dass FancyText hier funktioniert.
@@ -1995,10 +1784,7 @@ screen char21():
         ground "gui/title/hovermenu2.png"
     image bea_char at r3
     text "Beatrice die Goldene" style 'charnametext' at Position(xpos = 75, ypos = 500)
-    text "Hier sollten Infos über Beatrice stehen." style 'chartext' at Position (xpos = 60, ypos = 550)
-
-## Ich habe diesen define nie geschrieben
-define config.hyperlink_protocol = "showmenu"
+    text """Hier sollten Infos über Beatrice stehen.""" style 'chartext' at Position (xpos = 60, ypos = 550)
 
 screen tipps():
 
@@ -2052,64 +1838,6 @@ screen tip03():
 
     add "gui/tipps/tip03_details.png" at center
 
-## Obsolete und nicht in benutzung, sollte bei der nächsten Aufräumaktion rausfliegen.
-screen confirmrestart():
-
-    modal True
-
-    window:
-        style "gm_root"
-
-    frame:
-        style_prefix "confirm"
-
-        xfill True
-        xmargin 50
-        ypadding 25
-        yalign .25
-
-        vbox:
-            xfill True
-            spacing 25
-
-            text(""" 
-Das ändern der Textbox erfordert einen sofortigen Neustart.
-            """) text_align 0.5 xalign 0.5
-
-            hbox:
-                spacing 100
-                xalign .5
-                textbutton _("Bestätigen") action QuitWithScene()
-################################################################################
-## Mobile Variants
-################################################################################
-## Die Mobile Varianten werden extra entwickelt und das kann alles raus
-style pref_vbox:
-    variant "medium"
-    xsize 675
-
-## Since a mouse may not be present, we replace the quick menu with a version
-## that uses fewer and bigger button that are easier to touch.
-screen quick_menu():
-    variant "touch"
-
-    zorder 100
-
-    if quick_menu:
-
-        vbox:
-            style_prefix "quick"
-
-            xalign 0.995
-            yalign 0.97
-            spacing 30
-
-
-            imagebutton auto "gui/phone/button/skip_%s.png" action Skip() alternate Skip(fast=True, confirm=True) activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav"
-            imagebutton auto "gui/phone/button/auto_%s.png" action Preference("auto-forward", "toggle") activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav"
-            imagebutton auto "gui/phone/button/menu_%s.png" action ShowMenu() activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav"
-
-###DEBUG####
 ## Ich habe das nur eingefügt, weil es cool ist Debugfunktionen sehen zu können.
 screen Debugscreen():
     

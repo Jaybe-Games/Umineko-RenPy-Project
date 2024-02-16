@@ -15,7 +15,7 @@ label schule:
     hide text001 with dissolve
     pause 2
     $ songname = "Frenzy"
-    play music "audio/bgm/Frenzy.mp3"
+    #play music "audio/bgm/Frenzy.mp3"
     show screen showsong
     show goddomain with dissolve
     pause 5
@@ -29,6 +29,7 @@ label schule:
     show wel a11defo1 at m with fastdissolve
     pause 1
     window show
+    $ renpy.music.play("voice/wel/test.wav", channel="voice")
     wel "Eure Hoheit..."
     extend " Ich bin wirklich überrascht, Euch so früh hier zu sehen..."
     "\"Virgilius!"
