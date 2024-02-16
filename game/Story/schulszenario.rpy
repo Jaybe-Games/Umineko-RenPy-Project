@@ -82,7 +82,10 @@ label schule:
     "Die Insel Rokkenjima war am Vortag von einem schweren Taifun getroffen worden."
     extend " Wind, der sich anfühlt, als würde er einem die Luft aus den Lungen peitschen,"
     extend " Starker Regen, der wie das gleichmäßige, aber relativ heftige Klopfen eines Masseurs auf der Haut spürbar wird."
-    scene mhal_2cr at bgani with gradientcirclefade
+    scene mhal_2cr at bgani
+    show expression(CustomParticles("images/system/particle.png", 10))
+    with gradientcirclefade
+    window show
     $ songname = "White Shadow"
     show screen showsong
     play music "audio/bgm/umib_009.ogg"
@@ -104,21 +107,31 @@ label schule:
     nat a12nayamu1 "Sechs von uns sind spurlos verschwunden?"
     extend " Genji. Hilf mir, sie zu finden, es ist ungewöhnlich, dass auch nur einer von ihnen so lange weg ist, vor allem, wenn wegen des Wetters sowieso niemand von hier weggehen kann."
     gen a11komaru1 "Wie Sie wünschen, Fräulein Natsuhi-sama."
-    scene black with gradientwipeup
+    window hide
+    scene black with quickgradientwipedown
     "Der Diener und die Herrin stellten die ganze Villa auf den Kopf, aber von den Vermissten fehlte jede Spur."
     "Als die beiden in die Eingangshalle zurückkehrten, lief ihnen ein bekanntes Gesicht entgegen."
+    show mhal_1ar_bg at bgani
+    show rainbackscroll
+    show rainfrontscroll
+    show mhal_1ar at bgani
+    show expression(CustomParticles("images/system/particle.png", 10))
+    with quickgradientwipedown
+    show eva b23komaru2 at r with fastdissolve
+    window show
     eva "Natsuhi!"
     extend " ...Genji!"
+    show nat a11komaru1 at l with fastdissolve
     nat "Guten Morgen Eva-san"
     nat "Hast du irgendwo meinen..."
     eva "Mann gesehen?"
     extend " ...Nein. Aber ich bin auf der Suche nach meinem George..."
-    nat "Ist dein Sohn auch verschwunden?"
+    nat a12nayamu1 "Ist dein Sohn auch verschwunden?"
     extend " Das kann nicht sein. Wo sind sie hin?"
     nat "Was ist mit den Kindern passiert, Eva?"
     eva "Alle außer George schlafen noch."
     nat "Gott sei Dank, ich bete, dass den anderen nichts passiert ist."
-    eva "George käme nie auf die Idee, sich irgendwo zu verstecken, da ist was faul!"
+    eva b25komaru4 "George käme nie auf die Idee, sich irgendwo zu verstecken, da ist was faul!"
     eva "Hideyoshi und Shannon suchen in der Nähe der Kapelle."
     extend " ...Ich hoffe, sie werden schnell gefunden."
     gen "Wir sollten uns auch draußen umsehen, bitte nehmen Sie einen Regenschirm mit, sonst holen Sie sich eine Erkältung."

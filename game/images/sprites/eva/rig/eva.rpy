@@ -62,3 +62,52 @@ image eva_b21_futeki1_mouth:
     "images/sprites/eva/b21/futeki1/2.png"
     .20
     repeat
+
+image eva b23komaru2 = Composite(
+    (808, 1163),
+    (0, 0), "images/sprites/eva/b23/komaru2/0.png",
+    (0, 0), WhileSpeaking("eva", "eva_b23_komaru2_mouth", "images/sprites/eva/b23/komaru2/0.png"),
+    )
+
+image eva_b23_komaru2_mouth:
+    "images/sprites/eva/b23/komaru2/0.png"
+    .10
+    "images/sprites/eva/b23/komaru2/1.png"
+    .10
+    "images/sprites/eva/b23/komaru2/2.png"
+    .20
+    repeat
+
+image eva b25komaru4 = Composite(
+    (526, 1163),
+    (0, 0), "images/sprites/eva/b25/komaru4/0.png",
+    (0, 0), WhileSpeaking("eva", "eva_b25_komaru4_mouth", "images/sprites/eva/b25/komaru4/0.png"),
+    )
+
+image eva_b25_komaru4_mouth:
+    "images/sprites/eva/b25/komaru4/0.png"
+    .10
+    "images/sprites/eva/b25/komaru4/1.png"
+    .10
+    "images/sprites/eva/b25/komaru4/2.png"
+    .20
+    repeat
+
+image eva b32naku1 = Composite(
+    (526, 1126),
+    (0, 0), "images/sprites/eva/b32/naku1/0.png",
+    )
+
+image eva b24naku5s = Composite(
+    (526, 1163),
+    (0, 0), "images/sprites/eva/b24/naku5s/0.png",
+    )
+
+image eva_b24_naku5s_mouth:
+    "images/sprites/eva/b24/naku5s/0.png"
+    .10
+    "images/sprites/eva/b24/naku5s/1.png"
+    .10
+    "images/sprites/eva/b24/naku5s/2.png"
+    .20
+    repeat
