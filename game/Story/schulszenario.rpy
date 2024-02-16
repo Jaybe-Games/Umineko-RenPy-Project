@@ -85,10 +85,14 @@ label schule:
     $ songname = "White Shadow"
     show screen showsong
     play music "audio/bgm/umib_009.ogg"
+    show nat a11komaru1 at m with fastdissolve
     nat "Der Sturm hält nun schon seit gestern Mittag an und wird von Minute zu Minute stärker..."
     nat "Genji..."
     extend " Hast du meinen Mann irgendwo gesehen?"
     extend " Ich habe ihn seit der gestrigen Konferenz nicht mehr gesehen."
+    show nat a11komaru1 at l
+    show gen a11defo1 at r 
+    with fastdissolve
     gen "Nein."
     extend " Leider habe ich Herrn Krauss nicht gesehen."
     gen "Ich muss gestehen, nicht nur der Herr ist nirgends zu sehen, auch Gohda ist nicht an seinem Arbeitsplatz."
