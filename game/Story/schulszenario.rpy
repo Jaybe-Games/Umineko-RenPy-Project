@@ -85,9 +85,12 @@ label schule:
     $ songname = "White Shadow"
     show screen showsong
     play music "audio/bgm/umib_009.ogg"
-    show nat a11komaru1 at m with fastdissolve
+    show nat a43headache1 at m with fastdissolve
+    nat "Meine Kopfschmerzen sind seit gestern Abend deutlich schlimmer geworden."
+    extend " Es gibt nicht einen Tag an dem mein Kopf nicht schrecklich weh tut."
+    extend " Ob es auch mit am Wetter liegt?"
     nat "Der Sturm hält nun schon seit gestern Mittag an und wird von Minute zu Minute stärker..."
-    nat "Genji..."
+    nat a11komaru1 "Genji..."
     extend " Hast du meinen Mann irgendwo gesehen?"
     extend " Ich habe ihn seit der gestrigen Konferenz nicht mehr gesehen."
     show nat a11komaru1 at l
