@@ -19,6 +19,7 @@ define quickgradientwipedown = ImageDissolve("/images/masks/down.png", 0.5, ramp
 define quickgradientwipeup = ImageDissolve("/images/masks/up.png", 0.5, ramplen = 300)
 define gradientwipeup = ImageDissolve("/images/masks/up.png", 2.5, ramplen = 300)
 define longerdissolve = Dissolve(2.5)
+define instant = Dissolve(0)
 define gradientcirclefade = ImageDissolve("/images/masks/circle.png", 3.5, ramplen = 300, reverse=True)
 define quickgradientcirclefade = ImageDissolve("/images/masks/circle.png", 0.5, ramplen = 300, reverse=True)
 define flash = Fade(.25, 0, .25, color="#fff")

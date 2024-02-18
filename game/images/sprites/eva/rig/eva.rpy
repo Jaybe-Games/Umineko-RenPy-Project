@@ -98,16 +98,17 @@ image eva b32naku1 = Composite(
     (0, 0), "images/sprites/eva/b32/naku1/0.png",
     )
 
-image eva b24naku5s = Composite(
+image eva b25naku5s = Composite(
     (526, 1163),
-    (0, 0), "images/sprites/eva/b24/naku5s/0.png",
+    (0, 0), "images/sprites/eva/b25/naku5s/0.png",
+    (0, 0), WhileSpeaking("eva", "eva_b25_naku5s_mouth", "images/sprites/eva/b25/naku5s/0.png"),
     )
 
-image eva_b24_naku5s_mouth:
-    "images/sprites/eva/b24/naku5s/0.png"
+image eva_b25_naku5s_mouth:
+    "images/sprites/eva/b25/naku5s/0.png"
     .10
-    "images/sprites/eva/b24/naku5s/1.png"
+    "images/sprites/eva/b25/naku5s/1.png"
     .10
-    "images/sprites/eva/b24/naku5s/2.png"
+    "images/sprites/eva/b25/naku5s/2.png"
     .20
     repeat

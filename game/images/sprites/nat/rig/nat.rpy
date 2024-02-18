@@ -14,6 +14,22 @@ image nat_a12_nayamu1_mouth:
     .20
     repeat
 
+image nat a12defo1 = Composite(
+    (649, 1158),
+    (0, 0), "images/sprites/nat/a12/defo1/0.png",
+    (0, 0), WhileSpeaking("nat", "nat_a12_defo1_mouth", "images/sprites/nat/a12/defo1/0.png"),
+)
+
+
+image nat_a12_defo1_mouth:
+    "images/sprites/nat/a12/defo1/0.png"
+    .10
+    "images/sprites/nat/a12/defo1/1.png"
+    .10
+    "images/sprites/nat/a12/defo1/2.png"
+    .20
+    repeat
+
 image nat a11ikari1 = Composite(
     (649, 1158),
     (0, 0), "images/sprites/nat/a11/ikari1/0.png",

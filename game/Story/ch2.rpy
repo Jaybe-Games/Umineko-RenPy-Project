@@ -6,8 +6,7 @@ label chapter2:
         $ songname = "-"
         $ renpy.free_memory()
         $ save_name = _("Episode0 Resurrection of the golden witch\nDie Hexe auf dem Balkon")
-        if persistent.showch == True:
-                show screen showch
+        show screen showch
         pause 2
         scene purgatorio with dissolve
         pause 5
@@ -18,8 +17,7 @@ label chapter2:
         with gradientcirclefade
         pause 1
         $ songname = "Pitiful Sneerer"
-        if persistent.showbgm == True:
-                show screen showsong
+        show screen showsong
         play music "audio/bgm/umib_1001_intro.ogg"
         queue music "audio/bgm/umib_1001_loop.ogg" loop
         window auto
@@ -202,8 +200,7 @@ label chapter2:
         $ songname = "-"
         "Bernkastels Aura fängt plötzlich an sich zu verändern, ihre Gleichgültige Aura veränderte sich plötzlich in etwas undefinierbares."
         $ songname = "Witch of the Painting"
-        if persistent.showbgm == True:
-                show screen showsong
+        show screen showsong
         play music "audio/bgm/umib_026_intro.ogg"
         queue music "audio/bgm/umib_026_loop.ogg" loop
         extend " ...Beato ist das sofort aufgefallen, es ist plötzlich ein dezenter Hauch von Angst in der Luft."

@@ -1,10 +1,8 @@
-
-
 label schule:
-    $ chapter = 1000
-    $ renpy.free_memory()
+    ##Kapitel 1 - Die sechs außerwählten
+    $ chapter = 1001
     $ songname = "-"
-    $ save_name = _("EpisodeX Illusion of the golden witch\nProlog")
+    $ save_name = _("EpisodeX Illusion of the golden witch\nDie sechs außerwählten")
     ##Prolog
     show screen showch
     $ _game_menu_screen = "cleanmenu"
@@ -14,60 +12,6 @@ label schule:
     pause 8
     hide text001 with dissolve
     pause 2
-    $ songname = "Frenzy"
-    #play music "audio/bgm/Frenzy.mp3"
-    show screen showsong
-    show goddomain with dissolve
-    pause 5
-    hide goddomain with dissolve
-    pause 2.0
-    scene cha_i1np with gradientcirclefade
-    pause 2.0
-    scene cha_i1ip at bgani with gradientcirclefade
-    show expression(CustomParticles("images/system/particle.png", 10))
-    pause 2.0
-    show wel a11defo1 at m with fastdissolve
-    pause 1
-    window show
-    $ renpy.music.play("voice/wel/test.wav", channel="voice")
-    wel "Eure Hoheit..."
-    extend " Ich bin wirklich überrascht, Euch so früh hier zu sehen..."
-    "\"Virgilius!"
-    extend " ..Hast du das Fragment vorbereitet, um das ich dich gebeten habe?"
-    "Ich muss jeden Aspekt der Illusion der Goldenen Hexe genau kennen, damit mein Vorhaben gelingen kann.\""
-    "An einem Ort, der vollständig von Dunkelheit umgeben ist,"
-    extend " sah man einen unheimlichen Mann, den eine so mächtige Aura umgab," 
-    extend " dass der Druck auch in großer Entfernung noch spürbar ist."
-    "Vor ihm kniet einer seiner Diener, der es nicht wagt, ohne direkten Befehl den Kopf zu heben."
-    wel "Aber natürlich, Euer Hoheit, ich habe sehr vielversprechende Fragmente über Fräulein Beatrice sammeln können."
-    extend " Hier findet ihr alle Geheimnisse und Rätsel an einem Ort."
-    "\"Das hast du sehr gut gemacht, Virgilius..."
-    extend " Erhebe dich!"
-    "Die Goldene Hexe Beatrice spielt in meinem neuen Spiel eine sehr wichtige Rolle."
-    extend " Deshalb wäre es gut, wenn ich eine gute Zusammenfassung ihrer Spiele sehen könnte."
-    "Die dreizehn Opfer, die die Inschrift der Hexe fordert."
-    extend " .....Morde, die unmöglicher nicht sein könnten, geschlossene Räume, die nicht aufgebrochen werden können."
-    "Jedes Detail über die Methoden der Hexe ist Gold wert.\""
-    wel a11defo5 "He he he he he"
-    extend " ...Wenn Ihr wollt, könnt Ihr sofort anfangen."
-    wel "Das speziell aufbereitete Fragment kann jederzeit eingesehen werden."
-    "\"Sehr gut!"
-    extend " ...Ich werde etwa hundert Jahre damit beschäftigt sein, dieses Fragment zu studieren."
-    extend " Für diese Zeit, die so lang ist wie ein winziger Wimpernschlag, wird mich Aurora-san vertreten.\""
-    wel "Ich werde die große Featherine-sama so schnell wie möglich davon in Kenntnis setzen."
-    wel "Ich bin sicher, dass jemand, der die Null kontrolliert, wie Ihr es tut, alles sehr früh im ersten Durchgang herausfinden wird."
-    extend " ...He he he he"
-    window hide
-    stop music fadeout 2.0
-    pause 3
-    scene black with dissolve
-    $ renpy.movie_cutscene("videos/opening.mov")
-    pause 1
-    ##Kapitel 1 - Die sechs außerwählten
-    $ chapter = 1001
-    $ songname = "-"
-    $ save_name = _("EpisodeX Illusion of the golden witch\nDie sechs außerwählten")
-    show screen showch
     play wind "audio/sfx/umilse_005.ogg"
     play rain "audio/sfx/umilse_012.ogg"
     pause 2
@@ -79,17 +23,21 @@ label schule:
     show rainbackscroll
     show rainfrontscroll
     with gradientcirclefade
+    window auto
     "Die Insel Rokkenjima war am Vortag von einem schweren Taifun getroffen worden."
-    extend " Wind, der sich anfühlt, als würde er einem die Luft aus den Lungen peitschen,"
+    extend " Wind, der sich anfühlt, als würde er einem die Luft aus den Lungen peitschen."
     extend " Starker Regen, der wie das gleichmäßige, aber relativ heftige Klopfen eines Masseurs auf der Haut spürbar wird."
+    window hide
+    stop wind fadeout 2.0
     scene mhal_2cr at bgani
     show expression(CustomParticles("images/system/particle.png", 10))
     with gradientcirclefade
-    window show
     $ songname = "White Shadow"
     show screen showsong
     play music "audio/bgm/umib_009.ogg"
-    show nat a43headache1 at m with fastdissolve
+    show nat a43headache1 at m
+    pause 0.5
+    window auto
     nat "Meine Kopfschmerzen sind seit gestern Abend deutlich schlimmer geworden."
     extend " Es gibt nicht einen Tag an dem mein Kopf nicht schrecklich weh tut."
     extend " Ob es auch mit am Wetter liegt?"
@@ -102,14 +50,14 @@ label schule:
     with fastdissolve
     gen "Nein."
     extend " Leider habe ich Herrn Krauss nicht gesehen."
-    gen "Ich muss gestehen, nicht nur der Herr ist nirgends zu sehen, auch Gohda ist nicht an seinem Arbeitsplatz."
-    gen "Inzwischen sind auch Rosa-sama, Kyrie-sama, Rudolf-sama und George-sama verschwunden."
-    nat a12nayamu1 "Sechs von uns sind spurlos verschwunden?"
+    gen "Ich muss gestehen, nicht nur Krauss-sama ist nirgends zu sehen, auch Gohda ist nicht an seinem Arbeitsplatz."
+    gen "Inzwischen sind auch Rosa-sama, Kyrie-sama und Rudolf-sama verschwunden."
+    nat a12nayamu1 "Fünf von uns sind spurlos verschwunden?"
     extend " Genji. Hilf mir, sie zu finden, es ist ungewöhnlich, dass auch nur einer von ihnen so lange weg ist, vor allem, wenn wegen des Wetters sowieso niemand von hier weggehen kann."
-    gen a11komaru1 "Wie Sie wünschen, Fräulein Natsuhi-sama."
+    gen a11komaru1 "Wie Sie wünschen."
     window hide
     scene black with quickgradientwipedown
-    "Der Diener und die Herrin stellten die ganze Villa auf den Kopf, aber von den Vermissten fehlte jede Spur."
+    "Der Bedienstete und Natsuhi stellten die ganze Villa auf den Kopf, aber von den Vermissten fehlte jede Spur."
     "Als die beiden in die Eingangshalle zurückkehrten, lief ihnen ein bekanntes Gesicht entgegen."
     show mhal_1ar_bg at bgani
     show rainbackscroll
@@ -117,11 +65,12 @@ label schule:
     show mhal_1ar at bgani
     show expression(CustomParticles("images/system/particle.png", 10))
     with quickgradientwipedown
-    show eva b23komaru2 at r with fastdissolve
-    window show
+    show eva b23komaru2 at r
+    pause 0.5
+    window auto
     eva "Natsuhi!"
     extend " ...Genji!"
-    show nat a11komaru1 at l with fastdissolve
+    show nat a11komaru1 at l
     nat "Guten Morgen Eva-san"
     nat "Hast du irgendwo meinen..."
     eva "Mann gesehen?"
@@ -130,189 +79,557 @@ label schule:
     extend " Das kann nicht sein. Wo sind sie hin?"
     nat "Was ist mit den Kindern passiert, Eva?"
     eva "Alle außer George schlafen noch."
-    nat "Gott sei Dank, ich bete, dass den anderen nichts passiert ist."
+    nat a11komaru1 "Gott sei Dank, ich bete, dass den anderen nichts passiert ist."
     eva b25komaru4 "George käme nie auf die Idee, sich irgendwo zu verstecken, da ist was faul!"
     eva "Hideyoshi und Shannon suchen in der Nähe der Kapelle."
     extend " ...Ich hoffe, sie werden schnell gefunden."
-    gen "Wir sollten uns auch draußen umsehen, bitte nehmen Sie einen Regenschirm mit, sonst holen Sie sich eine Erkältung."
+    nat a12defo1 "Wir sollten uns ebenfalls draußen umsehen, hier im Haus ist niemand."
+    eva b21akire1go "Gute Idee."
+    extend " Genji..."
+    extend " Bring uns Regenschirme, auch einen für dich."
+    show gen a11defo1 at m
+    gen "Wie Sie wünschen"
+    show gen a11komaru1 at m
+    "In diesem Moment wurde die Villa von zwei weiteren Leuten betreten." 
+    extend " Ein Arzt mit leichtem Übergewicht, der sich jetzt in seinem Ruhestand befindet."
+    "Dazu ein sehr ruhiger Bediensteter, der immer konzentriert wirkt und dessen Präsenz nahezu unsichtbar ist."
     gen "Kanon, Dr. Nanjo-sensei"
     extend " Was ist hier los?"
-    "Die Villa wurde von zwei weiteren Gesichtern betreten," 
-    extend " ein Arzt mit leichtem Übergewicht, der sich jetzt in seinem Ruhestand befindet"
-    "Und ein sehr ruhiger Bediensteter, der immer konzentriert wirkt, aber nicht Teil dieser Welt zu sein scheint."
+    scene mhal_1ar_bg at bgani
+    show rainbackscroll
+    show rainfrontscroll
+    show mhal_1ar at bgani
+    show expression(CustomParticles("images/system/particle.png", 10))
+    show kan a11defo1 at m
+    with quickgradientwipeleft
     kan "Ich weiß es nicht, Genji-sama..."
     extend " ......Es fehlen genau sechs Personen."
     extend " Vielleicht war es ja die Hexe...."
+    show eva b25komaru4 at l
     eva "Rede nicht so einen Unsinn, geh lieber weiter auf die Suche, als in so einem Moment an ein dummes Ammenmärchen zu denken."
-    kan "Das war taktlos von mir, ich bitte um Verzeihung, Eva-sama..."
-    extend " Aber ich bemerkte etwas Merkwürdiges am Rosengartenschuppen, aber ich untersuchte es nicht weiter und kam sofort hierher."
-    gen "Wir werden uns das anschauen. Danke, Kanon."
+    kan a13defo2 "Das war taktlos von mir, ich bitte um Verzeihung, Eva-sama..."
+    scene mhal_1ar_bg at bgani
+    show rainbackscroll
+    show rainfrontscroll
+    show mhal_1ar at bgani
+    show expression(CustomParticles("images/system/particle.png", 10))
+    show nan a1defo1 at m
+    with quickgradientwipeleft
     nan "Werte Natsuhi-san und Eva-san."
     extend " Ich bin bei Ihnen, für den Fall, dass jemand zu Schaden gekommen ist."
     extend " ...Hoffen wir, dass es allen gut geht."
-    eva "Dann los zum Gartenschuppen!"
-    extend " Ich weiß zwar nicht, was George, Krauss und die anderen dort vorhaben, aber es ist unsere einzige Spur."
+    hide nan
+    show nat a11ikari1 at m
+    with fastdissolve
     nat "Wir müssen sie schnellstmöglich aus dem Regen holen."
+    window hide
+    pause 2
+    $ songname = "-"
+    stop music fadeout 2.0
+    play wind "audio/sfx/umilse_005.ogg"
+    scene black with quickergradientwiperight
+    window show
+    "Durch einem erbarmungslosen Sturm machten sich alle auf den Weg in den Rosengarten."
+    window hide
+    scene rose_1ar
+    show rainbackscroll
+    show rainfrontscroll
+    with gradientwipedownleft
+    window show
+    "Kanon schien irgendetwas aufgefallen zu sein, denn er blieb stehen und zeigte leise mit dem Finger in Richtung eines alten Gartenschuppens."
+    "Auffällig ist, dass aus Richtung des Schuppens ein seltsamer Rotstich zu sehen ist, der Kanon ins Auge gefallen sein muss."
+    "Der Gartenschuppen ist sehr gut versteckt, es ist schwer zu erkennen, wenn man durch den Garten läuft."
+    "Schließlich soll es nur die nötigen Gartenwerkzeuge lagern und nicht den schönen Anblick der Rosen ruinieren."
+    "Da allerdings Kanon für den Rosengarten verantwortlich ist, weiß er genau, dass dort ein Schuppen ist."
+    window hide
+    pause 1.5
+    scene warehous_o1an
+    show rainbackscroll
+    show rainfrontscroll
+    with gradientwipedownleft
+    pause 2
+    show nat a32ikari1 behind rainfrontscroll at m
+    pause 0.5
+    window auto
+    nat "Was zum Geier ist das denn?"
+    extend " Wer denkt sich bitte so einen schlechten Scherz aus?"
+    nat "Was hat das alles zu bedeuten?"
+    extend " Wer oder Was um alles in der Welt???"
+    nat "Ich habe ein ziemlich mieses Gefühl!"
+    window hide
+    pause 0.5
+    scene black with gradientwipedown
     "Bei der Ankunft am Gartenschuppen bemerkten die Anwesenden, dass etwas nicht in Ordnung war."
-    "Auf das Tor wurde ein seltsames Graffiti gesprüht, es sieht aus wie ein blutroter Kreis mit einem Militärkreuz darauf?"
+    extend " Es war absolut unmöglich zu übersehen und es jagte jeden, der es erblickte einen intensiven Schauer über den Rücken"
+    play sound "audio/sfx/umise_024.ogg"
+    scene magicsquare_sun7 with fastdissolve
+    pause 4
+    $ songname = "Lure"
+    show screen showsong
+    play music "audio/bgm/umib_018.ogg"
+    "Auf dem Tor war ein seltsames Symbol abgebildet, es sieht aus als hätte jemand blutrote Farbe verwendet."
+    "Eine eigenartige Schrift war deutlich zu erkennen und etwas dass so aussieht wie ein Deutsches Kreuz."
     eva "Wie geschmacklos!"
     extend " Wer malt bitte mit roter Farbe gruselige Symbole auf ein Tor?"
-    nat " Man denkt sofort an einen kindlichen Scherz."
+    nat "Will uns da jemand Angst machen?"
+    extend " Ist das alles nur Verarsche?"
+    scene warehous_o1an
+    show rainbackscroll
+    show rainfrontscroll
+    show nat a12nayamu1 behind rainfrontscroll at m
+    with gradientwipedownleft
+    play sound "audio/sfx/umise_032.ogg"
+    pause 0.5
+    play sound "audio/sfx/umise_032.ogg"
+    pause 1.0
     nat "Ich kann das Tor nicht öffnen, es ist verschlossen, gibt es keinen Schlüssel?"
     "Natsuhi versuchte, das Tor zu öffnen, aber es rührte sich nicht von der Stelle."
     "Einer scheint nicht überrascht zu sein."
     extend " Genji geht langsam und in aller Ruhe auf das Tor zu."
-    gen " Eva-sama, normalerweise klemmt das Tor nur." 
+    show gen a11defo1 behind rainfrontscroll at r
+    show nat a12nayamu1 behind rainfrontscroll at l
+    pause 0.5
+    gen "Fräulein Natsuhi-sama, normalerweise klemmt das Tor nur." 
     extend " Lassen Sie es mich versuchen."
+    window hide
+    play sound "audio/sfx/umise_032.ogg"
+    pause 0.5
+    play sound "audio/sfx/umise_032.ogg"
+    pause 1.0
+    window auto
     "Genji versuchte ebenfalls das Tor zu öffnen, aber es ging trotzdem nicht auf, ein Schlüssel muss her."
     gen "Es tut mir leid, aber es ist abgeschlossen..."
-    extend "Der Schlüssel ist im Dienstzimmer, ich hole ihn sofort."
+    extend " Der Schlüssel ist im Dienstzimmer, ich hole ihn sofort."
     nat "Ich bitte darum!"
-    gen "Wie Sie wünschen."
+    gen a11komaru1 "Wie Sie wünschen."
+    hide gen
     "Genji ging zurück in die Villa, um den Schlüssel zu holen."
-    nan "Dann muss ich ja gar nicht erst versuchen das Tor ebenfalls zu öffnen, wir sollten auf Genji warten."
-    "Kurz darauf erschien Hideyoshi und berichtete, dass die Suche erfolglos war."
-    "Genji kehrt zurück, doch statt eines Schlüssels hält er eine Feuerwehraxt in der Hand."
+    scene black with quickergradientwipeleft
+    scene warehous_o1an
+    show rainbackscroll
+    show rainfrontscroll
+    show nan a1defo1 behind rainfrontscroll at m
+    with gradientwipedownleft
+    nan "Ich denke, wir sollten Ruhe bewahren und nichts überstürzen."
+    extend " ...Wir sollten erstmal auf einen Schlüssel warten."
+    "Genji kehrte kurze Zeit später zurück, doch statt eines Schlüssels hält er eine Feuerwehraxt in der Hand."
+    scene black with quickergradientwipeleft
+    scene warehous_o1an
+    show rainbackscroll
+    show rainfrontscroll
+    show gen a21kashikomari1  behind rainfrontscroll at m
+    with gradientwipedownleft
     gen "Ich bitte um Verzeihung, ich konnte den Schlüssel nicht finden, wir müssen das Schloss zerstören."
+    show eva b21akire1go behind rainfrontscroll at r
     eva "Sehr gute Idee!"
+    show kan a11defo1 behind rainfrontscroll at l
     kan "Das Tor ist schon sehr alt und dürfte der Axt nicht lange standhalten."
-    extend " Einmal durchgebrochen, wird es einfacher ein begehbares Loch reinzuschlagen."
-    "Genji hat begonnen, das Tor zu zerstören, und das Loch wird immer größer."
+    extend " Einmal durchgebrochen, sollte es einfach sein, das Tor zu öffnen"
+    scene black with quickergradientwipeleft
+    "Genji beginnt nun das Schloss mit der Axt zu zerstören, die anderen sind zwei Schritte zurück gegangen."
+    scene warehous_o1an
+    show rainbackscroll
+    show rainfrontscroll
+    show gen a11defo1 behind rainfrontscroll at m
+    pause 1
+    play sound "audio/sfx/umise_020.ogg"
+    pause 1.0
+    play sound "audio/sfx/umise_012.ogg"
+    show gen a11defo1 behind rainfrontscroll at m with vpunch
+    pause 1.0
+    play sound "audio/sfx/umise_020.ogg"
+    pause 1.0
+    play sound "audio/sfx/umise_012.ogg"
+    show gen a11defo1 behind rainfrontscroll at m with vpunch
+    pause 1.0
+    play sound "audio/sfx/umise_020.ogg"
+    pause 1.0
+    play sound "audio/sfx/umise_012.ogg"
+    show gen a11defo1 behind rainfrontscroll at m with vpunch
+    play sound "audio/sfx/umise_039.ogg"
+    pause 1.0
+    "Drei kräftige Hiebe waren ausreichend um das alte Schloss zu zerstören."
+    "Genji kann nun das Tor in den Schuppen mit leichtigkeit öffnen."
+    window hide
+    pause 1
+    play sound "audio/sfx/umise_017.ogg"
+    stop music fadeout 2.0
+    $ songname = "-"
+    scene white zorder 99
+    with gradientwipeup
+    pause(1.5)
+    scene black with dissolve
+    pause 2
+    scene g_o1an
+    show rainbackscroll
+    show rainfrontscroll
+    with gradientcirclefade
+    window show
     "Währenddessen ist es im Gästehaus noch sehr ruhig, die Kinder der Erwachsenen wachen gerade auf."
+    extend " Diese haben von den Ereignissen noch überhaupt nichts mitbekommen."
+    window hide
+    pause 0.5
+    scene g_o1cn 
+    show rainbackscroll
+    show rainfrontscroll
+    with gradientcirclefade
+    pause 2
+    scene g2f_r1b_bg at bgani
+    show rainbackscroll
+    show rainfrontscroll
+    show g2f_r1b at bgani
+    show expression(CustomParticles("images/system/particle.png", 10))
+    with gradientcirclefade
+    pause 1
+    show mar a11uuu1 at m
+    window show
+    pause 0.5
+    $ songname = "Towering cloud in summer"
+    play music "audio/bgm/umib_011_Intro.ogg"
+    queue music "audio/bgm/umib_011_loop.ogg" loop 
+    show screen showsong
+    stop wind fadeout 2.0
     mar "Uu!"
-    "Ist es schon morgen?"
+    extend " Ist es schon morgen?"
+    show jes a11warai1 at l
     jes "Guten Morgen Maria-chan!"
-    jes "Huh?"
-    extend " Warum rennen die Erwachsenen wie aufgescheuchte Hühner herum?"
-    mar " Wie aufgescheuchte Hühner! Wie aufgescheuchte Hühner! *kicher*kicher*!"
+    jes a11majime1 "Huh?"
+    extend " Warum rennen die Erwachsenen draußen wie aufgescheuchte Hühner herum?"
+    mar a22warai2 "Wie aufgescheuchte Hühner! Wie aufgescheuchte Hühner!"
+    extend " *kicher*kicher*!"
     extend " Uu~! Uu~!"
+    window hide
+    pause 0.5
+    scene g2f_r1b_bg
+    show rainbackscroll
+    show rainfrontscroll
+    show g2f_r1b
+    show expression(CustomParticles("images/system/particle.png", 10))
+    with quickergradientwipeleft
+    pause 1
+    window show
     but "hmpff hmmmmm"
     extend " ..............Hühner? pfmmmm *gähn*"
     "Battler ist noch völlig schlaftrunken, für ihn ergeben die Worte von Jessica noch keinen Sinn."
-    but "Bitte lass mich noch 5 Minuten weiterschlafen..... nur noch einen winzigen Augenblick"
+    show but a21nayamu2 at m
+    but "Bitte lass mich noch 5 Minuten weiterschlafen..... nur noch einen winzigen Augenblick..."
+    play sound "audio/sfx/umise_012.ogg"
+    show but a21kuyasigaru1 at m
+    show jes a12ikari1 at l
+    with vpunch
+    hide but with quickgradientwipedown
+    play sound "audio/sfx/umise_013.ogg"
     jes "Wach auf, Battler-kun!"
     extend " Es ist schon Morgen!"
-    but "Wow, musst du mich gleich schlagen?"
+    but "Wowowowow, musst du mich gleich schlagen?"
+    show but b11aseru1 at r
     extend " Jetzt tut mir der Kopf weh, aber dafür bin ich jetzt wach."
+    show mar a22warai2 at m
     mar "*kicher*kicher* Kopf tut weh! Kopf tut weh!"
-    extend " Uu~!!"
-    jes "Maria! Bitte etwas ruhiger, Okay?"
+    extend " Uu~!! Uu~!!"
+    jes a11majime1 "Maria! Bitte etwas ruhiger, Okay?"
     extend " Unsere hohle Birne muss sich erst einmal vom Aufwachen erholen!"
+    window hide
+    pause 0.5
+    scene g2f_r1b_bg
+    show rainbackscroll
+    show rainfrontscroll
+    show g2f_r1b
+    show expression(CustomParticles("images/system/particle.png", 10))
+    show but a11defo1 at l
+    with quickergradientwipeleft
+    window show
     but "Jo, Jessica-chan!"
     extend " Was meinst du mit aufgescheuchten Hühnern?"
+    show jes a11majime1 at r
     jes "Die Erwachsenen liefen panisch durch den Rosengarten, es sah nach etwas Ernsthaftem aus."
-    but "Wo ist eigentlich George?"
+    but "Wo ist eigentlich George-aniki?"
     extend " Er ist in der Nacht auf die Toilette gegangen, seitdem habe ich nichts mehr von ihm gehört."
     jes "Stimmt er fehlt, ob er bei den Erwachsenen ist?"
     but "Könnte sein, schließlich ist er schon fast ein richtiger 'Erwachsener'."
     extend " ...Lass uns doch einfach ein bisschen nach draußen gehen."
-    jes "Klingt gut, aber Regenschirm nicht vergessen!"
+    jes a11warai1 "Klingt gut, aber bitte die Regenschirme nicht vergessen!"
     extend " Komm Maria, wir gehen raus!"
+    show mar a11uuu1 at m
     mar "Uu~!"
-    "Die drei schnappten sich einen Regenschirm und gingen nach draußen zum Gartenhaus."
+    window hide
+    pause 0.5
+    stop music fadeout 1.0
+    $ songname = "-"
+    scene black with gradientwiperight
+    play wind "audio/sfx/umilse_005.ogg"
+    "Die drei schnappten sich einen Regenschirm und gingen nach draußen zum Gartenschuppen."
+    extend " Auch sie bemerkten welche Ausmaße dieser Taifun angenommen hat."
+    play music "audio/bgm/umib_036.ogg"
+    $ songname = "Play"
+    show screen showsong
     "Dort angekommen, merkten sie schnell, dass die Erwachsenen wohl nicht viel davon hielten, dass die drei auf sie zukamen."
     "Eva und Natsuhi fuchteln wie die Wilden mit den Armen, um zu signalisieren, dass es besser ist, sich nicht zu nähern."
+    scene warehous_o2ar
+    show rainbackscroll
+    show rainfrontscroll
+    show nat a32ikari1 behind rainfrontscroll at r
+    show eva b25naku5s behind rainfrontscroll at l
+    with quickergradientwipeleft
     nat "NICHT NÄHER KOMMEN!!!"
-    eva "BATTLER!!! JESSICA!!!"
+    eva "BATTLER!!!" 
+    extend " JESSICA!!!"
     extend " NEHMT MARIA UND GEHT ZURÜCK INS GÄSTEHAUS!!!"
     extend " IHR DÜRFT NICHT NÄHER KOMMEN!"
+    "Die beiden wirkten so, als haben sie im Schuppen ein schreckliches Monster gesehen."
+    extend " Einfach nur zu sagen, beide sehen traumatisiert aus, wäre völlig untertrieben!"
     "Aber es war schon zu spät, der Blick in den Schuppen war unvermeidlich."
-    "Wahrscheinlich wird sich der Anblick, der sich in diesem Moment allen bot, für immer einprägen."
+    stop music fadeout 1.0
+    "Wahrscheinlich wird sich der Anblick, der sich in diesem Moment allen bot, für immer in die Köpfe der Anwesenden brennen."
+    scene black
+    pause 1
     $ songname = "goldenslaughterer"
     show screen showsong
     play music "audio/bgm/umib_024.ogg"
+    play sound "audio/sfx/umise_013.ogg"
     jes "KYAAAAAAAAAAAAAAAAAA!!!!!!!!"
     extend " GEORGE???!?!?!?!?"
+    extend " DAAAAAAAAAAAAD????!?!?!?!?"
+    "Ein schmerzhafter Schrei war zu hören, Jessica konnte ihren Augen nicht trauen."
+    extend " Im Schuppen lagen sechs Personen auf dem Boden."
+    "Mindestens zwei von ihnen wurden wohl bereits identifiziert."
+    scene warehous_o2ar
+    show rainbackscroll
+    show rainfrontscroll
+    show nat a33hisu1 behind rainfrontscroll at l
+    show gen a21kashikomari1 behind rainfrontscroll at r
+    with quickergradientwipeleft
+    pause 0.5
+    window show
     nat "Genji! Ruf sofort die Polizei!"
-    gen "Wie Ihr wünscht, es wird sofort erledigt!"
-    extend " Kanon..."
+    gen "Wie Sie wünschen."
+    gen "Kanon..."
     extend " Bitte erstatte dem werten Herrn Kinzo-sama so schnell wie möglich Bericht!"
+    hide nat
+    show kan a13defo2 behind rainfrontscroll at l
+    with fastdissolve
     kan "Ich habe verstanden!"
+    window hide
+    pause 0.5
+    scene warehous_o2ar
+    show rainbackscroll
+    show rainfrontscroll
+    with quickergradientwipeleft
+    pause 0.5
+    window show
     "Genji und Kanon stürmten aus unterschiedlichen Gründen auf die Villa zu."
-    "Kurz nachdem beide in der Dunkelheit des Taifuns verschwunden waren, tauchten zwei neue Gesichter am Tatort auf."
+    "Kurz nachdem beide in der Dunkelheit des Taifuns verschwunden waren, tauchten drei neue Gesichter am Tatort auf."
+    hid "Halloooooo, seid ihr da hinten bei diesem Schuppen?"
+    "Aus der Ferne hört man Hideyoshis Stimme, zwei weitere Überlebende nähern sich dem Gartenschuppen."
+    show kum a12majime1 behind rainfrontscroll at m
     kum "Was ist hier los? Was soll diese Aufregung?"
     extend " Warum sind hier alle versammelt?"
+    show sha a11odoroki1 behind rainfrontscroll at r
     sha "Ist etwas Schlimmes passiert?"
-    nat "Kumasawa! Shannon! Ihr müsst nicht näher kommen! Bringt Battler und Jessica sofort zurück ins Gästehaus!"
+    show nat a32ikari1 behind rainfrontscroll at l
+    nat "Kumasawa! Shannon! Hideyoshi!"  
+    extend " Ihr müsst nicht näher kommen!" 
+    extend " Bringt Battler und Jessica sofort zurück ins Gästehaus!"
     kum "Ohohohoho, dann sollten wir wohl besser gehen."
     extend " Battler-sama, Jessica-sama, folgt uns bitte."
+    window hide
+    pause 0.5
+    scene warehous_o2ar
+    show rainbackscroll
+    show rainfrontscroll
+    with quickergradientwipeleft
+    pause 0.5
+    show hid a11komaru2 behind rainfrontscroll at m
+    pause 0.5
+    window show
+    hid "Was sehen meine Augen da? Liegt da George?"
+    extend " Eva! Was ist hier passiert?"
+    show eva b25naku5s behind rainfrontscroll at l
+    eva "Unser George ist....."
+    hid "Das darf nicht wahr sein...."
+    extend " Wieso nur?....."
+    extend " Warum nur unser Sohn?"
+    window hide
+    pause 0.5
+    scene black with gradientwipeleft
+    "Hideyoshi ist zu tiefst bestürzt."
+    extend " Niemals im Leben hätte er sich vorstellen können, dass er seinen enzigen Sohn tot in einem Gartenschuppen sehen würde."
+    "Auch Battler hat etwas im Schuppen gesehen, dass seine Welt zum Stillstand gebracht hat."
+    extend " Er geht mit langsamen Schritten immer näher in den Schuppen."
     jes "Battler-kun! Geh bitte nicht rein!"
-    "Trotz aller Aufforderungen, den Tatoirt zu verlassen, geht Battler zur Türschwelle, um sich den Ort des Geschehens genauer anzusehen."
+    "Trotz aller Aufforderungen, den Tatort zu verlassen, geht Battler zur Torschwelle, um sich zu vergewissern, dass seine Augen ihm keinen Streich spielen."
+    window hide
+    pause 0.5
+    scene warehous_i1ar2_bg at bgani
+    show rainbackscroll
+    show rainfrontscroll
+    show warehous_i1ar2 at bgani
+    show expression(CustomParticles("images/system/particle.png", 10))
+    with quickergradientwipeleft
+    pause 0.5
+    play sound "audio/sfx/umise_013.ogg"
+    show but b11naku1 at m with vpunch
+    window show
     but "Das darf doch wohl nicht wahr sein?!!?!?"
     extend " Welches grausame Monster könnte so etwas tun?"
-    but "Ja, ich sehe es ganz deutlich., oh man was für eine Schande."
+    but "Ja, ich sehe es ganz deutlich, oh man was für eine Schande."
+    but "Ah, es bringt nichts... Es bringt alles überhaupt nichts...."
     extend " Ich weiß, dass du ein Womanizer und ein ziemliches Arschloch warst..."
     but "Aber dass man dich tötet und dein Gesicht auf grausamste Weise entstellt, das hast nicht einmal du verdient."
-    extend " Wenn er seine Kleider nicht anhätte, wüsste ich gar nicht, wer da vor mir steht."
+    extend " Wenn du deine Kleider nicht anhättest, wüsste ich gar nicht, wer da vor mir steht."
     but "Das ist einfach viel zu viel, wieso ist das passiert?"
+    play sound "audio/sfx/umise_013.ogg"
+    show but b26naku2 at m with vpunch
     extend " ICH VERSTEH ES NICHT!!!"
     but "Warum nur? Warum nur? Warum nur?"
+    window hide
+    pause 0.5
+    scene black with dissolve
     extend " Wer... liegt.. da... neben.. dir...??"
+    play sound "audio/sfx/umise_038.ogg"
+    scene blood_1a
     extend " Nein!!! Nein!!! Kyrie-san!!!"
     but "Wieso auch noch du?"
     extend " Ich habe dich nie für meine neue Mutter gehalten, aber das ist übertrieben!"
+    play sound "audio/sfx/umise_038.ogg"
+    scene blood_1ar with dissolve
     extend " Nie im Leben hätte ich mir für einen von euch ein solches Ende gewünscht."
     but "Natürlich sagt man manchmal aus Wut, dass man jemanden tot sehen will, aber ihn dann wirklich tot zu sehen, das ertrage ich nicht..."
     but "Dad, Kyrie, Gohda, Tante Rosa und wieso auch du George-aniki?"
-    extend "Ich verstehe das nicht mehr, das ist unfair!"
+    extend " Ich verstehe das nicht mehr, das ist unfair!"
     extend " Dass man euer Gesicht nicht mehr erkennt, hat keiner von euch verdient...."
     but "Es wäre viel einfacher gewesen, euch ins Jenseits zu schicken und hier reinzulegen..."
     extend " War das wirklich nötig? Macht es das wirklich besser?"
+    window hide
+    pause 0.5
+    scene warehous_i1ar2_bg at bgani
+    show rainbackscroll
+    show rainfrontscroll
+    show warehous_i1ar2 at bgani
+    show expression(CustomParticles("images/system/particle.png", 10))
+    with quickergradientwipeleft
+    show hid a11komaru2 at m
+    pause 0.5
     hid "Bleib stark, Battler-kun, die Polizei wird den Täter morgen finden und verhaften."
     extend " Ich bin genauso traurig wie du, aber wir dürfen jetzt keine falsche Bewegung machen."
-    "Nachdem Eva vergeblich versucht hat, irgendjemandem den Blick auf diese Szene zu versperren, bricht sie plötzlich zusammen."
-    eva "GEORGE!!!! WAS HABEN SIE DIR ANGETAN!!"
-    extend " ahhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh!!!!!!!!!!!!"
-    eva "WARUM NUR MEIN GEORGE???!!?!??!"
+    window hide
+    pause 0.5
+    scene warehous_i1ar2_bg at bgani
+    show rainbackscroll
+    show rainfrontscroll
+    show warehous_i1ar2 at bgani
+    show expression(CustomParticles("images/system/particle.png", 10))
+    with quickergradientwipeleft
+    show nan a2fumu1 at m
+    pause 0.5
     nan "Ja, es ist nicht zu bezweifeln, dass sie nicht überlebt haben."
-    extend " Ich bin zwar Arzt, aber selbst ich kann nichts dagegen tun."
     extend " Es tut mir so unendlich leid, aber es gibt nichts, was ich tun kann."
+    show nat a11komaru1 at l
     nat "Alles in Ordnung, ... auch ich sehe, dass man da nichts machen kann."
     extend " ...Es gibt keinen Grund, sich für etwas zu entschuldigen."
     "Auch Natsuhi, die versucht, einen kühlen Kopf zu bewahren, ist anzumerken, dass sie der Tod ihres Mannes nicht kalt lässt."
     "Auch die bedienstete Shannon sieht sehr bedrückt aus."
+    window hide
+    pause 0.5
+    scene warehous_i1ar2_bg at bgani
+    show rainbackscroll
+    show rainfrontscroll
+    show warehous_i1ar2 at bgani
+    show expression(CustomParticles("images/system/particle.png", 10))
+    with quickergradientwipeleft
+    pause 0.5
+    show sha a11odoroki1 at r
     sha "Ist das dort...."
     extend " George-sama?"
     extend " Warum?"
+    show but b23naku3 at l
     but "Richtig Shannon-chan, das ist Aniki"
     extend " Sag mir... Shannon-chan..."
     extend " Wie hast du Aniki zuletzt erlebt?"
+    show sha b31majime1 at r
     but "Nein, sag nichts! Ich weiß, was du sagen willst...."
     extend " Der Ring an deinem Ringfinger ist wunderschön, ich bin sicher, er will, dass du ihn so in Erinnerung behältst."
     but "Also bitte, sieh ihn nicht so an, ich will nicht, dass du ihn so siehst."
     sha "Battler-sama.... Ich...."
+    show hid a11komaru2 at m
     hid "Es wäre besser, diesen Ort der Polizei zu überlassen."
     extend " Wenn wir uns auch nur ein wenig nähern, könnte das einen Einfluss auf die Untersuchung haben."
+    window hide
+    pause 0.5
+    scene warehous_o2ar
+    show rainbackscroll
+    show rainfrontscroll
+    with quickergradientwipeleft
+    pause 0.5
+    window show
+    show nat a12nayamu1 at l
     nat "Hast du die Polizei erreicht, Genji?"
+    show gen a11defo1 at r
     gen "Leider nicht, die Leitungen wurden gekappt."
     extend " Ein Anruf ist nicht durchgekommen."
     "Genji ist mit der schlechten Nachricht zurückgekehrt, dass die Polizei nicht informiert wurde, es sieht so aus, als müssten die Überlebenden bis Montag warten."
-    nat "Wer um alles in der Welt??"
-    "Währenddessen sitzt das Oberhaupt der Ushiromiya-Familie Kinzo noch in seinem Arbeitszimmer."
-    extend " Der Ausdruck auf seinem Gesicht ist geradezu überglücklich."
-    kin "Ich lebe noch."
-    extend " Wahahahahaha!!"
-    kin "Das Dämonen-Roulette hat mich wohl noch nicht erwählt!"
-    extend  "Aber das spielt keine Rolle!"
-    kin "Goldene Hexe Beatrice!"
-    extend " Nimm dir alles was du von mir willst!"
-    kin "Seit ich unseren Vertrag gekündigt habe, besagt die Sonderklausel, dass du dein Vermögen von 10 Tonnen reinem Gold, das du mir gegeben hast, mit Zinsen zurückbekommst!"
-    kin "Ich sehe, du hast schon angefangen, die Zinsen einzutreiben!"
-    "Plötzlich sackt der alte Mann in sich zusammen, als hätte ihn ein Böser Geist besessen und dann verlassen."
-    "Er holt ganz tief luft und erhebt seinen beiden Arme."
-    kin "Oh Beatrice! Bevor das Roulette mich erwählt, möchte ich dich noch einmal sehen!"
-    extend "Ich bin fest davon überzeugt, dass du mich irgendwo in diesem Raum unsichtbar beobachtest und über mich lachst!"
-    extend " ....Ich flehe dich an! Zeig mir noch einmal dein schönes Lächeln!"
-    kin "BEATRICE!!!"
-    extend " Nimm mir mein Leben mit einem Fingerschnippen, wenn du willst!!"
-    extend " ...Aber bitte zeig dich und lächle dabei!"
-    extend " BEATRICEEEEEEE!!!!"
+    gen "Natsuhi-sama..." 
+    extend " Sie sollten wissen, dass der Schlüssel für das Tor in der Tasche von Gohda innerhalb des Schuppens gefunden wurde."
+    nat a33hisu1 "Wer um alles in der Welt??"
+    window hide 
+    pause 1
+    call chapterendb
+    pause 1
+    play audio "audio/sfx/umise_030.ogg"
+    show geo a11defo1 at m with fastdissolve
+    pause 0.3
+    scene black with instant
+    play audio "audio/sfx/umise_046.ogg"
+    scene blood_1b with instant
+    pause 0.5
+    scene black with instant
+    play audio "audio/sfx/umise_030.ogg"
+    show rud a11defo1 at m with fastdissolve
+    pause 0.3
+    scene black with instant
+    play audio "audio/sfx/umise_046.ogg"
+    scene blood_1a with instant
+    pause 0.5
+    scene black with instant
+    play audio "audio/sfx/umise_030.ogg"
+    show kir a11defo1 at m with fastdissolve
+    pause 0.3
+    scene black with instant
+    play audio "audio/sfx/umise_046.ogg"
+    scene blood_2e with instant
+    pause 0.5
+    scene black with instant
+    play audio "audio/sfx/umise_030.ogg"
+    show ros a11komaru4 at m with fastdissolve
+    pause 0.3
+    scene black with instant
+    play audio "audio/sfx/umise_046.ogg"
+    scene blood_1ar with instant
+    pause 0.5
+    scene black with instant
+    play audio "audio/sfx/umise_030.ogg"
+    show goh a11defo1 at m with fastdissolve
+    pause 0.3
+    scene black with instant
+    play audio "audio/sfx/umise_046.ogg"
+    scene bite with instant
+    pause 0.5
+    scene black with instant
+    play audio "audio/sfx/umise_030.ogg"
+    show no83_0051
+    show bea a11akuwarai2 at m with fastdissolve
+    pause 1
+    scene black with instant
+    play audio "audio/sfx/umise_046.ogg"
+    show text _("Zur Zeit der ersten Dämmerung:\nsollst du die sechs, die der Schlüssel ausgewählt hat,\nals Opfer darbringen.")
+    pause 7
+    scene black with kanon_r 
     ##Kapitel Ende
     $ chapter = 1002
     $ songname = "-"
-    $ save_name = _("EpisodeX Illusion of the golden witch\nDie, die sich nahe stehen")
+    $ save_name = _("EpisodeX Illusion of the golden witch\nDie Zwei, die sich nahe stehen")
     show screen showch
-    ## Kapitel 2 - Die, die sich nahe stehen
+    ## Kapitel 2 - Die Zwei, die sich nahe stehen
     "Nach der Tragödie, zogen sich dich überlebenden in das Wohnzimmer der Villa zurück."
     "Dabei ist eine hitzige Diskussion entfacht, wer ein potenzieller Täter sein könnte."
     but "Was machen wir jetzt?"

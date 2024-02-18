@@ -38,10 +38,8 @@ label start:
     pause (2)
     $ songname = "Corridor of Purgatory's Sands"
     $ _game_menu_screen = "cleanmenu"
-    if persistent.showbgm == True:
-        show screen showsong
-    if persistent.showch == True:
-        show screen showch
+    show screen showsong
+    show screen showch
     scene fure2 with gradientcirclefade
     pause 2
     scene kakera with gradientcirclefade
@@ -139,7 +137,7 @@ label start:
     pause (2)
     scene black with fade
     pause (2)
-    $ songname = "Gold Dream Symphony"
+    $ songname = "Umineko no Naku Koro ni"
     $ renpy.movie_cutscene("videos/opening.mov")
     stop sound
     pause 1.5

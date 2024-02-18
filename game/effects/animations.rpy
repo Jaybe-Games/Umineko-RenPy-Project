@@ -29,19 +29,18 @@ label chapterenda:
 label chapterendb:
 
     pause 1
-    hide rain
-    hide rain2
-    hide rain3
     stop music
     stop ship
     stop wind
     stop rain
     play sound "audio/sfx/umise_1006.ogg"
-    show ware
+    show ware with instant
     pause 2
     show screen cinemalogo
     pause 4
     show blackpic behind cinemalogo with dissolve
+    pause 2.0
+    hide screen cinemalogo with dissolve
     return
 
 label chapterendsecret:

@@ -28,6 +28,21 @@ image but_b23_nayamu1_mouth:
     .20
     repeat
 
+image but b23naku3 = Composite(
+    (895, 1216),
+    (0, 0), "images/sprites/but/b23/naku3/0.png",
+    (0, 0), WhileSpeaking("but", "but_b23_naku3_mouth", "images/sprites/but/b23/naku3/0.png"),
+    )
+
+image but_b23_naku3_mouth:
+    "images/sprites/but/b23/naku3/0.png"
+    .10
+    "images/sprites/but/b23/naku3/1.png"
+    .10
+    "images/sprites/but/b23/naku3/2.png"
+    .20
+    repeat
+
 image but b22odoroki2 = Composite(
     (832, 1216),
     (0, 0), "images/sprites/but/b22/odoroki2/0.png",
@@ -77,6 +92,26 @@ image but_b11_odoroki3_mouth:
     "images/sprites/but/b11/odoroki3/2.png"
     .20
     repeat
+
+image but b11naku1 = Composite(
+    (772, 1227),
+    (0, 0), "images/sprites/but/b11/naku1/0.png",
+    (0, 0), WhileSpeaking("but", "but_b11_naku1_mouth", "images/sprites/but/b11/naku1/0.png"),
+    )
+
+image but_b11_naku1_mouth:
+    "images/sprites/but/b11/naku1/0.png"
+    .10
+    "images/sprites/but/b11/naku1/1.png"
+    .10
+    "images/sprites/but/b11/naku1/2.png"
+    .20
+    repeat
+
+image but b26naku2 = Composite(
+    (772, 1227),
+    (0, 0), "images/sprites/but/b26/naku2/0.png",
+    )
 
 image but b22warai1 = Composite(
     (832, 1216),

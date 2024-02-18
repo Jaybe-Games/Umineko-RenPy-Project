@@ -57,3 +57,18 @@ image hid_a11_defo1_mouth:
     "images/sprites/hid/a11/defo1/2.png"
     .20
     repeat
+
+image hid a11komaru2 = Composite(
+    (776, 1111),
+    (0, 0), "images/sprites/hid/a11/komaru2/0.png",
+    (0, 0), WhileSpeaking("hid", "hid_a11_komaru2_mouth", "images/sprites/hid/a11/komaru2/0.png"),
+    )
+
+image hid_a11_komaru2_mouth:
+    "images/sprites/hid/a11/komaru2/0.png"
+    .10
+    "images/sprites/hid/a11/komaru2/1.png"
+    .10
+    "images/sprites/hid/a11/komaru2/2.png"
+    .20
+    repeat

@@ -27,3 +27,18 @@ image gen_a11_komaru1_mouth:
     "images/sprites/gen/a11/komaru1/2.png"
     .20
     repeat
+
+image gen a21kashikomari1 = Composite(
+    (786, 1170),
+    (0, 0), "images/sprites/gen/a21/kashikomari1/0.png",
+    (0, 0), WhileSpeaking("gen", "gen_a21_kashikomari1_mouth", "images/sprites/gen/a21/kashikomari1/0.png"),
+    )
+
+image gen_a21_kashikomari1_mouth:
+    "images/sprites/gen/a21/kashikomari1/0.png"
+    .10
+    "images/sprites/gen/a21/kashikomari1/1.png"
+    .10
+    "images/sprites/gen/a21/kashikomari1/2.png"
+    .20
+    repeat

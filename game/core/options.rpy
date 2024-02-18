@@ -23,7 +23,7 @@ define gui.show_name = False
 
 ## The version of the game.
 
-define config.version = "1.2dev"
+define config.version = "1.2"
 
 
 ## Text that is placed on the game's about screen. Place the text between the
@@ -54,21 +54,14 @@ AiylaChan\n
 Ararara555\n
 Bucky\n
 
-ADDITIONAL SPRITES\n
-
-Ayato / Lord Zero: SurfingJeorn\n
-Yuria (School Sprite): Jaybe\n
-
 USED ASSETS\n
 
 Gameassets from
 Umineko no Naku Koro ni Saku
 ~Symphony of Catbox and Dreams~\n
 
-Discord Rich Presence: Lezalith\n
 FancyText: yukinogatari\n
 RPY-VNBE Achievement System: rjscdev\n
-RenPy Universal Player: GangstaKingofSA\n
 RenPyParticles: AgentAlpha81\n
 Gradient Tags: sodara9\n
 
@@ -179,39 +172,15 @@ define config.main_game_transition = MultipleTransition([
     "images/system/ware2.png", dissolve,
     True])
 
-## A variable to set the transition used when the game starts does not exist.
-## Instead, use a with statement after showing the initial scene.
-
-
-## Window management ###########################################################
-##
-## This controls when the dialogue window is displayed. If "show", it is always
-## displayed. If "hide", it is only displayed when dialogue is present. If
-## "auto", the window is hidden before scene statements and shown again once
-## dialogue is displayed.
-##
-## After the game has started, this can be changed with the "window show",
-## "window hide", and "window auto" statements.
+define _scene_show_hide_transition = { "master" : Dissolve(0.25) }
 
 define config.window = "auto"
 
+define config.window_show_transition = { "screens" : Dissolve(.25) }
+define config.window_hide_transition = { "screens" : Dissolve(.25) }
 
-## Transitions used to show and hide the dialogue window
-
-define config.window_show_transition = Dissolve(.5)
-define config.window_hide_transition = Dissolve(.5)
-
-
-## Preference defaults #########################################################
-
-## Controls the default text speed. The default, 0, is infinite, while any other
-## number is the number of characters per second to type out.
 
 default preferences.text_cps = 50
-
-
-## The default auto-forward delay. Larger numbers lead to longer waits, with 0
-## to 30 being the valid range.
 
 default preferences.afm_time = 10
 default preferences.fullscreen = True
@@ -219,14 +188,14 @@ default preferences.gl_powersave = False
 default preferences.gl_tearing = False
 default preferences.gl_framerate = None
 define config.image_cache_size_mb = 1024
-define config.cache_surfaces = True
-define config.predict_statements = 50
-define config.developer = True
+define config.cache_surfaces = False
+define config.predict_statements = 25
+define config.developer = "auto"
 
 
 
-define config.default_music_volume = 0.6
-define config.default_sfx_volume = 0.7
+define config.default_music_volume = 0.7
+define config.default_sfx_volume = 0.5
 
 
 ## Save directory ##############################################################
