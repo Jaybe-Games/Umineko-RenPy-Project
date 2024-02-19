@@ -7,13 +7,13 @@ label schule:
     show screen showch
     $ _game_menu_screen = "cleanmenu"
     pause 3
-    play sound "audio/sfx/umise_028.ogg"
+    play sound umise_028
     show text001
     pause 8
     hide text001 with dissolve
     pause 2
-    play wind "audio/sfx/umilse_005.ogg"
-    play rain "audio/sfx/umilse_012.ogg"
+    play wind umilse_005
+    play rain umilse_012
     pause 2
     show oct_5_1986 with fastdissolve
     pause 5
@@ -34,7 +34,7 @@ label schule:
     with gradientcirclefade
     $ songname = "White Shadow"
     show screen showsong
-    play music "audio/bgm/umib_009.ogg"
+    play music umib_009
     show nat a43headache1 at m
     pause 0.5
     window auto
@@ -126,7 +126,7 @@ label schule:
     pause 2
     $ songname = "-"
     stop music fadeout 2.0
-    play wind "audio/sfx/umilse_005.ogg"
+    play wind umilse_005
     scene black with quickergradientwiperight
     window show
     "Durch einem erbarmungslosen Sturm machten sich alle auf den Weg in den Rosengarten."
@@ -161,7 +161,7 @@ label schule:
     scene black with gradientwipedown
     "Bei der Ankunft am Gartenschuppen bemerkten die Anwesenden, dass etwas nicht in Ordnung war."
     extend " Es war absolut unmöglich zu übersehen und es jagte jeden, der es erblickte einen intensiven Schauer über den Rücken"
-    play sound "audio/sfx/umise_024.ogg"
+    play sound umise_024
     scene magicsquare_sun7 with fastdissolve
     pause 4
     $ songname = "Lure"
@@ -178,9 +178,9 @@ label schule:
     show rainfrontscroll
     show nat a12nayamu1 behind rainfrontscroll at m
     with gradientwipedownleft
-    play sound "audio/sfx/umise_032.ogg"
+    play sound umise_032
     pause 0.5
-    play sound "audio/sfx/umise_032.ogg"
+    play sound umise_032
     pause 1.0
     nat "Ich kann das Tor nicht öffnen, es ist verschlossen, gibt es keinen Schlüssel?"
     "Natsuhi versuchte, das Tor zu öffnen, aber es rührte sich nicht von der Stelle."
@@ -192,9 +192,9 @@ label schule:
     gen "Fräulein Natsuhi-sama, normalerweise klemmt das Tor nur." 
     extend " Lassen Sie es mich versuchen."
     window hide
-    play sound "audio/sfx/umise_032.ogg"
+    play sound umise_032
     pause 0.5
-    play sound "audio/sfx/umise_032.ogg"
+    play sound umise_032
     pause 1.0
     window auto
     "Genji versuchte ebenfalls das Tor zu öffnen, aber es ging trotzdem nicht auf, ein Schlüssel muss her."
@@ -232,27 +232,27 @@ label schule:
     show rainfrontscroll
     show gen a11defo1 behind rainfrontscroll at m
     pause 1
-    play sound "audio/sfx/umise_020.ogg"
+    play sound umise_020
     pause 1.0
-    play sound "audio/sfx/umise_012.ogg"
+    play sound umise_012
     show gen a11defo1 behind rainfrontscroll at m with vpunch
     pause 1.0
-    play sound "audio/sfx/umise_020.ogg"
+    play sound umise_020
     pause 1.0
-    play sound "audio/sfx/umise_012.ogg"
+    play sound umise_012
     show gen a11defo1 behind rainfrontscroll at m with vpunch
     pause 1.0
-    play sound "audio/sfx/umise_020.ogg"
+    play sound umise_020
     pause 1.0
-    play sound "audio/sfx/umise_012.ogg"
+    play sound umise_012
     show gen a11defo1 behind rainfrontscroll at m with vpunch
-    play sound "audio/sfx/umise_039.ogg"
+    play sound umise_039
     pause 1.0
     "Drei kräftige Hiebe waren ausreichend um das alte Schloss zu zerstören."
     "Genji kann nun das Tor in den Schuppen mit leichtigkeit öffnen."
     window hide
     pause 1
-    play sound "audio/sfx/umise_017.ogg"
+    play sound umise_017
     stop music fadeout 2.0
     $ songname = "-"
     scene white zorder 99
@@ -285,8 +285,8 @@ label schule:
     window show
     pause 0.5
     $ songname = "Towering cloud in summer"
-    play music "audio/bgm/umib_011_Intro.ogg"
-    queue music "audio/bgm/umib_011_loop.ogg" loop 
+    play music umib_011_intro
+    queue music umib_011_loop loop 
     show screen showsong
     stop wind fadeout 2.0
     mar "Uu!"
@@ -313,12 +313,12 @@ label schule:
     "Battler ist noch völlig schlaftrunken, für ihn ergeben die Worte von Jessica noch keinen Sinn."
     show but a21nayamu2 at m
     but "Bitte lass mich noch 5 Minuten weiterschlafen..... nur noch einen winzigen Augenblick..."
-    play sound "audio/sfx/umise_012.ogg"
+    play sound umise_012
     show but a21kuyasigaru1 at m
     show jes a12ikari1 at l
     with vpunch
     hide but with quickgradientwipedown
-    play sound "audio/sfx/umise_013.ogg"
+    play sound umise_013
     jes "Wach auf, Battler-kun!"
     extend " Es ist schon Morgen!"
     but "Wowowowow, musst du mich gleich schlagen?"
@@ -357,10 +357,10 @@ label schule:
     stop music fadeout 1.0
     $ songname = "-"
     scene black with gradientwiperight
-    play wind "audio/sfx/umilse_005.ogg"
+    play wind umilse_005
     "Die drei schnappten sich einen Regenschirm und gingen nach draußen zum Gartenschuppen."
     extend " Auch sie bemerkten welche Ausmaße dieser Taifun angenommen hat."
-    play music "audio/bgm/umib_036.ogg"
+    play music umib_036
     $ songname = "Play"
     show screen showsong
     "Dort angekommen, merkten sie schnell, dass die Erwachsenen wohl nicht viel davon hielten, dass die drei auf sie zukamen."
@@ -385,8 +385,8 @@ label schule:
     pause 1
     $ songname = "goldenslaughterer"
     show screen showsong
-    play music "audio/bgm/umib_024.ogg"
-    play sound "audio/sfx/umise_013.ogg"
+    play music umib_024
+    play sound umise_013
     jes "KYAAAAAAAAAAAAAAAAAA!!!!!!!!"
     extend " GEORGE???!?!?!?!?"
     extend " DAAAAAAAAAAAAD????!?!?!?!?"
@@ -467,7 +467,7 @@ label schule:
     show expression(CustomParticles("images/system/particle.png", 10))
     with quickergradientwipeleft
     pause 0.5
-    play sound "audio/sfx/umise_013.ogg"
+    play sound umise_013
     show but b11naku1 at m with vpunch
     window show
     but "Das darf doch wohl nicht wahr sein?!!?!?"
@@ -478,7 +478,7 @@ label schule:
     but "Aber dass man dich tötet und dein Gesicht auf grausamste Weise entstellt, das hast nicht einmal du verdient."
     extend " Wenn du deine Kleider nicht anhättest, wüsste ich gar nicht, wer da vor mir steht."
     but "Das ist einfach viel zu viel, wieso ist das passiert?"
-    play sound "audio/sfx/umise_013.ogg"
+    play sound umise_013
     show but b26naku2 at m with vpunch
     extend " ICH VERSTEH ES NICHT!!!"
     but "Warum nur? Warum nur? Warum nur?"
@@ -486,12 +486,12 @@ label schule:
     pause 0.5
     scene black with dissolve
     extend " Wer... liegt.. da... neben.. dir...??"
-    play sound "audio/sfx/umise_038.ogg"
+    play sound umise_038
     scene blood_1a
     extend " Nein!!! Nein!!! Kyrie-san!!!"
     but "Wieso auch noch du?"
     extend " Ich habe dich nie für meine neue Mutter gehalten, aber das ist übertrieben!"
-    play sound "audio/sfx/umise_038.ogg"
+    play sound umise_038
     scene blood_1ar with dissolve
     extend " Nie im Leben hätte ich mir für einen von euch ein solches Ende gewünscht."
     but "Natürlich sagt man manchmal aus Wut, dass man jemanden tot sehen will, aber ihn dann wirklich tot zu sehen, das ertrage ich nicht..."
@@ -528,6 +528,13 @@ label schule:
     nat "Alles in Ordnung, ... auch ich sehe, dass man da nichts machen kann."
     extend " ...Es gibt keinen Grund, sich für etwas zu entschuldigen."
     "Auch Natsuhi, die versucht, einen kühlen Kopf zu bewahren, ist anzumerken, dass sie der Tod ihres Mannes nicht kalt lässt."
+    nan "Was erblicken meine Augen da?"
+    "Nanjos Hand nähert sich vorsichtig der Hosentasche von Gohda, dort scheint etwas drin zu sein."
+    nan a1defo1 "Tatsächlich, wie kommt der hier rein? Das ist absolut unmöglich!"
+    nat a32ikari1 "Wie kann das bitte sein?"
+    "Der Schlüssel zu diesem Gartenschuppen wurde im Schuppen bei der Leiche von Gohda gefunden."
+    extend " Normalerweise sollte es doch unmöglich sein, da der Schuppen nur von außen abgeriegelt werden kann."
+    nat "Das wird alles immer seltsamer und seltsamer."
     "Auch die bedienstete Shannon sieht sehr bedrückt aus."
     window hide
     pause 0.5
@@ -543,7 +550,7 @@ label schule:
     extend " George-sama?"
     extend " Warum?"
     show but b23naku3 at l
-    but "Richtig Shannon-chan, das ist Aniki"
+    but "Richtig Shannon-chan, das ist Aniki..."
     extend " Sag mir... Shannon-chan..."
     extend " Wie hast du Aniki zuletzt erlebt?"
     show sha b31majime1 at r
@@ -562,143 +569,294 @@ label schule:
     with quickergradientwipeleft
     pause 0.5
     window show
-    show nat a12nayamu1 at l
+    show nat a12nayamu1 behind rainfrontscroll at l
     nat "Hast du die Polizei erreicht, Genji?"
-    show gen a11defo1 at r
+    show gen a11defo1 behind rainfrontscroll at r
     gen "Leider nicht, die Leitungen wurden gekappt."
     extend " Ein Anruf ist nicht durchgekommen."
-    "Genji ist mit der schlechten Nachricht zurückgekehrt, dass die Polizei nicht informiert wurde, es sieht so aus, als müssten die Überlebenden bis Montag warten."
-    gen "Natsuhi-sama..." 
-    extend " Sie sollten wissen, dass der Schlüssel für das Tor in der Tasche von Gohda innerhalb des Schuppens gefunden wurde."
     nat a33hisu1 "Wer um alles in der Welt??"
+    "Genji ist mit der schlechten Nachricht zurückgekehrt, dass die Polizei nicht informiert wurde, es sieht so aus, als müssten die Überlebenden bis Montag warten."
     window hide 
     pause 1
     call chapterendb
     pause 1
-    play audio "audio/sfx/umise_030.ogg"
+    play audio umise_030
     show geo a11defo1 at m with fastdissolve
     pause 0.3
     scene black with instant
-    play audio "audio/sfx/umise_046.ogg"
+    play audio umise_046
     scene blood_1b with instant
     pause 0.5
     scene black with instant
-    play audio "audio/sfx/umise_030.ogg"
+    play audio umise_030
     show rud a11defo1 at m with fastdissolve
     pause 0.3
     scene black with instant
-    play audio "audio/sfx/umise_046.ogg"
+    play audio umise_046
     scene blood_1a with instant
     pause 0.5
     scene black with instant
-    play audio "audio/sfx/umise_030.ogg"
+    play audio umise_030
     show kir a11defo1 at m with fastdissolve
     pause 0.3
     scene black with instant
-    play audio "audio/sfx/umise_046.ogg"
+    play audio umise_046
     scene blood_2e with instant
     pause 0.5
     scene black with instant
-    play audio "audio/sfx/umise_030.ogg"
+    play audio umise_030
     show ros a11komaru4 at m with fastdissolve
     pause 0.3
     scene black with instant
-    play audio "audio/sfx/umise_046.ogg"
+    play audio umise_046
     scene blood_1ar with instant
     pause 0.5
     scene black with instant
-    play audio "audio/sfx/umise_030.ogg"
+    play audio umise_030
+    show cla a11defo1 at m with fastdissolve
+    pause 0.3
+    scene black with instant
+    play audio umise_046
+    scene blood_1ar with instant
+    pause 0.5
+    scene black with instant
+    play audio umise_030
     show goh a11defo1 at m with fastdissolve
     pause 0.3
     scene black with instant
-    play audio "audio/sfx/umise_046.ogg"
+    play audio umise_046
     scene bite with instant
     pause 0.5
     scene black with instant
-    play audio "audio/sfx/umise_030.ogg"
+    play audio umise_030
     show no83_0051
     show bea a11akuwarai2 at m with fastdissolve
     pause 1
     scene black with instant
-    play audio "audio/sfx/umise_046.ogg"
+    play audio umise_046
     show text _("Zur Zeit der ersten Dämmerung:\nsollst du die sechs, die der Schlüssel ausgewählt hat,\nals Opfer darbringen.")
     pause 7
     scene black with kanon_r 
-    ##Kapitel Ende
-    $ chapter = 1002
-    $ songname = "-"
-    $ save_name = _("EpisodeX Illusion of the golden witch\nDie Zwei, die sich nahe stehen")
-    show screen showch
+    pause 3
+    show screen clockschoolch1
+    play sound "<from 0 to 5>/audio/sfx/umilse_1050.ogg"
+    pause 10
+    hide screen clockschoolch1 with dissolve
+    pause 2
+    ## Kapitel Ende
     ## Kapitel 2 - Die Zwei, die sich nahe stehen
+    $ chapter = 1002
+    $ songname = "Witch in Gold"
+    $ save_name = _("EpisodeX Illusion of the golden witch\nDie Zwei, die sich nahe stehen")
+    play music umib_017
+    play wind umilse_005
+    play rain umilse_012
+    show screen showch
+    show screen showsong
+    pause 0.5
+    scene m_cy1a
+    show rainbackscroll
+    show rainfrontscroll
+    with gradientcirclefade
+    pause 0.5
+    window show
     "Nach der Tragödie, zogen sich dich überlebenden in das Wohnzimmer der Villa zurück."
-    "Dabei ist eine hitzige Diskussion entfacht, wer ein potenzieller Täter sein könnte."
+    extend " Dabei ist eine hitzige Diskussion entfacht, wer ein potenzieller Täter sein könnte."
+    "Die Lage ist spürbar angespannt seit dem die sechs im Gartenschuppen gefunden wurden."
+    extend " Es würde jeden stressen, vorallem, wenn man weiß, dass man auf der Insel aktuell gefangen ist aufgrund des Wetters."
+    window hide
+    stop wind fadeout 2.0
+    pause 0.5
+    scene m1f_s1cr at bgani
+    show expression(CustomParticles("images/system/particle.png", 10))
+    with gradientcirclefade
+    show but b11odoroki3 at m
+    pause 0.5
+    window show
     but "Was machen wir jetzt?"
     extend " Hier läuft ein Mörder frei herum..."
+    show eva b23komaru2 at l
     eva " Wir sollten abwarten, bis sich der Sturm verzieht."
     extend " Heißt aber auch, dass wir hier bis morgen früh aussitzen müssen."
+    show jes a23majime1 at r
     jes "Was ist, wenn der Mörder wieder zuschlägt?"
-    extend " ...Wichtiger ist auch, wer der Mörder ist?"
+    extend " ...Wichtig ist auch, wer der Mörder ist."
     extend " Es ist entweder eine Person, die sich vorher auf die Insel geschlichen hat oder einer von uns."
+    window hide
+    pause 0.5
+    scene m1f_s1cr at bgani
+    show nat a11komaru1 at m
+    show expression(CustomParticles("images/system/particle.png", 10))
+    with quickgradientwipeleft
+    window show
     nat "Gut möglich, es wäre einfach gewesen kurz vor dem Taifun die Insel zu erreichen, ohne dass es jemand merkt."
-    eva "Wir haben jetzt Schrotflinten zur Selbstverteidigung."
-    extend " Im ernstfall wissen wir, wie man damit schießt."
+    extend " Auf der anderen Seite benötigt der Täter ein sehr gutes Verständnis über absolut alle Räume und Wege die es hier auf der Insel gibt."
+    show but b23nayamu1 at l
+    but "In anderen Worten: Der Täter kennt uns sehr gut und ist kein Eindringling von außerhalb."
+    but b23kayasigaru1 "Verdammt!" 
+    extend " Ich bekomme es nicht in meine Birne, warum jemand von uns irgendwen ermorden sollte..."
+    hid "Hey Leute! Ich habe ein paar Waffen gefunden!"
+    window hide
+    pause 0.5
+    scene m1f_s1cr at bgani
+    show hid a11defo1 at m
+    show expression(CustomParticles("images/system/particle.png", 10))
+    with quickgradientwipeleft
+    window show  
+    "Zwischenzeitlich sollte auf einen Tipp von Genji hin Hideyoshi Kinzos Schrotflinten holen."
+    extend " Diese sind von Kinzo modifizierte Varianten, abgesägt mit mehr Munition und weniger Streuung"
+    play audio umise_030
+    show hid a12defo1 at m
+    show eva b24defo1 at l
+    show nat a16defo1 at r
+    "Waffen besitzen jetzt Hideyoshi, Eva und Natsuhi."
+    extend " Die anderen waren entweder zu Jung für Schusswaffen oder haben abgelehnt."
+    window hide
+    pause 0.5
+    scene m1f_s1ar_bg at bgani
+    show rainbackscroll
+    show rainfrontscroll
+    show m1f_s1ar at bgani
+    show expression(CustomParticles("images/system/particle.png", 10))
+    with quickergradientwipeleft
+    pause 0.5
+    show eva b24akirenigo at m with dissolve
+    window show
+    eva "Wir haben jetzt endlich Schrotflinten zur Selbstverteidigung."
+    extend " Im Ernstfall wissen wir, wie man damit schießt."
     eva "Es gäbe viele Gründe für dritte Personen uns auszumerzen, vorallem wenn man die Legende des Goldes kennt."
+    show nat a16komaru1 at l
     nat "Mein Mann, war immer davon überzeugt, dass Vater sein Gold irgendwo auf der Insel versteckt hat."
     extend " Letztes Jahr hat Vater ein Rätsel unter dem Gemälde der Hexe platziert, aber er konnte es nicht lösen."
+    show but b11aseru1 at r
     but "Dieses Rätsel sieht aber auch abgefahren aus!"
-    extend " Zur Zeit der zweiten Dämmerung sollen die, die sich nahe stehen auseinanderreißen oder sowas."
+    extend " 'Zur Zeit der zweiten Dämmerung sollen die, die sich nahe stehen auseinanderreißen' oder sowas."
     but "Wie soll man so auf einen Ort auf der Insel schließen können?"
     but "Ich hab es aber auch ehrlich gesagt nie komplett gelesen."
+    hide but
+    hide nat
+    show eva b24akirenigo at l
+    show jes a11atya2 at r
+    with dissolve
     jes "Das Rätsel besagt einfach nur, geh zu einem Ort und töte nach einem bestimmten Muster."
     extend " Danach soll Beatrice auferstehen."
     extend " 'Zur Zeit der neunten Dämmerung, wird die Hexe wiederbelebt, und niemand wird am Leben bleiben'."
-    eva "Die Hexe Beatrice aus dem Wald, ist bereits ein Gerücht, dass es während unserer Kindheit gegeben hat."
+    eva b21futeki1 "Die Hexe Beatrice aus dem Wald, ist bereits ein Gerücht, dass es während unserer Kindheit gegeben hat."
     extend " Wie soll das bitte aussehen?"
     extend " Ein magisches Wesen, tötet uns um sich selber wiederzubeleben?"
     eva "Dieses Rätsel wird doch nur als Deckmantel verwendet!"
+    show nat a12nayamu1 at m
     nat "Es wäre aber auch schwachsinnig sich auszudenken, dass irgendjemand sich als Beatrice verkleidet und die Morde ausübt."
-    eva "Sich als Beatrice verkleiden?"
+    eva a11hohoemi1 "Sich als Beatrice verkleiden?"
     extend " Also jemand wie beispielweise Shannon verkleidet sich als Hexe und tötet uns alle?"
     extend " Der Gedanke klingt einfach schon mehr als absurd."
+    window hide
+    pause 0.5
+    scene m1f_s1cr at bgani
+    show expression(CustomParticles("images/system/particle.png", 10))
+    with quickgradientcirclefade
+    show but b11oya1 at m with dissolve
+    pause 0.5
+    window show
     but "Richtig!"
     extend " Shannon-chan könnte keiner Fliege was zuleide tun."
+    show eva b22akire2 at r
     eva "Stille Wasser sind tief, Battler-kun *kicher*"
-    extend " Spaß beiseite, dieses unfähige Ding, könnte noch nicht einmal ein Buttermesser in die Hand nehmen."
+    extend a11hohoemi1 " Spaß beiseite, dieses unfähige Ding, könnte noch nicht einmal ein Buttermesser in die Hand nehmen."
+    hide but
+    show nat a11ikari1 at l
     nat "Eva-san! Das war mehr als nur unhöflich gegenüber meiner Angestellten!"
     eva "Oh, entschuldigung!..." 
     extend " ...Kommt bestimmt nicht wieder vor... *kicher*"
     "Eva klingt so, als habe sie eine gewisse Abneigung gegen Shannon."
     extend " Irgendwo ist das auch zu erwarten, schließlich wollte sie nie, dass so eine wie sie etwas mit ihrem verstorbenen Sohn anfängt."
     "Als Reaktion stellt sich Battler schützend vor Shannon, da er nicht möchte, dass Eva so respektlos über sie redet."
-    but "Ich würde Shannon niemals verdächtigen!"
+    hide eva
+    hide nat
+    show but a11aseru5 at m
+    but "Ich würde Shannon-chan niemals verdächtigen!"
     extend " Sie war am boden zerstört als sie erfahren hat, das George-aniki ermordet wurde."
+    show eva b22akire2 at l
     eva "Meine Güte, Battler-kun, ich verdächtige sie nicht, das war doch nur ein Beispiel."
     but "Das war überflüssig, das musste nicht sein..."
+    hide but  
+    hide eva
+    show sha a11hajirai2 at m
+    sha "Battler-sama.... Ich... uhm..."
+    extend " Sie müssen das nicht für mich machen."
+    extend " ...Ich bin sowas bereits gewohnt."
+    show but b11warai2 at l
+    but "Nein, Shannon-chan, du musst dir das nicht gefallen lassen."
+    sha a12hajirai3 "B............."
+    extend "Battler-sama, ich weiß nicht, was ich sagen soll.... uhm..."
+    "Shannon errötete leicht, es war ihr offensichtlich etwas unangenehm."
+    extend " Gleichzeitig kehrte aber ihr Lächeln für einen kurzen Augenblick zurück."
+    window hide
+    pause 0.5
+    scene m1f_s1ar_bg at bgani
+    show rainbackscroll
+    show rainfrontscroll
+    show m1f_s1ar at bgani
+    show expression(CustomParticles("images/system/particle.png", 10))
+    with quickergradientwipeleft
+    pause 0.5
+    show nat a12nayamu1 at m with dissolve
+    window show
     nat "Der Täter muss unter uns sein."
     extend " ...Es gibt keine unsichtbaren Wesen, die einfach Menschen beliebig umbringen und in verschlossene Räume sperren."
+    show but a11niramu3 at rightedge
     but "Da hast du vermutlich recht mit..."
-    extend " aber ich kann auch nicht glauben, dass der Täter gerade seelenruhig mit uns in einem Raum sitzt und zuhört."
+    extend " Aber ich kann auch nicht glauben, dass der Täter gerade seelenruhig mit uns in einem Raum sitzt und zuhört."
+    $ songname = "Suspicion"
+    play music umib_027
+    show screen showsong
     nat "Das stimmt, deswegen sollten wir uns aufteilen."
+    show eva a11hohoemi1 at l
     eva "Huh, aufteilen?"
     nat "Die einzige Möglichkeit das Tor zum Gartenschuppen zu öffnen ist der Schlüssel aus dem Raum der Bediensteten!"
     eva "Wurde der Schlüssel nicht neben Gohdas Leiche gefunden?"
     extend " ....Der Raum war offenbar abgeschlossen, obwohl der Schlüssel im Schuppen selbst lag."
     but "Das klingt super seltsam, hat das Tor auch ganz sicher nicht geklemmt?"
     extend " Ich meine haben es mehrere versucht zu öffnen?"
+    hide nat
+    show gen a11defo1 at m
     gen "Ich habe es mit Natsuhi-sama überprüft, es war definitiv abgeschlossen..."
-    "Der Tatort ist ein Raum der verschlossen mit sechs Leichen drin gefunden wurde, alle Leichen wurden von Dr. Nanjo als tot identifiziert."
+    but "Ich finde es auch ehrlich gesagt etwas blöd sich aufzuteilen."
+    extend " Wenn der Täter sich in einer Gruppe befindet, sind die anderen ihm ausgeliefert."
+    eva "Da hast du recht, es würde vielleicht sinn machen, wenn ein paar von uns verdächtigt werden."
+    window hide
+    pause 0.5
+    scene firsttwilight with gradientcirclefade
+    "Der Tatort ist ein verschlossener Gartenschuppen in dem sechs Leichen gefunden wurden." 
+    extend " Alle Leichen wurden von Dr. Nanjo als tot bestätigt."
     "Zu den Opfern zählen:"
-    extend " Ushiromiya George,"
-    extend " Ushiromiya Rudolf,"
-    extend " Ushiromiya Kyrie,"
-    extend " Ushiromiya Krauss,"
-    extend " Ushiromiya Rosa,"
+    scene black with dissolve
+    show geo a11defo1 at leftedge
+    extend " Ushiromiya George, der Sohn von Eva und Hideyoshi."
+    show rud a11defo1 at m
+    extend " Ushiromiya Rudolf, der Vater von Battler."
+    show kir a11defo1 at rightedge
+    extend " Ushiromiya Kyrie, die Stiefmutter von Battler."
+    scene black with fastdissolve
+    show cla a11defo1 at leftedge
+    "Ushiromiya Krauss, Ehemann von Natsuhi und Jessicas Vater."
+    show ros a11komaru4 at m
+    extend " Ushiromiya Rosa, die Mutter von Maria."
+    show goh a11defo1 at rightedge
     extend " und der Bedienstete Gohda."
+    scene firsttwilight with gradientcirclefade
     "Des weiteren wurde der einzige Schlüssel, der den Gartenschuppen öffnen und schließen kann neben der Leiche von Gohda gefunden."
-    extend " Natsuhi und Gohda konnten bestätigen, dass das Tor komplett abgeschlossen war."
-    "Bedeutet, dass der verschlossene Schuppen erst geöffnet, als mit einer Feuerwehraxt das Tor zerstört wurde."
+    extend " Natsuhi und Genji konnten bestätigen, dass das Tor komplett abgeschlossen war."
+    "Bedeutet, der verschlossene Schuppen wurde erst geöffnet, als mit einer Feuerwehraxt das Schloss zerstört wurde."
     "Es gibt auch keinerlei Möglichkeiten den Schuppen von innen zu verschließen."
     "Das einzig existierende Fenster war auch abgeschlossen und unversehrt."
+    extend " Es existieren auch keine Geheimgänge oder irgendwelche dubiosen Schlupflöcher zum entkommen."
+    "In anderen Worten: Der Täter hat die sechs ermordet, den Schlüssel in Gohdas Hosentasche gelegt, ist rausgekommen und hat dann mit unbekannten Mitteln den Schuppen versiegelt."
+    window hide
+    pause 0.5
+    scene m1f_s1cr at bgani
+    show hid a11majime1 at m
+    ## TODO DIENSTAG
     hid "Ich finde es bemerkenswert, wie du niemanden verdächtigen möchtest, aber irgendwer muss es doch gewesen sein."
     extend " ...Vielleicht liegen wir alle falsch und es war wirklich eine Hexe."
     but "Ich weigere mich an so etwas zu glauben! Es gibt keine Magie und auch keine Hexe!"
@@ -955,6 +1113,7 @@ label schule:
     $ save_name = _("EpisodeX Illusion of the golden witch\nVerkettung der Ereignisse")
     show screen showch
     ## Kapitel 3 Verkettung der Ereignisse
+    ## TODO MITTWOCH
     nat "Ich weiß nicht, ob der Täter sich nur in der Villa aufhält, aber hier ist der Vorrat an Essen ein wenig größer."
     jes "Wieso passiert das alles überhaupt? War es nötig auch nur einen von ihnen zu töten?"
     nan "Jessica-chan, nur der Täter selbst kennt sein Tatmotiv."

@@ -154,7 +154,7 @@ image jes a23majime1 = Composite(
     (0, 0), WhileSpeaking("jes", "jes_a23_majime1_mouth", "images/sprites/jes/a23/majime1/0.png"),
     )
 
-image jes_a11_majime1_mouth:
+image jes_a23_majime1_mouth:
     "images/sprites/jes/a23/majime1/0.png"
     .10
     "images/sprites/jes/a23/majime1/1.png"

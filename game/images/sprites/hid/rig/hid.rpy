@@ -72,3 +72,33 @@ image hid_a11_komaru2_mouth:
     "images/sprites/hid/a11/komaru2/2.png"
     .20
     repeat
+
+image hid a11majime1 = Composite(
+    (776, 1111),
+    (0, 0), "images/sprites/hid/a11/majime1/0.png",
+    (0, 0), WhileSpeaking("hid", "hid_a11_majime1_mouth", "images/sprites/hid/a11/majime1/0.png"),
+    )
+
+image hid_a11_majime1_mouth:
+    "images/sprites/hid/a11/majime1/0.png"
+    .10
+    "images/sprites/hid/a11/majime1/1.png"
+    .10
+    "images/sprites/hid/a11/majime1/2.png"
+    .20
+    repeat
+
+image hid a12defo1 = Composite(
+    (872, 1111),
+    (0, 0), "images/sprites/hid/a12/defo1/0.png",
+    (0, 0), WhileSpeaking("hid", "hid_a12_defo1_mouth", "images/sprites/hid/a12/defo1/0.png"),
+    )
+
+image hid_a12_defo1_mouth:
+    "images/sprites/hid/a12/defo1/0.png"
+    .10
+    "images/sprites/hid/a12/defo1/1.png"
+    .10
+    "images/sprites/hid/a12/defo1/2.png"
+    .20
+    repeat

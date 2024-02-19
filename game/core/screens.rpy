@@ -176,7 +176,6 @@ style say_dialogue:
     shaper "hardbuzz"
     ### Dieser overlay_split Kasper soll die Artefakte in der Font minimieren.
     line_overlap_split -5
-    #newline_indent True
 
 
 ### Dieser Screen wird nur benutzt, damit man die Sprache vor Spielbeginn wählen kann
@@ -350,10 +349,9 @@ screen game_menu(scroll=None, yinitial=0.0):
 
         imagebutton auto "gui/gamemenu/backtomain_%s.png" action MainMenu() activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav" at gamemenubuttontransform
 
-    if persistent.showbgm == True:
-        text "♪" + songname ypos 1005 xpos 1900 xalign 1.0 size 30 font "fonts/AOTFShinGoProMedium.otf" outlines [ (absolute(3), "#000", absolute(0), absolute(0)) ]
-    if persistent.showplaytime == True:
-        text _("Spielzeit: ") + getPlayTime() ypos 1040 xpos 1900 xalign 1.0 size 30 font "fonts/AOTFShinGoProMedium.otf" outlines [ (absolute(3), "#000", absolute(0), absolute(0)) ]
+    text "♪" + songname ypos 1005 xpos 1900 xalign 1.0 size 30 font "fonts/AOTFShinGoProMedium.otf" outlines [ (absolute(3), "#000", absolute(0), absolute(0)) ]
+
+    text _("Spielzeit: ") + getPlayTime() ypos 1040 xpos 1900 xalign 1.0 size 30 font "fonts/AOTFShinGoProMedium.otf" outlines [ (absolute(3), "#000", absolute(0), absolute(0)) ]
 
 
 ## Dieser Screen hatte mal irgend einen Sinn für einen Workaround

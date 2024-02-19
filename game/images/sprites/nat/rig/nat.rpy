@@ -110,5 +110,33 @@ image nat_a33_hisu1_mouth:
     .20
     repeat
 
+image nat a16defo1 = Composite(
+    (649, 1158),
+    (0, 0), "images/sprites/nat/a16/defo1/0.png",
+    (0, 0), WhileSpeaking("nat", "nat_a16_defo1_mouth", "images/sprites/nat/a16/defo1/0.png"),
+    )
 
+image nat_a16_defo1_mouth:
+    "images/sprites/nat/a16/defo1/0.png"
+    .10
+    "images/sprites/nat/a16/defo1/1.png"
+    .10
+    "images/sprites/nat/a16/defo1/2.png"
+    .20
+    repeat
+
+image nat a16komaru1 = Composite(
+    (649, 1158),
+    (0, 0), "images/sprites/nat/a16/komaru1/0.png",
+    (0, 0), WhileSpeaking("nat", "nat_a16_komaru1_mouth", "images/sprites/nat/a16/komaru1/0.png"),
+    )
+
+image nat_a16_komaru1_mouth:
+    "images/sprites/nat/a16/komaru1/0.png"
+    .10
+    "images/sprites/nat/a16/komaru1/1.png"
+    .10
+    "images/sprites/nat/a16/komaru1/2.png"
+    .20
+    repeat
 

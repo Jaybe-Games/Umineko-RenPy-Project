@@ -112,3 +112,33 @@ image eva_b25_naku5s_mouth:
     "images/sprites/eva/b25/naku5s/2.png"
     .20
     repeat
+
+image eva b24defo1 = Composite(
+    (506, 1163),
+    (0, 0), "images/sprites/eva/b24/defo1/0.png",
+    (0, 0), WhileSpeaking("eva", "eva_b24_defo1_mouth", "images/sprites/eva/b24/defo1/0.png"),
+    )
+
+image eva_b24_defo1_mouth:
+    "images/sprites/eva/b24/defo1/0.png"
+    .10
+    "images/sprites/eva/b24/defo1/1.png"
+    .10
+    "images/sprites/eva/b24/defo1/2.png"
+    .20
+    repeat
+
+image eva b24akirenigo = Composite(
+    (506, 1163),
+    (0, 0), "images/sprites/eva/b24/akirenigo/0.png",
+    (0, 0), WhileSpeaking("eva", "eva_b24_akirenigo_mouth", "images/sprites/eva/b24/akirenigo/0.png"),
+    )
+
+image eva_b24_akirenigo_mouth:
+    "images/sprites/eva/b24/akirenigo/0.png"
+    .10
+    "images/sprites/eva/b24/akirenigo/1.png"
+    .10
+    "images/sprites/eva/b24/akirenigo/2.png"
+    .20
+    repeat

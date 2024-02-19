@@ -28,6 +28,21 @@ image but_b23_nayamu1_mouth:
     .20
     repeat
 
+image but b23kayasigaru1 = Composite(
+    (895, 1216),
+    (0, 0), "images/sprites/but/b23/kayasigaru1/0.png",
+    (0, 0), WhileSpeaking("but", "but_b23_kayasigaru1_mouth", "images/sprites/but/b23/kayasigaru1/0.png"),
+    )
+
+image but_b23_kayasigaru1_mouth:
+    "images/sprites/but/b23/kayasigaru1/0.png"
+    .10
+    "images/sprites/but/b23/kayasigaru1/1.png"
+    .10
+    "images/sprites/but/b23/kayasigaru1/2.png"
+    .20
+    repeat
+
 image but b23naku3 = Composite(
     (895, 1216),
     (0, 0), "images/sprites/but/b23/naku3/0.png",
