@@ -27,7 +27,7 @@ screen showch():
 
 screen showsong():
 
-    zorder 999
+    zorder 999999
 
     text "{bgm}♪" + songname size 40 xalign 0.05 yalign 0.01 font "fonts/AOTFShinGoProMedium.otf" outlines [ (absolute(3), "#000", absolute(0), absolute(0)) ] at songflyin
 

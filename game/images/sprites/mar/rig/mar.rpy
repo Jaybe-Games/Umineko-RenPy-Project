@@ -93,6 +93,21 @@ image mar_a22_sakebu1_mouth:
     .20
     repeat
 
+image mar a22akuwarai2 = Composite(
+    (774, 1012),
+    (0, 0), "images/sprites/mar/a22/akuwarai2/0.png",
+    (0, 0), WhileSpeaking("mar", "mar_a22_akuwarai2_mouth", "images/sprites/mar/a22/akuwarai2/0.png"),
+)
+
+image mar_a22_akuwarai2_mouth:
+    "images/sprites/mar/a22/akuwarai2/0.png"
+    .10
+    "images/sprites/mar/a22/akuwarai2/1.png"
+    .10
+    "images/sprites/mar/a22/akuwarai2/2.png"
+    .20
+    repeat
+
 image mar a22defo1k = Composite(
     (774, 1012),
     (0, 0), "images/sprites/mar/a22/defo1k/0.png",

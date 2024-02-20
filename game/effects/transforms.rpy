@@ -73,6 +73,8 @@ transform reset_shader:
 image butterfly1 = Movie(channel="movie", play="videos/butterfly1.mov", Delay=False, loop=False, side_mask=True, image="images/efe/no83_0051.png")
 image butterfly1_0 = Movie(channel="movie", play="videos/Butterfly1_0.mov", side_mask=True, Delay=False, loop=False, start_image="images/efe/no83_0051.png")
 image vortex = Movie(channel="movie", play="videos/vortex.mov", Delay=False, loop=True)
+image no59 = Movie(channel="movie", play="videos/no59.mov", Delay=False, loop=False)
+image chain = Movie(channel="movie", play="videos/chain.mov", Delay=False, loop=False, side_mask=True)
 
 transform bgani:
     subpixel True

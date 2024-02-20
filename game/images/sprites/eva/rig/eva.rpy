@@ -18,6 +18,21 @@ image eva_b21_akire1go_mouth:
     .20
     repeat
 
+image eva b26ikari2 = Composite(
+    (515, 1163),
+    (0, 0), "images/sprites/eva/b26/ikari2/0.png",
+    (0, 0), WhileSpeaking("eva", "eva_b26_ikari2_mouth", "images/sprites/eva/b26/ikari2/0.png"),
+    )
+
+image eva_b26_ikari2_mouth:
+    "images/sprites/eva/b26/ikari2/0.png"
+    .10
+    "images/sprites/eva/b26/ikari2/1.png"
+    .10
+    "images/sprites/eva/b26/ikari2/2.png"
+    .20
+    repeat
+
 image eva b25defo1 = Composite(
     (526, 1163),
     (0, 0), "images/sprites/eva/b25/defo1/0.png",

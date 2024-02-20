@@ -43,6 +43,21 @@ image hid_a11_odayaka1_mouth:
     .20
     repeat
 
+image hid a12komaru2 = Composite(
+    (872, 1111),
+    (0, 0), "images/sprites/hid/a12/komaru2/0.png",
+    (0, 0), WhileSpeaking("hid", "hid_a12_komaru2_mouth", "images/sprites/hid/a12/komaru2/0.png"),
+    )
+
+image hid_a12_komaru2_mouth:
+    "images/sprites/hid/a12/komaru2/0.png"
+    .10
+    "images/sprites/hid/a12/komaru2/1.png"
+    .10
+    "images/sprites/hid/a12/komaru2/2.png"
+    .20
+    repeat
+
 image hid a11defo1 = Composite(
     (776, 1111),
     (0, 0), "images/sprites/hid/a11/defo1/0.png",
@@ -70,6 +85,21 @@ image hid_a11_komaru2_mouth:
     "images/sprites/hid/a11/komaru2/1.png"
     .10
     "images/sprites/hid/a11/komaru2/2.png"
+    .20
+    repeat
+
+image hid a11naku4 = Composite(
+    (776, 1111),
+    (0, 0), "images/sprites/hid/a11/naku4/0.png",
+    (0, 0), WhileSpeaking("hid", "hid_a11_naku4_mouth", "images/sprites/hid/a11/naku4/0.png"),
+    )
+
+image hid_a11_naku4_mouth:
+    "images/sprites/hid/a11/naku4/0.png"
+    .10
+    "images/sprites/hid/a11/naku4/1.png"
+    .10
+    "images/sprites/hid/a11/naku4/2.png"
     .20
     repeat
 

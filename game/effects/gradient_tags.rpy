@@ -172,3 +172,56 @@ init python:
 
     config.custom_text_tags["gradient"] = gradient_tag
     config.custom_text_tags["gradient2"] = gradient2_tag
+
+init python:
+    # Vertical gradient shader
+    renpy.register_shader("vertical.gradient", variables="""
+        uniform vec4 u_gradient_color_top;
+        uniform vec4 u_gradient_color_bottom;
+        uniform vec2 u_model_size;
+        varying float v_gradient_done;
+        attribute vec4 a_position;
+    """, vertex_300="""
+        v_gradient_done = a_position.y / u_model_size.y;
+    """, fragment_300="""
+        float gradient_done = v_gradient_done;
+        gl_FragColor *= mix(u_gradient_color_top, u_gradient_color_bottom, gradient_done);
+    """)
+
+init python:
+      
+    # charactername gradient
+    def charname_tag(tag, argument, contents):
+        return [(renpy.TEXT_DISPLAYABLE, At(Text(text), charname())) for _,text in contents]
+
+# White to Gray
+transform charname:
+    shader "vertical.gradient"
+    u_gradient_color_top (1.0, 1.0, 1.0, 1.0) # White
+    u_gradient_color_bottom (0.6, 0.6, 0.6, 0.6) # Gray
+
+init python:
+    def red_tag(tag, argument, contents):
+        return [(renpy.TEXT_TAG, "gradient=#DF2525-#F54F4F")] + contents + [(renpy.TEXT_TAG, "/gradient")]
+    def blue_tag(tag, argument, contents):
+        return [(renpy.TEXT_TAG, "gradient=#16B0E5-#7BD8F8")] + contents + [(renpy.TEXT_TAG, "/gradient")]
+    def green_tag(tag, argument, contents):
+        return [(renpy.TEXT_TAG, "gradient=#c2fdbb-#95ef8b")] + contents + [(renpy.TEXT_TAG, "/gradient")]
+    def gold_tag(tag, argument, contents):
+        return [(renpy.TEXT_TAG, "gradient=#ffd966-#fcca34")] + contents + [(renpy.TEXT_TAG, "/gradient")]
+    def orange_tag(tag, argument, contents):
+        return [(renpy.TEXT_TAG, "gradient=#f5b674-#fa952b")] + contents + [(renpy.TEXT_TAG, "/gradient")]
+    ## Mein löwe mein Bär, mein Gradient Text der leider nur Horizontal ist
+    def dialogue(tag, argument, contents):
+        return [(renpy.TEXT_TAG, "gradient=#eeeeee-#c9c9c9")] + contents + [(renpy.TEXT_TAG, "/gradient")]
+    def bgm(tag, argument, contents):
+        return [(renpy.TEXT_TAG, "gradient=#27BFD1-#96DBE9")] + contents + [(renpy.TEXT_TAG, "/gradient")]
+
+    config.custom_text_tags["red_truth"] = red_tag
+    config.custom_text_tags["blue_truth"] = blue_tag
+    config.custom_text_tags["gold_truth"] = gold_tag
+    config.custom_text_tags["note_green"] = green_tag
+    ## Ich weiß nicht ob ich Orange Truth je brauchen werde
+    config.custom_text_tags["orange_truth"] = orange_tag
+    config.custom_text_tags["dialogue"] = dialogue
+    config.custom_text_tags["bgm"] = bgm

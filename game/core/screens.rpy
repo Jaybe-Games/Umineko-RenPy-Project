@@ -110,7 +110,7 @@ screen say(who, what, slow_effect = slow_fade, slow_effect_delay = 0, always_eff
                     window:
                         id "namebox"
                         style "namebox"
-                        text who id "who"
+                        text who id "who" at charname
 
         
         fancytext what id "what" slow_effect slow_effect slow_effect_delay slow_effect_delay always_effect always_effect
