@@ -727,7 +727,7 @@ label schule:
     eva "Es gäbe viele Gründe für dritte Personen uns auszumerzen, vorallem wenn man die Legende des Goldes kennt."
     show nat a16komaru1 at l
     nat "Mein Mann, war immer davon überzeugt, dass Vater sein Gold irgendwo auf der Insel versteckt hat."
-    extend " Letztes Jahr hat Vater ein Rätsel unter dem Gemälde der Hexe platziert, aber er konnte es nicht lösen."
+    extend " Vor zwei Jahren hat Vater ein Rätsel unter dem Gemälde der Hexe platziert, aber er konnte es nicht lösen."
     show but b11aseru1 at r
     but "Dieses Rätsel sieht aber auch abgefahren aus!"
     extend " 'Zur Zeit der zweiten Dämmerung sollen die, die sich nahe stehen auseinanderreißen' oder sowas."
