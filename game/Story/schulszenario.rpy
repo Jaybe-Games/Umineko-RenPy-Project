@@ -186,8 +186,8 @@ label schule:
     "Natsuhi versuchte, das Tor zu öffnen, aber es rührte sich nicht von der Stelle."
     "Einer scheint nicht überrascht zu sein."
     extend " Genji geht langsam und in aller Ruhe auf das Tor zu."
-    show gen a11defo1 behind rainfrontscroll at r
-    show nat a12nayamu1 behind rainfrontscroll at l
+    hide nat
+    show gen a11defo1 behind rainfrontscroll at m
     pause 0.5
     gen "Fräulein Natsuhi-sama, normalerweise klemmt das Tor nur." 
     extend " Lassen Sie es mich versuchen."
@@ -204,32 +204,24 @@ label schule:
     gen a11komaru1 "Wie Sie wünschen."
     hide gen
     "Genji ging zurück in die Villa, um den Schlüssel zu holen."
-    scene black with quickergradientwipeleft
-    scene warehous_o1an
-    show rainbackscroll
-    show rainfrontscroll
+    hide nat
     show nan a1defo1 behind rainfrontscroll at m
-    with gradientwipedownleft
+    with quickergradientwipeleft
     nan "Ich denke, wir sollten Ruhe bewahren und nichts überstürzen."
     extend " ...Wir sollten erstmal auf einen Schlüssel warten."
     "Genji kehrte kurze Zeit später zurück, doch statt eines Schlüssels hält er eine Feuerwehraxt in der Hand."
-    scene black with quickergradientwipeleft
-    scene warehous_o1an
-    show rainbackscroll
-    show rainfrontscroll
+    hide nan
     show gen a21kashikomari1  behind rainfrontscroll at m
-    with gradientwipedownleft
     gen "Ich bitte um Verzeihung, ich konnte den Schlüssel nicht finden, wir müssen das Schloss zerstören."
     show eva b21akire1go behind rainfrontscroll at r
     eva "Sehr gute Idee!"
     show kan a11defo1 behind rainfrontscroll at l
     kan "Das Tor ist schon sehr alt und dürfte der Axt nicht lange standhalten."
     extend " Einmal durchgebrochen, sollte es einfach sein, das Tor zu öffnen"
-    scene black with quickergradientwipeleft
+    hide kan
+    hide eva
     "Genji beginnt nun das Schloss mit der Axt zu zerstören, die anderen sind zwei Schritte zurück gegangen."
-    scene warehous_o1an
-    show rainbackscroll
-    show rainfrontscroll
+    hide kan
     show gen a11defo1 behind rainfrontscroll at m
     pause 1
     play sound umise_020
@@ -298,16 +290,7 @@ label schule:
     mar a22warai2 "Wie aufgescheuchte Hühner! Wie aufgescheuchte Hühner!"
     extend " *kicher*kicher*!"
     extend " Uu~! Uu~!"
-    window hide
-    pause 0.5
-    scene g2f_r1b_bg
-    show rainbackscroll
-    show rainfrontscroll
-    show g2f_r1b
-    show expression(CustomParticles("images/system/particle.png", 10))
-    with quickergradientwipeleft
-    pause 1
-    window show
+    hide mar
     but "hmpff hmmmmm"
     extend " ..............Hühner? pfmmmm *gähn*"
     "Battler ist noch völlig schlaftrunken, für ihn ergeben die Worte von Jessica noch keinen Sinn."
@@ -329,15 +312,9 @@ label schule:
     extend " Uu~!! Uu~!!"
     jes a11majime1 "Maria! Bitte etwas ruhiger, Okay?"
     extend " Unsere hohle Birne muss sich erst einmal vom Aufwachen erholen!"
-    window hide
-    pause 0.5
-    scene g2f_r1b_bg
-    show rainbackscroll
-    show rainfrontscroll
-    show g2f_r1b
-    show expression(CustomParticles("images/system/particle.png", 10))
+    hide jes
+    hide mar
     show but a11defo1 at l
-    with quickergradientwipeleft
     window show
     but "Jo, Jessica-chan!"
     extend " Was meinst du mit aufgescheuchten Hühnern?"
@@ -409,14 +386,8 @@ label schule:
     show kan a13defo2 behind rainfrontscroll at l
     with fastdissolve
     kan "Ich habe verstanden!"
-    window hide
-    pause 0.5
-    scene warehous_o2ar
-    show rainbackscroll
-    show rainfrontscroll
-    with quickergradientwipeleft
-    pause 0.5
-    window show
+    hide kan
+    hide gen
     "Genji und Kanon stürmten aus unterschiedlichen Gründen auf die Villa zu."
     "Kurz nachdem beide in der Dunkelheit des Taifuns verschwunden waren, tauchten drei neue Gesichter am Tatort auf."
     hid "Halloooooo, seid ihr da hinten bei diesem Schuppen?"
@@ -432,16 +403,10 @@ label schule:
     extend " Bringt Battler und Jessica sofort zurück ins Gästehaus!"
     kum "Ohohohoho, dann sollten wir wohl besser gehen."
     extend " Battler-sama, Jessica-sama, folgt uns bitte."
-    window hide
-    pause 0.5
-    scene warehous_o2ar
-    show rainbackscroll
-    show rainfrontscroll
-    with quickergradientwipeleft
-    pause 0.5
+    hide kum
+    hide sha
+    hide nat
     show hid a11komaru2 behind rainfrontscroll at m
-    pause 0.5
-    window show
     hid "Was sehen meine Augen da? Liegt da George?"
     extend " Eva! Was ist hier passiert?"
     show eva b25naku5s behind rainfrontscroll at l
@@ -500,28 +465,13 @@ label schule:
     extend " Dass man euer Gesicht nicht mehr erkennt, hat keiner von euch verdient...."
     but "Es wäre viel einfacher gewesen, euch ins Jenseits zu schicken und hier reinzulegen..."
     extend " War das wirklich nötig? Macht es das wirklich besser?"
-    window hide
-    pause 0.5
-    scene warehous_i1ar2_bg at bgani
-    show rainbackscroll
-    show rainfrontscroll
-    show warehous_i1ar2 at bgani
-    show expression(CustomParticles("images/system/particle.png", 10))
-    with quickergradientwipeleft
+    hide but
     show hid a11komaru2 at m
     pause 0.5
     hid "Bleib stark, Battler-kun, die Polizei wird den Täter morgen finden und verhaften."
     extend " Ich bin genauso traurig wie du, aber wir dürfen jetzt keine falsche Bewegung machen."
-    window hide
-    pause 0.5
-    scene warehous_i1ar2_bg at bgani
-    show rainbackscroll
-    show rainfrontscroll
-    show warehous_i1ar2 at bgani
-    show expression(CustomParticles("images/system/particle.png", 10))
-    with quickergradientwipeleft
+    hide hid
     show nan a2fumu1 at m
-    pause 0.5
     nan "Ja, es ist nicht zu bezweifeln, dass sie nicht überlebt haben."
     extend " Es tut mir so unendlich leid, aber es gibt nichts, was ich tun kann."
     show nat a11komaru1 at l
@@ -536,15 +486,8 @@ label schule:
     extend " Normalerweise sollte es doch unmöglich sein, da der Schuppen nur von außen abgeriegelt werden kann."
     nat "Das wird alles immer seltsamer und seltsamer."
     "Auch die bedienstete Shannon sieht sehr bedrückt aus."
-    window hide
-    pause 0.5
-    scene warehous_i1ar2_bg at bgani
-    show rainbackscroll
-    show rainfrontscroll
-    show warehous_i1ar2 at bgani
-    show expression(CustomParticles("images/system/particle.png", 10))
-    with quickergradientwipeleft
-    pause 0.5
+    hide nat
+    hide nan
     show sha a11odoroki1 at r
     sha "Ist das dort...."
     extend " George-sama?"
@@ -1428,7 +1371,7 @@ label schule:
     hide kum
     "Kumasawa und Genji gingen sofort los um den anderen bescheid zu sagen, dass etwas nicht mit Eva und Hideoyshi stimmt."
     scene black with fastdissolve
-    "Die anderen haben sich darauf sofort auf den Weg zum Ort des Geschehens begeben."
+    "Battler, Jessica, Natsuhi, Maria und Shannon haben sich daraufhin sofort auf den Weg zum Ort des Geschehens begeben."
     scene m2f_p1ar_bg at bgani
     play rain umilse_012
     show rainbackscroll
@@ -1481,7 +1424,7 @@ label schule:
     nat "KYAAAAAAAA"
     extend " DAS KANN NICHT WAHR SEIN!!!"
     "Auf dem Bett im Gästezimmer lag Tante Eva."
-    extend " Der Bettlaken wurde mit ihrem Blut durchtränkt."
+    extend " Der Bettlaken wurde mit ihrem Blut völlig durchtränkt."
     "Jemand hat in ihre Stirn so eine Art von Pfahl reingerammt."
     nan "Ich spüre keinen Puls mehr, sie ist nicht mehr am Leben."
     but "Es reicht nun entgültig!"
@@ -1496,7 +1439,8 @@ label schule:
     kum "Ja leck mich doch am Zückerli, wir sind bestimmt die nächsten."
     extend " Ihihihihhih!!!"
     "Hideoyoshi lag nackt in der Badewanne, wie schon bei Eve wurde ihm ein Pfahl in die Stirn gerammt."
-    extend " Das Wasser aus dem DUschkopf plätschert ununterbrochen auf seinen Rücken."
+    extend " Das Wasser aus dem Duschkopf plätschert ununterbrochen auf seinen Rücken."
+    "Battler wurde von seiner Wut und seiner Traurigkeit überwältigt, ihn ihm kochen die Emotionen buchstäblich hoch."
     but "Ich bin so unglaublich sauer, ich kann es gar nicht richtig ausdrücken!"
     extend " ...BEATRICE ist nichts weiter als ein Märchen, damit wir die Fassung verlieren!"
     but "Es kann niemand unsichtbares existieren, der einfach so Leute tötet!"
@@ -1504,7 +1448,7 @@ label schule:
     but "So langsam ist schluss! Das wars!"
     extend " Wenn ich dich in die Finger bekomme, wirst du dir wünschen nie geboren worden zu sein!"
     but "Ich werde dich kriegen, wie auch immer du heißt!"
-    extend " Wenn du BEATRICE sein willst, dann werde ich mir dein fettes Kleid packen und es dir in den Hals rammen!"
+    extend " Wenn du BEATRICE sein willst, dann werde ich mir dein fettes Kleid nehmen und es dir in den Hals rammen!"
     but "Ich prügel die Scheiße aus dir raus, das schwör ich dir!!!"
     but "Verschlossener Gartenschuppen mit dem Schlüssel innerhalb? Eine Türkette? Lächerlich!"
     extend " Ich werde jedes Detail herausfinden und dich zum Schafott führen!"
