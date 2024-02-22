@@ -140,3 +140,19 @@ image nat_a16_komaru1_mouth:
     .20
     repeat
 
+image nat a17ikari2 = Composite(
+    (659, 1158),
+    (0, 0), "images/sprites/nat/a17/ikari2/0.png",
+    (0, 0), WhileSpeaking("nat", "nat_a17_ikari2_mouth", "images/sprites/nat/a17/ikari2/0.png"),
+)
+
+
+image nat_a17_ikari2_mouth:
+    "images/sprites/nat/a17/ikari2/0.png"
+    .10
+    "images/sprites/nat/a17/ikari2/1.png"
+    .10
+    "images/sprites/nat/a17/ikari2/2.png"
+    .20
+    repeat
+

@@ -413,3 +413,18 @@ image but_a11_aseru1_mouth:
     "images/sprites/but/a11/aseru1/2.png"
     .20
     repeat
+
+image but b25sakebu2 = Composite(
+    (935, 1216),
+    (0, 0), "images/sprites/but/b25/sakebu2/0.png",
+    (0, 0), WhileSpeaking("but", "but_b25_sakebu2_mouth", "images/sprites/but/b25/sakebu2/0.png"),
+    )
+
+image but_b25_sakebu2_mouth:
+    "images/sprites/but/b25/sakebu2/0.png"
+    .10
+    "images/sprites/but/b25/sakebu2/1.png"
+    .10
+    "images/sprites/but/b25/sakebu2/2.png"
+    .20
+    repeat
