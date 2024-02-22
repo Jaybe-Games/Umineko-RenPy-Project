@@ -1,8 +1,5 @@
 label chapter1:
-
-    #$ discord.update(state = "Episode 0")
-    #$ discord.update(details = "Chapter 1")
-    $ chapter = 1
+    $ chapter = _("Bootsfahrt nach Rokkenjima")
     $ songname = "-"
     $ persistent.openingplayed = True
     $ renpy.free_memory()
