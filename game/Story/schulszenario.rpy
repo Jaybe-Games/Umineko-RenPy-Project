@@ -440,7 +440,7 @@ label schule:
     but "Ah, es bringt nichts... Es bringt alles überhaupt nichts...."
     extend " Ich weiß, dass du ein Womanizer und ein ziemliches Arschloch warst..."
     but "Aber dass man dich tötet und dein Gesicht auf grausamste Weise entstellt, das hast nicht einmal du verdient."
-    extend " Wenn du deine Kleider nicht anhättest, wüsste ich gar nicht, wer da vor mir steht."
+    extend " Wenn du deine Kleider nicht anhättest, wüsste ich gar nicht, wer da vor mir liegt."
     but "Das ist einfach viel zu viel, wieso ist das passiert?"
     play sound umise_013
     show but b26naku2 at m with vpunch
