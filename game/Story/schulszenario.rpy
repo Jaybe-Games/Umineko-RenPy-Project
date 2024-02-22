@@ -1726,6 +1726,18 @@ label schule:
     jes "Wir sollten uns ein wenig ausruhen."
     extend " Wir müssen bei Kräften sein, wenn der Täter wieder zuschlagen will..."
     but "Gute Idee, vielleicht kommt einem ja ein Geistesblitz und wir schaffen es in den nächsten sechs Stunden das Rätsel zu lösen."
+    pause 1
+    scene black with instant
+    play audio umise_046
+    show text _("Zur Zeit der dritten Dämmerung:\nPreiset meinen noblen Namen")
+    pause 5
+    scene black with kanon_r 
+    pause 3
+    show screen clockschoolch3
+    play sound "<from 0 to 5>/audio/sfx/umilse_1050.ogg"
+    pause 10
+    hide screen clockschoolch3 with dissolve
+    pause 2 
     but "Ein Telefon klingelt?"
     extend " Wurden die Leitungen nicht getrennt?"
     "Einige Stunden später klingelt aus heiterem Himmel plötzlich das Telefon im Gästehaus."
@@ -1777,7 +1789,7 @@ label schule:
     bea "Gar nicht so weit weg, schau mal in der Villa nach, ich wünsche gutes gelingen!"
     extend "Kyahahahaahhaha!!!!"
     but "Dich pack ich mir als nächstes, du wirst schon sehen du Bitch!"
-    "Wütend legt Battler auf, der Täter ruft doch allen ernstes an und behauptet wieder gemordet zu haben..."
+    "Wütend legt Battler auf, der Täter besitzt auch noch die dreißtigkeit sich persönlich zu melden und sich über Battler lustig zu machen..."
     jes "War das BEATRICE?"
     extend " Was ist passiert?"
     but "Wir müssen sofort zur Villa, es könnte schon zu spät sein!"
@@ -1786,12 +1798,19 @@ label schule:
     kin "Heute ist ein großer Tag, endlich durfte ich dein Lächeln wiedersehen!"
     extend " Es würde mir überhaupt nichts ausmachen, würdest du mir mein Leben nun entreißen!"
     bea "Ich denke einfach mal, dass ich genau dies machen werde!"
-    kin "Warte bitte, was..."
-    extend " ahhhhhhhhhhhhhhhhhrggggggghhhhhhhhhhhhhhhhhhhhhhhhhhhhh"
-    bea "Tut mir leid Kinzo, aber du gehörst schon lange nicht mehr in diese Welt."
-    "Kinzos Körper ist in Flammen aufgegangen und seine Haut und Kleidung verbrennem vollständig."
-    bea "Für meine Vollständige Wiederauferstehung brauch ich immer noch ein Opfer und das bist dann doch du."
+    kin "Ich gebe dir mein Leben sehr gerne!"
+    extend " Mich hält nichts mehr in diese Welt.."
+    pause 1
+    kin "ahhhhhhhhhhhhhhhhhrggggggghhhhhhhhhhhhhhhhhhhhhhhhhhhhh"
+    bea "Ushiromiya Kinzo, du gehörst schon lange nicht mehr in diese Welt."
+    extend " Wir sehen uns im Goldenen Land wieder..."
+    "Nach einem Fingerschnippen ist Kinzos Körper in Flammen aufgegangen und seine Haut und Kleidung verbrennem vollständig."
+    "In der Zwischenzeit sind die vier in der Eingangshalle angekommen."
     but "Wo fangen wir an?"
+    jes "Hier liegt ein Brief auf dem Boden!"
+    "Jessica hob den Brief auf und öffnete ihn."
+    ntxt "Ich bin im Wohnzimmer, kommt und hol mich, Ushiromiya Battler!!"
+    but "Die macht sich über mich lustig!"
     jes "Die Tür zum Wohnzimmer ist versperrt!"
     extend " Sie war noch geöffnet, als wir zum Gästehaus gegangen sind!"
     nat "Haben wir einen Schlüssel?"
@@ -1801,19 +1820,22 @@ label schule:
     nat "Wir könnten versuchen durch das Fenster von außerhalb rein zu kommen."
     nan "Vielleicht haben wir noch eine Chance jemanden zu retten!"
     jes "Gute Idee!"
-    but "Nichts wie hin!"
     "Da nicht daran gedacht wurde, den verbannten Bediensteten mindestens einen Generalschlüssel abzunehmen, müssen sie improvisieren"
-    "Battler nimmt sich einen Stein und macht sich bereit es in das Wohnzimmerfenster zu donnern."
+    "Battler nimmt sich einen hroßen Stein und macht sich bereit es in das Wohnzimmerfenster zu donnern."
     $ songname = "goldenslaughterer"
     show screen showsong
-    but "Kanon!"
+    but "Kanon-kun!"
     jes "Was ist siehst du Battler-kun?"
-    but "Hier drin liegt Kanon!"
+    but "Hier drin liegt Kanon-kun!"
     extend " Nanjo-sensei, bitte schauen Sie sich ihn an!"
     nan "Er atmet nicht mehr, er ist erst kürzlich von uns gegangen."
     extend " Sein Kopf wurde durchbohrt, aber sein Pfahl hat nicht gehalten und ist rausgefallen."
     but "Verdammt! Verdammt! Verdammt!"
     extend " Die anderen sind bestimmt ebenfalls ermordet worden!"
+    jes "KANON-KUN!!!! *sob*sob*"
+    extend "ICH VERFLUCHE DICH, BEATRICE!!!"
+    "Jessica hat dieser ANblick wohl mit am meisten getroffen."
+    extend " Schließlich mochte sie ihn immer ein wenig mehr als die anderen."
     nat "Da liegt ein Brief!"
     "Natsuhi öffnet vorsichtig den Brief und nimmt zwei Schlüssel raus."
     nat " Das ist ein Generalschlüssel und einer für mein Zimmer in der oberen Etage!"
