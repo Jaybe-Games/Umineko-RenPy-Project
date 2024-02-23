@@ -49,7 +49,7 @@ transform clock_rotation_h_schoolch3:
 transform clock_rotation_m_schoolch3:
     around (.5, .5) alignaround (.5, .5) xalign .5 yalign .5
     rotate 0
-    ease 5 rotate 1800
+    ease 5 rotate 1980
 
 transform clock_rotation_h2:
     around (.5, .5) alignaround (.5, .5) xalign .5 yalign .5
@@ -153,15 +153,15 @@ screen clockschoolch1():
 screen clockschoolch2():
     zorder 50
     add "gui/time/clock.png" at [alpha_dissolve, Position(xpos = 1000, ypos = 300)]
-    add "gui/time/clock_m.png" at [clock_rotation_m_schoolch3, Position(xpos = 1430, ypos = 727)]
-    add "gui/time/clock_h.png" at [clock_rotation_h_schoolch3, Position(xpos = 1430, ypos = 727)]
+    add "gui/time/clock_m.png" at [clock_rotation_m_schoolch2, Position(xpos = 1430, ypos = 727)]
+    add "gui/time/clock_h.png" at [clock_rotation_h_schoolch2, Position(xpos = 1430, ypos = 727)]
     add "gui/time/clock_c.png" at Position(xpos = 1380, ypos = 700)
 
 screen clockschoolch3():
     zorder 50
     add "gui/time/clock.png" at [alpha_dissolve, Position(xpos = 1000, ypos = 300)]
-    add "gui/time/clock_m.png" at [clock_rotation_m_schoolch2, Position(xpos = 1430, ypos = 727)]
-    add "gui/time/clock_h.png" at [clock_rotation_h_schoolch2, Position(xpos = 1430, ypos = 727)]
+    add "gui/time/clock_m.png" at [clock_rotation_m_schoolch3, Position(xpos = 1430, ypos = 727)]
+    add "gui/time/clock_h.png" at [clock_rotation_h_schoolch3, Position(xpos = 1430, ypos = 727)]
     add "gui/time/clock_c.png" at Position(xpos = 1380, ypos = 700)
 
 screen clocktimu_break2():

@@ -7,8 +7,9 @@ screen showch():
 
     zorder 999
     
-    if chapter == 0:
-        text str(chapter) size 40 xalign 0.0 yalign 1.0 font "fonts/AOTFShinGoProMedium.otf" outlines [ (absolute(3), "#000", absolute(0), absolute(0)) ] at chapterdissolve
+    text chapter size 40 xalign 0.0 yalign 1.0 font "fonts/AOTFShinGoProMedium.otf" outlines [ (absolute(3), "#000", absolute(0), absolute(0)) ] at chapterdissolve
+
+    timer 8 action Hide('showch')
 
 screen showsong():
 

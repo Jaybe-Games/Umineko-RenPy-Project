@@ -9,8 +9,6 @@ label debug:
             jump chapter1
         "Kapitel 2":
             jump chapter2
-        "Schulprojekt":
+        "Deutschpräsentation":
             jump schule
-        "gradient":
-            jump gradient_test
 

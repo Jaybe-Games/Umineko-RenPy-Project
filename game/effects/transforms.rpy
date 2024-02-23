@@ -48,6 +48,13 @@ transform leftedge:
     yanchor 1.0
     ypos 1210
 
+transform leftedge2:
+    xanchor 0.5
+    xpos 350
+    zoom 0.990
+    yanchor 1.0
+    ypos 1210
+
 transform rightedge:
     xanchor 0.5
     xpos 1500
@@ -74,6 +81,7 @@ image butterfly1 = Movie(channel="movie", play="videos/butterfly1.mov", Delay=Fa
 image butterfly1_0 = Movie(channel="movie", play="videos/Butterfly1_0.mov", side_mask=True, Delay=False, loop=False, start_image="images/efe/no83_0051.png")
 image vortex = Movie(channel="movie", play="videos/vortex.mov", Delay=False, loop=True)
 image no59 = Movie(channel="movie", play="videos/no59.mov", Delay=False, loop=False)
+image no64 = Movie(channel="movie", play="videos/no64.mov", Delay=False, loop=True, side_mask=False, image="images/efe/no64_00000.png")
 image chain = Movie(channel="movie", play="videos/chain.mov", Delay=False, loop=False, side_mask=True)
 
 transform bgani:
@@ -271,4 +279,10 @@ transform credits_scroll:
     yoffset 0
     xalign 0.5
     linear 280 yoffset -17280
+
+transform credits_scroll_school:
+    subpixel True
+    yoffset 0
+    xalign 0.5
+    ease 90 yoffset -28536
 

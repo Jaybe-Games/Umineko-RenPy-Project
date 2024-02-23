@@ -34,3 +34,4 @@ game/cache/shaders.txt
 *.rpyc
 *.txt
 game/audio/voice/wel/test.wav
+game/images/school/credits.psd

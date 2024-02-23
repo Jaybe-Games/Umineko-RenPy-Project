@@ -1,6 +1,6 @@
 label schule:
     ##Kapitel 1 - Die sechs außerwählten
-    $ chapter = 1001
+    $ chapter = "Die sechs außerwählten"
     $ songname = "-"
     $ save_name = _("EpisodeX Illusion of the golden witch\nDie sechs außerwählten")
     ##Prolog
@@ -166,7 +166,7 @@ label schule:
     pause 4
     $ songname = "Lure"
     show screen showsong
-    play music "audio/bgm/umib_018.ogg"
+    play music umib_018
     "Auf dem Tor war ein seltsames Symbol abgebildet, es sieht aus als hätte jemand blutrote Farbe verwendet."
     "Eine eigenartige Schrift war deutlich zu erkennen und etwas dass so aussieht wie ein Deutsches Kreuz."
     eva "Wie geschmacklos!"
@@ -217,7 +217,7 @@ label schule:
     eva "Sehr gute Idee!"
     show kan a11defo1 behind rainfrontscroll at l
     kan "Das Tor ist schon sehr alt und dürfte der Axt nicht lange standhalten."
-    extend " Einmal durchgebrochen, sollte es einfach sein, das Tor zu öffnen"
+    extend " Einmal durchgebrochen, sollte es einfach sein, das Tor zu öffnen."
     hide kan
     hide eva
     "Genji beginnt nun das Schloss mit der Axt zu zerstören, die anderen sind zwei Schritte zurück gegangen."
@@ -528,7 +528,7 @@ label schule:
     "Genji ist mit der schlechten Nachricht zurückgekehrt, dass die Polizei nicht informiert wurde, es sieht so aus, als müssten die Überlebenden bis Montag warten."
     window hide 
     pause 1
-    call chapterendb
+    call chapterendb from _call_chapterendb
     pause 1
     play audio umise_030
     show geo a11defo1 at m with fastdissolve
@@ -551,7 +551,7 @@ label schule:
     pause 0.3
     scene black with instant
     play audio umise_046
-    scene blood_2e with instant
+    scene blood_2c with instant
     pause 0.5
     scene black with instant
     play audio umise_030
@@ -595,7 +595,7 @@ label schule:
     pause 2
     ## Kapitel Ende
     ## Kapitel 2 - Die Zwei, die sich nahe stehen
-    $ chapter = 1002
+    $ chapter = "Die Zwei, die sich nahe stehen"
     $ songname = "Witch in Gold"
     $ save_name = _("EpisodeX Illusion of the golden witch\nDie Zwei, die sich nahe stehen")
     play music umib_017
@@ -786,28 +786,6 @@ label schule:
     extend " ...Gibt es überhaupt einen Verdächtigen?"
     hid "Ist es für einen Menschen möglich, den passenden Schlüssel in den verschlossenen Raum zu legen?"
     but "Ach man... Das bringt doch alles nichts.... Das bringt doch alles nichts.."
-    but b11oya1 "Mir ist gerade etwas eingefallen!"
-    extend " Was wäre, wenn der verschlossene Raum, so wie er heute ist, nie als solcher gedacht war?"
-    hide hid
-    show eva a11hohoemi1 at r
-    eva "Oho, Battler-kun..." 
-    extend " Wie stellst du dir das vor? Lass mich raten, der Täter ist an Ort und Stelle bei einem Unfall ums Leben gekommen?"
-    but b22nayamu2 "Fast! Der Täter hat fünf von uns in den Schuppen geworfen und dann Selbstmord begangen!"
-    extend " Er konnte nicht damit leben, seine eigene Familie auf dem Gewissen zu haben und hat sich als sechste Person umgebracht!"
-    show nat a12nayamu1 at m
-    nat "Und wer war deiner Meinung nach der Täter?"
-    but "Nun ja haha..." 
-    extend " Vielleicht war es Gohda?"
-    extend b24futeki3 " Genau! Schließlich hatte er den Schlüssel in der Tasche!"
-    eva "Der Typ konnte nur Zwiebeln schneiden, sonst hatte er keine nennenswerten Fähigkeiten. *Kicher*"
-    hide but
-    hide eva
-    hide nat
-    show nan a2fumu1 at m
-    nan "Wenn ich etwas sagen dürfte, Battler-san."
-    extend " Bei einem Selbstmord wäre es für den Täter unmöglich, das Tor zu verschließen."
-    nan "Selbst wenn... Ich glaube nicht, dass man sich solche tödlichen Verletzungen so leicht selbst zufügen kann, das sieht nach einem absolut skrupellosen Mörder aus."
-    hide nan
     show hid a11defo1 at m
     hid "Was war das eigentlich für ein Symbol auf dem Tor?"
     extend " Es war kein Pentagramm, eher ein Deutsches Kreuz?"
@@ -840,7 +818,7 @@ label schule:
     "Schlimmer noch, sie sagte es mit einem furchterregenden Gesichtsausdruck. So selbstsicher, als wüsste sie etwas, was andere nicht wissen."
     show but a11aseru1 at l
     but "Whoaaa..."
-    but " Woher hast du das Wissen über diese Dinge?"
+    extend " Woher hast du das Wissen über diese Dinge?"
     scene c0101_b with fastdissolve
     mar "Kihihihihihihi!"
     extend " Ich bin auf Okkultismus spezialisiert."
@@ -858,12 +836,6 @@ label schule:
     mar "Man kann machen, was man will, sie kommt durch jede verschlossene Tür!"
     extend " Versucht gar nicht erst, euch zu wehren!" 
     extend " Kihihihihihihi!"
-    window hide
-    pause 0.5
-    scene black with dissolve
-    "Maria hat wegen ihrer kindlichen Art in der Schule nicht viele Freunde. Ihre Mutter Rosa, die inzwischen verstorben ist, schimpfte deshalb oft mit ihr."
-    extend " Allerdings ist sie ein großer Fan des Okkulten, was diesen Auftritt zumindest ein wenig erklären könnte."
-    window hide
     pause 0.5
     scene m1f_s1ar_bg at bgani
     show rainbackscroll
@@ -959,20 +931,11 @@ label schule:
     extend " Aber er würde nicht wollen, dass wir viel um ihn trauern, sondern dass wir weitermachen und ihn in guter Erinnerung behalten!"
     "Auch Hideyoshi kann seine Tränen nicht mehr zurückhalten."
     extend " Zu groß ist die emotionale Belastung, auch für Hideyoshi, der selbst jetzt noch tröstende Worte findet."
-    show eva b25naku5s at r
-    eva "Er hatte noch so viel vor sich, er war so ein guter Junge."
-    extend " Warum nur, warum nur? Wer war das?"
-    eva "Ich werde den Täter finden und töten!"
-    extend " Wie konnte er das meinem George antun?!"
-    hid a11komaru2 "Nana, beruhige dich, Eva!"
-    extend " George würde sich nicht rächen wollen!"
-    extend " Ich kann dich nur zu gut verstehen."
-    "Evas Trauer verwandelte sich in blanken Hass."
     stop music fadeout 2
     $ songname = "-"
     window hide
     pause 2
-    call butterfly1
+    call butterfly1 from _call_butterfly1_2
     pause 2
     window show
     "Genau in diesem Moment erscheinen wunderschöne goldene Schmetterlinge im Raum, buchstäblich aus dem Nichts."
@@ -1023,23 +986,7 @@ label schule:
     "Die beiden lassen sich von Evas Drohungen überhaupt nicht beeindrucken und ignorieren sie die ganze Zeit."
     zep "Ich bin einer der 72 großen Dämonen, der Dämon der Liebe, mein Name ist Zepar!"
     fur "Ich bin einer der 72 großen Dämonen, der Dämon der Liebe, mein Name ist Furfur!"
-    zep "Wir wurden von der Goldenen Hexe BEATRICE-sama herbeigerufen, um euch zu testen!"
-    hide zep
-    hide fur
-    show eva b26ikari2 at l
-    show hid a12komaru2 at r
-    eva "Ihr sollt Dämonen sein?"
-    extend " ...Wer soll euch das bitte glauben?"
-    extend " Was denn für ein Test?"
-    hid "Uns ist nicht nach dummen Scherzen zumute!"
-    extend " Verlasst diesen Raum!"
-    hide eva
-    hide hid
-    show zep a11defo1 at l
-    show fur a11defo1 at r
-    zep "Hast du das gehört Furfur?"
-    fur "Laut und deutlich, Zepar!"
-    zep "Ihr werdet euch einer Prüfung unterziehen müssen!"
+    zep "Ihr werdet euch jetzt einer Prüfung unterziehen müssen!"
     fur "Wer sich weigert, auf den wartet nur der Tod!"
     zep "Denn ihr beide seid von Fräulein BEATRICE-sama für die Zweite Dämmerung auserwählt worden!"
     hide zep
@@ -1091,9 +1038,9 @@ label schule:
     hide hid
     show zep a11defo1 at l
     show fur a11defo1 at r
-    zep "Nun, wir sollten keine Zeit verlieren, BEATRICE-sama wird langsam ungeduldig, Furfur"
+    zep "Nun, wir sollten keine Zeit verlieren, BEATRICE-sama wird langsam ungeduldig, Furfur!"
     fur "Dann lass uns mit dem Test beginnen, Zepar!"
-    zep "Die Frage, die wir stellen wollen, lautet.."
+    zep "Die Frage, die wir stellen wollen, lautet..."
     show zep a12defo1 at l
     show fur a12defo1 at r
     play sound umise_002
@@ -1111,8 +1058,6 @@ label schule:
     "Hideyoshi und Eva sind sich absolut sicher, was sie den Dämonen antworten wollen, da muss man nicht lange überlegen."
     hid "Unsere gemeinsame Antwort darauf lautet wie folgt"
     eva "Unser Sohn George!"
-    eva "George war das Beste, was uns je passiert ist!"
-    extend " Wir lieben ihn über alles!"
     hid "Das ist der Beweis für unsere Entschlossenheit!"
     extend " Nichts sollte ein Ehepaar mehr lieben als die eigenen Kinder!"
     extend " Sie gesund aufwachsen zu sehen, ist das größte Geschenk."
@@ -1128,21 +1073,8 @@ label schule:
     with quickflash
     zep "Aber die Antwort ist leider falsch!"
     fur "Damit ist das Spiel vorbei und euer Leben gehört BEATRICE-sama!"
-    hide zep
-    hide fur
-    show eva b26ikari2 at l
-    show hid a12komaru2 at r
-    eva "Wollt ihr uns verarschen? Wie kann die Antwort falsch sein?"
-    hid "Genau!"
-    extend " Das ist ein Test, den man nicht bestehen kann, weil die richtige Antwort immer das ist, was einem gerade in den Kram passt!"
-    extend " ...Ich habe doch Recht!"
-    hide eva
-    hide hid
-    show zep a11defo1 at l
-    show fur a11defo1 at r
     zep "Die sehen aber sauer aus, Furfur!"
     fur "Aber beide haben offensichtlich gelogen, Zepar!"
-    play audio umise_030
     play audio umise_030
     show e0903d with quickgradientwiperight
     eva "Das ist doch wohl die Höhe!"
@@ -1295,6 +1227,9 @@ label schule:
     with fastdissolve
     pause 1
     show kan a11defo1 at m
+    $ songname = "Lure"
+    show screen showsong
+    play music umib_018
     kan "Die Türkette ist angebracht... Ich komme nicht durch!"
     extend ".....Ich höre Wasser plätschern, das muss die Dusche sein, sind sie im Bad?"
     scene m2f_p1ar_bg at bgani
@@ -1310,41 +1245,11 @@ label schule:
     kan "Sie antworten nicht, die Tür geht nicht auf, ich brauche einen Bolzenschneider wegen der Kette."
     gen "Im Dienstraum sollte sich einer befinden."
     kan "Alles klar, ich hole es schnell."
-    gen "Wir gehen zu dritt, das ist in diesen Zeiten zu gefährlich."
-    scene black with dissolve
-    "Die drei gingen gemeinsam in den Dienstraum, um den Bolzenschneider zu holen."
-    extend " Als die drei zurückkamen, trauten sie ihren Augen nicht..."
-    play sound umise_024
-    scene magicsquare_moon1 with fastdissolve
-    pause 4
-    $ songname = "Lure"
-    show screen showsong
-    play music "audio/bgm/umib_018.ogg"
-    kum "WAAAAAAAAAAAAAA!" 
-    extend " ...Was ist das und woher ist es gekommen?"
-    kum "Wieder einer dieser magischen Kreise, von denen Maria-sama erzählt hat?"
-    kan "Das war vor ein paar Minuten noch nicht da...."
-    kan "Lass mich die Kette durchschneiden!"
-    play sound umise_039
-    kan "......."
-    "Kanon hat die Kette durchtrennt und öffnet vorsichtig die Tür."
-    play sound umise_017
-    scene white zorder 99
-    with kanon_r
-    scene black with fastdissolve
-    extend " Er schaut in den Raum, hält einen Moment inne und atmet tief durch..."
-    scene m2f_p1ar_bg at bgani
-    play rain umilse_012
-    show rainbackscroll
-    show rainfrontscroll
-    show m2f_p1ar at bgani
-    show kan a13defo2 at r
-    with quickergradientwiperight
-    pause 0.5   
-    kan "Kumasawa! Holen sie die anderen her!"
+    extend " Kumasawa! Holen sie die anderen her!"
     show kum a12majime1 at l
     kum "Ohohohoh, wird gemacht!"
     hide kum
+    hide gen
     "Kumasawa und Genji machten sich sofort auf den Weg, um den anderen zu sagen, dass mit Eva und Hideoyshi etwas nicht stimmte."
     scene black with fastdissolve
     "Battler, Jessica, Natsuhi, Maria und Shannon machten sich sofort auf den Weg."
@@ -1371,12 +1276,19 @@ label schule:
     hide kan
     hide nat
     show mar a22akuwarai2 at m
+    play sound umise_024
+    scene magicsquare_moon1 with fastdissolve
     mar "Kihihihihihihihih!!"
     mar "Das ist der erste magische Kreis des Mondes!"
     extend " Das Design des magischen Kreises ähnelt der Darstellung einer Tür. Der hebräische Vers darauf ist Psalm 107:16 entnommen und lautet:" 
     mar "'Denn er hat eherne Tore zerbrochen und eiserne Riegel durchschnitten'."
     mar "Die Hexe lässt sich nicht einmal von einer Türkette aufhalten!"
     extend " Kihihihihihihihi!!!"
+    scene m2f_p1ar_bg at bgani
+    play rain umilse_012
+    show rainbackscroll
+    show rainfrontscroll
+    show m2f_p1ar at bgani
     show but a11aseru5 at l
     play sound umise_012
     show mar a22sakebu1 at m
@@ -1453,20 +1365,12 @@ label schule:
     extend " Ich werde dich finden!!!" 
     extend " Ich werde dich packen und eigenhändig in die Hölle schicken!!!"
     but "Wenn ich dich in die Finger bekomme, wirst du dir wünschen nie geboren worden zu sein!"
-    extend " Ich werde dich kriegen, wie auch immer du heißt!"
-    extend " Wenn du BEATRICE sein willst, nehme ich dein fettes Kleid und ramme es dir in den Hals!"
-    but "Ich werde dir die Scheiße aus dem Leib prügeln, das schwöre ich dir!!!"
-    but "Verschlossener Gartenschuppen mit dem Schlüssel innerhalb?" 
-    extend " Eine Türkette?" 
-    extend " Einfach nur lächerlich!"
-    extend " Ich werde jedes Detail deiner billigen Tricks herausfinden und dich zum Schafott bringen!"
-    but "Ich werde dich eigenhändig umbringen!!!"
     extend " GNHAAAAAAAAAAAAAAAAAAAAAAAAAAAA!!!!!!"
     extend " BEATRICEEEEEEEEEEEEE!!!!!"
     window hide
     pause 2
     $ songname = "-"
-    call chapterendb
+    call chapterendb from _call_chapterendb_1
     pause 1
     play audio umise_030
     show eva a11hohoemi1 at m with fastdissolve
@@ -1500,11 +1404,11 @@ label schule:
     hide screen clockschoolch2 with dissolve
     pause 2
     ## Kapitel 2 Ende
-    $ chapter = 1003
+    $ chapter = "Verdacht"
     $ songname = "-"
-    $ save_name = _("EpisodeX Illusion of the golden witch\nDie Illusion der Goldenen Hexe")
+    $ save_name = _("EpisodeX Illusion of the golden witch\nVerdacht")
     show screen showch
-    ## Kapitel 3 Die Illusion der Goldenen Hexe
+    ## Kapitel 3 Verdacht
     pause 2
     scene g_o1ar
     play rain umilse_012
@@ -1515,9 +1419,9 @@ label schule:
     $ songname = "Dead Angle"
     play music umib_039
     show screen showsong
-    "Die Verzweiflung macht sich unter den verbliebenden breit."
-    extend " Mittlerweile wurde die Villa verlassen und Schutz im Gästehaus gesucht."
-    "Die Überlebenden beten einfach, dass ab jetzt niemand mehr sterben muss."
+    "Verzweiflung macht sich unter denen breit, die noch übrig geblieben sind."
+    extend " Inzwischen wurde die Villa verlassen und im Gästehaus Zuflucht gesucht."
+    "Die Überlebenden beten einfach, dass von nun an niemand mehr sterben muss."
     scene glob_1ar_bg at bgani
     stop wind fadeout 2
     show rainbackscroll
@@ -1526,92 +1430,91 @@ label schule:
     with gradientcirclefade
     show nat a12defo1 at l
     pause 0.5
-    nat "Ich weiß nicht, ob der Täter sich nur in der Villa aufhält, aber hier ist der Vorrat an Essen ein wenig größer."
+    nat "Ich weiß nicht, ob sich der Täter nur in der Villa aufhält. Aber hier gibt es etwas mehr zu essen."
     show jes a11naku3 at r
-    jes "Wieso passiert das alles überhaupt? War es nötig auch nur einen von ihnen zu töten?"
+    jes "Warum passiert das alles? War es notwendig, auch nur einen von ihnen zu töten?"
     show nan a1defo1 at m
-    nan "Jessica-chan, nur der Täter selbst kennt sein Tatmotiv."
-    extend " Es bringt leider überhaupt nichts darüber nachzudenken, so sehr ich deinen Schmerz auch fühle."
-    "Jessicas Worte haben irgendwie einen nerv getroffen, denn niemand hat auch nur den Hauch einer Ahnung, warum nach und nach Leute sterben."
+    nan "Jessica-chan, nur der Täter selbst kennt sein Motiv."
+    extend " Es nützt leider nichts, darüber nachzudenken, so sehr ich deinen Schmerz auch fühle."
+    "Jessicas Worte trafen einen Nerv, denn niemand hat auch nur die geringste Ahnung, warum Menschen sterben."
     hide nan
     hide nat
     jes a11majime1 "Wo steckt eigentlich Großvater die ganze Zeit?"
     show gen a11defo1 at l
-    gen "Der Herr befindet sich nach wie vor in seinem Arbeitszimmer."
-    jes a11tereru1 "Natürlich... Hier geht alles den Bach runter und er versteckt sich in seinem übel riechenden Kabuff!"
+    gen "Der Herr befindet sich noch in seinem Arbeitszimmer."
+    jes a11tereru1 "Natürlich... Hier geht alles den Bach runter und er versteckt sich in seiner stinkenden Hütte!"
     extend " Wahahahaha....."
     hide gen
     show kan a13defo2 at l
-    kan "Jessica-sama, der Herr ist ein alter Freund der Hexe, sie würde ihn nicht ohne weiteres Töten."
+    kan "Jessica-sama, der Herr ist ein alter Freund der Hexe, sie würde ihn nicht ohne weiteres töten."
     hide kan
     hide jes
     show but a11aseru1 at m
-    but "Diese Hexenlegende, von der ich gehört hab, hat ja damit was zutun, dass Großvater von der Hexe 10 Tonnen Gold erhalten haben soll."
+    but "Diese Hexenlegende, von der ich gehört habe, hat damit zu tun, dass Großvater von der Hexe 10 Tonnen Gold bekommen haben soll."
     show kum a12defo2 at r
     kum "Ohohohoh..." 
-    extend " das ist tatsächlich wahr und das Gold existiert wirklich!"
-    kum "Das Rätsel der Inschrift soll direkt dahin führen."
-    extend " Allerdings war bisher keiner in der Lage es zu lösen."
+    extend " Das ist in der Tat wahr, und das Gold gibt es wirklich!"
+    kum "Das Rätsel der Inschrift soll direkt dorthin führen."
+    extend " Bisher ist es jedoch niemandem gelungen, dieses zu lösen."
     show mar a22akuwarai2 at l
     mar "Kihihihihihihihihih"
-    extend " Ich hab das ganze Rätsel aufgeschrieben."
-    extend " Wir sollen es vielleicht endlich anfangen zu lösen, schließlich war das von Anfang an unsere Siegesbedingung"
+    extend " Ich habe das ganze Rätsel aufgeschrieben."
+    extend " Vielleicht sollten wir endlich damit anfangen, denn das war von Anfang an unsere Siegbedingung."
     hide kum
     show nat a11ikari1 at r
-    nat "Maria! Wir haben jetzt keine Zeit für sowas!"
-    but a11niramu3 "Ich weiß auch nicht wie uns dieses Rätsel weiterhelfen soll"
+    nat "Maria! Dafür haben wir jetzt keine Zeit!"
+    but a11niramu3 "Ich weiß auch nicht, wie uns dieses Rätsel weiterhelfen soll."
     mar a11uuu1 "Uu~!"
-    extend " BEATRICE hat doch den Abend vor der ersten Dämmerung gesagt, was passieren wird!"
-    nat "Du meinst diesen Brief den du von was weiß ich wo erhalten hast?"
-    but "Ich erinnere mich, da stand irgendwas drin von, wir sollen das Rätsel lösen, bevor Zinsen eingeholt werden, weil Großvater den Vertrag mit ihr aufgelöst hat."
+    extend " BEATRICE sagte, was passieren würde, am Abend vor der ersten Dämmerung!"
+    nat "Du meinst den Brief, den du von woher bekommen hast?"
+    but "Ich erinnere mich, dass da etwas stand, dass wir das Rätsel lösen sollten, bevor die Zinsen fällig werden, weil Großvater den Vertrag mit ihr gekündigt hat."
     hide nat
     show jes a23majime1 at r
-    jes "Und dass sie alles von der Ushiromiya Familie erhält plus Zinsen und diese Zinsen sind...."
+    jes "Und dass sie alles von der Familie Ushiromiya bekommt, plus Zinsen, und diese Zinsen sind......"
     mar a22akuwarai2 "Unsere Leben!"
     extend " Kihihihihihihi!!!"
-    mar "Der einzige Weg alles zurück zu erhalten, ist es das Rätsel der Inschrift zu lösen!"
+    mar "Die einzige Möglichkeit, alles zurückzubekommen, ist das Rätsel der Inschrift zu lösen!"
     hide mar
     hide but
     hide jes
     show nan a2fumu1 at m
-    nan "Ich habe mal versucht diese Inschrift zu lösen, ich bin aber dran verzweifelt und das obwohl ich Kinzo-san schon seit den alten Tagen kenne."
-    nan "Aber wie sagt man so schön? Man kann einem Menschen nur vor den Kopf gucken und nicht in den Kopf."
+    nan "Ich habe einmal versucht, diese Inschrift zu entziffern, aber ich bin daran verzweifelt, und das, obwohl ich Kinzo-san seit den alten Tagen kenne."
+    nan "Aber wie heißt es so schön? Man kann einem Menschen nur vor den Kopf sehen, nicht in den Kopf."
     hide nan
     show jes b22warai1 at r
-    jes "Lass uns mal lesen, was auf der Inschrift stand, Maria-chan..."
+    jes "Lass uns lesen, was auf der Inschrift stand, Maria-chan..."
     show but b11warai2 at l
-    but "Ich bin ehrlich gesagt auch daran interessiert, ich hab mir das noch nie durchgelesen."
+    but "Um ehrlich zu sein, ich bin auch daran interessiert, ich habe mir das noch nie vorher durchgelesen."
     show mar a11niyari1 at m
     mar "Bitte sehr, prägt es euch gut ein, Kihihihihi!!"
-    "Maria kramt ein wenig in ihrer Handtasche und holt ein seltsames Buch raus, sie blättert etwas darin herum und fängt an vorzulesen."
+    "Maria kramt ein wenig in ihrer Handtasche und holt ein seltsames Buch heraus, blättert ein wenig darin und beginnt vorzulesen."
     mar "Seht den Süßfischfluss, der durch meine geliebte Heimatstadt fließt. Ihr, die ihr das Goldene Land sucht, folgt seinem Weg stromabwärts auf der Suche nach dem Schlüssel."
     hide jes
     show nat a43headache1 at r
-    nat "Wir haben jetzt schon keine Chance, da niemand von uns weiß, wo Vaters alte Heimat war."
-    extend " Moment, Genji, weißt du es vielleicht?"
+    nat "Wir haben schon jetzt keine Chance, denn keiner von uns weiß, wo Vaters alte Heimat war."
+    extend " Warte, Genji, weißt du es vielleicht?"
     hide but
     show gen a11defo1 at l
     gen "Entschuldigung, ich weiß es nicht."
-    nat "Verdammt... Eva wusste es aber, ich weiß das."
+    nat "Verdammt... Aber Eva wusste es, ich weiß es."
     hide gen
     show jes a23majime1 at l
     jes "Wie können sie wohl schlecht danach fragen."
     hide nat
     show but b23nayamu2 at r
     but "Das ist ja abgefahren, ich weiß zwar nicht, was Süßfischfluss heißt, aber die Morde liefen bislang exakt wie hier niedergeschrieben."
-    but "Ich denke aber, dass jemand ohne Japanisch Kenntnisse dieses Rätsel gar nicht lösen kann."
-    jes "Erst waren es sechs außerwählte vom Schlüssel, dann Eva und Hideyoshi als die beiden, die sich nahe stehen und jetzt sind wir bei?"
-    mar "Preiset meinen Edlen Namen, die dritte Dämmerung!"
-    but "Da kommen noch ein paar Dämmerungen mit stich ins Knie, Bauch, Bein und so weiter, wie abgedreht."
+    but "Ich glaube aber, dass jemand ohne Japanischkenntnisse dieses Rätsel nicht lösen kann."
+    jes "Zuerst waren es sechs außerwählte vom Schlüssel, dann Eva und Hideyoshi als die beiden, die sich nahe stehen und jetzt sind wir bei?"
+    mar "Preist meinen noblen Namen, die dritte Dämmerung!"
+    but "Da kommen noch ein paar Dämmerungen mit Stichen ins Knie, Bauch, Bein und so weiter, wie verrückt."
     stop music
     scene black with instant
-    nat "Sofort die Hände nach oben ihr vier!"
-    "Plötzlich wurden nach diesen Ruf alle Gespräche eingestellt, Natsuhi hat angefangen ihre Waffe auf die Bediensteten zu richten."
-    "Während das Thema bei der Hexeninschrift lag, ist in der nähe der Bediensteten, die im Hintergrund zugesehen haben, ein Briefumschlag erschienen."
+    nat "Ihr vier, nehmt sofort die Hände hoch!"
+    "Plötzlich verstummten nach diesem Schrei alle Gespräche, Natsuhi richtete ihre Waffe auf das Personal."
+    "Während sich das Thema auf die Hexeninschrift konzentrierte, tauchte neben den Bediensteten, die im Hintergrund zusahen, ein Briefumschlag auf."
     $ songname = "Fishy Aroma"
     play music umib_019
     scene glob_1ar_bg at bgani
-    stop wind fadeout 2
     show rainbackscroll
     show rainfrontscroll
     show glob_1ar at bgani
@@ -1620,287 +1523,668 @@ label schule:
     show c_e0101_wall
     show c_e0101_a
     with quickgradientwipeleft
-    nat "Wo kommt dieser Briefumschlag her und wieso liegt er genau bei euch vieren?"
+    nat "Woher kommt dieser Umschlag und warum ist er gerade bei euch vier?"
     extend " Überlegt euch jetzt gut, was ihr mir antwortet!"
     show kum a12majime1 at leftedge
-    kum "Ich bitte Sie Fräulein Natsuhi-sama, dies muss ein Irrtum sein!"
+    kum "Bitte, Fräulein Natsuhi-sama, das muss ein Irrtum sein!"
     extend " Bitte nehmen Sie die Waffe runter!"
     hide c_e0101_a
     show c_e0101_b
     nat "Ich hatte schon die ganze Zeit ein mulmiges Gefühl bei euch Bediensteten!"
     extend " Wir sind hier mit der Inschrift beschäftigt und ganz plötzlich taucht in eurer Nähe ein Briefumschlag auf??"
     extend " Ich weiß ganz genau, dass da gerade eben noch keiner war!"
-    nat "Ihr könnt gerne jemand anderes für Blöd verkaufen!"
+    nat "Ihr könnt gerne jemand anderen für dumm verkaufen!"
     hide kum
     hide c_e0101_b
     hide c_e0101_wall
     show but b22odoroki2 at m
-    but "Also hat den jemand von euch heimlich dahin gelegt?"
+    but "Also hat das jemand heimlich dort hingelegt?"
     show nan a2fumu1 at rightedge
-    nan "Die Möglichkeit besteht durchaus, aber wer soll es gewesen sein?"
+    nan "Die Möglichkeit besteht, aber wer sollte es gewesen sein?"
     hide but  
     hide nan
     show c_e0101_wall
     show c_e0101_b
     with quickergradientwipeleft
-    nat "Vielleicht ja du Kumasawa, du warst immer für irgendwelche Streiche zu haben, oder du Shannon, die den ganzen Tag nur vor sich hin träumt!"
+    nat "Vielleicht du, Kumasawa, die immer zu Streichen aufgelegt ist. Oder du, Shannon, die den ganzen Tag nur träumt!"
     show sha a11odoroki1 at leftedge
     sha ".....Huh... Fräulein Natsuhi-sama....."
     nat "Kanon du bist auch nicht aus dem Schneider, deine Fähigkeit deine Präsenz fast vollständig zu verbergen, ist noch am allermeisten Verdächtig!"
     hide sha
     show kan a13defo2 at leftedge
     kan "Fräulein Natsuhi-sama Ich..."
-    nat "Genji, du warst von allen Bediensteten immer Vater am nächsten, du könntest dies für ihn gemacht haben."
+    nat "Genji, du warst von allen Bediensteten immer Vater am nächsten, du hättest es für ihn tun können."
     hide kan
     show gen a21kashikomari1 at leftedge
     gen "........."
     scene black with dissolve
-    "Natsuhi ist sich sehr sicher, der Täter ist einer der vier!"
-    extend " ...Es ist unmöglich, dass so ein Brief aus dem nichts erscheinen kann..."
-    "Es war entweder pure Absicht oder der Täter war beim hinlegen des Briefes nicht geschickt genug."
+    "Natsuhi ist sich ganz sicher: Einer der vier ist der Täter!"
+    extend " ...Es ist unmöglich, dass ein solcher Brief aus dem Nichts auftaucht..."
+    "Entweder handelte es sich um reine Absicht, oder der Täter war bei der Platzierung des Briefes nicht geschickt genug gewesen."
     scene glob_1ar_bg at bgani
-    stop wind fadeout 2
     show rainbackscroll
     show rainfrontscroll
     show glob_1ar at bgani
     with quickergradientwiperight
     show nat a17ikari2 at l
-    nat "Ihr alle wisst exakt, welche Wege es auf der Insel gibt, es wäre für euch ein leichtes die Morde geschickt zu begehen ohne erwischt zu werden!"
-    nat "Es wäre das beste für uns, wenn wir uns aufteilen würden!"
+    nat "Ihr alle kennt die Wege auf der Insel genau, es wäre ein Leichtes für euch, die Morde geschickt zu begehen, ohne erwischt zu werden!"
+    nat "Es wäre das Beste für uns, wenn wir uns trennen würden!"
     nat "Battler, Jessica, Maria, Nanjo und ich bleiben hier!"
-    nat "Wir alle haben ein Alibi, ihr habt das nicht!"
+    nat "Wir haben alle ein Alibi, ihr nicht!"
     hide nat
     show but b11oya1 at l
     but "Wollen wir sie wirklich von hier verbannen?"
     show mar a22akuwarai2 at r
     mar "Kihihihihihihihi!!!"
-    extend " BEATRICE wird sie für die nächsten Dämmerungen opfern!"
+    extend " BEATRICE wird sie opfern für die Dämmerungen, die noch kommen werden!"
     hide but
     hide mar
     show kum a12majime1 at r
-    kum "Natsuhi-sama vielleicht sollten wir nochmal drüber reden!"
+    kum "Natsuhi-sama, vielleicht sollten wir noch einmal darüber reden!"
     show nat a17ikari2 at l
-    nat "Es tut mir leid, ich selber möchte euch nicht verdächtigen, aber ich kann euch allen nicht trauen..."
-    extend " Bitte begebt euch zurück in die Villa."
+    nat "Es tut mir leid, ich will euch nicht verdächtigen, aber ich kann euch allen nicht trauen..."
+    extend " Bitte geht zurück in die Villa."
     extend " Ich bete zu Gott, dass euch nicht passiert."
-    nat "Das Risiko ist aber auch zu hoch, euch hier zu behalten, wenn der Täter wirklich einer von euch sein sollte."
-    nat "Sollte ich euch in den tot schicken, dann möge die Hexe auch mich mitnehmen, denn ich hätte es verdient."
+    nat "Aber es ist auch zu riskant, euch hier zu behalten, wenn der Täter wirklich einer von euch ist."
+    nat "Wenn ich euch in den Tod schicke, dann soll die Hexe mich auch mitnehmen, denn ich habe es verdient."
     show gen a21kashikomari1 at m
-    gen "Dies war ein Befehl von unserer Vorgesetzten, wir müssen nun gehen."
-    kum "Passt bitte auch auf euch auf!"
+    gen "Das war ein Befehl unserer Vorgesetzten, wir müssen jetzt gehen."
+    kum "Passt auf Euch auf!"
     nat "Es tut mir so unendlich leid, bitte überlebt!"
-    "Natsuhi muss hier eine folgenschwere Entscheidung treffen. Schließlich kann der Brief nicht von denen dahingelegt worden sein, die mit der Inschrift beschäftigt waren."
+    "Natsuhi muss eine folgenschwere Entscheidung treffen. Schließlich kann der Brief nicht von denjenigen, die sich mit der Inschrift befassten, platziert worden sein."
     scene black with dissolve
     play sound umise_016
-    "Die verdächtigen vier Bediensteten haben nun das Gästehaus verlassen und laufen Richtung Villa."
-    "Natsuhi selber fühlt sich von allen am schlechtesten, da die Möglichkeit besteht, dass sie die vier gerade in den tot geschickt hat."
-    "Es wäre aber auch in dieser Situation viel zu riskant gewesen, die vier hier zu behalten."
+    "Die vier verdächtigen Bediensteten haben nun das Gästehaus verlassen und laufen in Richtung Villa."
+    "Natsuhi selbst fühlt sich am schlimmsten von allen, denn es besteht die Möglichkeit, dass sie die vier gerade in den Tod geschickt hat."
+    "Aber auch in dieser Situation wäre es viel zu riskant gewesen, die vier hier zu behalten."
     scene glob_1ar_bg at bgani
-    stop wind fadeout 2
     show rainbackscroll
     show rainfrontscroll
     show glob_1ar at bgani
     with quickergradientwiperight
     show mar a11niyari1 at m
-    mar "Wollt ihr nicht schauen, was in dem Brief steht?"
+    mar "Wollt ihr nicht sehen, was in dem Brief steht?"
     show but b22nayamu1 at l
-    but "Ich hab eigentlich gar keinen bock darauf, da steht bestimmt sowas drin wie 'Haha, ihr habt die anderen wohl rausgeschmissen, jetzt töte ich die!' Weil die das doch erwartet hat."
+    but "Ich habe eigentlich gar keine Lust dazu, da kommt bestimmt so was wie 'Ha ha, ihr habt die anderen rausgeschmissen, jetzt bringe ich die um'. Weil das hat sie erwartet."
     show jes a11majime1 at r
     jes "Machen wir ihn erst einmal auf!"
-    "Jessica öffnet vorsichtig den Brief der mit dem Siegel der Ushiromiya Familie versiegelt wurde."
+    "Vorsichtig öffnet Jessica den Brief, der mit dem Siegel der Familie Ushiromiya versiegelt ist."
     play sound sysse_page
     scene letter1 with quickgradientwiperight
-    ntxt "Ich hoffe euch gefällt Kinzo-samas kleines Rätsel."
-    ntxt "Hoffentlich tun Sie nicht missverstehen, dass sie jetzt die Zeit einfach absitzen können."
-    extend " Sobald um 0 Uhr der nächste Tag anbricht, gewinne ich automatisch, da führt kein Weg dran vorbei."
-    nvl clear 
-    ntxt "Ich bitte Sie also darum, das Rätsel meiner Inschrift zu lösen um all dies, dass Sie verloren haben von mir zurück zu erhalten."
-    extend " Allerdings bin ich mir sehr sicher, dass Sie nicht gewinnen werden, also Preiset meinen edlen Namen!"
-    ntxt "gez. BEATRICE, die Goldene"
+    ntxt "Sehr geehrte Ushiromiya Familie,"
+    ntxt "ich hoffe, das kleine Rätsel von Kinzo-sama gefällt Ihnen."
+    extend " Es gibt hoffentlich kein Missverständnis, dass sie jetzt nur noch ihre Zeit absitzen können."
+    extend " Sobald der nächste Tag um Mitternacht anbricht, gewinne ich automatisch, daran führt kein Weg vorbei."
+    extend " Ich bitte Sie also, das Rätsel meiner Inschrift zu lösen, um von mir all das zurückzubekommen, was Sie verloren haben."
+    extend " Aber ich bin mir sicher, dass Sie nicht gewinnen werden. Also preist meinen noblen Namen!"
+    ntxt "BEATRICE, die Goldene"
     nvl clear
+    scene glob_1dr_bg at bgani
+    show rainbackscroll
+    show rainfrontscroll
+    show glob_1dr at bgani
+    with quickergradientwiperight
+    show but a21kuyasigaru1 at m
     but "Will die uns verarschen?"
-    extend " Wir sollen allen ernstes das Rätsel lösen?"
-    "Für BEATRICE scheint das alles nur ein Spiel zu sein, dass man gewinnen und verlieren kann, Battler und die anderen können gar nicht glauben, was sie da gelesen haben."
-    nat "Meine Kopfschmerzen, lassen ein nachdenken darüber gar nicht zu."
-    but "Das ist alles bullshit! Wir haben nicht das nötige Wissen um es zu lösen!"
-    jes "Wir sollten uns ein wenig ausruhen."
-    extend " Wir müssen bei Kräften sein, wenn der Täter wieder zuschlagen will..."
-    but "Gute Idee, vielleicht kommt einem ja ein Geistesblitz und wir schaffen es in den nächsten sechs Stunden das Rätsel zu lösen."
+    extend " Wir sollen ernsthaft das Rätsel lösen?"
+    "Für BEATRICE scheint das alles nur ein Spiel zu sein, das man gewinnen oder verlieren kann..." 
+    extend " Battler und die anderen können nicht glauben, was sie da lesen."
+    show nat a43headache1 at r
+    nat "Meine Kopfschmerzen lassen es nicht zu, darüber nachzudenken."
+    but "Das ist alles Quatsch! Wir haben nicht das Wissen, um es zu lösen!"
+    show jes a23majime1 at l
+    jes "Stattdessen sollten wir uns ein wenig ausruhen."
+    extend " Wir müssen bereit sein, wenn der Täter wieder zuschlagen will..."
+    but b22nayamu1 "Gute Idee, vielleicht hat ja jemand einen Geistesblitz und wir können das Rätsel in den nächsten sechs Stunden lösen."
+    nat "Ohne Eva können wir es sowieso nicht lösen..."
+    hide but
+    hide jes
+    hide nat
+    show mar a22akuwarai2 at m
+    mar "Das ist ein Riesenfehler!"
+    extend " Kihihihihi!!"
     pause 1
     scene black with instant
     play audio umise_046
-    show text _("Zur Zeit der dritten Dämmerung:\nPreiset meinen noblen Namen")
+    show text _("Zur Zeit der dritten Dämmerung:\nPreist meinen noblen Namen!")
     pause 5
     scene black with kanon_r 
     pause 3
+    stop music fadeout 2
+    stop rain fadeout 2
     show screen clockschoolch3
     play sound "<from 0 to 5>/audio/sfx/umilse_1050.ogg"
     pause 10
     hide screen clockschoolch3 with dissolve
-    pause 2 
-    but "Ein Telefon klingelt?"
+    pause 2
+    ## Kapitel 3 Ende
+    $ chapter = "Die Goldene Hexe"
+    $ songname = "-"
+    $ save_name = _("EpisodeX Illusion of the golden witch\nDie Goldene Hexe")
+    show screen showch
+    ## Kapitel 4 Die Goldene Hexe
+    play rain umilse_023
+    pause 2
+    but "Das Telefon klingelt?"
     extend " Wurden die Leitungen nicht getrennt?"
     "Einige Stunden später klingelt aus heiterem Himmel plötzlich das Telefon im Gästehaus."
-    jes "Vielleicht hat der Täter ja nur die äußeren Leitungen gecappt."
-    nat "Battler-kun übernimmt das für mich, meine Kopfschmerzen sind zu stark."
+    scene glob_1dr_bg at bgani
+    show rainbackscroll
+    show rainfrontscroll
+    show glob_1dr at bgani
+    with quickergradientwiperight
+    show jes a23majime1 at l
+    jes "Vielleicht hat der Täter nur die äußeren Leitungen durchtrennt."
+    show nat a33hisu1 at r
+    nat "Battler-kun übernimmt das für mich, ich habe zu starke Kopfschmerzen."
+    hide nat
+    hide jes
+    show but b11odoroki3 at m
     but "Da bin ich mal gespannt."
+    stop rain
     but "Hallo?....." 
     extend " Wer ist da?"
     $ songname = "Happy Maria!"
     play music umib_104
     show screen showsong
+    play sound umise_002
+    scene black with quickflash
     bea "<congratulations>"
-    bea "<I am fine, and youuuuuuuu?~>"
+    bea "<I am fineeeee and youuuuuuuu?~>"
+    extend " Kyahahahahahahahahha!!!!!"
+    scene glob_1dr_bg at bgani
+    show rainbackscroll
+    show rainfrontscroll
+    show glob_1dr at bgani
+    with quickergradientwiperight
+    show but a11niramu3 at m
     but "Wer zum Teufel bist du?"
-    extend " ....Willst du mich verarschen was soll das?"
+    extend " ....Willst du mich auf den Arm nehmen? Was soll das?"
     bea "<In english please!>"
-    extend " Komm schon, dass hast du als Kind doch ständig gemacht, Ushiromiya Battler!"
+    extend " Komm schon, das hast du doch die ganze Zeit gemacht, als du ein Kind warst, Ushiromiya Battler!"
     "Spöttisches Englisch dröhnt aus der Ohrmuschel, die Stimme hat Battler noch nie zuvor gehört."
-    but "Du..." 
+    but b22odoroki2 "Du..." 
     extend " Du bist absolut irre!"
-    but "Sag mir sofort wer du bist!"
-    bea "Komm schon... rate doch mal, du könntest einen Trip nach Hawaii gewinnen!"
-    extend " Kyahahahahahahah"
+    but "Sag mir sofort, wer du bist!"
+    scene mlib_1a_bg at bgani
+    show rainbackscroll
+    show rainfrontscroll
+    show mlib_1a at bgani
+    show bea a11akuwarai2 at m
+    play sound umise_002
+    with quickflash
+    bea "Komm schon... rate doch mal..."
+    extend " Du kannst eine Reise nach Hawaii gewinnen!"
+    extend " Kyahahahahahahah!!"
     but "BEATRICE?" 
     extend " .....Du bist BEATRICE?!!!"
+    play sound umise_002
+    scene black with quickflash
     bea "<Yeessssssss I aaaaaammmmm!!>"
-    extend "Ich wollte euch vier nur gratulieren, ich lade euch nämlich ins Goldene Land ein!"
-    but "Das kannst du dir sonst wo hinstecken!"
-    extend " Was ist mit Shannon, Kumasawa und den anderen passiert?"
+    extend " Kyahahahahahhahahah!!!!!!"
+    extend " Ich wollte euch nur gratulieren, denn ich lade euch ins Goldene Land ein!"
+    scene beabut
+    show but b11kuyasigaru1 at rightedge
+    show bea a11akuwarai5 at leftedge2
+    with quickergradientwiperight
+    but "Das kannst du dir woanders in den Arsch stecken!"
+    extend " Was ist aus Shannon, Kumasawa und den anderen geworden?"
     bea "Ohhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh"
-    extend " Ich habe sie für meine Auferstehung geopfert..."
-    extend " Kyahahahahahahaha ahahahahahahhahahahah!!!!!??!?!?!?!?!"
-    but "Ich werde dir dumme Bitch niemals verzeihen!"
+    extend " Ich habe sie geopfert für meine Auferstehung..."
+    extend " Das ist doch fantastisch, oder nicht????" 
+    extend " Uhhhshirooomiyaaa Battorraaaaa????"
+    but a21kuyasigaru1 "Ich werde dir dumme Bitch niemals verzeihen!"
     extend " Wie kannst du es nur wagen???"
+    scene mlib_1a_bg at bgani
+    show rainbackscroll
+    show rainfrontscroll
+    show mlib_1a at bgani
+    show kin a11warai1 at r
     kin "Wahahahahahaha!!"
-    extend " Du bist heute sehr gut drauf, BEATRICE."
+    extend " Du bist heute sehr gut gelaunt, BEATRICE."
+    show bea a11warai1 at l
     bea "Hey Kinzo!"
-    extend " Wie wäre es?" 
-    extend " sollen wir den Wein aufmachen, der war scheiße teuer!"
+    extend a11akuwarai4 " Wie wäre es?" 
+    extend " Der Wein war arsch teuer, machen wir ihn auf!"
     extend " Danach können wir uns ja gegenseitig mit der leeren Flasche die Köpfe einschlagen!"
-    bea "Meine Auferstehung muss gefeiert werden!"
+    bea "Meine Auferstehung ist ein Grund zum Feiern!"
     extend " Keheheheheheh!!"
-    kin "Oho, du bist mir ein wenig zu aufgeregt!"
-    extend " Beruhig dich erstmal."
+    kin "Oh, du bist ein bisschen zu aufgeregt!"
+    extend " Beruhige dich erst einmal."
+    scene black with fastdissolve
     but "Ist der alte Sack auch bei dir?"
     extend " Was hast du vor mit deinem betrunkenen Arsch?"
     extend " Wo sind Shannon und die anderen?"
     extend " Wohin hast du sie verschleppt?"
-    bea "Gar nicht so weit weg, schau mal in der Villa nach, ich wünsche gutes gelingen!"
-    extend "Kyahahahaahhaha!!!!"
-    but "Dich pack ich mir als nächstes, du wirst schon sehen du Bitch!"
-    "Wütend legt Battler auf, der Täter besitzt auch noch die dreißtigkeit sich persönlich zu melden und sich über Battler lustig zu machen..."
+    bea "Nicht so weit weg, wie du denkst!" 
+    extend " Schau mal in der Villa vorbei, ich wünsche gutes Gelingen!"
+    extend " Kyahahahaahhaha!!!!"
+    scene glob_1dr_bg at bgani
+    show rainbackscroll
+    show rainfrontscroll
+    show glob_1dr at bgani
+    with quickergradientwiperight
+    show but b25sakebu2 at m
+    but "Dich schnapp ich mir als Nächstes, du wirst schon sehen, du Miststück!"
+    play sound umise_012
+    stop music fadeout 1
+    play rain umilse_012
+    $ songname = "-"
+    "Wütend legt Battler auf, der Täter hat auch noch die Dreistigkeit, sich persönlich zu melden und sich über Battler lustig zu machen..."
+    hide but
+    show jes a11atya3 at r
     jes "War das BEATRICE?"
     extend " Was ist passiert?"
+    show but b11kuyasigaru1 at l
     but "Wir müssen sofort zur Villa, es könnte schon zu spät sein!"
+    show nat a32ikari1 at m
     nat "Dann schnell!"
-    "Während sich die vier aufmachen um zur Villa zu gehen, waren Kinzo und BEATRICE noch immer in Kinzos Arbeitszimmer."
-    kin "Heute ist ein großer Tag, endlich durfte ich dein Lächeln wiedersehen!"
-    extend " Es würde mir überhaupt nichts ausmachen, würdest du mir mein Leben nun entreißen!"
-    bea "Ich denke einfach mal, dass ich genau dies machen werde!"
-    kin "Ich gebe dir mein Leben sehr gerne!"
-    extend " Mich hält nichts mehr in diese Welt.."
-    bea "So soll es sein *Gackle*Gackle*"
+    stop rain fadeout 2
+    scene black with gradientcirclefade
     pause 1
-    kin "ahhhhhhhhhhhhhhhhhrggggggghhhhhhhhhhhhhhhhhhhhhhhhhhhhh"
-    bea "Ushiromiya Kinzo, du gehörst schon lange nicht mehr in diese Welt."
+    scene mlib_1b_bg
+    show rainbackscroll
+    show rainfrontscroll
+    show mlib_1b
+    with gradientcirclefade
+    "Während sich die vier auf den Weg zur Villa machen, sind Kinzo und BEATRICE immer noch in Kinzos Arbeitszimmer."
+    show kin a11warai2 at r
+    kin "Heute ist ein großer Tag, endlich durfte ich dein Lächeln wiedersehen!"
+    extend " Wenn du mir jetzt mein Leben wegnimmst, würde es mir nichts ausmachen!"
+    show bea a11gaman4 at l
+    bea "Ich denke mir einfach, dass das genau das ist, was ich tun werde!"
+    kin a11fukigen1  "Ich schenke dir gerne mein Leben!"
+    extend " Nichts hält mich mehr in dieser Welt..."
+    bea a11futeki1 "So soll es sein *Gackle*Gackle*"
+    pause 1
+    show no64
+    play sound umise_055
+    pause 1
+    play sound umise_055
+    pause 1
+    play sound umise_055
+    kin "ahhhhhhhhhhhhhhhhhrggggggghhhhhhhhhhhhhhh"
+    extend " OHHHHH BEATOOORICHEEEEE!!!!!"
+    extend " ICH DANKE DIRRRR!!!!!"
+    "Mit einem Fingerschnippen geht Kinzos Körper in Flammen auf, Haut und Kleidung verbrennen vollständig."
+    scene black with instant
+    play sound umise_012
+    "Der alte Mann konnte der Hexe noch in seinen letzten Momenten danken."
+    extend " Er verließ diese Welt ohne Reue!"
+    bea "Ushiromiya Kinzo, du gehörst schon lange nicht mehr in diese Welt...."
     extend " Wir sehen uns im Goldenen Land wieder..."
-    "Nach einem Fingerschnippen ist Kinzos Körper in Flammen aufgegangen und seine Haut und Kleidung verbrennem vollständig."
-    "In der Zwischenzeit sind die vier in der Eingangshalle angekommen."
-    but "Wo fangen wir an?"
+    pause 2
+    show m_o1a
+    play wind umilse_005
+    play rain umilse_012
+    show rainbackscroll
+    show rainfrontscroll
+    with gradientcirclefade
+    play music umib_036
+    $ songname = "Play"
+    scene mhal_1ar_bg at bgani
+    stop wind fadeout 1
+    show rainbackscroll
+    show rainfrontscroll
+    show mhal_1ar at bgani
+    show expression(CustomParticles("images/system/particle.png", 10))
+    with gradientcirclefade
+    "Inzwischen sind die vier in der Eingangshalle angekommen."
+    extend " Von den verbannten Bediensteten fehlt noch jede Spur."
+    show but a11niramu3 at r
+    but "Wo sollen wir den Anfang machen?"
+    show jes a23majime1 at l
     jes "Hier liegt ein Brief auf dem Boden!"
-    "Jessica hob den Brief auf und öffnete ihn."
+    "Jessica nahm den Brief auf und öffnete ihn."
     ntxt "Ich bin im Wohnzimmer, komm und hol mich, Ushiromiya Battler!!"
-    but "Die macht sich über mich lustig!"
-    jes "Die Tür zum Wohnzimmer ist versperrt!"
-    extend " Sie war noch geöffnet, als wir zum Gästehaus gegangen sind!"
+    but b22odoroki2 "Die macht sich über mich lustig!"
+    hide but
+    hide jes
+    "Alle rannten so schnell wie möglich zur Wohnzimmertür!"
+    extend " Jessica versucht sofort, die Tür zu öffnen!"
+    scene m2f_p1br_bg at bgani
+    stop wind fadeout 1
+    show rainbackscroll
+    show rainfrontscroll
+    show m2f_p1br at bgani
+    show expression(CustomParticles("images/system/particle.png", 10))
+    with gradientcirclefade
+    show jes a11atya2 at m
+    play sound umise_032
+    pause 0.5
+    play sound umise_032
+    pause 1.0
+    jes "Die Tür zum Wohnzimmer ist verschlossen!"
+    extend " Es war noch geöffnet, als wir zum Gästehaus gingen!"
+    show but b22nayamu2 at rightedge
+    but "Lass mich mal!"
+    play sound umise_032
+    pause 0.5
+    play sound umise_032
+    pause 1.0
+    extend b22odoroki2 ".............Sie ist zu........"
+    jes "Sagte ich bereits, wieso glaubst du mir nicht?"
+    but "Ich wollte es einfach selbst ausprobieren, hehe...."
+    show nat a11komaru1 at l
     nat "Haben wir einen Schlüssel?"
-    but "Die Generalschlüssel waren bestimmt noch bei den Bediensteten!"
-    nat "Hab ich wieder mal toll gemacht."
-    jes "Mama, gib dir nicht die schuld, du hattest unser aller Sicherheit im Kopf, es wäre so oder so hier zu gekommen!"
-    nat "Wir könnten versuchen durch das Fenster von außerhalb rein zu kommen."
-    nan "Vielleicht haben wir noch eine Chance jemanden zu retten!"
-    jes "Gute Idee!"
-    "Da nicht daran gedacht wurde, den verbannten Bediensteten mindestens einen Generalschlüssel abzunehmen, müssen sie improvisieren"
-    "Battler nimmt sich einen hroßen Stein und macht sich bereit es in das Wohnzimmerfenster zu donnern."
+    but b11odoroki3 "Die Generalschlüssel waren sicher noch bei den Bediensteten!"
+    nat a33hisu1 "Habe ich wieder mal toll gemacht."
+    jes a11tohoho4 "Mama, gib dir nicht die Schuld, du hattest unser aller Sicherheit im Sinn, es wäre sowieso hierher gekommen!"
+    nat a12nayamu1 "Wir könnten versuchen, von außen durch das Fenster einzusteigen."
+    hide but
+    show nan a1defo1 at rightedge
+    nan "Vielleicht haben wir noch eine Chance, jemanden zu retten!"
+    jes a11warai1 "Gute Idee!"
+    scene black with gradientcirclefade
+    pause 1
+    scene m_cy1a
+    show rainbackscroll
+    show rainfrontscroll
+    play wind umilse_005
+    "Da man nicht daran gedacht hatte, den Verbannten wenigstens einen Generalschlüssel abzunehmen, mussten sie improvisieren."
+    "Battler nimmt einen großen Stein und will ihn gegen das Wohnzimmerfenster donnern."
+    play sound umise_020
+    pause 1
+    play sound umise_1006
+    scene black with instant
+    "Die Scheibe wurde von Battler eingeschlagen und das Loch ist nun groß genug, um das innere Schloss zu erreichen und zu öffnen."
+    $ songname = "-"
+    stop music fadeout 2
+    "Battler betritt vorsichtig das Wohnzimmer und sieht jemanden..."
+    play music umib_024
+    stop wind
     $ songname = "goldenslaughterer"
     show screen showsong
-    but "Kanon-kun!"
-    jes "Was ist siehst du Battler-kun?"
-    but "Hier drin liegt Kanon-kun!"
-    extend " Nanjo-sensei, bitte schauen Sie sich ihn an!"
-    nan "Er atmet nicht mehr, er ist erst kürzlich von uns gegangen."
-    extend " Sein Kopf wurde durchbohrt, aber sein Pfahl hat nicht gehalten und ist rausgefallen."
+    scene m1f_s1cr at bgani
+    show but b23kayasigaru1 at m
+    play sound umise_012
+    with instant
+    but "Kanon-kun!!!"
+    jes "Battler-kun, was siehst du?"
+    but "Kanon-kun ist hier drin!"
+    extend " Nanjo-sensei, sehen Sie ihn bitte an!"
+    play sound umise_038
+    scene blood_1a
+    nan "Er atmet nicht mehr, er ist vor kurzem von uns gegangen."
+    play sound umise_038
+    scene blood_1b
+    extend " Sein Kopf wurde durchbohrt, aber der Pfahl hatte wohl keinen Halt und ist herausgefallen."
     but "Verdammt! Verdammt! Verdammt!"
-    extend " Die anderen sind bestimmt ebenfalls ermordet worden!"
+    extend " Die anderen sind sicher auch ermordet worden!"
+    scene m1f_s1cr at bgani
+    show jes b33naku1 at m
     jes "KANON-KUN!!!! *sob*sob*"
-    extend "ICH VERFLUCHE DICH, BEATRICE!!!"
-    "Jessica hat dieser Anblick wohl mit am meisten getroffen."
-    extend " Schließlich mochte sie ihn immer ein wenig mehr als die anderen."
+    extend " ICH VERFLUCHE DICH, BEATRICE!!!"
+    jes "WARRRUMMMM NUUURRRR??!?!?!?!?"
+    extend " .........*schnief*.........."
+    "Es war dieser Anblick, der Jessica mit am meisten berührt hat."
+    extend " Schließlich mochte sie ihn immer ein bisschen mehr als die anderen."
+    hide jes
+    show mar a22akuwarai2 at m
     mar "Kihihihihihi!"
     extend " Stich in den Kopf und töte!"
-    extend " Ab jetzt wird alles schnell vorbei sein!"
-    but "Halt die Fresse jetzt!"
-    extend " Es kann echt nicht sein Maria!"
-    extend " Du hast jetzt bis zum bitteren Ende Redeverbot!"
-    but "Ich will nichts mehr hören!"
+    extend " Von jetzt an wird alles ganz schnell vorbei sein!"
+    show but a11aseru5 at l
+    but "Und jetzt halt endlich die Klappe!"
+    extend " Das kann doch nicht wahr sein, Maria!"
+    extend " Du hast jetzt Redeverbot bis zum bitteren Ende!"
+    but "Kein Wort mehr!"
+    mar a22defo1k  "Uu......"
+    hide but
+    hide mar
+    show nat a32ikari1 at m
     nat "Da liegt ein Brief!"
-    "Natsuhi öffnet vorsichtig den Brief und nimmt zwei Schlüssel raus."
-    nat " Das ist ein Generalschlüssel und der Schlüssel für mein Zimmer in der oberen Etage!"
-    but "Wir müssen da sofort hin!"
-    "So schnell wie möglich, eilten sie nach Natsuhis Zimmer"
-    extend " DIe Tür ist tatsächlich ebenfalls abgeschlossen."
-    "Battler öffnet mit Natsuhis Schlüssel die Tür."
-    but "Kumasawa....."
-    extend " Du hast das am aller wenigsten Verdient, das darf nicht wahr sein!"
-    nan "Ihre Brust wurde durchbohrt und das erneut mit einem dieser Pfähle."
-    extend " Ich kann nichts weiter tun, als ihr Ableben zu bestätigen."
-    jes "Hier ist auch ein Brief, wieder ein Generalschlüssel und der andere Schlüssel führt in mein Zimmer!"
-    "In Jessicas Zimmer wurde Genji gefunden. Sein Bauch wurde durchbohrt und auch hier ein Brief mit Generalschlüssel und ein Schlüssel in den Heizungskeller."
-    but "Das stinkt ja bestialisch!"
+    "Natsuhi öffnet vorsichtig den Brief und nimmt zwei Schlüssel heraus."
+    nat "Das ist der Generalschlüssel von Kanon und der Schlüssel zu meinem Zimmer oben!"
+    extend " Wir müssen sofort dorthin!"
+    pause 0.5
+    scene black with instant
+    play audio umise_030
+    show kan a11defo1 at m with fastdissolve
+    pause 0.3
+    scene black with instant
+    play audio umise_046
+    scene blood_2b with instant
+    pause 0.5
+    scene black with instant
+    play audio umise_030
+    show no83_0051
+    show bea a11akuwarai5 at m with fastdissolve
+    pause 1
+    scene black with instant
+    play audio umise_046
+    show text _("Zur Zeit der vierten Dämmerung:\nStich in den Kopf und Töte!")
+    pause 3
+    scene black with kanon_r 
+    "So schnell wie möglich eilten sie zu Natsuhis Zimmer."
+    extend " Die Tür ist tatsächlich auch verschlossen."
+    "Battler öffnet die Tür mit Natsuhis Schlüssel."
+    play sound umise_017
+    scene white zorder 99
+    with kanon_r
+    scene black with fastdissolve
+    scene mnat_1ar_bg at bgani
+    stop wind fadeout 1
+    show rainbackscroll
+    show rainfrontscroll
+    show mnat_1ar at bgani
+    show expression(CustomParticles("images/system/particle.png", 10))
+    with gradientcirclefade
+    show but b11naku1 at m
+    but "Kumasawa-baa-chan....."
+    extend " Das darf nicht wahr sein, das hast du am wenigsten verdient!"
+    play sound umise_038
+    scene blood_1ar
+    nan "Ihre Brust wurde durchbohrt, wieder mit einem dieser Pfähle."
+    extend " Ich kann nur bestätigen, dass sie tot ist."
+    scene mnat_1ar_bg at bgani
+    stop wind fadeout 1
+    show rainbackscroll
+    show rainfrontscroll
+    show mnat_1ar at bgani
+    show expression(CustomParticles("images/system/particle.png", 10))
+    with quickgradientwiperight
+    show jes a11naku3 at m
+    jes "Hier ist auch ein Brief...." 
+    extend " Wieder ein Generalschlüssel und der andere Schlüssel führt in mein Zimmer!"
+    pause 0.5
+    scene black with instant
+    play audio umise_030
+    show kum a11defo2 at m with fastdissolve
+    pause 0.3
+    scene black with instant
+    play audio umise_046
+    scene blood_2b with instant
+    pause 0.5
+    scene black with instant
+    play audio umise_030
+    show no83_0051
+    show bea a11akuwarai2 at m with fastdissolve
+    pause 1
+    scene black with instant
+    play audio umise_046
+    show text _("Zur Zeit der fünften Dämmerung:\nStich in die Brust und Töte!")
+    pause 3
+    scene black with kanon_r 
+    "Alle rannten so schnell sie konnten in Jessicas Zimmer."
+    "Dort wurde die Leiche von Genji gefunden. Sein Bauch war mit einem Pfahl durchbohrt." 
+    "Auch hier wurde ein Brief mit einem Generalschlüssel und einem Schlüssel für den Heizungskeller gefunden."
+    pause 0.5
+    scene black with instant
+    play audio umise_030
+    show gen a11defo1 at m with fastdissolve
+    pause 0.3
+    scene black with instant
+    play audio umise_046
+    scene blood_2b with instant
+    pause 0.5
+    scene black with instant
+    play audio umise_030
+    show no83_0051
+    show bea a11futeki1 at m with fastdissolve
+    pause 1
+    scene black with instant
+    play audio umise_046
+    show text _("Zur Zeit der sechsten Dämmerung:\nStich in den Bauch und Töte!")
+    pause 3
+    scene black with kanon_r
+    scene mboi_1c with gradientcirclefade
+    show expression(CustomParticles("images/system/particle.png", 10))
+    show but a21kuyasigaru1 at rightedge
+    but "Stinkt ja wie die Pest hier drin!"
+    show jes a11atya2 at l
     jes "Das ist ja widerlich!"
+    show nat a12nayamu1 at m
     nat "Da liegt Vater!"
-    jes "Bist du sicher?"
-    extend " Ich finde man erkennt Kinzo gar nicht wieder..."
-    nat "Sieh dir sein Fuß an, er hat sechs Zehen, sowas hatte nur Vater."
-    but "BEATRICE hatte wohl sehr schnell keine lust mehr auf den alten!"
-    nan "Das war in der tat Kinzo-san, mein alter Freund..."
-    "Der Brief in dem Heizungskeller beinhaltete nur einen Schlüssel zur Kapelle."
-    extend " Alle machten sich so schnell wie möglich auf den Weg dorthin!"
+    jes "Bist du dir da sicher?"
+    extend " Ich finde, dass man Kinzo gar nicht mehr wieder erkennen kann..."
+    nat "Schau dir seinen Fuß an, er hat sechs Zehen, das hatte nur Vater."
+    but a21nayamu2 "Ich glaube, BEATRICE hatte schon nach kurzer Zeit keine Lust mehr auf den Alten!"
+    nat "Wie auf der Inschrift beschrieben, steckt der Pfahl in seinem Knie...."
+    hide but  
+    hide jes
+    hide nat
+    show nan a1fumu1 at m
+    nan "Das ist in der Tat Kinzo-san..."
+    extend " Ruhe in Frieden... Alter Freund..."
+    "Der Brief, der sich im Heizungskeller befand, enthielt nur den Schlüssel für die Kapelle."
+    pause 0.5
+    scene black with instant
+    play audio umise_030
+    show kin a11defo1 at m with fastdissolve
+    pause 0.3
+    scene black with instant
+    play audio umise_046
+    scene blood_2b with instant
+    pause 0.5
+    scene black with instant
+    play audio umise_030
+    show no83_0051
+    show bea a11warai1 at m with fastdissolve
+    pause 1
+    scene black with instant
+    play audio umise_046
+    show text _("Zur Zeit der siebten Dämmerung:\nStich in das Knie und Töte!")
+    pause 3
+    scene black with kanon_r
+    scene cha_o2an
+    show rainbackscroll
+    show rainfrontscroll
+    with gradientcirclefade
+    play wind umilse_005
+    "Alle machten sich so schnell wie möglich auf den Weg zur Kapelle!"
+    extend " Natsuhi zückt sofort den Schlüssel und ist zu allem bereit!"
+    show nat a32ikari1 at m
     nat "Ich öffne jetzt die Kapelle!"
-    "Natsuhi öffnete mit dem Schlüssel die Tür und dieser Anblick innerhalb der Kapelle, ist wohl der schlimmste überhaupt."
+    play sound umise_017
+    scene white zorder 99
+    with kanon_r
+    scene black with fastdissolve
+    "Natsuhi öffnete mit dem Schlüssel die Tür und der Anblick in der Kapelle war wohl der schlimmste an diesem Abend..."
+    scene cha_i1ad at bgani
+    show expression(CustomParticles("images/system/particle.png", 10))
+    show but b26naku2 at m
+    play sound umise_013
+    with quickflash
     but "Shannon-chan!!!!"
-    extend "Neiiiinnnn!!!!!!!"
-    but "wieso nur? wieso nur?"
+    extend " Neiiiinnnn!!!!!!!"
+    but "Warum nur? Warum nur?"
+    show jes b33naku1 at l
     jes "Wir werden auch sterben!"
-    "Shannon wurde über den Altar in der Kapelle erhangen..."
-    extend " Es war Shannon..."
-    but "BEATRICE wollte zum Finale hin nochmal den grausamsten Mord überhaupt durchführen."
-    extend " Es hat ja nicht gereicht sechs von uns zu entstellen, nein...."
-    but "Man muss ja unbedingt jemanden erhängen, der bereits tot ist..."
-    but "Du hast kein respekt vor dem tot! Das ist das aller letzte!"
-    "Natsuhi öffnete den Brief in der Kapelle, dort drin, war Shannons Generalschlüssel und der Schlüssel ins Wohnzimmer."
+    play sound umise_038
+    scene blood_1b   
+    "Shannon wurde über dem Altar der Kapelle aufgehängt..."
+    extend " Ihr Bein ist durchbohrt und der Pfahl liegt unter ihr auf dem Boden."
+    extend " Niemand im Raum konnte sich vorstellen, wie ein einzelner Mörder so etwas Grausames tun konnte..."
+    but "BEATRICE wollte für das Finale noch einmal den grausamsten Mord aller Zeiten begehen."
+    but "Du hast keinen Respekt vor dem Tod! Das ist das Allerletzte!"
+    "Natsuhi öffnete den Brief in der Kapelle, darin war Shannons Generalschlüssel und der Schlüssel zum Wohnzimmer."
     nat "Der Schlüssel in diesem Brief führt ins Wohnzimmer, wo Kanon liegt."
+    scene map10
     extend " Eine absolut perfekte Schleife, das ist doch absolut unmöglich!!"
-    "Diese Verkettung an verschlossenen Räumen ist wohl eine perfekte Schleife!"
-    extend " In Raum eins, ist der Schlüssel für den nächsten Raum, bis in Raum fünf der Schlüssel für Raum eins gefunden wird."
+    "Diese Aneinanderreihung von geschlossenen Räumen ist eine perfekte Schleife!"
+    extend " Im ersten Raum befindet sich der Schlüssel für den nächsten Raum, bis im letzten Raum der Schlüssel für den ersten Raum gefunden werden kann."
     "Man läuft einmal perfekt im Kreis."
-    but "Es bringt alles absolut gar nichts mehr...."
+    pause 0.5
+    scene black with instant
+    play audio umise_030
+    show sha a11defo1 at m with fastdissolve
+    pause 0.3
+    scene black with instant
+    play audio umise_046
+    scene blood_2b with instant
+    pause 0.5
+    scene black with instant
+    play audio umise_030
+    show no83_0051
+    show bea a11akuwarai5 at m with fastdissolve
+    pause 1
+    scene black with instant
+    play audio umise_046
+    $ songname = "-"
+    stop music
+    show text _("Zur Zeit der achten Dämmerung:\nStich in das Bein und Töte!")
+    pause 3
+    scene black with kanon_r
+    play music umib_159
+    $ songname = "Infant Queen Bee"
+    show screen showsong
+    scene cha_i1ad at bgani
+    show expression(CustomParticles("images/system/particle.png", 10))
+    show but b26naku2 at m
+    play sound umise_013
+    with quickflash
+    pause 2
+    but "Das bringt überhaupt nichts mehr...."
     extend " ....Es bringt überhaupt gar nichts mehr irgendwas...."
-    nat "Battler-kun? Wo willst du hin?"
-    "Battler stürmte aus der Kapelle und rannte in Richtung Villa."
-    "Er rannte so schnell er konnte in die Eingangshalle zum Gemälde von BEATRICE."
+    play sound umise_020
+    hide but
+    pause 0.5
+    show nat a32ikari1 at m
+    nat "Battler-kun? Wohin gehst du?"
+    extend " Bleib bei uns, es ist zu gefährlich!"
+    pause 1
+    show m_o1a
+    show rainbackscroll
+    show rainfrontscroll
+    with gradientcirclefade
+    "Battler stürmte aus der Kapelle und lief auf die Villa zu."
+    scene mhal_1ar_bg at bgani
+    stop wind fadeout 1
+    show rainbackscroll
+    show rainfrontscroll
+    show mhal_1ar at bgani
+    show expression(CustomParticles("images/system/particle.png", 10))
+    with gradientcirclefade
+    "Er rannte in die Eingangshalle zu dem Bild von BEATRICE, so schnell er konnte."
+    scene beato with gradientcirclefade
     but "BEATRICE!!!"
-    but "Bist du jetzt glücklich?"
-    extend "Stell dich mir hier und jetzt!"
+    but "Bist du jetzt zufrieden?"
+    extend " Hier und jetzt stell dich mir!"
     extend " Trau dich und leg dich mit mir an!"
-    but "Alle Morde wurden durchgeführt, jetzt komm endlich raus!!"
-    extend " Ich schneid dir deine Kuhtitten auf und mach mir ein Sandwich drauß!"
+    but "Alle Morde sind geschehen, jetzt komm raus!!"
+    extend " Dreizehn von uns mussten deinetwegen sterben!!"
+    call butterfly1 from _call_butterfly1_3
     bea "*Gacker*Gacker*"
-    extend " Was ein charmanter Mann!"
-    but "Ganz genau, zeig dich mir!!!"
+    extend " Was für ein charmanter Mann!"
+    "Schier endlose goldene Schmetterlinge tanzten durch die Eingangshalle!"
+    extend " BEATRICE wird jeden Moment das Tor zum Goldenen Land öffnen!"
+    but "Genau, zeig dich mir!!!"
     extend " Komm schon!!!!" 
     extend " BEATRICEEEEE!!!!!"
+    pause 1
+    scene black with instant
+    stop rain
+    play audio umise_046
+    show text _("Zur Zeit der neunten Dämmerung:\nWird die Hexe wiederbelebt\nund niemand wird am leben bleiben!")
+    pause 5
+    scene black with kanon_r
+    scene schoolcredit at credits_scroll_school
+    pause 90
+    stop music fadeout 5
+    pause 5
+    scene black with kanon_r
+    pause 5
     ## Kapitel 3 Ende
 
 
