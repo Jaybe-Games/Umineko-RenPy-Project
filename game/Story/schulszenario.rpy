@@ -644,6 +644,8 @@ label schule:
     "Zwischenzeitlich wurden auf einen Tipp von Genji hin Kinzos Schrotflinten geholt."
     extend " Dies sind von Kinzo modifizierte Varianten mit mehr Munition und weniger Streuung."
     play audio umise_030
+    hide but
+    hide nat
     show hid a12defo1 at m
     show eva b24defo1 at l
     show nat a16defo1 at r
@@ -1272,6 +1274,7 @@ label schule:
     show kan a13defo2 at l
     kan "Eva-sama und Hideyoshi-sama haben nicht auf mich reagiert..."
     extend " Deshalb musste ich die Türkette mit einem Bolzenschneider durchtrennen."
+    kan "Als ich zurück kam, war dieses Symbol auf der Tür!"
     hide but
     hide kan
     hide nat
