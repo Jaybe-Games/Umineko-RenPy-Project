@@ -121,7 +121,8 @@ define gui.namebox_height = None
 
 ## The borders of the box containing the character's name, in left, top, right,
 ## bottom order.
-define gui.namebox_borders = Borders(100, 10, 100, 10)
+define persistent.fontborder = 15
+define gui.namebox_borders = Borders(100, 10, 100, persistent.fontborder)
 
 ## If True, the background of the namebox will be tiled, if False, the
 ## background of the namebox will be scaled.
@@ -132,7 +133,7 @@ define gui.namebox_tile = False
 ## number of pixels relative to the left or top side of the textbox, or 0.5 to
 ## center.
 define gui.dialogue_xpos = 179
-define gui.dialogue_ypos = 30
+define gui.dialogue_ypos = 25
 
 ## The maximum width of dialogue text, in pixels.
 define gui.dialogue_width = 1500

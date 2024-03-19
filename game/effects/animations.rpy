@@ -36,8 +36,8 @@ label chapterendb:
     play sound "audio/sfx/umise_1006.ogg"
     hide rainbackscroll
     hide rainfrontscroll
-    show rainback static with instant
-    show rainfront static with instant
+    show rainbackstatic with instant
+    show rainfrontstatic with instant
     show ware with instant
     pause 2
     show screen cinemalogo

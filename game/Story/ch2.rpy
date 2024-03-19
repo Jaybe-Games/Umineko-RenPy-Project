@@ -2,7 +2,7 @@ label chapter2:
 
         #$ discord.update(state = "Episode 0")
         #$ discord.update(details = "Chapter 2")
-        $ chapter = 2
+        $ chapter = _("Die Hexe auf dem Balkon")
         $ songname = "-"
         $ renpy.free_memory()
         $ save_name = _("Episode0 Resurrection of the golden witch\nDie Hexe auf dem Balkon")
@@ -28,7 +28,7 @@ label chapter2:
         extend " ...Sie sind für einen Preis von 200 Yen pro Packung erhältlich."
         ber "Sie machen das ewige Leben einer tausendjährigen Hexe etwas erträglicher."
         play sound "audio/sfx/umise_052.ogg"
-        show bea a11warai1 at r with witchfadein
+        show bea a11warai1 at r with breakupin
         bea "*gacker*gacker*...!"
         extend " Den heutigen Tee habe ich extra für Euch auf die Nanosekunde ziehen lassen,"
         extend " ...Großes Fräulein Bernkastel."
@@ -44,20 +44,20 @@ label chapter2:
         extend " aber ich glaube nicht, dass Ihr mein Territorium nur für eine kleine Teeparty betreten habt."
         extend " ...Darf ich fragen, was der Grund für Euren Besuch ist?"
         play sound "audio/sfx/umise_056.ogg"
-        hide ber with witchfadeout
+        hide ber with breakupout
         scene black with quickergradientwipeleft
         scene g1f_s1ap at bgani
         show expression(CustomParticles("images/system/particle.png", 10)) 
         with quickergradientwipeleft
         pause 1.5
         play sound "audio/sfx/umise_052.ogg"
-        show ber a21defo1 at l with witchfadein
+        show ber a21defo1 at l with breakupin
         ber "...Beato,"
         extend " Ich bin nur eine gelangweilte Hexe die durch den See der Fragmente wandert."
         extend " ...Es ist nicht nötig, mich als Bedrohung zu betrachten."
         ber "Ich habe nicht die Absicht die Regeln deines Territoriums zu verletzen."
         play sound "audio/sfx/umise_052.ogg"
-        show bea a13warai1 at r with witchfadein
+        show bea a13warai1 at r with breakupin
         bea "...*gacker*gacker*"
         extend " Bedrohung?" 
         extend " ...Ich sehe Euch nicht im geringsten als solche an."
@@ -78,7 +78,7 @@ label chapter2:
         show expression(CustomParticles("images/system/particle.png", 10))  
         with quickergradientwiperight
         play sound "audio/sfx/umise_052.ogg"
-        show ber a21defo1 at m with witchfadein
+        show ber a21defo1 at m with breakupin
         ber "Die Macht einer Hexe beruht ohne Einschränkung auf einer bestimmten Zahl."
         if persistent.bernkastel == False:
                 $ persistent.bernkastel = True
@@ -92,7 +92,7 @@ label chapter2:
         extend " ....wird dies von den Menschen als Wunder bezeichnet."
         ber "Seine Überlebenschance lag bei 1 zu 100.000.000, aber er überlebte."
         play sound "audio/sfx/umise_052.ogg"
-        show bea a11defo2 at rightedge with witchfadein
+        show bea a11defo2 at rightedge with breakupin
         bea "Wenn ich das richtig verstehe, kann ein Wunder geschehen, solange die Wahrscheinlichkeit nicht gleich Null ist?"
         show ber a21defo2 at l with dis
         ber "Das ist korrekt."
@@ -165,12 +165,12 @@ label chapter2:
         ber a21defo1 " ......Ich erzähl dir das nur ein einziges mal, verstanden?"
         extend " ....Du bist normalerweise nicht mal ein Zehntel meiner Zeit wert, ist das klar?"
         play sound "audio/sfx/umise_056.ogg"
-        hide ber with witchfadeoutq
+        hide ber with breakupoutq
         scene different_space_1c
         show expression(CustomParticles("images/system/particle.png", 10)) 
         with quickgradientwipeup
         play sound "audio/sfx/umise_052.ogg"
-        show ber a21defo2 at m with witchfadeinq
+        show ber a21defo2 at m with breakupinq
         ber "Die mächtigste Hexe ist definitiv die Große Hexe Auauau..."
         extend a21niramu1 " .....Wer hat sich diesen Namen ausgedacht? Ich will meine geliebten Kitties auf denjenigen loslassen...."
         extend " ...Auch nur einen Teil ihres viel zu langen Namens aussprechen zu müssen ist absolut lästig..."
@@ -255,13 +255,13 @@ label chapter2:
         extend " ...Ein Individum, dass selbst mein Spiel mit leichtigkeit gewinnen könnte..."
         ber a21warai4 "Er würde dein Spiel in eine Quadrillion Stücke zerteilen, wieder zusammensetzen, die Regeln ändern, es eine Milliarde Jahre spielen und dann in die nächst gelegene Mülltonne werfen und dich auslöschen."
         play sound "audio/sfx/umise_056.ogg"
-        hide ber with witchfadeoutq
+        hide ber with breakupoutq
         scene black with quickergradientwiperight
         scene g1f_s1bp at bgani
         show expression(CustomParticles("images/system/particle.png", 10))
         with quickergradientwiperight
         play sound "audio/sfx/umise_052.ogg"
-        show ber a21shian1 at leftedge with witchfadeinq
+        show ber a21shian1 at leftedge with breakupinq
         "Plötzlich teleportierte sie sich in eine andere Ecke des Raumes um sprach mit ernster und direkter Stimme."
         ber a21defo1 "Diese Gottheit, hat keinen Namen, aber da er die Macht der Null besitzt nennt man ihn nur"
         play sound "audio/sfx/umise_021.ogg"
@@ -272,7 +272,7 @@ label chapter2:
         extend " ...Völlig irrelevant, was Auauau duldet und sich ansieht, Zero kann das Narrativ unwiderruflich umschreiben oder für alle Zeiten ausradieren."
         ber "Es ist die gewaltige Macht ein Individum auf Null zu setzen."
         play sound "audio/sfx/umise_052.ogg"
-        show bea a11futeki1 at r with witchfadeinq
+        show bea a11futeki1 at r with breakupinq
         bea "In anderen Worten, wenn Zero ein Individum auf Null setzt, wird nicht nur die Existenz ausgelöscht, absolut alle Erinnerungen an diese Existenz werden ebenfalls ausgelöscht."
         extend " ...So als hätte es dieses Individum niemals gegeben."
         ber a21akuwarai2 "Das versteht doch selbst die größte Dumpfbacke mit den kleinsten Gehirnzellen."
@@ -298,13 +298,13 @@ label chapter2:
         bea "Zu gerne würde ich sehen, wie er meine Seele mit Leichtigkeit und einem einzigen Fingerschnipsen zermalmt, bis nichts mehr übrig ist!"
         ber a21warai4 "*giggle*giggle*"
         play sound "audio/sfx/umise_056.ogg"
-        hide ber with witchfadeout
+        hide ber with breakupout
         scene black with quickgradientwipeup
         scene different_space_1c
         show expression(CustomParticles("images/system/particle.png", 10))
         with quickgradientwipeup
         play sound "audio/sfx/umise_052.ogg"
-        show ber a11defo1 at m with witchfadein
+        show ber a11defo1 at m with breakupin
         ber "Es wird Zeit sich zu verabschieden, denn ich bin keine Hexe die lange an einem Ort bleibt."
         extend " ...Ich werde weiter durch den See der Fragmente wandern und versuchen meiner Langeweile zu entkommen."
         scene black with quickgradientwipedown
@@ -320,7 +320,7 @@ label chapter2:
         with quickgradientwipeup
         pause 1.5
         play sound "audio/sfx/umise_056.ogg"
-        hide ber with witchfadeoutq
+        hide ber with breakupoutq
         stop music fadeout 5
         $ songname = "-"
         "Ohne auf die Einladung zu reagieren verschwand Bernkastel ins nichts und zurückblieb nur Beato."

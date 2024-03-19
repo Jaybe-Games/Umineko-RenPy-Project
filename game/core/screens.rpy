@@ -728,8 +728,8 @@ screen preferences():
             #TODO: Buttons auswechseln
             style_prefix "radio"
             text _("Schriftart") outlines [ (absolute(2), "#00000094", absolute(1), absolute(1)) ] size 40 yoffset 20
-            imagebutton auto "gui/settings/buttons/a_%s.png" action [SelectedIf(gui.SetPreference("font", "newrodin.otf")), gui.SetPreference("font", "newrodin.otf")]  activate_sound "audio/sys/sysse_soff.wav" hover_sound "audio/sys/sysse_move.wav"
-            imagebutton auto "gui/settings/buttons/b_%s.png" action [SelectedIf(gui.SetPreference("font", "ArnoPro.otf")), gui.SetPreference("font", "ArnoPro.otf"), gui.SetPreference("size", 45)] activate_sound "audio/sys/sysse_soff.wav" hover_sound "audio/sys/sysse_move.wav"
+            imagebutton auto "gui/settings/buttons/a_%s.png" action [SelectedIf(gui.SetPreference("font", "newrodin.otf")), gui.SetPreference("font", "newrodin.otf"), SetVariable("persistent.fontborder", 15), SetVariable("prefix", "\""), SetVariable("suffix", "\""), gui.SetPreference("size", 40)]  activate_sound "audio/sys/sysse_soff.wav" hover_sound "audio/sys/sysse_move.wav"
+            imagebutton auto "gui/settings/buttons/b_%s.png" action [SelectedIf(gui.SetPreference("font", "ArnoPro.otf")), gui.SetPreference("font", "ArnoPro.otf"), SetVariable("persistent.fontborder", 5), SetVariable("prefix", "“"), SetVariable("suffix", "”"), gui.SetPreference("size", 50)] activate_sound "audio/sys/sysse_soff.wav" hover_sound "audio/sys/sysse_move.wav"
 
         hbox:
             #TODO: Buttons auswechseln
@@ -755,23 +755,6 @@ screen preferences():
             text _("{color=#fff}+ Automodusgeschwindigkeit -") outlines [ (absolute(2), "#00000094", absolute(1), absolute(1)) ] size 35
 
             bar value Preference("auto-forward time")
-
-                    ### Eines Tages hat diese Config Voice... Eines Tages
-                    #if config.has_voice:
-                        #label _("Sprachlautstärke")
-
-                        #hbox:
-                            #bar value Preference("voice volume")
-
-                            #if config.sample_voice:
-                                #textbutton _("Test") action Play("voice", config.sample_voice)
-
-                    #if config.has_music or config.has_sound or config.has_voice:
-                        #null height gui.pref_spacing
-                        #imagebutton auto "gui/button/mute_%s.png" action Preference("all mute", "toggle") activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav"
-                        #textbutton _("Alles Stummschal{color=#f00}t{/color}en"):
-                            #action Preference("all mute", "toggle")
-                            #style "mute_all_button"
 
 
 style pref_label is gui_label
@@ -889,6 +872,12 @@ screen sound():
 
         vbox:
             bar value Preference("sound volume")
+
+        if config.has_voice:
+            label _("Sprachlautstärke")
+
+            vbox:
+                bar value Preference("voice volume")
 
 screen misc():
 

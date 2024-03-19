@@ -9,7 +9,7 @@ init:
 
         # RainY is rain speed, basically how long does it take
         # for the rain sheet to fall down by one tile
-        RainY = 0.20
+        RainY = 0.25
 
         # RainX is the same for horizontal movement,
         # and needs to be manually adjusted to fit the chosen raindrop angle
@@ -106,7 +106,7 @@ init:
 
     # Static sheets of rain for use when the rain does not need to animate,
     # e.g. when the time has stopped.
-    image rainback static:
+    image rainbackstatic:
         contains:
             RainsheetShort
             alpha RainLayerAlpha
@@ -116,7 +116,7 @@ init:
             alpha RainLayerAlpha
             blur RainBlur
 
-    image rainfront static:        
+    image rainfrontstatic:        
         contains:
             RainsheetLong
             alpha RainLayerAlpha

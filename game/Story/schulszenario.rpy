@@ -1,4 +1,4 @@
-label schule:
+label school:
     ##Kapitel 1 - Die sechs außerwählten
     $ chapter = "Die sechs außerwählten"
     $ songname = "-"
@@ -1713,12 +1713,19 @@ label schule:
     show rainbackscroll
     show rainfrontscroll
     show mlib_1a at bgani
-    show bea a11akuwarai2 at m
+    $ bea_pose ="a11"
+    $ bea_face = "akuwarai4"
+    show bea at m
     play sound umise_002
-    with quickflash
-    bea "Komm schon... rate doch mal..."
-    extend " Du kannst eine Reise nach Hawaii gewinnen!"
-    extend " Kyahahahahahahah!!"
+    with fastdissolve
+    pause 1
+    voice "audio/voice/bea/bea_001.wav"
+    bea bea_001 "Komm schon... rate doch mal..."
+    voice "audio/voice/bea/bea_002.wav"
+    extend bea_002 " Du kannst eine Reise nach Hawaii gewinnen!"
+    $ bea_face = "akuwarai2"
+    voice "audio/voice/bea/bea_003.ogg"
+    extend bea_003 " hahaha.... Kyahahahahahahah!!"
     but "BEATRICE?" 
     extend " .....Du bist BEATRICE?!!!"
     play sound umise_002

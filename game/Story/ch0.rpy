@@ -3,7 +3,7 @@ label start:
 
     #$ discord.update(state = "Episode 0")
     #$ discord.update(details = "Prologue")
-    $ chapter = 0
+    $ chapter = _("Ich schreibe an dich in einer Quadrillion Jahren")
     $ songname = "-"
     $ save_name = _("Episode0 Resurrection of the golden witch\nIch schreibe an dich in einer Quadrillion Jahren")
     #show screen Debugscreen
