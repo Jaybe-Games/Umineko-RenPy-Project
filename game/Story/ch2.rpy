@@ -21,7 +21,10 @@ label chapter2:
         play music "audio/bgm/umib_1001_intro.ogg"
         queue music "audio/bgm/umib_1001_loop.ogg" loop
         window auto
-        show ber a11defo1 at l with dis
+        #show ber a11defo1 at l with dis
+        show ber at m
+        voice "voice/ber/ber_001.ogg"
+        ber v001 "My name is Bernkastel, my dubbing voice is an Ai version of Grabrielle Pietermann. She has voiced Emilia from Re:Zero and, more importantly, Rika Furude from the Higurashi anime. That's why I think this voice is a nobrainer for Bernkastel."
         ber "Ja,"
         extend " ...schwarzer Tee ist wahrlich wie geschaffen für eine Hexe."
         extend " ....Besonders gut schmeckt er mit getrockneten Pflaumen."

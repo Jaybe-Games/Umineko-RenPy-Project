@@ -38,7 +38,7 @@ label start:
     pause (2)
     $ songname = "Corridor of Purgatory's Sands"
     $ _game_menu_screen = "cleanmenu"
-    show screen showsong
+    #show screen showsong
     show screen showch
     scene fure2 with gradientcirclefade
     pause 2
@@ -52,8 +52,10 @@ label start:
     "01. Mai 1983."
     "An die Abteilungen 1 bis 12,"
     "XX Hauptquartier der Präfekturpolizei."
+    $ renpy.movie_cutscene("videos/2.mp4")
     "Generaldirektor XXX"
     "An den Polizeipräsidenten und alle Abteilungsleiter."
+    $ renpy.movie_cutscene("videos/1.mp4")
     "Über den Fall im Dorf Hinamizawa."  
     if persistent.tipunlocked == 0:
         $ persistent.newelement1 = True

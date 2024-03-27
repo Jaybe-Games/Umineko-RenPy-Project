@@ -21,7 +21,7 @@ screen achievement_menu(scroll="viewport"):
         background None
         padding (20, 20, 20, 20)
         #align (0.0, 0.0)
-        ysize 1080
+        ysize 1000
         ymargin 150
         yalign 0.5
         yoffset 60     

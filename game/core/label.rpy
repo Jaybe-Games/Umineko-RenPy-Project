@@ -76,8 +76,9 @@ init -3 python:
 label splashscreen:
 
 #jump beatricechess
-jump school
+#jump school
 #jump test
+#jump chapter2
 
 # if not renpy.seen_label("start"):
 #     show text "Select a Language / Wähle eine Sprache" at texttop
@@ -142,7 +143,6 @@ if persistent.openingplayed == True:
     pause 0.1
 
     hide load4
-    jump school
     return
 else:
     pause (1)
@@ -178,7 +178,6 @@ else:
     pause 0.1
 
     hide load4
-    jump school
     return
 
 label quit:
