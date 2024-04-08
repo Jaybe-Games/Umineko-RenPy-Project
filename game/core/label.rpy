@@ -109,7 +109,7 @@ hide splash3 with dissolve
 pause (1)
 
 if persistent.openingplayed == True:
-    #$ renpy.movie_cutscene("videos/opening.mov")
+    $ renpy.movie_cutscene("videos/opening.mov")
     pause (1)
     show load1 at right
     pause 0.1
@@ -143,6 +143,7 @@ if persistent.openingplayed == True:
     pause 0.1
 
     hide load4
+    call screen press_to_start with dissolve
     return
 else:
     pause (1)
@@ -178,6 +179,7 @@ else:
     pause 0.1
 
     hide load4
+    call screen press_to_start with dissolve
     return
 
 label quit:
@@ -199,6 +201,7 @@ label quit:
 label after_load:
     hide screen tipupdate
     hide screen charupdate
+    hide screen showch
     play sound "audio/sfx/umise_1006.ogg"
 
 label before_main_menu:
@@ -207,58 +210,5 @@ label before_main_menu:
         play effect "audio/sfx/umise_022.ogg"
         show unlocked1 with gradientcirclefade
         pause(5)
-    show clouds at mmclouds
-    show menu_bg
-    show rainbackscroll
-    show rainfrontscroll
-    show copyright at left
-    show titlehana at topright
-    with gradientwipedown
-    hide clouds
-    hide menu_bg
-    hide rainbackscroll
-    hide rainfrontscroll
-    hide titlehana
-    hide copyright
-    hide unlocked1
-    return
-
-label credits:
-    $ renpy.pause(3, hard=True)
-    $ songname = "Golden Sneers - Lovely Banquet"
-    $ _skipping = False
-    $ play_music(ending)
-    show credits at credits_scroll
-    $ renpy.pause(293, hard=True)   
-    stop music
-    $ renpy.pause(5, hard=True)   
-    scene black with kanon_rev
-    $ renpy.pause(5, hard=True)   
-    $ _skipping = True 
-    return
-
-label endroll:
-    $ renpy.pause(3, hard=True)
-    $ songname = "Bring the Fate"
-    $ _skipping = False
-    $ play_music(endroll)
-    show endroll at end_scroll
-    $ renpy.pause(224, hard=True)   
-    stop music
-    $ renpy.pause(5, hard=True)   
-    scene black with kanon_rev
-    $ renpy.pause(5, hard=True)   
-    $ _skipping = True 
-    return
-
-label gameresult:
-
-    $ _skipping = False
-    show gameresult at gameresult_scroll
-    $ renpy.pause(105, hard=True)   
-    $ renpy.pause(5, hard=True)   
-    scene black with kanon_r
-    stop music fadeout 5.0
-    $ renpy.pause(5, hard=True)   
-    $ _skipping = True 
-    return
+    else:
+        pass

@@ -3,8 +3,8 @@ screen preferences():
     tag menu
     modal True
     if main_menu:
-        add "images/backgrounds/mmbackground.png" at mmclouds
-        add "images/backgrounds/mmbg.png"
+        add "images/system/mm_clouds.png" at mmclouds
+        add "images/system/mm_bg.png" at mm_bg
         add "rainbackscroll"
         add "rainfrontscroll"
     add "gui/settings/background.png" at center

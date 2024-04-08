@@ -1,7 +1,7 @@
 screen navigation():
 
-    add "images/backgrounds/mmbackground.png" at mmclouds
-    add "images/backgrounds/mmbg.png"
+    add "images/system/mm_clouds.png" at mmclouds
+    add "images/system/mm_bg.png" at mm_bg
     add "rainbackscroll"
     add "rainfrontscroll"
     add "gui/title/title_hana.png" at topright
@@ -11,6 +11,8 @@ screen navigation():
     text "V[config.version!t]" at topleft size 30 antialias True outlines [ (absolute(3), "#000", absolute(0), absolute(0)) ]
     on "show" action Play("rain", "audio/sfx/umilse_012.ogg")
     on "hide" action Stop("rain")
+    on "show" action Play("wind", "audio/sfx/umilse_005.ogg")
+    on "hide" action Stop("wind")
 
     fixed:
 
@@ -129,3 +131,52 @@ screen continuehover():
     tag hover
     imagemap:
         ground "gui/title/hover/continue.png"
+
+transform blink:
+    linear 1.0 alpha 0.2
+    linear 1.0 alpha 1.0
+    repeat
+
+transform press_start_logo:
+    xalign 0.5
+    yalign 0.5
+
+transform mm_bg:
+    xalign 0.5
+    yalign 0.3
+    zoom 0.8
+
+transform mm_fadeout:
+    alpha 1.0
+    linear 1.0 alpha 0.0
+
+transform mm_logofadeout:
+    zoom 1.0
+    ease 1.0 zoom 0.5
+
+style press_start_text:
+    outlines [ (absolute(2), "#000000ff", absolute(1), absolute(1)) ] 
+    size 50
+    xalign 0.5
+    yalign 0.8 
+
+screen press_to_start():
+    tag menu
+    add "images/system/mm_clouds.png" at mmclouds
+    add "images/system/pre_bg.png" at top
+    add "rainbackscroll"
+    add "rainfrontscroll"
+    add "gui/title/copyright.png" at left
+    add "gui/title/titlelogo.png" at press_start_logo
+
+    
+    text _("Klicke zum Starten") style "press_start_text" at blink
+    
+    imagemap:
+        ground "images/system/transparent.png"
+        hotspot (0, 0,1920, 1080) focus_mask None action Return()  activate_sound "audio/sys/sysse_decide.wav"
+
+    on "show" action Play("rain", "audio/sfx/umilse_012.ogg")
+    on "hide" action Stop("rain")
+    on "show" action Play("wind", "audio/sfx/umilse_005.ogg")
+    on "hide" action Stop("wind")

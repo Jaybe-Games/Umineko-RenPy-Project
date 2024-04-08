@@ -150,8 +150,8 @@ screen file_slots_load():
 
     default page_name_value = FilePageNameInputValue(pattern=_("Seite {}"), auto=_("Automatische Spielstände"), quick=_("Schnell Speicherungen"))
     if main_menu:
-        add "images/backgrounds/mmbackground.png" at mmclouds
-        add "images/backgrounds/mmbg.png"
+        add "images/system/mm_clouds.png" at mmclouds
+        add "images/system/mm_bg.png" at mm_bg
         add "rainbackscroll"
         add "rainfrontscroll"
     add "gui/saveload/loadbg.png" at center

@@ -23,8 +23,8 @@ screen characters():
     tag menu
     modal True
     if main_menu:
-        add "images/backgrounds/mmbackground.png" at mmclouds
-        add "images/backgrounds/mmbg.png"
+        add "images/system/mm_clouds.png" at mmclouds
+        add "images/system/mm_bg.png" at mm_bg
         add "rainbackscroll"
         add "rainfrontscroll"
     text _("Charaktere") outlines [ (absolute(4), "#00000094", absolute(1), absolute(1)) ] size 90 font "fonts/Georgia.ttf" xalign 0.5 yalign 0.03 
