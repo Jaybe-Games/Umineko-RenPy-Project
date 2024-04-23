@@ -7,7 +7,7 @@ init python:
     config.keymap['rollback'].remove('any_K_PAGEUP')
     config.keymap['rollback'].remove('any_KP_PAGEUP')
     config.keymap['rollback'].remove('K_AC_BACK')
-    config.keymap['rollback'].remove('mousedown_4')
+    #config.keymap['rollback'].remove('mousedown_4')
 
     config.keymap['self_voicing'].remove('alt_K_v')
     config.keymap['self_voicing'].remove('K_v')

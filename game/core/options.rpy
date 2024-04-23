@@ -174,10 +174,13 @@ define config.main_game_transition = MultipleTransition([
 
 define _scene_show_hide_transition = { "master" : Dissolve(0.25) }
 
+define gradientwipedown = ImageDissolve("/images/masks/down.png", 0.8, ramplen = 300)
+define gradientwipeup = ImageDissolve("/images/masks/up.png", 0.8, ramplen = 300)
+
 define config.window = "auto"
 
-define config.window_show_transition = { "screens" : Dissolve(.25) }
-define config.window_hide_transition = { "screens" : Dissolve(.25) }
+define config.window_show_transition = gradientwipeup
+define config.window_hide_transition = gradientwipedown
 
 
 default preferences.text_cps = 50
