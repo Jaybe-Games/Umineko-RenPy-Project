@@ -31,11 +31,11 @@ define gui.idle_color = '#FFFFFF'
 define gui.idle_small_color = '#ffffff'
 
 ## The color that is used for buttons and bars that are hovered.
-define gui.hover_color = '#ff7b00'
+define gui.hover_color = '#eb010d'
 
 ## The color used for a text button when it is selected but not focused. A
 ## button is selected if it is the current screen or preference value.
-define gui.selected_color = '#ff7b00'
+define gui.selected_color = '#ff3232'
 
 ## The color used for a text button when it cannot be selected.
 define gui.insensitive_color = '#888888ff'
@@ -53,43 +53,33 @@ define gui.interface_text_color = '#ffffff'
 ## Fonts and Font Sizes ########################################################
 
 ## The font used for in-game text.
-define gui.text_font = gui.preference("font", "newrodin.otf") 
+define gui.text_font = gui.preference("font", "ArnoPro.otf") 
 
 ## The font used for character names.
-define gui.name_text_font = gui.preference("font", "newrodin.otf")
+define gui.name_text_font = gui.preference("font", "ArnoPro.otf")
 
 ## The font used for out-of-game text.
-define gui.interface_text_font = "fonts/newrodin.otf"
+define gui.interface_text_font = "fonts/ArnoPro.otf"
 
-define gui.glyph_font = "fonts/AOTFShinGoProMedium.otf"
+define gui.glyph_font = "fonts/ArnoPro.otf"
 
 ## The size of normal dialogue text.
-define gui.text_size = gui.preference("size", 45)
+define gui.text_size = gui.preference("size", 50)
 
 ## The size of character names.
-define gui.name_text_size = gui.preference("size", 45)
+define gui.name_text_size = gui.preference("size", 50)
 
 ## The size of text in the game's user interface.
-define gui.interface_text_size = 40
+define gui.interface_text_size = 50
 
 ## The size of labels in the game's user interface.
-define gui.label_text_size = 30
+define gui.label_text_size = 50
 
 ## The size of text on the notify screen.
 define gui.notify_text_size = 40
 
 ## The size of the game's title.
-define gui.title_text_size = 40
-
-
-## Main and Game Menus #########################################################
-
-## The images used for the main and game menus.
-define gui.main_menu_background = "gui/main_menu.png"
-define gui.main_menu2_background = "gui/main_menu2.png"
-define gui.main_menu3_background = "gui/main_menu3.png"
-define gui.game_menu_background = "gui/game_menu.png"
-define gui.game_menu1_background = "gui/game_menu1.png"
+define gui.title_text_size = 50
 
 #default partObj = CustomParticles("images/system/particle.png", 5)
 ## Dialogue ####################################################################
@@ -121,7 +111,7 @@ define gui.namebox_height = None
 
 ## The borders of the box containing the character's name, in left, top, right,
 ## bottom order.
-define persistent.fontborder = 15
+default persistent.fontborder = 15
 define gui.namebox_borders = Borders(100, 10, 100, persistent.fontborder)
 
 ## If True, the background of the namebox will be tiled, if False, the
@@ -167,6 +157,7 @@ define gui.button_text_size = gui.interface_text_size
 
 ## The color of button text in various states.
 define gui.button_text_idle_color = gui.idle_color
+define gui.button_text_outlines = [ (absolute(3), "#000000ff", absolute(0), absolute(0)) ]
 define gui.button_text_hover_color = gui.hover_color
 define gui.button_text_selected_color = gui.selected_color
 define gui.button_text_insensitive_color = gui.insensitive_color
@@ -269,7 +260,7 @@ define gui.pref_spacing = 15
 define gui.pref_xalign = 400
 
 ## Controls the amount of spacing between preference buttons.
-define gui.pref_button_spacing = 0
+define gui.pref_button_spacing = 30
 define gui.pref_button_xalign = 300
 
 ## The spacing between file page buttons.
@@ -344,19 +335,19 @@ define config.history_length = 100
 
 ## The height of a history screen entry, or None to make the height variable at
 ## the cost of performance.
-define gui.history_height = 250
+define gui.history_height = 300
 
 ## The position, width, and alignment of the label giving the name of the
 ## speaking character.
 define gui.history_name_xpos = 0
 define gui.history_name_ypos = 0
-define gui.history_name_width = 480
+define gui.history_name_width = 50
 define gui.history_name_xalign = 0.0
 
 ## The position, width, and alignment of the dialogue text.
-define gui.history_text_xpos = 260
+define gui.history_text_xpos = 450
 define gui.history_text_ypos = 0
-define gui.history_text_width = 1300
+define gui.history_text_width = 1100
 define gui.history_text_xalign = 0.0
 
 

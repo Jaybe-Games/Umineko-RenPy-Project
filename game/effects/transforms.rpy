@@ -79,9 +79,8 @@ transform reset_shader:
 
 image butterfly1 = Movie(channel="movie", play="videos/butterfly1.mov", Delay=False, loop=False, side_mask=True, image="images/efe/no83_0051.png")
 image butterfly1_0 = Movie(channel="movie", play="videos/Butterfly1_0.mov", side_mask=True, Delay=False, loop=False, start_image="images/efe/no83_0051.png")
-image vortex = Movie(channel="movie", play="videos/vortex.mov", Delay=False, loop=True)
 image no59 = Movie(channel="movie", play="videos/no59.mov", Delay=False, loop=False)
-image no64 = Movie(channel="movie", play="videos/no64.mov", Delay=False, loop=True, side_mask=False, image="images/efe/no64_00000.png")
+#image no64 = Movie(channel="movie", play="videos/no64.mov", Delay=False, loop=True, side_mask=False, image="images/efe/no64_00000.png")
 image chain = Movie(channel="movie", play="videos/chain.mov", Delay=False, loop=False, side_mask=True)
 
 transform bgani:
@@ -152,39 +151,9 @@ transform slowerboat:
     ease 4.9333333333333334 offset (0,-25)
     repeat
 
-transform buttondissolvetitle:
-    alpha 0.0
-    pause 0.2
-    ease 0.5 alpha 1.0
-
-transform buttondissolve1:
+transform buttonzoom:
     subpixel True
-    alpha 0.0
-    pause 0.4
-    ease 0.5 alpha 1.0
-
-transform buttondissolve2:
-    subpixel True
-    alpha 0.0
-    pause 0.6
-    ease 0.5 alpha 1.0
-
-transform buttondissolve3:
-    subpixel True
-    alpha 0.0
-    pause 0.8
-    ease 0.5 alpha 1.0
-transform buttondissolve4:
-    subpixel True
-    alpha 0.0
-    pause 1.0
-    ease 0.5 alpha 1.0
-
-transform buttondissolve5:
-    subpixel True
-    alpha 0.0
-    pause 1.2
-    ease 0.5 alpha 1.0
+    zoom 0.75
 
 transform bganistart:
     subpixel True
@@ -194,11 +163,13 @@ transform bganistart:
 
 transform gamemenubuttontransform:
     subpixel True
-    xoffset 500
-    zoom 0.85
-    xalign 0.5
-    yalign 0.5
-    linear 0.4 xoffset 0
+    xoffset 1000
+    ease 0.5 xoffset 0
+
+transform gamemenubuttontransform2:
+    subpixel True
+    xoffset -1000
+    ease 0.5 xoffset 0
 
 transform hanatoptransform:
     subpixel True
@@ -286,3 +257,7 @@ transform credits_scroll_school:
     xalign 0.5
     ease 90 yoffset -28536
 
+transform portrait_zoom:
+    xalign 0.3
+    yoffset 250
+    zoom 2

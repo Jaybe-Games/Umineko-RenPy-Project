@@ -5,11 +5,11 @@ init:
         RainBlur = 0
 
         # RainAlpha is the total alpha level of the entire rain sheet.
-        RainAlpha = 1
+        RainAlpha = 0.8
 
         # RainY is rain speed, basically how long does it take
         # for the rain sheet to fall down by one tile
-        RainY = 0.25
+        RainY = 0.35
 
         # RainX is the same for horizontal movement,
         # and needs to be manually adjusted to fit the chosen raindrop angle

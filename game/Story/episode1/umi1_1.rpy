@@ -1,0 +1,140 @@
+label umi1_1:
+    $ chapter = _("Rokkenjima")
+    $ menuchapter = _("""Episode1 Chapter1
+Rokkenjima""")
+    $ save_name = _("Episode1 Legend of the Golden Witch\nRokkenjima")
+    $ show_chapter = _("""Episode1 Legend of the Golden Witch
+Chapter 1: Rokkenjima""")
+    $ _game_menu_screen = "cleanmenu"
+    $ persistent.ep1started = True
+    $ persistent.new = False
+    show mlib_1b_bg at bgani
+    show rainbackscroll
+    show mlib_1b at bgani
+    with gradientcirclefade
+    $ play_music(rose)
+    "Two older men could be observed in a darkened and foul-smelling study"
+    extend " While one of them examined his magnificent glass with a poisonous green alcoholic drink, he began to speak with a grim expression."
+    $ kin_pose = "a11"
+    $ kin_face = "badmood1"
+    show kin at m
+    #voice "{}kin_01.ogg".format(persistent.voicedir)
+    kin "....Nanjo..."
+    extend " ....how much longer do I have to live?"
+    scene mlib_1a_bg at bgani
+    show rainbackscroll
+    show mlib_1a at bgani
+    $ nan_pose = "a1"
+    $ nan_face = "hmm1"
+    with quickergradientwipeleft
+    show nan at l
+    nan "............"
+    "Nanjo, couldn't get a word out, but the man who wanted to know how long he had to live still got his answer"
+    $ kin_pose = "a11"
+    $ kin_face = "default1"
+    show kin at r
+    kin "...Hmpf."
+    extend " Not long, then..."
+    play audio umise_020
+    camera at vpunch
+    pause 0.25
+    scene black with instant
+    play audio umise_1006
+    "Suddenly he dropped his glass and began to throw a sorrowful tantrum."
+    scene mlib_1b_bg at bgani
+    show rainbackscroll
+    show mlib_1b at bgani
+    $ kin_pose = "a13"
+    $ kin_face = "cry2"
+    show kin at m
+    camera at zoomin
+    with quickergradientwipeleft
+    kin "But this cannot be my death..."
+    extend " I'll not allow death to claim me until I have seen her smile once again!!"
+    $ kin_pose = "a23"
+    $ kin_face = "cry1"
+    kin "Come to me again..."
+    extend " Come to me and smile...!!"
+    play audio umise_027
+    pause 0.8
+    scene portrait_ep1 at portrait_zoom,bgani with flash
+    show screen show_chapter
+    kin "BEATRICE!!!"
+    pause 2
+    stop music fadeout 2
+    pause 2
+    hide screen show_chapter
+    scene black 
+    with dissolve
+    $ renpy.movie_cutscene("videos/pc_op.mkv")
+    "This boat is charting a course..."
+    extend " ...For Rokkenjima, an island in the Izu archipelago, south of Tokyo."
+    extend " It's a small island six miles across, owned by the wealthy Ushiromiya Family."
+    "The traditional annual family gathering is nearly upon us."
+    extend " And it is for this purpose that the ten of us enjoy our pleasant cruise..."
+    extend " Our pleasant..."
+    but "...Wai-"
+    extend " This is too fast!"
+    but "Is it just me, or are we going dangerously fast?"
+    but "I AM GONNA FALL OVEEERRRRRRRRR!!!!!!!!"
+    "For personal reasons, I've been largely estranged from the rest of the family for some time."
+    "...I never actually dreamed that my first family gathering in six years would involve a baptism..."
+    jes "Consider yourself lucky, Battler! The captain bumped down the speed just for you!"
+    extend " Still, you should see yourself! Hee-Hee-Ha-Ha-Ha!!"
+    jes "Six years later, you're about twice the size you used to be, but as helpless as ever on a moving vehicle!"
+    extend " Bwa-ha-ha-ha-ha!"
+    but "Shut up, Jessica!"
+    jes "And you're supposed to be an eighteen-year-old man?"
+    extend " Pathetic!"
+    jes "I guess your courage and your twig and berries are the same size they were when you were a kid!, pfff!"
+    "This girl who seems entirely unsuited to her role as the lofty daughter of a proud and powerful family is Jessica."
+    "She's my cousin, born the same year as me."
+    but "Damn you, Jessica..."
+    extend " So you think you're the only one who's a grownup now...?"
+    but "How about I perform a little exermination..."
+    extend " ...to see how much you've grown?"
+    jes "....Nh!!"
+    "Battler managed to touch her breasts with his fingertips but after he did, Jessica smacked him on the head"
+    jes "Dammit! You brushed my chest."
+    extend " I miscalculated how much your reach would have grown in six years...!"
+    mar "Uuu."
+    extend " Battler wiped out."
+    "While Battler was lying on the floor because of Jessica's smack, a little girl knelt in front of him and stroked his head."
+    but "Hey, Maria."
+    extend " You're right... Battler's all wiped out."
+    extend " Thanks for caring, kid."
+    mar "uuu."
+    "Maria's another cousin I haven't seen in six years. She's an adorable little sweetheart!"
+    but "Here we go! Princess gets a piggyback ride!"
+    extend " hmpff...hnn..."
+    mar "uuu!!"
+    extend " Battler, Battler!! Uuu, Uuu!!"
+    but "You said it!"
+    extend " Maria, Maria!! Uuu, Uuu!!"
+    but "Make sure you don't grow into a tomboy like Jessica, Maria!"
+    extend " You'll be a graceful lady and let me touch your boobs whenever I want! Got that? It's a promise!"
+    mar "Uuu! I'll let you! I promise!"
+    extend " uuuu!!"
+    "Suddenly there is another smack, Jessica has hit Battler over the head again with great vigour."
+    jes "You sick bastard!"
+    extend " Don't fill her head with that nonsense! You know Maria will take it seriously!"
+    mar "Uuu! He can touch them! I promised"
+    extend " Maria always keeps promises! Uuuu!"
+    jes "And I'm telling you not to make promises like that, Maria! The deal's off!"
+    geo "You shouldn't make promises like that."
+    extend " And don't tease her with that nonsense, Battler-kun."
+    but "George-aniki!"
+    "Suddenly George-aniki came to explain the situation to Maria in a way she could understand and at the same time put a verbal blow to me."
+    jes "You should follow George-niisan's example and be more of an intellectual."
+    geo "Me?"
+    extend "Ha-ha-ha! Oh I'm not that special."
+    "George is an oler cousin. Very smart, with a top-class education and a good head for business."
+    extend " He's a far cry from me, A guy with not future and no dreams."
+    but "You and I should try to bottle some of Aniki's magic later, Jessica."
+    extend " yeah, yeah."
+    jes "Shut the hell up!"
+    extend " Whaaat? were you just subtly insulting me?"
+    jes "With Battler-kun around, it finally feels like we've got all the cousins together! Nice and lively."
+    geo "He provides that extra measure of comedy."
+    mar "Uuu! This year will be the most fun of all! Uuu!"
+    but "I agree with you there! Hee Hee!"

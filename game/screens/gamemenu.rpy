@@ -1,3 +1,5 @@
+default menuchapter = ""
+
 init python:
     def getPlayTime():
 
@@ -17,42 +19,72 @@ screen game_menu(scroll=None, yinitial=0.0):
 
     add "gui/gamemenu/hanabottom.png" at hanabottomtransform
     add "gui/gamemenu/hanatop.png" at hanatoptransform
-    add "gui/gamemenu/darken.png" at center
+    add "gui/bgdark.png" at center
     imagebutton auto "images/system/back2_%s.png" action Return() activate_sound "audio/sys/sysse_cancel.wav" hover_sound "audio/sys/sysse_move.wav" yalign 0.02 xalign 0.97
     add partObj
 
-    ### Wieder ein If der überflüssiger nicht sein kann, wird mal Zeit für ein wenig Code aufräumen
+    fixed:
+        ### This is my special way to make imagebuttons translatable by simply having 3 vboxes overlapping in a certain order
+        vbox:
+            yalign 0.5
+            xalign 0.9
+            spacing 20
+            add "gui/title/buttons/button.png" at gamemenubuttontransform
+            add "gui/title/buttons/button.png" at gamemenubuttontransform
+            add "gui/title/buttons/button.png" at gamemenubuttontransform
+            add "gui/title/buttons/button.png" at gamemenubuttontransform
+            #if persistent.tipunlocked == True:
+            add "gui/title/buttons/button.png" at gamemenubuttontransform
+            #if persistent.charsunlocked == True:
+            add "gui/title/buttons/button.png" at gamemenubuttontransform
+            add "gui/title/buttons/button.png" at gamemenubuttontransform
 
-    vbox:
+        vbox:
+            yalign 0.5
+            xalign 0.861
+            spacing 45
 
-        yalign 0.5
-        xalign 0.98
 
-        imagebutton auto "gui/gamemenu/save_%s.png" action ShowMenu("save") activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav" at gamemenubuttontransform
+            text _("Save") size 70 antialias True outlines [ (absolute(2.5), "#000", absolute(0), absolute(0)) ] at gamemenubuttontransform
+            text _("Load") size 70 antialias True outlines [ (absolute(2.5), "#000", absolute(0), absolute(0)) ] at gamemenubuttontransform
+            text _("Logview") size 70 antialias True outlines [ (absolute(2.5), "#000", absolute(0), absolute(0)) ] at gamemenubuttontransform
+            text _("Trophys") size 70 antialias True outlines [ (absolute(2.5), "#000", absolute(0), absolute(0)) ] at gamemenubuttontransform
+            #if persistent.tipunlocked == True:
+            text _("Tips") size 70 antialias True outlines [ (absolute(2.5), "#000", absolute(0), absolute(0)) ] at gamemenubuttontransform
+            #if persistent.charsunlocked == True:
+            text _("Characters") size 70 antialias True outlines [ (absolute(2.5), "#000", absolute(0), absolute(0)) ] at gamemenubuttontransform
+            text _("Main Menu") size 70 antialias True outlines [ (absolute(2.5), "#000", absolute(0), absolute(0)) ] at gamemenubuttontransform
 
-        imagebutton auto "gui/gamemenu/load_%s.png" action ShowMenu("load") activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav" at gamemenubuttontransform
+        vbox:
+            yalign 0.5
+            xalign 0.9
+            spacing 20
+            imagebutton auto "gui/title/buttons/button_highlight_%s.png" action ShowMenu("save") hover_sound "audio/sys/sysse_move.wav" activate_sound "audio/sys/sysse_decide.wav" at gamemenubuttontransform
+            imagebutton auto "gui/title/buttons/button_highlight_%s.png" action ShowMenu("load") activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav" at gamemenubuttontransform
+            imagebutton auto "gui/title/buttons/button_highlight_%s.png" action ShowMenu("history") hover_sound "audio/sys/sysse_move.wav" activate_sound "audio/sys/sysse_decide.wav" at gamemenubuttontransform
+            imagebutton auto "gui/title/buttons/button_highlight_%s.png" action ShowMenu("achievement_menu") activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav"at gamemenubuttontransform
+            #if persistent.tipunlocked == True:
+            imagebutton auto "gui/title/buttons/button_highlight_%s.png" action ShowMenu("tipps") activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav"at gamemenubuttontransform
+            #if persistent.charsunlocked == True:
+            imagebutton auto "gui/title/buttons/button_highlight_%s.png" action ShowMenu("characters") activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav"at gamemenubuttontransform
+            imagebutton auto "gui/title/buttons/button_highlight_%s.png" action MainMenu() activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav" at gamemenubuttontransform
+    
+        vbox:
+            yalign 0.15
+            xalign 0.05
+    
+            imagebutton auto "gui/title/buttons/settings_%s.png" action ShowMenu("preferences") activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav" at gamemenubuttontransform2
+        
+    if renpy.music.get_playing('music') is not None:
 
-        imagebutton auto "gui/gamemenu/backlog_%s.png" action ShowMenu("history") activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav" at gamemenubuttontransform
+        text "♪" + music_dictionary[renpy.music.get_playing('music')] ypos 1005 xalign 0.99 size 30 font "fonts/AOTFShinGoProMedium.otf" outlines [ (absolute(3), "#000", absolute(0), absolute(0)) ] at gamemenubuttontransform
 
-        imagebutton auto "gui/gamemenu/settings_%s.png" action [ShowMenu("preferences")] activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav" at gamemenubuttontransform
+    else:
+        text "♪-" ypos 1005 xalign 0.99 size 30 font "fonts/AOTFShinGoProMedium.otf" outlines [ (absolute(3), "#000", absolute(0), absolute(0)) ] at gamemenubuttontransform
 
-        imagebutton auto "gui/gamemenu/control_%s.png" action [ShowMenu("help")] activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav" at gamemenubuttontransform
+    text _("Playtime: ") + getPlayTime() ypos 1040 xalign 0.99 size 30 font "fonts/AOTFShinGoProMedium.otf" outlines [ (absolute(3), "#000", absolute(0), absolute(0)) ] at gamemenubuttontransform
 
-        imagebutton auto "gui/gamemenu/trophy_%s.png" action [ShowMenu("achievement_menu"), Hide('trophyhover')] activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav" at gamemenubuttontransform
-
-        if persistent.battler == True:
-            imagebutton auto "gui/gamemenu/chars_%s.png" action [ShowMenu("characters"), Hide('characterhover')] activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav" at gamemenubuttontransform
-        else:
-            pass
-
-        if persistent.tipunlocked == True:
-            imagebutton auto "gui/gamemenu/tip_%s.png" action [ShowMenu("tipps"), Hide('tiphover')] activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav" at gamemenubuttontransform
-
-        imagebutton auto "gui/gamemenu/backtomain_%s.png" action MainMenu() activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav" at gamemenubuttontransform
-
-    text "♪" + songname ypos 1005 xpos 1900 xalign 1.0 size 30 font "fonts/AOTFShinGoProMedium.otf" outlines [ (absolute(3), "#000", absolute(0), absolute(0)) ]
-
-    text _("Spielzeit: ") + getPlayTime() ypos 1040 xpos 1900 xalign 1.0 size 30 font "fonts/AOTFShinGoProMedium.otf" outlines [ (absolute(3), "#000", absolute(0), absolute(0)) ]
+    text menuchapter yalign 0.99 xalign 0.01 size 80 font "fonts/ariston.ttf" outlines [ (absolute(4), "#000", absolute(0), absolute(0)) ] at gamemenubuttontransform2
 
 
 ## Dieser Screen hatte mal irgend einen Sinn für einen Workaround
@@ -63,58 +95,3 @@ screen cleanmenu():
     add partObj
 
     use game_menu()
-
-
-
-style game_menu_outer_frame is empty
-style game_menu_navigation_frame is empty
-style game_menu_content_frame is empty
-style game_menu_viewport is gui_viewport
-style game_menu_side is gui_side
-style game_menu_scrollbar is gui_vscrollbar
-
-style game_menu_label is gui_label
-style game_menu_label_text is gui_label_text
-
-style return_button is navigation_button
-style return_button_text is navigation_button_text
-
-style game_menu_outer_frame:
-    bottom_padding 45
-    top_padding 180
-
-    #background "gui/game_menu1.png"
-
-style game_menu_navigation_frame:
-    xsize 420
-    yfill True
-    xpos 0
-
-style game_menu_content_frame:
-    left_margin -400
-    right_margin 700
-    top_margin -70
-    bottom_margin 150
-
-style game_menu_viewport:
-    xsize 1380
-
-style game_menu_vscrollbar:
-    unscrollable gui.unscrollable
-
-style game_menu_side:
-    spacing 100
-
-style game_menu_label:
-    xpos 75
-    ysize 180
-
-style game_menu_label_text:
-    size gui.title_text_size
-    color gui.accent_color
-    yalign 0.5
-
-style return_button:
-    xpos gui.navigation_xpos
-    yalign 1.0
-    yoffset -45

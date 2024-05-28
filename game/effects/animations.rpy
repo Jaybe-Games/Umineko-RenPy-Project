@@ -1,3 +1,6 @@
+image blackpic:
+    "images/system/black.png"
+
 label butterfly1:
 play effect "audio/sfx/umise_022.ogg"
 show butterfly1
@@ -47,23 +50,6 @@ label chapterendb:
     hide screen cinemalogo with dissolve
     return
 
-label chapterendsecret:
-
-    pause 1
-    show hana2 with kanon_r
-    pause 1
-    show screen cinemalogo
-    pause 4
-    show blackpic behind cinemalogo with dissolve
-    stop ship fadeout 2.0
-    stop wind fadeout 2.0
-    stop rain fadeout 2.0
-    stop music fadeout 2.0
-    pause 2.0
-    hide screen cinemalogo with dissolve
-    pause 1
-    return
-
 label clockch2:
 
     stop music fadeout 2.0
@@ -71,11 +57,9 @@ label clockch2:
     stop ship fadeout 2.0
     stop wind fadeout 2.0
     pause 3
-    show screen clocktimu_break1
     play sound "<from 0 to 2>/audio/sfx/umilse_1050.ogg"
     pause 7
     scene black with dissolve
-    hide screen clocktimu_break1
     hide screen cinemalogo
     with dissolve
     return

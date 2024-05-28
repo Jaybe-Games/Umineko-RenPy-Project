@@ -1,7 +1,3 @@
-default persistent.openingplayed = False
-default persistent.mainstorycleared = False
-default persistent.teapartycleared = False
-default persistent.gamecleared = False
 default persistent.rudolf = False
 default persistent.kyrie = False
 default persistent.maria = False
@@ -24,23 +20,54 @@ default persistent.kanon = False
 default persistent.witches = False
 default persistent.goldenwitch = False
 default persistent.bernkastel = False
-default persistent.narratorbox = "narratorboxa"
-default persistent.namebox = "nameboxa"
-default persistent.textbox = "textboxa"
-default prefix = "\""
-default suffix = "\""
-default persistent.chapter = "0"
-default persistent.tip1 = False
-default persistent.tip2 = False
-default persistent.tip3 = False
+default persistent.nameboxmargin = 30
+default persistent.prefix = "\""
+default persistent.suffix = "\""
 default persistent.tipunlocked = False
+default persistent.charsunlocked = False
 default persistent.newelement1 = False
-default battlerexe = False
-default ismain = True
-default isbonus = False
+default persistent.voices = ""
+default persistent.voicedir = "audio/voice/"
+
 default load = False
 default save = False
-default persistent.menustate = 0
 default persistent.new = True
-default persistent.alreadyread1 = False
 default persistent.renderer = 0
+
+
+## This is only to start every single time in "start" label
+default ep1_start = False
+default ep2_start = False
+default ep3_start = False
+default ep4_start = False
+default ep5_start = False
+default ep6_start = False
+default ep7_start = False
+default ep8_start = False
+
+# Flags for Gameprogress
+
+## Determines if !!! is shown on the button in mainmenu and scenarioscreen or not
+default persistent.ep1started = False
+default persistent.ep2started = False
+default persistent.ep3started = False
+default persistent.ep4started = False
+default persistent.ep5started = False
+default persistent.ep6started = False
+default persistent.ep7started = False
+default persistent.ep8started = False
+
+
+## Determines if another episode can be accessed
+default persistent.ep1completed = False
+default persistent.ep2completed = False
+default persistent.ep3completed = False
+default persistent.ep4completed = False
+default persistent.ep5completed = False
+default persistent.ep6completed = False
+default persistent.ep7completed = False
+default persistent.ep8completed = False
+default persistent.tsubasacompleted = False
+
+## Is this game in Question Arcs or Answer Arcs? Default is "rondo" so Question Arcs, "nocturne" is Answer Arcs
+default persistent.gamemode = "rondo"

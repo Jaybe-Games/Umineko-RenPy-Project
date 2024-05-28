@@ -20,11 +20,8 @@ init python:
 
     config.keymap['toggle_afm'].append('K_a')
 
-    config.keymap['screenshot'].remove('alt_shift_K_s')
-    config.keymap['screenshot'].remove('noshift_K_s')
-
-    config.keymap['save_delete'].remove('K_DELETE')
-    config.keymap['save_delete'].remove('KP_DELETE')
+    #config.keymap['screenshot'].remove('alt_shift_K_s')
+    #config.keymap['screenshot'].remove('noshift_K_s')
 
     config.pad_bindings['pad_leftshoulder_press'].remove('rollback')
     config.pad_bindings['pad_lefttrigger_pos'].remove('rollback')

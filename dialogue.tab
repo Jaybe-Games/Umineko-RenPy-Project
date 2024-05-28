@@ -2134,7 +2134,7 @@ umiz_op_212c24ad	rud	Wenn diese Kinder in unserer toxischen Familie gewesen wär
 umiz_op_7ed2fdc2	eva	Dafür hätte doch auch ein Tag mit dir alleine gereicht...	game/Story/umiz_op.rpy	59	eva "[what]"
 umiz_op_b880f1ed	extend	 Hmm..?	game/Story/umiz_op.rpy	60	extend "[what]"
 umiz_op_947b3fb5	extend	 nicht wahr Rudolf?	game/Story/umiz_op.rpy	61	extend "[what]"
-umiz_op_93c96253	rud	In dem Alter sollte man es mit der Bosheit lieber ruhiger angehen lassen, sonst kommt der alte Freund "Karma, der Herzkasper".	game/Story/umiz_op.rpy	62	rud "[what]"
+umiz_op_93c96253	rud	In dem Alter sollte man es mit der Bosheit lieber ruhiger angehen lassen, sonst kommt der alte Freund \"Karma, der Herzkasper\".	game/Story/umiz_op.rpy	62	rud "[what]"
 umiz_op_5b855692	eva	Hey... Ich bin immer noch ziemlich fit...	game/Story/umiz_op.rpy	63	eva "[what]"
 umiz_op_b09938d6	extend	 ich betreibe Kampfsport und hätte kein Problem damit, es mal bei dir einzusetzen.	game/Story/umiz_op.rpy	64	extend "[what]"
 umiz_op_b12c195c	rud	Eine Frau in ihren fünfzigern, sollte lieber mal die Gelenke schonen.	game/Story/umiz_op.rpy	65	rud "[what]"

@@ -1,36 +1,16 @@
-style charheader:
-    color "#ffffff"
-    outlines [ (absolute(2), "#000000ff", absolute(1), absolute(1)) ] 
-    size 55 
-    font "fonts/newrodin.otf" 
-    yalign 0.0 
-    xalign 0.0 
-    xpos 610 
-    ypos 254
-
-style chardesc:
-    outlines [ (absolute(2), "#000000ff", absolute(1), absolute(1)) ] 
-    size 30 
-    font "fonts/newrodin.otf" 
-    yalign 0.0 
-    xalign 0.0 
-    xpos 612 
-    ypos 337
-
-
-
 screen characters():
     tag menu
     modal True
     if main_menu:
-        add "images/system/mm_clouds.png" at mmclouds
-        add "images/system/mm_bg.png" at mm_bg
-        add "rainbackscroll"
-        add "rainfrontscroll"
-    text _("Charaktere") outlines [ (absolute(4), "#00000094", absolute(1), absolute(1)) ] size 90 font "fonts/Georgia.ttf" xalign 0.5 yalign 0.03 
+        add "gui/title/bg.png"
+    add "gui/bgdark.png" at center
+    text _("Characters") outlines [ (absolute(4), "#00000094", absolute(1), absolute(1)) ] size 90 font "fonts/Georgia.ttf" xalign 0.5 yalign 0.03 
     add "gui/charbox/background.png" at center
     add partObj
-    imagebutton auto "images/system/back2_%s.png" action Return() activate_sound "audio/sys/sysse_cancel.wav" hover_sound "audio/sys/sysse_move.wav" yalign 0.02 xalign 0.97
+    if not main_menu:
+        imagebutton auto "images/system/back2_%s.png" action [ShowMenu("game_menu"), Hide("characters")] activate_sound "audio/sys/sysse_cancel.wav" hover_sound "audio/sys/sysse_move.wav" yalign 0.02 xalign 0.97
+    else:
+        imagebutton auto "images/system/back2_%s.png" action Return() activate_sound "audio/sys/sysse_cancel.wav" hover_sound "audio/sys/sysse_move.wav" yalign 0.02 xalign 0.97
     hbox:
 
         xpos 110

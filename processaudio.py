@@ -11,11 +11,6 @@
 import importlib
 import subprocess
 import sys
-import numpy as np
-import os
-import soundfile as sf
-import math
-import shutil
 
 print(f"JAYBE'S ENHANCED LIPSYNC\n\n")
 print(f"Copyright (c) 2024, JAYBE GAMES")
@@ -40,7 +35,13 @@ for module in modules:
         else:
             sys.exit()
 
-class LipsAnimationAction:
+import numpy as np
+import os
+import soundfile as sf
+import math
+import shutil
+
+class lipsync:
     def __init__(self, filename, output_dir):
         self.filename = filename
         try:
@@ -51,7 +52,7 @@ class LipsAnimationAction:
         self.max_sample = np.iinfo(np.int16).max
         self.max_db = 20 * np.log10(np.max(np.abs(self.data)) / self.max_sample) + 240  # Calculate the maximum peak in dB + offset
         self.lower_limit_db = self.max_db - 30  # Lower limit in dB
-        self.upper_limit_db = self.max_db - 10  # Upper limit in dB
+        self.upper_limit_db = self.max_db - 12  # Upper limit in dB
         self.lip_stage = 0
         self.last_lip_stage = 0
         self.output_dir = output_dir
@@ -102,6 +103,9 @@ class LipsAnimationAction:
                 f.write(f'{lip_stage}\n')
             print(f'Analysis complete!\n')
 
+import os
+import shutil
+
 def process_directory(directory):
     # Get the directory of the script
     script_dir = os.path.dirname(os.path.realpath(__file__))
@@ -118,13 +122,16 @@ def process_directory(directory):
     for filename in os.listdir(full_dir):
         # Check if the file extension is in the list of supported extensions
         if os.path.splitext(filename)[1] in supported_extensions:
+            # Convert the filename to lowercase
+            lower_filename = filename.lower()
+            # Rename the file
+            os.rename(os.path.join(full_dir, filename), os.path.join(full_dir, lower_filename))
             try:
-                action = LipsAnimationAction(os.path.join(full_dir, filename), output_dir)
+                action = lipsync(os.path.join(full_dir, lower_filename), output_dir)
                 action.run()
             except Exception as e:
-                print(f"Error while processing file {filename}: {str(e)}")
+                print(f"Error while processing file {lower_filename}: {str(e)}")
 
-# Example usage:
 process_directory('game/audio/voice')
 
 def process_txt_file(input_dir, output_dir, txt_name):
@@ -148,6 +155,7 @@ def process_txt_file(input_dir, output_dir, txt_name):
             f.write(f'    "/sprites/{prefix}/[{prefix}_pose]/[{prefix}_face]/1.png"\n')
             f.write(f'    .05\n')
             f.write(f'    "/sprites/{prefix}/[{prefix}_pose]/[{prefix}_face]/0.png"\n')
+        # force a 0 at every end
         f.write(f'    "/sprites/{prefix}/[{prefix}_pose]/[{prefix}_face]/0.png"\n')
         
 
@@ -159,6 +167,8 @@ def process_directory_second(input_dir, output_dir):
     print(f'Processing lipsync for RenPy...')
     for filename in os.listdir(input_dir):
         if filename.endswith('.txt'):
+            # Convert filename to lowercase
+            filename = filename.lower()
             filename_without_extension = os.path.splitext(filename)[0]
             # Split the filename on underscore and get the prefix
             prefix = filename_without_extension.split('_')[0]
@@ -171,7 +181,6 @@ def process_directory_second(input_dir, output_dir):
     shutil.rmtree(input_dir)
 
     print(f"All .rpy files have been generated in {os.path.dirname(output_dir)} !")
-
 
 process_directory_second('processed', 'game/images/sprites/voices/{prefix}')
 
