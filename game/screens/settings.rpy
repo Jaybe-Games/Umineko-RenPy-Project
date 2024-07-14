@@ -3,7 +3,7 @@ screen preferences():
     tag menu
     modal True
     if main_menu:
-        add "gui/title/bg.png"
+        add "gui/settings/bg.png" at bgani
     add "gui/bgdark.png" at center  
     add "gui/settings/background.png" at center
     text _("Settings") outlines [ (absolute(4), "#00000094", absolute(1), absolute(1)) ] size 90 font "fonts/Georgia.ttf" xalign 0.5 yalign 0.03
@@ -21,40 +21,66 @@ screen preferences():
         imagebutton auto "gui/settings/buttons/sound_%s.png" action ShowMenu("sound") activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav"
         imagebutton auto "gui/settings/buttons/misc_%s.png" action ShowMenu("misc") activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav"
 
+    hbox:
+        xalign 0.5
+        yalign 0.63
+        spacing 30
+        imagebutton auto "gui/settings/buttons/config_button_%s.png" action Preference("skip", "Toggle") activate_sound "audio/sys/sysse_son.wav" hover_sound "audio/sys/sysse_move.wav"
+        imagebutton idle "gui/settings/buttons/none.png"
+        imagebutton idle "gui/settings/buttons/none.png"
+
+    hbox:
+        xalign 0.35
+        yalign 0.635
+        spacing 222
+        text _("ON") size 70 antialias True outlines [ (absolute(2.5), "#000", absolute(0), absolute(0)) ]
+
+    hbox:
+        xalign 0.5
+        yalign 0.74
+        spacing 30
+        imagebutton auto "gui/settings/buttons/config_button_%s.png" action [SelectedIf(SetVariable("persistent.textbox","65")), SetVariable("persistent.textbox","65")]  activate_sound "audio/sys/sysse_soff.wav" hover_sound "audio/sys/sysse_move.wav"
+        imagebutton auto "gui/settings/buttons/config_button_%s.png" action [SelectedIf(SetVariable("persistent.textbox","66")), SetVariable("persistent.textbox","66")] activate_sound "audio/sys/sysse_soff.wav" hover_sound "audio/sys/sysse_move.wav"
+        imagebutton auto "gui/settings/buttons/config_button_%s.png" action [SelectedIf(SetVariable("persistent.textbox","67")), SetVariable("persistent.textbox","67")] activate_sound "audio/sys/sysse_soff.wav" hover_sound "audio/sys/sysse_move.wav"
+    
+
+    hbox:
+        xalign 0.5
+        yalign 0.745
+        spacing 222
+        text _("A") size 70 antialias True outlines [ (absolute(2.5), "#000", absolute(0), absolute(0)) ]
+        text _("B") size 70 antialias True outlines [ (absolute(2.5), "#000", absolute(0), absolute(0)) ]
+        text _("C") size 70 antialias True outlines [ (absolute(2.5), "#000", absolute(0), absolute(0)) ]
+
+    # hbox:
+    #     xalign 0.5
+    #     yalign 0.85
+    #     spacing 30
+    #     imagebutton auto "gui/settings/buttons/config_button_%s.png" action Language(None)  activate_sound "audio/sys/sysse_soff.wav" hover_sound "audio/sys/sysse_move.wav"
+    #     imagebutton auto "gui/settings/buttons/config_button_%s.png" action Language("German")  activate_sound "audio/sys/sysse_soff.wav" hover_sound "audio/sys/sysse_move.wav"
+    #     imagebutton idle "gui/settings/buttons/none.png"
+
+    
+
+    # hbox:
+    #     xalign 0.415
+    #     yalign 0.855
+    #     spacing 180
+    #     text _("EN") size 70 antialias True outlines [ (absolute(2.5), "#000", absolute(0), absolute(0)) ]
+    #     text _("DE") size 70 antialias True outlines [ (absolute(2.5), "#000", absolute(0), absolute(0)) ]
+
+
+
     vbox:
 
-        xalign 0.1
-        yalign 0.77
-        spacing 75
+        xalign 0.15
+        yalign 0.69
+        spacing 68
         
         text _("Enable Skip") outlines [ (absolute(2), "#00000094", absolute(1), absolute(1)) ] size 40 yoffset 20
         text _("Textbox") outlines [ (absolute(2), "#00000094", absolute(1), absolute(1)) ] size 40 yoffset 20
-        text _("UI & Text") outlines [ (absolute(2), "#00000094", absolute(1), absolute(1)) ] size 40 yoffset 20
+        #text _("UI & Text") outlines [ (absolute(2), "#00000094", absolute(1), absolute(1)) ] size 40 yoffset 20
 
-    vbox:
-
-        xalign 0.5
-        yalign 0.8
-        spacing 30
-
-        hbox:
-
-            style_prefix "check"
-            imagebutton auto "gui/settings/buttons/on_%s.png" action Preference("skip", "Toggle") activate_sound "audio/sys/sysse_son.wav" hover_sound "audio/sys/sysse_move.wav"
-            imagebutton idle "gui/settings/buttons/none.png" action NullAction()
-            imagebutton idle "gui/settings/buttons/none.png" action NullAction()
-
-        hbox:
-            style_prefix "radio"
-            imagebutton auto "gui/settings/buttons/a_%s.png" action [SelectedIf(SetVariable("persistent.textbox","65")), SetVariable("persistent.textbox","65")]  activate_sound "audio/sys/sysse_soff.wav" hover_sound "audio/sys/sysse_move.wav"
-            imagebutton auto "gui/settings/buttons/b_%s.png" action [SelectedIf(SetVariable("persistent.textbox","66")), SetVariable("persistent.textbox","66")] activate_sound "audio/sys/sysse_soff.wav" hover_sound "audio/sys/sysse_move.wav"
-            imagebutton auto "gui/settings/buttons/c_%s.png" action [SelectedIf(SetVariable("persistent.textbox","67")), SetVariable("persistent.textbox","67")] activate_sound "audio/sys/sysse_soff.wav" hover_sound "audio/sys/sysse_move.wav"
-
-        hbox:
-
-            imagebutton auto "gui/settings/buttons/en_%s.png" action Language(None)
-            if persistent.ger_tl == 1:
-                imagebutton auto "gui/settings/buttons/de_%s.png" action Language("German")  
     vbox:
         xalign 0.5
         yalign 0.3
@@ -64,11 +90,11 @@ screen preferences():
 
         vbox:
                     
-            text _("- Textspeed +") outlines [ (absolute(2), "#00000094", absolute(1), absolute(1)) ] size 35
+            text _("- Textspeed +") outlines [ (absolute(2), "#00000094", absolute(1), absolute(1)) ] size 40
 
             bar value Preference("text speed")
 
-            text _("{color=#fff}+ Automodespeed -") outlines [ (absolute(2), "#00000094", absolute(1), absolute(1)) ] size 35
+            text _("{color=#fff}+ Automodespeed -") outlines [ (absolute(2), "#00000094", absolute(1), absolute(1)) ] size 40
 
             bar value Preference("auto-forward time")
         
@@ -78,7 +104,7 @@ screen sound():
     tag menu
     modal True
     if main_menu:
-        add "gui/title/bg.png"
+        add "gui/settings/bg.png" at bgani
     add "gui/bgdark.png" at center
     add "gui/settings/background.png" at center
     text _("Settings") outlines [ (absolute(4), "#00000094", absolute(1), absolute(1)) ] size 90 font "fonts/Georgia.ttf" xalign 0.5 yalign 0.03   
@@ -104,39 +130,45 @@ screen sound():
         xalign 0.5
         yalign 0.5
 
-        text _("- Musicvolume +") outlines [ (absolute(2), "#00000094", absolute(1), absolute(1)) ] size 35
+        text _("- Musicvolume +") outlines [ (absolute(2), "#00000094", absolute(1), absolute(1)) ] size 40
 
         vbox:
             bar value Preference("music volume")
 
 
 
-        text _("- Soundvolume +") outlines [ (absolute(2), "#00000094", absolute(1), absolute(1)) ] size 35
+        text _("- Soundvolume +") outlines [ (absolute(2), "#00000094", absolute(1), absolute(1)) ] size 40
 
         vbox:
             bar value Preference("sound volume")
 
-        text _(" - Voicevolume +") outlines [ (absolute(2), "#00000094", absolute(1), absolute(1)) ] size 35
+        text _(" - Voicevolume +") outlines [ (absolute(2), "#00000094", absolute(1), absolute(1)) ] size 40
 
         vbox:
             bar value Preference("voice volume")
 
-    vbox:
+    # vbox:
 
-        xalign 0.1
-        yalign 0.77
+    #     xalign 0.15
+    #     yalign 0.77
         
-        text _("Voices") outlines [ (absolute(2), "#00000094", absolute(1), absolute(1)) ] size 40 yoffset 20
+    #     text _("Voices") outlines [ (absolute(2), "#00000094", absolute(1), absolute(1)) ] size 40 yoffset 20
 
-    hbox:
+    # hbox:
+    #     xalign 0.5
+    #     yalign 0.80
+    #     spacing 30
+    #     imagebutton auto "gui/settings/buttons/config_button_%s.png" action [SelectedIf(SetVariable("persistent.voices","")), SetVariable("persistent.voices",""), SetVariable("persistent.voicedir", "audio/voice/")]  activate_sound "audio/sys/sysse_soff.wav" hover_sound "audio/sys/sysse_move.wav"
+    #     imagebutton auto "gui/settings/buttons/config_button_%s.png" action [SelectedIf(SetVariable("persistent.voices","de_")), SetVariable("persistent.voices","de_"), SetVariable("persistent.voicedir", "tl/German/voice/")]  activate_sound "audio/sys/sysse_soff.wav" hover_sound "audio/sys/sysse_move.wav"
 
-        style_prefix "radio"
-        xalign 0.5
-        yalign 0.8
+    
 
-        imagebutton auto "gui/settings/buttons/en_%s.png" action [SelectedIf(SetVariable("persistent.voices","")), SetVariable("persistent.voices",""), SetVariable("persistent.voicedir", "audio/voice/")]
-        if persistent.ger_tl == 1: 
-            imagebutton auto "gui/settings/buttons/de_%s.png" action [SelectedIf(SetVariable("persistent.voices","de_")), SetVariable("persistent.voices","de_"), SetVariable("persistent.voicedir", "tl/German/voice/")]
+    # hbox:
+    #     xalign 0.5
+    #     yalign 0.805
+    #     spacing 180
+    #     text _("EN") size 70 antialias True outlines [ (absolute(2.5), "#000", absolute(0), absolute(0)) ]
+    #     text _("DE") size 70 antialias True outlines [ (absolute(2.5), "#000", absolute(0), absolute(0)) ]
 
 
 screen misc():
@@ -144,7 +176,7 @@ screen misc():
     tag menu
     modal True
     if main_menu:
-        add "gui/title/bg.png"
+        add "gui/settings/bg.png" at bgani
     add "gui/bgdark.png" at center
     add "gui/settings/background.png" at center
     text _("Settings") outlines [ (absolute(4), "#00000094", absolute(1), absolute(1)) ] size 90 font "fonts/Georgia.ttf" xalign 0.5 yalign 0.03  
@@ -210,7 +242,7 @@ screen help():
     modal True
     tag menu
     if main_menu:
-        add "gui/title/bg.png"
+        add "gui/settings/bg.png" at bgani
     add "gui/bgdark.png" at center
     text _("Settings") outlines [ (absolute(4), "#00000094", absolute(1), absolute(1)) ] size 90 font "fonts/Georgia.ttf" xalign 0.5 yalign 0.03 
     add "gui/controls/background.png" at center

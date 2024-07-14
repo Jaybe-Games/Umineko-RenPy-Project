@@ -53,7 +53,7 @@ transform buttondissolve8:
 screen main_menu():
 
     tag menu
-    add "gui/title/bg.png"
+    add "gui/title/bg.png" at bgani
     #add "gui/title/title_hana.png" at topright
     add "gui/title/copyright.png" at left
     add "gui/title/titlelogo.png" at topleft,buttondissolvetitle,mm_logo
@@ -72,10 +72,10 @@ screen main_menu():
             add "gui/title/buttons/button.png" at buttondissolve2
             add "gui/title/buttons/button.png" at buttondissolve3
             add "gui/title/buttons/button.png" at buttondissolve4
-            #if persistent.tipunlocked == True:
-            add "gui/title/buttons/button.png" at buttondissolve5
-            #if persistent.charsunlocked == True:
-            add "gui/title/buttons/button.png" at buttondissolve6
+            if persistent.tipunlocked == True:
+                add "gui/title/buttons/button.png" at buttondissolve5
+            if persistent.charsunlocked == True:
+                add "gui/title/buttons/button.png" at buttondissolve6
             add "gui/title/buttons/button.png" at buttondissolve7
 
         vbox:
@@ -90,10 +90,10 @@ screen main_menu():
                 text _("Continue") size 70 antialias True outlines [ (absolute(2.5), "#000", absolute(0), absolute(0)) ] at buttondissolve2
             text _("Load") size 70 antialias True outlines [ (absolute(2.5), "#000", absolute(0), absolute(0)) ] at buttondissolve3
             text _("Trophys") size 70 antialias True outlines [ (absolute(2.5), "#000", absolute(0), absolute(0)) ] at buttondissolve4
-            #if persistent.tipunlocked == True:
-            text _("Tips") size 70 antialias True outlines [ (absolute(2.5), "#000", absolute(0), absolute(0)) ] at buttondissolve5
-            #if persistent.charsunlocked == True:
-            text _("Characters") size 70 antialias True outlines [ (absolute(2.5), "#000", absolute(0), absolute(0)) ] at buttondissolve6
+            if persistent.tipunlocked == True:
+                text _("Tips") size 70 antialias True outlines [ (absolute(2.5), "#000", absolute(0), absolute(0)) ] at buttondissolve5
+            if persistent.charsunlocked == True:
+                text _("Characters") size 70 antialias True outlines [ (absolute(2.5), "#000", absolute(0), absolute(0)) ] at buttondissolve6
             text _("Quit") size 70 antialias True outlines [ (absolute(2.5), "#000", absolute(0), absolute(0)) ] at buttondissolve7
 
         vbox:
@@ -104,10 +104,10 @@ screen main_menu():
             imagebutton auto "gui/title/buttons/button_highlight_%s.png" action Continue() hovered Show('continuehover') unhovered Hide('continuehover') hover_sound "audio/sys/sysse_move.wav" activate_sound "audio/sys/sysse_decide.wav" at buttondissolve2
             imagebutton auto "gui/title/buttons/button_highlight_%s.png" action [ShowMenu("load"), Hide('loadhover')] activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav" hovered Show('loadhover') unhovered Hide('loadhover') at buttondissolve3
             imagebutton auto "gui/title/buttons/button_highlight_%s.png" action [ShowMenu("achievement_menu"), Hide('trophyhover')] activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav" hovered Show('trophyhover') unhovered Hide('trophyhover') at buttondissolve4
-            #if persistent.tipunlocked == True:
-            imagebutton auto "gui/title/buttons/button_highlight_%s.png" action [ShowMenu("tipps"), Hide('tiphover')] activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav" hovered Show('tiphover') unhovered Hide('tiphover') at buttondissolve5
-            #if persistent.charsunlocked == True:
-            imagebutton auto "gui/title/buttons/button_highlight_%s.png" action [ShowMenu("characters"), Hide('characterhover')] activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav" hovered Show('characterhover') unhovered Hide('characterhover') at buttondissolve6
+            if persistent.tipunlocked == True:
+                imagebutton auto "gui/title/buttons/button_highlight_%s.png" action [ShowMenu("tipps"), Hide('tiphover')] activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav" hovered Show('tiphover') unhovered Hide('tiphover') at buttondissolve5
+            if persistent.charsunlocked == True:
+                imagebutton auto "gui/title/buttons/button_highlight_%s.png" action [ShowMenu("characters"), Hide('characterhover')] activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav" hovered Show('characterhover') unhovered Hide('characterhover') at buttondissolve6
             imagebutton auto "gui/title/buttons/button_highlight_%s.png" action [QuitWithScene(), Hide('quithover')] activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav" hovered Show('quithover') unhovered Hide('quithover') at buttondissolve7
         
 

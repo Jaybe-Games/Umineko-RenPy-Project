@@ -91,7 +91,7 @@ screen achievement_menu(scroll="viewport"):
     tag menu
     modal True
     if main_menu:
-        add "gui/title/bg.png"
+        add "gui/trophys/bg.png"
     add "gui/bgdark.png" at center
     text _("Trophies") outlines [ (absolute(4), "#00000094", absolute(1), absolute(1)) ] size 90 font "fonts/Georgia.ttf" xalign 0.5 yalign 0.03 
     add "gui/trophys/background.png" at center

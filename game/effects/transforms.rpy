@@ -80,7 +80,7 @@ transform reset_shader:
 image butterfly1 = Movie(channel="movie", play="videos/butterfly1.mov", Delay=False, loop=False, side_mask=True, image="images/efe/no83_0051.png")
 image butterfly1_0 = Movie(channel="movie", play="videos/Butterfly1_0.mov", side_mask=True, Delay=False, loop=False, start_image="images/efe/no83_0051.png")
 image no59 = Movie(channel="movie", play="videos/no59.mov", Delay=False, loop=False)
-#image no64 = Movie(channel="movie", play="videos/no64.mov", Delay=False, loop=True, side_mask=False, image="images/efe/no64_00000.png")
+image no64 = Movie(channel="movie", play="videos/no64.mov", Delay=False, loop=True, side_mask=False, image="images/efe/no64_00000.png")
 image chain = Movie(channel="movie", play="videos/chain.mov", Delay=False, loop=False, side_mask=True)
 
 transform bgani:
@@ -210,6 +210,11 @@ transform zoomin:
     yalign 0.5
     xalign 0.5
     zoom 1.05
+
+transform cinemalogo:
+    xalign 0.95
+    yalign 0.95
+    zoom 1.2
 
 transform portrait:
     subpixel True

@@ -1,7 +1,8 @@
 ﻿define config.name = _("Umineko When They Cry")
 define gui.show_name = False
 define config.version = "1.1.1 Alpha"
-define build.name = "whentheycry"
+define build.directory_name = "whentheycry"
+define build.name = "Umineko"
 
 
 ## Sounds and music ############################################################
@@ -18,7 +19,7 @@ define config.has_voice = True
 
 ## Entering or exiting the game menu.
 define dis = { "master" : Dissolve(0.25) }
-define window_dissolve = { "screens" : Dissolve(0.5) }
+define window_dissolve = dis
 define config.enter_transition = ImageDissolve("images/masks/circle.png", 0.5, reverse=True, ramplen = 200)
 define config.enter_sound = "audio/sfx/umise_1001.ogg"
 define config.exit_transition = ImageDissolve("images/masks/circle.png", 0.5, reverse=True, ramplen = 200)
@@ -60,14 +61,13 @@ define config.main_game_transition = MultipleTransition([
     "images/system/ware2.png", dissolve,
     True])
 
-define _scene_show_hide_transition = { "master" : Dissolve(0.25) }
+define _scene_show_hide_transition = dis
 
-define gradientwipedown = ImageDissolve("/images/masks/down.png", 0.8, ramplen = 300)
-define gradientwipeup = ImageDissolve("/images/masks/up.png", 0.8, ramplen = 300)
+define fastdissolve = Dissolve(0.2)
 
 
-define config.window_show_transition = dissolve
-define config.window_hide_transition = dissolve
+define config.window_show_transition = fastdissolve
+define config.window_hide_transition = fastdissolve
 
 
 default preferences.text_cps = 50

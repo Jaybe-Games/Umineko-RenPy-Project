@@ -12,15 +12,22 @@ Chapter 1: Rokkenjima""")
     show rainbackscroll
     show mlib_1b at bgani
     with gradientcirclefade
-    $ play_music(rose)
-    "Two older men could be observed in a darkened and foul-smelling study"
+    play music umib_001
+    window show
+    play sound umise_052
+    show bea at m
+    pause 2
+    voice "audio/voice/bea_01.ogg"
+    bea v001 "Try to solve Kinzo's Epitaph, you god damn idiots!"
+    "Two older men could be observed in a darkened and foul-smelling study."
     extend " While one of them examined his magnificent glass with a poisonous green alcoholic drink, he began to speak with a grim expression."
     $ kin_pose = "a11"
     $ kin_face = "badmood1"
     show kin at m
-    #voice "{}kin_01.ogg".format(persistent.voicedir)
     kin "....Nanjo..."
     extend " ....how much longer do I have to live?"
+    window hide
+    pause 0.2
     scene mlib_1a_bg at bgani
     show rainbackscroll
     show mlib_1a at bgani
@@ -28,13 +35,16 @@ Chapter 1: Rokkenjima""")
     $ nan_face = "hmm1"
     with quickergradientwipeleft
     show nan at l
+    pause 0.2
+    window show
     nan "............"
-    "Nanjo, couldn't get a word out, but the man who wanted to know how long he had to live still got his answer"
+    "Nanjo, couldn't get a word out, but the man who wanted to know how long he had to live still got his answer."
     $ kin_pose = "a11"
     $ kin_face = "default1"
     show kin at r
     kin "...Hmpf."
     extend " Not long, then..."
+    window hide
     play audio umise_020
     camera at vpunch
     pause 0.25
@@ -49,17 +59,23 @@ Chapter 1: Rokkenjima""")
     show kin at m
     camera at zoomin
     with quickergradientwipeleft
+    pause 0.2
+    window show
     kin "But this cannot be my death..."
     extend " I'll not allow death to claim me until I have seen her smile once again!!"
     $ kin_pose = "a23"
     $ kin_face = "cry1"
     kin "Come to me again..."
     extend " Come to me and smile...!!"
+    window hide
     play audio umise_027
     pause 0.8
-    scene portrait_ep1 at portrait_zoom,bgani with flash
+    scene beato at bgani with flash
     show screen show_chapter
+    pause 0.2
+    window show
     kin "BEATRICE!!!"
+    window hide
     pause 2
     stop music fadeout 2
     pause 2
@@ -138,3 +154,41 @@ Chapter 1: Rokkenjima""")
     geo "He provides that extra measure of comedy."
     mar "Uuu! This year will be the most fun of all! Uuu!"
     but "I agree with you there! Hee Hee!"
+    "It's like that six-year gap never happened."
+    but "Maria, when you dry out jellyfish, they turn into mushrooms."
+    jes "Don't listen to him!"
+    "This kind of contact with distant family members is different from interacting with friends."
+    extend " All in all ...I kinda like it."
+    mar "Uuu! Battler, I see the dock! I see the dock!"
+    but "Ohh, where, where?"
+    "The boat has reached the island and is heading straight into the bay, with huge cliffs to the left and right - a fall from these cliffs would probably be fatal."
+    mar "......."
+    but "What's wrong Maria?"
+    "Maria, who was just having a lot of fun with her cousins, has suddenly gone eerily quiet and her gaze is nailed to a cliff."
+    mar "Uuu..."
+    extend "It's gone."
+    but "..Hmm?"
+    mar "It's gone, It's gone!!"
+    extend " Uuu!! Uuu, uuu!!"
+    "Suddenly Maria threw her arm up, pointed in the air and started shouting loudly"
+    but "What's wrong, Maria? Did you lose something?"
+    extend " I'll help you look for it. What's missing?"
+    extend " .....?"
+    but "......Wait..."
+    extend " Wasn't there a little Torii gate over that small outcropping there..?"
+    but "Yeah, there was. I remember it because it was the first landmark you saw on the island."
+    geo "Yes, I remember too. The island's Shinto Shrine and the Torii archway over it."
+    extend " It's not there anymore... I'm pretty sure I saw it last year..."
+    mar "Gone!! Gone!!"
+    extend "Uuu, uuu!"
+    but "Probably got swept away by waves or something, right? Maybe it had been weakened by exposure to elements."
+    extend " It must have disappeared this summer. I'm also guessing the waves must have knocked it into the water..."
+    kum "Ho ho ho..."
+    extend "I wish it had been just that..."
+    but "Kumasawa-baachan... Do you know what happened?"
+    kum "Indeed..."
+    kum "A great Bolt of lightning struck the shrine one night and blasted it to pieces..."
+    extend " The fishermen wisper and tremble, calling this an omen of disaster..."
+    extend " Heaven be merciful..."
+    mar "An omen of disaster..."
+    extend " Uuu..." # Ab 023

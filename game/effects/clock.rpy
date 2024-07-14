@@ -127,7 +127,7 @@ init offset = -1
 
 screen cinemalogo():
     zorder 999
-    add "images/system/cinemalogo.png" at [alpha_dissolve, Position(xpos = 1000, ypos = 780)]
+    add "images/system/cinemalogo.png" at right, alpha_dissolve, cinemalogo
 
 screen clockch2_1():
     zorder 50
@@ -141,27 +141,6 @@ screen clockch2_2():
     add "gui/time/clock.png" at [alpha_dissolve, Position(xpos = 1000, ypos = 300)]
     add "gui/time/clock_m.png" at [clock_rotation_m_ch2, Position(xpos = 1430, ypos = 727)]
     add "gui/time/clock_h.png" at [clock_rotation_h_ch2, Position(xpos = 1430, ypos = 727)]
-    add "gui/time/clock_c.png" at Position(xpos = 1380, ypos = 700)
-
-screen clockschoolch1():
-    zorder 50
-    add "gui/time/clock.png" at [alpha_dissolve, Position(xpos = 1000, ypos = 300)]
-    add "gui/time/clock_m.png" at [clock_rotation_m_schoolch1, Position(xpos = 1430, ypos = 727)]
-    add "gui/time/clock_h.png" at [clock_rotation_h_schoolch1, Position(xpos = 1430, ypos = 727)]
-    add "gui/time/clock_c.png" at Position(xpos = 1380, ypos = 700)
-
-screen clockschoolch2():
-    zorder 50
-    add "gui/time/clock.png" at [alpha_dissolve, Position(xpos = 1000, ypos = 300)]
-    add "gui/time/clock_m.png" at [clock_rotation_m_schoolch2, Position(xpos = 1430, ypos = 727)]
-    add "gui/time/clock_h.png" at [clock_rotation_h_schoolch2, Position(xpos = 1430, ypos = 727)]
-    add "gui/time/clock_c.png" at Position(xpos = 1380, ypos = 700)
-
-screen clockschoolch3():
-    zorder 50
-    add "gui/time/clock.png" at [alpha_dissolve, Position(xpos = 1000, ypos = 300)]
-    add "gui/time/clock_m.png" at [clock_rotation_m_schoolch3, Position(xpos = 1430, ypos = 727)]
-    add "gui/time/clock_h.png" at [clock_rotation_h_schoolch3, Position(xpos = 1430, ypos = 727)]
     add "gui/time/clock_c.png" at Position(xpos = 1380, ypos = 700)
 
 screen clocktimu_break2():

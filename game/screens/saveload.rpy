@@ -93,7 +93,7 @@ screen file_slots_load():
 
     default page_name_value = FilePageNameInputValue(pattern=_("Page {}"), auto=_("Autosaves"))
     if main_menu:
-        add "gui/title/bg.png"
+        add "gui/saveload/bg.png" at bgani
     add "gui/bgdark.png" at center
     add "gui/saveload/loadbg.png" at center
     text _("Load") outlines [ (absolute(4), "#00000094", absolute(1), absolute(1)) ] size 90 font "fonts/Georgia.ttf" xalign 0.5 yalign 0.03

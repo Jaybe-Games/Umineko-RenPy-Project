@@ -75,14 +75,14 @@ style say_window:
     xalign 0.5
     xfill True
     yalign 1.0
-    left_margin 20
-    right_margin 20
-    top_margin 10
+    left_margin 100
+    right_margin 100
+    top_margin 80
     bottom_margin 10
-    left_padding 80
-    right_padding 80
+    left_padding 50
+    right_padding 50
     top_padding 30
-    bottom_padding 50
+    bottom_padding 30
     xminimum 1420
     xmaximum 1800
     yminimum 400
@@ -107,14 +107,14 @@ style say_dialogue:
     outlines [(2.5,"#181818e8",0,0)]
 
 style say_who_window:
-    left_margin 20
-    right_margin 20
-    top_margin 5
-    bottom_margin 30
-    left_padding 80
-    right_padding 80
+    left_margin 100
+    right_margin 100
+    top_margin 50
+    bottom_margin -40
+    left_padding 100
+    right_padding 100
     top_padding 10
-    bottom_padding 5
+    bottom_padding -15
     xalign 0.0
     yalign 0.5
     clipping True

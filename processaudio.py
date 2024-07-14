@@ -13,6 +13,7 @@ import subprocess
 import sys
 
 print(f"JAYBE'S ENHANCED LIPSYNC\n\n")
+print(f"Emulation of Alchemist's LipSync System but pre-calculated.\n")
 print(f"Copyright (c) 2024, JAYBE GAMES")
 print(f"All rights reserved.")
 print(f"Reproduction and distribution of this code, with or without modification, are prohibited without the express written permission of the author.")
@@ -51,8 +52,8 @@ class lipsync:
         self.num_samples_per_chunk = int(self.sample_rate * 50 / 1000)  # 50 ms chunks
         self.max_sample = np.iinfo(np.int16).max
         self.max_db = 20 * np.log10(np.max(np.abs(self.data)) / self.max_sample) + 240  # Calculate the maximum peak in dB + offset
-        self.lower_limit_db = self.max_db - 30  # Lower limit in dB
-        self.upper_limit_db = self.max_db - 12  # Upper limit in dB
+        self.lower_limit_db = self.max_db - 11  # Lower limit in dB
+        self.upper_limit_db = self.max_db - 5  # Upper limit in dB
         self.lip_stage = 0
         self.last_lip_stage = 0
         self.output_dir = output_dir

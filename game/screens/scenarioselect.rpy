@@ -16,7 +16,7 @@ image ep1_cover:
 screen story_select():
 
     tag menu
-    add "gui/title/bg.png"
+    add "gui/scenario/bg.png"
     add "gui/bgdark.png" at center
     add "gui/scenario/background.png" at center
     text _("ScenarioSelect") style "caption"

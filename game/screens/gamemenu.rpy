@@ -33,10 +33,10 @@ screen game_menu(scroll=None, yinitial=0.0):
             add "gui/title/buttons/button.png" at gamemenubuttontransform
             add "gui/title/buttons/button.png" at gamemenubuttontransform
             add "gui/title/buttons/button.png" at gamemenubuttontransform
-            #if persistent.tipunlocked == True:
-            add "gui/title/buttons/button.png" at gamemenubuttontransform
-            #if persistent.charsunlocked == True:
-            add "gui/title/buttons/button.png" at gamemenubuttontransform
+            if persistent.tipunlocked == True:
+                add "gui/title/buttons/button.png" at gamemenubuttontransform
+            if persistent.charsunlocked == True:
+                add "gui/title/buttons/button.png" at gamemenubuttontransform
             add "gui/title/buttons/button.png" at gamemenubuttontransform
 
         vbox:
@@ -49,10 +49,10 @@ screen game_menu(scroll=None, yinitial=0.0):
             text _("Load") size 70 antialias True outlines [ (absolute(2.5), "#000", absolute(0), absolute(0)) ] at gamemenubuttontransform
             text _("Logview") size 70 antialias True outlines [ (absolute(2.5), "#000", absolute(0), absolute(0)) ] at gamemenubuttontransform
             text _("Trophys") size 70 antialias True outlines [ (absolute(2.5), "#000", absolute(0), absolute(0)) ] at gamemenubuttontransform
-            #if persistent.tipunlocked == True:
-            text _("Tips") size 70 antialias True outlines [ (absolute(2.5), "#000", absolute(0), absolute(0)) ] at gamemenubuttontransform
-            #if persistent.charsunlocked == True:
-            text _("Characters") size 70 antialias True outlines [ (absolute(2.5), "#000", absolute(0), absolute(0)) ] at gamemenubuttontransform
+            if persistent.tipunlocked == True:
+                text _("Tips") size 70 antialias True outlines [ (absolute(2.5), "#000", absolute(0), absolute(0)) ] at gamemenubuttontransform
+            if persistent.charsunlocked == True:
+                text _("Characters") size 70 antialias True outlines [ (absolute(2.5), "#000", absolute(0), absolute(0)) ] at gamemenubuttontransform
             text _("Main Menu") size 70 antialias True outlines [ (absolute(2.5), "#000", absolute(0), absolute(0)) ] at gamemenubuttontransform
 
         vbox:
@@ -63,10 +63,10 @@ screen game_menu(scroll=None, yinitial=0.0):
             imagebutton auto "gui/title/buttons/button_highlight_%s.png" action ShowMenu("load") activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav" at gamemenubuttontransform
             imagebutton auto "gui/title/buttons/button_highlight_%s.png" action ShowMenu("history") hover_sound "audio/sys/sysse_move.wav" activate_sound "audio/sys/sysse_decide.wav" at gamemenubuttontransform
             imagebutton auto "gui/title/buttons/button_highlight_%s.png" action ShowMenu("achievement_menu") activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav"at gamemenubuttontransform
-            #if persistent.tipunlocked == True:
-            imagebutton auto "gui/title/buttons/button_highlight_%s.png" action ShowMenu("tipps") activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav"at gamemenubuttontransform
-            #if persistent.charsunlocked == True:
-            imagebutton auto "gui/title/buttons/button_highlight_%s.png" action ShowMenu("characters") activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav"at gamemenubuttontransform
+            if persistent.tipunlocked == True:
+                imagebutton auto "gui/title/buttons/button_highlight_%s.png" action ShowMenu("tipps") activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav"at gamemenubuttontransform
+            if persistent.charsunlocked == True:
+                imagebutton auto "gui/title/buttons/button_highlight_%s.png" action ShowMenu("characters") activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav"at gamemenubuttontransform
             imagebutton auto "gui/title/buttons/button_highlight_%s.png" action MainMenu() activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav" at gamemenubuttontransform
     
         vbox:

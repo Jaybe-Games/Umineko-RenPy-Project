@@ -160,5 +160,4 @@ label before_main_menu:
         show unlocked1 with gradientcirclefade
         pause(5)
         return
-    else:
-        return
+    return

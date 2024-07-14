@@ -27,7 +27,10 @@ default persistent.tipunlocked = False
 default persistent.charsunlocked = False
 default persistent.newelement1 = False
 default persistent.voices = ""
-default persistent.voicedir = "audio/voice/"
+default persistent.voicedir = "audio/voice/27"
+default persistent.demo = True
+default persistent.textbox = "65"
+default persistent.lipsync = True
 
 default load = False
 default save = False
