@@ -15,19 +15,21 @@
 
     # This class essentially just holds some vertex buffers inside of python and provides methods to conveniently add textured
     # vertices in various shapes.
-    class TriangleBlitter:
+    class TriangleBlitter(python_object):
         def __init__(self):
-            self.vertices = []
-            self.attributes = []
-            self.indices = []
+            self.vertices = python_list()
+            self.attributes = python_list()
+            self.indices = python_list()
             self.vertex_counter = 0
             self.max_vertices = 65000
             self.fewer_triangles = False
-            self.meshes = []
+            self.meshes = python_list()
 
         def set_textured_vertex(self, should_index, s, t, x, y):
-            self.vertices.extend([x, y])
-            self.attributes.extend([s, t])
+            self.vertices.append(x)
+            self.vertices.append(y)
+            self.attributes.append(s)
+            self.attributes.append(t)
             if should_index:
                 self.indices.append(self.vertex_counter)
                 
@@ -67,7 +69,7 @@
             y_transpose = rot_y * radius_x * dx + rot_x * radius_y * dy
             self.set_textured_vertex(False, s + s_transpose, t + t_transpose, x + x_transpose, y + y_transpose)
 
-            for i in range(1, num_segments):
+            for i in xrange(1, num_segments):
                 temp_dx = cos_rads * dx - sin_rads * dy
                 dy = sin_rads * dx + cos_rads * dy
                 dx = temp_dx
@@ -133,7 +135,7 @@
             mesh.set_triangle_data(self.indices)
             return mesh
 
-    class BreakupCell:
+    class BreakupCell(python_object):
         def __init__(self):
             self.cell_x = 0
             self.cell_y = 0
@@ -145,10 +147,10 @@
             self.resize_factor = 1.0
             self.diagonal = 0
 
-    class BreakupData:
+    class BreakupData(python_object):
         def __init__(self):
-            self.breakup_cells = []
-            self.diagonal_indices = []
+            self.breakup_cells = python_list()
+            self.diagonal_indices = python_list()
             self.cell_factor = 0
             self.num_cells_x = 0
             self.num_cells_y = 0
@@ -179,8 +181,8 @@
 
             # Initialise the remaining data structure
             data = BreakupData()
-            data.breakup_cells = [BreakupCell() for _ in range(num_cells_x * num_cells_y)]
-            data.diagonal_indices = [None] * (num_cells_x + num_cells_y - 1)
+            data.breakup_cells = python_list(BreakupCell() for _ in xrange(num_cells_x * num_cells_y))
+            data.diagonal_indices = python_list(None for _ in xrange(num_cells_x + num_cells_y - 1))
             data.cell_factor = cell_factor
             data.num_cells_x = num_cells_x
             data.num_cells_y = num_cells_y
@@ -193,7 +195,7 @@
             data = self.breakup_data
 
             # Check if the setup has already been run
-            if data.breakup_mode and data.breakup_mode == self.breakup_direction_flagset:
+            if data.breakup_mode == self.breakup_direction_flagset:
                 return
 
             # Seed the RNG. on-ru does this based on sprite ID I think, but it really doesn't matter that much,
@@ -209,12 +211,12 @@
             diagonal_indices = data.diagonal_indices
 
             # Iterate through the diagonals from one corner to the other
-            for this_diag_no in range(total_diag_count):
+            for this_diag_no in xrange(total_diag_count):
                 # Store the index of the first cell in this diagonal
                 diagonal_indices[this_diag_no] = n
 
                 # Iterate through all the cells in the diagonal
-                for x in range(this_diag_no, -1, -1):
+                for x in xrange(this_diag_no, -1, -1):
                     y = this_diag_no - x
                     if y >= num_cells_y:
                         continue
@@ -330,7 +332,9 @@
             # (the latter of which we are supposed to draw in this method).
             first_on_diagonal_index = diagonal_indices[data.max_diagonal_to_contain_broken_cells]
             last_on_diagonal_index = diagonal_indices[data.max_diagonal_to_contain_broken_cells + 1] - 1
-            diagonal_cell_indices = [first_on_diagonal_index, last_on_diagonal_index]
+            diagonal_cell_indices = python_list()
+            diagonal_cell_indices.append(first_on_diagonal_index)
+            diagonal_cell_indices.append(last_on_diagonal_index)
 
             # First, draw the outer two triangles `T_2` and `T_3`, the red and blue triangles in the visualisation.
             for cell_index in diagonal_cell_indices:
@@ -440,5 +444,6 @@
             renpy.redraw(self, 0)
 
             return total
+
 
 
