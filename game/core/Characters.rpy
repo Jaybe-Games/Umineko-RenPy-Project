@@ -39,6 +39,6 @@ define fur = Character('Furfur', what_prefix="“", what_suffix="”", image="fu
 define fla = Character('Flaurus', what_prefix="“", what_suffix="”", image="fla", show_slow_effect = slow_fade, show_slow_effect_delay = 0.4, voice_tag="fla")
 define ntxt = Character(show_slow_effect = slow_fade, show_slow_effect_delay = 0.2, kind=nvl, voice_tag=None)
 
-image beatoriche = Breakup("bea", 300, BreakupMode(0))
+image bea_breakupin = Breakup("bea", 10.0, BreakupMode(0))
 
 

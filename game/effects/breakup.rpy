@@ -158,9 +158,9 @@
             self.max_diagonal_to_contain_broken_cells = 0
 
     class Breakup(renpy.Displayable):
-        def __init__(self, widget, factor, breakup_direction_flagset, **properties):
+        def __init__(self, widget, delay, breakup_direction_flagset, **properties):
             super(Breakup, self).__init__(**properties)
-            self.factor = factor
+            self.delay = delay
             self.widget = renpy.displayable(widget)
             self.width = 0
             self.height = 0
@@ -364,7 +364,7 @@
                 dst_x, dst_y
             )
 
-        def break_up_image(self, target_w, target_h, dst_x, dst_y):
+        def break_up_image(self, target_w, target_h, dst_x, dst_y, breakup_factor):
             data = self.breakup_data
             cells = data.breakup_cells
 
@@ -373,7 +373,7 @@
 
             # Calculate general properties 
             self.once_per_breakup_effect_breakup_setup(data.num_cells_x, data.num_cells_y)
-            self.effect_breakup_new(self.factor)
+            self.effect_breakup_new(breakup_factor)
                     
             # Draw the region of the image that has not yet been broken up
             self.draw_unbroken_breakup_regions(dst_x, dst_y)
@@ -402,13 +402,17 @@
             return self.widget.get_placement()
 
         def render(self, width, height, st, at):
+            if st > self.delay:
+                # If the breakup animation was completed, draw nothing at all
+                return renpy.Render(width, height)
+
             child = renpy.render(self.widget, width, height, st, at)
             self.width, self.height = child.get_size()
 
             if self.breakup_data is None:
                 self.init_breakup()
             
-            meshes = self.break_up_image(width, height, 0, 0)
+            meshes = self.break_up_image(width, height, 0, 0, int(1000 * st / self.delay))
             total = renpy.Render(width, height)
 
             # We cannot add multiple meshes to one Render, so we need to create an individual Render for each mesh,
@@ -422,5 +426,8 @@
 
             # Clear the meshes so the vertex data does not accumulate over time
             meshes.clear()
+
+            # Queue a redraw
+            renpy.redraw(self, 0)
 
             return total

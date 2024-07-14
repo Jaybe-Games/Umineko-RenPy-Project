@@ -14,9 +14,12 @@ Chapter 1: Rokkenjima""")
     with gradientcirclefade
     play music umib_001
     window show
+    "Watch her breakup with terrible performance"
+    window hide
     play sound umise_052
-    show bea at m
-    pause 2
+    show bea_breakupin at m
+    pause 10
+    window show
     voice "audio/voice/bea_01.ogg"
     bea v001 "Try to solve Kinzo's Epitaph, you god damn idiots!"
     "Two older men could be observed in a darkened and foul-smelling study."
