@@ -158,9 +158,10 @@
             self.max_diagonal_to_contain_broken_cells = 0
 
     class Breakup(renpy.Displayable):
-        def __init__(self, widget, delay, breakup_direction_flagset, **properties):
+        def __init__(self, widget, delay, reverse, breakup_direction_flagset, **properties):
             super(Breakup, self).__init__(**properties)
             self.delay = delay
+            self.reverse = reverse
             self.widget = renpy.displayable(widget)
             self.width = 0
             self.height = 0
@@ -402,23 +403,31 @@
             return self.widget.get_placement()
 
         def render(self, width, height, st, at):
-            if st > self.delay:
-                # If the breakup animation was completed, draw nothing at all
-                return renpy.Render(width, height)
-
             child = renpy.render(self.widget, width, height, st, at)
+            
+            if st > self.delay:
+                # If the breakup animation was completed, draw either nothing at all or draw the child sprite normally,
+                # depending on whether we are running in reverse or not
+                if self.reverse:
+                    return child
+                else:
+                    return renpy.Render(child.width, child.height)
+
             self.width, self.height = child.get_size()
 
             if self.breakup_data is None:
                 self.init_breakup()
             
-            meshes = self.break_up_image(width, height, 0, 0, int(1000 * st / self.delay))
-            total = renpy.Render(width, height)
+            breakup_factor = int(1000 * st / self.delay)
+            if self.reverse:
+                breakup_factor = 1000 - breakup_factor
+            meshes = self.break_up_image(width, height, 0, 0, breakup_factor)
+            total = renpy.Render(child.width, child.height)
 
             # We cannot add multiple meshes to one Render, so we need to create an individual Render for each mesh,
             # and blit it onto `total`
             for mesh in meshes:
-                sub = renpy.Render(width, height)
+                sub = renpy.Render(child.width, child.height)
                 sub.mesh = mesh
                 sub.add_shader("renpy.texture")
                 sub.blit(child, (0, 0))
@@ -431,3 +440,5 @@
             renpy.redraw(self, 0)
 
             return total
+
+

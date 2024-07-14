@@ -12,16 +12,22 @@ Chapter 1: Rokkenjima""")
     show rainbackscroll
     show mlib_1b at bgani
     with gradientcirclefade
-    play music umib_001
+    $ play_music(thunberg_lily)
     window show
     "Watch her breakup with terrible performance"
     window hide
     play sound umise_052
-    show bea_breakupin at m
-    pause 10
+    show bea_bri at m
+    pause 5
+    hide bea_bri
+    show bea at m
     window show
     voice "audio/voice/bea_01.ogg"
     bea v001 "Try to solve Kinzo's Epitaph, you god damn idiots!"
+    window hide
+    hide bea
+    show bea_bro at m
+    pause 5
     "Two older men could be observed in a darkened and foul-smelling study."
     extend " While one of them examined his magnificent glass with a poisonous green alcoholic drink, he began to speak with a grim expression."
     $ kin_pose = "a11"
