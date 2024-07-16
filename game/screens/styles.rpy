@@ -114,7 +114,7 @@ style say_who_window:
     left_padding 100
     right_padding 100
     top_padding 10
-    bottom_padding -15
+    bottom_padding 0
     xalign 0.0
     yalign 0.5
     clipping True

@@ -2,13 +2,331 @@ default bea_pose = "a11"
 default bea_face = "default1"
 
 layeredimage bea:
-    always "/sprites/bea/a11/default1/0.png"
+    always "/sprites/bea/[bea_pose]/[bea_face]/0.png"
 
-    group sprite:
-        attribute a11default1 default:
+    group a12:
+        attribute a12default1:
+            "/sprites/bea/a12/default1/0.png"
+
+    group a11:
+        attribute a11default1:
             "/sprites/bea/a11/default1/0.png"
 
-    group mouth:
+        attribute a11default2:
+            "/sprites/bea/a11/default2/0.png"
+
+        attribute a11default3:
+            "/sprites/bea/a11/default3/0.png"
+
+        attribute a11default4:
+            "/sprites/bea/a11/default4/0.png"
+
+        attribute a11default5:
+            "/sprites/bea/a11/default5/0.png"
+
+        attribute a11default6:
+            "/sprites/bea/a11/default6/0.png"
+
+        attribute a11default7:
+            "/sprites/bea/a11/default7/0.png"
+
+        attribute a11anger1:
+            "/sprites/bea/a11/anger1/0.png"
+
+        attribute a11anger2:
+            "/sprites/bea/a11/anger2/0.png"
+
+        attribute a11anger3:
+            "/sprites/bea/a11/anger3/0.png"
+
+        attribute a11anger4:
+            "/sprites/bea/a11/anger4/0.png"
+
+        attribute a11anger5:
+            "/sprites/bea/a11/anger5/0.png"
+
+        attribute a11anger6:
+            "/sprites/bea/a11/anger6/0.png"
+
+        attribute a11anger7:
+            "/sprites/bea/a11/anger7/0.png"
+
+        attribute a11badmood1:
+            "/sprites/bea/a11/badmood1/0.png"
+
+        attribute a11badmood2:
+            "/sprites/bea/a11/badmood2/0.png"
+
+        attribute a11badmood3:
+            "/sprites/bea/a11/badmood3/0.png"
+
+        attribute a11badmood4:
+            "/sprites/bea/a11/badmood4/0.png"
+
+        attribute a11badmood5:
+            "/sprites/bea/a11/badmood5/0.png"
+
+        attribute a11badmood6:
+            "/sprites/bea/a11/badmood6/0.png"
+
+        attribute a11badmood7:
+            "/sprites/bea/a11/badmood7/0.png"
+
+        attribute a11cry1:
+            "/sprites/bea/a11/cry1/0.png"
+
+        attribute a11cry2:
+            "/sprites/bea/a11/cry2/0.png"
+
+        attribute a11cry3:
+            "/sprites/bea/a11/cry3/0.png"
+
+        attribute a11cry4:
+            "/sprites/bea/a11/cry4/0.png"
+
+        attribute a11cry5:
+            "/sprites/bea/a11/cry5/0.png"
+
+        attribute a11cry6:
+            "/sprites/bea/a11/cry6/0.png"
+
+        attribute a11cry7:
+            "/sprites/bea/a11/cry7/0.png"
+
+        attribute a11dissatisfaction1:
+            "/sprites/bea/a11/dissatisfaction1/0.png"
+
+        attribute a11dissatisfaction2:
+            "/sprites/bea/a11/dissatisfaction2/0.png"
+
+        attribute a11dissatisfaction3:
+            "/sprites/bea/a11/dissatisfaction3/0.png"
+
+        attribute a11dissatisfaction4:
+            "/sprites/bea/a11/dissatisfaction4/0.png"
+
+        attribute a11dissatisfaction5:
+            "/sprites/bea/a11/dissatisfaction5/0.png"
+
+        attribute a11dissatisfaction6:
+            "/sprites/bea/a11/dissatisfaction6/0.png"
+
+        attribute a11dissatisfaction7:
+            "/sprites/bea/a11/dissatisfaction7/0.png"
+
+        attribute a11evillaugh1:
+            "/sprites/bea/a11/evillaugh1/0.png"
+
+        attribute a11evillaugh2:
+            "/sprites/bea/a11/evillaugh2/0.png"
+
+        attribute a11evillaugh3:
+            "/sprites/bea/a11/evillaugh3/0.png"
+
+        attribute a11evillaugh4:
+            "/sprites/bea/a11/evillaugh4/0.png"
+
+        attribute a11evillaugh5:
+            "/sprites/bea/a11/evillaugh5/0.png"
+
+        attribute a11evillaugh6:
+            "/sprites/bea/a11/evillaugh6/0.png"
+
+        attribute a11evillaugh7:
+            "/sprites/bea/a11/evillaugh7/0.png"
+
+        attribute a11excuse1:
+            "/sprites/bea/a11/excuse1/0.png"
+
+        attribute a11excuse2:
+            "/sprites/bea/a11/excuse2/0.png"
+
+        attribute a11excuse3:
+            "/sprites/bea/a11/excuse3/0.png"
+
+        attribute a11excuse4:
+            "/sprites/bea/a11/excuse4/0.png"
+
+        attribute a11excuse5:
+            "/sprites/bea/a11/excuse5/0.png"
+
+        attribute a11excuse6:
+            "/sprites/bea/a11/excuse6/0.png"
+
+        attribute a11excuse7:
+            "/sprites/bea/a11/excuse7/0.png"
+
+        attribute a11fearless1:
+            "/sprites/bea/a11/fearless1/0.png"
+
+        attribute a11fearless2:
+            "/sprites/bea/a11/fearless2/0.png"
+
+        attribute a11fearless3:
+            "/sprites/bea/a11/fearless3/0.png"
+
+        attribute a11fearless4:
+            "/sprites/bea/a11/fearless4/0.png"
+
+        attribute a11fearless5:
+            "/sprites/bea/a11/fearless5/0.png"
+
+        attribute a11fearless6:
+            "/sprites/bea/a11/fearless6/0.png"
+
+        attribute a11fearless7:
+            "/sprites/bea/a11/fearless7/0.png"
+
+        attribute a11halfcrying1:
+            "/sprites/bea/a11/halfcrying1/0.png"
+
+        attribute a11halfcrying2:
+            "/sprites/bea/a11/halfcrying2/0.png"
+
+        attribute a11halfcrying3:
+            "/sprites/bea/a11/halfcrying3/0.png"
+
+        attribute a11halfcrying4:
+            "/sprites/bea/a11/halfcrying4/0.png"
+
+        attribute a11halfcrying5:
+            "/sprites/bea/a11/halfcrying5/0.png"
+
+        attribute a11halfcrying6:
+            "/sprites/bea/a11/halfcrying6/0.png"
+
+        attribute a11halfcrying7:
+            "/sprites/bea/a11/halfcrying7/0.png"
+
+        attribute a11laughter1:
+            "/sprites/bea/a11/laughter1/0.png"
+
+        attribute a11laughter2:
+            "/sprites/bea/a11/laughter2/0.png"
+
+        attribute a11laughter3:
+            "/sprites/bea/a11/laughter3/0.png"
+
+        attribute a11laughter4:
+            "/sprites/bea/a11/laughter4/0.png"
+
+        attribute a11laughter5:
+            "/sprites/bea/a11/laughter5/0.png"
+
+        attribute a11laughter6:
+            "/sprites/bea/a11/laughter6/0.png"
+
+        attribute a11laughter7:
+            "/sprites/bea/a11/laughter7/0.png"
+
+        attribute a11panic1:
+            "/sprites/bea/a11/panic1/0.png"
+
+        attribute a11panic2:
+            "/sprites/bea/a11/panic2/0.png"
+
+        attribute a11panic3:
+            "/sprites/bea/a11/panic3/0.png"
+
+        attribute a11panic4:
+            "/sprites/bea/a11/panic4/0.png"
+
+        attribute a11panic5:
+            "/sprites/bea/a11/panic5/0.png"
+
+        attribute a11panic6:
+            "/sprites/bea/a11/panic6/0.png"
+
+        attribute a11panic7:
+            "/sprites/bea/a11/panic7/0.png"
+
+        attribute a11patience1:
+            "/sprites/bea/a11/patience1/0.png"
+
+        attribute a11patience2:
+            "/sprites/bea/a11/patience2/0.png"
+
+        attribute a11patience3:
+            "/sprites/bea/a11/patience3/0.png"
+
+        attribute a11patience4:
+            "/sprites/bea/a11/patience4/0.png"
+
+        attribute a11patience5:
+            "/sprites/bea/a11/patience5/0.png"
+
+        attribute a11patience6:
+            "/sprites/bea/a11/patience6/0.png"
+
+        attribute a11patience7:
+            "/sprites/bea/a11/patience7/0.png"
+
+        attribute a11serious1:
+            "/sprites/bea/a11/serious1/0.png"
+
+        attribute a11serious2:
+            "/sprites/bea/a11/serious2/0.png"
+
+        attribute a11serious3:
+            "/sprites/bea/a11/serious3/0.png"
+
+        attribute a11serious4:
+            "/sprites/bea/a11/serious4/0.png"
+
+        attribute a11serious5:
+            "/sprites/bea/a11/serious5/0.png"
+
+        attribute a11serious6:
+            "/sprites/bea/a11/serious6/0.png"
+
+        attribute a11serious7:
+            "/sprites/bea/a11/serious7/0.png"
+
+        attribute a11trouble1:
+            "/sprites/bea/a11/trouble1/0.png"
+
+        attribute a11trouble2:
+            "/sprites/bea/a11/trouble2/0.png"
+
+        attribute a11trouble3:
+            "/sprites/bea/a11/trouble3/0.png"
+
+        attribute a11trouble4:
+            "/sprites/bea/a11/trouble4/0.png"
+
+        attribute a11trouble5:
+            "/sprites/bea/a11/trouble5/0.png"
+
+        attribute a11trouble6:
+            "/sprites/bea/a11/trouble6/0.png"
+
+        attribute a11trouble7:
+            "/sprites/bea/a11/trouble7/0.png"
+
+        attribute a11worry1:
+            "/sprites/bea/a11/worry1/0.png"
+
+        attribute a11worry2:
+            "/sprites/bea/a11/worry2/0.png"
+
+        attribute a11worry3:
+            "/sprites/bea/a11/worry3/0.png"
+
+        attribute a11worry4:
+            "/sprites/bea/a11/worry4/0.png"
+
+        attribute a11worry5:
+            "/sprites/bea/a11/worry5/0.png"
+
+        attribute a11worry6:
+            "/sprites/bea/a11/worry6/0.png"
+
+        attribute a11worry7:
+            "/sprites/bea/a11/worry7/0.png"
+
+
+
+    group lipsync:
         attribute v001:
             "bea_01"
         attribute v002:

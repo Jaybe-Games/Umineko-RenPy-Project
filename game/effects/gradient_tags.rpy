@@ -154,8 +154,6 @@ init python:
         gl_FragColor *= mix(u_color1, u_color2, gradient_position);
     """)
 
-
-
 init python:
     def red_tag(tag, argument, contents):
         return [(renpy.TEXT_TAG, "gradient=#ff0000-#f51d1d")] + contents + [(renpy.TEXT_TAG, "/gradient")]

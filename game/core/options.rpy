@@ -4,6 +4,9 @@ define config.version = "1.1.1 Alpha"
 define build.directory_name = "whentheycry"
 define build.name = "Umineko"
 
+init python:
+    config.gl2 = True
+
 
 ## Sounds and music ############################################################
 
@@ -77,8 +80,8 @@ default preferences.fullscreen = True
 default preferences.gl_powersave = False
 default preferences.gl_tearing = False
 default preferences.gl_framerate = 60
-define config.image_cache_size_mb = 1024
-define config.cache_surfaces = False
+define config.image_cache_size_mb = 2048
+define config.cache_surfaces = True
 define config.developer = "auto"
 
 

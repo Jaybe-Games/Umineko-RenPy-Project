@@ -1,6 +1,6 @@
 ﻿init python:
-    import random
-    import math
+    #import random
+    #import math
     from enum import Enum, IntFlag
 
     BREAKUP_DISSOLVE_FRAMES = 1000
@@ -22,7 +22,7 @@
             self.indices = python_list()
             self.vertex_counter = 0
             self.max_vertices = 65000
-            self.fewer_triangles = False
+            self.fewer_triangles = True
             self.meshes = python_list()
 
         def set_textured_vertex(self, should_index, s, t, x, y):
@@ -197,10 +197,6 @@
             # Check if the setup has already been run
             if data.breakup_mode == self.breakup_direction_flagset:
                 return
-
-            # Seed the RNG. on-ru does this based on sprite ID I think, but it really doesn't matter that much,
-            # we can just keep it constant
-            random.seed(0)
 
             data.breakup_mode = self.breakup_direction_flagset
             data.tot_frames = BREAKUP_DISSOLVE_FRAMES + BREAKUP_WIPE_FRAMES
@@ -444,6 +440,141 @@
             renpy.redraw(self, 0)
 
             return total
+
+image bea_breakup= Breakup("bea", 3.0, True, BreakupMode(0))
+image bea_breakup_q= Breakup("bea", 0.5, True, BreakupMode(0))
+image bea_breakup_rev= Breakup("bea", 3.0, False, BreakupMode(0))
+image bea_breakup_rev_q= Breakup("bea", 0.5, False, BreakupMode(0))
+
+image bea_breakup_1= Breakup("bea", 3.0, True, BreakupMode(1))
+image bea_breakup_q_1= Breakup("bea", 0.5, True, BreakupMode(1))
+image bea_breakup_rev_1= Breakup("bea", 3.0, False, BreakupMode(1))
+image bea_breakup_rev_q_1= Breakup("bea", 0.5, False, BreakupMode(1))
+
+image bea_breakup_2= Breakup("bea", 3.0, True, BreakupMode(2))
+image bea_breakup_q_2= Breakup("bea", 0.5, True, BreakupMode(2))
+image bea_breakup_rev_2= Breakup("bea", 3.0, False, BreakupMode(2))
+image bea_breakup_rev_q_2= Breakup("bea", 0.5, False, BreakupMode(2))
+
+image ber_breakup= Breakup("ber", 3.0, True, BreakupMode(0))
+image ber_breakup_q= Breakup("ber", 0.5, True, BreakupMode(0))
+image ber_breakup_rev= Breakup("ber", 3.0, False, BreakupMode(0))
+image ber_breakup_rev_q= Breakup("ber", 0.5, False, BreakupMode(0))
+
+image ber_breakup_1= Breakup("ber", 3.0, True, BreakupMode(1))
+image ber_breakup_q_1= Breakup("ber", 0.5, True, BreakupMode(1))
+image ber_breakup_rev_1= Breakup("ber", 3.0, False, BreakupMode(1))
+image ber_breakup_rev_q_1= Breakup("ber", 0.5, False, BreakupMode(1))
+
+image ber_breakup_2= Breakup("ber", 3.0, True, BreakupMode(2))
+image ber_breakup_q_2= Breakup("ber", 0.5, True, BreakupMode(2))
+image ber_breakup_rev_2= Breakup("ber", 3.0, False, BreakupMode(2))
+image ber_breakup_rev_q_2= Breakup("ber", 0.5, False, BreakupMode(2))
+
+image lam_breakup= Breakup("lam", 3.0, True, BreakupMode(0))
+image lam_breakup_q= Breakup("lam", 0.5, True, BreakupMode(0))
+image lam_breakup_rev= Breakup("lam", 3.0, False, BreakupMode(0))
+image lam_breakup_rev_q= Breakup("lam", 0.5, False, BreakupMode(0))
+
+image lam_breakup_1= Breakup("lam", 3.0, True, BreakupMode(1))
+image lam_breakup_q_1= Breakup("lam", 0.5, True, BreakupMode(1))
+image lam_breakup_rev_1= Breakup("lam", 3.0, False, BreakupMode(1))
+image lam_breakup_rev_q_1= Breakup("lam", 0.5, False, BreakupMode(1))
+
+image lam_breakup_2= Breakup("lam", 3.0, True, BreakupMode(2))
+image lam_breakup_q_2= Breakup("lam", 0.5, True, BreakupMode(2))
+image lam_breakup_rev_2= Breakup("lam", 3.0, False, BreakupMode(2))
+image lam_breakup_rev_q_2= Breakup("lam", 0.5, False, BreakupMode(2))
+
+image ron_breakup= Breakup("ron", 3.0, True, BreakupMode(0))
+image ron_breakup_q= Breakup("ron", 0.5, True, BreakupMode(0))
+image ron_breakup_rev= Breakup("ron", 3.0, False, BreakupMode(0))
+image ron_breakup_rev_q= Breakup("ron", 0.5, False, BreakupMode(0))
+
+image ron_breakup_1= Breakup("ron", 3.0, True, BreakupMode(1))
+image ron_breakup_q_1= Breakup("ron", 0.5, True, BreakupMode(1))
+image ron_breakup_rev_1= Breakup("ron", 3.0, False, BreakupMode(1))
+image ron_breakup_rev_q_1= Breakup("ron", 0.5, False, BreakupMode(1))
+
+image ron_breakup_2= Breakup("ron", 3.0, True, BreakupMode(2))
+image ron_breakup_q_2= Breakup("ron", 0.5, True, BreakupMode(2))
+image ron_breakup_rev_2= Breakup("ron", 3.0, False, BreakupMode(2))
+image ron_breakup_rev_q_2= Breakup("ron", 0.5, False, BreakupMode(2))
+
+image wal_breakup= Breakup("wal", 3.0, True, BreakupMode(0))
+image wal_breakup_q= Breakup("wal", 0.5, True, BreakupMode(0))
+image wal_breakup_rev= Breakup("wal", 3.0, False, BreakupMode(0))
+image wal_breakup_rev_q= Breakup("wal", 0.5, False, BreakupMode(0))
+
+image wal_breakup_1= Breakup("wal", 3.0, True, BreakupMode(1))
+image wal_breakup_q_1= Breakup("wal", 0.5, True, BreakupMode(1))
+image wal_breakup_rev_1= Breakup("wal", 3.0, False, BreakupMode(1))
+image wal_breakup_rev_q_1= Breakup("wal", 0.5, False, BreakupMode(1))
+
+image wal_breakup_2= Breakup("wal", 3.0, True, BreakupMode(2))
+image wal_breakup_q_2= Breakup("wal", 0.5, True, BreakupMode(2))
+image wal_breakup_rev_2= Breakup("wal", 3.0, False, BreakupMode(2))
+image wal_breakup_rev_q_2= Breakup("wal", 0.5, False, BreakupMode(2))
+
+image ev2_breakup= Breakup("ev2", 3.0, True, BreakupMode(0))
+image ev2_breakup_q= Breakup("ev2", 0.5, True, BreakupMode(0))
+image ev2_breakup_rev= Breakup("ev2", 3.0, False, BreakupMode(0))
+image ev2_breakup_rev_q= Breakup("ev2", 0.5, False, BreakupMode(0))
+
+image ev2_breakup_1= Breakup("ev2", 3.0, True, BreakupMode(1))
+image ev2_breakup_q_1= Breakup("ev2", 0.5, True, BreakupMode(1))
+image ev2_breakup_rev_1= Breakup("ev2", 3.0, False, BreakupMode(1))
+image ev2_breakup_rev_q_1= Breakup("ev2", 0.5, False, BreakupMode(1))
+
+image ev2_breakup_2= Breakup("ev2", 3.0, True, BreakupMode(2))
+image ev2_breakup_q_2= Breakup("ev2", 0.5, True, BreakupMode(2))
+image ev2_breakup_rev_2= Breakup("ev2", 3.0, False, BreakupMode(2))
+image ev2_breakup_rev_q_2= Breakup("ev2", 0.5, False, BreakupMode(2))
+
+image gap_breakup= Breakup("gap", 3.0, True, BreakupMode(0))
+image gap_breakup_q= Breakup("gap", 0.5, True, BreakupMode(0))
+image gap_breakup_rev= Breakup("gap", 3.0, False, BreakupMode(0))
+image gap_breakup_rev_q= Breakup("gap", 0.5, False, BreakupMode(0))
+
+image gap_breakup_1= Breakup("gap", 3.0, True, BreakupMode(1))
+image gap_breakup_q_1= Breakup("gap", 0.5, True, BreakupMode(1))
+image gap_breakup_rev_1= Breakup("gap", 3.0, False, BreakupMode(1))
+image gap_breakup_rev_q_1= Breakup("gap", 0.5, False, BreakupMode(1))
+
+image gap_breakup_2= Breakup("gap", 3.0, True, BreakupMode(2))
+image gap_breakup_q_2= Breakup("gap", 0.5, True, BreakupMode(2))
+image gap_breakup_rev_2= Breakup("gap", 3.0, False, BreakupMode(2))
+image gap_breakup_rev_q_2= Breakup("gap", 0.5, False, BreakupMode(2))
+
+image fea_breakup= Breakup("fea", 3.0, True, BreakupMode(0))
+image fea_breakup_q= Breakup("fea", 0.5, True, BreakupMode(0))
+image fea_breakup_rev= Breakup("fea", 3.0, False, BreakupMode(0))
+image fea_breakup_rev_q= Breakup("fea", 0.5, False, BreakupMode(0))
+
+image fea_breakup_1= Breakup("fea", 3.0, True, BreakupMode(1))
+image fea_breakup_q_1= Breakup("fea", 0.5, True, BreakupMode(1))
+image fea_breakup_rev_1= Breakup("fea", 3.0, False, BreakupMode(1))
+image fea_breakup_rev_q_1= Breakup("fea", 0.5, False, BreakupMode(1))
+
+image fea_breakup_2= Breakup("fea", 3.0, True, BreakupMode(2))
+image fea_breakup_q_2= Breakup("fea", 0.5, True, BreakupMode(2))
+image fea_breakup_rev_2= Breakup("fea", 3.0, False, BreakupMode(2))
+image fea_breakup_rev_q_2= Breakup("fea", 0.5, False, BreakupMode(2))
+
+image but_breakup= Breakup("but", 3.0, True, BreakupMode(0))
+image but_breakup_q= Breakup("but", 0.5, True, BreakupMode(0))
+image but_breakup_rev= Breakup("but", 3.0, False, BreakupMode(0))
+image but_breakup_rev_q= Breakup("but", 0.5, False, BreakupMode(0))
+
+image but_breakup_1= Breakup("but", 3.0, True, BreakupMode(1))
+image but_breakup_q_1= Breakup("but", 0.5, True, BreakupMode(1))
+image but_breakup_rev_1= Breakup("but", 3.0, False, BreakupMode(1))
+image but_breakup_rev_q_1= Breakup("but", 0.5, False, BreakupMode(1))
+
+image but_breakup_2= Breakup("but", 3.0, True, BreakupMode(2))
+image but_breakup_q_2= Breakup("but", 0.5, True, BreakupMode(2))
+image but_breakup_rev_2= Breakup("but", 3.0, False, BreakupMode(2))
+image but_breakup_rev_q_2= Breakup("but", 0.5, False, BreakupMode(2))
 
 
 
