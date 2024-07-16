@@ -161,10 +161,7 @@ init python:
         return [(renpy.TEXT_TAG, "gradient=#0aecf0-#45f2f5")] + contents + [(renpy.TEXT_TAG, "/gradient")]
     def gold_tag(tag, argument, contents):
         return [(renpy.TEXT_TAG, "gradient=#ffff00-#ffcc00")] + contents + [(renpy.TEXT_TAG, "/gradient")]
-    def bgm(tag, argument, contents):
-        return [(renpy.TEXT_TAG, "gradient=#27BFD1-#96DBE9")] + contents + [(renpy.TEXT_TAG, "/gradient")]
 
     config.custom_text_tags["red"] = red_tag
     config.custom_text_tags["blue"] = blue_tag
     config.custom_text_tags["gold"] = gold_tag
-    config.custom_text_tags["bgm"] = bgm

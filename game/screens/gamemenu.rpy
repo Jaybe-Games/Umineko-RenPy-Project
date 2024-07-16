@@ -92,6 +92,6 @@ screen game_menu(scroll=None, yinitial=0.0):
 screen cleanmenu():
 
     tag menu
-    add partObj
+    add particles
 
     use game_menu()

@@ -140,4 +140,4 @@
             renpy.redraw(self, .0)
             return rv
 
-default particle = CustomParticles("images/system/particle.png", 10)
+default particles = CustomParticles("images/system/particle.png", 10)
