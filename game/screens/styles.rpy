@@ -87,7 +87,7 @@ style say_window:
     xmaximum 1800
     yminimum 400
     clipping True
-    background Frame("gui/frame_[persistent.textbox]c.png", 25, 25)
+    background Frame("gui/frame_[persistent.textbox]c.png", 30, 30)
 
 style say_label:
     bold False
@@ -118,7 +118,7 @@ style say_who_window:
     xalign 0.0
     yalign 0.5
     clipping True
-    background Frame("gui/frame_[persistent.textbox]n.png", 100, 100)
+    background Frame("gui/frame_[persistent.textbox]n.png", 30, 30)
 
 
 style confirm_frame is gui_frame

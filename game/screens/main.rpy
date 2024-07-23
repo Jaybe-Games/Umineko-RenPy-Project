@@ -57,7 +57,6 @@ screen main_menu():
     #add "gui/title/title_hana.png" at topright
     add "gui/title/copyright.png" at left
     add "gui/title/titlelogo.png" at topleft,buttondissolvetitle,mm_logo
-    add partObj
     text "V[config.version!t]" at topleft size 30 antialias True outlines [ (absolute(3), "#000", absolute(0), absolute(0)) ]
     on "show" action Play("seagulls", "audio/sfx/umilse_002.ogg")
     on "hide" action Stop("seagulls")

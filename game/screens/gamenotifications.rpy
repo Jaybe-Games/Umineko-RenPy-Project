@@ -29,25 +29,24 @@ screen tipupdate():
 
 transform chapterfade1:
     subpixel True
-    alpha 0.0
-    xalign 0.1
-    yalign 0.3
-    ease 2 alpha 1.0
-    pause 4
-    ease 2 alpha 0.0
-
-transform chapterfade2:
-    subpixel True
-    xoffset -50
-    ease 2 xoffset 0
-    pause 4
-    ease 2 xoffset 50
+    parallel:
+        alpha 0.0
+        xalign 0.1
+        yalign 0.3
+        ease 2 alpha 1.0
+        pause 4
+        ease 2 alpha 0.0
+    parallel:
+        xoffset -50
+        ease 2 xoffset 0
+        pause 4
+        ease 2 xoffset 50
 
 screen show_chapter():
 
     zorder 999
 
-    text show_chapter style "chaptertext" at chapterfade1, chapterfade2, dialogue_gradient
+    text show_chapter style "chaptertext" at chapterfade1, dialogue_gradient
 
     timer 10 action Hide('show_chapter')
 

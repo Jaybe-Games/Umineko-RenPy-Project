@@ -9,30 +9,16 @@ Chapter 1: Rokkenjima""")
     $ persistent.ep1started = True
     $ persistent.new = False
     show mlib_1b_bg at bgani
-    show rainbackscroll
+    show rain
     show mlib_1b at bgani
     with gradientcirclefade
     $ play_music(thunberg_lily)
-    $ bea_pose = "a12"
-    $ bea_face = "default1"
-    window show
-    "Watch her breakup with terrible performance"
-    window hide
-    call butterfly1
-    play sound umise_052
-    show bea_breakup at m
-    with dissolve
-    pause 3
-    hide bea_breakup
-    show bea a12default1 at m
-    window show
-    voice "audio/voice/bea_01.ogg"
-    bea v001 "Try to solve Kinzo's Epitaph, you god damn idiots!"
-    window hide
-    hide bea
-    play sound umise_056
-    show bea_breakup_rev at m
-    pause 3
+    "simple enough"
+    show but b11 surprise3 surprise3_1 at m
+    "it's so simple"
+    but b11_trouble1_m b11_worry5_f "I have battle"
+    extend " what is going on"
+    but b11_fearless2a_f b11_cry1_m "This shit doesn't work"
     "Two older men could be observed in a darkened and foul-smelling study."
     extend " While one of them examined his magnificent glass with a poisonous green alcoholic drink, he began to speak with a grim expression."
     $ kin_pose = "a11"
@@ -147,7 +133,7 @@ Chapter 1: Rokkenjima""")
     extend " uuuu!!"
     "Suddenly there is another smack, Jessica has hit Battler over the head again with great vigour."
     jes "You sick bastard!"
-    extend " Don't fill her head with that nonsense! You know Maria will take it seriously!"
+    extend " Don't fill her head with that nonsense! You know Maria will take it surprisely!"
     mar "Uuu! He can touch them! I promised"
     extend " Maria always keeps promises! Uuuu!"
     jes "And I'm telling you not to make promises like that, Maria! The deal's off!"

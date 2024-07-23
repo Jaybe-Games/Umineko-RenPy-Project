@@ -20,7 +20,6 @@ screen story_select():
     add "gui/bgdark.png" at center
     add "gui/scenario/background.png" at center
     text _("ScenarioSelect") style "caption"
-    add partObj
 
     imagebutton auto "images/system/back2_%s.png" action ShowMenu("main_menu") hovered Show('fflush') unhovered Hide('fflush') activate_sound "audio/sys/sysse_decide.wav" hover_sound "audio/sys/sysse_move.wav" yalign 0.01 xalign 0.98
 

@@ -5,16 +5,16 @@ init:
         RainBlur = 0
 
         # RainAlpha is the total alpha level of the entire rain sheet.
-        RainAlpha = 0.8
+        RainAlpha = 0.7
 
         # RainY is rain speed, basically how long does it take
         # for the rain sheet to fall down by one tile
-        RainY = 0.35
+        RainY = 0.30
 
         # RainX is the same for horizontal movement,
         # and needs to be manually adjusted to fit the chosen raindrop angle
         # for the rain to fall naturally.
-        RainX = RainY * 100
+        RainX = RainY * 80
         
         # Total alpha of the rain is the sum of the alpha of all three layers,
         # so each sheet has a third of it.
@@ -25,8 +25,8 @@ init:
         RainXM = RainX / 2
 
         # Speed of the futhest sheet of rain is two times faster than that.
-        RainYF = RainYM / 2
-        RainXF = RainXM / 2
+        RainYF = RainYM 
+        RainXF = RainXM
 
         ######################################
 
@@ -57,7 +57,53 @@ init:
     # It has the shortest (more distant) and fastest moving raindrops.
     # In theory you can split it and put sprites between each of the three sheets,
     # but I didn't need that.
-    image rainbackscroll:
+
+    image rain:
+        # Distant drops
+        contains:
+            RainsheetShort
+            blur RainBlur
+            alpha RainLayerAlpha
+            subpixel True
+            parallel:
+                ypos -RainTileSizeY
+                ease RainYF ypos 0
+                repeat
+            parallel:
+                xpos 0
+                ease RainXF xpos -RainTileSizeX
+                repeat
+        #Medium drops
+        contains:
+            RainsheetMedium
+            blur RainBlur
+            alpha RainLayerAlpha
+            subpixel True
+            parallel:
+                ypos -RainTileSizeY
+                ease RainYM ypos 0
+                repeat
+            parallel:
+                xpos 0
+                ease RainXM xpos -RainTileSizeX
+                repeat
+        #long drops
+        contains:
+            RainsheetLong
+            blur RainBlur
+            alpha RainLayerAlpha
+            subpixel True
+            parallel:
+                ypos -RainTileSizeY
+                ease RainY ypos 0
+                repeat
+            parallel:
+                xpos 0
+                ease RainX xpos -RainTileSizeX
+                repeat
+
+
+    image rainback:
         # Distant drops
         contains:
             RainsheetShort
@@ -89,7 +135,7 @@ init:
 
     # This is the front sheet of the rain, it goes /above/ the 
     # character sprites.
-    image rainfrontscroll:    
+    image rainfront:    
         contains:
             RainsheetLong
             blur RainBlur
