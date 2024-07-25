@@ -11,14 +11,10 @@ Chapter 1: Rokkenjima""")
     show mlib_1b_bg at bgani
     show rain
     show mlib_1b at bgani
-    with gradientcirclefade
+    with whirl
     $ play_music(thunberg_lily)
     "simple enough"
-    show but b11 surprise3 surprise3_1 at m
-    "it's so simple"
-    but b11_trouble1_m b11_worry5_f "I have battle"
-    extend " what is going on"
-    but b11_fearless2a_f b11_cry1_m "This shit doesn't work"
+    show bea_breakup at m
     "Two older men could be observed in a darkened and foul-smelling study."
     extend " While one of them examined his magnificent glass with a poisonous green alcoholic drink, he began to speak with a grim expression."
     $ kin_pose = "a11"
